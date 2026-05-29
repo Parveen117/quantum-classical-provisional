@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+Untitled.ipynb
+
+# Environment / secrets
+.env
+*.env
+credentials.py
+token.txt
+access_token.txt
+api_key.txt
+
+# Temporary/output files
+*.log
+*.tmp
+*.bak
+
+# OS files
+.DS_Store
+Thumbs.db
