@@ -1,0 +1,8 @@
+{
+  "runs": [
+    {"run_id": "bell-run-001", "observed_counts": {"00": 506, "01": 11, "10": 9, "11": 498}, "metadata": {"source": "local-trial"}},
+    {"run_id": "bell-run-002", "observed_counts": {"00": 511, "01": 8, "10": 10, "11": 495}, "metadata": {"source": "stability-sample"}},
+    {"run_id": "bell-run-003", "observed_counts": {"00": 502, "01": 14, "10": 7, "11": 501}, "metadata": {"source": "stability-sample"}},
+    {"run_id": "bell-run-004", "observed_counts": {"00": 516, "01": 6, "10": 12, "11": 490}, "metadata": {"source": "stability-sample"}}
+  ]
+}
