@@ -1,0 +1,46 @@
+{
+  "observations": [
+    {
+      "backend_id": "recorded-simulator-a",
+      "session_id": "backend-session-a",
+      "calibration_id": "cal-demo-001",
+      "observed_counts": {
+        "00": 506,
+        "01": 11,
+        "10": 9,
+        "11": 498
+      },
+      "metadata": {
+        "source": "recorded-local-trial"
+      }
+    },
+    {
+      "backend_id": "recorded-simulator-b",
+      "session_id": "backend-session-b",
+      "calibration_id": "cal-demo-001",
+      "observed_counts": {
+        "00": 511,
+        "01": 8,
+        "10": 10,
+        "11": 495
+      },
+      "metadata": {
+        "source": "recorded-backend-comparison"
+      }
+    },
+    {
+      "backend_id": "recorded-simulator-c",
+      "session_id": "backend-session-c",
+      "calibration_id": "cal-demo-001",
+      "observed_counts": {
+        "00": 502,
+        "01": 14,
+        "10": 7,
+        "11": 501
+      },
+      "metadata": {
+        "source": "recorded-backend-comparison"
+      }
+    }
+  ]
+}
