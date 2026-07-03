@@ -1,0 +1,37 @@
+{
+  "report_type": "ADVANCED_QUANTUM_RUNTIME_VALIDATION",
+  "version": "0.4.0-qbridge-pro",
+  "position": "The local runs are validation artifacts for an advanced quantum-classical runtime system, not a toy prototype.",
+  "validated_layers": [
+    "quantum job identity",
+    "declared template and control path",
+    "backend and phase binding",
+    "measurement count ingestion",
+    "calibration correction evidence",
+    "expected distribution model",
+    "residue classification",
+    "ledger verification",
+    "certificate export",
+    "runtime policy recommendation"
+  ],
+  "bell_model_evaluation": {
+    "model_id": "bell_phi_plus_runtime",
+    "distribution_gap": 0.01953125,
+    "tolerance": 0.08,
+    "classification": "RECOGNITION",
+    "recognized": true
+  },
+  "calibration_evaluation": {
+    "calibration_profile_id": "cal-demo-001",
+    "calibration_gap": 0.001153062271175901,
+    "correction_method": "readout_fidelity_weighting"
+  },
+  "runtime_value": "The system can distinguish a healthy expected quantum pattern from actionable bridge residue while preserving calibration and certificate evidence.",
+  "next_advanced_layers": [
+    "gate path accountability",
+    "backend comparison",
+    "multi-run drift monitor",
+    "certificate bundle builder",
+    "hardware adapter contract"
+  ]
+}
