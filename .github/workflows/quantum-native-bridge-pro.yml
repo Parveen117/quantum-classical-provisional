@@ -1,0 +1,35 @@
+name: Quantum Native Bridge Pro CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install test dependency
+        run: python -m pip install --upgrade pip pytest
+
+      - name: Run unit tests
+        run: python -m pytest -q
+
+      - name: Verify evidence bridge ledger
+        run: |
+          python -m quantum_native_bridge_pro.cli verify \
+            --ledger QUANTUM_NATIVE_BRIDGE_PRO_EVIDENCE/demo-bridge-ledger.jsonl
+
+      - name: Export evidence certificate
+        run: |
+          python -m quantum_native_bridge_pro.cli certificate \
+            --ledger QUANTUM_NATIVE_BRIDGE_PRO_EVIDENCE/demo-bridge-ledger.jsonl \
+            --out rebuilt-quantum-bridge-certificate.json
