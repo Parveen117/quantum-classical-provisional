@@ -1,0 +1,16 @@
+{
+  "job_id": "qjob-demo-001",
+  "observed_counts": {
+    "00": 506,
+    "01": 11,
+    "10": 9,
+    "11": 498
+  },
+  "backend": "recorded-simulator",
+  "shots": 1024,
+  "completed_at_ns": 1770002000000000001,
+  "metadata": {
+    "result_source": "recorded demo",
+    "note": "counts include small off-template leakage for bridge classification"
+  }
+}
