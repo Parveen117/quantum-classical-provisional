@@ -1,0 +1,22 @@
+{
+  "policy_package": "QUANTUM_NATIVE_BRIDGE_RUNTIME_POLICY",
+  "version": "0.4.0-qbridge-pro",
+  "input_ledger": "QUANTUM_NATIVE_BRIDGE_PRO_EVIDENCE/demo-bridge-ledger.jsonl",
+  "head_chain_hash": "4b68418b727d8c0eb1384d047f9133604f6931fa602145e2c979913e759abcc0",
+  "records": 2,
+  "decisions": [
+    {
+      "sequence": 1,
+      "classification": "BOUNDED_RESIDUE",
+      "recommendation": "CERTIFY_WITH_MONITORING",
+      "controls": ["append_ledger", "export_certificate", "increase_shots_if_reused", "compare_expected_distribution"]
+    },
+    {
+      "sequence": 2,
+      "classification": "ACTIONABLE_RESIDUE",
+      "recommendation": "PAUSE_REPEAT_OR_RECALIBRATE",
+      "controls": ["append_ledger", "export_certificate", "repeat_measurement", "refresh_phase_binding", "recalibrate_backend_context", "compare_alternate_backend"]
+    }
+  ],
+  "drafting_value": "Recognition class produces a machine-level runtime recommendation for quantum-classical control."
+}
