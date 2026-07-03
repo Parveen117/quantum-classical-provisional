@@ -1,0 +1,12 @@
+{
+  "report_type": "QUANTUM_BACKEND_COMPARISON_REPORT",
+  "model_id": "bell_phi_plus_runtime",
+  "backends": 3,
+  "classification": "BACKEND_CONSENSUS_RECOGNITION",
+  "max_backend_gap": 0.0087890625,
+  "mean_backend_gap": 0.006510416666666667,
+  "recognized_backends": 3,
+  "bounded_backends": 0,
+  "high_residue_backends": 0,
+  "runtime_value": "The Bell expected pattern remains recognized across recorded backend and session observations."
+}
