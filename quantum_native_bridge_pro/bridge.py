@@ -6,18 +6,19 @@ A deployable, dependency-free quantum-classical verification bridge for hybrid
 quantum jobs, simulator outputs, measurement-result streams, and control-loop
 experiments.
 
-This module does not claim to be a universal quantum computer. It is a runtime
-verification and recognition-residue layer around quantum-classical workflows:
+This module is a runtime verification and recognition-residue layer around
+quantum-classical workflows:
 
 Root     = intended classical payload / circuit identity / Hamiltonian identity
 Template = declared lawful circuit, gate, measurement, correction, or control path
 Phase    = quantum phase/context/noise/timing/backend/session binding
 Observed = measured bitstring distribution or reported classical result
-Ledger   = seam memory of non-recognized quantum-classical residue
+Ledger   = seam memory of quantum-classical residue
 
-It is designed as an EMK--UGD--RNKE embodiment: lawful quantum-classical transport
-is accounted for before classifying residue, because apparently even particles
-deserve due process.
+Version 0.4.1 integrates expected-model recognition directly into bridge records.
+That removes the old mismatch where the external expected-model evaluator could
+recognize a Bell run while the bridge ledger still counted only hash-derived
+residue. Machines, unlike committees, can be taught consistency.
 """
 
 from __future__ import annotations
@@ -27,7 +28,6 @@ import dataclasses
 import hashlib
 import json
 import math
-import os
 import random
 import tempfile
 import time
@@ -36,7 +36,9 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Mapping, Optional, Tuple
 
-VERSION = "0.4.0-qbridge-pro"
+from .expected_models import ExpectedModel, evaluate_expected_model, load_model, model_from_template
+
+VERSION = "0.4.1-qbridge-pro"
 HASH_ALG = "sha256"
 GENESIS_HASH = "0" * 64
 
@@ -103,11 +105,11 @@ def l1_distribution_gap(expected: Mapping[str, float], observed: Mapping[str, fl
     return sum(abs(float(expected.get(k, 0.0)) - float(observed.get(k, 0.0))) for k in keys) / 2.0
 
 
-def deterministic_expected_distribution(root_hash: str, template_hash: str, phase_hash: str, shots: int = 1024) -> Dict[str, float]:
-    """Generate a deterministic expected two-bit distribution from hashes.
+def deterministic_expected_distribution(root_hash: str, template_hash: str, phase_hash: str) -> Dict[str, float]:
+    """Generate a deterministic fallback distribution from hashes.
 
-    This is not quantum simulation. It is an enablement-safe bridge signal for
-    interface verification when no backend-specific simulator is attached.
+    This is only a fallback bridge signal. Production workflows should attach a
+    circuit-specific expected model, backend model, or simulator-derived model.
     """
     seed = int(sha256_hex(root_hash + template_hash + phase_hash)[:16], 16)
     rng = random.Random(seed)
@@ -117,57 +119,107 @@ def deterministic_expected_distribution(root_hash: str, template_hash: str, phas
     return {state: raw[i] / total for i, state in enumerate(states)}
 
 
+def _expected_model_from_any(value: ExpectedModel | Mapping[str, Any] | str | Path | None) -> Optional[ExpectedModel]:
+    if value is None:
+        return None
+    if isinstance(value, ExpectedModel):
+        return value
+    if isinstance(value, (str, Path)):
+        return load_model(value)
+    if isinstance(value, Mapping):
+        if "distribution" in value and "model_id" in value:
+            return ExpectedModel.from_dict(value)
+        return model_from_template(value)
+    raise TypeError(f"unsupported expected_model type: {type(value)!r}")
+
+
+def combine_runtime_classification(bridge_class: str, expected_class: Optional[str], phase_coherence: float) -> str:
+    """Combine hash/fallback bridge result with circuit expected-model result.
+
+    Expected models are authoritative for known circuits, but phase coherence can
+    still downgrade a record. This keeps the ledger scientifically sane instead
+    of worshipping a hash fallback like it is a quantum oracle.
+    """
+    if expected_class is None:
+        return bridge_class
+    if phase_coherence < 0.80:
+        return "ACTIONABLE_RESIDUE"
+    if phase_coherence < 0.90 and expected_class == "RECOGNITION":
+        return "BOUNDED_RESIDUE"
+    return expected_class
+
+
 def measurement_metrics(
     root_hash: str,
     template_hash: str,
     phase_hash: str,
     observed: Mapping[str, int | float] | str | None,
     phase_angles: Optional[Iterable[float]] = None,
+    expected_model: ExpectedModel | Mapping[str, Any] | str | Path | None = None,
 ) -> Dict[str, Any]:
     root = bit_vector(root_hash)
     template = bit_vector(template_hash)
     phase = bit_vector(phase_hash)
     lawful = [r ^ t ^ p for r, t, p in zip(root, template, phase)]
 
+    expected_dist = deterministic_expected_distribution(root_hash, template_hash, phase_hash)
+    expected_model_obj = _expected_model_from_any(expected_model)
+    expected_model_result: Optional[Dict[str, Any]] = None
+
     if isinstance(observed, Mapping):
         observed_dist = normalize_counts(observed)
-        expected_dist = deterministic_expected_distribution(root_hash, template_hash, phase_hash)
-        gap = l1_distribution_gap(expected_dist, observed_dist)
+        fallback_gap = l1_distribution_gap(expected_dist, observed_dist)
         observed_hash = digest_payload(observed_dist)
+        if expected_model_obj is not None:
+            expected_model_result = evaluate_expected_model(expected_model_obj, observed)
+            gap = float(expected_model_result["distribution_gap"])
+        else:
+            gap = fallback_gap
     elif observed is None:
-        expected_dist = deterministic_expected_distribution(root_hash, template_hash, phase_hash)
         observed_dist = expected_dist
+        fallback_gap = 0.0
         gap = 0.0
         observed_hash = digest_payload(observed_dist)
     else:
         observed_hash = digest_payload(observed)
         observed_bits = bit_vector(observed_hash)
-        gap = hamming_distance(lawful, observed_bits) / len(lawful)
-        expected_dist = deterministic_expected_distribution(root_hash, template_hash, phase_hash)
+        fallback_gap = hamming_distance(lawful, observed_bits) / len(lawful)
+        gap = fallback_gap
         observed_dist = {}
 
     coherence = coherence_from_phases(phase_angles or [])
     phase_penalty = max(0.0, 1.0 - coherence)
+    bridge_residue_score = min(1.0, fallback_gap + 0.25 * phase_penalty)
+
+    if bridge_residue_score <= 0.08:
+        bridge_class = "RECOGNITION"
+    elif bridge_residue_score <= 0.25:
+        bridge_class = "BOUNDED_RESIDUE"
+    else:
+        bridge_class = "ACTIONABLE_RESIDUE"
+
+    expected_class = expected_model_result.get("classification") if expected_model_result else None
+    combined_class = combine_runtime_classification(bridge_class, expected_class, coherence)
     residue_score = min(1.0, gap + 0.25 * phase_penalty)
 
-    if residue_score <= 0.08:
-        cls = "RECOGNITION"
-    elif residue_score <= 0.25:
-        cls = "BOUNDED_RESIDUE"
-    else:
-        cls = "ACTIONABLE_RESIDUE"
-
-    return {
+    result = {
         "observed_hash": observed_hash,
-        "expected_distribution": expected_dist,
-        "observed_distribution": observed_dist,
+        "expected_distribution": expected_model_result.get("expected_distribution") if expected_model_result else expected_dist,
+        "observed_distribution": expected_model_result.get("observed_distribution") if expected_model_result else observed_dist,
         "distribution_gap": gap,
+        "fallback_distribution_gap": fallback_gap,
         "phase_coherence": coherence,
         "phase_penalty": phase_penalty,
         "residue_score": residue_score,
-        "classification": cls,
-        "recognized": cls == "RECOGNITION",
+        "bridge_classification": bridge_class,
+        "expected_model_classification": expected_class,
+        "combined_runtime_classification": combined_class,
+        "classification": combined_class,
+        "recognized": combined_class == "RECOGNITION",
     }
+    if expected_model_result is not None:
+        result["expected_model"] = expected_model_result
+    return result
 
 
 @dataclass(frozen=True)
@@ -237,6 +289,7 @@ class QuantumNativeBridge:
         backend: str = "simulated-or-external",
         shots: int = 1024,
         metadata: Optional[Dict[str, Any]] = None,
+        expected_model: ExpectedModel | Mapping[str, Any] | str | Path | None = None,
     ) -> BridgeRecord:
         previous = self.last_record()
         previous_hash = previous.chain_hash if previous else GENESIS_HASH
@@ -244,7 +297,7 @@ class QuantumNativeBridge:
         root_hash = digest_payload(root)
         template_hash = digest_payload(template)
         phase_hash = digest_payload(phase)
-        recognition = measurement_metrics(root_hash, template_hash, phase_hash, observed, phase_angles)
+        recognition = measurement_metrics(root_hash, template_hash, phase_hash, observed, phase_angles, expected_model)
         record = BridgeRecord(
             record_id=str(uuid.uuid4()),
             version=VERSION,
@@ -292,11 +345,18 @@ class QuantumNativeBridge:
         previous = GENESIS_HASH
         expected_sequence = 1
         counts = {"RECOGNITION": 0, "BOUNDED_RESIDUE": 0, "ACTIONABLE_RESIDUE": 0}
+        bridge_counts = {"RECOGNITION": 0, "BOUNDED_RESIDUE": 0, "ACTIONABLE_RESIDUE": 0}
+        expected_counts = {"RECOGNITION": 0, "BOUNDED_RESIDUE": 0, "ACTIONABLE_RESIDUE": 0, "NONE": 0}
         for record in records:
             ok, msg = self.verify_record(record, previous, expected_sequence)
             if not ok:
                 raise VerificationError(msg)
-            counts[record.recognition.get("classification", "ACTIONABLE_RESIDUE")] = counts.get(record.recognition.get("classification", "ACTIONABLE_RESIDUE"), 0) + 1
+            combined = record.recognition.get("combined_runtime_classification", record.recognition.get("classification", "ACTIONABLE_RESIDUE"))
+            bridge_cls = record.recognition.get("bridge_classification", record.recognition.get("classification", "ACTIONABLE_RESIDUE"))
+            expected_cls = record.recognition.get("expected_model_classification") or "NONE"
+            counts[combined] = counts.get(combined, 0) + 1
+            bridge_counts[bridge_cls] = bridge_counts.get(bridge_cls, 0) + 1
+            expected_counts[expected_cls] = expected_counts.get(expected_cls, 0) + 1
             previous = record.chain_hash
             expected_sequence += 1
         return {
@@ -305,6 +365,8 @@ class QuantumNativeBridge:
             "recognized": counts.get("RECOGNITION", 0),
             "bounded_residue": counts.get("BOUNDED_RESIDUE", 0),
             "actionable_residue": counts.get("ACTIONABLE_RESIDUE", 0),
+            "bridge_counts": bridge_counts,
+            "expected_model_counts": expected_counts,
             "head_chain_hash": previous,
             "version": VERSION,
         }
@@ -351,6 +413,7 @@ def cli(argv: Optional[Iterable[str]] = None) -> int:
     p_append.add_argument("--template", required=True)
     p_append.add_argument("--phase", required=True)
     p_append.add_argument("--observed")
+    p_append.add_argument("--expected-model", help="expected model JSON file or JSON object")
     p_append.add_argument("--backend", default="simulated-or-external")
     p_append.add_argument("--shots", type=int, default=1024)
     p_append.add_argument("--metadata", default="{}")
@@ -372,6 +435,7 @@ def cli(argv: Optional[Iterable[str]] = None) -> int:
             template=_parse_json_or_text(args.template),
             phase=_parse_json_or_text(args.phase),
             observed=_parse_json_or_text(args.observed),
+            expected_model=_parse_json_or_text(args.expected_model),
             phase_angles=json.loads(args.phase_angles),
             backend=args.backend,
             shots=args.shots,
