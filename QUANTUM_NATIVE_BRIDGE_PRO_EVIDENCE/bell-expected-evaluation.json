@@ -1,0 +1,21 @@
+{
+  "model_id": "bell_phi_plus_runtime",
+  "model_type": "bell_state",
+  "expected_distribution": {
+    "00": 0.5,
+    "01": 0.0,
+    "10": 0.0,
+    "11": 0.5
+  },
+  "observed_distribution": {
+    "00": 0.494140625,
+    "01": 0.0107421875,
+    "10": 0.0087890625,
+    "11": 0.486328125
+  },
+  "distribution_gap": 0.01953125,
+  "tolerance": 0.08,
+  "classification": "RECOGNITION",
+  "recognized": true,
+  "runtime_conclusion": "The Bell-style observed counts fall within the healthy expected distribution band."
+}
