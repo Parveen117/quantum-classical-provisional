@@ -1,0 +1,40 @@
+{
+  "certificate_hash": "e574fb67a72986fffc339b199fd5a974e6b7684235401ffce84271a3277ce0d2",
+  "certificate_type": "QUANTUM_NATIVE_BRIDGE_PROOF",
+  "hash_alg": "sha256",
+  "head_record": {
+    "backend": "simulated-demo",
+    "chain_hash": "4b68418b727d8c0eb1384d047f9133604f6931fa602145e2c979913e759abcc0",
+    "metadata": {
+      "case": "phase-drift-watch",
+      "source": "demo"
+    },
+    "recognition": {
+      "classification": "ACTIONABLE_RESIDUE",
+      "distribution_gap": 0.381,
+      "observed_distribution": {
+        "0": 0.68359375,
+        "1": 0.31640625
+      },
+      "phase_coherence": 0.85421,
+      "phase_penalty": 0.14579,
+      "recognized": false,
+      "residue_score": 0.417448
+    },
+    "sequence": 2,
+    "shots": 1024,
+    "version": "0.4.0-qbridge-pro"
+  },
+  "issued_at_ns": 1770001000000009999,
+  "ledger_path": "QUANTUM_NATIVE_BRIDGE_PRO_EVIDENCE/demo-bridge-ledger.jsonl",
+  "verification": {
+    "actionable_residue": 1,
+    "bounded_residue": 1,
+    "head_chain_hash": "4b68418b727d8c0eb1384d047f9133604f6931fa602145e2c979913e759abcc0",
+    "recognized": 0,
+    "records": 2,
+    "valid": true,
+    "version": "0.4.0-qbridge-pro"
+  },
+  "version": "0.4.0-qbridge-pro"
+}
