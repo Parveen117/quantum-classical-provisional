@@ -1,0 +1,21 @@
+{
+  "profile_id": "cal-demo-001",
+  "backend": "recorded-simulator",
+  "readout_fidelity": {
+    "00": 0.982,
+    "01": 0.941,
+    "10": 0.938,
+    "11": 0.979,
+    "default": 0.95
+  },
+  "confusion_matrix": {
+    "00": {"00": 0.982, "01": 0.008, "10": 0.007, "11": 0.003},
+    "01": {"00": 0.019, "01": 0.941, "10": 0.011, "11": 0.029},
+    "10": {"00": 0.020, "01": 0.013, "10": 0.938, "11": 0.029},
+    "11": {"00": 0.004, "01": 0.008, "10": 0.009, "11": 0.979}
+  },
+  "metadata": {
+    "purpose": "quantum bridge calibration evidence",
+    "note": "demo profile for readout correction support"
+  }
+}
