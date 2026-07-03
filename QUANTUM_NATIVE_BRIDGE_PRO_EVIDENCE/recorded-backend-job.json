@@ -1,0 +1,24 @@
+{
+  "job_id": "qjob-demo-001",
+  "root": {
+    "circuit": "bell_state",
+    "qubits": 2,
+    "intent": "prepare_correlated_pair"
+  },
+  "template": {
+    "gates": ["H q0", "CX q0 q1"],
+    "measurement_basis": "Z",
+    "lawful_path": "bell_preparation_then_measurement"
+  },
+  "phase": {
+    "session": "demo-session-quantum-bridge",
+    "calibration_id": "cal-demo-001",
+    "noise_model": "recorded_counts_only"
+  },
+  "shots": 1024,
+  "backend": "recorded-simulator",
+  "metadata": {
+    "purpose": "backend adapter evidence",
+    "framework": "RNKE-EMK-UGD-ECL"
+  }
+}
