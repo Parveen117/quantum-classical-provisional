@@ -1,0 +1,15 @@
+{
+  "report_type": "QUANTUM_RUNTIME_STABILITY_REPORT",
+  "model_id": "bell_phi_plus_runtime",
+  "runs": 4,
+  "mean_gap": 0.01904296875,
+  "max_gap": 0.0234375,
+  "min_gap": 0.017578125,
+  "stdev_gap": 0.002219,
+  "recognized": 4,
+  "bounded_residue": 0,
+  "actionable_residue": 0,
+  "stable": true,
+  "classification": "STABLE_RECOGNITION",
+  "runtime_value": "Repeated Bell-style measurements remain inside the healthy expected distribution band."
+}
