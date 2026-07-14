@@ -1,0 +1,12 @@
+{
+  "evidence_type": "SYNTHETIC_CONTROL",
+  "target_state": "phi_plus",
+  "witnesses": {
+    "XX": 0.96,
+    "YY": -0.94,
+    "ZZ": 0.98
+  },
+  "tolerance": 0.10,
+  "expected_classification": "RECOGNITION",
+  "warning": "Synthetic control only; not hardware evidence."
+}
