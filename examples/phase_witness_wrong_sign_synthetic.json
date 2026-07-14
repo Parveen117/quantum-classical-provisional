@@ -1,0 +1,12 @@
+{
+  "evidence_type": "SYNTHETIC_NEGATIVE_CONTROL",
+  "target_state": "phi_plus",
+  "witnesses": {
+    "XX": -0.96,
+    "YY": 0.94,
+    "ZZ": 0.98
+  },
+  "tolerance": 0.10,
+  "expected_classification": "REJECT",
+  "warning": "Synthetic control only; designed to resemble Phi- while Phi+ is declared."
+}
