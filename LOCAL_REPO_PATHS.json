@@ -1,0 +1,17 @@
+{
+  "cross_repository_rule": "Quantum-native evidence is created first in the quantum repository. Evidence explicitly tagged TRANSFER_TO_EMK_TENSOR_CELL_DEVICES may be copied into the device repository only after SHA-256 verification. The device repository becomes the canonical home for device-related copies, while the quantum repository retains a compact transfer receipt.",
+  "repositories": {
+    "device": {
+      "github_repository": "Parveen117/EMK-Tensor-Cell-Devices",
+      "local_path": "C:\\Users\\abc\\Desktop\\New Folder (2)\\New folder\\PROVISNAL RELATED\\Devices",
+      "role": "Device architectures, tensor-cell mappings, device-candidate evidence, hardware interpretations, and transferred quantum evidence relevant to devices."
+    },
+    "quantum_classical": {
+      "github_repository": "Parveen117/quantum-classical-provisional",
+      "local_path": "C:\\Users\\abc\\Desktop\\New Folder (2)\\New folder\\PROVISNAL RELATED\\Quantum classical",
+      "role": "Quantum circuits, IBM Runtime acquisitions, quantum validation, quantum controls, and quantum-native certificates."
+    }
+  },
+  "schema": "LOCAL_REPOSITORY_PATHS_V1",
+  "updated_at_utc": "2026-07-14T05:21:33.059712+00:00"
+}
