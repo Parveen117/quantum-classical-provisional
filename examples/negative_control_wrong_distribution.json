@@ -1,0 +1,17 @@
+{
+  "state_id": "bell-phi-plus-negative-control-v1",
+  "visible_state": {
+    "model_id": "bell_phi_plus",
+    "basis": "computational",
+    "outcomes": ["00", "01", "10", "11"]
+  },
+  "response_coordinates": {"correlation_target": 1.0},
+  "protocol": {"source": "synthetic_negative_control", "shots": 1024},
+  "ledger": {"lawful_distribution_tolerance": 0.05, "calibration_applied": false},
+  "memory": {"run_index": 1, "prior_runs": 0},
+  "expected_distribution": {"00": 0.5, "01": 0.0, "10": 0.0, "11": 0.5},
+  "observed_distribution": {"00": 0.25, "01": 0.25, "10": 0.25, "11": 0.25},
+  "metric": "total_variation",
+  "tolerance": 0.05,
+  "expected_classification": "REJECT"
+}
