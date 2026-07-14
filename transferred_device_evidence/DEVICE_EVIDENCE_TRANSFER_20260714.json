@@ -1,0 +1,55 @@
+{
+  "daily_index": {
+    "filename": "LOCAL_IBM_RUN_INDEX_20260714.md",
+    "sha256": "7fdaa7debde60203a75ef1d2555dee519a3cb35ac9dfb54f9e42123e44d0eace"
+  },
+  "destination_github_repository": "Parveen117/EMK-Tensor-Cell-Devices",
+  "destination_local_repository": "C:\\Users\\abc\\Desktop\\New Folder (2)\\New folder\\PROVISNAL RELATED\\Devices",
+  "destination_root": "quantum_hardware_evidence/2026-07-14",
+  "provenance_rule": "Evidence content was copied and SHA-256 verified before source deletion. Original evidence files were not altered.",
+  "records": [
+    {
+      "destination_relative_path": "quantum_hardware_evidence/2026-07-14/emk_double_triangle_20260714T044725Z",
+      "destination_repository": "Parveen117/EMK-Tensor-Cell-Devices",
+      "file_count": 31,
+      "ibm_runtime_job_id": "d9aruo66hjac73fesiog",
+      "inventory_sha256": "bbec1cb2ad52603e94a4e7df06994a5c4cadea27e43368cc0eaa3422cb850ae2",
+      "source_name": "emk_double_triangle_20260714T044725Z",
+      "source_relative_path": "device_candidate_evidence/emk_double_triangle_20260714T044725Z",
+      "source_repository": "Parveen117/quantum-classical-provisional",
+      "total_size_bytes": 125292,
+      "verification": "SOURCE_AND_DESTINATION_FILE_HASHES_IDENTICAL"
+    },
+    {
+      "destination_relative_path": "quantum_hardware_evidence/2026-07-14/ugd_star_delta_20260714T045727Z",
+      "destination_repository": "Parveen117/EMK-Tensor-Cell-Devices",
+      "file_count": 166,
+      "ibm_runtime_job_id": "d9as3eug26ic73df5j20",
+      "inventory_sha256": "f32d6f7664eb847e087165dc40c4d2ed674e8df1fa8ff96393283a2ff38c956c",
+      "source_name": "ugd_star_delta_20260714T045727Z",
+      "source_relative_path": "device_candidate_evidence/ugd_star_delta_20260714T045727Z",
+      "source_repository": "Parveen117/quantum-classical-provisional",
+      "total_size_bytes": 360635,
+      "verification": "SOURCE_AND_DESTINATION_FILE_HASHES_IDENTICAL"
+    },
+    {
+      "destination_relative_path": "quantum_hardware_evidence/2026-07-14/ugd_rk_kr_seam_memory_20260714T050541Z",
+      "destination_repository": "Parveen117/EMK-Tensor-Cell-Devices",
+      "file_count": 64,
+      "ibm_runtime_job_id": "d9as7a66hjac73fet1q0",
+      "inventory_sha256": "111bac85db92d55f6fa8ea02ff2ecf1d1063be9785b722b9a47b6448af292fe0",
+      "source_name": "ugd_rk_kr_seam_memory_20260714T050541Z",
+      "source_relative_path": "device_candidate_evidence/ugd_rk_kr_seam_memory_20260714T050541Z",
+      "source_repository": "Parveen117/quantum-classical-provisional",
+      "total_size_bytes": 83963,
+      "verification": "SOURCE_AND_DESTINATION_FILE_HASHES_IDENTICAL"
+    }
+  ],
+  "schema": "DEVICE_EVIDENCE_CROSS_REPOSITORY_TRANSFER_V1",
+  "source_github_repository": "Parveen117/quantum-classical-provisional",
+  "source_local_repository": "C:\\Users\\abc\\Desktop\\New Folder (2)\\New folder\\PROVISNAL RELATED\\Quantum classical",
+  "total_file_count": 261,
+  "total_size_bytes": 569890,
+  "transfer_date": "2026-07-14",
+  "transferred_at_utc": "2026-07-14T05:17:46.533617+00:00"
+}
