@@ -44,7 +44,6 @@ CHANNEL = os.getenv("IBM_QUANTUM_CHANNEL", "ibm_quantum_platform").strip()
 INSTANCE = os.getenv("IBM_QUANTUM_INSTANCE", "").strip() or None
 SEEDS = (11, 29, 47)
 
-# Same final gate value, different histories.
 TRAJECTORIES: dict[str, tuple[float, ...]] = {
     "same_final_high": (0.0, 1.20, 0.60),
     "same_final_low": (0.0, 0.20, 0.60),
@@ -97,7 +96,6 @@ def bit_probability(counts: dict[str, int], classical_bit: int) -> float:
     total = sum(counts.values())
     if total == 0:
         return 0.0
-    # Qiskit prints the highest classical bit first.
     index = 5 - classical_bit
     return sum(
         n
@@ -110,46 +108,42 @@ def apply_internal_evolution(qc: QuantumCircuit, theta: float, *, write_memory: 
     """Gate-selected nonlinear analogue acting on n, phi, T and memory registers."""
     n, phi, temp, memory, gate, drain = range(6)
 
-    # Encode the instantaneous gate state.
     qc.ry(theta, gate)
 
-    # Gate-controlled reshaping of internal dynamics F -> F_VG.
+    # Gate reshapes the evolution operator F -> F_VG.
     qc.crx(0.55 + 0.35 * math.sin(theta), gate, n)
     qc.cry(0.40 + 0.25 * math.cos(theta), gate, phi)
     qc.crz(0.30 + 0.20 * math.sin(2.0 * theta), gate, temp)
 
-    # Nonlinear internal coupling between carrier, potential and thermal analogues.
+    # Coupled nonlinear internal evolution.
     qc.rzz(0.22 + 0.12 * theta, n, phi)
     qc.rzz(0.18 + 0.08 * theta, phi, temp)
     qc.cx(n, temp)
     qc.rz(0.10 + 0.07 * theta, temp)
     qc.cx(n, temp)
 
-    # Intrinsic memory/history register.
     if write_memory:
         qc.crx(0.45 + 0.30 * theta, gate, memory)
         qc.cz(phi, memory)
         qc.rzz(0.20 + 0.10 * theta, temp, memory)
 
-    # Unprepare the explicit gate amplitude so history remains in the internal state.
     qc.ry(-theta, gate)
 
 
 def build_circuit(mode: str, trajectory_name: str) -> QuantumCircuit:
-    """Build a six-qubit operator-controlled transistor analogue.
+    """Build the six-qubit transistor analogue.
 
-    q0 n       carrier/conduction state analogue
-    q1 phi     electrostatic phase analogue
-    q2 T       slow thermal/history analogue
-    q3 m       intrinsic memory ledger
-    q4 g       gate-control register
-    q5 d       drain-current projection ancilla
+    q0 n: carrier/conduction state
+    q1 phi: electrostatic phase
+    q2 T: slow thermal/history state
+    q3 m: intrinsic memory ledger
+    q4 g: gate-control register
+    q5 d: drain-current projection ancilla
     """
     qc = QuantumCircuit(6, 6, name=f"{mode}_{trajectory_name}")
     n, phi, temp, memory, gate, drain = range(6)
     trajectory = TRAJECTORIES[trajectory_name]
 
-    # Common reproducible initial state.
     qc.h(n)
     qc.ry(0.35, phi)
     qc.ry(0.20, temp)
@@ -159,22 +153,17 @@ def build_circuit(mode: str, trajectory_name: str) -> QuantumCircuit:
             apply_internal_evolution(qc, theta, write_memory=True)
 
     elif mode == "boundary_only":
-        # History is ignored. Only the final gate value acts once.
         apply_internal_evolution(qc, trajectory[-1], write_memory=False)
 
     elif mode == "memoryless":
-        # Gate changes internal state, but no memory register is written.
         for theta in trajectory:
             apply_internal_evolution(qc, theta, write_memory=False)
 
     elif mode == "memory_erased":
         for theta in trajectory:
             apply_internal_evolution(qc, theta, write_memory=True)
-        # Coherent erase/control: decouple and symmetrize the ledger before projection.
-        qc.x(memory)
-        qc.h(memory)
-        qc.h(memory)
-        qc.x(memory)
+        # Genuine ledger erasure before output projection.
+        qc.reset(memory)
 
     elif mode == "history_shuffled":
         shuffled = tuple(reversed(trajectory[:-1])) + (trajectory[-1],)
@@ -184,7 +173,7 @@ def build_circuit(mode: str, trajectory_name: str) -> QuantumCircuit:
     else:
         raise ValueError(f"Unknown mode: {mode}")
 
-    # Drain projection Pi(X): observable current analogue from hidden internal state.
+    # Observable drain-current projection Pi(X).
     qc.h(drain)
     qc.cx(n, drain)
     qc.cz(phi, drain)
@@ -228,7 +217,7 @@ def main() -> int:
                         "two_qubit_ops": sum(
                             count
                             for gate_name, count in compiled.count_ops().items()
-                            if gate_name in {"cx", "cz", "ecr", "rzz"}
+                            if gate_name in {"cx", "cz", "ecr", "rzz", "crx", "cry", "crz"}
                         ),
                     }
                 )
@@ -297,8 +286,6 @@ def main() -> int:
 
     same_final_margin = operator_gap - control_same_final
     hysteresis_margin = operator_hysteresis - control_hysteresis
-
-    # Predeclared conservative gate: both effects must exceed all controls by 2%.
     passes = same_final_margin > 0.02 and hysteresis_margin > 0.02
 
     certificate = {
