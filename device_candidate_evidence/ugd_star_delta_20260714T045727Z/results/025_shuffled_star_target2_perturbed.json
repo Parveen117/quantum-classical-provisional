@@ -1,0 +1,75 @@
+{
+  "classical_register": "c",
+  "condition": "PERTURBED",
+  "counts": {
+    "0000": 146,
+    "0001": 57,
+    "0010": 14,
+    "0011": 56,
+    "0100": 17,
+    "0101": 59,
+    "0110": 27,
+    "0111": 7,
+    "1000": 86,
+    "1001": 1788,
+    "1010": 534,
+    "1011": 22,
+    "1100": 943,
+    "1101": 55,
+    "1110": 16,
+    "1111": 269
+  },
+  "edge_correlations": {
+    "Z0Z1": -0.2451171875,
+    "Z0Z2": -0.4287109375,
+    "Z0Z3": 0.1416015625
+  },
+  "index": 25,
+  "mode": "SHUFFLED",
+  "off_target_mean_correlation": -0.3369140625,
+  "probabilities": {
+    "0000": 0.03564453125,
+    "0001": 0.013916015625,
+    "0010": 0.00341796875,
+    "0011": 0.013671875,
+    "0100": 0.004150390625,
+    "0101": 0.014404296875,
+    "0110": 0.006591796875,
+    "0111": 0.001708984375,
+    "1000": 0.02099609375,
+    "1001": 0.4365234375,
+    "1010": 0.13037109375,
+    "1011": 0.00537109375,
+    "1100": 0.230224609375,
+    "1101": 0.013427734375,
+    "1110": 0.00390625,
+    "1111": 0.065673828125
+  },
+  "result_metadata": {
+    "circuit_metadata": {
+      "condition": "PERTURBED",
+      "device_transfer_tag": "TRANSFER_TO_EMK_TENSOR_CELL_DEVICES",
+      "evidence_class": "DEVICE_CANDIDATE_UGD_GATE_BENCHMARK",
+      "experiment_family": "UGD_COMPILED_STAR_DELTA_RECOGNITION",
+      "memory_state": 1.0,
+      "mode": "SHUFFLED",
+      "scientific_boundary": "Compiled UGD-inspired coupling test only. No dynamic measurement feedback is used.",
+      "target_edge": [
+        0,
+        3
+      ],
+      "target_index": 2,
+      "target_repository": "Parveen117/EMK-Tensor-Cell-Devices",
+      "topology": "STAR"
+    }
+  },
+  "shots_observed": 4096,
+  "submitted_circuit_sha256": "ee1f4fa3d3ecff312a92d790acec0830e97c70c3118a4850c856e5a5e2fe29e9",
+  "target_correlation": 0.1416015625,
+  "target_edge": [
+    0,
+    3
+  ],
+  "target_index": 2,
+  "topology": "STAR"
+}

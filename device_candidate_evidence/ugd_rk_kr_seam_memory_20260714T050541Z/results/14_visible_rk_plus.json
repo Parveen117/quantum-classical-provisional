@@ -1,0 +1,37 @@
+{
+  "ancilla_p1": 0.029541015625,
+  "classical_register": "c",
+  "counts": {
+    "00": 2031,
+    "01": 58,
+    "10": 1944,
+    "11": 63
+  },
+  "index": 14,
+  "input_state": "PLUS",
+  "mode": "VISIBLE_RK",
+  "probabilities": {
+    "00": 0.495849609375,
+    "01": 0.01416015625,
+    "10": 0.474609375,
+    "11": 0.015380859375
+  },
+  "result_metadata": {
+    "circuit_metadata": {
+      "device_transfer_tag": "TRANSFER_TO_EMK_TENSOR_CELL_DEVICES",
+      "evidence_class": "UGD_OPERATOR_ALGEBRA_PHYSICAL_BENCHMARK",
+      "experiment_family": "UGD_RK_KR_OPERATOR_ORDER_SEAM_MEMORY",
+      "input_state": "PLUS",
+      "mode": "VISIBLE_RK",
+      "system_role": "visible_projection",
+      "target_repository": "Parveen117/EMK-Tensor-Cell-Devices"
+    }
+  },
+  "shots_observed": 4096,
+  "submitted_circuit_sha256": "904b1068af89538b56aba42a749408458bb673e90d9c96fbce0a0a6b12478a21",
+  "system_marginal": {
+    "0": 0.510009765625,
+    "1": 0.489990234375
+  },
+  "test_type": "VISIBLE_PROJECTION"
+}

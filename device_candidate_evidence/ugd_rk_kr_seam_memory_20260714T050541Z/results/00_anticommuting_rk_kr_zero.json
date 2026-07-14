@@ -1,0 +1,38 @@
+{
+  "ancilla_p1": 0.97314453125,
+  "classical_register": "c",
+  "counts": {
+    "00": 104,
+    "01": 3983,
+    "10": 6,
+    "11": 3
+  },
+  "index": 0,
+  "input_state": "ZERO",
+  "mode": "ANTICOMMUTING_RK_KR",
+  "probabilities": {
+    "00": 0.025390625,
+    "01": 0.972412109375,
+    "10": 0.00146484375,
+    "11": 0.000732421875
+  },
+  "result_metadata": {
+    "circuit_metadata": {
+      "ancilla_role": "seam_path_memory",
+      "device_transfer_tag": "TRANSFER_TO_EMK_TENSOR_CELL_DEVICES",
+      "evidence_class": "UGD_OPERATOR_ALGEBRA_PHYSICAL_BENCHMARK",
+      "experiment_family": "UGD_RK_KR_OPERATOR_ORDER_SEAM_MEMORY",
+      "input_state": "ZERO",
+      "mode": "ANTICOMMUTING_RK_KR",
+      "system_role": "visible_projection",
+      "target_repository": "Parveen117/EMK-Tensor-Cell-Devices"
+    }
+  },
+  "shots_observed": 4096,
+  "submitted_circuit_sha256": "f054bcdfc1c0e7659eb9cdea109dd83e044870eff0f9ac1a1a85606935311bb7",
+  "system_marginal": {
+    "0": 0.997802734375,
+    "1": 0.002197265625
+  },
+  "test_type": "INTERFEROMETER"
+}

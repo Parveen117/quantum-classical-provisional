@@ -1,0 +1,1107 @@
+{
+  "acquired_at": "2026-07-14T05:06:23.065538+00:00",
+  "acquisition_id": "d9as7a66hjac73fet1q0",
+  "algebra_checks": {
+    "anti_K_squared_error": 0.0,
+    "anti_RK_plus_KR_error": 0.0,
+    "anti_R_squared_error": 0.0,
+    "anti_anticommutator_error": 0.0,
+    "comm_K_squared_error": 0.0,
+    "comm_R_squared_error": 0.0,
+    "commutator_control_error": 0.0
+  },
+  "backend": "ibm_kingston",
+  "calibration_id": "ibm_kingston:properties:2026-07-14T09:05:05+05:30",
+  "circuit_count": 20,
+  "circuit_manifest": [
+    {
+      "index": 0,
+      "input_state": "ZERO",
+      "logical_depth": 7,
+      "logical_diagram_file": "00_anticommuting_rk_kr_zero_logical.txt",
+      "logical_diagram_sha256": "5ac9c6f04121c78c107e939ef441ca8c007283db39148954bd54886fafe9bb30",
+      "logical_size": 8,
+      "mode": "ANTICOMMUTING_RK_KR",
+      "submitted_depth": 14,
+      "submitted_file": "00_anticommuting_rk_kr_zero_submitted.qasm",
+      "submitted_sha256": "f054bcdfc1c0e7659eb9cdea109dd83e044870eff0f9ac1a1a85606935311bb7",
+      "submitted_size": 17,
+      "test_type": "INTERFEROMETER"
+    },
+    {
+      "index": 1,
+      "input_state": "ONE",
+      "logical_depth": 7,
+      "logical_diagram_file": "01_anticommuting_rk_kr_one_logical.txt",
+      "logical_diagram_sha256": "3d3e37db697306a9050392a04d244d25747d4874d8f6c5bd20374d99958592c9",
+      "logical_size": 9,
+      "mode": "ANTICOMMUTING_RK_KR",
+      "submitted_depth": 14,
+      "submitted_file": "01_anticommuting_rk_kr_one_submitted.qasm",
+      "submitted_sha256": "fdb2b37193376ed610106c5b83fcbbee11a79fb2d62fe700df223134a86600a6",
+      "submitted_size": 18,
+      "test_type": "INTERFEROMETER"
+    },
+    {
+      "index": 2,
+      "input_state": "PLUS",
+      "logical_depth": 7,
+      "logical_diagram_file": "02_anticommuting_rk_kr_plus_logical.txt",
+      "logical_diagram_sha256": "3402e0011391bcaa84bea4d3c8b30674afe546115b9505b0a1fcc3fc2d50ac85",
+      "logical_size": 9,
+      "mode": "ANTICOMMUTING_RK_KR",
+      "submitted_depth": 14,
+      "submitted_file": "02_anticommuting_rk_kr_plus_submitted.qasm",
+      "submitted_sha256": "302459b6b8ea8d83a344b50858849fc911cfd1b4ce05425421c50c7a85e40741",
+      "submitted_size": 20,
+      "test_type": "INTERFEROMETER"
+    },
+    {
+      "index": 3,
+      "input_state": "PLUS_I",
+      "logical_depth": 8,
+      "logical_diagram_file": "03_anticommuting_rk_kr_plus_i_logical.txt",
+      "logical_diagram_sha256": "714fed1852aac2399a69df223e559beeba24ce7f1839ea1d9e6f9fec231856b6",
+      "logical_size": 10,
+      "mode": "ANTICOMMUTING_RK_KR",
+      "submitted_depth": 14,
+      "submitted_file": "03_anticommuting_rk_kr_plus_i_submitted.qasm",
+      "submitted_sha256": "573d01cd92a27b1dc71d03371c6261fa297163e233619b63e456929acd7436f9",
+      "submitted_size": 20,
+      "test_type": "INTERFEROMETER"
+    },
+    {
+      "index": 4,
+      "input_state": "ZERO",
+      "logical_depth": 7,
+      "logical_diagram_file": "04_commuting_rk_kr_zero_logical.txt",
+      "logical_diagram_sha256": "121eb8a88068853837e76b3bccf58b9a44dc40c8532cf80f5ba2c67e5ddb8980",
+      "logical_size": 8,
+      "mode": "COMMUTING_RK_KR",
+      "submitted_depth": 7,
+      "submitted_file": "04_commuting_rk_kr_zero_submitted.qasm",
+      "submitted_sha256": "6bc506b00fdf09b506dd4e439ad5d986e4817c2591ebe571ea6173ae3e9da113",
+      "submitted_size": 8,
+      "test_type": "INTERFEROMETER"
+    },
+    {
+      "index": 5,
+      "input_state": "ONE",
+      "logical_depth": 7,
+      "logical_diagram_file": "05_commuting_rk_kr_one_logical.txt",
+      "logical_diagram_sha256": "c9963837309d82cd81dd1a7654cde68ba2de23437c6de0f3f7c6762e198b75ae",
+      "logical_size": 9,
+      "mode": "COMMUTING_RK_KR",
+      "submitted_depth": 7,
+      "submitted_file": "05_commuting_rk_kr_one_submitted.qasm",
+      "submitted_sha256": "ce198a428acf4393e83fbe0c8e8ff01e8b78d9e545ae851df9fb961fc570c2e9",
+      "submitted_size": 9,
+      "test_type": "INTERFEROMETER"
+    },
+    {
+      "index": 6,
+      "input_state": "PLUS",
+      "logical_depth": 7,
+      "logical_diagram_file": "06_commuting_rk_kr_plus_logical.txt",
+      "logical_diagram_sha256": "14f6a61d836ad22ad3bbfd5fc40c9132d099d7823538dd01457b69fbebf6cda3",
+      "logical_size": 9,
+      "mode": "COMMUTING_RK_KR",
+      "submitted_depth": 7,
+      "submitted_file": "06_commuting_rk_kr_plus_submitted.qasm",
+      "submitted_sha256": "24d4717fc7f9530cabeb205bee36bafa570d10f96507eeaedee1dd2e123f4e7a",
+      "submitted_size": 11,
+      "test_type": "INTERFEROMETER"
+    },
+    {
+      "index": 7,
+      "input_state": "PLUS_I",
+      "logical_depth": 8,
+      "logical_diagram_file": "07_commuting_rk_kr_plus_i_logical.txt",
+      "logical_diagram_sha256": "7f4090d1317342ad5baeba99526affa8c60487b4ad88ea72170bfb0988ac4a4a",
+      "logical_size": 10,
+      "mode": "COMMUTING_RK_KR",
+      "submitted_depth": 7,
+      "submitted_file": "07_commuting_rk_kr_plus_i_submitted.qasm",
+      "submitted_sha256": "b7fb9d7f895c5d7b4dae5ea1176d1c22d1431abb02d68fb60a02a86a1abbb7c6",
+      "submitted_size": 11,
+      "test_type": "INTERFEROMETER"
+    },
+    {
+      "index": 8,
+      "input_state": "ZERO",
+      "logical_depth": 7,
+      "logical_diagram_file": "08_order_erased_zero_logical.txt",
+      "logical_diagram_sha256": "70c7c16060ddb7969d69be25228ecbcaed04b2390a14462e9aa658cffb7b88cb",
+      "logical_size": 8,
+      "mode": "ORDER_ERASED",
+      "submitted_depth": 12,
+      "submitted_file": "08_order_erased_zero_submitted.qasm",
+      "submitted_sha256": "18ff2e2085bbda5c465bb958dd230615cc43fc9548a5362c97770d986687e5ee",
+      "submitted_size": 15,
+      "test_type": "INTERFEROMETER"
+    },
+    {
+      "index": 9,
+      "input_state": "ONE",
+      "logical_depth": 7,
+      "logical_diagram_file": "09_order_erased_one_logical.txt",
+      "logical_diagram_sha256": "e28e6286f5849534015318c62476d4151b3d809365eee8b73ec309e42d3b5812",
+      "logical_size": 9,
+      "mode": "ORDER_ERASED",
+      "submitted_depth": 12,
+      "submitted_file": "09_order_erased_one_submitted.qasm",
+      "submitted_sha256": "1d60c784cf1b07305ea37db7fd0c0e4b7edf56ab5c42a3d0c18b66c2dc62d030",
+      "submitted_size": 16,
+      "test_type": "INTERFEROMETER"
+    },
+    {
+      "index": 10,
+      "input_state": "PLUS",
+      "logical_depth": 7,
+      "logical_diagram_file": "10_order_erased_plus_logical.txt",
+      "logical_diagram_sha256": "efa7ac45dcaa2a2e2ee26c6bce9170a65e26ac2385a072bff8ebd383ecae13dc",
+      "logical_size": 9,
+      "mode": "ORDER_ERASED",
+      "submitted_depth": 12,
+      "submitted_file": "10_order_erased_plus_submitted.qasm",
+      "submitted_sha256": "ad650f922ddcc3224a37d9b6cf72b09ebb2f7dc62791b97e120b1b60647b1036",
+      "submitted_size": 18,
+      "test_type": "INTERFEROMETER"
+    },
+    {
+      "index": 11,
+      "input_state": "PLUS_I",
+      "logical_depth": 8,
+      "logical_diagram_file": "11_order_erased_plus_i_logical.txt",
+      "logical_diagram_sha256": "bdbb57efc86d365073121bb5cabc9a698ffc7290d91020db340b492fbb58193d",
+      "logical_size": 10,
+      "mode": "ORDER_ERASED",
+      "submitted_depth": 12,
+      "submitted_file": "11_order_erased_plus_i_submitted.qasm",
+      "submitted_sha256": "708a72b4d01c1f5dbd18c1ca426e056d3cbcbff9a586a327c37f10f6c709152a",
+      "submitted_size": 18,
+      "test_type": "INTERFEROMETER"
+    },
+    {
+      "index": 12,
+      "input_state": "ZERO",
+      "logical_depth": 2,
+      "logical_diagram_file": "12_visible_rk_zero_logical.txt",
+      "logical_diagram_sha256": "118c01ad3895ee963ea117473904ff9072ec17f7125ca27f228d52a7f87b4b8c",
+      "logical_size": 3,
+      "mode": "VISIBLE_RK",
+      "submitted_depth": 2,
+      "submitted_file": "12_visible_rk_zero_submitted.qasm",
+      "submitted_sha256": "453c3a40e46444a4179b3f75890f99f773c07242b9001f349f0700e35ed83d39",
+      "submitted_size": 3,
+      "test_type": "VISIBLE_PROJECTION"
+    },
+    {
+      "index": 13,
+      "input_state": "ONE",
+      "logical_depth": 3,
+      "logical_diagram_file": "13_visible_rk_one_logical.txt",
+      "logical_diagram_sha256": "fc94f547f9a0341009b1e453f51bd311944f5fa1b4aa3146094dbec543bee771",
+      "logical_size": 4,
+      "mode": "VISIBLE_RK",
+      "submitted_depth": 3,
+      "submitted_file": "13_visible_rk_one_submitted.qasm",
+      "submitted_sha256": "abd395ca06fc310304ee028a5a955dcb8e186802f56a71f0ad96f77db4a2d9d7",
+      "submitted_size": 4,
+      "test_type": "VISIBLE_PROJECTION"
+    },
+    {
+      "index": 14,
+      "input_state": "PLUS",
+      "logical_depth": 3,
+      "logical_diagram_file": "14_visible_rk_plus_logical.txt",
+      "logical_diagram_sha256": "534dcb5809b93f62bf5cd8940ee3c0a1a6ff69b1bc0f278115790de307efc0e9",
+      "logical_size": 4,
+      "mode": "VISIBLE_RK",
+      "submitted_depth": 4,
+      "submitted_file": "14_visible_rk_plus_submitted.qasm",
+      "submitted_sha256": "904b1068af89538b56aba42a749408458bb673e90d9c96fbce0a0a6b12478a21",
+      "submitted_size": 5,
+      "test_type": "VISIBLE_PROJECTION"
+    },
+    {
+      "index": 15,
+      "input_state": "PLUS_I",
+      "logical_depth": 4,
+      "logical_diagram_file": "15_visible_rk_plus_i_logical.txt",
+      "logical_diagram_sha256": "7012a02e0c4c9801fb1633a17709ee6ede2b28eaaa11d1b43957855c1a5a1196",
+      "logical_size": 5,
+      "mode": "VISIBLE_RK",
+      "submitted_depth": 3,
+      "submitted_file": "15_visible_rk_plus_i_submitted.qasm",
+      "submitted_sha256": "58fe1feafe5402c1fb28ba6cb63b59434725fe5ea91b469e1bfad017bc148a34",
+      "submitted_size": 4,
+      "test_type": "VISIBLE_PROJECTION"
+    },
+    {
+      "index": 16,
+      "input_state": "ZERO",
+      "logical_depth": 2,
+      "logical_diagram_file": "16_visible_kr_zero_logical.txt",
+      "logical_diagram_sha256": "1fbe582eac99be2ad56a0aecc336f6bc03ab000097621583bff132a1417d8447",
+      "logical_size": 3,
+      "mode": "VISIBLE_KR",
+      "submitted_depth": 2,
+      "submitted_file": "16_visible_kr_zero_submitted.qasm",
+      "submitted_sha256": "453c3a40e46444a4179b3f75890f99f773c07242b9001f349f0700e35ed83d39",
+      "submitted_size": 3,
+      "test_type": "VISIBLE_PROJECTION"
+    },
+    {
+      "index": 17,
+      "input_state": "ONE",
+      "logical_depth": 3,
+      "logical_diagram_file": "17_visible_kr_one_logical.txt",
+      "logical_diagram_sha256": "a8bb2036e6e43f9793c3c8b45a32897130f935833fb704a19e1c6940e658fec3",
+      "logical_size": 4,
+      "mode": "VISIBLE_KR",
+      "submitted_depth": 3,
+      "submitted_file": "17_visible_kr_one_submitted.qasm",
+      "submitted_sha256": "abd395ca06fc310304ee028a5a955dcb8e186802f56a71f0ad96f77db4a2d9d7",
+      "submitted_size": 4,
+      "test_type": "VISIBLE_PROJECTION"
+    },
+    {
+      "index": 18,
+      "input_state": "PLUS",
+      "logical_depth": 3,
+      "logical_diagram_file": "18_visible_kr_plus_logical.txt",
+      "logical_diagram_sha256": "b86ca1c898a94b62843800c51a1fdddd34e8785cbcb63c497baaab662a39bf36",
+      "logical_size": 4,
+      "mode": "VISIBLE_KR",
+      "submitted_depth": 4,
+      "submitted_file": "18_visible_kr_plus_submitted.qasm",
+      "submitted_sha256": "904b1068af89538b56aba42a749408458bb673e90d9c96fbce0a0a6b12478a21",
+      "submitted_size": 5,
+      "test_type": "VISIBLE_PROJECTION"
+    },
+    {
+      "index": 19,
+      "input_state": "PLUS_I",
+      "logical_depth": 4,
+      "logical_diagram_file": "19_visible_kr_plus_i_logical.txt",
+      "logical_diagram_sha256": "330af586eef238dffed533dc2048b5372b155caff5dad533e4c537d799a3364d",
+      "logical_size": 5,
+      "mode": "VISIBLE_KR",
+      "submitted_depth": 3,
+      "submitted_file": "19_visible_kr_plus_i_submitted.qasm",
+      "submitted_sha256": "58fe1feafe5402c1fb28ba6cb63b59434725fe5ea91b469e1bfad017bc148a34",
+      "submitted_size": 4,
+      "test_type": "VISIBLE_PROJECTION"
+    }
+  ],
+  "current_repository": "Parveen117/quantum-classical-provisional",
+  "device_transfer_tag": "TRANSFER_TO_EMK_TENSOR_CELL_DEVICES",
+  "evidence_class": "UGD_OPERATOR_ALGEBRA_PHYSICAL_BENCHMARK",
+  "evidence_origin": "physical_backend",
+  "experiment_family": "UGD_RK_KR_OPERATOR_ORDER_SEAM_MEMORY",
+  "operator_matrices": {
+    "KR_anti": [
+      [
+        "(-1+0j)",
+        "0j"
+      ],
+      [
+        "0j",
+        "(1+0j)"
+      ]
+    ],
+    "K_anti": [
+      [
+        "0j",
+        "(1+0j)"
+      ],
+      [
+        "(1+0j)",
+        "0j"
+      ]
+    ],
+    "K_comm": [
+      [
+        "(1+0j)",
+        "0j"
+      ],
+      [
+        "0j",
+        "(-1+0j)"
+      ]
+    ],
+    "RK_anti": [
+      [
+        "(1+0j)",
+        "0j"
+      ],
+      [
+        "0j",
+        "(-1+0j)"
+      ]
+    ],
+    "R_anti": [
+      [
+        "0j",
+        "(1-0j)"
+      ],
+      [
+        "(-1+0j)",
+        "0j"
+      ]
+    ],
+    "R_comm": [
+      [
+        "1j",
+        "0j"
+      ],
+      [
+        "0j",
+        "(-0-1j)"
+      ]
+    ]
+  },
+  "provider": "IBM Quantum",
+  "results": [
+    {
+      "ancilla_p1": 0.97314453125,
+      "classical_register": "c",
+      "counts": {
+        "00": 104,
+        "01": 3983,
+        "10": 6,
+        "11": 3
+      },
+      "index": 0,
+      "input_state": "ZERO",
+      "mode": "ANTICOMMUTING_RK_KR",
+      "probabilities": {
+        "00": 0.025390625,
+        "01": 0.972412109375,
+        "10": 0.00146484375,
+        "11": 0.000732421875
+      },
+      "result_metadata": {
+        "circuit_metadata": {
+          "ancilla_role": "seam_path_memory",
+          "device_transfer_tag": "TRANSFER_TO_EMK_TENSOR_CELL_DEVICES",
+          "evidence_class": "UGD_OPERATOR_ALGEBRA_PHYSICAL_BENCHMARK",
+          "experiment_family": "UGD_RK_KR_OPERATOR_ORDER_SEAM_MEMORY",
+          "input_state": "ZERO",
+          "mode": "ANTICOMMUTING_RK_KR",
+          "system_role": "visible_projection",
+          "target_repository": "Parveen117/EMK-Tensor-Cell-Devices"
+        }
+      },
+      "shots_observed": 4096,
+      "submitted_circuit_sha256": "f054bcdfc1c0e7659eb9cdea109dd83e044870eff0f9ac1a1a85606935311bb7",
+      "system_marginal": {
+        "0": 0.997802734375,
+        "1": 0.002197265625
+      },
+      "test_type": "INTERFEROMETER"
+    },
+    {
+      "ancilla_p1": 0.97265625,
+      "classical_register": "c",
+      "counts": {
+        "00": 8,
+        "01": 206,
+        "10": 104,
+        "11": 3778
+      },
+      "index": 1,
+      "input_state": "ONE",
+      "mode": "ANTICOMMUTING_RK_KR",
+      "probabilities": {
+        "00": 0.001953125,
+        "01": 0.05029296875,
+        "10": 0.025390625,
+        "11": 0.92236328125
+      },
+      "result_metadata": {
+        "circuit_metadata": {
+          "ancilla_role": "seam_path_memory",
+          "device_transfer_tag": "TRANSFER_TO_EMK_TENSOR_CELL_DEVICES",
+          "evidence_class": "UGD_OPERATOR_ALGEBRA_PHYSICAL_BENCHMARK",
+          "experiment_family": "UGD_RK_KR_OPERATOR_ORDER_SEAM_MEMORY",
+          "input_state": "ONE",
+          "mode": "ANTICOMMUTING_RK_KR",
+          "system_role": "visible_projection",
+          "target_repository": "Parveen117/EMK-Tensor-Cell-Devices"
+        }
+      },
+      "shots_observed": 4096,
+      "submitted_circuit_sha256": "fdb2b37193376ed610106c5b83fcbbee11a79fb2d62fe700df223134a86600a6",
+      "system_marginal": {
+        "0": 0.05224609375,
+        "1": 0.94775390625
+      },
+      "test_type": "INTERFEROMETER"
+    },
+    {
+      "ancilla_p1": 0.97314453125,
+      "classical_register": "c",
+      "counts": {
+        "00": 58,
+        "01": 2045,
+        "10": 52,
+        "11": 1941
+      },
+      "index": 2,
+      "input_state": "PLUS",
+      "mode": "ANTICOMMUTING_RK_KR",
+      "probabilities": {
+        "00": 0.01416015625,
+        "01": 0.499267578125,
+        "10": 0.0126953125,
+        "11": 0.473876953125
+      },
+      "result_metadata": {
+        "circuit_metadata": {
+          "ancilla_role": "seam_path_memory",
+          "device_transfer_tag": "TRANSFER_TO_EMK_TENSOR_CELL_DEVICES",
+          "evidence_class": "UGD_OPERATOR_ALGEBRA_PHYSICAL_BENCHMARK",
+          "experiment_family": "UGD_RK_KR_OPERATOR_ORDER_SEAM_MEMORY",
+          "input_state": "PLUS",
+          "mode": "ANTICOMMUTING_RK_KR",
+          "system_role": "visible_projection",
+          "target_repository": "Parveen117/EMK-Tensor-Cell-Devices"
+        }
+      },
+      "shots_observed": 4096,
+      "submitted_circuit_sha256": "302459b6b8ea8d83a344b50858849fc911cfd1b4ce05425421c50c7a85e40741",
+      "system_marginal": {
+        "0": 0.513427734375,
+        "1": 0.486572265625
+      },
+      "test_type": "INTERFEROMETER"
+    },
+    {
+      "ancilla_p1": 0.97509765625,
+      "classical_register": "c",
+      "counts": {
+        "00": 55,
+        "01": 2050,
+        "10": 47,
+        "11": 1944
+      },
+      "index": 3,
+      "input_state": "PLUS_I",
+      "mode": "ANTICOMMUTING_RK_KR",
+      "probabilities": {
+        "00": 0.013427734375,
+        "01": 0.50048828125,
+        "10": 0.011474609375,
+        "11": 0.474609375
+      },
+      "result_metadata": {
+        "circuit_metadata": {
+          "ancilla_role": "seam_path_memory",
+          "device_transfer_tag": "TRANSFER_TO_EMK_TENSOR_CELL_DEVICES",
+          "evidence_class": "UGD_OPERATOR_ALGEBRA_PHYSICAL_BENCHMARK",
+          "experiment_family": "UGD_RK_KR_OPERATOR_ORDER_SEAM_MEMORY",
+          "input_state": "PLUS_I",
+          "mode": "ANTICOMMUTING_RK_KR",
+          "system_role": "visible_projection",
+          "target_repository": "Parveen117/EMK-Tensor-Cell-Devices"
+        }
+      },
+      "shots_observed": 4096,
+      "submitted_circuit_sha256": "573d01cd92a27b1dc71d03371c6261fa297163e233619b63e456929acd7436f9",
+      "system_marginal": {
+        "0": 0.513916015625,
+        "1": 0.486083984375
+      },
+      "test_type": "INTERFEROMETER"
+    },
+    {
+      "ancilla_p1": 0.026123046875,
+      "classical_register": "c",
+      "counts": {
+        "00": 3988,
+        "01": 107,
+        "10": 1
+      },
+      "index": 4,
+      "input_state": "ZERO",
+      "mode": "COMMUTING_RK_KR",
+      "probabilities": {
+        "00": 0.9736328125,
+        "01": 0.026123046875,
+        "10": 0.000244140625
+      },
+      "result_metadata": {
+        "circuit_metadata": {
+          "ancilla_role": "seam_path_memory",
+          "device_transfer_tag": "TRANSFER_TO_EMK_TENSOR_CELL_DEVICES",
+          "evidence_class": "UGD_OPERATOR_ALGEBRA_PHYSICAL_BENCHMARK",
+          "experiment_family": "UGD_RK_KR_OPERATOR_ORDER_SEAM_MEMORY",
+          "input_state": "ZERO",
+          "mode": "COMMUTING_RK_KR",
+          "system_role": "visible_projection",
+          "target_repository": "Parveen117/EMK-Tensor-Cell-Devices"
+        }
+      },
+      "shots_observed": 4096,
+      "submitted_circuit_sha256": "6bc506b00fdf09b506dd4e439ad5d986e4817c2591ebe571ea6173ae3e9da113",
+      "system_marginal": {
+        "0": 0.999755859375,
+        "1": 0.000244140625
+      },
+      "test_type": "INTERFEROMETER"
+    },
+    {
+      "ancilla_p1": 0.02783203125,
+      "classical_register": "c",
+      "counts": {
+        "00": 186,
+        "10": 3796,
+        "11": 114
+      },
+      "index": 5,
+      "input_state": "ONE",
+      "mode": "COMMUTING_RK_KR",
+      "probabilities": {
+        "00": 0.04541015625,
+        "10": 0.9267578125,
+        "11": 0.02783203125
+      },
+      "result_metadata": {
+        "circuit_metadata": {
+          "ancilla_role": "seam_path_memory",
+          "device_transfer_tag": "TRANSFER_TO_EMK_TENSOR_CELL_DEVICES",
+          "evidence_class": "UGD_OPERATOR_ALGEBRA_PHYSICAL_BENCHMARK",
+          "experiment_family": "UGD_RK_KR_OPERATOR_ORDER_SEAM_MEMORY",
+          "input_state": "ONE",
+          "mode": "COMMUTING_RK_KR",
+          "system_role": "visible_projection",
+          "target_repository": "Parveen117/EMK-Tensor-Cell-Devices"
+        }
+      },
+      "shots_observed": 4096,
+      "submitted_circuit_sha256": "ce198a428acf4393e83fbe0c8e8ff01e8b78d9e545ae851df9fb961fc570c2e9",
+      "system_marginal": {
+        "0": 0.04541015625,
+        "1": 0.95458984375
+      },
+      "test_type": "INTERFEROMETER"
+    },
+    {
+      "ancilla_p1": 0.023193359375,
+      "classical_register": "c",
+      "counts": {
+        "00": 2086,
+        "01": 46,
+        "10": 1915,
+        "11": 49
+      },
+      "index": 6,
+      "input_state": "PLUS",
+      "mode": "COMMUTING_RK_KR",
+      "probabilities": {
+        "00": 0.50927734375,
+        "01": 0.01123046875,
+        "10": 0.467529296875,
+        "11": 0.011962890625
+      },
+      "result_metadata": {
+        "circuit_metadata": {
+          "ancilla_role": "seam_path_memory",
+          "device_transfer_tag": "TRANSFER_TO_EMK_TENSOR_CELL_DEVICES",
+          "evidence_class": "UGD_OPERATOR_ALGEBRA_PHYSICAL_BENCHMARK",
+          "experiment_family": "UGD_RK_KR_OPERATOR_ORDER_SEAM_MEMORY",
+          "input_state": "PLUS",
+          "mode": "COMMUTING_RK_KR",
+          "system_role": "visible_projection",
+          "target_repository": "Parveen117/EMK-Tensor-Cell-Devices"
+        }
+      },
+      "shots_observed": 4096,
+      "submitted_circuit_sha256": "24d4717fc7f9530cabeb205bee36bafa570d10f96507eeaedee1dd2e123f4e7a",
+      "system_marginal": {
+        "0": 0.5205078125,
+        "1": 0.4794921875
+      },
+      "test_type": "INTERFEROMETER"
+    },
+    {
+      "ancilla_p1": 0.025146484375,
+      "classical_register": "c",
+      "counts": {
+        "00": 2069,
+        "01": 58,
+        "10": 1924,
+        "11": 45
+      },
+      "index": 7,
+      "input_state": "PLUS_I",
+      "mode": "COMMUTING_RK_KR",
+      "probabilities": {
+        "00": 0.505126953125,
+        "01": 0.01416015625,
+        "10": 0.4697265625,
+        "11": 0.010986328125
+      },
+      "result_metadata": {
+        "circuit_metadata": {
+          "ancilla_role": "seam_path_memory",
+          "device_transfer_tag": "TRANSFER_TO_EMK_TENSOR_CELL_DEVICES",
+          "evidence_class": "UGD_OPERATOR_ALGEBRA_PHYSICAL_BENCHMARK",
+          "experiment_family": "UGD_RK_KR_OPERATOR_ORDER_SEAM_MEMORY",
+          "input_state": "PLUS_I",
+          "mode": "COMMUTING_RK_KR",
+          "system_role": "visible_projection",
+          "target_repository": "Parveen117/EMK-Tensor-Cell-Devices"
+        }
+      },
+      "shots_observed": 4096,
+      "submitted_circuit_sha256": "b7fb9d7f895c5d7b4dae5ea1176d1c22d1431abb02d68fb60a02a86a1abbb7c6",
+      "system_marginal": {
+        "0": 0.519287109375,
+        "1": 0.480712890625
+      },
+      "test_type": "INTERFEROMETER"
+    },
+    {
+      "ancilla_p1": 0.027587890625,
+      "classical_register": "c",
+      "counts": {
+        "00": 3983,
+        "01": 113
+      },
+      "index": 8,
+      "input_state": "ZERO",
+      "mode": "ORDER_ERASED",
+      "probabilities": {
+        "00": 0.972412109375,
+        "01": 0.027587890625
+      },
+      "result_metadata": {
+        "circuit_metadata": {
+          "ancilla_role": "seam_path_memory",
+          "device_transfer_tag": "TRANSFER_TO_EMK_TENSOR_CELL_DEVICES",
+          "evidence_class": "UGD_OPERATOR_ALGEBRA_PHYSICAL_BENCHMARK",
+          "experiment_family": "UGD_RK_KR_OPERATOR_ORDER_SEAM_MEMORY",
+          "input_state": "ZERO",
+          "mode": "ORDER_ERASED",
+          "system_role": "visible_projection",
+          "target_repository": "Parveen117/EMK-Tensor-Cell-Devices"
+        }
+      },
+      "shots_observed": 4096,
+      "submitted_circuit_sha256": "18ff2e2085bbda5c465bb958dd230615cc43fc9548a5362c97770d986687e5ee",
+      "system_marginal": {
+        "0": 1.0,
+        "1": 0.0
+      },
+      "test_type": "INTERFEROMETER"
+    },
+    {
+      "ancilla_p1": 0.02978515625,
+      "classical_register": "c",
+      "counts": {
+        "00": 181,
+        "01": 8,
+        "10": 3793,
+        "11": 114
+      },
+      "index": 9,
+      "input_state": "ONE",
+      "mode": "ORDER_ERASED",
+      "probabilities": {
+        "00": 0.044189453125,
+        "01": 0.001953125,
+        "10": 0.926025390625,
+        "11": 0.02783203125
+      },
+      "result_metadata": {
+        "circuit_metadata": {
+          "ancilla_role": "seam_path_memory",
+          "device_transfer_tag": "TRANSFER_TO_EMK_TENSOR_CELL_DEVICES",
+          "evidence_class": "UGD_OPERATOR_ALGEBRA_PHYSICAL_BENCHMARK",
+          "experiment_family": "UGD_RK_KR_OPERATOR_ORDER_SEAM_MEMORY",
+          "input_state": "ONE",
+          "mode": "ORDER_ERASED",
+          "system_role": "visible_projection",
+          "target_repository": "Parveen117/EMK-Tensor-Cell-Devices"
+        }
+      },
+      "shots_observed": 4096,
+      "submitted_circuit_sha256": "1d60c784cf1b07305ea37db7fd0c0e4b7edf56ab5c42a3d0c18b66c2dc62d030",
+      "system_marginal": {
+        "0": 0.046142578125,
+        "1": 0.953857421875
+      },
+      "test_type": "INTERFEROMETER"
+    },
+    {
+      "ancilla_p1": 0.027099609375,
+      "classical_register": "c",
+      "counts": {
+        "00": 2147,
+        "01": 65,
+        "10": 1838,
+        "11": 46
+      },
+      "index": 10,
+      "input_state": "PLUS",
+      "mode": "ORDER_ERASED",
+      "probabilities": {
+        "00": 0.524169921875,
+        "01": 0.015869140625,
+        "10": 0.44873046875,
+        "11": 0.01123046875
+      },
+      "result_metadata": {
+        "circuit_metadata": {
+          "ancilla_role": "seam_path_memory",
+          "device_transfer_tag": "TRANSFER_TO_EMK_TENSOR_CELL_DEVICES",
+          "evidence_class": "UGD_OPERATOR_ALGEBRA_PHYSICAL_BENCHMARK",
+          "experiment_family": "UGD_RK_KR_OPERATOR_ORDER_SEAM_MEMORY",
+          "input_state": "PLUS",
+          "mode": "ORDER_ERASED",
+          "system_role": "visible_projection",
+          "target_repository": "Parveen117/EMK-Tensor-Cell-Devices"
+        }
+      },
+      "shots_observed": 4096,
+      "submitted_circuit_sha256": "ad650f922ddcc3224a37d9b6cf72b09ebb2f7dc62791b97e120b1b60647b1036",
+      "system_marginal": {
+        "0": 0.5400390625,
+        "1": 0.4599609375
+      },
+      "test_type": "INTERFEROMETER"
+    },
+    {
+      "ancilla_p1": 0.026611328125,
+      "classical_register": "c",
+      "counts": {
+        "00": 2121,
+        "01": 60,
+        "10": 1866,
+        "11": 49
+      },
+      "index": 11,
+      "input_state": "PLUS_I",
+      "mode": "ORDER_ERASED",
+      "probabilities": {
+        "00": 0.517822265625,
+        "01": 0.0146484375,
+        "10": 0.45556640625,
+        "11": 0.011962890625
+      },
+      "result_metadata": {
+        "circuit_metadata": {
+          "ancilla_role": "seam_path_memory",
+          "device_transfer_tag": "TRANSFER_TO_EMK_TENSOR_CELL_DEVICES",
+          "evidence_class": "UGD_OPERATOR_ALGEBRA_PHYSICAL_BENCHMARK",
+          "experiment_family": "UGD_RK_KR_OPERATOR_ORDER_SEAM_MEMORY",
+          "input_state": "PLUS_I",
+          "mode": "ORDER_ERASED",
+          "system_role": "visible_projection",
+          "target_repository": "Parveen117/EMK-Tensor-Cell-Devices"
+        }
+      },
+      "shots_observed": 4096,
+      "submitted_circuit_sha256": "708a72b4d01c1f5dbd18c1ca426e056d3cbcbff9a586a327c37f10f6c709152a",
+      "system_marginal": {
+        "0": 0.532470703125,
+        "1": 0.467529296875
+      },
+      "test_type": "INTERFEROMETER"
+    },
+    {
+      "ancilla_p1": 0.028076171875,
+      "classical_register": "c",
+      "counts": {
+        "00": 3981,
+        "01": 115
+      },
+      "index": 12,
+      "input_state": "ZERO",
+      "mode": "VISIBLE_RK",
+      "probabilities": {
+        "00": 0.971923828125,
+        "01": 0.028076171875
+      },
+      "result_metadata": {
+        "circuit_metadata": {
+          "device_transfer_tag": "TRANSFER_TO_EMK_TENSOR_CELL_DEVICES",
+          "evidence_class": "UGD_OPERATOR_ALGEBRA_PHYSICAL_BENCHMARK",
+          "experiment_family": "UGD_RK_KR_OPERATOR_ORDER_SEAM_MEMORY",
+          "input_state": "ZERO",
+          "mode": "VISIBLE_RK",
+          "system_role": "visible_projection",
+          "target_repository": "Parveen117/EMK-Tensor-Cell-Devices"
+        }
+      },
+      "shots_observed": 4096,
+      "submitted_circuit_sha256": "453c3a40e46444a4179b3f75890f99f773c07242b9001f349f0700e35ed83d39",
+      "system_marginal": {
+        "0": 1.0,
+        "1": 0.0
+      },
+      "test_type": "VISIBLE_PROJECTION"
+    },
+    {
+      "ancilla_p1": 0.025146484375,
+      "classical_register": "c",
+      "counts": {
+        "00": 200,
+        "01": 3,
+        "10": 3793,
+        "11": 100
+      },
+      "index": 13,
+      "input_state": "ONE",
+      "mode": "VISIBLE_RK",
+      "probabilities": {
+        "00": 0.048828125,
+        "01": 0.000732421875,
+        "10": 0.926025390625,
+        "11": 0.0244140625
+      },
+      "result_metadata": {
+        "circuit_metadata": {
+          "device_transfer_tag": "TRANSFER_TO_EMK_TENSOR_CELL_DEVICES",
+          "evidence_class": "UGD_OPERATOR_ALGEBRA_PHYSICAL_BENCHMARK",
+          "experiment_family": "UGD_RK_KR_OPERATOR_ORDER_SEAM_MEMORY",
+          "input_state": "ONE",
+          "mode": "VISIBLE_RK",
+          "system_role": "visible_projection",
+          "target_repository": "Parveen117/EMK-Tensor-Cell-Devices"
+        }
+      },
+      "shots_observed": 4096,
+      "submitted_circuit_sha256": "abd395ca06fc310304ee028a5a955dcb8e186802f56a71f0ad96f77db4a2d9d7",
+      "system_marginal": {
+        "0": 0.049560546875,
+        "1": 0.950439453125
+      },
+      "test_type": "VISIBLE_PROJECTION"
+    },
+    {
+      "ancilla_p1": 0.029541015625,
+      "classical_register": "c",
+      "counts": {
+        "00": 2031,
+        "01": 58,
+        "10": 1944,
+        "11": 63
+      },
+      "index": 14,
+      "input_state": "PLUS",
+      "mode": "VISIBLE_RK",
+      "probabilities": {
+        "00": 0.495849609375,
+        "01": 0.01416015625,
+        "10": 0.474609375,
+        "11": 0.015380859375
+      },
+      "result_metadata": {
+        "circuit_metadata": {
+          "device_transfer_tag": "TRANSFER_TO_EMK_TENSOR_CELL_DEVICES",
+          "evidence_class": "UGD_OPERATOR_ALGEBRA_PHYSICAL_BENCHMARK",
+          "experiment_family": "UGD_RK_KR_OPERATOR_ORDER_SEAM_MEMORY",
+          "input_state": "PLUS",
+          "mode": "VISIBLE_RK",
+          "system_role": "visible_projection",
+          "target_repository": "Parveen117/EMK-Tensor-Cell-Devices"
+        }
+      },
+      "shots_observed": 4096,
+      "submitted_circuit_sha256": "904b1068af89538b56aba42a749408458bb673e90d9c96fbce0a0a6b12478a21",
+      "system_marginal": {
+        "0": 0.510009765625,
+        "1": 0.489990234375
+      },
+      "test_type": "VISIBLE_PROJECTION"
+    },
+    {
+      "ancilla_p1": 0.02783203125,
+      "classical_register": "c",
+      "counts": {
+        "00": 2063,
+        "01": 57,
+        "10": 1919,
+        "11": 57
+      },
+      "index": 15,
+      "input_state": "PLUS_I",
+      "mode": "VISIBLE_RK",
+      "probabilities": {
+        "00": 0.503662109375,
+        "01": 0.013916015625,
+        "10": 0.468505859375,
+        "11": 0.013916015625
+      },
+      "result_metadata": {
+        "circuit_metadata": {
+          "device_transfer_tag": "TRANSFER_TO_EMK_TENSOR_CELL_DEVICES",
+          "evidence_class": "UGD_OPERATOR_ALGEBRA_PHYSICAL_BENCHMARK",
+          "experiment_family": "UGD_RK_KR_OPERATOR_ORDER_SEAM_MEMORY",
+          "input_state": "PLUS_I",
+          "mode": "VISIBLE_RK",
+          "system_role": "visible_projection",
+          "target_repository": "Parveen117/EMK-Tensor-Cell-Devices"
+        }
+      },
+      "shots_observed": 4096,
+      "submitted_circuit_sha256": "58fe1feafe5402c1fb28ba6cb63b59434725fe5ea91b469e1bfad017bc148a34",
+      "system_marginal": {
+        "0": 0.517578125,
+        "1": 0.482421875
+      },
+      "test_type": "VISIBLE_PROJECTION"
+    },
+    {
+      "ancilla_p1": 0.032470703125,
+      "classical_register": "c",
+      "counts": {
+        "00": 3963,
+        "01": 133
+      },
+      "index": 16,
+      "input_state": "ZERO",
+      "mode": "VISIBLE_KR",
+      "probabilities": {
+        "00": 0.967529296875,
+        "01": 0.032470703125
+      },
+      "result_metadata": {
+        "circuit_metadata": {
+          "device_transfer_tag": "TRANSFER_TO_EMK_TENSOR_CELL_DEVICES",
+          "evidence_class": "UGD_OPERATOR_ALGEBRA_PHYSICAL_BENCHMARK",
+          "experiment_family": "UGD_RK_KR_OPERATOR_ORDER_SEAM_MEMORY",
+          "input_state": "ZERO",
+          "mode": "VISIBLE_KR",
+          "system_role": "visible_projection",
+          "target_repository": "Parveen117/EMK-Tensor-Cell-Devices"
+        }
+      },
+      "shots_observed": 4096,
+      "submitted_circuit_sha256": "453c3a40e46444a4179b3f75890f99f773c07242b9001f349f0700e35ed83d39",
+      "system_marginal": {
+        "0": 1.0,
+        "1": 0.0
+      },
+      "test_type": "VISIBLE_PROJECTION"
+    },
+    {
+      "ancilla_p1": 0.027099609375,
+      "classical_register": "c",
+      "counts": {
+        "00": 197,
+        "01": 3,
+        "10": 3788,
+        "11": 108
+      },
+      "index": 17,
+      "input_state": "ONE",
+      "mode": "VISIBLE_KR",
+      "probabilities": {
+        "00": 0.048095703125,
+        "01": 0.000732421875,
+        "10": 0.9248046875,
+        "11": 0.0263671875
+      },
+      "result_metadata": {
+        "circuit_metadata": {
+          "device_transfer_tag": "TRANSFER_TO_EMK_TENSOR_CELL_DEVICES",
+          "evidence_class": "UGD_OPERATOR_ALGEBRA_PHYSICAL_BENCHMARK",
+          "experiment_family": "UGD_RK_KR_OPERATOR_ORDER_SEAM_MEMORY",
+          "input_state": "ONE",
+          "mode": "VISIBLE_KR",
+          "system_role": "visible_projection",
+          "target_repository": "Parveen117/EMK-Tensor-Cell-Devices"
+        }
+      },
+      "shots_observed": 4096,
+      "submitted_circuit_sha256": "abd395ca06fc310304ee028a5a955dcb8e186802f56a71f0ad96f77db4a2d9d7",
+      "system_marginal": {
+        "0": 0.048828125,
+        "1": 0.951171875
+      },
+      "test_type": "VISIBLE_PROJECTION"
+    },
+    {
+      "ancilla_p1": 0.02734375,
+      "classical_register": "c",
+      "counts": {
+        "00": 2046,
+        "01": 57,
+        "10": 1938,
+        "11": 55
+      },
+      "index": 18,
+      "input_state": "PLUS",
+      "mode": "VISIBLE_KR",
+      "probabilities": {
+        "00": 0.49951171875,
+        "01": 0.013916015625,
+        "10": 0.47314453125,
+        "11": 0.013427734375
+      },
+      "result_metadata": {
+        "circuit_metadata": {
+          "device_transfer_tag": "TRANSFER_TO_EMK_TENSOR_CELL_DEVICES",
+          "evidence_class": "UGD_OPERATOR_ALGEBRA_PHYSICAL_BENCHMARK",
+          "experiment_family": "UGD_RK_KR_OPERATOR_ORDER_SEAM_MEMORY",
+          "input_state": "PLUS",
+          "mode": "VISIBLE_KR",
+          "system_role": "visible_projection",
+          "target_repository": "Parveen117/EMK-Tensor-Cell-Devices"
+        }
+      },
+      "shots_observed": 4096,
+      "submitted_circuit_sha256": "904b1068af89538b56aba42a749408458bb673e90d9c96fbce0a0a6b12478a21",
+      "system_marginal": {
+        "0": 0.513427734375,
+        "1": 0.486572265625
+      },
+      "test_type": "VISIBLE_PROJECTION"
+    },
+    {
+      "ancilla_p1": 0.029296875,
+      "classical_register": "c",
+      "counts": {
+        "00": 2057,
+        "01": 65,
+        "10": 1919,
+        "11": 55
+      },
+      "index": 19,
+      "input_state": "PLUS_I",
+      "mode": "VISIBLE_KR",
+      "probabilities": {
+        "00": 0.502197265625,
+        "01": 0.015869140625,
+        "10": 0.468505859375,
+        "11": 0.013427734375
+      },
+      "result_metadata": {
+        "circuit_metadata": {
+          "device_transfer_tag": "TRANSFER_TO_EMK_TENSOR_CELL_DEVICES",
+          "evidence_class": "UGD_OPERATOR_ALGEBRA_PHYSICAL_BENCHMARK",
+          "experiment_family": "UGD_RK_KR_OPERATOR_ORDER_SEAM_MEMORY",
+          "input_state": "PLUS_I",
+          "mode": "VISIBLE_KR",
+          "system_role": "visible_projection",
+          "target_repository": "Parveen117/EMK-Tensor-Cell-Devices"
+        }
+      },
+      "shots_observed": 4096,
+      "submitted_circuit_sha256": "58fe1feafe5402c1fb28ba6cb63b59434725fe5ea91b469e1bfad017bc148a34",
+      "system_marginal": {
+        "0": 0.51806640625,
+        "1": 0.48193359375
+      },
+      "test_type": "VISIBLE_PROJECTION"
+    }
+  ],
+  "schema": "UGD_RK_KR_IBM_RAW_BUNDLE_V1",
+  "shots_per_circuit": 4096,
+  "target_repository": "Parveen117/EMK-Tensor-Cell-Devices"
+}

@@ -1,0 +1,16 @@
+OPENQASM 3.0;
+include "stdgates.inc";
+bit[2] c;
+rz(pi/2) $0;
+sx $0;
+rz(pi/2) $0;
+rz(pi/2) $1;
+sx $1;
+rz(pi/2) $1;
+barrier $0, $1;
+barrier $0, $1;
+rz(pi/2) $0;
+sx $0;
+rz(pi/2) $0;
+c[0] = measure $0;
+c[1] = measure $1;

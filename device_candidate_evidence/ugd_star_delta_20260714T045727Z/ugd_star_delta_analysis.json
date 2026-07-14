@@ -1,0 +1,344 @@
+{
+  "aggregate": {
+    "DELTA": {
+      "FIXED": {
+        "mean_elastic_return_score": 0.971435546875,
+        "mean_localization_selectivity": -0.5797526041666666,
+        "mean_perturbation_tvd": 0.3251953125,
+        "mean_recognition_score": -0.5632135470708212
+      },
+      "SHUFFLED": {
+        "mean_elastic_return_score": 0.9647623697916666,
+        "mean_localization_selectivity": -0.320556640625,
+        "mean_perturbation_tvd": 0.259033203125,
+        "mean_recognition_score": -0.30740199486414593
+      },
+      "UGD": {
+        "mean_elastic_return_score": 0.9739583333333334,
+        "mean_localization_selectivity": -0.6490885416666666,
+        "mean_perturbation_tvd": 0.3684895833333333,
+        "mean_recognition_score": -0.6314399242401123
+      }
+    },
+    "STAR": {
+      "FIXED": {
+        "mean_elastic_return_score": 0.9776204427083334,
+        "mean_localization_selectivity": -0.6210123697916666,
+        "mean_perturbation_tvd": 0.4652506510416667,
+        "mean_recognition_score": -0.6071741382280985
+      },
+      "SHUFFLED": {
+        "mean_elastic_return_score": 0.97607421875,
+        "mean_localization_selectivity": -0.3365071614583333,
+        "mean_perturbation_tvd": 0.4598795572916667,
+        "mean_recognition_score": -0.32856889565785724
+      },
+      "UGD": {
+        "mean_elastic_return_score": 0.975341796875,
+        "mean_localization_selectivity": -0.6565755208333334,
+        "mean_perturbation_tvd": 0.447998046875,
+        "mean_recognition_score": -0.640448252360026
+      }
+    }
+  },
+  "classification": "NO_UGD_COMPILED_ADVANTAGE",
+  "delta_advantage": -0.32403792937596637,
+  "delta_pass": false,
+  "per_target_analysis": [
+    {
+      "elastic_return_score": 0.97607421875,
+      "localization_selectivity": -0.61376953125,
+      "mean_off_target_change": 0.6201171875,
+      "mode": "FIXED",
+      "perturbation_tvd": 0.46337890625,
+      "recognition_score": -0.5990846157073975,
+      "return_error_tvd": 0.02392578125,
+      "target_correlation_change": 0.00634765625,
+      "target_edge": [
+        0,
+        1
+      ],
+      "target_index": 0,
+      "topology": "STAR"
+    },
+    {
+      "elastic_return_score": 0.9755859375,
+      "localization_selectivity": -0.595703125,
+      "mean_off_target_change": 0.62109375,
+      "mode": "FIXED",
+      "perturbation_tvd": 0.466552734375,
+      "recognition_score": -0.5811595916748047,
+      "return_error_tvd": 0.0244140625,
+      "target_correlation_change": 0.025390625,
+      "target_edge": [
+        0,
+        2
+      ],
+      "target_index": 1,
+      "topology": "STAR"
+    },
+    {
+      "elastic_return_score": 0.981201171875,
+      "localization_selectivity": -0.653564453125,
+      "mean_off_target_change": 0.665283203125,
+      "mode": "FIXED",
+      "perturbation_tvd": 0.4658203125,
+      "recognition_score": -0.6412782073020935,
+      "return_error_tvd": 0.018798828125,
+      "target_correlation_change": 0.01171875,
+      "target_edge": [
+        0,
+        3
+      ],
+      "target_index": 2,
+      "topology": "STAR"
+    },
+    {
+      "elastic_return_score": 0.97802734375,
+      "localization_selectivity": -0.70068359375,
+      "mean_off_target_change": 0.74755859375,
+      "mode": "UGD",
+      "perturbation_tvd": 0.468994140625,
+      "recognition_score": -0.6852877140045166,
+      "return_error_tvd": 0.02197265625,
+      "target_correlation_change": 0.046875,
+      "target_edge": [
+        0,
+        1
+      ],
+      "target_index": 0,
+      "topology": "STAR"
+    },
+    {
+      "elastic_return_score": 0.97412109375,
+      "localization_selectivity": -0.67724609375,
+      "mean_off_target_change": 0.67919921875,
+      "mode": "UGD",
+      "perturbation_tvd": 0.4482421875,
+      "recognition_score": -0.659719705581665,
+      "return_error_tvd": 0.02587890625,
+      "target_correlation_change": 0.001953125,
+      "target_edge": [
+        0,
+        2
+      ],
+      "target_index": 1,
+      "topology": "STAR"
+    },
+    {
+      "elastic_return_score": 0.973876953125,
+      "localization_selectivity": -0.591796875,
+      "mean_off_target_change": 0.63037109375,
+      "mode": "UGD",
+      "perturbation_tvd": 0.4267578125,
+      "recognition_score": -0.5763373374938965,
+      "return_error_tvd": 0.026123046875,
+      "target_correlation_change": 0.03857421875,
+      "target_edge": [
+        0,
+        3
+      ],
+      "target_index": 2,
+      "topology": "STAR"
+    },
+    {
+      "elastic_return_score": 0.96923828125,
+      "localization_selectivity": -0.30078125,
+      "mean_off_target_change": 0.30322265625,
+      "mode": "SHUFFLED",
+      "perturbation_tvd": 0.46728515625,
+      "recognition_score": -0.29152870178222656,
+      "return_error_tvd": 0.03076171875,
+      "target_correlation_change": 0.00244140625,
+      "target_edge": [
+        0,
+        1
+      ],
+      "target_index": 0,
+      "topology": "STAR"
+    },
+    {
+      "elastic_return_score": 0.98486328125,
+      "localization_selectivity": -0.351806640625,
+      "mean_off_target_change": 0.360107421875,
+      "mode": "SHUFFLED",
+      "perturbation_tvd": 0.4873046875,
+      "recognition_score": -0.34648144245147705,
+      "return_error_tvd": 0.01513671875,
+      "target_correlation_change": 0.00830078125,
+      "target_edge": [
+        0,
+        2
+      ],
+      "target_index": 1,
+      "topology": "STAR"
+    },
+    {
+      "elastic_return_score": 0.97412109375,
+      "localization_selectivity": -0.35693359375,
+      "mean_off_target_change": 0.3671875,
+      "mode": "SHUFFLED",
+      "perturbation_tvd": 0.425048828125,
+      "recognition_score": -0.34769654273986816,
+      "return_error_tvd": 0.02587890625,
+      "target_correlation_change": 0.01025390625,
+      "target_edge": [
+        0,
+        3
+      ],
+      "target_index": 2,
+      "topology": "STAR"
+    },
+    {
+      "elastic_return_score": 0.97509765625,
+      "localization_selectivity": -0.5703125,
+      "mean_off_target_change": 0.5966796875,
+      "mode": "FIXED",
+      "perturbation_tvd": 0.314453125,
+      "recognition_score": -0.5561103820800781,
+      "return_error_tvd": 0.02490234375,
+      "target_correlation_change": 0.0263671875,
+      "target_edge": [
+        1,
+        2
+      ],
+      "target_index": 0,
+      "topology": "DELTA"
+    },
+    {
+      "elastic_return_score": 0.957763671875,
+      "localization_selectivity": -0.57958984375,
+      "mean_off_target_change": 0.63232421875,
+      "mode": "FIXED",
+      "perturbation_tvd": 0.338134765625,
+      "recognition_score": -0.5551100969314575,
+      "return_error_tvd": 0.042236328125,
+      "target_correlation_change": 0.052734375,
+      "target_edge": [
+        2,
+        3
+      ],
+      "target_index": 1,
+      "topology": "DELTA"
+    },
+    {
+      "elastic_return_score": 0.9814453125,
+      "localization_selectivity": -0.58935546875,
+      "mean_off_target_change": 0.60693359375,
+      "mode": "FIXED",
+      "perturbation_tvd": 0.322998046875,
+      "recognition_score": -0.5784201622009277,
+      "return_error_tvd": 0.0185546875,
+      "target_correlation_change": 0.017578125,
+      "target_edge": [
+        3,
+        1
+      ],
+      "target_index": 2,
+      "topology": "DELTA"
+    },
+    {
+      "elastic_return_score": 0.9599609375,
+      "localization_selectivity": -0.755126953125,
+      "mean_off_target_change": 0.759521484375,
+      "mode": "UGD",
+      "perturbation_tvd": 0.410400390625,
+      "recognition_score": -0.7248923778533936,
+      "return_error_tvd": 0.0400390625,
+      "target_correlation_change": 0.00439453125,
+      "target_edge": [
+        1,
+        2
+      ],
+      "target_index": 0,
+      "topology": "DELTA"
+    },
+    {
+      "elastic_return_score": 0.98046875,
+      "localization_selectivity": -0.605712890625,
+      "mean_off_target_change": 0.664794921875,
+      "mode": "UGD",
+      "perturbation_tvd": 0.3544921875,
+      "recognition_score": -0.5938825607299805,
+      "return_error_tvd": 0.01953125,
+      "target_correlation_change": 0.05908203125,
+      "target_edge": [
+        2,
+        3
+      ],
+      "target_index": 1,
+      "topology": "DELTA"
+    },
+    {
+      "elastic_return_score": 0.9814453125,
+      "localization_selectivity": -0.58642578125,
+      "mean_off_target_change": 0.63134765625,
+      "mode": "UGD",
+      "perturbation_tvd": 0.340576171875,
+      "recognition_score": -0.5755448341369629,
+      "return_error_tvd": 0.0185546875,
+      "target_correlation_change": 0.044921875,
+      "target_edge": [
+        3,
+        1
+      ],
+      "target_index": 2,
+      "topology": "DELTA"
+    },
+    {
+      "elastic_return_score": 0.942626953125,
+      "localization_selectivity": -0.490478515625,
+      "mean_off_target_change": 0.542724609375,
+      "mode": "SHUFFLED",
+      "perturbation_tvd": 0.331787109375,
+      "recognition_score": -0.46233826875686646,
+      "return_error_tvd": 0.057373046875,
+      "target_correlation_change": 0.05224609375,
+      "target_edge": [
+        1,
+        2
+      ],
+      "target_index": 0,
+      "topology": "DELTA"
+    },
+    {
+      "elastic_return_score": 0.974609375,
+      "localization_selectivity": -0.208984375,
+      "mean_off_target_change": 0.2314453125,
+      "mode": "SHUFFLED",
+      "perturbation_tvd": 0.164794921875,
+      "recognition_score": -0.20367813110351562,
+      "return_error_tvd": 0.025390625,
+      "target_correlation_change": 0.0224609375,
+      "target_edge": [
+        2,
+        3
+      ],
+      "target_index": 1,
+      "topology": "DELTA"
+    },
+    {
+      "elastic_return_score": 0.97705078125,
+      "localization_selectivity": -0.26220703125,
+      "mean_off_target_change": 0.27978515625,
+      "mode": "SHUFFLED",
+      "perturbation_tvd": 0.280517578125,
+      "recognition_score": -0.25618958473205566,
+      "return_error_tvd": 0.02294921875,
+      "target_correlation_change": 0.017578125,
+      "target_edge": [
+        3,
+        1
+      ],
+      "target_index": 2,
+      "topology": "DELTA"
+    }
+  ],
+  "positive_margin": 0.01,
+  "raw_bundle_file": "ugd_star_delta_raw_bundle.json",
+  "raw_bundle_sha256": "461e7e65eeacb34d37d4141ff22177beac05e76291f99df8152b05807136b818",
+  "schema": "UGD_STAR_DELTA_IBM_ANALYSIS_V1",
+  "scientific_boundary": "Tests a compiled residue-weighted coupling schedule against fixed and shuffled controls. Does not establish dynamic recognition, physical transistor operation, or universal UGD validity.",
+  "star_advantage": -0.31187935670216876,
+  "star_pass": false
+}

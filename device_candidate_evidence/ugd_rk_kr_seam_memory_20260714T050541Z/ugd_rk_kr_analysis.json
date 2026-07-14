@@ -1,0 +1,61 @@
+{
+  "anti_separation_from_commuting": 0.94793701171875,
+  "anti_separation_from_erased": 0.94573974609375,
+  "classification": "UGD_RK_KR_SEAM_MEMORY_RECOGNITION",
+  "interferometer_summary": {
+    "ANTICOMMUTING_RK_KR": {
+      "max_ancilla_p1": 0.97509765625,
+      "mean_ancilla_p1": 0.9735107421875,
+      "min_ancilla_p1": 0.97265625,
+      "per_input": {
+        "ONE": 0.97265625,
+        "PLUS": 0.97314453125,
+        "PLUS_I": 0.97509765625,
+        "ZERO": 0.97314453125
+      }
+    },
+    "COMMUTING_RK_KR": {
+      "max_ancilla_p1": 0.02783203125,
+      "mean_ancilla_p1": 0.02557373046875,
+      "min_ancilla_p1": 0.023193359375,
+      "per_input": {
+        "ONE": 0.02783203125,
+        "PLUS": 0.023193359375,
+        "PLUS_I": 0.025146484375,
+        "ZERO": 0.026123046875
+      }
+    },
+    "ORDER_ERASED": {
+      "max_ancilla_p1": 0.02978515625,
+      "mean_ancilla_p1": 0.02777099609375,
+      "min_ancilla_p1": 0.026611328125,
+      "per_input": {
+        "ONE": 0.02978515625,
+        "PLUS": 0.027099609375,
+        "PLUS_I": 0.026611328125,
+        "ZERO": 0.027587890625
+      }
+    }
+  },
+  "mean_visible_tvd": 0.00115966796875,
+  "operator_order_pass": true,
+  "overall_pass": true,
+  "raw_bundle_file": "ugd_rk_kr_raw_bundle.json",
+  "raw_bundle_sha256": "fc2a11de84b4d9b5dbf3b3dc51ce4abff63524eaadf61155607a0792f968fbc0",
+  "schema": "UGD_RK_KR_IBM_ANALYSIS_V1",
+  "scientific_boundary": "Tests a faithful quantum representation of the UGD RK/KR operator-order relation and an ancilla seam-memory analogue. Pauli anticommutation itself is established physics. This experiment does not establish UGD as a novel physical law.",
+  "separation_pass": true,
+  "thresholds": {
+    "anti_mean_minimum": 0.75,
+    "control_mean_maximum": 0.25,
+    "separation_minimum": 0.5,
+    "visible_mean_tvd_maximum": 0.1
+  },
+  "visible_equality_pass": true,
+  "visible_tvd_by_input": {
+    "ONE": 0.000732421875,
+    "PLUS": 0.00341796875,
+    "PLUS_I": 0.00048828125,
+    "ZERO": 0.0
+  }
+}
