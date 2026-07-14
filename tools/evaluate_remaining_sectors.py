@@ -4,6 +4,10 @@
 No third-party dependencies. The tool consumes optional JSON evidence files and
 emits three certificates. Missing evidence is UNEVALUATED, incomplete evidence is
 PARTIAL, and only explicit quantitative witnesses can become EVALUATED.
+
+A provenance guard prevents synthetic or undeclared evidence from being promoted
+to physical closure. Such inputs may validate software logic, but not experimental
+claims.
 """
 from __future__ import annotations
 
@@ -12,7 +16,10 @@ import hashlib
 import json
 import math
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict
+
+PHYSICAL_ORIGINS = {"hardware", "experiment", "physical_backend"}
+SYNTHETIC_ORIGINS = {"synthetic", "simulation", "demo", "unit_test"}
 
 
 def digest(obj: Any) -> str:
@@ -26,17 +33,42 @@ def load(path: Path | None) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def provenance(data: Dict[str, Any]) -> Dict[str, Any]:
+    origin = str(data.get("evidence_origin", "UNDECLARED")).strip().lower()
+    physical_eligible = origin in PHYSICAL_ORIGINS
+    synthetic = origin in SYNTHETIC_ORIGINS
+    return {
+        "evidence_origin": origin.upper(),
+        "physical_closure_eligible": physical_eligible,
+        "synthetic_control": synthetic,
+        "provenance_note": (
+            "Eligible for physical-sector closure."
+            if physical_eligible
+            else "Valid for software or computational validation only; not eligible for physical-sector closure."
+        ),
+    }
+
+
+def apply_provenance_guard(cert: Dict[str, Any], data: Dict[str, Any]) -> Dict[str, Any]:
+    cert.update(provenance(data))
+    if cert.get("classification") == "RECOGNITION" and not cert["physical_closure_eligible"]:
+        cert["computational_classification"] = "RECOGNITION"
+        cert["classification"] = "RESIDUE"
+        cert["reason"] += " The quantitative rule passes, but provenance is synthetic or undeclared, so physical closure is withheld."
+    return cert
+
+
 def write_cert(out: Path, cert: Dict[str, Any]) -> None:
     cert["certificate_sha256"] = digest(cert)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(cert, indent=2, sort_keys=True), encoding="utf-8")
-    print(out.name, cert["evidence_status"], cert["certificate_sha256"])
+    print(out.name, cert["evidence_status"], cert.get("classification"), cert["certificate_sha256"])
 
 
 def state_certificate(data: Any) -> Dict[str, Any]:
     cert = {
         "certificate_type": "QUANTUM_STATE_WITNESS_CERTIFICATE",
-        "version": "1.0.0",
+        "version": "1.1.0",
         "evidence_status": "UNEVALUATED",
         "reason": "No explicit state witness file was supplied.",
         "scientific_scope": "State witness evaluation; not full tomography unless tomography data are supplied.",
@@ -61,13 +93,13 @@ def state_certificate(data: Any) -> Dict[str, Any]:
         cert["evidence_status"] = "PARTIAL"
         cert["classification"] = "RESIDUE"
         cert["reason"] = "A state declaration exists, but no quantitative state witness was found."
-    return cert
+    return apply_provenance_guard(cert, data)
 
 
 def dynamics_certificate(data: Any) -> Dict[str, Any]:
     cert = {
         "certificate_type": "QUANTUM_DYNAMICS_PATH_CERTIFICATE",
-        "version": "1.0.0",
+        "version": "1.1.0",
         "evidence_status": "UNEVALUATED",
         "reason": "No explicit dynamics-path file was supplied.",
     }
@@ -91,13 +123,13 @@ def dynamics_certificate(data: Any) -> Dict[str, Any]:
         cert["evidence_status"] = "PARTIAL"
         cert["classification"] = "RESIDUE"
         cert["reason"] = "Runtime provenance exists without a complete declared-to-executed path comparison."
-    return cert
+    return apply_provenance_guard(cert, data)
 
 
 def memory_certificate(data: Any) -> Dict[str, Any]:
     cert = {
         "certificate_type": "QUANTUM_MEMORY_DRIFT_CERTIFICATE",
-        "version": "1.0.0",
+        "version": "1.1.0",
         "evidence_status": "UNEVALUATED",
         "reason": "No repeated-run memory evidence was supplied.",
     }
@@ -116,7 +148,7 @@ def memory_certificate(data: Any) -> Dict[str, Any]:
         cert["evidence_status"] = "PARTIAL"
         cert["classification"] = "RESIDUE"
         cert["reason"] = "Repeated-run data exist, but at least three ordered quantitative runs are required."
-    return cert
+    return apply_provenance_guard(cert, data)
 
 
 def main() -> int:
