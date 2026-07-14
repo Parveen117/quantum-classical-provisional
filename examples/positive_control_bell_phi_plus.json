@@ -1,0 +1,21 @@
+{
+  "state_id": "bell-phi-plus-positive-control-v1",
+  "visible_state": {
+    "model_id": "bell_phi_plus_runtime",
+    "basis": "computational",
+    "outcomes": ["00", "01", "10", "11"]
+  },
+  "response_coordinates": {"correlation_target": 1.0},
+  "protocol": {"source": "advanced_runtime_validation_report", "shots": 1024},
+  "ledger": {
+    "lawful_distribution_tolerance": 0.08,
+    "calibration_profile_id": "cal-demo-001",
+    "correction_method": "readout_fidelity_weighting"
+  },
+  "memory": {"run_index": 1, "prior_runs": 0},
+  "expected_distribution": {"00": 0.5, "01": 0.0, "10": 0.0, "11": 0.5},
+  "observed_distribution": {"00": 0.48046875, "01": 0.0, "10": 0.0, "11": 0.51953125},
+  "metric": "total_variation",
+  "tolerance": 0.08,
+  "expected_classification": "RECOGNITION"
+}
