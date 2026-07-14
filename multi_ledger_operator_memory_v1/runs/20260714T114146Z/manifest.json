@@ -1,0 +1,10 @@
+{
+  "backend": "ibm_fez",
+  "files": {
+    "certificate.json": "9690ae35c2f88e83b89ecdcd9ff8396d513d495ef90959021971c9e1d1464660",
+    "results.json": "2940f2ce0a24a4bfb14a3a7042b4cfaad460ee13df22ae8a17db9d6f55e80b0a",
+    "summary.md": "a3ac3bd3df27e0f0dbeba07ca8c61a3b5ae22ed6070c838695dc78447e45ba70"
+  },
+  "job_id": "d9b212u6hjac73ff44j0",
+  "schema": "MULTI_LEDGER_OPERATOR_MEMORY_MANIFEST_V1"
+}
