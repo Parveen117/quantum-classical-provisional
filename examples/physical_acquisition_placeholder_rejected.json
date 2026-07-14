@@ -1,0 +1,11 @@
+{
+  "evidence_origin": "physical_backend",
+  "backend": "actual_backend_name",
+  "provider": "provider_name",
+  "acquisition_id": "unique_job_or_run_id",
+  "acquired_at": "ISO-8601 timestamp",
+  "shots": 4096,
+  "circuit_hash": "sha256",
+  "calibration_id": "backend calibration reference",
+  "raw_result_hash": "sha256"
+}
