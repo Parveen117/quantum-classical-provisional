@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/recognition_residue.schema.json",
+  "title": "Quantum-Classical Recognition Residue Certificate",
+  "type": "object",
+  "required": ["certificate_type", "state_id", "metric", "distribution_gap", "tolerance", "classification", "recognized", "residue", "certificate_hash"],
+  "properties": {
+    "certificate_type": {"const": "QUANTUM_CLASSICAL_RECOGNITION_CERTIFICATE"},
+    "state_id": {"type": "string"},
+    "metric": {"type": "string"},
+    "distribution_gap": {"type": "number", "minimum": 0},
+    "tolerance": {"type": "number", "minimum": 0},
+    "classification": {"enum": ["RECOGNITION", "RESIDUE", "REJECT"]},
+    "recognized": {"type": "boolean"},
+    "residue": {
+      "type": "object",
+      "required": ["state", "distribution", "dynamics", "bridge", "phase", "frame", "memory"],
+      "properties": {
+        "state": {"type": "number", "minimum": 0},
+        "distribution": {"type": "number", "minimum": 0},
+        "dynamics": {"type": "number", "minimum": 0},
+        "bridge": {"type": "number", "minimum": 0},
+        "phase": {"type": "number", "minimum": 0},
+        "frame": {"type": "number", "minimum": 0},
+        "memory": {"type": "number", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "certificate_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+  },
+  "additionalProperties": true
+}
