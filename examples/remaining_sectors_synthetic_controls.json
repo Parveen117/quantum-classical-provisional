@@ -1,0 +1,20 @@
+{
+  "state": {
+    "method": "synthetic_bell_fidelity_control",
+    "fidelity": 0.97,
+    "threshold": 0.90,
+    "synthetic": true
+  },
+  "dynamics": {
+    "declared_path": ["H(q0)", "CX(q0,q1)", "MEASURE_ZZ"],
+    "executed_path": ["H(q0)", "CX(q0,q1)", "MEASURE_ZZ"],
+    "path_gap": 0.0,
+    "tolerance": 0.0,
+    "synthetic": true
+  },
+  "memory": {
+    "ordered_metric_values": [0.019, 0.021, 0.020, 0.022, 0.018],
+    "drift_threshold": 0.01,
+    "synthetic": true
+  }
+}
