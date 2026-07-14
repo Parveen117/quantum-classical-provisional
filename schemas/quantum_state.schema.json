@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/quantum_state.schema.json",
+  "title": "Quantum-Classical Recognition State",
+  "type": "object",
+  "required": ["state_id", "visible_state", "protocol", "ledger", "expected_distribution", "observed_distribution", "metric", "tolerance"],
+  "properties": {
+    "state_id": {"type": "string", "minLength": 1},
+    "visible_state": {
+      "type": "object",
+      "required": ["model_id", "basis", "outcomes"],
+      "properties": {
+        "model_id": {"type": "string"},
+        "basis": {"type": "string"},
+        "outcomes": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true}
+      },
+      "additionalProperties": true
+    },
+    "response_coordinates": {"type": "object"},
+    "protocol": {"type": "object"},
+    "ledger": {"type": "object"},
+    "memory": {"type": "object"},
+    "expected_distribution": {
+      "type": "object",
+      "additionalProperties": {"type": "number", "minimum": 0, "maximum": 1}
+    },
+    "observed_distribution": {
+      "type": "object",
+      "additionalProperties": {"type": "number", "minimum": 0, "maximum": 1}
+    },
+    "metric": {"enum": ["total_variation"]},
+    "tolerance": {"type": "number", "minimum": 0, "maximum": 1},
+    "expected_classification": {"enum": ["RECOGNITION", "RESIDUE", "REJECT"]}
+  },
+  "additionalProperties": true
+}
