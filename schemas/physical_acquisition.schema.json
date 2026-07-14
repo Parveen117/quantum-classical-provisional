@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "physical_acquisition.schema.json",
+  "title": "Physical Quantum Acquisition Evidence",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "evidence_origin",
+    "backend",
+    "provider",
+    "acquisition_id",
+    "acquired_at",
+    "shots",
+    "circuit_hash",
+    "raw_result_hash"
+  ],
+  "properties": {
+    "evidence_origin": {"const": "physical_backend"},
+    "backend": {"type": "string", "minLength": 3},
+    "provider": {"type": "string", "minLength": 2},
+    "acquisition_id": {"type": "string", "minLength": 4},
+    "acquired_at": {"type": "string", "format": "date-time"},
+    "shots": {"type": "integer", "minimum": 1},
+    "circuit_hash": {"type": "string", "pattern": "^[0-9a-fA-F]{64}$"},
+    "calibration_id": {"type": ["string", "null"]},
+    "raw_result_hash": {"type": "string", "pattern": "^[0-9a-fA-F]{64}$"},
+    "job_url": {"type": ["string", "null"]},
+    "software_stack": {"type": ["object", "null"]},
+    "measurement_basis": {"type": ["string", "array", "null"]}
+  }
+}
