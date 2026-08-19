@@ -251,7 +251,7 @@ class ShorTrialResult:
             "corrections": [
                 {"qubit": qubit, "pauli": pauli} for qubit, pauli in self.corrections
             ],
-            "fidelity": self.fidelity,
+            "fidelity": round(self.fidelity, 12),  # platform-stable canonicalization
             "classification": self.classification,
         }
 

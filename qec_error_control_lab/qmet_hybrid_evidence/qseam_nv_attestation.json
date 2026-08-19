@@ -1,0 +1,19 @@
+{
+  "schema": "qseam-nv-remote-attestation-v1",
+  "repository": "Parveen117/EMK-Tensor-Cell-Devices",
+  "commit_sha": "890dfd35050fe9a63c7314e390aa7f1254c57945",
+  "path": "devices/qseam_nv/generated/qseam_nv_campaign_certificate.json",
+  "github_blob_sha": "f34e205a8497a78ce983ec50efb784ebf4d8e118",
+  "campaign_sha256": "1ec177bedf5cf296c6c831e72a5fd4f838602855ae540cd96906ebb4c73425dc",
+  "schema_observed": "qseam-nv-digital-twin-campaign-v1",
+  "all_expected": true,
+  "case_count": 7,
+  "case_outcomes": {
+    "PASS_SENSOR_COHERENCE": 3,
+    "ABSTAIN_DIRECTIONAL_DISAGREEMENT": 1,
+    "STALE_CALIBRATION": 1,
+    "INCOMPLETE_SOURCE_PROVENANCE": 1,
+    "FAIL_RESPONSE_BARRIER": 1
+  },
+  "claim_boundary": "Digital-twin sensor-recognition evidence only; not physical NV hardware or metrological validation."
+}

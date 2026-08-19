@@ -146,7 +146,7 @@ class TrialResult:
             "ideal_syndrome": list(self.ideal_syndrome),
             "used_syndrome": None if self.used_syndrome is None else list(self.used_syndrome),
             "correction_qubit": self.correction_qubit,
-            "fidelity": self.fidelity,
+            "fidelity": round(self.fidelity, 12),
             "classification": self.classification,
         }
 

@@ -1,0 +1,59 @@
+{
+  "schema": "qmet-hybrid-evidence-sources-v1",
+  "composition_policy": "SEPARATE_EVIDENCE_CLASSES_NO_CROSS_DOMAIN_PROMOTION",
+  "components": [
+    {
+      "component_id": "ibm_shor_hardware_syndrome",
+      "evidence_class": "HARDWARE_QEC_SYNDROME",
+      "repository": "Parveen117/quantum-classical-provisional",
+      "commit_sha": "66d9ab7beece4843017ef05ac6734c82db934c82",
+      "path": "qec_error_control_lab/hardware_evidence/da2raps3jnrc73ae9n80_hardware_certificate.json",
+      "github_blob_sha": "b155f84a0579e8dacc54200c538d4e5e088acc9d",
+      "certificate_sha256": "1826f4432d380236240346d78cc7c0ef9518cdc29163387f2c916ea4106dc845",
+      "observed_outcome": "PASS_BOUNDED_SHOR_HARDWARE_SYNDROME_V1",
+      "bounded_pass": true,
+      "scope": "One IBM ancilla-extraction round: four cases, 4096 shots per case",
+      "does_not_establish": ["fault tolerance", "threshold", "logical-qubit lifetime"]
+    },
+    {
+      "component_id": "rnke_shor_recognition_gate",
+      "evidence_class": "EXACT_STATEVECTOR_QEC_CONTROL",
+      "repository": "Parveen117/quantum-classical-provisional",
+      "commit_sha": "44e7e25a7e8cced968d1d9c4e55d45b0ff7ad842",
+      "path": "qec_error_control_lab/EXPECTED_RNKE_GATE.sha256",
+      "github_blob_sha": "0c9e6180b280baee7d495edbfcb76b9a33facd2c",
+      "certificate_sha256": "c7a6aa4bd20184405cebe2e48dbb6ed17ca4e55064a1a8a2aa054200b6bc6f2a",
+      "observed_outcome": "PASS_RNKE_QEC_GATE_V1",
+      "bounded_pass": true,
+      "scope": "128 exact-statevector Shor recognition cycles under the declared error model",
+      "does_not_establish": ["hardware correction", "fault tolerance", "threshold"]
+    },
+    {
+      "component_id": "rnke_hardware_theorem_binding",
+      "evidence_class": "FINITE_THEOREM_HARDWARE_BINDING",
+      "repository": "Parveen117/quantum-classical-provisional",
+      "commit_sha": "e6725276d748bd6321c640411a8ca44d12eaddce",
+      "implementation_commit_sha": "6e09ff6714dc4269d2b02008bc4761411b885060",
+      "path": "qec_error_control_lab/EXPECTED_THEOREM_BINDING_HW.sha256",
+      "github_blob_sha": "32c913c23f2e8323d9b339fa762b3584cc40ad9b",
+      "certificate_sha256": "4e171c945c7dec90016b5b0f12a5ca8fa877bc92715485238ad7b024f5c57ba2",
+      "observed_outcome": "PASS_RNKE_THEOREM_BINDING_HW_V1",
+      "bounded_pass": true,
+      "scope": "Exact rational seam-integer, SOS/PSD residue and orientation confidence on the IBM shot counts",
+      "does_not_establish": ["Riemann Hypothesis", "K0 collapse", "fault tolerance", "threshold"]
+    },
+    {
+      "component_id": "qseam_nv_odmr_digital_twin",
+      "evidence_class": "DIGITAL_TWIN_SENSOR_VERIFICATION",
+      "repository": "Parveen117/EMK-Tensor-Cell-Devices",
+      "commit_sha": "890dfd35050fe9a63c7314e390aa7f1254c57945",
+      "path": "devices/qseam_nv/generated/qseam_nv_campaign_certificate.json",
+      "github_blob_sha": "f34e205a8497a78ce983ec50efb784ebf4d8e118",
+      "certificate_sha256": "1ec177bedf5cf296c6c831e72a5fd4f838602855ae540cd96906ebb4c73425dc",
+      "observed_outcome": "ALL_7_PREDECLARED_DIGITAL_TWIN_CASES_MATCHED",
+      "bounded_pass": true,
+      "scope": "Raw-spectrum deterministic NV/ODMR digital twin and recognition-certificate logic",
+      "does_not_establish": ["physical NV accuracy", "metrological traceability", "hardware sensor validation"]
+    }
+  ]
+}

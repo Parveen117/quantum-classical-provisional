@@ -1,0 +1,4176 @@
+{
+  "job_id": "da2std6aa69c739htr9g",
+  "backend": "ibm_marrakesh",
+  "shots": 2000,
+  "submitted_at": "2026-08-19T15:41:40.897526+00:00",
+  "n_circuits": 594,
+  "qubits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "plan_sha256": "2aaba3d3f652c34e9e69832643351660c93aa10dcc4bc8cbf910c854566bc6b1",
+  "circuit_meta": [
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 0,
+      "qubit": 0
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 10,
+      "qubit": 0
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 20,
+      "qubit": 0
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 40,
+      "qubit": 0
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 80,
+      "qubit": 0
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 120,
+      "qubit": 0
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 160,
+      "qubit": 0
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 240,
+      "qubit": 0
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 320,
+      "qubit": 0
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 0,
+      "qubit": 0
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 10,
+      "qubit": 0
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 20,
+      "qubit": 0
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 40,
+      "qubit": 0
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 80,
+      "qubit": 0
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 120,
+      "qubit": 0
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 160,
+      "qubit": 0
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 240,
+      "qubit": 0
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 320,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 0,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 10,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 20,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 40,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 80,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 120,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 160,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 240,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 320,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 0,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 10,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 20,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 40,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 80,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 120,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 160,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 240,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 320,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 0,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 10,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 20,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 40,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 80,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 120,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 160,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 240,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 320,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 0,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 10,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 20,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 40,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 80,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 120,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 160,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 240,
+      "qubit": 0
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 320,
+      "qubit": 0
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 0,
+      "qubit": 0
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 10,
+      "qubit": 0
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 20,
+      "qubit": 0
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 40,
+      "qubit": 0
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 80,
+      "qubit": 0
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 120,
+      "qubit": 0
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 160,
+      "qubit": 0
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 240,
+      "qubit": 0
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 320,
+      "qubit": 0
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 0,
+      "qubit": 0
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 10,
+      "qubit": 0
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 20,
+      "qubit": 0
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 40,
+      "qubit": 0
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 80,
+      "qubit": 0
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 120,
+      "qubit": 0
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 160,
+      "qubit": 0
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 240,
+      "qubit": 0
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 320,
+      "qubit": 0
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 0,
+      "qubit": 0
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 10,
+      "qubit": 0
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 20,
+      "qubit": 0
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 40,
+      "qubit": 0
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 80,
+      "qubit": 0
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 120,
+      "qubit": 0
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 160,
+      "qubit": 0
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 240,
+      "qubit": 0
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 320,
+      "qubit": 0
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 0,
+      "qubit": 0
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 10,
+      "qubit": 0
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 20,
+      "qubit": 0
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 40,
+      "qubit": 0
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 80,
+      "qubit": 0
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 120,
+      "qubit": 0
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 160,
+      "qubit": 0
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 240,
+      "qubit": 0
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 320,
+      "qubit": 0
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 0,
+      "qubit": 0
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 10,
+      "qubit": 0
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 20,
+      "qubit": 0
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 40,
+      "qubit": 0
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 80,
+      "qubit": 0
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 120,
+      "qubit": 0
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 160,
+      "qubit": 0
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 240,
+      "qubit": 0
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 320,
+      "qubit": 0
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 0,
+      "qubit": 1
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 10,
+      "qubit": 1
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 20,
+      "qubit": 1
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 40,
+      "qubit": 1
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 80,
+      "qubit": 1
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 120,
+      "qubit": 1
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 160,
+      "qubit": 1
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 240,
+      "qubit": 1
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 320,
+      "qubit": 1
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 0,
+      "qubit": 1
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 10,
+      "qubit": 1
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 20,
+      "qubit": 1
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 40,
+      "qubit": 1
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 80,
+      "qubit": 1
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 120,
+      "qubit": 1
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 160,
+      "qubit": 1
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 240,
+      "qubit": 1
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 320,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 0,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 10,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 20,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 40,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 80,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 120,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 160,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 240,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 320,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 0,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 10,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 20,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 40,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 80,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 120,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 160,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 240,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 320,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 0,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 10,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 20,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 40,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 80,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 120,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 160,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 240,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 320,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 0,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 10,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 20,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 40,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 80,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 120,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 160,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 240,
+      "qubit": 1
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 320,
+      "qubit": 1
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 0,
+      "qubit": 1
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 10,
+      "qubit": 1
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 20,
+      "qubit": 1
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 40,
+      "qubit": 1
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 80,
+      "qubit": 1
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 120,
+      "qubit": 1
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 160,
+      "qubit": 1
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 240,
+      "qubit": 1
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 320,
+      "qubit": 1
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 0,
+      "qubit": 1
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 10,
+      "qubit": 1
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 20,
+      "qubit": 1
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 40,
+      "qubit": 1
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 80,
+      "qubit": 1
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 120,
+      "qubit": 1
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 160,
+      "qubit": 1
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 240,
+      "qubit": 1
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 320,
+      "qubit": 1
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 0,
+      "qubit": 1
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 10,
+      "qubit": 1
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 20,
+      "qubit": 1
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 40,
+      "qubit": 1
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 80,
+      "qubit": 1
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 120,
+      "qubit": 1
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 160,
+      "qubit": 1
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 240,
+      "qubit": 1
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 320,
+      "qubit": 1
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 0,
+      "qubit": 1
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 10,
+      "qubit": 1
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 20,
+      "qubit": 1
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 40,
+      "qubit": 1
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 80,
+      "qubit": 1
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 120,
+      "qubit": 1
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 160,
+      "qubit": 1
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 240,
+      "qubit": 1
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 320,
+      "qubit": 1
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 0,
+      "qubit": 1
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 10,
+      "qubit": 1
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 20,
+      "qubit": 1
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 40,
+      "qubit": 1
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 80,
+      "qubit": 1
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 120,
+      "qubit": 1
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 160,
+      "qubit": 1
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 240,
+      "qubit": 1
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 320,
+      "qubit": 1
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 0,
+      "qubit": 2
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 10,
+      "qubit": 2
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 20,
+      "qubit": 2
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 40,
+      "qubit": 2
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 80,
+      "qubit": 2
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 120,
+      "qubit": 2
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 160,
+      "qubit": 2
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 240,
+      "qubit": 2
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 320,
+      "qubit": 2
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 0,
+      "qubit": 2
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 10,
+      "qubit": 2
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 20,
+      "qubit": 2
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 40,
+      "qubit": 2
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 80,
+      "qubit": 2
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 120,
+      "qubit": 2
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 160,
+      "qubit": 2
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 240,
+      "qubit": 2
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 320,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 0,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 10,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 20,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 40,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 80,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 120,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 160,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 240,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 320,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 0,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 10,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 20,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 40,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 80,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 120,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 160,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 240,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 320,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 0,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 10,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 20,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 40,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 80,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 120,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 160,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 240,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 320,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 0,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 10,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 20,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 40,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 80,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 120,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 160,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 240,
+      "qubit": 2
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 320,
+      "qubit": 2
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 0,
+      "qubit": 2
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 10,
+      "qubit": 2
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 20,
+      "qubit": 2
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 40,
+      "qubit": 2
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 80,
+      "qubit": 2
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 120,
+      "qubit": 2
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 160,
+      "qubit": 2
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 240,
+      "qubit": 2
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 320,
+      "qubit": 2
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 0,
+      "qubit": 2
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 10,
+      "qubit": 2
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 20,
+      "qubit": 2
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 40,
+      "qubit": 2
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 80,
+      "qubit": 2
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 120,
+      "qubit": 2
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 160,
+      "qubit": 2
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 240,
+      "qubit": 2
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 320,
+      "qubit": 2
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 0,
+      "qubit": 2
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 10,
+      "qubit": 2
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 20,
+      "qubit": 2
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 40,
+      "qubit": 2
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 80,
+      "qubit": 2
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 120,
+      "qubit": 2
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 160,
+      "qubit": 2
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 240,
+      "qubit": 2
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 320,
+      "qubit": 2
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 0,
+      "qubit": 2
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 10,
+      "qubit": 2
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 20,
+      "qubit": 2
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 40,
+      "qubit": 2
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 80,
+      "qubit": 2
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 120,
+      "qubit": 2
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 160,
+      "qubit": 2
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 240,
+      "qubit": 2
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 320,
+      "qubit": 2
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 0,
+      "qubit": 2
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 10,
+      "qubit": 2
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 20,
+      "qubit": 2
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 40,
+      "qubit": 2
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 80,
+      "qubit": 2
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 120,
+      "qubit": 2
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 160,
+      "qubit": 2
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 240,
+      "qubit": 2
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 320,
+      "qubit": 2
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 0,
+      "qubit": 3
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 10,
+      "qubit": 3
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 20,
+      "qubit": 3
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 40,
+      "qubit": 3
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 80,
+      "qubit": 3
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 120,
+      "qubit": 3
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 160,
+      "qubit": 3
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 240,
+      "qubit": 3
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 320,
+      "qubit": 3
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 0,
+      "qubit": 3
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 10,
+      "qubit": 3
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 20,
+      "qubit": 3
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 40,
+      "qubit": 3
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 80,
+      "qubit": 3
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 120,
+      "qubit": 3
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 160,
+      "qubit": 3
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 240,
+      "qubit": 3
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 320,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 0,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 10,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 20,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 40,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 80,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 120,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 160,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 240,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 320,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 0,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 10,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 20,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 40,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 80,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 120,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 160,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 240,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 320,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 0,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 10,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 20,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 40,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 80,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 120,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 160,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 240,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 320,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 0,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 10,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 20,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 40,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 80,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 120,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 160,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 240,
+      "qubit": 3
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 320,
+      "qubit": 3
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 0,
+      "qubit": 3
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 10,
+      "qubit": 3
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 20,
+      "qubit": 3
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 40,
+      "qubit": 3
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 80,
+      "qubit": 3
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 120,
+      "qubit": 3
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 160,
+      "qubit": 3
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 240,
+      "qubit": 3
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 320,
+      "qubit": 3
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 0,
+      "qubit": 3
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 10,
+      "qubit": 3
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 20,
+      "qubit": 3
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 40,
+      "qubit": 3
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 80,
+      "qubit": 3
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 120,
+      "qubit": 3
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 160,
+      "qubit": 3
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 240,
+      "qubit": 3
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 320,
+      "qubit": 3
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 0,
+      "qubit": 3
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 10,
+      "qubit": 3
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 20,
+      "qubit": 3
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 40,
+      "qubit": 3
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 80,
+      "qubit": 3
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 120,
+      "qubit": 3
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 160,
+      "qubit": 3
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 240,
+      "qubit": 3
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 320,
+      "qubit": 3
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 0,
+      "qubit": 3
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 10,
+      "qubit": 3
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 20,
+      "qubit": 3
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 40,
+      "qubit": 3
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 80,
+      "qubit": 3
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 120,
+      "qubit": 3
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 160,
+      "qubit": 3
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 240,
+      "qubit": 3
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 320,
+      "qubit": 3
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 0,
+      "qubit": 3
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 10,
+      "qubit": 3
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 20,
+      "qubit": 3
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 40,
+      "qubit": 3
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 80,
+      "qubit": 3
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 120,
+      "qubit": 3
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 160,
+      "qubit": 3
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 240,
+      "qubit": 3
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 320,
+      "qubit": 3
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 0,
+      "qubit": 4
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 10,
+      "qubit": 4
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 20,
+      "qubit": 4
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 40,
+      "qubit": 4
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 80,
+      "qubit": 4
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 120,
+      "qubit": 4
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 160,
+      "qubit": 4
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 240,
+      "qubit": 4
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 320,
+      "qubit": 4
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 0,
+      "qubit": 4
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 10,
+      "qubit": 4
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 20,
+      "qubit": 4
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 40,
+      "qubit": 4
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 80,
+      "qubit": 4
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 120,
+      "qubit": 4
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 160,
+      "qubit": 4
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 240,
+      "qubit": 4
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 320,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 0,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 10,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 20,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 40,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 80,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 120,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 160,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 240,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 320,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 0,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 10,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 20,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 40,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 80,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 120,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 160,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 240,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 320,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 0,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 10,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 20,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 40,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 80,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 120,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 160,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 240,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 320,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 0,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 10,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 20,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 40,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 80,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 120,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 160,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 240,
+      "qubit": 4
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 320,
+      "qubit": 4
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 0,
+      "qubit": 4
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 10,
+      "qubit": 4
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 20,
+      "qubit": 4
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 40,
+      "qubit": 4
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 80,
+      "qubit": 4
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 120,
+      "qubit": 4
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 160,
+      "qubit": 4
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 240,
+      "qubit": 4
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 320,
+      "qubit": 4
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 0,
+      "qubit": 4
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 10,
+      "qubit": 4
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 20,
+      "qubit": 4
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 40,
+      "qubit": 4
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 80,
+      "qubit": 4
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 120,
+      "qubit": 4
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 160,
+      "qubit": 4
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 240,
+      "qubit": 4
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 320,
+      "qubit": 4
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 0,
+      "qubit": 4
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 10,
+      "qubit": 4
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 20,
+      "qubit": 4
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 40,
+      "qubit": 4
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 80,
+      "qubit": 4
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 120,
+      "qubit": 4
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 160,
+      "qubit": 4
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 240,
+      "qubit": 4
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 320,
+      "qubit": 4
+    },
+    {
+      "arm": "adaptive",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 0,
+      "qubit": 4
+    },
+    {
+      "arm": "adaptive",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 10,
+      "qubit": 4
+    },
+    {
+      "arm": "adaptive",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 20,
+      "qubit": 4
+    },
+    {
+      "arm": "adaptive",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 40,
+      "qubit": 4
+    },
+    {
+      "arm": "adaptive",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 80,
+      "qubit": 4
+    },
+    {
+      "arm": "adaptive",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 120,
+      "qubit": 4
+    },
+    {
+      "arm": "adaptive",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 160,
+      "qubit": 4
+    },
+    {
+      "arm": "adaptive",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 240,
+      "qubit": 4
+    },
+    {
+      "arm": "adaptive",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 320,
+      "qubit": 4
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 0,
+      "qubit": 4
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 10,
+      "qubit": 4
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 20,
+      "qubit": 4
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 40,
+      "qubit": 4
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 80,
+      "qubit": 4
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 120,
+      "qubit": 4
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 160,
+      "qubit": 4
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 240,
+      "qubit": 4
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 320,
+      "qubit": 4
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 0,
+      "qubit": 5
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 10,
+      "qubit": 5
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 20,
+      "qubit": 5
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 40,
+      "qubit": 5
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 80,
+      "qubit": 5
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 120,
+      "qubit": 5
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 160,
+      "qubit": 5
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 240,
+      "qubit": 5
+    },
+    {
+      "arm": "ramsey",
+      "seq": "ramsey",
+      "n": 0,
+      "tau_us": 320,
+      "qubit": 5
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 0,
+      "qubit": 5
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 10,
+      "qubit": 5
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 20,
+      "qubit": 5
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 40,
+      "qubit": 5
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 80,
+      "qubit": 5
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 120,
+      "qubit": 5
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 160,
+      "qubit": 5
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 240,
+      "qubit": 5
+    },
+    {
+      "arm": "hahn",
+      "seq": "hahn",
+      "n": 1,
+      "tau_us": 320,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 0,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 10,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 20,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 40,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 80,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 120,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 160,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 240,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_2",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 320,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 0,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 10,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 20,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 40,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 80,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 120,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 160,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 240,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_4",
+      "seq": "cpmg",
+      "n": 4,
+      "tau_us": 320,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 0,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 10,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 20,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 40,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 80,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 120,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 160,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 240,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_8",
+      "seq": "cpmg",
+      "n": 8,
+      "tau_us": 320,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 0,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 10,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 20,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 40,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 80,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 120,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 160,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 240,
+      "qubit": 5
+    },
+    {
+      "arm": "cpmg_16",
+      "seq": "cpmg",
+      "n": 16,
+      "tau_us": 320,
+      "qubit": 5
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 0,
+      "qubit": 5
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 10,
+      "qubit": 5
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 20,
+      "qubit": 5
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 40,
+      "qubit": 5
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 80,
+      "qubit": 5
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 120,
+      "qubit": 5
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 160,
+      "qubit": 5
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 240,
+      "qubit": 5
+    },
+    {
+      "arm": "xy4_1",
+      "seq": "xy4",
+      "n": 1,
+      "tau_us": 320,
+      "qubit": 5
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 0,
+      "qubit": 5
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 10,
+      "qubit": 5
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 20,
+      "qubit": 5
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 40,
+      "qubit": 5
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 80,
+      "qubit": 5
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 120,
+      "qubit": 5
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 160,
+      "qubit": 5
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 240,
+      "qubit": 5
+    },
+    {
+      "arm": "xy4_2",
+      "seq": "xy4",
+      "n": 2,
+      "tau_us": 320,
+      "qubit": 5
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 0,
+      "qubit": 5
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 10,
+      "qubit": 5
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 20,
+      "qubit": 5
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 40,
+      "qubit": 5
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 80,
+      "qubit": 5
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 120,
+      "qubit": 5
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 160,
+      "qubit": 5
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 240,
+      "qubit": 5
+    },
+    {
+      "arm": "xy4_4",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 320,
+      "qubit": 5
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 0,
+      "qubit": 5
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 10,
+      "qubit": 5
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 20,
+      "qubit": 5
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 40,
+      "qubit": 5
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 80,
+      "qubit": 5
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 120,
+      "qubit": 5
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 160,
+      "qubit": 5
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 240,
+      "qubit": 5
+    },
+    {
+      "arm": "adaptive",
+      "seq": "xy4",
+      "n": 4,
+      "tau_us": 320,
+      "qubit": 5
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 0,
+      "qubit": 5
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 10,
+      "qubit": 5
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 20,
+      "qubit": 5
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 40,
+      "qubit": 5
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 80,
+      "qubit": 5
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 120,
+      "qubit": 5
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 160,
+      "qubit": 5
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 240,
+      "qubit": 5
+    },
+    {
+      "arm": "random_ctrl",
+      "seq": "cpmg",
+      "n": 2,
+      "tau_us": 320,
+      "qubit": 5
+    }
+  ]
+}
