@@ -58,17 +58,26 @@ def _find_circuits(value: Any, *, depth: int = 0, seen: set[int] | None = None) 
     return []
 
 
-def ancilla_map_from_job(job, register_name: str = "syndrome") -> dict[str, int]:
+def ancilla_maps_from_job(job, register_name: str = "syndrome") -> list[dict[str, int]]:
+    """One 8-stabilizer -> physical-qubit map per submitted circuit (layouts may differ per case).
+    For the 3-round job the register is syndrome_r0 (same physical ancillas every round)."""
     inputs = getattr(job, "inputs", None)
     inputs = inputs() if callable(inputs) else inputs
     circuits = _find_circuits(inputs)
     if not circuits:
         raise ValueError("submitted ISA circuits were not recoverable from job.inputs")
-    maps = [measurement_map_for_register(circuit, register_name) for circuit in circuits]
-    first = maps[0]
-    if any(mapping != first for mapping in maps[1:]):
-        raise ValueError("the four submitted circuits do not share one ancilla map")
-    return first
+    maps = []
+    for circuit in circuits:
+        try:
+            maps.append(measurement_map_for_register(circuit, register_name))
+        except ValueError:
+            maps.append(measurement_map_for_register(circuit, register_name + "_r0"))
+    return maps
+
+
+def ancilla_map_from_job(job, register_name: str = "syndrome") -> dict[str, int]:
+    """Backward-compatible: first circuit's map (per-circuit maps are recorded separately)."""
+    return ancilla_maps_from_job(job, register_name)[0]
 
 
 def job_creation_time(job) -> datetime:
@@ -88,9 +97,13 @@ def build_snapshot(
     requested_time: datetime,
     properties,
     ancilla_map: Mapping[str, int],
+    ancilla_maps_per_circuit: list[Mapping[str, int]] | None = None,
 ) -> dict[str, Any]:
     qubits: dict[str, Any] = {}
-    for physical in sorted(set(ancilla_map.values())):
+    all_physical = set(ancilla_map.values())
+    for m in ancilla_maps_per_circuit or []:
+        all_physical |= set(m.values())
+    for physical in sorted(all_physical):
         t1 = float(properties.t1(physical)) * 1e6
         t2 = float(properties.t2(physical)) * 1e6
         readout = float(properties.readout_error(physical))
@@ -112,6 +125,12 @@ def build_snapshot(
         "historical_lookup_policy": "closest backend properties older than the job creation time",
         "qubits": qubits,
         "ancilla_map": {str(i): int(ancilla_map[str(i)]) for i in range(8)},
+        "ancilla_maps_per_circuit": [
+            {str(i): int(m[str(i)]) for i in range(8)} for m in (ancilla_maps_per_circuit or [])
+        ],
+        "ancilla_maps_shared": all(
+            dict(m) == dict(ancilla_map) for m in (ancilla_maps_per_circuit or [])
+        ),
         "claim_boundary": "Calibration metadata for one backend epoch; not a device-wide lifetime claim.",
     }
     body["certificate_sha256"] = sha256_json(body)
@@ -138,13 +157,18 @@ def capture(job_id: str, *, instance: str = "auto", explicit_map: str | None = N
         ) from exc
     if properties is None:
         raise RuntimeError("historical backend properties are unavailable for the job epoch")
-    mapping = parse_ancilla_map(explicit_map) if explicit_map else ancilla_map_from_job(job)
+    if explicit_map:
+        mapping, per_circuit = parse_ancilla_map(explicit_map), None
+    else:
+        per_circuit = ancilla_maps_from_job(job)
+        mapping = per_circuit[0]
     return build_snapshot(
         job_id=job_id,
         backend_name=backend_name,
         requested_time=requested_time,
         properties=properties,
         ancilla_map=mapping,
+        ancilla_maps_per_circuit=per_circuit,
     )
 
 

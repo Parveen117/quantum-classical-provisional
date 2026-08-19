@@ -31,7 +31,7 @@ Pinned campaign body SHA-256:
 Pinned Shor campaign body SHA-256:
 
 ```text
-f66642a5d7a5c2246eab653b9a78b1e9d8905f927d485593a80bd79fb1e3bbc0
+de0af11ec82b16e55f9f201bb6e3e608c6da307e742d35b3bc58b31c9842917d
 ```
 
 Pinned ancilla circuit specification SHA-256:
