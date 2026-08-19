@@ -1,0 +1,4 @@
+# Optional hardware/simulator adapter. The exact certificate core has no dependencies.
+qiskit~=2.5
+qiskit-aer~=0.17
+qiskit-ibm-runtime~=0.47
