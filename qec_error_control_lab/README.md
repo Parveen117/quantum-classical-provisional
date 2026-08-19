@@ -8,6 +8,8 @@ The laboratory now has two levels:
 
 1. a three-qubit repetition-code cartridge for one X error;
 2. a nine-qubit Shor-code cartridge for one arbitrary X, Y, or Z error.
+3. a 17-qubit ancilla extraction circuit specification and optional Qiskit adapter;
+4. a bounded encoded-vs-unencoded phenomenological noise comparison.
 
 ## Implemented now
 
@@ -32,6 +34,18 @@ Pinned Shor campaign body SHA-256:
 f66642a5d7a5c2246eab653b9a78b1e9d8905f927d485593a80bd79fb1e3bbc0
 ```
 
+Pinned ancilla circuit specification SHA-256:
+
+```text
+5e1610cbf3a8ec4146001218381b57d8b791732901b8f7bf8956adaeec93e291
+```
+
+Pinned phenomenological noise certificate SHA-256:
+
+```text
+7a0df18786d664dc9d05fb4d0366e309c538ec5be2d01bba16740a5efe087f2e
+```
+
 ## Run
 
 From this directory:
@@ -41,6 +55,8 @@ python -m unittest -v test_qec_repetition.py
 python run_campaign.py --output generated/qec_error_control_certificate.json
 python -m unittest -v test_qec_shor.py
 python run_shor_campaign.py --output generated/shor_qec_certificate.json
+python -m unittest -v test_qec_circuit_and_noise.py
+python run_noise_benchmark.py --output generated/noise_benchmark_certificate.json
 ```
 
 The campaign is dependency-free and deterministic.  The generated certificate
@@ -49,15 +65,16 @@ process explicitly promotes it.
 
 ## Scientific and engineering boundary
 
-This package establishes simulator-level behavior for a three-qubit repetition
-code under its declared error model.  It does **not** establish:
+This package establishes exact simulator-level behavior for the three-qubit
+repetition code and the nine-qubit Shor code under their declared error models.
+It includes an ancilla extraction prototype and a deliberately bounded analytic
+noise comparison.  It does **not** establish:
 
-- correction of arbitrary Pauli errors;
 - a fault-tolerant logical gate set;
 - protection against correlated multi-qubit errors;
 - a threshold theorem or scalable architecture;
 - physical-device, quantum-sensor, or quantum-computer validation.
 
-The next cartridge should add the phase-flip companion and then a code that can
-model circuit-level ancilla extraction and noisy gates.  Hardware evidence must
-remain separate from the exact statevector certificates in this folder.
+The optional Qiskit adapter materializes the declared circuit but never submits
+a job by itself.  Hardware evidence must remain separate from the exact
+statevector and phenomenological certificates in this folder.
