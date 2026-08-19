@@ -78,3 +78,31 @@ noise comparison.  It does **not** establish:
 The optional Qiskit adapter materializes the declared circuit but never submits
 a job by itself.  Hardware evidence must remain separate from the exact
 statevector and phenomenological certificates in this folder.
+
+## RNKE binding (claude/rnke-qec-gate-v1)
+
+`rnke_qec_gate.py` binds the Shor cartridge to the recognition-kernel grammar
+used elsewhere in this programme: each cycle audits the syndrome residue and
+returns a typed verdict — `COMMITTED` (zero residue), `CORRECTED` (weight-1
+residue, correction applied **and re-audited to zero**), `DEFERRED` (syndrome
+reports disagree; held, no state change), `CUT` (outside the single-Pauli
+model or fidelity not restored; fail-closed). State advances only on
+COMMITTED/CORRECTED. Every cycle emits a receipt hash-chained to its parent.
+
+Campaign: 4 logical states × (clean + 27 single Paulis + 3 two-error controls
++ 1 disagreement) = 128 cycles; checks: all clean COMMITTED, all single-Pauli
+CORRECTED, no two-error case ever COMMITTED, disagreement DEFERRED, chain intact.
+
+Pinned RNKE gate certificate SHA-256:
+
+```text
+c7a6aa4bd20184405cebe2e48dbb6ed17ca4e55064a1a8a2aa054200b6bc6f2a
+```
+
+```bash
+python -m unittest -v test_rnke_qec_gate.py
+python rnke_qec_gate.py --output generated/rnke_qec_gate_certificate.json
+```
+
+Boundary unchanged: exact statevector, declared error model; not fault
+tolerance, not a threshold, not hardware.
