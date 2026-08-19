@@ -17,6 +17,10 @@ class T(unittest.TestCase):
         T=120.0; taus=DELAYS_US; p=[0.5+0.5*math.exp(-(t/T)**1.2) for t in taus]
         f=fit_decay(taus,p); self.assertLess(abs(f["T_us"]-T)/T, 0.2)
     def test_circuits_shape(self):
+        try:
+            import qiskit  # noqa: F401
+        except ImportError:
+            self.skipTest("qiskit not installed; circuit construction is exercised separately")
         cal={"qubits":{"0":{"T1_us":100,"T2_us":40,"readout_error":0.02}}}
         arms=plan(cal)["qubits"]["0"]["arms"]
         cs=build_circuits(0, arms); self.assertEqual(len(cs), len(arms)*len(DELAYS_US))
