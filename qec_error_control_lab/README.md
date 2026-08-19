@@ -106,3 +106,22 @@ python rnke_qec_gate.py --output generated/rnke_qec_gate_certificate.json
 
 Boundary unchanged: exact statevector, declared error model; not fault
 tolerance, not a threshold, not hardware.
+
+## Theorem binding on hardware shots (claude/rnke-qec-gate-v1)
+
+`rnke_theorem_binding_hw.py` applies two certified finite theorems of the
+Recognition framework to the IBM ancilla-extraction shots (exact ℚ):
+
+- **T1 seam integer** (D03 / LEAN-2): k_Σ = n₊(B−I), B = diag(1−⟨S_i⟩).
+  Result: k_Σ equals the declared injected-error weight in all four cases
+  (0, 1, 1, 4) and the expectation-derived syndrome equals both the expected
+  and the bitstring-modal syndrome — operator-level syndrome from expectations.
+- **T2 square-sourced residue** (SOS-1 / cut-square positivity): second-moment
+  Gram G is certified PSD with explicit weights; residue D = G − σσᵀ typed by
+  exact inertia and magnitude. Renaming control (TAUT-1) included: the (7,0,1)
+  inertia shape is generic (random shots reproduce it) and is **not** a finding;
+  the content is the exact residue magnitude per case.
+- **T3** (LEAN-3): |⟨S_i⟩| reported as per-stabilizer orientation confidence.
+
+Pinned certificate SHA-256: see `EXPECTED_THEOREM_BINDING_HW.sha256`.
+Boundary: finite-theorem consequences on one hardware round; not RH/K₀/threshold/FT.
