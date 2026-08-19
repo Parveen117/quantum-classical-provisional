@@ -1,7 +1,7 @@
 {
   "job_id": "da2raps3jnrc73ae9n80",
   "backend": "ibm_marrakesh",
-  "status": "QUEUED",
+  "status": "DONE",
   "shots_per_case": 4096,
   "cases": [
     "no_error",
