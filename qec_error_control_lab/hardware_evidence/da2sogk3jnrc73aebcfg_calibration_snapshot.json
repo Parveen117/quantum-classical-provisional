@@ -1,0 +1,100 @@
+{
+  "ancilla_map": {
+    "0": 91,
+    "1": 90,
+    "2": 118,
+    "3": 110,
+    "4": 107,
+    "5": 87,
+    "6": 110,
+    "7": 97
+  },
+  "ancilla_maps_per_circuit": [
+    {
+      "0": 91,
+      "1": 90,
+      "2": 118,
+      "3": 110,
+      "4": 107,
+      "5": 87,
+      "6": 110,
+      "7": 97
+    },
+    {
+      "0": 91,
+      "1": 90,
+      "2": 118,
+      "3": 110,
+      "4": 107,
+      "5": 87,
+      "6": 110,
+      "7": 97
+    },
+    {
+      "0": 91,
+      "1": 90,
+      "2": 118,
+      "3": 110,
+      "4": 107,
+      "5": 87,
+      "6": 110,
+      "7": 97
+    },
+    {
+      "0": 91,
+      "1": 90,
+      "2": 118,
+      "3": 110,
+      "4": 107,
+      "5": 87,
+      "6": 110,
+      "7": 97
+    }
+  ],
+  "ancilla_maps_shared": true,
+  "backend": "ibm_marrakesh",
+  "certificate_sha256": "24afcfff42806a9748998ed5f10bd27e6731ff2c480460ad6807cf8ea449748b",
+  "claim_boundary": "Calibration metadata for one backend epoch; not a device-wide lifetime claim.",
+  "historical_lookup_policy": "closest backend properties older than the job creation time",
+  "job_id": "da2sogk3jnrc73aebcfg",
+  "properties_requested_at": "2026-08-19T21:01:14.627703+05:30",
+  "qubits": {
+    "107": {
+      "T1_us": 220.8386770536552,
+      "T2_us": 215.6061457789323,
+      "readout_error": 0.009765625
+    },
+    "110": {
+      "T1_us": 229.00636577256412,
+      "T2_us": 155.626641375648,
+      "readout_error": 0.010498046875
+    },
+    "118": {
+      "T1_us": 60.19339922890207,
+      "T2_us": 8.069677977519454,
+      "readout_error": 0.004638671875
+    },
+    "87": {
+      "T1_us": 175.4410017081037,
+      "T2_us": 152.1361881255871,
+      "readout_error": 0.006103515625
+    },
+    "90": {
+      "T1_us": 51.83682318526069,
+      "T2_us": 61.03804987461325,
+      "readout_error": 0.0140380859375
+    },
+    "91": {
+      "T1_us": 133.22196857187345,
+      "T2_us": 156.81603245022234,
+      "readout_error": 0.0059814453125
+    },
+    "97": {
+      "T1_us": 233.00723165272893,
+      "T2_us": 54.29088400503979,
+      "readout_error": 0.0186767578125
+    }
+  },
+  "schema": "rnke-thermo-decoherence-calibration-snapshot-v1",
+  "snapshot_time": "2026-08-19T20:41:44+05:30"
+}
