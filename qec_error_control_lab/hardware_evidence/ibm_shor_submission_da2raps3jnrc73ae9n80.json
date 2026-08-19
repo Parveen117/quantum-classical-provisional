@@ -1,0 +1,13 @@
+{
+  "job_id": "da2raps3jnrc73ae9n80",
+  "backend": "ibm_marrakesh",
+  "status": "QUEUED",
+  "shots_per_case": 4096,
+  "cases": [
+    "no_error",
+    "x_q0",
+    "z_q0",
+    "y_q4"
+  ],
+  "experiment": "bounded_shor_syndrome_v1"
+}
