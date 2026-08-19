@@ -4,6 +4,11 @@ This private experimental package is the first bounded quantum-error-control
 cartridge for the quantum-classical programme.  It is intentionally separated
 from the narrow public Multi-Ledger Operator-Memory release.
 
+The laboratory now has two levels:
+
+1. a three-qubit repetition-code cartridge for one X error;
+2. a nine-qubit Shor-code cartridge for one arbitrary X, Y, or Z error.
+
 ## Implemented now
 
 - one logical qubit encoded as `alpha|000> + beta|111>`;
@@ -21,6 +26,12 @@ Pinned campaign body SHA-256:
 7c0dae4253374839fc5a3aa911d4b66d26200bcdc3c234f21c1ccc065c9d0ca9
 ```
 
+Pinned Shor campaign body SHA-256:
+
+```text
+f66642a5d7a5c2246eab653b9a78b1e9d8905f927d485593a80bd79fb1e3bbc0
+```
+
 ## Run
 
 From this directory:
@@ -28,6 +39,8 @@ From this directory:
 ```bash
 python -m unittest -v test_qec_repetition.py
 python run_campaign.py --output generated/qec_error_control_certificate.json
+python -m unittest -v test_qec_shor.py
+python run_shor_campaign.py --output generated/shor_qec_certificate.json
 ```
 
 The campaign is dependency-free and deterministic.  The generated certificate
@@ -46,5 +59,5 @@ code under its declared error model.  It does **not** establish:
 - physical-device, quantum-sensor, or quantum-computer validation.
 
 The next cartridge should add the phase-flip companion and then a code that can
-correct an arbitrary single-qubit Pauli error, with circuit-level ancilla and
-measurement-noise models kept separate from hardware evidence.
+model circuit-level ancilla extraction and noisy gates.  Hardware evidence must
+remain separate from the exact statevector certificates in this folder.
