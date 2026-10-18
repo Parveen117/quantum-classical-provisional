@@ -1,5 +1,11 @@
 # Native Relational Quantum Computing — v0.1
 
+**New: [exact compact execution and direct observer calculations](COMPACT.md).**
+The NRQC-2 extension computes selected answers without expanding the amplitude
+vector, using exact phase/ratio arithmetic and retained operator memory. It includes
+128-qubit structured-query runs, resource-growth controls and an Aer MPS comparison.
+The dense engine documented below remains the broader floating-unitary reference.
+
 **Target:** express a quantum task once, calculate it in the native relational
 engine, compile the same semantics for an IBM-compatible target, and compare
 the declared observations. This is the first static ideal-circuit milestone.
@@ -100,8 +106,9 @@ correctness checks, not quantum speedup on the classical host.
 3. Measured hardware comparison: predeclare circuits, bases, raw-count ordering,
    job IDs, calibration/noise assumptions, shots and statistical tolerances.
    Compare with the existing bridge without fitting away discrepancies.
-4. Scale: implement a structured/tensor engine and benchmark its actual cost
-   against dense calculation; record where entanglement prevents compression.
+4. Scale: [NRQC-2](COMPACT.md) adds exact structured state and observer engines,
+   matched dense/MPS comparisons and an exponential graph-growth control.
+   Broader workloads and best-known-classical comparisons remain open.
 5. Separate native physical processor: requires a coherent hardware realization
    and new physical evidence.
 

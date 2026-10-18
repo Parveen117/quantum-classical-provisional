@@ -10,6 +10,11 @@ native and IBM-compatible representations. See the explicit
 [equivalence derivation](native_relational_qc/THEOREM.md) and
 [verification record](native_relational_qc/VERIFICATION.md) for scope and results.
 
+The [exact compact extension](native_relational_qc/COMPACT.md) adds native
+observer-first calculation and shared conditional-state graphs. It computes
+selected probabilities with exact phase/ratio memory, including a recorded
+128-qubit structured query, and measures cost against dense and MPS references.
+
 ## Purpose
 
 This repository is the quantum-classical reference implementation of the broader EMK / Recognition Calculus programme.
