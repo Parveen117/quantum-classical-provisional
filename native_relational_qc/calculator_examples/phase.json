@@ -1,0 +1,41 @@
+{
+  "schema": "nrqc-calculator-v1",
+  "n_qubits": 1,
+  "operations": [
+    [
+      "h",
+      [
+        0
+      ]
+    ],
+    [
+      "t",
+      [
+        0
+      ]
+    ],
+    [
+      "h",
+      [
+        0
+      ]
+    ]
+  ],
+  "queries": [
+    {
+      "id": "p0",
+      "kind": "probability",
+      "outcomes": {
+        "0": 0
+      }
+    },
+    {
+      "id": "law",
+      "kind": "distribution",
+      "qubits": [
+        0
+      ]
+    }
+  ],
+  "decimal_places": 18
+}

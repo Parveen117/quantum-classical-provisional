@@ -1,5 +1,10 @@
 # Native Relational Quantum Computing — v0.1
 
+**New: [custom quantum-circuit calculator](CALCULATOR.md).** Supply a circuit and
+probability, Pauli-expectation or marginal-distribution queries as JSON. Obtain
+exact answers, certified decimal display intervals and explicit resource status
+with `python -m native_relational_qc calculate INPUT.json`.
+
 **New: [exact factored evaluation](FACTORED.md).** A product-observer suffix and
 exact sparse MPS boundary contraction recover previously failed 50-qubit local
 and global-parity answers. The 57-row comparison retains deeper failures and
