@@ -1,5 +1,9 @@
 # Exact dynamic execution: measurement, memory and recovery
 
+The subsequent [original IBM workload replay](IBM_WORKLOADS.md) executes the
+repository's pinned 17-qubit Shor logical circuits and adds complete sparse
+classical readout. This page retains the NRQC-3 recovery verification snapshot.
+
 The NRQC-3 extension calculates selected results of circuits containing
 mid-circuit measurement, reset, classical feedback and rational Pauli noise.
 It carries quantum Pauli terms together with classical parity characters, so

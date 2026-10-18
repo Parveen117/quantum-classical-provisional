@@ -1,5 +1,10 @@
 # Native Relational Quantum Computing — v0.1
 
+**New: [original IBM workloads executed natively](IBM_WORKLOADS.md).** The pinned
+17-qubit Shor logical builders now run as saved native programs, with complete
+classical output distributions for all four cases at one and three rounds.
+Default execution needs no quantum SDK; it uses software quantum registers.
+
 **New: [exact dynamic execution and recovery](DYNAMIC.md).** NRQC-3 adds
 measurement, reset, overwritten classical memory, conditional gates and rational
 Pauli channels. It includes teleportation, all 27 single-Pauli Shor recovery

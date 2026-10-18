@@ -20,6 +20,11 @@ reset, classical feedback and rational Pauli channels. Its recorded checks cover
 teleportation, all 27 single-Pauli Shor recovery cases, and repeated noisy
 bit-flip recovery through 128 rounds with explicit resource limits.
 
+The [original IBM workload replay](native_relational_qc/IBM_WORKLOADS.md) executes
+the pinned 17-qubit Shor logical source on the native software engine, including
+complete classical readout laws at one and three rounds. Its default execution
+uses saved native inputs and imports no quantum SDK.
+
 ## Purpose
 
 This repository is the quantum-classical reference implementation of the broader EMK / Recognition Calculus programme.
