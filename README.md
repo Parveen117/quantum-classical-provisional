@@ -30,6 +30,11 @@ measures exact observer expansion against Aer MPS and smaller dense references.
 Failed runs and resource boundaries are retained; general computational
 superiority is not demonstrated.
 
+The [exact factored backend](native_relational_qc/FACTORED.md) recovers selected
+50-qubit local and global-parity answers that exhausted the expanded observer.
+It combines exact product-observer propagation with sparse MPS contraction,
+with a retained 57-row comparison, ablations, and explicit deeper failures.
+
 ## Purpose
 
 This repository is the quantum-classical reference implementation of the broader EMK / Recognition Calculus programme.

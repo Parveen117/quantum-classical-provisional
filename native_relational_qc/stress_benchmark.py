@@ -98,8 +98,11 @@ def _worker(request_path):
     circuit = brickwork(case['n'], case['rounds'], case['seed'])
     report = {**case, **describe(circuit, case['query'])}
     method = case['method']
-    if method == 'observer':
-        from .observer import probability, expectation
+    if method in ('observer', 'factored'):
+        if method == 'observer':
+            from .observer import probability, expectation
+        else:
+            from .factored import probability, expectation
     else:
         from .compact_qiskit import to_qiskit
         from qiskit.quantum_info import Pauli
@@ -138,9 +141,14 @@ def _worker(request_path):
 
     checkpoint({'event': 'execution_start'})
     try:
-        if method == 'observer':
-            options = dict(max_terms=budget['max_terms'], max_work=budget['max_work'],
+        if method in ('observer', 'factored'):
+            options = dict(max_work=budget['max_work'],
                            max_coefficient_bits=budget['max_coefficient_bits'], progress=checkpoint)
+            if method == 'observer':
+                options['max_terms'] = budget['max_terms']
+            else:
+                options.update(max_bond=budget['max_bond'],max_coefficients=budget['max_coefficients'],
+                               **case.get('factored_options', {}))
             if case['query'] == 'local00':
                 observation = probability(circuit, {q: 0 for q in query_support(case['n'], 'local00')}, **options)
             else:
@@ -242,8 +250,9 @@ def run_protocol(protocol_path, output_path):
         result['rows'].append(report)
         _write(output_path, result)
         terms = report.get('observation', report.get('statistics', report.get('checkpoint', {}).get('statistics', {}))).get('peak_terms')
+        bonds = report.get('observation', report.get('statistics', report.get('checkpoint', {}).get('statistics', {}))).get('peak_bond')
         print(f"{index + 1}/{len(protocol['cases'])} {case} => {report['status']} "
-              f"{report.get('execution_seconds', 0):.3f}s terms={terms} "
+              f"{report.get('execution_seconds', 0):.3f}s terms={terms} bond={bonds} "
               f"rss={report['peak_process_rss_bytes'] / 2**20:.1f}MiB", flush=True)
 
 

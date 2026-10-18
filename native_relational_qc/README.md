@@ -1,5 +1,10 @@
 # Native Relational Quantum Computing — v0.1
 
+**New: [exact factored evaluation](FACTORED.md).** A product-observer suffix and
+exact sparse MPS boundary contraction recover previously failed 50-qubit local
+and global-parity answers. The 57-row comparison retains deeper failures and
+factorization ablations; Aer MPS remains faster on these workloads.
+
 **New: [40–50 qubit random-brickwork stress test](STRESS_BENCHMARK.md).**
 Exact observer expansion, isolated process memory/time, Aer MPS and feasible
 dense references are measured with retained failed runs. This broader workload
