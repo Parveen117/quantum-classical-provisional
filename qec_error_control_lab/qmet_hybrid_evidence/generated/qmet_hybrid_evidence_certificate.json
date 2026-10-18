@@ -1,0 +1,89 @@
+{
+  "aggregate_truth_table": {
+    "digital_twin_sensor_verification_verified": true,
+    "exact_model_qec_control_verified": true,
+    "fault_tolerance_established": false,
+    "finite_theorem_hardware_binding_verified": true,
+    "hardware_qec_syndrome_observed": true,
+    "metrological_traceability_established": false,
+    "physical_sensor_validated": false,
+    "riemann_hypothesis_claimed": false,
+    "threshold_established": false
+  },
+  "certificate_sha256": "c1508ef494fba7bf94e5623cea5cd24fa9055089db1d84877b5baa1d8a21a120",
+  "checks": {
+    "all_component_bounded_gates_passed": true,
+    "component_receipt_chain_intact": true,
+    "evidence_classes_remain_distinct": true,
+    "four_predeclared_components_present": true,
+    "local_qec_anchor_replay_complete": true,
+    "no_cross_domain_promotion": true,
+    "qseam_remote_attestation_bound": true
+  },
+  "claim_boundary": "Proof-carrying index of four bounded evidence components. It composes provenance, not claim strength. QEC hardware evidence does not validate an NV sensor; the Q-Seam component remains a digital twin until instrument data and traceable calibration exist.",
+  "classification": "PASS_BOUNDED_QMET_HYBRID_EVIDENCE_BUNDLE_V1",
+  "component_receipts": [
+    {
+      "certificate_sha256": "1826f4432d380236240346d78cc7c0ef9518cdc29163387f2c916ea4106dc845",
+      "claim_boundary_sha256": "ba062a87890b16a579c12704beb344be2b743bbb0d4b5e3ecd5f63713d241c98",
+      "component_id": "ibm_shor_hardware_syndrome",
+      "evidence_class": "HARDWARE_QEC_SYNDROME",
+      "index": 0,
+      "observed_outcome": "PASS_BOUNDED_SHOR_HARDWARE_SYNDROME_V1",
+      "parent_receipt_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "receipt_sha256": "5e880c1d20f2ac7e2e17ec344d383edcfeeefba018bf19d630ba47ce22bb4ae8",
+      "source_anchor_sha256": "f93a076cc1b7bd83d9a1b548cdfe23e8e942dc17c67c8c6312747223722cd854"
+    },
+    {
+      "certificate_sha256": "c7a6aa4bd20184405cebe2e48dbb6ed17ca4e55064a1a8a2aa054200b6bc6f2a",
+      "claim_boundary_sha256": "cc98b2de20ca850e366f1be8ab5855bfacc87979e1e141cc2e36d85784fd0db8",
+      "component_id": "rnke_shor_recognition_gate",
+      "evidence_class": "EXACT_STATEVECTOR_QEC_CONTROL",
+      "index": 1,
+      "observed_outcome": "PASS_RNKE_QEC_GATE_V1",
+      "parent_receipt_sha256": "5e880c1d20f2ac7e2e17ec344d383edcfeeefba018bf19d630ba47ce22bb4ae8",
+      "receipt_sha256": "e71efbe1d0fa5883a0251e1c72a5650107324cc78224458b32af55f37c29fe6d",
+      "source_anchor_sha256": "bf7390d6c801b17d18bf94aee05cd5c84d670b1db009277192f9a8502fcd9352"
+    },
+    {
+      "certificate_sha256": "4e171c945c7dec90016b5b0f12a5ca8fa877bc92715485238ad7b024f5c57ba2",
+      "claim_boundary_sha256": "99ae02e05f8b690f843559095aa3ff09737cea9becfab699deacb9567d2f5aef",
+      "component_id": "rnke_hardware_theorem_binding",
+      "evidence_class": "FINITE_THEOREM_HARDWARE_BINDING",
+      "index": 2,
+      "observed_outcome": "PASS_RNKE_THEOREM_BINDING_HW_V1",
+      "parent_receipt_sha256": "e71efbe1d0fa5883a0251e1c72a5650107324cc78224458b32af55f37c29fe6d",
+      "receipt_sha256": "d6c1a76b8ca9293710f0325c9f64469550e3e95c95ee9b33497a49b0798cb359",
+      "source_anchor_sha256": "3bfcceb11822b82f4666d67d8c42b01ce9319ff14116ee2d222e98ad79458c80"
+    },
+    {
+      "certificate_sha256": "1ec177bedf5cf296c6c831e72a5fd4f838602855ae540cd96906ebb4c73425dc",
+      "claim_boundary_sha256": "6a08f5347f9d927a36bc162236222a2d6ea9ef54fc1a55abd0a28eee75f4a3bc",
+      "component_id": "qseam_nv_odmr_digital_twin",
+      "evidence_class": "DIGITAL_TWIN_SENSOR_VERIFICATION",
+      "index": 3,
+      "observed_outcome": "ALL_7_PREDECLARED_DIGITAL_TWIN_CASES_MATCHED",
+      "parent_receipt_sha256": "d6c1a76b8ca9293710f0325c9f64469550e3e95c95ee9b33497a49b0798cb359",
+      "receipt_sha256": "1291d4615264064337aab0accb809eacdddcd22aeadab673f75113f2d932c266",
+      "source_anchor_sha256": "f95b2854d80b1369ca02690d77a9a81a6829ec0be492214cce28d643165a2f74"
+    }
+  ],
+  "ledger_head_sha256": "1291d4615264064337aab0accb809eacdddcd22aeadab673f75113f2d932c266",
+  "local_qec_anchor_checks": {
+    "hardware_classification_matches": true,
+    "hardware_internal_certificate_matches": true,
+    "rnke_gate_pin_matches": true,
+    "theorem_binding_pin_matches": true
+  },
+  "prohibited_aggregate_claims": [
+    "PHYSICAL_SENSOR_VALIDATED",
+    "FAULT_TOLERANCE_ESTABLISHED",
+    "THRESHOLD_ESTABLISHED",
+    "RIEMANN_HYPOTHESIS_PROVED",
+    "METROLOGICALLY_TRACEABLE"
+  ],
+  "qseam_attestation_sha256": "012120baae88821d32e24e0898b39cb10caf24ab2305935616e9597bae3443de",
+  "review_readiness": "READY_FOR_QMET_BOUNDED_POC_REVIEW",
+  "schema": "qmet-hybrid-evidence-bundle-v1",
+  "source_manifest_sha256": "0762fc553e11ffa0c3048409f8c309c17ab0a584084da66f46d5f9e36a318aed"
+}
