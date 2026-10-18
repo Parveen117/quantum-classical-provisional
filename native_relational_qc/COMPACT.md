@@ -1,5 +1,9 @@
 # Exact compact execution and observer calculations
 
+For measurement, reset, classical feedback and rational Pauli channels, see the
+subsequent [NRQC-3 dynamic extension](DYNAMIC.md). This page records NRQC-2's
+static-circuit methods and benchmark snapshot.
+
 The goal is to return quantum-circuit answers with practical classical resources,
 using native relational operations. This extension performs the calculation; it
 does not merely check an answer supplied by another engine.

@@ -15,6 +15,11 @@ observer-first calculation and shared conditional-state graphs. It computes
 selected probabilities with exact phase/ratio memory, including a recorded
 128-qubit structured query, and measures cost against dense and MPS references.
 
+The [dynamic extension](native_relational_qc/DYNAMIC.md) adds exact measurement,
+reset, classical feedback and rational Pauli channels. Its recorded checks cover
+teleportation, all 27 single-Pauli Shor recovery cases, and repeated noisy
+bit-flip recovery through 128 rounds with explicit resource limits.
+
 ## Purpose
 
 This repository is the quantum-classical reference implementation of the broader EMK / Recognition Calculus programme.

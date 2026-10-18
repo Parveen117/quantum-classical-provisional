@@ -1,5 +1,10 @@
 # Native Relational Quantum Computing — v0.1
 
+**New: [exact dynamic execution and recovery](DYNAMIC.md).** NRQC-3 adds
+measurement, reset, overwritten classical memory, conditional gates and rational
+Pauli channels. It includes teleportation, all 27 single-Pauli Shor recovery
+cases and 128 rounds of a declared noisy bit-flip recovery model.
+
 **New: [exact compact execution and direct observer calculations](COMPACT.md).**
 The NRQC-2 extension computes selected answers without expanding the amplitude
 vector, using exact phase/ratio arithmetic and retained operator memory. It includes
@@ -101,8 +106,10 @@ correctness checks, not quantum speedup on the classical host.
 ## Next compatibility gates
 
 1. Static ideal circuit equivalence: this implementation and its recorded checks.
-2. Dynamic circuits: explicit measurement instruments, reset and classical
-   feed-forward, including the existing repeated-syndrome Shor workload.
+2. Dynamic circuits: [NRQC-3](DYNAMIC.md) implements exact measurement, reset and
+   classical feed-forward for a declared finite subset, with new ideal Shor and
+   repeated-recovery workloads. General control flow and replay of the historical
+   measured Shor workload remain open.
 3. Measured hardware comparison: predeclare circuits, bases, raw-count ordering,
    job IDs, calibration/noise assumptions, shots and statistical tolerances.
    Compare with the existing bridge without fitting away discrepancies.
