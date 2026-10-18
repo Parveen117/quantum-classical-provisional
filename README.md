@@ -1,5 +1,15 @@
 # Quantum-Classical Recognition Validation
 
+## Native relational calculation engine
+
+[`native_relational_qc`](native_relational_qc/README.md) implements the first
+native relational quantum-computing milestone: EMK unitary gates, joint complex
+rays, entanglement, terminal observations, and offline Qiskit/IBM Target exchange.
+The design target is the same circuit semantics and output probabilities across
+native and IBM-compatible representations. See the explicit
+[equivalence derivation](native_relational_qc/THEOREM.md) and
+[verification record](native_relational_qc/VERIFICATION.md) for scope and results.
+
 ## Purpose
 
 This repository is the quantum-classical reference implementation of the broader EMK / Recognition Calculus programme.
@@ -396,3 +406,4 @@ Recognition framework to the IBM ancilla-extraction shots (exact ℚ):
 
 Pinned certificate SHA-256: see `EXPECTED_THEOREM_BINDING_HW.sha256`.
 Boundary: finite-theorem consequences on one hardware round; not RH/K₀/threshold/FT.
+
