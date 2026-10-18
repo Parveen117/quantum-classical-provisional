@@ -1,0 +1,155 @@
+{
+  "version": 1,
+  "description": "Declared follow-up after primary 40q results: locate observer budget boundary, and raise budget on 50q round-4/8 local and round-4 global queries. This is adaptive, not part of original predeclared cohort. All failed primary rows retained.",
+  "frozen_before_target_runs": false,
+  "queries": {
+    "local00": "P(q[n//2-1]=0,q[n//2]=0)",
+    "parity": "expectation of Z on every site"
+  },
+  "timing": "Fresh isolated single-thread process per row; execution excludes imports and circuit/backend construction; cold observer tables included. Peak RSS includes setup. MPS bond logging enabled. One run, no statistical speedup claim.",
+  "budget": {
+    "max_terms": 16384,
+    "max_work": 10000000,
+    "max_coefficient_bits": 4096,
+    "execution_seconds": 20,
+    "startup_seconds": 15,
+    "rss_bytes": 1342177280
+  },
+  "cases": [
+    {
+      "n": 40,
+      "rounds": 5,
+      "query": "local00",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "adaptive_boundary"
+    },
+    {
+      "n": 40,
+      "rounds": 5,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "adaptive_boundary"
+    },
+    {
+      "n": 40,
+      "rounds": 6,
+      "query": "local00",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "adaptive_boundary"
+    },
+    {
+      "n": 40,
+      "rounds": 6,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "adaptive_boundary"
+    },
+    {
+      "n": 50,
+      "rounds": 2,
+      "query": "local00",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "adaptive_boundary"
+    },
+    {
+      "n": 50,
+      "rounds": 2,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "adaptive_boundary"
+    },
+    {
+      "n": 50,
+      "rounds": 3,
+      "query": "local00",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "adaptive_boundary"
+    },
+    {
+      "n": 50,
+      "rounds": 3,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "adaptive_boundary"
+    },
+    {
+      "n": 50,
+      "rounds": 5,
+      "query": "local00",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "adaptive_boundary"
+    },
+    {
+      "n": 50,
+      "rounds": 5,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "adaptive_boundary"
+    },
+    {
+      "n": 50,
+      "rounds": 6,
+      "query": "local00",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "adaptive_boundary"
+    },
+    {
+      "n": 50,
+      "rounds": 6,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "adaptive_boundary"
+    },
+    {
+      "n": 50,
+      "rounds": 4,
+      "query": "local00",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "adaptive_larger_budget",
+      "budget_override": {
+        "max_terms": 262144,
+        "max_work": 100000000,
+        "execution_seconds": 60
+      }
+    },
+    {
+      "n": 50,
+      "rounds": 8,
+      "query": "local00",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "adaptive_larger_budget",
+      "budget_override": {
+        "max_terms": 262144,
+        "max_work": 100000000,
+        "execution_seconds": 60
+      }
+    },
+    {
+      "n": 50,
+      "rounds": 4,
+      "query": "parity",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "adaptive_larger_budget",
+      "budget_override": {
+        "max_terms": 262144,
+        "max_work": 100000000,
+        "execution_seconds": 60
+      }
+    }
+  ]
+}

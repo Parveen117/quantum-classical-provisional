@@ -1,0 +1,412 @@
+{
+  "version": 1,
+  "description": "Predeclared random open-1D Clifford+T brickwork. Initial H,T; each round random H/SX/SXdg then T/Tdg on every site, alternating CZ matching; final H. No seed selection.",
+  "frozen_before_target_runs": true,
+  "queries": {
+    "local00": "P(q[n//2-1]=0,q[n//2]=0)",
+    "parity": "expectation of Z on every site"
+  },
+  "timing": "Fresh isolated single-thread process per row; execution excludes imports and circuit/backend construction; cold observer tables included. Peak RSS includes setup. MPS bond logging enabled. One run, no statistical speedup claim.",
+  "budget": {
+    "max_terms": 16384,
+    "max_work": 10000000,
+    "max_coefficient_bits": 4096,
+    "execution_seconds": 20,
+    "startup_seconds": 15,
+    "rss_bytes": 1342177280
+  },
+  "cases": [
+    {
+      "n": 8,
+      "rounds": 4,
+      "query": "local00",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "small_reference"
+    },
+    {
+      "n": 8,
+      "rounds": 4,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "small_reference"
+    },
+    {
+      "n": 8,
+      "rounds": 4,
+      "query": "local00",
+      "method": "statevector",
+      "seed": 20261018,
+      "cohort": "small_reference"
+    },
+    {
+      "n": 8,
+      "rounds": 4,
+      "query": "parity",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "small_reference"
+    },
+    {
+      "n": 8,
+      "rounds": 4,
+      "query": "parity",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "small_reference"
+    },
+    {
+      "n": 8,
+      "rounds": 4,
+      "query": "parity",
+      "method": "statevector",
+      "seed": 20261018,
+      "cohort": "small_reference"
+    },
+    {
+      "n": 12,
+      "rounds": 8,
+      "query": "local00",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "small_reference"
+    },
+    {
+      "n": 12,
+      "rounds": 8,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "small_reference"
+    },
+    {
+      "n": 12,
+      "rounds": 8,
+      "query": "local00",
+      "method": "statevector",
+      "seed": 20261018,
+      "cohort": "small_reference"
+    },
+    {
+      "n": 20,
+      "rounds": 8,
+      "query": "local00",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "small_reference"
+    },
+    {
+      "n": 20,
+      "rounds": 8,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "small_reference"
+    },
+    {
+      "n": 20,
+      "rounds": 8,
+      "query": "local00",
+      "method": "statevector",
+      "seed": 20261018,
+      "cohort": "small_reference"
+    },
+    {
+      "n": 24,
+      "rounds": 8,
+      "query": "local00",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "small_reference"
+    },
+    {
+      "n": 24,
+      "rounds": 8,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "small_reference"
+    },
+    {
+      "n": 24,
+      "rounds": 8,
+      "query": "local00",
+      "method": "statevector",
+      "seed": 20261018,
+      "cohort": "small_reference"
+    },
+    {
+      "n": 40,
+      "rounds": 4,
+      "query": "local00",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 40,
+      "rounds": 4,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 40,
+      "rounds": 8,
+      "query": "local00",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 40,
+      "rounds": 8,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 40,
+      "rounds": 12,
+      "query": "local00",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 40,
+      "rounds": 12,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 40,
+      "rounds": 16,
+      "query": "local00",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 40,
+      "rounds": 16,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 40,
+      "rounds": 20,
+      "query": "local00",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 40,
+      "rounds": 20,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 40,
+      "rounds": 24,
+      "query": "local00",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 40,
+      "rounds": 24,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 50,
+      "rounds": 4,
+      "query": "local00",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 50,
+      "rounds": 4,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 50,
+      "rounds": 8,
+      "query": "local00",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 50,
+      "rounds": 8,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 50,
+      "rounds": 12,
+      "query": "local00",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 50,
+      "rounds": 12,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 50,
+      "rounds": 16,
+      "query": "local00",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 50,
+      "rounds": 16,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 50,
+      "rounds": 20,
+      "query": "local00",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 50,
+      "rounds": 20,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 50,
+      "rounds": 24,
+      "query": "local00",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 50,
+      "rounds": 24,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 50,
+      "rounds": 4,
+      "query": "parity",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 50,
+      "rounds": 4,
+      "query": "parity",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 50,
+      "rounds": 8,
+      "query": "parity",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 50,
+      "rounds": 8,
+      "query": "parity",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 50,
+      "rounds": 12,
+      "query": "parity",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 50,
+      "rounds": 12,
+      "query": "parity",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "primary"
+    },
+    {
+      "n": 50,
+      "rounds": 8,
+      "query": "local00",
+      "method": "observer",
+      "seed": 20261019,
+      "cohort": "secondary_seed"
+    },
+    {
+      "n": 50,
+      "rounds": 8,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261019,
+      "cohort": "secondary_seed"
+    },
+    {
+      "n": 50,
+      "rounds": 16,
+      "query": "local00",
+      "method": "observer",
+      "seed": 20261019,
+      "cohort": "secondary_seed"
+    },
+    {
+      "n": 50,
+      "rounds": 16,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261019,
+      "cohort": "secondary_seed"
+    }
+  ]
+}

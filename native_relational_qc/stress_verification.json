@@ -1,0 +1,244 @@
+{
+  "adaptive_rows": 15,
+  "artifact_sha256": {
+    "README.md": "40e5f6d8c8ffe1dfd7d559545192c3b8d41964042fda3c4518c3a785b3e41c70",
+    "native_relational_qc/README.md": "a58ca026f4eb3c0f34758a1fc1758a50d77a9b26fda4bb3b0aa31de23881a25f",
+    "native_relational_qc/STRESS_BENCHMARK.md": "86ce19567a3342b08b6f83f5a4c9a284f53c4348315bc94d872246d70e239891",
+    "native_relational_qc/stress_followup_protocol.json": "ef219fce00b157889e49d6ffb700b7b5e1a45c040423b997faa8dd0521c4da11",
+    "native_relational_qc/stress_followup_results.json": "b7ca700024b7daa27168052b78fa0a6244a9d84a55fd4ac4fbfa62c852d23114",
+    "native_relational_qc/stress_pilots.json": "b054af9defd59213a067b497756c0b87c1836596e385553c9040a5d3b1d1f930",
+    "native_relational_qc/stress_protocol.json": "c7ffd07061f6dd6ffaa948e755df65156becd0e63f9268509d663e4bebcfa10d",
+    "native_relational_qc/stress_results.json": "bec86b8d1714866eeee123d622d3c8ed2b79e2e9b1e02d0b19c9dd0b49cb3605"
+  },
+  "base_commit": "c3ce9d2245915e365bb465881e73ddac323ce5f9",
+  "benchmark_rows": 64,
+  "claim": "Exact selected-query successes with explicit expansion/time failures. No breakthrough, MPS superiority, generic hardness, physical-qubit processor or hardware-accuracy claim.",
+  "completed_reference_comparisons": [
+    {
+      "absolute_error": 3.5060843117662444e-13,
+      "methods": [
+        "observer",
+        "mps"
+      ],
+      "n": 8,
+      "query": "local00",
+      "rounds": 4,
+      "seed": 20261018
+    },
+    {
+      "absolute_error": 1.1102230246251565e-15,
+      "methods": [
+        "observer",
+        "statevector"
+      ],
+      "n": 8,
+      "query": "local00",
+      "rounds": 4,
+      "seed": 20261018
+    },
+    {
+      "absolute_error": 3.494982081519993e-13,
+      "methods": [
+        "mps",
+        "statevector"
+      ],
+      "n": 8,
+      "query": "local00",
+      "rounds": 4,
+      "seed": 20261018
+    },
+    {
+      "absolute_error": 1.0161343988457361e-11,
+      "methods": [
+        "mps",
+        "statevector"
+      ],
+      "n": 8,
+      "query": "parity",
+      "rounds": 4,
+      "seed": 20261018
+    },
+    {
+      "absolute_error": 2.0411450307733503e-13,
+      "methods": [
+        "mps",
+        "statevector"
+      ],
+      "n": 12,
+      "query": "local00",
+      "rounds": 8,
+      "seed": 20261018
+    },
+    {
+      "absolute_error": 1.3160028622394293e-12,
+      "methods": [
+        "mps",
+        "statevector"
+      ],
+      "n": 20,
+      "query": "local00",
+      "rounds": 8,
+      "seed": 20261018
+    },
+    {
+      "absolute_error": 1.3569145806968663e-12,
+      "methods": [
+        "mps",
+        "statevector"
+      ],
+      "n": 24,
+      "query": "local00",
+      "rounds": 8,
+      "seed": 20261018
+    },
+    {
+      "absolute_error": 5.876410469340954e-13,
+      "methods": [
+        "observer",
+        "mps"
+      ],
+      "n": 40,
+      "query": "local00",
+      "rounds": 4,
+      "seed": 20261018
+    },
+    {
+      "absolute_error": 1.2848055952474624e-13,
+      "methods": [
+        "observer",
+        "mps"
+      ],
+      "n": 50,
+      "query": "local00",
+      "rounds": 4,
+      "seed": 20261018
+    },
+    {
+      "absolute_error": 7.216449660063518e-16,
+      "methods": [
+        "observer",
+        "mps"
+      ],
+      "n": 50,
+      "query": "local00",
+      "rounds": 2,
+      "seed": 20261018
+    },
+    {
+      "absolute_error": 1.3491985306757215e-13,
+      "methods": [
+        "observer",
+        "mps"
+      ],
+      "n": 50,
+      "query": "local00",
+      "rounds": 3,
+      "seed": 20261018
+    }
+  ],
+  "dense_40_50_execution": "not attempted; amplitude storage only estimated analytically",
+  "evidence_class": "LOCAL_IDEAL_SOFTWARE_BENCHMARK",
+  "hardware_jobs_submitted": 0,
+  "historical_manifests": {
+    "compact_verification.json": {
+      "mismatches_to_current_tree": [
+        "native_relational_qc/observer.py"
+      ],
+      "note": "Historical record retained unchanged; mismatches do not turn old runs into new evidence."
+    },
+    "dynamic_verification.json": {
+      "mismatches_to_current_tree": [
+        "native_relational_qc/observer.py"
+      ],
+      "note": "Historical record retained unchanged; mismatches do not turn old runs into new evidence."
+    },
+    "ibm_workload_verification.json": {
+      "mismatches_to_current_tree": [
+        "native_relational_qc/observer.py"
+      ],
+      "note": "Historical record retained unchanged; mismatches do not turn old runs into new evidence."
+    },
+    "verification.json": {
+      "mismatches_to_current_tree": [],
+      "note": "Historical record retained unchanged; mismatches do not turn old runs into new evidence."
+    }
+  },
+  "integrity_checks_passed": true,
+  "maximum_observed_absolute_error": 1.0161343988457361e-11,
+  "pilot_rows_excluded": 12,
+  "primary_rows": 49,
+  "schema": "native-random-brickwork-stress-v1",
+  "source_sha256": {
+    "native_relational_qc/__init__.py": "2df0c6684869d87776756cc78918199a9a09fa86f8c9e6d41d675591698c9350",
+    "native_relational_qc/__main__.py": "c6203974637a24db3e87d63be17d4cad0a01ab23da898f4237b5f612f944a4f0",
+    "native_relational_qc/algebra.py": "3d23b2a3a345b0760bfce1cff9e4eea9635543ee566c9dd6f0078405f211e9ab",
+    "native_relational_qc/bridge.py": "6c863d69da9b477ad17948e6c935d3c058d426f0322e5df99eb4f8c09a61b4b3",
+    "native_relational_qc/circuit.py": "6215adf52443de8ee1db01f8e641c4c50124810a7674fd3258d826ff08b9e366",
+    "native_relational_qc/compact.py": "1acff6eaa8664b4ba33285c66c9f433ecd0148aa8383a18f79dbd2ccb66e898d",
+    "native_relational_qc/compact_benchmark.py": "38a618ea91bd436c740b75f67a908b63067f1b7332468ca4382cf7921872d5a6",
+    "native_relational_qc/compact_qiskit.py": "92f7bd85d6e753e9c898bcbd6f28e65b7fcc4cdd0a3ddedab4ab94df2fddcf05",
+    "native_relational_qc/dynamic.py": "88421139cba72f0d86f3644c5933e03dd44d8afa1fdc79b250b2e8bf5390acd9",
+    "native_relational_qc/dynamic_examples.py": "0d40d9b3dbf098623c7586f13cdb54d9c6f627e4af6f0c398e79f983129d259e",
+    "native_relational_qc/dynamic_qiskit.py": "be1ff2a0ff1187370dad1d42d5fa126f1f5b6ff1d46b976861ef917c2f930f58",
+    "native_relational_qc/dynamic_reference.py": "3ac7547482028029660081c4122bbce370d09a74b466432e4d4d48b529df89e1",
+    "native_relational_qc/dynamic_verify.py": "aa8b83844876d6627403443f0ea6e3d1504a9ad872b1f64ecc8bceab3f5eb5a2",
+    "native_relational_qc/exact.py": "cc0b3be70660ed819b3ad153620ea4338fb6bf57102a4474d4355da2805afdf6",
+    "native_relational_qc/examples.py": "2066bf7326cde2e064c9800de8fda87eb74314af99200593bc0fb39e3f8d47d5",
+    "native_relational_qc/ibm_workloads.py": "2a4b86fc8bb1ab9aaaa979129e37aa49d7b87880a2cf5a38f63fc690028e317e",
+    "native_relational_qc/observer.py": "132e4de5e9df0c051825e6bc5babcd124cfb52c7f128b72a9a5c08992b09fbf0",
+    "native_relational_qc/qiskit_adapter.py": "d3e877d52f7aeeebc9e9db996b1675c1feb2a99815450111365acaf61c51f2b8",
+    "native_relational_qc/readout.py": "6b891b4434fc409046df33eab9059037e9f80b687e6dfc1e8ce8593c3ec5b4c7",
+    "native_relational_qc/requirements-benchmark.txt": "997efe1b234d7571e51fd4d4b88ece2de51ae42b86c8401cd6b49e421d5e1adf",
+    "native_relational_qc/state.py": "2ff1413d09f36f6449eb6ae7ca8c53de71ac86b9b0711e080849987ab031093e",
+    "native_relational_qc/stress_benchmark.py": "80860fe7875fc61c284c4c2cab7fe38fb7f51dd2ec6c704e45294b90a0adf1ed",
+    "native_relational_qc/verify.py": "f3c03e25b279701155646a52c7ef96c9eab5696da74294ce9bc2a035c3c3ecf3",
+    "tests/test_native_compact.py": "193e1a4a4005b047c0e6dfd5ded886df7f6fe349eac7364ab485e2e3b15faab6",
+    "tests/test_native_dynamic.py": "41f94d9520e98c80ed7f58fdacf0b60ba31455c63bbf5a313975f4d4ae6a0b27",
+    "tests/test_native_observer.py": "89914d95fa87f9526caa193b185ce20666279100a6cdc87a7930e4cd3f27a31c",
+    "tests/test_native_qiskit_adapter.py": "c6f2c4c584fb8b619839fc1ea881a8c1b15a5ecc43c077d5652e3acf9f33a430",
+    "tests/test_native_readout.py": "0aab6e9d97ddeeff080f9b896466aa769112162891d7d919acfecd9d77697866",
+    "tests/test_native_relational_qc.py": "4d70497ff3cc85284a4404bd8f25eddc8c9d54cf119ce52d626807df642dcaba",
+    "tests/test_native_stress.py": "98b91f7ef4f7da7aaa3ee68767796465809026a20403fa4c0d979670859caa95"
+  },
+  "status_counts": [
+    {
+      "count": 22,
+      "method": "mps",
+      "status": "completed"
+    },
+    {
+      "count": 6,
+      "method": "mps",
+      "status": "time_limit"
+    },
+    {
+      "count": 5,
+      "method": "observer",
+      "status": "completed"
+    },
+    {
+      "count": 25,
+      "method": "observer",
+      "status": "resource_limit"
+    },
+    {
+      "count": 1,
+      "method": "observer",
+      "status": "time_limit"
+    },
+    {
+      "count": 5,
+      "method": "statevector",
+      "status": "completed"
+    }
+  ],
+  "tests": {
+    "details": [],
+    "errors": 0,
+    "failures": 0,
+    "passed": true,
+    "run": 93,
+    "seconds": 12.217257850999886,
+    "skipped": 0
+  }
+}

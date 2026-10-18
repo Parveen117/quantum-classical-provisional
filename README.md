@@ -25,6 +25,11 @@ the pinned 17-qubit Shor logical source on the native software engine, including
 complete classical readout laws at one and three rounds. Its default execution
 uses saved native inputs and imports no quantum SDK.
 
+The [40–50 qubit random-brickwork stress test](native_relational_qc/STRESS_BENCHMARK.md)
+measures exact observer expansion against Aer MPS and smaller dense references.
+Failed runs and resource boundaries are retained; general computational
+superiority is not demonstrated.
+
 ## Purpose
 
 This repository is the quantum-classical reference implementation of the broader EMK / Recognition Calculus programme.

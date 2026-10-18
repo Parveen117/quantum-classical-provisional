@@ -1,0 +1,833 @@
+{
+  "note": "Small-circuit plumbing pilots, excluded from reported benchmark tables. Initial pilot exposed a PID-namespace bug in RSS sampling; its 0 RSS fields and inherited rusage peaks are invalid memory comparisons. Fixed pilot uses /proc/self, child-resolved outer PID and VmHWM. Circuit inputs and algorithm unchanged. Main protocol began after this correction.",
+  "initial_invalid_memory_pilot": {
+    "environment": {
+      "cgroup_memory_max": "8589934592",
+      "cpu_count": 9,
+      "cpu_max": "800000 100000",
+      "numpy": "2.5.4",
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+      "qiskit": "2.6.0",
+      "qiskit_aer": "0.17.2"
+    },
+    "protocol": {
+      "budget": {
+        "execution_seconds": 20,
+        "max_coefficient_bits": 4096,
+        "max_terms": 16384,
+        "max_work": 10000000,
+        "rss_bytes": 1342177280,
+        "startup_seconds": 15
+      },
+      "cases": [
+        {
+          "cohort": "small_reference",
+          "method": "observer",
+          "n": 8,
+          "query": "local00",
+          "rounds": 4,
+          "seed": 20261018
+        },
+        {
+          "cohort": "small_reference",
+          "method": "mps",
+          "n": 8,
+          "query": "local00",
+          "rounds": 4,
+          "seed": 20261018
+        },
+        {
+          "cohort": "small_reference",
+          "method": "statevector",
+          "n": 8,
+          "query": "local00",
+          "rounds": 4,
+          "seed": 20261018
+        },
+        {
+          "cohort": "small_reference",
+          "method": "observer",
+          "n": 8,
+          "query": "parity",
+          "rounds": 4,
+          "seed": 20261018
+        },
+        {
+          "cohort": "small_reference",
+          "method": "mps",
+          "n": 8,
+          "query": "parity",
+          "rounds": 4,
+          "seed": 20261018
+        },
+        {
+          "cohort": "small_reference",
+          "method": "statevector",
+          "n": 8,
+          "query": "parity",
+          "rounds": 4,
+          "seed": 20261018
+        }
+      ],
+      "description": "Plumbing pilot; identical circuit definition, small n only. Retain results.",
+      "frozen_before_target_runs": true,
+      "queries": {
+        "local00": "P(q[n//2-1]=0,q[n//2]=0)",
+        "parity": "expectation of Z on every site"
+      },
+      "timing": "Fresh isolated single-thread process per row; execution excludes imports and circuit/backend construction; cold observer tables included. Peak RSS includes setup. MPS bond logging enabled. One run, no statistical speedup claim.",
+      "version": 1
+    },
+    "protocol_sha256": "07890836f9b0a7b2b7b5cf2f99b3e83f44366fcb7b810da2995799788525042e",
+    "rows": [
+      {
+        "algebraically_exact": true,
+        "circuit_sha256": "e8baac5365dcde3ab841f5dbdc29cbc9044abdf6f7fa324b5dfced8f62d84ff0",
+        "cohort": "small_reference",
+        "dense_complex128_payload_bytes": 4096,
+        "execution_seconds": 1.6051891039969632,
+        "method": "observer",
+        "n": 8,
+        "n_cz": 14,
+        "n_gates": 102,
+        "n_t_or_tdg": 40,
+        "observation": {
+          "final_terms": 9605,
+          "gates_examined": 102,
+          "gates_proved_invariant": 40,
+          "max_coefficient_bits": 14,
+          "peak_terms": 9605,
+          "source_boundary_terms": 26,
+          "statevector_constructed": false,
+          "term_visits": 56883,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "2701/8192",
+              "-37/4096",
+              "0",
+              "0"
+            ]
+          }
+        },
+        "peak_process_rss_bytes": 104927232,
+        "query": "local00",
+        "query_qubits": [
+          3,
+          4
+        ],
+        "rounds": 4,
+        "rss_before_execution_bytes": 0,
+        "sampled_peak_rss_bytes": 0,
+        "seed": 20261018,
+        "setup_seconds": 0.027002408001862932,
+        "status": "completed",
+        "structural_lightcone_gates": 68,
+        "structural_lightcone_qubits": 8,
+        "value_float": 0.316937035691454,
+        "wall_seconds_including_startup": 1.7740573900009622,
+        "worker_exit_code": 0
+      },
+      {
+        "aer_metadata": {
+          "device": "CPU",
+          "fusion": {
+            "enabled": false
+          },
+          "matrix_product_state_max_bond_dimension": 18446744073709551615,
+          "matrix_product_state_truncation_threshold": 0.0,
+          "method": "matrix_product_state",
+          "num_qubits": 8,
+          "parallel_shots": 1,
+          "parallel_state_update": 1,
+          "time_taken": 0.000393052
+        },
+        "algebraically_exact": false,
+        "circuit_sha256": "e8baac5365dcde3ab841f5dbdc29cbc9044abdf6f7fa324b5dfced8f62d84ff0",
+        "cohort": "small_reference",
+        "dense_complex128_payload_bytes": 4096,
+        "execution_seconds": 0.0027600850007729605,
+        "max_logged_bond_dimension": 4,
+        "method": "mps",
+        "n": 8,
+        "n_cz": 14,
+        "n_gates": 102,
+        "n_t_or_tdg": 40,
+        "peak_process_rss_bytes": 105996288,
+        "query": "local00",
+        "query_qubits": [
+          3,
+          4
+        ],
+        "requested_aer_options": {
+          "chop_threshold": 0,
+          "enable_truncation": false,
+          "matrix_product_state_max_bond_dimension": null,
+          "matrix_product_state_truncation_threshold": 0,
+          "max_memory_mb": 1280,
+          "max_parallel_experiments": 1,
+          "max_parallel_shots": 1,
+          "max_parallel_threads": 1,
+          "method": "matrix_product_state",
+          "mps_log_data": true,
+          "zero_threshold": 0
+        },
+        "rounds": 4,
+        "rss_before_execution_bytes": 0,
+        "sampled_peak_rss_bytes": 0,
+        "seed": 20261018,
+        "setup_seconds": 0.5280941500022891,
+        "status": "completed",
+        "structural_lightcone_gates": 68,
+        "structural_lightcone_qubits": 8,
+        "value_float": 0.3169370356911034,
+        "wall_seconds_including_startup": 0.7588681350025581,
+        "worker_exit_code": 0
+      },
+      {
+        "aer_metadata": {
+          "device": "CPU",
+          "fusion": {
+            "applied": false,
+            "enabled": true,
+            "max_fused_qubits": 5,
+            "threshold": 14
+          },
+          "method": "statevector",
+          "num_qubits": 8,
+          "parallel_shots": 1,
+          "parallel_state_update": 1,
+          "time_taken": 0.00049294
+        },
+        "algebraically_exact": false,
+        "circuit_sha256": "e8baac5365dcde3ab841f5dbdc29cbc9044abdf6f7fa324b5dfced8f62d84ff0",
+        "cohort": "small_reference",
+        "dense_complex128_payload_bytes": 4096,
+        "execution_seconds": 0.0031464370040339418,
+        "max_logged_bond_dimension": null,
+        "method": "statevector",
+        "n": 8,
+        "n_cz": 14,
+        "n_gates": 102,
+        "n_t_or_tdg": 40,
+        "peak_process_rss_bytes": 105058304,
+        "query": "local00",
+        "query_qubits": [
+          3,
+          4
+        ],
+        "requested_aer_options": {
+          "enable_truncation": false,
+          "max_memory_mb": 1280,
+          "max_parallel_experiments": 1,
+          "max_parallel_shots": 1,
+          "max_parallel_threads": 1,
+          "method": "statevector",
+          "zero_threshold": 0
+        },
+        "rounds": 4,
+        "rss_before_execution_bytes": 0,
+        "sampled_peak_rss_bytes": 0,
+        "seed": 20261018,
+        "setup_seconds": 0.41219132999685826,
+        "status": "completed",
+        "structural_lightcone_gates": 68,
+        "structural_lightcone_qubits": 8,
+        "value_float": 0.3169370356914529,
+        "wall_seconds_including_startup": 0.6074071080001886,
+        "worker_exit_code": 0
+      },
+      {
+        "algebraically_exact": false,
+        "circuit_sha256": "e8baac5365dcde3ab841f5dbdc29cbc9044abdf6f7fa324b5dfced8f62d84ff0",
+        "cohort": "small_reference",
+        "dense_complex128_payload_bytes": 4096,
+        "error": "exact observer term budget exceeded; no truncation performed",
+        "execution_seconds": 3.4087996689995634,
+        "method": "observer",
+        "n": 8,
+        "n_cz": 14,
+        "n_gates": 102,
+        "n_t_or_tdg": 40,
+        "peak_process_rss_bytes": 105058304,
+        "query": "parity",
+        "query_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "rounds": 4,
+        "rss_before_execution_bytes": 0,
+        "sampled_peak_rss_bytes": 0,
+        "seed": 20261018,
+        "setup_seconds": 0.031894437001028564,
+        "statistics": {
+          "committed_terms": 15795,
+          "current_gate": [
+            "t",
+            [
+              4
+            ]
+          ],
+          "event": "resource_limit",
+          "gates_examined": 57,
+          "gates_proved_invariant": 0,
+          "max_coefficient_bits": 11,
+          "peak_terms": 16385,
+          "term_visits": 131983
+        },
+        "status": "resource_limit",
+        "structural_lightcone_gates": 102,
+        "structural_lightcone_qubits": 8,
+        "wall_seconds_including_startup": 3.5992366290010978,
+        "worker_exit_code": 0
+      },
+      {
+        "aer_metadata": {
+          "device": "CPU",
+          "fusion": {
+            "enabled": false
+          },
+          "matrix_product_state_max_bond_dimension": 18446744073709551615,
+          "matrix_product_state_truncation_threshold": 0.0,
+          "method": "matrix_product_state",
+          "num_qubits": 8,
+          "parallel_shots": 1,
+          "parallel_state_update": 1,
+          "time_taken": 0.000349166
+        },
+        "algebraically_exact": false,
+        "circuit_sha256": "e8baac5365dcde3ab841f5dbdc29cbc9044abdf6f7fa324b5dfced8f62d84ff0",
+        "cohort": "small_reference",
+        "dense_complex128_payload_bytes": 4096,
+        "execution_seconds": 0.0033484259984106757,
+        "max_logged_bond_dimension": 4,
+        "method": "mps",
+        "n": 8,
+        "n_cz": 14,
+        "n_gates": 102,
+        "n_t_or_tdg": 40,
+        "peak_process_rss_bytes": 105512960,
+        "query": "parity",
+        "query_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "requested_aer_options": {
+          "chop_threshold": 0,
+          "enable_truncation": false,
+          "matrix_product_state_max_bond_dimension": null,
+          "matrix_product_state_truncation_threshold": 0,
+          "max_memory_mb": 1280,
+          "max_parallel_experiments": 1,
+          "max_parallel_shots": 1,
+          "max_parallel_threads": 1,
+          "method": "matrix_product_state",
+          "mps_log_data": true,
+          "zero_threshold": 0
+        },
+        "rounds": 4,
+        "rss_before_execution_bytes": 0,
+        "sampled_peak_rss_bytes": 0,
+        "seed": 20261018,
+        "setup_seconds": 0.27597497800161364,
+        "status": "completed",
+        "structural_lightcone_gates": 102,
+        "structural_lightcone_qubits": 8,
+        "value_float": 0.1904104790153992,
+        "wall_seconds_including_startup": 0.45569365299888887,
+        "worker_exit_code": 0
+      },
+      {
+        "aer_metadata": {
+          "device": "CPU",
+          "fusion": {
+            "applied": false,
+            "enabled": true,
+            "max_fused_qubits": 5,
+            "threshold": 14
+          },
+          "method": "statevector",
+          "num_qubits": 8,
+          "parallel_shots": 1,
+          "parallel_state_update": 1,
+          "time_taken": 0.000437197
+        },
+        "algebraically_exact": false,
+        "circuit_sha256": "e8baac5365dcde3ab841f5dbdc29cbc9044abdf6f7fa324b5dfced8f62d84ff0",
+        "cohort": "small_reference",
+        "dense_complex128_payload_bytes": 4096,
+        "execution_seconds": 0.003304990998003632,
+        "max_logged_bond_dimension": null,
+        "method": "statevector",
+        "n": 8,
+        "n_cz": 14,
+        "n_gates": 102,
+        "n_t_or_tdg": 40,
+        "peak_process_rss_bytes": 105058304,
+        "query": "parity",
+        "query_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "requested_aer_options": {
+          "enable_truncation": false,
+          "max_memory_mb": 1280,
+          "max_parallel_experiments": 1,
+          "max_parallel_shots": 1,
+          "max_parallel_threads": 1,
+          "method": "statevector",
+          "zero_threshold": 0
+        },
+        "rounds": 4,
+        "rss_before_execution_bytes": 0,
+        "sampled_peak_rss_bytes": 0,
+        "seed": 20261018,
+        "setup_seconds": 0.25491652799973963,
+        "status": "completed",
+        "structural_lightcone_gates": 102,
+        "structural_lightcone_qubits": 8,
+        "value_float": 0.19041047902556055,
+        "wall_seconds_including_startup": 0.40437134000239894,
+        "worker_exit_code": 0
+      }
+    ]
+  },
+  "corrected_pilot": {
+    "environment": {
+      "cgroup_memory_max": "8589934592",
+      "cpu_count": 9,
+      "cpu_max": "800000 100000",
+      "numpy": "2.5.4",
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+      "qiskit": "2.6.0",
+      "qiskit_aer": "0.17.2"
+    },
+    "protocol": {
+      "budget": {
+        "execution_seconds": 20,
+        "max_coefficient_bits": 4096,
+        "max_terms": 16384,
+        "max_work": 10000000,
+        "rss_bytes": 1342177280,
+        "startup_seconds": 15
+      },
+      "cases": [
+        {
+          "cohort": "small_reference",
+          "method": "observer",
+          "n": 8,
+          "query": "local00",
+          "rounds": 4,
+          "seed": 20261018
+        },
+        {
+          "cohort": "small_reference",
+          "method": "mps",
+          "n": 8,
+          "query": "local00",
+          "rounds": 4,
+          "seed": 20261018
+        },
+        {
+          "cohort": "small_reference",
+          "method": "statevector",
+          "n": 8,
+          "query": "local00",
+          "rounds": 4,
+          "seed": 20261018
+        },
+        {
+          "cohort": "small_reference",
+          "method": "observer",
+          "n": 8,
+          "query": "parity",
+          "rounds": 4,
+          "seed": 20261018
+        },
+        {
+          "cohort": "small_reference",
+          "method": "mps",
+          "n": 8,
+          "query": "parity",
+          "rounds": 4,
+          "seed": 20261018
+        },
+        {
+          "cohort": "small_reference",
+          "method": "statevector",
+          "n": 8,
+          "query": "parity",
+          "rounds": 4,
+          "seed": 20261018
+        }
+      ],
+      "description": "Plumbing pilot; identical circuit definition, small n only. Retain results.",
+      "frozen_before_target_runs": true,
+      "queries": {
+        "local00": "P(q[n//2-1]=0,q[n//2]=0)",
+        "parity": "expectation of Z on every site"
+      },
+      "timing": "Fresh isolated single-thread process per row; execution excludes imports and circuit/backend construction; cold observer tables included. Peak RSS includes setup. MPS bond logging enabled. One run, no statistical speedup claim.",
+      "version": 1
+    },
+    "protocol_sha256": "07890836f9b0a7b2b7b5cf2f99b3e83f44366fcb7b810da2995799788525042e",
+    "rows": [
+      {
+        "algebraically_exact": true,
+        "circuit_sha256": "e8baac5365dcde3ab841f5dbdc29cbc9044abdf6f7fa324b5dfced8f62d84ff0",
+        "cohort": "small_reference",
+        "dense_complex128_payload_bytes": 4096,
+        "execution_seconds": 1.572505584001192,
+        "method": "observer",
+        "n": 8,
+        "n_cz": 14,
+        "n_gates": 102,
+        "n_t_or_tdg": 40,
+        "observation": {
+          "final_terms": 9605,
+          "gates_examined": 102,
+          "gates_proved_invariant": 40,
+          "max_coefficient_bits": 14,
+          "peak_terms": 9605,
+          "source_boundary_terms": 26,
+          "statevector_constructed": false,
+          "term_visits": 56883,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "2701/8192",
+              "-37/4096",
+              "0",
+              "0"
+            ]
+          }
+        },
+        "peak_process_rss_bytes": 42418176,
+        "query": "local00",
+        "query_qubits": [
+          3,
+          4
+        ],
+        "rounds": 4,
+        "rss_before_execution_bytes": 33226752,
+        "rusage_peak_rss_bytes_including_pre_exec_history": 42418176,
+        "sampled_peak_rss_bytes": 42151936,
+        "seed": 20261018,
+        "setup_seconds": 0.02578169500338845,
+        "status": "completed",
+        "structural_lightcone_gates": 68,
+        "structural_lightcone_qubits": 8,
+        "value_float": 0.316937035691454,
+        "wall_seconds_including_startup": 1.7122545770034776,
+        "worker_exit_code": 0
+      },
+      {
+        "aer_metadata": {
+          "device": "CPU",
+          "fusion": {
+            "enabled": false
+          },
+          "matrix_product_state_max_bond_dimension": 18446744073709551615,
+          "matrix_product_state_truncation_threshold": 0.0,
+          "method": "matrix_product_state",
+          "num_qubits": 8,
+          "parallel_shots": 1,
+          "parallel_state_update": 1,
+          "time_taken": 0.000401765
+        },
+        "algebraically_exact": false,
+        "circuit_sha256": "e8baac5365dcde3ab841f5dbdc29cbc9044abdf6f7fa324b5dfced8f62d84ff0",
+        "cohort": "small_reference",
+        "dense_complex128_payload_bytes": 4096,
+        "execution_seconds": 0.0028168909993837588,
+        "max_logged_bond_dimension": 4,
+        "method": "mps",
+        "n": 8,
+        "n_cz": 14,
+        "n_gates": 102,
+        "n_t_or_tdg": 40,
+        "peak_process_rss_bytes": 105869312,
+        "query": "local00",
+        "query_qubits": [
+          3,
+          4
+        ],
+        "requested_aer_options": {
+          "chop_threshold": 0,
+          "enable_truncation": false,
+          "matrix_product_state_max_bond_dimension": null,
+          "matrix_product_state_truncation_threshold": 0,
+          "max_memory_mb": 1280,
+          "max_parallel_experiments": 1,
+          "max_parallel_shots": 1,
+          "max_parallel_threads": 1,
+          "method": "matrix_product_state",
+          "mps_log_data": true,
+          "zero_threshold": 0
+        },
+        "rounds": 4,
+        "rss_before_execution_bytes": 104075264,
+        "rusage_peak_rss_bytes_including_pre_exec_history": 105717760,
+        "sampled_peak_rss_bytes": 105967616,
+        "seed": 20261018,
+        "setup_seconds": 0.24621327099885093,
+        "status": "completed",
+        "structural_lightcone_gates": 68,
+        "structural_lightcone_qubits": 8,
+        "value_float": 0.3169370356911034,
+        "wall_seconds_including_startup": 0.4040629290029756,
+        "worker_exit_code": 0
+      },
+      {
+        "aer_metadata": {
+          "device": "CPU",
+          "fusion": {
+            "applied": false,
+            "enabled": true,
+            "max_fused_qubits": 5,
+            "threshold": 14
+          },
+          "method": "statevector",
+          "num_qubits": 8,
+          "parallel_shots": 1,
+          "parallel_state_update": 1,
+          "time_taken": 0.000287095
+        },
+        "algebraically_exact": false,
+        "circuit_sha256": "e8baac5365dcde3ab841f5dbdc29cbc9044abdf6f7fa324b5dfced8f62d84ff0",
+        "cohort": "small_reference",
+        "dense_complex128_payload_bytes": 4096,
+        "execution_seconds": 0.0025808799982769415,
+        "max_logged_bond_dimension": null,
+        "method": "statevector",
+        "n": 8,
+        "n_cz": 14,
+        "n_gates": 102,
+        "n_t_or_tdg": 40,
+        "peak_process_rss_bytes": 104640512,
+        "query": "local00",
+        "query_qubits": [
+          3,
+          4
+        ],
+        "requested_aer_options": {
+          "enable_truncation": false,
+          "max_memory_mb": 1280,
+          "max_parallel_experiments": 1,
+          "max_parallel_shots": 1,
+          "max_parallel_threads": 1,
+          "method": "statevector",
+          "zero_threshold": 0
+        },
+        "rounds": 4,
+        "rss_before_execution_bytes": 103456768,
+        "rusage_peak_rss_bytes_including_pre_exec_history": 104488960,
+        "sampled_peak_rss_bytes": 104726528,
+        "seed": 20261018,
+        "setup_seconds": 0.24694299600378145,
+        "status": "completed",
+        "structural_lightcone_gates": 68,
+        "structural_lightcone_qubits": 8,
+        "value_float": 0.3169370356914529,
+        "wall_seconds_including_startup": 0.40386283800035017,
+        "worker_exit_code": 0
+      },
+      {
+        "algebraically_exact": false,
+        "circuit_sha256": "e8baac5365dcde3ab841f5dbdc29cbc9044abdf6f7fa324b5dfced8f62d84ff0",
+        "cohort": "small_reference",
+        "dense_complex128_payload_bytes": 4096,
+        "error": "exact observer term budget exceeded; no truncation performed",
+        "execution_seconds": 3.1843169620042318,
+        "method": "observer",
+        "n": 8,
+        "n_cz": 14,
+        "n_gates": 102,
+        "n_t_or_tdg": 40,
+        "peak_process_rss_bytes": 47841280,
+        "query": "parity",
+        "query_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "rounds": 4,
+        "rss_before_execution_bytes": 33718272,
+        "rusage_peak_rss_bytes_including_pre_exec_history": 47665152,
+        "sampled_peak_rss_bytes": 47853568,
+        "seed": 20261018,
+        "setup_seconds": 0.024312109999300446,
+        "statistics": {
+          "committed_terms": 15795,
+          "current_gate": [
+            "t",
+            [
+              4
+            ]
+          ],
+          "event": "resource_limit",
+          "gates_examined": 57,
+          "gates_proved_invariant": 0,
+          "max_coefficient_bits": 11,
+          "peak_terms": 16385,
+          "term_visits": 131983
+        },
+        "status": "resource_limit",
+        "structural_lightcone_gates": 102,
+        "structural_lightcone_qubits": 8,
+        "wall_seconds_including_startup": 3.398261882997758,
+        "worker_exit_code": 0
+      },
+      {
+        "aer_metadata": {
+          "device": "CPU",
+          "fusion": {
+            "enabled": false
+          },
+          "matrix_product_state_max_bond_dimension": 18446744073709551615,
+          "matrix_product_state_truncation_threshold": 0.0,
+          "method": "matrix_product_state",
+          "num_qubits": 8,
+          "parallel_shots": 1,
+          "parallel_state_update": 1,
+          "time_taken": 0.000520711
+        },
+        "algebraically_exact": false,
+        "circuit_sha256": "e8baac5365dcde3ab841f5dbdc29cbc9044abdf6f7fa324b5dfced8f62d84ff0",
+        "cohort": "small_reference",
+        "dense_complex128_payload_bytes": 4096,
+        "execution_seconds": 0.004695550996984821,
+        "max_logged_bond_dimension": 4,
+        "method": "mps",
+        "n": 8,
+        "n_cz": 14,
+        "n_gates": 102,
+        "n_t_or_tdg": 40,
+        "peak_process_rss_bytes": 104751104,
+        "query": "parity",
+        "query_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "requested_aer_options": {
+          "chop_threshold": 0,
+          "enable_truncation": false,
+          "matrix_product_state_max_bond_dimension": null,
+          "matrix_product_state_truncation_threshold": 0,
+          "max_memory_mb": 1280,
+          "max_parallel_experiments": 1,
+          "max_parallel_shots": 1,
+          "max_parallel_threads": 1,
+          "method": "matrix_product_state",
+          "mps_log_data": true,
+          "zero_threshold": 0
+        },
+        "rounds": 4,
+        "rss_before_execution_bytes": 103043072,
+        "rusage_peak_rss_bytes_including_pre_exec_history": 104607744,
+        "sampled_peak_rss_bytes": 104849408,
+        "seed": 20261018,
+        "setup_seconds": 0.2622292440064484,
+        "status": "completed",
+        "structural_lightcone_gates": 102,
+        "structural_lightcone_qubits": 8,
+        "value_float": 0.1904104790153992,
+        "wall_seconds_including_startup": 0.4299634960043477,
+        "worker_exit_code": 0
+      },
+      {
+        "aer_metadata": {
+          "device": "CPU",
+          "fusion": {
+            "applied": false,
+            "enabled": true,
+            "max_fused_qubits": 5,
+            "threshold": 14
+          },
+          "method": "statevector",
+          "num_qubits": 8,
+          "parallel_shots": 1,
+          "parallel_state_update": 1,
+          "time_taken": 0.000461774
+        },
+        "algebraically_exact": false,
+        "circuit_sha256": "e8baac5365dcde3ab841f5dbdc29cbc9044abdf6f7fa324b5dfced8f62d84ff0",
+        "cohort": "small_reference",
+        "dense_complex128_payload_bytes": 4096,
+        "execution_seconds": 0.0033957559935515746,
+        "max_logged_bond_dimension": null,
+        "method": "statevector",
+        "n": 8,
+        "n_cz": 14,
+        "n_gates": 102,
+        "n_t_or_tdg": 40,
+        "peak_process_rss_bytes": 105656320,
+        "query": "parity",
+        "query_qubits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "requested_aer_options": {
+          "enable_truncation": false,
+          "max_memory_mb": 1280,
+          "max_parallel_experiments": 1,
+          "max_parallel_shots": 1,
+          "max_parallel_threads": 1,
+          "method": "statevector",
+          "zero_threshold": 0
+        },
+        "rounds": 4,
+        "rss_before_execution_bytes": 104345600,
+        "rusage_peak_rss_bytes_including_pre_exec_history": 105418752,
+        "sampled_peak_rss_bytes": 105742336,
+        "seed": 20261018,
+        "setup_seconds": 0.2815536800044356,
+        "status": "completed",
+        "structural_lightcone_gates": 102,
+        "structural_lightcone_qubits": 8,
+        "value_float": 0.19041047902556055,
+        "wall_seconds_including_startup": 0.4604807829964557,
+        "worker_exit_code": 0
+      }
+    ]
+  }
+}

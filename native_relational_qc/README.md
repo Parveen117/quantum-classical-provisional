@@ -1,5 +1,11 @@
 # Native Relational Quantum Computing — v0.1
 
+**New: [40–50 qubit random-brickwork stress test](STRESS_BENCHMARK.md).**
+Exact observer expansion, isolated process memory/time, Aer MPS and feasible
+dense references are measured with retained failed runs. This broader workload
+exposes a term-growth boundary; the earlier structured 128-qubit example is not
+evidence of general performance superiority.
+
 **New: [original IBM workloads executed natively](IBM_WORKLOADS.md).** The pinned
 17-qubit Shor logical builders now run as saved native programs, with complete
 classical output distributions for all four cases at one and three rounds.

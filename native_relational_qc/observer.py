@@ -83,7 +83,7 @@ class Observation:
         }
 
 
-def _propagate(circuit, terms, *, max_terms, max_work, max_coefficient_bits):
+def _propagate(circuit, terms, *, max_terms, max_work, max_coefficient_bits, progress=None):
     if not isinstance(circuit, CompactCircuit):
         raise TypeError("observer execution requires a declared CompactCircuit")
     max_terms = _integer(max_terms, "max_terms", 1, 10_000_000)
@@ -96,11 +96,29 @@ def _propagate(circuit, terms, *, max_terms, max_work, max_coefficient_bits):
     if peak_bits > max_coefficient_bits:
         raise ResourceLimit("initial observation coefficients exceed bit budget")
     gates_examined = gates_proved_invariant = 0
+    current_gate = None
+
+    def snapshot(event):
+        return {'event': event, 'peak_terms': peak, 'committed_terms': len(terms),
+                'term_visits': visits, 'max_coefficient_bits': peak_bits,
+                'gates_examined': gates_examined, 'gates_proved_invariant': gates_proved_invariant,
+                'current_gate': current_gate}
+
+    def fail(message):
+        error = ResourceLimit(message)
+        error.statistics = snapshot('resource_limit')
+        if progress is not None:
+            progress(error.statistics)
+        raise error
+
     for name, qargs in reversed(circuit.operations):
         gates_examined += 1
+        current_gate = (name, qargs)
+        if progress is not None:
+            progress(snapshot('gate_start'))
         visits += len(terms)
         if visits > max_work:
-            raise ResourceLimit("exact observer work budget exceeded")
+            fail("exact observer work budget exceeded")
         mask = sum(1 << q for q in qargs)
         if not any((x | z) & mask for x, z in terms):
             gates_proved_invariant += 1
@@ -125,14 +143,14 @@ def _propagate(circuit, terms, *, max_terms, max_work, max_coefficient_bits):
                 value = result.get(key, ZERO) + coefficient * factor
                 peak_bits = max(peak_bits, value.max_bits)
                 if peak_bits > max_coefficient_bits:
-                    raise ResourceLimit("exact observer coefficient bit budget exceeded")
+                    fail("exact observer coefficient bit budget exceeded")
                 if value:
                     result[key] = value
                 else:
                     result.pop(key, None)
                 peak = max(peak, len(result))
                 if peak > max_terms:
-                    raise ResourceLimit("exact observer term budget exceeded; no truncation performed")
+                    fail("exact observer term budget exceeded; no truncation performed")
         if result == terms:
             # The complete observable can be invariant even when its individual
             # Pauli terms are permuted or mixed by the operation.
@@ -143,15 +161,17 @@ def _propagate(circuit, terms, *, max_terms, max_work, max_coefficient_bits):
     value = sum(surviving, ZERO)
     peak_bits = max(peak_bits, value.max_bits)
     if peak_bits > max_coefficient_bits:
-        raise ResourceLimit("exact observation result exceeds coefficient bit budget")
+        fail("exact observation result exceeds coefficient bit budget")
     if value.c or value.d:
         raise ArithmeticError("expected a real observation")
+    if progress is not None:
+        progress(snapshot('completed'))
     return Observation(value, peak, len(terms), visits, peak_bits, len(surviving),
                        gates_examined, gates_proved_invariant)
 
 
 def probability(circuit, assignments, *, max_terms=100_000, max_work=2_000_000,
-                max_coefficient_bits=4096):
+                max_coefficient_bits=4096, progress=None):
     """Exact joint/marginal probability in the final Z basis on |0...0> input."""
     max_terms = _integer(max_terms, "max_terms", 1, 10_000_000)
     assignments = dict(assignments)
@@ -166,11 +186,11 @@ def probability(circuit, assignments, *, max_terms=100_000, max_work=2_000_000,
                  for new_key, value in (((x, z), coefficient*HALF),
                                         ((x, z | (1 << q)), coefficient*(-HALF if bit else HALF)))}
     return _propagate(circuit, terms, max_terms=max_terms, max_work=max_work,
-                      max_coefficient_bits=max_coefficient_bits)
+                      max_coefficient_bits=max_coefficient_bits, progress=progress)
 
 
 def expectation(circuit, paulis, *, max_terms=100_000, max_work=2_000_000,
-                max_coefficient_bits=4096):
+                max_coefficient_bits=4096, progress=None):
     """Exact Hermitian Pauli-string expectation, including arbitrary X/Y/Z observers."""
     x = z = 0
     for q, letter in dict(paulis).items():
@@ -182,4 +202,4 @@ def expectation(circuit, paulis, *, max_terms=100_000, max_work=2_000_000,
         if letter in ("Z", "Y"):
             z |= 1 << q
     return _propagate(circuit, {(x, z): ONE}, max_terms=max_terms, max_work=max_work,
-                      max_coefficient_bits=max_coefficient_bits)
+                      max_coefficient_bits=max_coefficient_bits, progress=progress)
