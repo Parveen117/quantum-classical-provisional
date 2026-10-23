@@ -163,6 +163,22 @@ Results identify `contraction: "integer"`; all existing exactness and
 display-enclosure contracts remain. The example explicitly raises the per-query
 work limit and allows 40 seconds for its two-query batch.
 
+## Optional streaming contraction
+
+Set `"contraction": "streaming"` on the factored backend to build and contract
+one site at a time using exact signed reuse and bounded integer limbs. The
+default remains `integer`; `sparse` and `reuse` are explicit ablation choices.
+The explicit `max_work` ceiling is now 1,000,000,000; the default remains
+10,000,000. See [the contracts and measured limits](STREAMING_CONTRACTION.md).
+
+The saved 50-qubit, 16-round local request chooses 300,000,000 work units:
+
+```bash
+python -m native_relational_qc calculate \
+  native_relational_qc/calculator_examples/brickwork_50q_16r_streaming.json \
+  --timeout 90 --out /tmp/local16.json
+```
+
 ## Historical interface verification at 8004981
 
 [calculator_verification.json](calculator_verification.json) records the original

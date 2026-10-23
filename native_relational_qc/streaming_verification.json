@@ -1,0 +1,199 @@
+{
+  "adaptive_reference": {
+    "execution_cap_seconds": 180,
+    "execution_seconds": 94.19280094499845,
+    "performance_comparison": false,
+    "work_cap": 400000000
+  },
+  "arithmetic_assumption": "IEEE binary64 ordinary dot products of bounded exact integer limbs, no reduced precision or unbounded algebraic rewrites",
+  "author": "Monty",
+  "baseline_commit": "19ee882fc839835802e37d3092601ef9385ea67c",
+  "checks": {
+    "adaptive_old_kernel_16r_exact_coefficients_equal": true,
+    "all_six_12r_parity_answers_equal": true,
+    "historical_12r_exact_coefficients_equal": true,
+    "saved_cli_16r_exact_coefficients_equal": true,
+    "sdk_blocked_native_streaming_pass": true,
+    "small_dense_difference_below_1e_12": true,
+    "small_three_exact_paths_agree": true,
+    "three_16r_exact_answers_equal": true
+  },
+  "claim_boundary": [
+    "No generic rank compression or complexity claim",
+    "Original 16-round 100M/20s local boundary remains open",
+    "16-round global parity remains incomplete",
+    "All quantum coefficient values exact under the documented arithmetic model; no physical validation",
+    "First four small reference timings may overlap test tail; not used for performance claims"
+  ],
+  "environment": {
+    "cgroup_memory_max": "8589934592",
+    "cpu_count": 9,
+    "cpu_max": "800000 100000",
+    "numpy": "2.3.5",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "qiskit": "2.6.0",
+    "qiskit_aer": "0.17.2"
+  },
+  "evidence_sha256": {
+    "STREAMING_CONTRACTION.md": "e271e7f833dddb6841cb6781e4e6f5b357d22c1bd154502a082372292df3e6e0",
+    "calculator_examples/brickwork_50q_16r_streaming.json": "2b889462f1d44fa3bacc99547a06032daeafc6f5a0bc658ee6c128d5cb4da463",
+    "calculator_examples/brickwork_50q_16r_streaming.result.json": "058e671fc9287f44f298585a5c092261956b70eb75c7cda56c14aa3ab54a2467",
+    "streaming_exact_reference.json": "2dbdaa3f2dff4adcaa095a7accdb437cd8aeb40e62a90f3d9e2ecaf4ef30911a",
+    "streaming_pilots.json": "fb736eb48060db45093e3abaf6d873d400506c1ba0d27a74a86bbe60f34dc30b",
+    "streaming_protocol.json": "bf10b19ddbc8e418a576d57fa663a1cb844259101cd0c563e31047bd6b19ef50",
+    "streaming_results.json": "1730b9226d97a391f12e0eb84b6e045e93ae4b4e365c17fbe63d2f46b36ac51e",
+    "streaming_test_results.json": "2b8317dd7dacd9e5cd083562daee337d515f0337f464eaa555248384eb1ad681"
+  },
+  "frozen_source_sha256": {
+    "calculator.py": "6c59bc07e5ffdacb63e03d844a6910c1fc827a00e784d946a3b3b5c797f6c972",
+    "compact.py": "1acff6eaa8664b4ba33285c66c9f433ecd0148aa8383a18f79dbd2ccb66e898d",
+    "dyadic.py": "f57de994e59041fa203cffdda5f73e30b65552715286483b29b683b79d849832",
+    "exact.py": "cc0b3be70660ed819b3ad153620ea4338fb6bf57102a4474d4355da2805afdf6",
+    "factored.py": "0a41e4e768e487871057693a2f54a1652349359a107d99ebf7647b7d32f588f9",
+    "integer_matrix.py": "9301ec91dad88fa8b53b83083f0b62454eb44203c5c7bfc77f4b06015fe14e40",
+    "observer.py": "132e4de5e9df0c051825e6bc5babcd124cfb52c7f128b72a9a5c08992b09fbf0",
+    "reused_product.py": "8cf910b93ca7177afd373ee8c15ad801b9d493be872604a09baaaca2adc51a73",
+    "streaming.py": "d5f77ae1b7192de1e5ad0e488b791be2db537cac1cb535f5dd5fefc452c63e02",
+    "stress_benchmark.py": "c86ba3814939ee99bd61cba5646327c52c631db1b21f3070891bcefdf232303b"
+  },
+  "independent_aer_absolute_differences": [
+    2.989275493803234e-14,
+    4.618527782440651e-14
+  ],
+  "local_16r_median_seconds": 30.814069962994836,
+  "numpy_configuration": {
+    "Build Dependencies": {
+      "blas": {
+        "detection method": "pkgconfig",
+        "found": true,
+        "include directory": "/opt/_internal/cpython-3.12.12/lib/python3.12/site-packages/scipy_openblas64/include",
+        "lib directory": "/opt/_internal/cpython-3.12.12/lib/python3.12/site-packages/scipy_openblas64/lib",
+        "name": "scipy-openblas",
+        "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+        "pc file directory": "/project/.openblas",
+        "version": "0.3.30"
+      },
+      "lapack": {
+        "detection method": "pkgconfig",
+        "found": true,
+        "include directory": "/opt/_internal/cpython-3.12.12/lib/python3.12/site-packages/scipy_openblas64/include",
+        "lib directory": "/opt/_internal/cpython-3.12.12/lib/python3.12/site-packages/scipy_openblas64/lib",
+        "name": "scipy-openblas",
+        "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+        "pc file directory": "/project/.openblas",
+        "version": "0.3.30"
+      }
+    },
+    "Compilers": {
+      "c": {
+        "commands": "cc",
+        "linker": "ld.bfd",
+        "name": "gcc",
+        "version": "14.2.1"
+      },
+      "c++": {
+        "commands": "c++",
+        "linker": "ld.bfd",
+        "name": "gcc",
+        "version": "14.2.1"
+      },
+      "cython": {
+        "commands": "cython",
+        "linker": "cython",
+        "name": "cython",
+        "version": "3.2.1"
+      }
+    },
+    "Machine Information": {
+      "build": {
+        "cpu": "x86_64",
+        "endian": "little",
+        "family": "x86_64",
+        "system": "linux"
+      },
+      "host": {
+        "cpu": "x86_64",
+        "endian": "little",
+        "family": "x86_64",
+        "system": "linux"
+      }
+    },
+    "Python Information": {
+      "path": "/tmp/build-env-aw1mwcap/bin/python",
+      "version": "3.12"
+    },
+    "SIMD Extensions": {
+      "baseline": [
+        "SSE",
+        "SSE2",
+        "SSE3"
+      ],
+      "found": [
+        "SSSE3",
+        "SSE41",
+        "POPCNT",
+        "SSE42",
+        "AVX",
+        "F16C",
+        "FMA3",
+        "AVX2",
+        "AVX512F",
+        "AVX512CD",
+        "AVX512_SKX",
+        "AVX512_CLX",
+        "AVX512_CNL",
+        "AVX512_ICL"
+      ],
+      "not found": [
+        "AVX512_KNL",
+        "AVX512_KNM",
+        "AVX512_SPR"
+      ]
+    }
+  },
+  "outcomes": {
+    "completed": 18,
+    "resource_limit": 4,
+    "time_limit": 2
+  },
+  "primary_12r_medians": {
+    "integer": {
+      "execution_seconds": 16.7691716479967,
+      "peak_rss_bytes": 58724352,
+      "runs": 3
+    },
+    "streaming": {
+      "execution_seconds": 13.12639993299672,
+      "peak_rss_bytes": 37744640,
+      "runs": 3
+    }
+  },
+  "schema": "nrqc-streaming-verification-v1",
+  "status": "PASS",
+  "tests": {
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -m unittest discover -s tests -p 'test_native*.py' -v",
+    "elapsed_seconds": 26.923,
+    "errors": 0,
+    "failures": 0,
+    "log_sha256": "c4a66c50047dcd0f5a5b66ec7f8e40ca5f1f44513a7570b60d4aefea4bbd0bbb",
+    "new_test_methods": 17,
+    "skips": 0,
+    "source_sha256": {
+      "tests/test_native_calculator.py": "1730a1648fec31bcb7023c07e1a8913652ea51782ba554120323f75acaab1024",
+      "tests/test_native_compact.py": "193e1a4a4005b047c0e6dfd5ded886df7f6fe349eac7364ab485e2e3b15faab6",
+      "tests/test_native_dynamic.py": "41f94d9520e98c80ed7f58fdacf0b60ba31455c63bbf5a313975f4d4ae6a0b27",
+      "tests/test_native_factored.py": "a9aabcc81b66acee9918b9d820ae714838bb28208f6748d6d61c6aabe84c782d",
+      "tests/test_native_integer_matrix.py": "64eff6eb03843909c9ce48cc385e7162414adcea858d731d912bb856f8ef3484",
+      "tests/test_native_observer.py": "89914d95fa87f9526caa193b185ce20666279100a6cdc87a7930e4cd3f27a31c",
+      "tests/test_native_qiskit_adapter.py": "c6f2c4c584fb8b619839fc1ea881a8c1b15a5ecc43c077d5652e3acf9f33a430",
+      "tests/test_native_readout.py": "0aab6e9d97ddeeff080f9b896466aa769112162891d7d919acfecd9d77697866",
+      "tests/test_native_reduction.py": "f2d376bc09c9381954968b637c15e13355f2c423609ec9d307b85b3ddee77efb",
+      "tests/test_native_relational_qc.py": "4d70497ff3cc85284a4404bd8f25eddc8c9d54cf119ce52d626807df642dcaba",
+      "tests/test_native_reversible_logic.py": "437944a7ffcb0fcbfd924a66aca8e491bf6fcc71cfa4d09c6c33452ece196a9f",
+      "tests/test_native_streaming.py": "68570cfcb8e04443e722d9d219555d642d43ad1eb0bd5ed8620202491f3bd371",
+      "tests/test_native_stress.py": "98b91f7ef4f7da7aaa3ee68767796465809026a20403fa4c0d979670859caa95"
+    },
+    "tests_run": 177
+  }
+}

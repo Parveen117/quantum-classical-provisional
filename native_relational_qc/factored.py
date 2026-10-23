@@ -5,8 +5,10 @@ its global Pauli sum. The remaining circuit is contracted with division-free
 matrix-product state factors and the returned local observers. This is a hybrid
 tensor-network evaluator, not a purely Heisenberg MPO solver or a new complexity
 claim. The default boundary contraction uses exact packed integer matrix products;
-the original sparse scalar contraction remains selectable. No SVD, numerical
-rank decision, truncation, or dense statevector is used.
+the original sparse scalar contraction remains selectable. Optional streaming
+constructs one site at a time and uses bounded integer limbs whose binary64 dot
+products are provably exact. No SVD, numerical rank decision, truncation, or dense
+statevector is used.
 """
 from dataclasses import dataclass
 from functools import lru_cache
@@ -27,7 +29,9 @@ class FactoredObservation:
         return {'value': self.value.to_dict(), **self.statistics,
                 'algebraically_exact': True, 'truncated_terms': 0,
                 'statevector_constructed': False,
-                'representation': 'product-observer suffix + exact MPS boundary contraction'}
+                'representation': ('product-observer suffix + streamed exact MPS boundary contraction'
+                                   if self.statistics.get('contraction') == 'streaming' else
+                                   'product-observer suffix + exact MPS boundary contraction')}
 
 
 def _add_into(target, key, value):
@@ -152,6 +156,27 @@ def _suffix(operations, factors, budget):
     return operations[:remaining], factors
 
 
+def _contract_integer_site(boundary, matrices, nonempty, factor, budget, *, reuse=False):
+    from .integer_matrix import IntegerMatrix
+    local = _local_matrix(factor)
+    updated = None
+    for a in (0,1):
+        ket = None
+        for b in (0,1):
+            if local[a][b] and nonempty[b]:
+                term = matrices[b].scale(local[a][b])
+                ket = term if ket is None else ket.add(term)
+        if ket is not None and nonempty[a]:
+            ket.inspect(budget)
+            term = matrices[a].adjoint().matmul(
+                boundary.matmul(ket,budget,reuse=reuse),budget,reuse=reuse)
+            updated = term if updated is None else updated.add(term)
+    if updated is None:
+        return None
+    entries = updated.inspect(budget)
+    return IntegerMatrix.from_sparse(entries,updated.shape)
+
+
 class _StateFactors:
     def __init__(self, n, budget):
         self.sites = [[{(0,0):DONE},{}] for _ in range(n)]
@@ -268,7 +293,7 @@ class _StateFactors:
             raise ArithmeticError('Hermitian readout acquired an imaginary value')
         return value
 
-    def read_integer(self, factors):
+    def read_integer(self, factors, *, reuse=False):
         """Same boundary identity, with bounded exact integer dot products."""
         from .integer_matrix import IntegerMatrix
         boundary = IntegerMatrix.from_sparse({(0,0):DONE}, (1,1))
@@ -278,23 +303,10 @@ class _StateFactors:
             if shape[0]*shape[1] > self.budget.max_coefficients:
                 self.budget.fail('exact integer site allocation exceeds coefficient-count budget')
             matrices = [IntegerMatrix.from_sparse(matrix, shape) for matrix in site]
-            local = _local_matrix(factor)
-            updated = None
-            for a in (0,1):
-                ket = None
-                for b in (0,1):
-                    if local[a][b] and site[b]:
-                        term = matrices[b].scale(local[a][b])
-                        ket = term if ket is None else ket.add(term)
-                if ket is not None and site[a]:
-                    ket.inspect(self.budget)
-                    term = matrices[a].adjoint().matmul(boundary.matmul(ket,self.budget),self.budget)
-                    updated = term if updated is None else updated.add(term)
-            if updated is None:
+            boundary = _contract_integer_site(boundary,matrices,[bool(s) for s in site],
+                                              factor,self.budget,reuse=reuse)
+            if boundary is None:
                 return ZERO
-            entries = updated.inspect(self.budget)
-            # Normalize once per output entry, not once per scalar operation.
-            boundary = IntegerMatrix.from_sparse(entries, updated.shape)
             self.budget.stats['contracted_sites'] += 1
         value = boundary.entries().get((0,0),DZERO).to_exact()
         if value.c or value.d:
@@ -307,8 +319,8 @@ def _evaluate(circuit,factors,*,max_bond=256,max_coefficients=1000000,max_work=1
               contraction='integer'):
     if not isinstance(circuit,CompactCircuit):
         raise TypeError('factored execution requires CompactCircuit')
-    if contraction not in ('integer','sparse'):
-        raise ValueError('contraction must be integer or sparse')
+    if contraction not in ('integer','sparse','reuse','streaming'):
+        raise ValueError('contraction must be integer, sparse, reuse or streaming')
     # Reject unsupported gates even when an observer would make them invisible.
     for name,qs in circuit.operations:
         if len(qs)>2 or (len(qs)==2 and (name not in ('cx','cz','ch','cs','ct','swap') or abs(qs[0]-qs[1])!=1)):
@@ -325,9 +337,14 @@ def _evaluate(circuit,factors,*,max_bond=256,max_coefficients=1000000,max_work=1
                         prefix_local_coefficients=sum(map(len,factors)),prefix_expanded_terms=prod(map(len,factors)))
     if product_suffix:
         operations,factors=_suffix(operations,factors,budget)
-    state=_StateFactors(len(sites),budget)
-    state.run(operations)
-    value=state.read_integer(factors) if contraction=='integer' else state.read_sparse(factors)
+    if contraction == 'streaming':
+        from .streaming import read
+        value = read(operations,factors,budget)
+    else:
+        state=_StateFactors(len(sites),budget)
+        state.run(operations)
+        value=(state.read_sparse(factors) if contraction=='sparse' else
+               state.read_integer(factors,reuse=contraction=='reuse'))
     budget.emit('completed')
     return FactoredObservation(value,dict(budget.stats))
 

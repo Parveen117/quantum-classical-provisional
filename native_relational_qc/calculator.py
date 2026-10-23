@@ -20,7 +20,7 @@ OUTPUT_SCHEMA = 'nrqc-calculator-result-v1'
 MAX_INPUT_BYTES = 2 * 1024 * 1024
 DEFAULT_LIMITS = dict(max_work=10_000_000, max_coefficient_bits=4096,
                       max_bond=256, max_coefficients=1_000_000, max_terms=100_000)
-LIMIT_RANGES = dict(max_work=(1,100_000_000), max_coefficient_bits=(2,8192),
+LIMIT_RANGES = dict(max_work=(1,1_000_000_000), max_coefficient_bits=(2,8192),
                     max_bond=(1,1024), max_coefficients=(1,1_000_000),
                     max_terms=(1,1_000_000))
 
@@ -76,13 +76,18 @@ def _site_map(value, n, paulis=False):
 
 def validate(document):
     _object(document, ('schema','n_qubits','operations','queries'),
-            ('backend','decimal_places','limits','simplify'))
+            ('backend','decimal_places','limits','simplify','contraction'))
     if document['schema'] != INPUT_SCHEMA:
         raise ValueError('unsupported calculator input schema')
     circuit = CompactCircuit(document['n_qubits'])
     backend = document.get('backend','factored')
     if backend not in ('factored','observer'):
         raise ValueError('backend must be factored or observer; no implicit fallback')
+    contraction = document.get('contraction','integer')
+    if contraction not in ('integer','sparse','reuse','streaming'):
+        raise ValueError('contraction must be integer, sparse, reuse or streaming')
+    if backend == 'observer' and 'contraction' in document:
+        raise ValueError('contraction applies only to the factored backend')
     simplify = document.get('simplify','none')
     if simplify not in ('none','exact'):
         raise ValueError('simplify must be none or exact')
@@ -140,6 +145,8 @@ def validate(document):
                      queries=queries,backend=backend,decimal_places=digits,limits=limits)
     if simplify == 'exact':
         canonical['simplify'] = simplify
+    if contraction != 'integer':
+        canonical['contraction'] = contraction
     return circuit, canonical
 
 
@@ -220,6 +227,9 @@ def calculate(document):
                 circuit_sha256=_digest(dict(n_qubits=circuit.n_qubits,operations=request['operations'])),
                 request_sha256=_digest(request),n_qubits=circuit.n_qubits,
                 gates=len(request['operations']),limits_per_scalar_evaluation=request['limits'],answers=[])
+    options = dict(request['limits'])
+    if request['backend'] == 'factored':
+        options['contraction'] = request.get('contraction','integer')
     if reduction is not None:
         report['simplification'] = dict(reduction.to_dict(),execution_seconds=simplification_seconds)
         report['execution_circuit_sha256'] = _digest(dict(n_qubits=circuit.n_qubits,
@@ -232,7 +242,7 @@ def calculate(document):
                 sites=query['qubits']; values={}; total=ZERO
                 for i in range(2**len(sites)):
                     label=format(i,f'0{len(sites)}b')
-                    obs=probability(circuit,{q:int(bit) for q,bit in zip(sites,label)},**request['limits'])
+                    obs=probability(circuit,{q:int(bit) for q,bit in zip(sites,label)},**options)
                     if real_sign(obs.value)<0 or real_sign(ONE-obs.value)<0:
                         raise ArithmeticError('probability outside [0,1]')
                     observations.append(obs.to_dict());total+=obs.value
@@ -245,7 +255,7 @@ def calculate(document):
                 is_expectation=query['kind']=='expectation'
                 field='paulis' if is_expectation else 'outcomes'
                 target=_site_map(query[field],circuit.n_qubits,paulis=is_expectation)
-                obs=(expectation if is_expectation else probability)(circuit,target,**request['limits'])
+                obs=(expectation if is_expectation else probability)(circuit,target,**options)
                 minimum=-ONE if is_expectation else ZERO
                 if real_sign(obs.value-minimum)<0 or real_sign(ONE-obs.value)<0:
                     raise ArithmeticError('observation outside its mathematical range')

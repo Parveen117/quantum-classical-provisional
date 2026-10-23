@@ -1,0 +1,137 @@
+{
+  "environment": {
+    "cgroup_memory_max": "8589934592",
+    "cpu_count": 9,
+    "cpu_max": "800000 100000",
+    "numpy": "2.3.5",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "qiskit": "2.6.0",
+    "qiskit_aer": "0.17.2"
+  },
+  "protocol": {
+    "baseline_commit": "19ee882fc839835802e37d3092601ef9385ea67c",
+    "budget": {
+      "execution_seconds": 20,
+      "max_bond": 256,
+      "max_coefficient_bits": 4096,
+      "max_coefficients": 1000000,
+      "max_terms": 262144,
+      "max_work": 100000000,
+      "rss_bytes": 1342177280,
+      "startup_seconds": 15
+    },
+    "cases": [
+      {
+        "budget_override": {
+          "execution_seconds": 180,
+          "max_work": 400000000
+        },
+        "cohort": "adaptive_exact_reference_after_frozen_run",
+        "factored_options": {
+          "contraction": "integer"
+        },
+        "method": "factored",
+        "n": 50,
+        "query": "local00",
+        "rounds": 16,
+        "seed": 20261018
+      }
+    ],
+    "description": "Adaptive exact-value verification after both frozen 60 s old-kernel rows timed out. Not a performance comparison.",
+    "frozen_before_target_runs": true,
+    "interpretation": "Original 100M work / 20 s boundary is retained separately. Extended 16r comparison gives both kernels 300M work / 60 s; 400M original-kernel row is an exact-value reference only. No performance superiority over Aer is assumed.",
+    "queries": {
+      "local00": "P(q[n//2-1]=0,q[n//2]=0)",
+      "parity": "expectation of Z on every site"
+    },
+    "source_sha256": {
+      "calculator.py": "6c59bc07e5ffdacb63e03d844a6910c1fc827a00e784d946a3b3b5c797f6c972",
+      "compact.py": "1acff6eaa8664b4ba33285c66c9f433ecd0148aa8383a18f79dbd2ccb66e898d",
+      "dyadic.py": "f57de994e59041fa203cffdda5f73e30b65552715286483b29b683b79d849832",
+      "exact.py": "cc0b3be70660ed819b3ad153620ea4338fb6bf57102a4474d4355da2805afdf6",
+      "factored.py": "0a41e4e768e487871057693a2f54a1652349359a107d99ebf7647b7d32f588f9",
+      "integer_matrix.py": "9301ec91dad88fa8b53b83083f0b62454eb44203c5c7bfc77f4b06015fe14e40",
+      "observer.py": "132e4de5e9df0c051825e6bc5babcd124cfb52c7f128b72a9a5c08992b09fbf0",
+      "reused_product.py": "8cf910b93ca7177afd373ee8c15ad801b9d493be872604a09baaaca2adc51a73",
+      "streaming.py": "d5f77ae1b7192de1e5ad0e488b791be2db537cac1cb535f5dd5fefc452c63e02",
+      "stress_benchmark.py": "c86ba3814939ee99bd61cba5646327c52c631db1b21f3070891bcefdf232303b"
+    },
+    "timing": "Sequential fresh single-thread worker per row; execution includes native contraction imports and excludes circuit/setup imports as in stress_benchmark. RSS includes setup. Three repeats for primary 12r parity and extended 16r local; other rows one run.",
+    "version": 1
+  },
+  "protocol_sha256": "36957e0b952eed2e75b80caffc2f8008ed49a5f413147f0840549167df78f22e",
+  "rows": [
+    {
+      "algebraically_exact": true,
+      "budget_override": {
+        "execution_seconds": 180,
+        "max_work": 400000000
+      },
+      "circuit_sha256": "470428d451fd4703c4f42630b234bf9aace6602667af888c6c84cc1f9107617d",
+      "cohort": "adaptive_exact_reference_after_frozen_run",
+      "dense_complex128_payload_bytes": 18014398509481984,
+      "execution_seconds": 94.19280094499845,
+      "factored_options": {
+        "contraction": "integer"
+      },
+      "method": "factored",
+      "n": 50,
+      "n_cz": 392,
+      "n_gates": 2142,
+      "n_t_or_tdg": 850,
+      "observation": {
+        "active_qubits": 34,
+        "algebraically_exact": true,
+        "causal_gates": 830,
+        "causal_pruning": true,
+        "contracted_sites": 34,
+        "contraction": "integer",
+        "forward_gates": 828,
+        "input_gates": 2142,
+        "input_qubits": 50,
+        "integer_matrix_products": 136,
+        "max_coefficient_bits": 158,
+        "peak_bond": 256,
+        "peak_packing_digit_bits": 162,
+        "peak_stored_coefficients": 589818,
+        "peak_temporary_coefficients": 65536,
+        "prefix_expanded_terms": 4,
+        "prefix_local_coefficients": 36,
+        "product_suffix": true,
+        "product_suffix_gates": 2,
+        "representation": "product-observer suffix + exact MPS boundary contraction",
+        "scalar_products": 347490530,
+        "statevector_constructed": false,
+        "truncated_terms": 0,
+        "value": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "11417983166886711394044295539478941320013821279/45671926166590716193865151022383844364247891968",
+            "-1621141020510952213599585817264287169/348449143727040986586495598010130648530944",
+            "0",
+            "0"
+          ]
+        }
+      },
+      "peak_process_rss_bytes": 235712512,
+      "query": "local00",
+      "query_qubits": [
+        24,
+        25
+      ],
+      "rounds": 16,
+      "rss_before_execution_bytes": 27172864,
+      "rusage_peak_rss_bytes_including_pre_exec_history": 235712512,
+      "sampled_peak_rss_bytes": 235937792,
+      "seed": 20261018,
+      "setup_seconds": 0.48604420999618014,
+      "status": "completed",
+      "structural_lightcone_gates": 830,
+      "structural_lightcone_qubits": 34,
+      "value_float": 0.24999345603205234,
+      "wall_seconds_including_startup": 94.81695903900254,
+      "worker_exit_code": 0
+    }
+  ]
+}

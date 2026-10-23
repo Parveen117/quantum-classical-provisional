@@ -6,6 +6,11 @@ The [quantum-circuit calculator](native_relational_qc/CALCULATOR.md) accepts cus
 circuit/query JSON and returns exact answers, certified decimal enclosures and
 cost diagnostics through `python -m native_relational_qc calculate INPUT.json`.
 
+The optional [streaming contraction](native_relational_qc/STREAMING_CONTRACTION.md)
+builds one exact site factor at a time and reuses signed equal matrix rows/columns.
+It includes a bounded 50-qubit, 16-round local calculation, with explicit larger
+work/time allowances, exact references and the original failed budget retained.
+
 The [reversible logic and arithmetic layer](native_relational_qc/REVERSIBLE_LOGIC.md)
 compiles small Boolean functions into coherent quantum oracles, adds a clean
 four-bit adder, and demonstrates an arithmetic search whose interference depends

@@ -4,7 +4,9 @@ Each matrix has one power-of-two denominator and four Python-integer numerator
 arrays. A bounded dot product is packed into base B, multiplied with NumPy's
 object-integer matmul, and decoded *before* reducing sqrt(2)^2=2 and i^2=-1.
 No floating-point arithmetic, fixed-width overflow, rank decision or truncation
-enters this path. This is an arithmetic optimization, not bond compression.
+enters this path. This is an arithmetic optimization, not bond compression. The
+explicitly selected reuse kernel instead evaluates bounded integer limbs using
+exact binary64 sums; its proof is in STREAMING_CONTRACTION.md.
 """
 from dataclasses import dataclass
 
@@ -64,11 +66,16 @@ class IntegerMatrix:
         budget.inspect(list(entries.values()), temporary=True)
         return entries
 
-    def matmul(self, other, budget):
+    def matmul(self, other, budget, *, reuse=False):
         m, k = self.shape
         k2, n = other.shape
         if k != k2:
             raise ValueError('matrix product shape mismatch')
+        if reuse:
+            from .reused_product import multiply
+            result = IntegerMatrix(multiply(self.parts, other.parts, budget), self.shift+other.shift)
+            result.inspect(budget)
+            return result
         # Count all dense ring-product slots, including zero entries. This is
         # conservative relative to the sparse evaluator's nonzero work count.
         budget.tick(m*k*n)
