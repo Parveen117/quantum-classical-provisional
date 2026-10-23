@@ -1,5 +1,10 @@
 # Native Relational Quantum Computing — v0.1
 
+**New: [exact Clifford frame](CLIFFORD_FRAME.md).** `clifford_frame` removes the
+mandatory 2^k projector expansion for wide T-phase probability queries. It
+retains a bounded sparse residual vector, full interference and the Clifford
+circuit, with explicit branch/pair limits and paired 2056-site measurements.
+
 **New: [2056-qubit exact selected observations](LARGE_REGISTER.md).** Explicit
 `stabilizer` and `clifford_t` backends execute supported large-register circuits
 using bit-packed Pauli pullback, generator elimination and bounded exact phase

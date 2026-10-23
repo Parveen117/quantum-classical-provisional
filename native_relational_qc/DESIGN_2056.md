@@ -8,8 +8,10 @@ theoretical architecture and written finite-register derivations, with no
 
 Implementation update: [LARGE_REGISTER.md](LARGE_REGISTER.md) now records
 executable exact Clifford/stabilizer-generator pullback, bounded Clifford+T
-observations and measured 2056-qubit qualification. Only these two explicitly
-selected backends accept up to 2056 sites; the older backends retain 256.
+observations and measured 2056-qubit qualification. The subsequent
+[Clifford-frame route](CLIFFORD_FRAME.md) adds wide T-phase probabilities with
+a bounded sparse residual and phase-sensitive pair evaluation. These three
+explicit backends accept up to 2056 sites; the older backends retain 256.
 The implementation uses observation pullback rather than a reusable full-state
 tableau. Hardware construction, fault tolerance and general efficient deep-T
 execution remain outside this milestone. Historical design choices below are

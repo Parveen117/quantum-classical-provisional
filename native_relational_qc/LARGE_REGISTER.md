@@ -2,6 +2,14 @@
 
 Author: Monty. 23 October 2026.
 
+Historical milestone recorded at commit
+`d0b87fca3d7d1667c26ac4e1ed7e5bb7f6c62820`. The subsequent
+[Clifford-frame upgrade](CLIFFORD_FRAME.md) adds a third explicit large-register
+backend for wide T-phase probabilities. Measurements and the 204-test record
+below describe this earlier milestone, not the later revision. Its frozen
+runner must be replayed from that commit because source hashes intentionally
+reject later changes.
+
 The calculator now accepts up to **2056 ideal circuit qubits** through two
 explicit backends: `stabilizer` and `clifford_t`. This implements the first
 executable part of [the 2056-site design](DESIGN_2056.md). It performs classical

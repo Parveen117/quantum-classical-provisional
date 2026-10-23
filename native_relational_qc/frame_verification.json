@@ -1,0 +1,201 @@
+{
+  "artifact_sha256": {
+    "frame_protocol.json": "b0e5a652fb8a51efb547dbc712b5d0d19d09417a57c4f6467d72dd3d17919afd",
+    "frame_results.json": "2d56d68888bead24c1ef1b412d42b4fa7050d4dcc62cdfda398cc711ca12e080",
+    "frame_test_results.txt": "40d135e1df2a73bebc0bf906c395238b75757b8a2188e0552b11d789de83ad74"
+  },
+  "author": "Monty",
+  "baseline_commit": "d0b87fca3d7d1667c26ac4e1ed7e5bb7f6c62820",
+  "cli": {
+    "command": "python -m native_relational_qc calculate /tmp/frame2056.json --timeout 20 --out /tmp/frame2056-result.json",
+    "exact_answer_matches_frozen_protocol": true,
+    "generated_by": "python -m native_relational_qc.frame_qualification --example ghz_y_t_full --out /tmp/frame2056.json",
+    "report": {
+      "answers": [
+        {
+          "algebraically_exact": true,
+          "execution_seconds": 4.244116188005137,
+          "id": "ghz_y_t_full",
+          "kind": "probability",
+          "statistics": {
+            "accepted_branches": 2,
+            "algebraically_exact": true,
+            "backend": "clifford_frame",
+            "branch_updates": 1,
+            "clifford_gates": 4113,
+            "constraint_checks": 0,
+            "dense_statevector_constructed": false,
+            "diagonal_constraints": 0,
+            "final_branches": 2,
+            "gate_visits": 8458384,
+            "input_gates": 4114,
+            "input_qubits": 2056,
+            "max_coefficient_bits": 2058,
+            "measurement_generators": 2056,
+            "non_clifford_gates": 1,
+            "normalization_exact": true,
+            "normalization_terms": 2,
+            "pair_candidates": 3,
+            "pair_visits": 3,
+            "peak_branches": 2,
+            "peak_generators": 2056,
+            "plan_gates": 4114,
+            "processed_t_gates": 1,
+            "projector_expansion_avoided": true,
+            "query_support": 2056,
+            "representation": "Clifford skeleton plus exact sparse basis residual",
+            "row_products": 2056,
+            "sparse_residual_constructed": true,
+            "truncated_terms": 0,
+            "work_definition": "plan gates, gate visits, branch updates, normalization terms, row products, constraint checks and pair visits",
+            "work_used": 8464560,
+            "x_rank": 2056
+          },
+          "status": "completed",
+          "value": {
+            "decimal": "0.00000000000000005",
+            "decimal_enclosure": {
+              "lower": "0.0000000000000000",
+              "maximum_absolute_display_error": "1/20000000000000000",
+              "method": "integer-square-root bounds and outward rational rounding",
+              "upper": "0.0000000000000001"
+            },
+            "exact": {
+              "basis": "1,sqrt(2),i,i*sqrt(2)",
+              "coefficients": [
+                "1/8273153554255617868983008432299507701873690283447163912225368429446311715550180068658483561349865846704311797996005892990494607142525675800342567010930760478881504606029054999488050624099750939339790755426321297478858807972510657577430552150649899640468901338121294090979219428234512847003533414175726178693610069347755095659695353545360529790683181065043538446867918248788742705333365840422466199773229341881841562551926235483545177894989221351527346588987721531194144175285969973689640218042094418808237706900648114671371775300698367651383174442595695957899162146670906778789201530522867749937550298524431256635047936",
+                "1/16546307108511235737966016864599015403747380566894327824450736858892623431100360137316967122699731693408623595992011785980989214285051351600685134021861520957763009212058109998976101248199501878679581510852642594957717615945021315154861104301299799280937802676242588181958438856469025694007066828351452357387220138695510191319390707090721059581366362130087076893735836497577485410666731680844932399546458683763683125103852470967090355789978442703054693177975443062388288350571939947379280436084188837616475413801296229342743550601396735302766348885191391915798324293341813557578403061045735499875100597048862513270095872",
+                "0",
+                "0"
+              ]
+            },
+            "expression": "(1/8273153554255617868983008432299507701873690283447163912225368429446311715550180068658483561349865846704311797996005892990494607142525675800342567010930760478881504606029054999488050624099750939339790755426321297478858807972510657577430552150649899640468901338121294090979219428234512847003533414175726178693610069347755095659695353545360529790683181065043538446867918248788742705333365840422466199773229341881841562551926235483545177894989221351527346588987721531194144175285969973689640218042094418808237706900648114671371775300698367651383174442595695957899162146670906778789201530522867749937550298524431256635047936) + (1/16546307108511235737966016864599015403747380566894327824450736858892623431100360137316967122699731693408623595992011785980989214285051351600685134021861520957763009212058109998976101248199501878679581510852642594957717615945021315154861104301299799280937802676242588181958438856469025694007066828351452357387220138695510191319390707090721059581366362130087076893735836497577485410666731680844932399546458683763683125103852470967090355789978442703054693177975443062388288350571939947379280436084188837616475413801296229342743550601396735302766348885191391915798324293341813557578403061045735499875100597048862513270095872)*sqrt(2)"
+          }
+        }
+      ],
+      "backend": "clifford_frame",
+      "circuit_sha256": "3fef89ef8c37587b659d40c5d43fcd391a2e8204dfd2a9467740bd94ea034beb",
+      "evidence_class": "LOCAL_IDEAL_CALCULATION",
+      "execution_seconds": 4.246380336000584,
+      "gates": 4114,
+      "hardware_job_id": null,
+      "input_state": "all_zero",
+      "limits_per_scalar_evaluation": {
+        "max_branches": 4096,
+        "max_coefficient_bits": 4096,
+        "max_generators": 2056,
+        "max_pairs": 1000000,
+        "max_work": 10000000
+      },
+      "n_qubits": 2056,
+      "peak_worker_rss_bytes": 29396992,
+      "peak_worker_rss_source": "Linux /proc/self/status VmHWM, including imports/setup",
+      "request_sha256": "d587fb827809f03ecbd0260e9cd3a8f807d418f9604fa33fe9a7a46372845068",
+      "schema": "nrqc-calculator-result-v1",
+      "status": "completed",
+      "timeout_seconds": 20.0,
+      "wall_seconds": 4.9623189519988955
+    },
+    "stdout_matches_outfile": true
+  },
+  "closed": "Initial 2^k projector expansion avoided for the declared bounded Clifford-frame route; qualified wide T-phase probabilities and global correlations complete exactly.",
+  "date": "2026-10-23",
+  "environment": {
+    "numpy": "2.3.5",
+    "python": "3.12.14",
+    "qiskit": "2.6.0",
+    "qiskit_aer": "0.17.2"
+  },
+  "new_physical_assumptions": "None beyond the existing all-zero ideal circuit, admitted exact unitary gate algebra and Born observation contract.",
+  "qualification": {
+    "all_expected_outcomes_verified": true,
+    "measured_runs": 66,
+    "no_hardware_jobs": true,
+    "repetitions": 3,
+    "semantic_hashes_match_across_backends": true,
+    "source_frozen_before_measurement": true,
+    "status_counts": {
+      "completed": 30,
+      "incomplete": 30,
+      "time_limit": 6
+    },
+    "unchanged_reference_engine_files": [
+      "native_relational_qc/pauli_engine.py",
+      "native_relational_qc/clifford_t.py",
+      "native_relational_qc/exact.py"
+    ]
+  },
+  "schema": "nrqc-frame-verification-v1",
+  "sdk_blocked_smoke": {
+    "backend": "clifford_frame",
+    "blocked_sdk_imports": true,
+    "exact": {
+      "basis": "1,sqrt(2),i,i*sqrt(2)",
+      "coefficients": [
+        "1/2",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "full_assignment": true,
+    "n_qubits": 2056,
+    "status": "passed"
+  },
+  "sdk_blocker_script": "import importlib.abc\nimport json\nimport sys\nclass BlockQuantumSDK(importlib.abc.MetaPathFinder):\n    def find_spec(self, fullname, path=None, target=None):\n        if fullname.split('.')[0] in ('qiskit','qiskit_aer','qiskit_ibm_runtime'):\n            raise ImportError('Quantum SDK intentionally blocked: '+fullname)\nsys.meta_path.insert(0,BlockQuantumSDK())\nfrom native_relational_qc.calculator import calculate\nfrom native_relational_qc.frame_qualification import request,expected\nreport=calculate(request('ghz_t_full','clifford_frame'))\nassert report['status']=='completed'\nassert report['answers'][0]['value']['exact']==expected('ghz_t_full').to_dict()\nassert report['answers'][0]['statistics']['sparse_residual_constructed']\nassert not report['answers'][0]['statistics']['dense_statevector_constructed']\nassert not any(k.split('.')[0] in ('qiskit','qiskit_aer','qiskit_ibm_runtime') for k in sys.modules)\nprint(json.dumps(dict(status='passed',n_qubits=2056,backend='clifford_frame',blocked_sdk_imports=True,\n    exact=report['answers'][0]['value']['exact'],full_assignment=True)))\n",
+  "source_sha256": {
+    "native_relational_qc/__init__.py": "2df0c6684869d87776756cc78918199a9a09fa86f8c9e6d41d675591698c9350",
+    "native_relational_qc/__main__.py": "f41e3acdc29c738b9d6d6e5a0ade0bfe789d4a41c180a793224a300815cbaeba",
+    "native_relational_qc/algebra.py": "3d23b2a3a345b0760bfce1cff9e4eea9635543ee566c9dd6f0078405f211e9ab",
+    "native_relational_qc/bridge.py": "6c863d69da9b477ad17948e6c935d3c058d426f0322e5df99eb4f8c09a61b4b3",
+    "native_relational_qc/calculator.py": "d29aaecf8a68be9d2c27424bdd3c3f80f33396f8678f9c44b1b50d4e4eda4fd4",
+    "native_relational_qc/circuit.py": "6215adf52443de8ee1db01f8e641c4c50124810a7674fd3258d826ff08b9e366",
+    "native_relational_qc/clifford_frame.py": "31cf4aebb20bcea7ff72faaf60641eecc9bd1c55c4ca97891e6b699beb568df7",
+    "native_relational_qc/clifford_t.py": "0942a9ad3c7cfd2299b261bb3b2f0e2106d99ab1224218289dd63ecd944b2e9a",
+    "native_relational_qc/compact.py": "1acff6eaa8664b4ba33285c66c9f433ecd0148aa8383a18f79dbd2ccb66e898d",
+    "native_relational_qc/compact_benchmark.py": "38a618ea91bd436c740b75f67a908b63067f1b7332468ca4382cf7921872d5a6",
+    "native_relational_qc/compact_qiskit.py": "92f7bd85d6e753e9c898bcbd6f28e65b7fcc4cdd0a3ddedab4ab94df2fddcf05",
+    "native_relational_qc/dyadic.py": "f57de994e59041fa203cffdda5f73e30b65552715286483b29b683b79d849832",
+    "native_relational_qc/dynamic.py": "88421139cba72f0d86f3644c5933e03dd44d8afa1fdc79b250b2e8bf5390acd9",
+    "native_relational_qc/dynamic_examples.py": "0d40d9b3dbf098623c7586f13cdb54d9c6f627e4af6f0c398e79f983129d259e",
+    "native_relational_qc/dynamic_qiskit.py": "be1ff2a0ff1187370dad1d42d5fa126f1f5b6ff1d46b976861ef917c2f930f58",
+    "native_relational_qc/dynamic_reference.py": "3ac7547482028029660081c4122bbce370d09a74b466432e4d4d48b529df89e1",
+    "native_relational_qc/dynamic_verify.py": "aa8b83844876d6627403443f0ea6e3d1504a9ad872b1f64ecc8bceab3f5eb5a2",
+    "native_relational_qc/emk_geometry_audit.py": "c06def18c9900b50dfabd2916c6b22c442aeb371180d1b6f18c7e7fb66091f8a",
+    "native_relational_qc/emk_tensor.py": "0b87a6266a4926fe21d92405fc431818112f8e0c9cee960f6fed456f6cf60486",
+    "native_relational_qc/entropy_logic.py": "5d13b8663b92623939b7bbb106b8dbf9f1bead17ffb0661df7fe71d5db86ad9f",
+    "native_relational_qc/exact.py": "cc0b3be70660ed819b3ad153620ea4338fb6bf57102a4474d4355da2805afdf6",
+    "native_relational_qc/examples.py": "2066bf7326cde2e064c9800de8fda87eb74314af99200593bc0fb39e3f8d47d5",
+    "native_relational_qc/factored.py": "db7bde341174f2f4f44a17b734b45cc93a6f7f4a07207fb91c0934466e721e6b",
+    "native_relational_qc/frame_qualification.py": "e9ece9cad8de9523b44898197841eafa31aa3e272b725bedd1a7b8b4bbac9af0",
+    "native_relational_qc/ibm_workloads.py": "2a4b86fc8bb1ab9aaaa979129e37aa49d7b87880a2cf5a38f63fc690028e317e",
+    "native_relational_qc/integer_matrix.py": "9301ec91dad88fa8b53b83083f0b62454eb44203c5c7bfc77f4b06015fe14e40",
+    "native_relational_qc/large_register.py": "dda791fccbffc26c62ddcf30fc7b392c85438a523ebdcbd79fdf7b6841510c98",
+    "native_relational_qc/large_register_qualification.py": "ef4f415ba4727de648076ab2b12fff9559a19b885b384acea77ecca31b208ae2",
+    "native_relational_qc/observer.py": "eec5857176d20158e50c5d00a314483f9ce67a17a12fc7cc94416a754bd80833",
+    "native_relational_qc/pauli_engine.py": "b72489ecb8078ab3b15a41faaa68b7376210b41b19a7e36fcbecb958488fed14",
+    "native_relational_qc/qiskit_adapter.py": "d3e877d52f7aeeebc9e9db996b1675c1feb2a99815450111365acaf61c51f2b8",
+    "native_relational_qc/readout.py": "6b891b4434fc409046df33eab9059037e9f80b687e6dfc1e8ce8593c3ec5b4c7",
+    "native_relational_qc/reduction.py": "51017ce80182651b318d49acd1b177bcb03407c20686231693a728fb0ac2f28c",
+    "native_relational_qc/reduction_benchmark.py": "e9ad8162fb8c0020f6b00d57717d774763493081dda43d42e4c9821b922be9ba",
+    "native_relational_qc/reused_product.py": "8cf910b93ca7177afd373ee8c15ad801b9d493be872604a09baaaca2adc51a73",
+    "native_relational_qc/reversible_logic.py": "f566059dad85d01735e9384b9e7aa692f666f7b6909cf738696c47f5c4e12184",
+    "native_relational_qc/reversible_logic_demo.py": "dbb7e52dc90173eddc11539230816dbedbae58d59a8ffe2f9b2e3707e25cdaf8",
+    "native_relational_qc/stabilizer.py": "a490804f4cead55505410969496aa44eb71a4ed424bae2c23ff746221a51d19d",
+    "native_relational_qc/state.py": "2ff1413d09f36f6449eb6ae7ca8c53de71ac86b9b0711e080849987ab031093e",
+    "native_relational_qc/streaming.py": "d5f77ae1b7192de1e5ad0e488b791be2db537cac1cb535f5dd5fefc452c63e02",
+    "native_relational_qc/stress_benchmark.py": "c86ba3814939ee99bd61cba5646327c52c631db1b21f3070891bcefdf232303b",
+    "native_relational_qc/verify.py": "f3c03e25b279701155646a52c7ef96c9eab5696da74294ce9bc2a035c3c3ecf3",
+    "tests/test_native_clifford_frame.py": "2096b9b7a6a6aa9951d514b5ab433c44c1c6463b4501fac545a0c56504cd49ba",
+    "tests/test_native_large_register.py": "c485b94bfca5fdab7cb1a7f41fc1c503747670c1250b9fbf995aeb3c540fa107"
+  },
+  "tests": {
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -m unittest discover -s tests -p 'test_native*.py' -v",
+    "errors": 0,
+    "failures": 0,
+    "seconds": 46.641,
+    "skips": 0,
+    "tests": 219
+  },
+  "unresolved": "Exponential residual support, conservative quadratic pair cap, repeated preparation, general deep non-Clifford scaling and physical hardware."
+}
