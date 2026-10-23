@@ -1,5 +1,10 @@
 # Exact sixteenth-root phase extension
 
+**Historical qualification at `f31a06a550c5abdb700d00177c5ea568e2cece3d`.**
+The [next upgrade](MODULAR_SHOR.md) adds a separate `cyclotomic32` field,
+five-bit Shor and general reversible multiplier construction. The four-bit
+measurements and limitations below describe this pinned earlier revision.
+
 Author: Monty. The calculator now accepts an explicit `cyclotomic` backend with
 exact 22.5-degree phase gates, retained complex amplitudes and one prepared state
 per request. Shor's builder supports four phase bits on this backend. The older

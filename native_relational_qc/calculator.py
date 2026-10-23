@@ -93,11 +93,11 @@ def validate(document):
     if document['schema'] != INPUT_SCHEMA:
         raise ValueError('unsupported calculator input schema')
     backend = document.get('backend','factored')
-    if backend not in ('factored','observer','stabilizer','clifford_t','clifford_frame','jya_frame','cyclotomic'):
+    if backend not in ('factored','observer','stabilizer','clifford_t','clifford_frame','jya_frame','cyclotomic','cyclotomic32'):
         raise ValueError('unknown backend; select an explicit supported backend, with no implicit fallback')
-    if backend=='cyclotomic':
-        from .phase_backend import PhaseCircuit
-        circuit=PhaseCircuit(document['n_qubits'])
+    if backend in ('cyclotomic','cyclotomic32'):
+        from .phase_backend import PhaseCircuit,Phase32Circuit
+        circuit=(Phase32Circuit if backend=='cyclotomic32' else PhaseCircuit)(document['n_qubits'])
     elif backend in ('stabilizer','clifford_t','clifford_frame','jya_frame'):
         from .large_register import LargeCircuit
         circuit = LargeCircuit(document['n_qubits'])
@@ -111,7 +111,7 @@ def validate(document):
     simplify = document.get('simplify','none')
     if simplify not in ('none','exact'):
         raise ValueError('simplify must be none or exact')
-    if backend=='cyclotomic' and simplify!='none':
+    if backend in ('cyclotomic','cyclotomic32') and simplify!='none':
         raise ValueError('cyclotomic backend does not yet support circuit reduction')
     operations = document['operations']
     if not isinstance(operations,list) or len(operations)>100_000:
@@ -134,7 +134,7 @@ def validate(document):
         'stabilizer':{'max_generators'}, 'clifford_t':{'max_terms'},
         'clifford_frame':{'max_generators','max_branches','max_pairs'},
         'jya_frame':{'max_generators','max_branches','max_pairs'},
-        'cyclotomic':{'max_branches'}}[backend]
+        'cyclotomic':{'max_branches'},'cyclotomic32':{'max_branches'}}[backend]
     _object(supplied, (), applicable)
     limits = {k:DEFAULT_LIMITS[k] for k in applicable}
     for k,v in supplied.items():
@@ -157,7 +157,7 @@ def validate(document):
             raise ValueError('query IDs must be unique nonempty strings of at most 80 characters')
         seen.add(label)
         if kind=='geometry':
-            if backend=='cyclotomic':raise ValueError('cyclotomic geometry is not implemented')
+            if backend in ('cyclotomic','cyclotomic32'):raise ValueError('cyclotomic geometry is not implemented')
             from .emk_tensor import evaluation_count
             evaluations += evaluation_count(_geometry_generators(query[field],circuit.n_qubits))
         elif kind=='distribution':
@@ -187,7 +187,8 @@ def validate(document):
 def real_sign(value):
     """Compare a+b*sqrt(2) to zero using rational arithmetic only."""
     from .cyclotomic import Cyclotomic
-    if isinstance(value,Cyclotomic):return value.real_sign()
+    from .cyclotomic32 import Cyclotomic32
+    if isinstance(value,(Cyclotomic,Cyclotomic32)):return value.real_sign()
     if value.c or value.d:
         raise ValueError('a real value is required')
     a,b=value.a,value.b
@@ -212,7 +213,8 @@ def display(value, decimal_places=12):
     decimal display, not uncertainty in the exact computation or hardware.
     """
     from .cyclotomic import Cyclotomic
-    if isinstance(value,Cyclotomic):return value.display(decimal_places)
+    from .cyclotomic32 import Cyclotomic32
+    if isinstance(value,(Cyclotomic,Cyclotomic32)):return value.display(decimal_places)
     places=_integer(decimal_places,'decimal_places',0,60)
     if value.c or value.d:raise ValueError('only real observations can be displayed')
     a,b=value.a,value.b
@@ -251,7 +253,7 @@ def _summary(observations):
 def calculate(document):
     """In-process API: exact backend budgets apply; no wall-clock/RSS guard."""
     circuit,request=validate(document)
-    if request['backend']=='cyclotomic':
+    if request['backend'] in ('cyclotomic','cyclotomic32'):
         from .phase_backend import calculate_request
         return calculate_request(circuit,request)
     if request['backend']=='factored':

@@ -2,6 +2,12 @@
 
 ## Native relational calculation engine
 
+The [modular-arithmetic upgrade](native_relational_qc/MODULAR_SHOR.md) adds
+polynomial reversible multiplier construction and an explicit `cyclotomic32`
+backend with exact 11.25-degree phases. Five-bit Shor now gives nonzero strict
+continued-fraction success for N=21; scratch cleanup, invalid register labels
+and whole-state phases are independently checked.
+
 The [exact phase extension](native_relational_qc/PHASE_EXTENSION.md) adds an
 explicit `cyclotomic` calculator backend with 22.5-degree phases and one prepared
 sparse state per batch. Four-bit inverse QFT and bounded Shor circuits now run
@@ -10,7 +16,7 @@ and resource failures.
 
 The [small Shor factoring qualification](native_relational_qc/SHOR.md) adds exact
 modular-oracle circuits, inverse QFT and verified period-to-factor processing.
-Paired N=15 and N=21 tests expose the current three-bit phase-precision boundary
+Historical paired N=15 and N=21 tests expose the original three-bit phase-precision boundary
 and compare the original frame with the Surya/jya route on identical circuits.
 
 The [Surya/jya local-return upgrade](native_relational_qc/JYA_FRAME.md)

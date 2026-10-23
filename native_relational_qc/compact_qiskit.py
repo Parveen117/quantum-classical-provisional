@@ -13,9 +13,10 @@ def to_qiskit(circuit):
     import numpy as np
     qc = QuantumCircuit(circuit.n_qubits)
     for name, qargs in circuit.operations:
-        if name in ('p16','p16dg','cp16','cp16dg'):
+        if name in ('p16','p16dg','cp16','cp16dg','p32','p32dg','cp32','cp32dg'):
             from math import pi
-            phase=-pi/8 if name.endswith('dg') else pi/8
+            angle=pi/(16 if '32' in name else 8)
+            phase=-angle if name.endswith('dg') else angle
             (qc.cp if name.startswith('c') else qc.p)(phase,*qargs)
         elif name == "r":
             qc.append(UnitaryGate(np.array([[0, -1], [1, 0]], dtype=complex), label="R"), qargs)

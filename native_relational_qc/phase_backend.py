@@ -14,15 +14,27 @@ PHASE_GATES={'p16':(1,1),'p16dg':(1,-1),'cp16':(2,1),'cp16dg':(2,-1)}
 
 
 class PhaseCircuit(CompactCircuit):
+    field=Cyclotomic
+    backend='cyclotomic'
+    phase_gates={name:(width,ZETA**power) for name,(width,power) in PHASE_GATES.items()}
+
     def add(self,name,*qargs):
-        if name not in PHASE_GATES:return super().add(name,*qargs)
-        width,_=PHASE_GATES[name]
+        if name not in self.phase_gates:return super().add(name,*qargs)
+        width,_=self.phase_gates[name]
         if len(qargs)!=width or len(set(qargs))!=width:raise ValueError('phase gate requires distinct wires of declared arity')
         for q in qargs:_integer(q,'qubit',0,self.n_qubits-1)
         self._operations.append((name,tuple(qargs)))
         return self
 
     def state(self,**limits):return prepare(self,**limits)
+
+
+class Phase32Circuit(PhaseCircuit):
+    from .cyclotomic32 import Cyclotomic32 as field,ZETA as root
+    backend='cyclotomic32'
+    phase_gates=dict(PhaseCircuit.phase_gates)
+    for name,width,power in (('p32',1,1),('p32dg',1,-1),('cp32',2,1),('cp32dg',2,-1)):
+        phase_gates[name]=(width,root**power)
 
 
 class Budget:
@@ -65,11 +77,12 @@ class Budget:
 class Prepared:
     def __init__(self,circuit,budget,amplitudes):
         self.n_qubits=circuit.n_qubits;self.budget=budget;self.amplitudes=amplitudes
+        self.field=getattr(circuit,'field',Cyclotomic)
 
     def probability(self,outcomes):
         from .calculator import _site_map
         outcomes=_site_map({str(q):v for q,v in outcomes.items()},self.n_qubits)
-        total=ZERO;b=self.budget
+        total=self.field();b=self.budget
         for ket,value in self.amplitudes.items():
             b.tick('readout_visits')
             if all((ket>>q)&1==v for q,v in outcomes.items()):
@@ -80,13 +93,13 @@ class Prepared:
         sites=tuple(sites)
         if not 1<=len(sites)<=8 or len(set(sites))!=len(sites):raise ValueError('distribution needs 1..8 distinct wires')
         for q in sites:_integer(q,'qubit',0,self.n_qubits-1)
-        out={format(y,f'0{len(sites)}b'):ZERO for y in range(1<<len(sites))};b=self.budget
+        out={format(y,f'0{len(sites)}b'):self.field() for y in range(1<<len(sites))};b=self.budget
         for ket,value in self.amplitudes.items():
             b.tick('readout_visits');label=''.join(str((ket>>q)&1) for q in sites)
             out[label]=b.add(out[label],b.mul(value.conjugate(),value))
-        total=ZERO
+        total=self.field()
         for value in out.values():total=b.add(total,value)
-        if total!=ONE:raise ArithmeticError('phase distribution not normalized')
+        if total!=self.field(1):raise ArithmeticError('phase distribution not normalized')
         return out
 
     def expectation(self,paulis):
@@ -97,9 +110,9 @@ class Prepared:
             if p in ('X','Y'):x|=1<<q
             if p in ('Z','Y'):z|=1<<q
             if p=='Y':ny+=1
-        phase=Cyclotomic(IMAG**ny);out=ZERO;b=self.budget
+        phase=self.field(IMAG**ny);out=self.field();b=self.budget
         for ket,value in self.amplitudes.items():
-            b.tick('readout_visits');bra=self.amplitudes.get(ket^x,ZERO).conjugate()
+            b.tick('readout_visits');bra=self.amplitudes.get(ket^x,self.field()).conjugate()
             coefficient=-phase if (ket&z).bit_count()%2 else phase
             out=b.add(out,b.mul(b.mul(bra,coefficient),value))
         if out!=out.conjugate():raise ArithmeticError('Pauli expectation is not real')
@@ -109,21 +122,38 @@ class Prepared:
 def prepare(circuit,**limits):
     if not isinstance(circuit,CompactCircuit):raise TypeError('phase backend requires a declared circuit')
     _integer(circuit.n_qubits,'phase backend qubits',1,256)
-    b=Budget(**limits);b.stats['preparation_count']=1;state={0:ONE}
+    field=getattr(circuit,'field',Cyclotomic);zero,one=field(),field(1)
+    phase_gates=getattr(circuit,'phase_gates',PhaseCircuit.phase_gates)
+    b=Budget(**limits);b.stats['preparation_count']=1;state={0:one}
+    b.stats.update(backend=getattr(circuit,'backend','cyclotomic'),
+        representation='sparse computational-basis amplitudes in '+('Q(zeta_32)' if field is Phase32Circuit.field else 'Q(zeta_16)'),
+        permutation_visits=0)
     for name,qs in circuit.operations:
         b.tick('gate_visits')
-        if name in PHASE_GATES:
-            width,power=PHASE_GATES[name]
+        if name in ('id','x','rk','cx','ccx','swap'):
+            # These declared gates are phase-free permutations. Copy the exact
+            # amplitudes unchanged; no multiplication by one is necessary.
+            operation_plan(circuit.n_qubits,name,qs)
+            out={}
+            for ket,value in state.items():
+                b.tick('permutation_visits');target=ket
+                if name in ('x','rk'):target^=1<<qs[0]
+                elif name in ('cx','ccx') and all(ket&(1<<q) for q in qs[:-1]):target^=1<<qs[-1]
+                elif name=='swap' and ((ket>>qs[0])^(ket>>qs[1]))&1:target^=(1<<qs[0])|(1<<qs[1])
+                out[target]=value
+            state=out
+        elif name in phase_gates:
+            width,phase=phase_gates[name];phase=field.coerce(phase)
             # Revalidate even if called directly with another circuit implementation.
-            PhaseCircuit(circuit.n_qubits).add(name,*qs)
-            phase=ZETA**power;out={}
+            (Phase32Circuit if field is Phase32Circuit.field else PhaseCircuit)(circuit.n_qubits).add(name,*qs)
+            out={}
             for ket,value in state.items():
                 b.tick('gate_visits')
                 b.put(out,ket,b.mul(value,phase) if all(ket&(1<<q) for q in qs) else value)
             state=out
         else:
             for basic,target,controls in operation_plan(circuit.n_qubits,name,qs):
-                matrix=tuple(tuple(Cyclotomic(v) for v in row) for row in exact_gate(basic));out={}
+                matrix=tuple(tuple(field(v) for v in row) for row in exact_gate(basic));out={}
                 for ket,value in state.items():
                     b.tick('gate_visits')
                     if not all(ket&(1<<q) for q in controls):b.put(out,ket,value);continue
@@ -131,17 +161,18 @@ def prepare(circuit,**limits):
                     for reading in (0,1):
                         if matrix[reading][bit]:b.put(out,base|(reading<<target),b.mul(matrix[reading][bit],value))
                 state=out
-    norm=ZERO
+    norm=zero
     for value in state.values():norm=b.add(norm,b.mul(value.conjugate(),value))
-    if norm!=ONE:raise ArithmeticError('phase state not exactly normalized')
+    if norm!=one:raise ArithmeticError('phase state not exactly normalized')
     return Prepared(circuit,b,state)
 
 
 def calculate_request(circuit,request):
     from .calculator import _digest,OUTPUT_SCHEMA,display,real_sign
     start=perf_counter()
+    zero,one=circuit.field(),circuit.field(1)
     report=dict(schema=OUTPUT_SCHEMA,status='completed',evidence_class='LOCAL_IDEAL_CALCULATION',
-        hardware_job_id=None,input_state='all_zero',backend='cyclotomic',
+        hardware_job_id=None,input_state='all_zero',backend=request['backend'],
         circuit_sha256=_digest(dict(n_qubits=circuit.n_qubits,operations=request['operations'])),
         request_sha256=_digest(request),n_qubits=circuit.n_qubits,gates=len(circuit.operations),
         limits_per_batch=request['limits'],answers=[])
@@ -153,14 +184,14 @@ def calculate_request(circuit,request):
             if query['kind']=='distribution':
                 values=prepared.distribution(query['qubits'])
                 for value in values.values():
-                    if real_sign(value)<0 or real_sign(ONE-value)<0:raise ArithmeticError('invalid probability')
+                    if real_sign(value)<0 or real_sign(one-value)<0:raise ArithmeticError('invalid probability')
                 row.update(probabilities={label:display(v,request['decimal_places']) for label,v in values.items()},
-                    bitstring_qubits_left_to_right=query['qubits'],normalization=ONE.to_dict())
+                    bitstring_qubits_left_to_right=query['qubits'],normalization=one.to_dict())
             else:
                 expectation=query['kind']=='expectation';field='paulis' if expectation else 'outcomes'
                 target={int(k):v for k,v in query[field].items()}
                 value=prepared.expectation(target) if expectation else prepared.probability(target)
-                if real_sign(value-(-ONE if expectation else ZERO))<0 or real_sign(ONE-value)<0:
+                if real_sign(value-(-one if expectation else zero))<0 or real_sign(one-value)<0:
                     raise ArithmeticError('observation outside range')
                 row['value']=display(value,request['decimal_places'])
             row['execution_seconds']=perf_counter()-qstart;report['answers'].append(row)

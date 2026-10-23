@@ -1,10 +1,9 @@
 """Small exact Shor order-finding integration on the existing calculator.
 
 No factors or order are supplied to the builder. Precision is deliberately
-limited to 1..4 control bits; the fourth requires the explicit cyclotomic
-backend. The bounded truth-table oracle is exponential synthesis, not a scalable
-modular-arithmetic construction. A separate N=15 rotation multiplier avoids
-that table and implements controlled multiplication on the full work register.
+limited to 1..5 control bits; the fifth requires cyclotomic32. The arithmetic
+oracle constructs modular multipliers from reversible additions. The bounded
+truth-table and special N=15 rotation oracles remain explicit alternatives.
 """
 import argparse
 from collections import Counter
@@ -20,7 +19,9 @@ from .exact import Exact,ONE,ZERO,OMEGA
 from .large_register import LargeCircuit
 from .reversible_logic import BooleanMap,compile_oracle
 from .cyclotomic import Cyclotomic,ZETA,ZERO as C0,ONE as C1
-from .phase_backend import PhaseCircuit
+from .phase_backend import PhaseCircuit,Phase32Circuit
+from .cyclotomic32 import Cyclotomic32,ZETA as ZETA32
+from .modular_arithmetic import append_multiplier,multiplier_workspace
 
 
 def append_ccx(circuit,a,b,target):
@@ -42,13 +43,17 @@ def append_controlled_swap(circuit,control,a,b):
 
 
 def append_inverse_phase(circuit,a,b,distance,*,clean_ancilla=None):
-    """diag(1,1,1,exp(-i*pi/2**distance)); distance 1, 2 or 3.
+    """diag(1,1,1,exp(-i*pi/2**distance)); distance 1..4.
 
     The distance-two construction requires a distinct ancilla initially zero
     and restores it. It is not a dirty-ancilla controlled-T identity.
     """
     if a==b:raise ValueError('controlled phase requires distinct wires')
-    _integer(distance,'phase distance',1,3)
+    _integer(distance,'phase distance',1,4)
+    if distance==4:
+        if not isinstance(circuit,Phase32Circuit):raise ValueError('distance-four phase needs Phase32Circuit')
+        circuit.add('cp32dg',a,b)
+        return
     if distance==3:
         if not isinstance(circuit,PhaseCircuit):raise ValueError('distance-three phase needs PhaseCircuit and cyclotomic execution')
         circuit.add('cp16dg',a,b)
@@ -65,8 +70,10 @@ def append_inverse_phase(circuit,a,b,distance,*,clean_ancilla=None):
 
 def append_inverse_qft(circuit,controls,*,clean_ancilla=None):
     controls=tuple(controls)
-    _integer(len(controls),'exact QFT width',1,4)
-    if len(controls)==4 and not isinstance(circuit,PhaseCircuit):
+    _integer(len(controls),'exact QFT width',1,5)
+    if len(controls)==5 and not isinstance(circuit,Phase32Circuit):
+        raise ValueError('five-bit exact QFT requires Phase32Circuit')
+    if len(controls)>=4 and not isinstance(circuit,PhaseCircuit):
         raise ValueError('four-bit exact QFT requires PhaseCircuit')
     if len(set(controls))!=len(controls):raise ValueError('QFT wires must be distinct')
     if len(controls)>=3 and (clean_ancilla is None or clean_ancilla in controls):
@@ -118,14 +125,19 @@ class ShorProgram:
             gate_counts=dict(Counter(name for name,_ in self.circuit.operations)),
             factors_or_order_supplied=False,
             scope='small exact order-finding demonstration; low precision has no general Shor success guarantee',
-            oracle_scaling='bounded exponential truth table' if self.oracle=='table' else
+            oracle_scaling='O(m*n^4) elementary gates, O(n) workspace; polynomial construction, bounded simulator' if self.oracle=='arithmetic' else
+                           'bounded exponential truth table' if self.oracle=='table' else
                            'special N=15 controlled cyclic bit rotations on the full work register')
 
     def request(self,backend='jya_frame'):
-        if backend not in ('clifford_frame','jya_frame','clifford_t','cyclotomic'):
+        if backend not in ('clifford_frame','jya_frame','clifford_t','cyclotomic','cyclotomic32'):
             raise ValueError('unsupported Shor backend')
-        if self.precision==4 and backend!='cyclotomic':
+        if self.precision==5 and backend!='cyclotomic32':
+            raise ValueError('five phase bits require explicit cyclotomic32 backend')
+        if self.precision==4 and backend not in ('cyclotomic','cyclotomic32'):
             raise ValueError('four phase bits require explicit cyclotomic backend')
+        if self.oracle=='arithmetic' and backend not in ('cyclotomic','cyclotomic32'):
+            raise ValueError('arithmetic oracle requires an explicit backend supporting native CCX')
         return dict(schema='nrqc-calculator-v1',n_qubits=self.circuit.n_qubits,backend=backend,
             operations=[[name,list(qs)] for name,qs in self.circuit.operations],
             queries=[dict(id='phase',kind='distribution',qubits=list(reversed(self.controls)))])
@@ -133,21 +145,24 @@ class ShorProgram:
 
 def build(modulus=15,base=2,*,precision=3,oracle='rotation15',inverse_qft=True):
     n=_integer(modulus,'modulus',3,255);a=_integer(base,'base',2,n-1)
-    m=_integer(precision,'exact phase-estimation width',1,4)
+    m=_integer(precision,'exact phase-estimation width',1,5)
     if n%2==0 or gcd(a,n)!=1:raise ValueError('choose an odd modulus and a coprime base')
     if type(inverse_qft) is not bool:raise ValueError('inverse_qft must be boolean')
-    if oracle not in ('table','rotation15'):raise ValueError('unknown modular oracle')
+    if oracle not in ('table','rotation15','arithmetic'):raise ValueError('unknown modular oracle')
     width=(n-1).bit_length();controls=tuple(range(m));work=tuple(range(m,m+width))
     logic=None
     if oracle=='table':
         # This is bounded function synthesis from N,a,x; no period or factors.
         logic=compile_oracle(BooleanMap(m,width,tuple(pow(a,x,n) for x in range(1<<m))))
         size=logic.circuit.n_qubits
+    elif oracle=='arithmetic':
+        size=m+width+multiplier_workspace(width)
     else:
         if n!=15 or a not in (2,4,8):raise ValueError('rotation15 supports N=15 and bases 2,4,8')
         size=m+width
     if inverse_qft and m>=3 and size==m+width:size+=1
-    scratch=tuple(range(m+width,size));circuit=(PhaseCircuit if m==4 else LargeCircuit)(size)
+    scratch=tuple(range(m+width,size))
+    circuit=(Phase32Circuit if m==5 else PhaseCircuit if m==4 or oracle=='arithmetic' else LargeCircuit)(size)
     for q in controls:circuit.add('h',q)
     start=len(circuit.operations)
     if logic is not None:
@@ -157,7 +172,8 @@ def build(modulus=15,base=2,*,precision=3,oracle='rotation15',inverse_qft=True):
     else:
         circuit.add('x',work[0])
         for q,control in enumerate(controls):
-            append_mod15_multiplier(circuit,control,work,pow(a,1<<q,n))
+            if oracle=='arithmetic':append_multiplier(circuit,control,work,scratch,pow(a,1<<q,n),n)
+            else:append_mod15_multiplier(circuit,control,work,pow(a,1<<q,n))
     oracle_gates=len(circuit.operations)-start
     if inverse_qft:append_inverse_qft(circuit,controls,clean_ancilla=scratch[0] if scratch else None)
     return ShorProgram(circuit,n,a,m,controls,work,scratch,oracle,inverse_qft,oracle_gates)
@@ -165,9 +181,9 @@ def build(modulus=15,base=2,*,precision=3,oracle='rotation15',inverse_qft=True):
 
 def exact_phase_law(modulus,base,precision,*,inverse_qft=True):
     """Independent finite Fourier sum; uses f(x)=a**x mod N, no order input."""
-    _integer(precision,'exact Fourier width',1,4)
+    _integer(precision,'exact Fourier width',1,5)
     size=1<<precision
-    field,zero,root=(Cyclotomic,C0,ZETA) if precision==4 else (Exact,ZERO,OMEGA**(8//size))
+    field,zero,root=(Cyclotomic32,Cyclotomic32(),ZETA32) if precision==5 else (Cyclotomic,C0,ZETA) if precision==4 else (Exact,ZERO,OMEGA**(8//size))
     if not inverse_qft:return {y:field(Fraction(1,size)) for y in range(size)}
     table=[pow(base,x,modulus) for x in range(size)];powers=[root**k for k in range(size)]
     return {y:sum((powers[(y*(v-u))%size] for u in range(size) for v in range(size)
@@ -191,7 +207,7 @@ def decode(reading,modulus,base,precision,*,double_denominators=False):
     A verified period multiple can still yield only trivial gcds and fail.
     """
     n=_integer(modulus,'modulus',3,255);a=_integer(base,'base',2,n-1)
-    m=_integer(precision,'precision',1,4);y=_integer(reading,'phase reading',0,(1<<m)-1)
+    m=_integer(precision,'precision',1,5);y=_integer(reading,'phase reading',0,(1<<m)-1)
     if gcd(a,n)!=1:raise ValueError('postprocessing requires a coprime base')
     if type(double_denominators) is not bool:raise ValueError('double_denominators must be boolean')
     if y==0:return dict(reading=y,status='no_information',attempts=[],factors=None)
@@ -229,13 +245,15 @@ def assess(program,report):
     reference=exact_phase_law(program.modulus,program.base,program.precision,inverse_qft=program.inverse_qft)
     policies={}
     for doubled in (False,True):
-        extended=report.get('backend')=='cyclotomic'
-        success=C0 if extended else ZERO;readings=[]
+        backend=report.get('backend');extended=backend in ('cyclotomic','cyclotomic32')
+        field=Cyclotomic32 if backend=='cyclotomic32' else Cyclotomic if extended else Exact
+        success=field();readings=[]
         for label,probability in probabilities.items():
-            y=int(label,2);parsed=Cyclotomic.from_dict(probability['exact'])
-            if parsed!=Cyclotomic.coerce(reference[y]):raise AssertionError('calculator disagrees with exact Fourier law')
-            if not extended and parsed.hi:raise ValueError('original backend returned an extended-field result')
-            value=parsed if extended else parsed.lo
+            y=int(label,2);parsed=Cyclotomic32.from_dict(probability['exact'])
+            if parsed!=Cyclotomic32.coerce(reference[y]):raise AssertionError('calculator disagrees with exact Fourier law')
+            if backend!='cyclotomic32' and parsed.hi:raise ValueError('backend returned an undeclared extended field')
+            if not extended and parsed.lo.hi:raise ValueError('original backend returned an extended-field result')
+            value=parsed if backend=='cyclotomic32' else parsed.lo if extended else parsed.lo.lo
             outcome=decode(y,program.modulus,program.base,program.precision,double_denominators=doubled)
             if outcome['status']=='factored':success+=value
             readings.append(dict(outcome,probability=value.to_dict()))
@@ -249,8 +267,8 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--modulus',type=int,default=15);parser.add_argument('--base',type=int,default=2)
     parser.add_argument('--precision',type=int,default=3)
-    parser.add_argument('--oracle',choices=('rotation15','table'),default='rotation15')
-    parser.add_argument('--backend',choices=('clifford_frame','jya_frame','clifford_t','cyclotomic'),default='jya_frame')
+    parser.add_argument('--oracle',choices=('rotation15','table','arithmetic'),default='rotation15')
+    parser.add_argument('--backend',choices=('clifford_frame','jya_frame','clifford_t','cyclotomic','cyclotomic32'),default='jya_frame')
     parser.add_argument('--timeout',type=float,default=20)
     parser.add_argument('--example',action='store_true');parser.add_argument('--out',type=Path,required=True)
     args=parser.parse_args();program=build(args.modulus,args.base,precision=args.precision,oracle=args.oracle)

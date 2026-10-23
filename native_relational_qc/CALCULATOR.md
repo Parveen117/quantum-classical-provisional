@@ -53,7 +53,7 @@ q0=1, q1=0. This ordering is explicitly repeated in each result. A completed
 distribution is checked to sum to 1 in exact algebra; it is not a histogram of
 shots. The original backends repeat scalar calculations between outcomes, so
 select individual observations for large registers. The explicit `cyclotomic`
-backend prepares once and shares that state across the entire query batch.
+and `cyclotomic32` backends prepare once and share that state across the entire query batch.
 
 The example returns P(00)=1/2, YY=-1, and probabilities 1/2 at 00/11 and zero
 at 01/10. Phase-sensitive and 50-qubit inputs/results are also saved in
@@ -109,6 +109,12 @@ bounded sparse computational-basis support; this is not a wide Clifford-frame
 representation. Probability, Pauli expectation and distribution queries share
 one preparation. Geometry and `simplify: "exact"` are rejected on this backend.
 
+The explicit [cyclotomic32 backend](MODULAR_SHOR.md) extends this to Q(exp(i*pi/16))
+with sixteen rational coefficients and `p32/p32dg/cp32/cp32dg` gates. It retains
+the same width, query, support and whole-batch limit contracts. Both sparse
+phase backends move unchanged amplitudes for X/CX/CCX/SWAP permutations while
+counting every primitive visit; neither skips whole arithmetic circuits.
+
 Named single-qubit gates are `id/x/y/z/h/s/sdg/t/tdg/sx/sxdg` and the native
 `r/k/rk` operators. Arbitrary continuous rotations, general QAOA angles, dynamic
 measurements, reset and noise are not added by this calculator interface.
@@ -143,7 +149,7 @@ For `clifford_frame` and `jya_frame`, applicable representation limits are `max_
 `"limits": {"max_branches": 4096, "max_pairs": 1000000}`. `max_terms` and
 `contraction` do not apply to that backend. Its wide probabilities avoid the
 initial projector expansion but can still fail on residual or pair growth.
-For `cyclotomic`, applicable limits are `max_work`, `max_coefficient_bits` and
+For `cyclotomic` and `cyclotomic32`, applicable limits are `max_work`, `max_coefficient_bits` and
 `max_branches`; they apply to one preparation and **all** readouts together.
 Its report uses `limits_per_batch` and shared `statistics`, including
 `preparation_count`. A resource failure discards the entire batch, even if a
@@ -179,6 +185,9 @@ The cyclotomic result explicitly declares eight coefficients, adding
 `z, z*sqrt(2), i*z, i*z*sqrt(2)` for `z=exp(i*pi/8)`. Its certified real bounds
 also enclose `sqrt(2+sqrt(2))/2` and `sqrt(2-sqrt(2))/2` using rational intervals
 and integer square roots. The display error contract below remains the same.
+The `cyclotomic32` basis contains these eight coefficients and eight more
+multiplied by `w=exp(i*pi/16)`. Further rational half-angle bounds give the same
+outward display-error contract. Backend and basis identifiers remain explicit.
 
 `maximum_absolute_display_error` is half that interval width and is at most
 10^(-decimal_places). A decimal can have one extra digit because it is a
@@ -253,13 +262,18 @@ modular exponentiation and inverse QFT, then verifies continued-fraction period
 candidates before extracting factors. Both frame backends support up to three
 control bits through exact Clifford+T lowering. The explicit `cyclotomic`
 backend adds a fourth bit with an exact controlled 22.5-degree phase;
-five or more bits remain unsupported. Saved three-bit inputs:
+`cyclotomic32` adds a fifth with 11.25-degree phases. Six or more bits remain
+unsupported. The `arithmetic` oracle constructs modular multipliers from
+X/CX/CCX additions, with no truth table; it requires one of these two sparse
+phase backends. Saved three-bit inputs:
 [15](calculator_examples/shor15.json) and
 [21](calculator_examples/shor21.json). The assessment reports both strict CF and
 optional doubled-denominator policies, with their distinct success probabilities.
 Four-bit inputs and results are documented in [PHASE_EXTENSION.md](PHASE_EXTENSION.md).
 For N=21, strict CF success is still zero; the declared doubled-denominator
 policy improves from 1/4 to `3/16+5*sqrt(2)/64`, approximately 29.8%.
+At five bits, strict CF success is approximately 22.95%, and CF with doubles
+approximately 55.69%; see [MODULAR_SHOR.md](MODULAR_SHOR.md) for exact evidence.
 
 ## Historical interface verification at 8004981
 

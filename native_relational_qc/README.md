@@ -1,5 +1,10 @@
 # Native Relational Quantum Computing — v0.1
 
+**Latest: [modular arithmetic and five phase bits](MODULAR_SHOR.md).**
+`cyclotomic32` adds exact 11.25-degree phases. The `arithmetic` Shor oracle
+constructs reversible modular multipliers without truth tables, restores clean
+workspace and gives nonzero strict-CF factor recovery for N=21 at five bits.
+
 **New: [exact 22.5-degree phases](PHASE_EXTENSION.md).** The explicit `cyclotomic`
 backend embeds the original number field, reuses one sparse state per batch and
 supports four-bit Shor phase estimation. It has separate resource accounting;
@@ -7,7 +12,7 @@ the old frame engines retain their gate sets and large-register capabilities.
 
 **New: [small Shor factoring test](SHOR.md).** Exact modular exponentiation,
 inverse QFT and verified factor extraction run through both frame backends.
-N=15 and N=21 demonstrate correctness and the current three-bit phase boundary;
+N=15 and N=21 demonstrate correctness and the original three-bit phase boundary;
 structured 2056-site support does not imply general Shor execution at that size.
 
 **New: [Surya/jya local returns](JYA_FRAME.md).** `jya_frame` folds repeated

@@ -5,6 +5,8 @@
 [exact phase extension](PHASE_EXTENSION.md) adds four-bit circuits through an
 explicit `cyclotomic` backend. Earlier frame engines retain the boundary
 described here. Replay this page's frozen protocol at its baseline revision.
+The latest [modular-arithmetic upgrade](MODULAR_SHOR.md) supports five phase bits
+and a polynomial multiplier construction on an explicit sparse phase backend.
 
 Author: Monty. This upgrade adds a runnable order-finding circuit, exact
 Clifford+T lowering and verified classical factor extraction to the calculator.

@@ -132,7 +132,7 @@ class CyclotomicTests(unittest.TestCase):
         self.assertEqual(C.from_dict(a['policies']['convergents_and_doubles']['exact_success_probability']),C(Exact(F(3,16),F(5,64))))
         self.assertEqual(decode(5,21,2,4,double_denominators=True)['factors'],[3,7])
         with self.assertRaises(ValueError):p.request('clifford_frame')
-        with self.assertRaises(ValueError):build(21,2,precision=5,oracle='table')
+        with self.assertRaises(ValueError):build(21,2,precision=6,oracle='table')
 
     def test_resource_rejections_discard_batch_including_completed_prefix(self):
         c=PhaseCircuit(3).add('h',0).add('h',1).add('h',2)
