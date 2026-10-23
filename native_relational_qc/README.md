@@ -1,5 +1,10 @@
 # Native Relational Quantum Computing — v0.1
 
+**New: [exact 22.5-degree phases](PHASE_EXTENSION.md).** The explicit `cyclotomic`
+backend embeds the original number field, reuses one sparse state per batch and
+supports four-bit Shor phase estimation. It has separate resource accounting;
+the old frame engines retain their gate sets and large-register capabilities.
+
 **New: [small Shor factoring test](SHOR.md).** Exact modular exponentiation,
 inverse QFT and verified factor extraction run through both frame backends.
 N=15 and N=21 demonstrate correctness and the current three-bit phase boundary;

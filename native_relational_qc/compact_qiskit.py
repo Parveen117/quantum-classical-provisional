@@ -13,7 +13,11 @@ def to_qiskit(circuit):
     import numpy as np
     qc = QuantumCircuit(circuit.n_qubits)
     for name, qargs in circuit.operations:
-        if name == "r":
+        if name in ('p16','p16dg','cp16','cp16dg'):
+            from math import pi
+            phase=-pi/8 if name.endswith('dg') else pi/8
+            (qc.cp if name.startswith('c') else qc.p)(phase,*qargs)
+        elif name == "r":
             qc.append(UnitaryGate(np.array([[0, -1], [1, 0]], dtype=complex), label="R"), qargs)
         elif name == "k":
             qc.z(*qargs)

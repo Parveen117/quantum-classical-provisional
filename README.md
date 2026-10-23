@@ -2,6 +2,12 @@
 
 ## Native relational calculation engine
 
+The [exact phase extension](native_relational_qc/PHASE_EXTENSION.md) adds an
+explicit `cyclotomic` calculator backend with 22.5-degree phases and one prepared
+sparse state per batch. Four-bit inverse QFT and bounded Shor circuits now run
+through the calculator, with certified decimal displays and retained precision
+and resource failures.
+
 The [small Shor factoring qualification](native_relational_qc/SHOR.md) adds exact
 modular-oracle circuits, inverse QFT and verified period-to-factor processing.
 Paired N=15 and N=21 tests expose the current three-bit phase-precision boundary

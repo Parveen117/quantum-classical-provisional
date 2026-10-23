@@ -51,8 +51,9 @@ For a distribution, output strings follow `qubits` **left to right**. Thus
 `[1,0]` and string `"10"` mean q1=1, q0=0. With `[0,1]`, the same string means
 q0=1, q1=0. This ordering is explicitly repeated in each result. A completed
 distribution is checked to sum to 1 in exact algebra; it is not a histogram of
-shots. It currently repeats scalar calculations rather than sharing evolution
-between outcomes, so select individual observations for large registers.
+shots. The original backends repeat scalar calculations between outcomes, so
+select individual observations for large registers. The explicit `cyclotomic`
+backend prepares once and shares that state across the entire query batch.
 
 The example returns P(00)=1/2, YY=-1, and probabilities 1/2 at 00/11 and zero
 at 01/10. Phase-sensitive and 50-qubit inputs/results are also saved in
@@ -100,6 +101,14 @@ expanded operation list; no repeat syntax, angle rounding or implicit fallback
 is added. Work includes input scanning and recurrence arithmetic. The existing
 frame branch/pair limits still apply.
 
+The explicit [cyclotomic backend](PHASE_EXTENSION.md), `cyclotomic`, retains
+exact amplitudes in Q(exp(i*pi/8)). It supports the existing compact gate
+alphabet, including nonadjacent controlled gates and CCX, plus named
+`p16/p16dg/cp16/cp16dg` phases of ±22.5 degrees. Input width is 1–256, with
+bounded sparse computational-basis support; this is not a wide Clifford-frame
+representation. Probability, Pauli expectation and distribution queries share
+one preparation. Geometry and `simplify: "exact"` are rejected on this backend.
+
 Named single-qubit gates are `id/x/y/z/h/s/sdg/t/tdg/sx/sxdg` and the native
 `r/k/rk` operators. Arbitrary continuous rotations, general QAOA angles, dynamic
 measurements, reset and noise are not added by this calculator interface.
@@ -110,16 +119,17 @@ measurements, reset and noise are not added by this calculator interface.
 | Qubits | 1–256 or 1–2056 | 2056 only for explicit `stabilizer`/`clifford_t`/`clifford_frame`/`jya_frame`; not a performance guarantee |
 | Gates | 100,000 | Maximum declared operations |
 | Queries | 32 | Unique IDs required |
-| Scalar evaluations | 256 | Total across queries; a k-site distribution costs 2^k evaluations |
+| Scalar outputs | 256 | Total across queries; a k-site distribution counts 2^k outputs; cyclotomic shares evolution |
 | Distribution width | 8 sites | Prevent accidental enumeration of a whole large register |
-| Work | 10,000,000 | Backend work budget per scalar evaluation |
-| Coefficient bits | 4,096 | Backend coefficient budget per scalar evaluation |
+| Work | 10,000,000 | Per scalar evaluation on original backends; whole batch on cyclotomic |
+| Coefficient bits | 4,096 | Per scalar evaluation on original backends; whole batch on cyclotomic |
 | Factored bond | 256 | Allocated representation dimension, not a minimal Schmidt rank |
 | Factored coefficients | 1,000,000 | Inspected coefficient-collection cap |
 | Observer / Clifford+T terms | 100,000 | Expanded Pauli term cap |
 | Stabilizer generators | 2,056 | Requested joint-probability generator cap |
 | Frame residual branches | 4,096 | Exact sparse amplitudes, not classical mixture weights |
 | Frame candidate pairs | 1,000,000 | All upper-triangle candidates after diagonal filtering, including zero transitions |
+| Cyclotomic amplitude support | 4,096 | Per sparse amplitude map, including intermediate maps; requested maximum 65,536 |
 
 Set applicable backend limits with a `limits` object, for example
 `"limits": {"max_work": 1000000, "max_bond": 64}` for `factored`, or
@@ -133,12 +143,18 @@ For `clifford_frame` and `jya_frame`, applicable representation limits are `max_
 `"limits": {"max_branches": 4096, "max_pairs": 1000000}`. `max_terms` and
 `contraction` do not apply to that backend. Its wide probabilities avoid the
 initial projector expansion but can still fail on residual or pair growth.
+For `cyclotomic`, applicable limits are `max_work`, `max_coefficient_bits` and
+`max_branches`; they apply to one preparation and **all** readouts together.
+Its report uses `limits_per_batch` and shared `statistics`, including
+`preparation_count`. A resource failure discards the entire batch, even if a
+previous query had completed. Work includes amplitude visits and fixed-field
+arithmetic; decimal rendering is covered by wall time, not field-work units.
 Unknown fields, duplicate JSON
 keys, non-finite JSON constants, repeated query IDs and ambiguous qubit keys are
 rejected. Files are limited to 2 MiB. Parent-side input parsing/validation is
 bounded by these size caps and is outside the child wall timer.
 
-Each independent query can complete or hit an internal resource limit. Failed
+On the original backends, each independent query can complete or hit an internal resource limit. Failed
 queries have no value. An unfinished distribution is discarded rather than
 returned with a false normalization. A whole-batch wall timeout kills the child
 and returns no answers, including any completed prefix inside that child.
@@ -152,12 +168,17 @@ wall-limited execution. Only the latter imposes the child timeout.
 
 ## What the decimal certificate certifies
 
-The exact answer remains four rational coefficients in the basis
+On the original backends, an exact answer has four rational coefficients in the basis
 `1, sqrt(2), i, i*sqrt(2)`; real observations have zero imaginary coefficients.
 For an answer `a+b*sqrt(2)`, integer square root gives rational lower and upper
 bounds on sqrt(2). Multiplication respects the sign of b. Rational endpoints
 are rounded outwards to the requested decimal grid, and the reported decimal
 is their midpoint.
+
+The cyclotomic result explicitly declares eight coefficients, adding
+`z, z*sqrt(2), i*z, i*z*sqrt(2)` for `z=exp(i*pi/8)`. Its certified real bounds
+also enclose `sqrt(2+sqrt(2))/2` and `sqrt(2-sqrt(2))/2` using rational intervals
+and integer square roots. The display error contract below remains the same.
 
 `maximum_absolute_display_error` is half that interval width and is at most
 10^(-decimal_places). A decimal can have one extra digit because it is a
@@ -229,12 +250,16 @@ python -m native_relational_qc calculate \
 
 The [small Shor builder](SHOR.md) produces ordinary calculator requests for
 modular exponentiation and inverse QFT, then verifies continued-fraction period
-candidates before extracting factors. It supports both frame backends without
-changing their gate sets: controlled phases and Toffoli are explicitly lowered
-to exact Clifford+T. Precision is limited to three control bits; wider QFT angles
-are rejected. Saved inputs: [15](calculator_examples/shor15.json) and
+candidates before extracting factors. Both frame backends support up to three
+control bits through exact Clifford+T lowering. The explicit `cyclotomic`
+backend adds a fourth bit with an exact controlled 22.5-degree phase;
+five or more bits remain unsupported. Saved three-bit inputs:
+[15](calculator_examples/shor15.json) and
 [21](calculator_examples/shor21.json). The assessment reports both strict CF and
 optional doubled-denominator policies, with their distinct success probabilities.
+Four-bit inputs and results are documented in [PHASE_EXTENSION.md](PHASE_EXTENSION.md).
+For N=21, strict CF success is still zero; the declared doubled-denominator
+policy improves from 1/4 to `3/16+5*sqrt(2)/64`, approximately 29.8%.
 
 ## Historical interface verification at 8004981
 

@@ -1,5 +1,11 @@
 # Small exact Shor factoring qualification
 
+**Historical baseline:** the three-bit measurements below belong to commit
+`cfabd608b6dc28b1640a507bba4716c7de30e6c0`. The subsequent
+[exact phase extension](PHASE_EXTENSION.md) adds four-bit circuits through an
+explicit `cyclotomic` backend. Earlier frame engines retain the boundary
+described here. Replay this page's frozen protocol at its baseline revision.
+
 Author: Monty. This upgrade adds a runnable order-finding circuit, exact
 Clifford+T lowering and verified classical factor extraction to the calculator.
 It tests **Shor factoring**; the repository's earlier Shor workloads implement
