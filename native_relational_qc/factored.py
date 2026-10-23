@@ -4,7 +4,9 @@ Backward propagation consumes the product-preserving suffix without expanding
 its global Pauli sum. The remaining circuit is contracted with division-free
 matrix-product state factors and the returned local observers. This is a hybrid
 tensor-network evaluator, not a purely Heisenberg MPO solver or a new complexity
-claim. No SVD, numerical rank decision, truncation, or dense statevector is used.
+claim. The default boundary contraction uses exact packed integer matrix products;
+the original sparse scalar contraction remains selectable. No SVD, numerical
+rank decision, truncation, or dense statevector is used.
 """
 from dataclasses import dataclass
 from functools import lru_cache
@@ -25,7 +27,7 @@ class FactoredObservation:
         return {'value': self.value.to_dict(), **self.statistics,
                 'algebraically_exact': True, 'truncated_terms': 0,
                 'statevector_constructed': False,
-                'representation': 'product-observer suffix + sparse exact MPS contraction'}
+                'representation': 'product-observer suffix + exact MPS boundary contraction'}
 
 
 def _add_into(target, key, value):
@@ -84,11 +86,14 @@ class _Budget:
 
     def inspect(self, values, temporary=False):
         size = len(values)
+        bits = max((v.max_bits for v in values),default=1)
+        self.inspect_summary(size,bits,temporary)
+
+    def inspect_summary(self, size, bits, temporary=False):
         field = 'peak_temporary_coefficients' if temporary else 'peak_stored_coefficients'
         self.stats[field] = max(self.stats[field],size)
         if size > self.max_coefficients:
             self.fail('exact factored coefficient-count budget exceeded')
-        bits = max((v.max_bits for v in values),default=1)
         self.stats['max_coefficient_bits'] = max(self.stats['max_coefficient_bits'],bits)
         if bits > self.max_bits:
             self.fail('exact factored coefficient-bit budget exceeded')
@@ -152,10 +157,18 @@ class _StateFactors:
         self.sites = [[{(0,0):DONE},{}] for _ in range(n)]
         self.bonds = [1]*(n+1)
         self.budget = budget
+        self._site_sizes = [0]*n
+        self._site_bits = [1]*n
         self._inspect()
 
-    def _inspect(self):
-        self.budget.inspect([v for site in self.sites for matrix in site for v in matrix.values()])
+    def _inspect(self, changed=None):
+        # A local gate only changes its own sites. Reuse exact counts/bit
+        # maxima for the untouched sites instead of rescanning the whole MPS.
+        for q in range(len(self.sites)) if changed is None else changed:
+            values = [v for matrix in self.sites[q] for v in matrix.values()]
+            self._site_sizes[q] = len(values)
+            self._site_bits[q] = max((v.max_bits for v in values),default=1)
+        self.budget.inspect_summary(sum(self._site_sizes),max(self._site_bits,default=1))
 
     def single(self, name, q):
         u=_gate(name); old=self.sites[q]; new=[{},{}]
@@ -166,7 +179,7 @@ class _StateFactors:
                         self.budget.tick()
                         _add_into(new[a],key,u[a][b]*value)
         self.sites[q]=new
-        self._inspect()
+        self._inspect((q,))
 
     def controlled(self, name, control, target):
         if abs(control-target)!=1:
@@ -200,7 +213,7 @@ class _StateFactors:
                             _add_into(new_a[out],(l,2*r+1),u[out][bit]*v)
         self.sites[lo],self.sites[hi]=new_a,new_b
         self.bonds[hi]*=2
-        self._inspect()
+        self._inspect((lo,hi))
 
     def run(self, operations):
         for name,qs in operations:
@@ -216,7 +229,7 @@ class _StateFactors:
                 raise ValueError(f'gate {name} not supported by factored contraction')
             self.budget.stats['forward_gates']+=1
 
-    def read(self, factors):
+    def read_sparse(self, factors):
         boundary={(0,0):DONE}
         for site,factor in zip(self.sites,factors):
             self.budget.emit('boundary_start')
@@ -255,11 +268,47 @@ class _StateFactors:
             raise ArithmeticError('Hermitian readout acquired an imaginary value')
         return value
 
+    def read_integer(self, factors):
+        """Same boundary identity, with bounded exact integer dot products."""
+        from .integer_matrix import IntegerMatrix
+        boundary = IntegerMatrix.from_sparse({(0,0):DONE}, (1,1))
+        for q, (site, factor) in enumerate(zip(self.sites, factors)):
+            self.budget.emit('boundary_start')
+            shape = (self.bonds[q], self.bonds[q+1])
+            if shape[0]*shape[1] > self.budget.max_coefficients:
+                self.budget.fail('exact integer site allocation exceeds coefficient-count budget')
+            matrices = [IntegerMatrix.from_sparse(matrix, shape) for matrix in site]
+            local = _local_matrix(factor)
+            updated = None
+            for a in (0,1):
+                ket = None
+                for b in (0,1):
+                    if local[a][b] and site[b]:
+                        term = matrices[b].scale(local[a][b])
+                        ket = term if ket is None else ket.add(term)
+                if ket is not None and site[a]:
+                    ket.inspect(self.budget)
+                    term = matrices[a].adjoint().matmul(boundary.matmul(ket,self.budget),self.budget)
+                    updated = term if updated is None else updated.add(term)
+            if updated is None:
+                return ZERO
+            entries = updated.inspect(self.budget)
+            # Normalize once per output entry, not once per scalar operation.
+            boundary = IntegerMatrix.from_sparse(entries, updated.shape)
+            self.budget.stats['contracted_sites'] += 1
+        value = boundary.entries().get((0,0),DZERO).to_exact()
+        if value.c or value.d:
+            raise ArithmeticError('Hermitian readout acquired an imaginary value')
+        return value
+
 
 def _evaluate(circuit,factors,*,max_bond=256,max_coefficients=1000000,max_work=10000000,
-              max_coefficient_bits=4096,progress=None,causal_pruning=True,product_suffix=True):
+              max_coefficient_bits=4096,progress=None,causal_pruning=True,product_suffix=True,
+              contraction='integer'):
     if not isinstance(circuit,CompactCircuit):
         raise TypeError('factored execution requires CompactCircuit')
+    if contraction not in ('integer','sparse'):
+        raise ValueError('contraction must be integer or sparse')
     # Reject unsupported gates even when an observer would make them invisible.
     for name,qs in circuit.operations:
         if len(qs)>2 or (len(qs)==2 and (name not in ('cx','cz','ch','cs','ct','swap') or abs(qs[0]-qs[1])!=1)):
@@ -272,12 +321,13 @@ def _evaluate(circuit,factors,*,max_bond=256,max_coefficients=1000000,max_work=1
     budget.stats.update(input_qubits=circuit.n_qubits,active_qubits=len(sites),
                         input_gates=len(circuit.operations),causal_gates=len(operations),
                         causal_pruning=bool(causal_pruning),product_suffix=bool(product_suffix),
+                        contraction=contraction,
                         prefix_local_coefficients=sum(map(len,factors)),prefix_expanded_terms=prod(map(len,factors)))
     if product_suffix:
         operations,factors=_suffix(operations,factors,budget)
     state=_StateFactors(len(sites),budget)
     state.run(operations)
-    value=state.read(factors)
+    value=state.read_integer(factors) if contraction=='integer' else state.read_sparse(factors)
     budget.emit('completed')
     return FactoredObservation(value,dict(budget.stats))
 

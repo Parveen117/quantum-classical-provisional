@@ -1,5 +1,10 @@
 # Exact factored evaluation: recovered stress-test cases
 
+This file retains the original factored-engine measurements at `61f46e2`.
+The [subsequent integer-contraction upgrade](INTEGER_CONTRACTION.md) recovers the
+selected 50-qubit, 12-round cases discussed as failures below. Historical
+protocols, results and verification manifests are unchanged.
+
 The new backend recovers exact scalar answers on circuits where the previous
 expanded Pauli observer exhausted its budget. It keeps a product observable
 factored, then contracts the remaining circuit using exact sparse matrix-product

@@ -1,0 +1,650 @@
+{
+  "command": "python -m unittest discover -s tests -p 'test_native*.py' -v",
+  "tests_run": 128,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "elapsed_seconds": 17.173,
+  "methods": [
+    {
+      "method": "test_bell_probability_complex_observers_and_distribution",
+      "case": "test_native_calculator.CalculatorTests.test_bell_probability_complex_observers_and_distribution",
+      "status": "ok"
+    },
+    {
+      "method": "test_bitstrings_follow_explicit_site_order",
+      "case": "test_native_calculator.CalculatorTests.test_bitstrings_follow_explicit_site_order",
+      "status": "ok"
+    },
+    {
+      "method": "test_cli_stdin_and_legacy_commands",
+      "case": "test_native_calculator.CalculatorTests.test_cli_stdin_and_legacy_commands",
+      "status": "ok"
+    },
+    {
+      "method": "test_hashes_separate_circuit_from_query",
+      "case": "test_native_calculator.CalculatorTests.test_hashes_separate_circuit_from_query",
+      "status": "ok"
+    },
+    {
+      "method": "test_nonadjacent_backend_choice_is_explicit",
+      "case": "test_native_calculator.CalculatorTests.test_nonadjacent_backend_choice_is_explicit",
+      "status": "ok"
+    },
+    {
+      "method": "test_phase_is_retained",
+      "case": "test_native_calculator.CalculatorTests.test_phase_is_retained",
+      "status": "ok"
+    },
+    {
+      "method": "test_query_and_output_caps",
+      "case": "test_native_calculator.CalculatorTests.test_query_and_output_caps",
+      "status": "ok"
+    },
+    {
+      "method": "test_rejects_ambiguous_or_unsupported_input",
+      "case": "test_native_calculator.CalculatorTests.test_rejects_ambiguous_or_unsupported_input",
+      "status": "ok"
+    },
+    {
+      "method": "test_resource_failure_does_not_fabricate_answer",
+      "case": "test_native_calculator.CalculatorTests.test_resource_failure_does_not_fabricate_answer",
+      "status": "ok"
+    },
+    {
+      "method": "test_wall_timeout_returns_no_answer_and_rejects_bad_limits",
+      "case": "test_native_calculator.CalculatorTests.test_wall_timeout_returns_no_answer_and_rejects_bad_limits",
+      "status": "ok"
+    },
+    {
+      "method": "test_large_cancellation_keeps_certified_interval",
+      "case": "test_native_calculator.DecimalEnclosureTests.test_large_cancellation_keeps_certified_interval",
+      "status": "ok"
+    },
+    {
+      "method": "test_signed_rational_and_irrational_enclosures",
+      "case": "test_native_calculator.DecimalEnclosureTests.test_signed_rational_and_irrational_enclosures",
+      "status": "ok"
+    },
+    {
+      "method": "test_controlled_nonclifford_and_native_operations",
+      "case": "test_native_compact.CompactQiskitTests.test_controlled_nonclifford_and_native_operations",
+      "status": "ok"
+    },
+    {
+      "method": "test_import_does_not_guess_float_or_name",
+      "case": "test_native_compact.CompactQiskitTests.test_import_does_not_guess_float_or_name",
+      "status": "ok"
+    },
+    {
+      "method": "test_named_gate_export_and_independent_reference",
+      "case": "test_native_compact.CompactQiskitTests.test_named_gate_export_and_independent_reference",
+      "status": "ok"
+    },
+    {
+      "method": "test_seeded_nonclifford_circuits",
+      "case": "test_native_compact.CompactQiskitTests.test_seeded_nonclifford_circuits",
+      "status": "ok"
+    },
+    {
+      "method": "test_bell_exact_probabilities",
+      "case": "test_native_compact.CompactTests.test_bell_exact_probabilities",
+      "status": "ok"
+    },
+    {
+      "method": "test_control_target_orders_and_toffoli",
+      "case": "test_native_compact.CompactTests.test_control_target_orders_and_toffoli",
+      "status": "ok"
+    },
+    {
+      "method": "test_invalid_gate_query_and_dense_limit",
+      "case": "test_native_compact.CompactTests.test_invalid_gate_query_and_dense_limit",
+      "status": "ok"
+    },
+    {
+      "method": "test_inverse_restores_canonical_graph",
+      "case": "test_native_compact.CompactTests.test_inverse_restores_canonical_graph",
+      "status": "ok"
+    },
+    {
+      "method": "test_large_ghz_phase_and_return",
+      "case": "test_native_compact.CompactTests.test_large_ghz_phase_and_return",
+      "status": "ok"
+    },
+    {
+      "method": "test_large_superposition_and_nonclifford_phase",
+      "case": "test_native_compact.CompactTests.test_large_superposition_and_nonclifford_phase",
+      "status": "ok"
+    },
+    {
+      "method": "test_native_order_sign_retained",
+      "case": "test_native_compact.CompactTests.test_native_order_sign_retained",
+      "status": "ok"
+    },
+    {
+      "method": "test_phase_not_erased",
+      "case": "test_native_compact.CompactTests.test_phase_not_erased",
+      "status": "ok"
+    },
+    {
+      "method": "test_transactional_coefficient_budget",
+      "case": "test_native_compact.CompactTests.test_transactional_coefficient_budget",
+      "status": "ok"
+    },
+    {
+      "method": "test_transactional_node_budget",
+      "case": "test_native_compact.CompactTests.test_transactional_node_budget",
+      "status": "ok"
+    },
+    {
+      "method": "test_transactional_work_budget",
+      "case": "test_native_compact.CompactTests.test_transactional_work_budget",
+      "status": "ok"
+    },
+    {
+      "method": "test_exact_gate_unitarity",
+      "case": "test_native_compact.ExactArithmeticTests.test_exact_gate_unitarity",
+      "status": "ok"
+    },
+    {
+      "method": "test_field_identities",
+      "case": "test_native_compact.ExactArithmeticTests.test_field_identities",
+      "status": "ok"
+    },
+    {
+      "method": "test_float_and_zero_inverse_rejected",
+      "case": "test_native_compact.ExactArithmeticTests.test_float_and_zero_inverse_rejected",
+      "status": "ok"
+    },
+    {
+      "method": "test_nontrivial_inverse_and_distributivity",
+      "case": "test_native_compact.ExactArithmeticTests.test_nontrivial_inverse_and_distributivity",
+      "status": "ok"
+    },
+    {
+      "method": "test_noise_recovery_against_forward_density_reference",
+      "case": "test_native_dynamic.DynamicReferenceTests.test_noise_recovery_against_forward_density_reference",
+      "status": "ok"
+    },
+    {
+      "method": "test_qiskit_import_rejects_unsupported_control_flow",
+      "case": "test_native_dynamic.DynamicReferenceTests.test_qiskit_import_rejects_unsupported_control_flow",
+      "status": "ok"
+    },
+    {
+      "method": "test_qiskit_roundtrip_nested_conditions_and_reordered_wires",
+      "case": "test_native_dynamic.DynamicReferenceTests.test_qiskit_roundtrip_nested_conditions_and_reordered_wires",
+      "status": "ok"
+    },
+    {
+      "method": "test_rational_noise_export_against_aer_density",
+      "case": "test_native_dynamic.DynamicReferenceTests.test_rational_noise_export_against_aer_density",
+      "status": "ok"
+    },
+    {
+      "method": "test_seeded_dynamic_circuits_against_forward_density_branches",
+      "case": "test_native_dynamic.DynamicReferenceTests.test_seeded_dynamic_circuits_against_forward_density_branches",
+      "status": "ok"
+    },
+    {
+      "method": "test_bitflip_recovery_exact_noise_and_multiple_rounds",
+      "case": "test_native_dynamic.DynamicTests.test_bitflip_recovery_exact_noise_and_multiple_rounds",
+      "status": "ok"
+    },
+    {
+      "method": "test_budgets_fail_without_modifying_program",
+      "case": "test_native_dynamic.DynamicTests.test_budgets_fail_without_modifying_program",
+      "status": "ok"
+    },
+    {
+      "method": "test_feedforward_uses_current_memory_and_zero_condition",
+      "case": "test_native_dynamic.DynamicTests.test_feedforward_uses_current_memory_and_zero_condition",
+      "status": "ok"
+    },
+    {
+      "method": "test_initial_classical_memory_and_empty_query",
+      "case": "test_native_dynamic.DynamicTests.test_initial_classical_memory_and_empty_query",
+      "status": "ok"
+    },
+    {
+      "method": "test_long_reused_memory_program_stays_compact",
+      "case": "test_native_dynamic.DynamicTests.test_long_reused_memory_program_stays_compact",
+      "status": "ok"
+    },
+    {
+      "method": "test_measurement_overwrites_old_memory",
+      "case": "test_native_dynamic.DynamicTests.test_measurement_overwrites_old_memory",
+      "status": "ok"
+    },
+    {
+      "method": "test_measurement_retains_quantum_classical_correlation",
+      "case": "test_native_dynamic.DynamicTests.test_measurement_retains_quantum_classical_correlation",
+      "status": "ok"
+    },
+    {
+      "method": "test_rational_channels_and_y_signs",
+      "case": "test_native_dynamic.DynamicTests.test_rational_channels_and_y_signs",
+      "status": "ok"
+    },
+    {
+      "method": "test_reject_invalid_inputs",
+      "case": "test_native_dynamic.DynamicTests.test_reject_invalid_inputs",
+      "status": "ok"
+    },
+    {
+      "method": "test_repeated_measurement_and_later_basis_change",
+      "case": "test_native_dynamic.DynamicTests.test_repeated_measurement_and_later_basis_change",
+      "status": "ok"
+    },
+    {
+      "method": "test_reset_preserves_remote_mixed_state_and_old_record",
+      "case": "test_native_dynamic.DynamicTests.test_reset_preserves_remote_mixed_state_and_old_record",
+      "status": "ok"
+    },
+    {
+      "method": "test_shor_y_error_and_negative_control",
+      "case": "test_native_dynamic.DynamicTests.test_shor_y_error_and_negative_control",
+      "status": "ok"
+    },
+    {
+      "method": "test_teleportation_negative_control",
+      "case": "test_native_dynamic.DynamicTests.test_teleportation_negative_control",
+      "status": "ok"
+    },
+    {
+      "method": "test_teleportation_preserves_nonclifford_state_all_branches",
+      "case": "test_native_dynamic.DynamicTests.test_teleportation_preserves_nonclifford_state_all_branches",
+      "status": "ok"
+    },
+    {
+      "method": "test_arithmetic_matches_general_field",
+      "case": "test_native_factored.DyadicTests.test_arithmetic_matches_general_field",
+      "status": "ok"
+    },
+    {
+      "method": "test_canonical_and_rejected_inputs",
+      "case": "test_native_factored.DyadicTests.test_canonical_and_rejected_inputs",
+      "status": "ok"
+    },
+    {
+      "method": "test_adjacent_swap",
+      "case": "test_native_factored.FactoredReferenceTests.test_adjacent_swap",
+      "status": "ok"
+    },
+    {
+      "method": "test_control_orientation_and_complex_readouts",
+      "case": "test_native_factored.FactoredReferenceTests.test_control_orientation_and_complex_readouts",
+      "status": "ok"
+    },
+    {
+      "method": "test_ablation_and_causal_pruning_preserve_value",
+      "case": "test_native_factored.FactoredTests.test_ablation_and_causal_pruning_preserve_value",
+      "status": "ok"
+    },
+    {
+      "method": "test_bell_and_order_sensitive_interference",
+      "case": "test_native_factored.FactoredTests.test_bell_and_order_sensitive_interference",
+      "status": "ok"
+    },
+    {
+      "method": "test_complete_exact_matches_expanded",
+      "case": "test_native_factored.FactoredTests.test_complete_exact_matches_expanded",
+      "status": "ok"
+    },
+    {
+      "method": "test_identity_and_impossible_readout",
+      "case": "test_native_factored.FactoredTests.test_identity_and_impossible_readout",
+      "status": "ok"
+    },
+    {
+      "method": "test_resource_limits_fail_with_statistics",
+      "case": "test_native_factored.FactoredTests.test_resource_limits_fail_with_statistics",
+      "status": "ok"
+    },
+    {
+      "method": "test_suffix_factorization_of_actual_failed_50_qubit_case",
+      "case": "test_native_factored.FactoredTests.test_suffix_factorization_of_actual_failed_50_qubit_case",
+      "status": "ok"
+    },
+    {
+      "method": "test_unsupported_and_invalid_inputs_fail",
+      "case": "test_native_factored.FactoredTests.test_unsupported_and_invalid_inputs_fail",
+      "status": "ok"
+    },
+    {
+      "method": "test_all_supported_controls_both_directions_and_swap",
+      "case": "test_native_integer_matrix.IntegerContractionTests.test_all_supported_controls_both_directions_and_swap",
+      "status": "ok"
+    },
+    {
+      "method": "test_cached_site_budget_matches_full_storage_scan",
+      "case": "test_native_integer_matrix.IntegerContractionTests.test_cached_site_budget_matches_full_storage_scan",
+      "status": "ok"
+    },
+    {
+      "method": "test_frozen_50_qubit_answer_and_native_backend_diagnostics",
+      "case": "test_native_integer_matrix.IntegerContractionTests.test_frozen_50_qubit_answer_and_native_backend_diagnostics",
+      "status": "ok"
+    },
+    {
+      "method": "test_integer_sparse_and_expanded_observers_agree_exactly",
+      "case": "test_native_integer_matrix.IntegerContractionTests.test_integer_sparse_and_expanded_observers_agree_exactly",
+      "status": "ok"
+    },
+    {
+      "method": "test_invalid_contraction_and_budget_fail_without_answer",
+      "case": "test_native_integer_matrix.IntegerContractionTests.test_invalid_contraction_and_budget_fail_without_answer",
+      "status": "ok"
+    },
+    {
+      "method": "test_adjoint_and_scale_preserve_phase",
+      "case": "test_native_integer_matrix.IntegerMatrixTests.test_adjoint_and_scale_preserve_phase",
+      "status": "ok"
+    },
+    {
+      "method": "test_all_basis_products_and_signs",
+      "case": "test_native_integer_matrix.IntegerMatrixTests.test_all_basis_products_and_signs",
+      "status": "ok"
+    },
+    {
+      "method": "test_exact_cancellation_and_zero_products",
+      "case": "test_native_integer_matrix.IntegerMatrixTests.test_exact_cancellation_and_zero_products",
+      "status": "ok"
+    },
+    {
+      "method": "test_large_negative_coefficients_and_carry_bound",
+      "case": "test_native_integer_matrix.IntegerMatrixTests.test_large_negative_coefficients_and_carry_bound",
+      "status": "ok"
+    },
+    {
+      "method": "test_preallocation_work_and_coefficient_limits",
+      "case": "test_native_integer_matrix.IntegerMatrixTests.test_preallocation_work_and_coefficient_limits",
+      "status": "ok"
+    },
+    {
+      "method": "test_rectangular_products_with_mixed_denominators",
+      "case": "test_native_integer_matrix.IntegerMatrixTests.test_rectangular_products_with_mixed_denominators",
+      "status": "ok"
+    },
+    {
+      "method": "test_shape_mismatch_is_rejected",
+      "case": "test_native_integer_matrix.IntegerMatrixTests.test_shape_mismatch_is_rejected",
+      "status": "ok"
+    },
+    {
+      "method": "test_seeded_nonclifford_pauli_queries",
+      "case": "test_native_observer.ObserverReferenceTests.test_seeded_nonclifford_pauli_queries",
+      "status": "ok"
+    },
+    {
+      "method": "test_toffoli_and_swap_queries",
+      "case": "test_native_observer.ObserverReferenceTests.test_toffoli_and_swap_queries",
+      "status": "ok"
+    },
+    {
+      "method": "test_128_qubit_full_support_entangled_family",
+      "case": "test_native_observer.ObserverTests.test_128_qubit_full_support_entangled_family",
+      "status": "ok"
+    },
+    {
+      "method": "test_bell_joint_and_y_observers",
+      "case": "test_native_observer.ObserverTests.test_bell_joint_and_y_observers",
+      "status": "ok"
+    },
+    {
+      "method": "test_exact_cancellation",
+      "case": "test_native_observer.ObserverTests.test_exact_cancellation",
+      "status": "ok"
+    },
+    {
+      "method": "test_exact_interference",
+      "case": "test_native_observer.ObserverTests.test_exact_interference",
+      "status": "ok"
+    },
+    {
+      "method": "test_fail_closed_budgets",
+      "case": "test_native_observer.ObserverTests.test_fail_closed_budgets",
+      "status": "ok"
+    },
+    {
+      "method": "test_joint_observer_invariant_when_terms_are_permuted",
+      "case": "test_native_observer.ObserverTests.test_joint_observer_invariant_when_terms_are_permuted",
+      "status": "ok"
+    },
+    {
+      "method": "test_source_boundary_is_not_applied_early",
+      "case": "test_native_observer.ObserverTests.test_source_boundary_is_not_applied_early",
+      "status": "ok"
+    },
+    {
+      "method": "test_analytic_program_roundtrips",
+      "case": "test_native_qiskit_adapter.QiskitAdapterTests.test_analytic_program_roundtrips",
+      "status": "ok"
+    },
+    {
+      "method": "test_bound_parameters_are_accepted",
+      "case": "test_native_qiskit_adapter.QiskitAdapterTests.test_bound_parameters_are_accepted",
+      "status": "ok"
+    },
+    {
+      "method": "test_compiler_needs_explicit_target",
+      "case": "test_native_qiskit_adapter.QiskitAdapterTests.test_compiler_needs_explicit_target",
+      "status": "ok"
+    },
+    {
+      "method": "test_custom_unitary_and_permuted_qargs",
+      "case": "test_native_qiskit_adapter.QiskitAdapterTests.test_custom_unitary_and_permuted_qargs",
+      "status": "ok"
+    },
+    {
+      "method": "test_explicit_global_phase_gate",
+      "case": "test_native_qiskit_adapter.QiskitAdapterTests.test_explicit_global_phase_gate",
+      "status": "ok"
+    },
+    {
+      "method": "test_fails_closed_on_dynamic_nonunitary_and_unbound",
+      "case": "test_native_qiskit_adapter.QiskitAdapterTests.test_fails_closed_on_dynamic_nonunitary_and_unbound",
+      "status": "ok"
+    },
+    {
+      "method": "test_independent_standard_gate_semantics",
+      "case": "test_native_qiskit_adapter.QiskitAdapterTests.test_independent_standard_gate_semantics",
+      "status": "ok"
+    },
+    {
+      "method": "test_labels_cannot_override_matrix_semantics",
+      "case": "test_native_qiskit_adapter.QiskitAdapterTests.test_labels_cannot_override_matrix_semantics",
+      "status": "ok"
+    },
+    {
+      "method": "test_native_r_bridge_and_controlled_phase",
+      "case": "test_native_qiskit_adapter.QiskitAdapterTests.test_native_r_bridge_and_controlled_phase",
+      "status": "ok"
+    },
+    {
+      "method": "test_offline_hardware_target_compilation",
+      "case": "test_native_qiskit_adapter.QiskitAdapterTests.test_offline_hardware_target_compilation",
+      "status": "ok"
+    },
+    {
+      "method": "test_partial_measurement_register_order",
+      "case": "test_native_qiskit_adapter.QiskitAdapterTests.test_partial_measurement_register_order",
+      "status": "ok"
+    },
+    {
+      "method": "test_phase_erasure_negative_control",
+      "case": "test_native_qiskit_adapter.QiskitAdapterTests.test_phase_erasure_negative_control",
+      "status": "ok"
+    },
+    {
+      "method": "test_seeded_mixed_circuits",
+      "case": "test_native_qiskit_adapter.QiskitAdapterTests.test_seeded_mixed_circuits",
+      "status": "ok"
+    },
+    {
+      "method": "test_budgets_and_invalid_bit_selections",
+      "case": "test_native_readout.ReadoutTests.test_budgets_and_invalid_bit_selections",
+      "status": "ok"
+    },
+    {
+      "method": "test_exact_order_in_quadratic_field",
+      "case": "test_native_readout.ReadoutTests.test_exact_order_in_quadratic_field",
+      "status": "ok"
+    },
+    {
+      "method": "test_full_correlated_readout_and_bit_order",
+      "case": "test_native_readout.ReadoutTests.test_full_correlated_readout_and_bit_order",
+      "status": "ok"
+    },
+    {
+      "method": "test_many_deterministic_bits_do_not_expand_joint_projector",
+      "case": "test_native_readout.ReadoutTests.test_many_deterministic_bits_do_not_expand_joint_projector",
+      "status": "ok"
+    },
+    {
+      "method": "test_nonclifford_output_and_empty_reading",
+      "case": "test_native_readout.ReadoutTests.test_nonclifford_output_and_empty_reading",
+      "status": "ok"
+    },
+    {
+      "method": "test_original_workload_runs_with_quantum_sdk_imports_blocked",
+      "case": "test_native_readout.ReadoutTests.test_original_workload_runs_with_quantum_sdk_imports_blocked",
+      "status": "ok"
+    },
+    {
+      "method": "test_all_named_gates_are_unitary",
+      "case": "test_native_relational_qc.AlgebraTests.test_all_named_gates_are_unitary",
+      "status": "ok"
+    },
+    {
+      "method": "test_gate_validation",
+      "case": "test_native_relational_qc.AlgebraTests.test_gate_validation",
+      "status": "ok"
+    },
+    {
+      "method": "test_native_relations",
+      "case": "test_native_relational_qc.AlgebraTests.test_native_relations",
+      "status": "ok"
+    },
+    {
+      "method": "test_nonunitary_emk_is_rejected",
+      "case": "test_native_relational_qc.AlgebraTests.test_nonunitary_emk_is_rejected",
+      "status": "ok"
+    },
+    {
+      "method": "test_operator_phase_survives_control",
+      "case": "test_native_relational_qc.AlgebraTests.test_operator_phase_survives_control",
+      "status": "ok"
+    },
+    {
+      "method": "test_analytic_algorithm_answers",
+      "case": "test_native_relational_qc.CircuitTests.test_analytic_algorithm_answers",
+      "status": "ok"
+    },
+    {
+      "method": "test_bell_observers",
+      "case": "test_native_relational_qc.CircuitTests.test_bell_observers",
+      "status": "ok"
+    },
+    {
+      "method": "test_control_and_target_order",
+      "case": "test_native_relational_qc.CircuitTests.test_control_and_target_order",
+      "status": "ok"
+    },
+    {
+      "method": "test_control_on_zero",
+      "case": "test_native_relational_qc.CircuitTests.test_control_on_zero",
+      "status": "ok"
+    },
+    {
+      "method": "test_existing_evidence_model_bridge",
+      "case": "test_native_relational_qc.CircuitTests.test_existing_evidence_model_bridge",
+      "status": "ok"
+    },
+    {
+      "method": "test_global_phase_is_preserved",
+      "case": "test_native_relational_qc.CircuitTests.test_global_phase_is_preserved",
+      "status": "ok"
+    },
+    {
+      "method": "test_invalid_operation_and_measurement",
+      "case": "test_native_relational_qc.CircuitTests.test_invalid_operation_and_measurement",
+      "status": "ok"
+    },
+    {
+      "method": "test_json_roundtrip_and_digest_binding",
+      "case": "test_native_relational_qc.CircuitTests.test_json_roundtrip_and_digest_binding",
+      "status": "ok"
+    },
+    {
+      "method": "test_no_matrix_aliasing",
+      "case": "test_native_relational_qc.CircuitTests.test_no_matrix_aliasing",
+      "status": "ok"
+    },
+    {
+      "method": "test_partial_nontrivial_classical_map",
+      "case": "test_native_relational_qc.CircuitTests.test_partial_nontrivial_classical_map",
+      "status": "ok"
+    },
+    {
+      "method": "test_common_complex_scale_invariant",
+      "case": "test_native_relational_qc.StateTests.test_common_complex_scale_invariant",
+      "status": "ok"
+    },
+    {
+      "method": "test_invalid_states_and_dimensions",
+      "case": "test_native_relational_qc.StateTests.test_invalid_states_and_dimensions",
+      "status": "ok"
+    },
+    {
+      "method": "test_joint_state_keeps_entanglement",
+      "case": "test_native_relational_qc.StateTests.test_joint_state_keeps_entanglement",
+      "status": "ok"
+    },
+    {
+      "method": "test_large_and_small_scales",
+      "case": "test_native_relational_qc.StateTests.test_large_and_small_scales",
+      "status": "ok"
+    },
+    {
+      "method": "test_second_chart_covers_zero_first_amplitude",
+      "case": "test_native_relational_qc.StateTests.test_second_chart_covers_zero_first_amplitude",
+      "status": "ok"
+    },
+    {
+      "method": "test_state_access_does_not_mutate_original",
+      "case": "test_native_relational_qc.StateTests.test_state_access_does_not_mutate_original",
+      "status": "ok"
+    },
+    {
+      "method": "test_tensor_register_order",
+      "case": "test_native_relational_qc.StateTests.test_tensor_register_order",
+      "status": "ok"
+    },
+    {
+      "method": "test_unitary_preserves_relational_overlap",
+      "case": "test_native_relational_qc.StateTests.test_unitary_preserves_relational_overlap",
+      "status": "ok"
+    },
+    {
+      "method": "test_limit_exposes_partial_work_without_an_answer",
+      "case": "test_native_stress.StressDiagnosticsTests.test_limit_exposes_partial_work_without_an_answer",
+      "status": "ok"
+    },
+    {
+      "method": "test_process_memory_uses_proc_self",
+      "case": "test_native_stress.StressDiagnosticsTests.test_process_memory_uses_proc_self",
+      "status": "ok"
+    },
+    {
+      "method": "test_progress_does_not_change_answer",
+      "case": "test_native_stress.StressDiagnosticsTests.test_progress_does_not_change_answer",
+      "status": "ok"
+    },
+    {
+      "method": "test_seed_and_lightcone",
+      "case": "test_native_stress.StressDiagnosticsTests.test_seed_and_lightcone",
+      "status": "ok"
+    }
+  ]
+}

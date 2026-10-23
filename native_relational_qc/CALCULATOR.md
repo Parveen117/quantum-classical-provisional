@@ -125,14 +125,26 @@ The result hashes the canonical circuit separately from the full normalized
 request, so changing an observable changes the request hash while preserving
 the circuit hash. Hashes identify inputs; they are not a proof of correctness.
 
-## Recorded verification
+## Integer-contraction upgrade
 
-[calculator_verification.json](calculator_verification.json) records the current
+The default factored engine now uses exact integer matrix contraction. The
+selected 50-qubit, 12-round local and all-site parity cases complete under the
+original per-query benchmark budget. See [the implementation and measured
+scope](INTEGER_CONTRACTION.md), [the input](calculator_examples/brickwork_50q_12r.json)
+and [the recorded output](calculator_examples/brickwork_50q_12r.result.json).
+Results identify `contraction: "integer"`; all existing exactness and
+display-enclosure contracts remain. The example explicitly raises the per-query
+work limit and allows 40 seconds for its two-query batch.
+
+## Historical interface verification at 8004981
+
+[calculator_verification.json](calculator_verification.json) records the original
 tests, source hashes, sample outputs and their agreement with the prior exact
 50-qubit benchmark. The [factored benchmark](FACTORED.md) remains a historical
-performance record. This interface does not change its engine or remove the
-12-round timeout boundary, and it does not establish a speed advantage over Aer
-MPS. No release, merge or hardware submission is part of this update.
+performance record. That interface-only revision did not change the engine or
+remove its 12-round timeout boundary. The subsequent integer-contraction upgrade
+is documented separately above. Neither record establishes general superiority
+over Aer MPS.
 
 
 The recorded calculator smoke runs are:
