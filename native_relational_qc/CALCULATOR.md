@@ -125,6 +125,20 @@ The result hashes the canonical circuit separately from the full normalized
 request, so changing an observable changes the request hash while preserving
 the circuit hash. Hashes identify inputs; they are not a proof of correctness.
 
+## Reversible logic examples
+
+The [reversible logic layer](REVERSIBLE_LOGIC.md) generates ordinary calculator
+requests for exact addition, phase kickback and an arithmetic search. These
+examples explicitly use `"backend": "observer"` for CCX and nonadjacent gates:
+
+```bash
+python -m native_relational_qc.reversible_logic_demo --example search --out /tmp/search.json
+python -m native_relational_qc calculate /tmp/search.json --timeout 20
+```
+
+The mathematical interface retains inputs and returns temporary workspace to
+zero; its logical gate counts are not physical entropy or energy estimates.
+
 ## Optional exact reduction
 
 Optional `"simplify": "exact"` now applies [guarded exact gate reduction](EXACT_REDUCTION.md)

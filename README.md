@@ -6,6 +6,12 @@ The [quantum-circuit calculator](native_relational_qc/CALCULATOR.md) accepts cus
 circuit/query JSON and returns exact answers, certified decimal enclosures and
 cost diagnostics through `python -m native_relational_qc calculate INPUT.json`.
 
+The [reversible logic and arithmetic layer](native_relational_qc/REVERSIBLE_LOGIC.md)
+compiles small Boolean functions into coherent quantum oracles, adds a clean
+four-bit adder, and demonstrates an arithmetic search whose interference depends
+on uncomputing temporary outputs. Exact threshold-model and transport checks
+keep physical assumptions separate from verified circuit behavior.
+
 The optional [exact circuit reducer](native_relational_qc/EXACT_REDUCTION.md)
 removes provably redundant gates with a retained phase ledger. It includes a
 50-qubit compute/undo example, full-operator tests and an explicit comparison
