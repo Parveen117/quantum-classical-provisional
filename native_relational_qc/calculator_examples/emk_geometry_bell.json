@@ -1,0 +1,48 @@
+{
+  "schema": "nrqc-calculator-v1",
+  "n_qubits": 50,
+  "operations": [
+    [
+      "h",
+      [
+        24
+      ]
+    ],
+    [
+      "cx",
+      [
+        24,
+        25
+      ]
+    ]
+  ],
+  "contraction": "streaming",
+  "decimal_places": 18,
+  "queries": [
+    {
+      "id": "emk_geometry_bell",
+      "kind": "geometry",
+      "generators": [
+        {
+          "paulis": {
+            "24": "X"
+          }
+        },
+        {
+          "paulis": {
+            "25": "X"
+          }
+        },
+        {
+          "sign": -1,
+          "paulis": {
+            "24": "X"
+          }
+        },
+        {
+          "paulis": {}
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "nrqc-calculator-v1",
+  "n_qubits": 1,
+  "operations": [],
+  "contraction": "streaming",
+  "decimal_places": 18,
+  "queries": [
+    {
+      "id": "emk_geometry_frame",
+      "kind": "geometry",
+      "generators": [
+        {
+          "paulis": {
+            "0": "Y"
+          }
+        },
+        {
+          "sign": -1,
+          "paulis": {
+            "0": "X"
+          }
+        },
+        {
+          "paulis": {
+            "0": "Z"
+          }
+        }
+      ]
+    }
+  ]
+}

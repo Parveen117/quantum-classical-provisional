@@ -1,0 +1,177 @@
+{
+  "author": "Monty",
+  "calculator_change": "Geometry request/serialization added after frozen streaming commit; historical source-bound evidence remains pinned to that commit.",
+  "checks": {
+    "both_native_engines_and_streaming_agree": true,
+    "direct_projector_trace_equals_covariance": true,
+    "full_complex_tensor_reconstruction_after_real_metric_factorization": true,
+    "independent_qiskit_covariance_atol": 2e-13,
+    "native_emk_products_against_independent_exact_matrices": true,
+    "opposite_curvature_same_metric_negative_control": true,
+    "partial_geometry_discarded_on_resource_failure": true,
+    "real_rank_two_complex_rank_one_negative_control": true
+  },
+  "claim_boundary": [
+    "Finite pure-circuit cut and 1..8 signed Pauli controls only",
+    "Exact dependency reduction is for the requested real tangent tensor, not MPS bond compression",
+    "No UGD ledger erased or full numeral algebra substitution",
+    "No spacetime or Einstein field-equation derivation",
+    "Tests and exact algebraic witnesses are not proof-assistant verification or empirical physics"
+  ],
+  "examples": [
+    {
+      "complex_gram_rank": 1,
+      "exact_tensor_matches_saved": true,
+      "name": "emk_geometry_bell",
+      "real_tangent_rank": 1,
+      "request_sha256": "dfed416b8c8ab1a844d76002c70f99b7c2df0d237dca7df2dfad54f34ae16493",
+      "scalar_evaluations": 3,
+      "whole_worker_seconds": 0.12200434300029883
+    },
+    {
+      "complex_gram_rank": 1,
+      "exact_tensor_matches_saved": true,
+      "name": "emk_geometry_frame",
+      "real_tangent_rank": 2,
+      "request_sha256": "4b06f79cb6e0d2f25ce9737ac2a635d1e83f75c4b09172e5268c4b36b1b82495",
+      "scalar_evaluations": 3,
+      "whole_worker_seconds": 0.10655422800482484
+    }
+  ],
+  "inherited_streaming_evidence_commit": "ed513acef16b61ac17d03b2afe9868f9f5f01c40",
+  "schema": "nrqc-emk-geometry-verification-v1",
+  "sdk_blocked_native_replay": true,
+  "source_adapter_audit": {
+    "interpretation": "Scoped source certificates replay; strict numeral carry and digit product are not substituted for the circuit coefficient field.",
+    "phase_adapter_witness": {
+      "K": 4,
+      "left_exponent": 1,
+      "quantum_phase_homomorphism": false,
+      "quantum_phase_product_exponent": 2,
+      "right_exponent": 1,
+      "source_product_exponent": 1
+    },
+    "schema": "nrqc-native-source-adapter-audit-v1",
+    "source_certificates": {
+      "emk": {
+        "canonical_json_sha256": "1aec0ea282671a9a5a3b7afb21754726d48766b8f54221da994980a0e70b9d0f",
+        "verdicts": {
+          "T1_z2_grading": "PASS",
+          "T2_ugd_multiplicative_law_in_seam_channel": "PASS",
+          "T3_cfe_rebuilt_on_native_carrier": "PASS",
+          "T4_residue_on_native_carrier": "PASS",
+          "T5_the_dial_was_the_odd_grade": "PASS"
+        }
+      },
+      "ugd": {
+        "canonical_json_sha256": "a5403e86b2f8f8eeebbb382ac04652101a2132b641bfc2f31e6b13348590a0e3",
+        "verdicts": {
+          "T1_phase_alphabet_and_quarter_turn": "PASS",
+          "T2_carry_discipline_conserves": "PASS",
+          "T3_scale_convolution_multiplication": "PASS",
+          "T4_classical_projection_is_blind_to_seam": "PASS",
+          "T5_cut_zero": "PASS",
+          "T6_lambda_logic": "PASS"
+        }
+      }
+    },
+    "source_commit": "35d63e4ac0d8cf161c549654ce6b430d68afbde4",
+    "source_modified": false,
+    "source_pins": {
+      "emk": {
+        "git_blob": "eaf3c3f65476f37165c75031fcd6cfb2cb66f710",
+        "sha256": "49d8548e7e3ccc2ce77bdc0f5a317b737f3bd37dc4d9e1f90c9f87852c37d1c0"
+      },
+      "ugd": {
+        "git_blob": "c833e6d1f85772dea171906ac11135976ac06b09",
+        "sha256": "23430ebc060a9a8dd1aab670392bcb82d46dd148c6a643bda87d61a4e206dc85"
+      }
+    },
+    "source_repository": "Parveen117/Publications",
+    "status": "PASS",
+    "strict_carry_witness": {
+      "equal_total_charge": true,
+      "left": {
+        "digits": {
+          "0": [
+            0,
+            1
+          ]
+        },
+        "ledger": 0,
+        "total_seam": 1
+      },
+      "right": {
+        "digits": {
+          "0": [
+            0,
+            0
+          ]
+        },
+        "ledger": 1,
+        "total_seam": 1
+      },
+      "strict_equality": false
+    }
+  },
+  "source_commit": "35d63e4ac0d8cf161c549654ce6b430d68afbde4",
+  "source_git_blobs": {
+    "papers/emk-ugd-algebra/CONNECTION_CALCULUS.md": "d07f13191ce6443ca54966b0e751a585108254d2",
+    "papers/emk-ugd-algebra/UGD_ALGEBRA_CONTRACT.md": "edcfa572b688bbc1b9c07a9b8267f877248a39a7",
+    "papers/emk-ugd-algebra/certificates/emk2_native_carrier.py": "eaf3c3f65476f37165c75031fcd6cfb2cb66f710",
+    "papers/emk-ugd-algebra/certificates/ugd1_numerals.py": "c833e6d1f85772dea171906ac11135976ac06b09",
+    "papers/native-common-cone-limit/sources/CID_D2.md": "4fb8faabb76caa92680281354d9e008a293a27f7"
+  },
+  "source_repository": "Parveen117/Publications",
+  "source_sha256": {
+    "CALCULATOR.md": "0c950e9e9f690e030569adaf80fd46c06d7d6e4d18db4eeaf9eada1b4e73d51a",
+    "EMK_GEOMETRY.md": "dac871e818effe33914e75f33c74808d38ae97174a00c0a6f7a066101f52222e",
+    "calculator.py": "6e42fb461ea75486f33c366a35fb9e78a7b1a970d199c7e893b103317d92884a",
+    "calculator_examples/emk_geometry_bell.json": "2279cf217c200d10539e0afdaf2d497b880c963cb88ca446b657fda325c9b9ae",
+    "calculator_examples/emk_geometry_bell.result.json": "3cd5e77dfc40d5c3433b8aa7b523282b5bc8c454af8920033fb1d3b50598a0b6",
+    "calculator_examples/emk_geometry_frame.json": "7b76aedae847e0fd9211ce4b31f47268cc2a51b740e856852857fdd0d522f8e4",
+    "calculator_examples/emk_geometry_frame.result.json": "5633b924736616aaebd235c0e7f1da438a4139ca791b15e69df3e15a0171b95c",
+    "emk_geometry_audit.py": "c06def18c9900b50dfabd2916c6b22c442aeb371180d1b6f18c7e7fb66091f8a",
+    "emk_geometry_test_results.json": "aaf046da9d2c4a886a78bdfe50a71a0d056c19de8fd100b5134fb2f1b8bb7b2b",
+    "emk_source_audit.json": "f269bd7402add8f8883fbc9a0e461ffd7511072c5dd74d133f4786d3fb9aedd1",
+    "emk_tensor.py": "44241afb7e99b8b9a4fc2e1c12f885073e97ad3708418366a5c51bf0fb4d6364"
+  },
+  "status": "PASS",
+  "tests": {
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -m unittest discover -s tests -p 'test_native*.py' -v",
+    "elapsed_seconds": 27.908,
+    "errors": 0,
+    "failures": 0,
+    "log_sha256": "1b25e8ed51ea05dce3576ded356b2dadb137ff4262a6c593e32b3d907442b39b",
+    "new_test_methods": 13,
+    "skips": 0,
+    "source_sha256": {
+      "tests/test_native_calculator.py": "1730a1648fec31bcb7023c07e1a8913652ea51782ba554120323f75acaab1024",
+      "tests/test_native_compact.py": "193e1a4a4005b047c0e6dfd5ded886df7f6fe349eac7364ab485e2e3b15faab6",
+      "tests/test_native_dynamic.py": "41f94d9520e98c80ed7f58fdacf0b60ba31455c63bbf5a313975f4d4ae6a0b27",
+      "tests/test_native_emk_tensor.py": "5683874b63436e6f3848f1c057a01884b6267fc5401346e0e32a600bb2854649",
+      "tests/test_native_factored.py": "a9aabcc81b66acee9918b9d820ae714838bb28208f6748d6d61c6aabe84c782d",
+      "tests/test_native_integer_matrix.py": "64eff6eb03843909c9ce48cc385e7162414adcea858d731d912bb856f8ef3484",
+      "tests/test_native_observer.py": "89914d95fa87f9526caa193b185ce20666279100a6cdc87a7930e4cd3f27a31c",
+      "tests/test_native_qiskit_adapter.py": "c6f2c4c584fb8b619839fc1ea881a8c1b15a5ecc43c077d5652e3acf9f33a430",
+      "tests/test_native_readout.py": "0aab6e9d97ddeeff080f9b896466aa769112162891d7d919acfecd9d77697866",
+      "tests/test_native_reduction.py": "f2d376bc09c9381954968b637c15e13355f2c423609ec9d307b85b3ddee77efb",
+      "tests/test_native_relational_qc.py": "4d70497ff3cc85284a4404bd8f25eddc8c9d54cf119ce52d626807df642dcaba",
+      "tests/test_native_reversible_logic.py": "437944a7ffcb0fcbfd924a66aca8e491bf6fcc71cfa4d09c6c33452ece196a9f",
+      "tests/test_native_streaming.py": "68570cfcb8e04443e722d9d219555d642d43ad1eb0bd5ed8620202491f3bd371",
+      "tests/test_native_stress.py": "98b91f7ef4f7da7aaa3ee68767796465809026a20403fa4c0d979670859caa95"
+    },
+    "tests_run": 190
+  },
+  "unchanged_streaming_runtime_sources": {
+    "compact.py": true,
+    "dyadic.py": true,
+    "exact.py": true,
+    "factored.py": true,
+    "integer_matrix.py": true,
+    "observer.py": true,
+    "reused_product.py": true,
+    "streaming.py": true,
+    "stress_benchmark.py": true
+  }
+}

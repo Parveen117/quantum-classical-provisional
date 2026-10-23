@@ -60,6 +60,13 @@ at 01/10. Phase-sensitive and 50-qubit inputs/results are also saved in
 
 ## Engines and limits
 
+An additional `"kind": "geometry"` query computes the finite-cut EMK/CID-D2
+information and curvature tensor from 1–8 signed Pauli generators. It returns
+both tensor halves, distinct real/complex ranks, and exact reconstruction
+witnesses for dependent real directions. See [EMK_GEOMETRY.md](EMK_GEOMETRY.md)
+for the source contract, request format, proof and UGD compatibility boundaries.
+Its distinct nonidentity expectations count toward the same 256-evaluation cap.
+
 `factored` is the default: product-observer propagation plus exact sparse MPS
 contraction. It accepts named single-qubit gates and adjacent
 `cx/cz/ch/cs/ct/swap`. `observer` explicitly selects the existing expanded Pauli

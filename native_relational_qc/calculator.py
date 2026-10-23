@@ -74,6 +74,17 @@ def _site_map(value, n, paulis=False):
     return out
 
 
+def _geometry_generators(value, n):
+    from .emk_tensor import validate_generators
+    if not isinstance(value,list) or not 1<=len(value)<=8:
+        raise ValueError('geometry requires 1..8 signed Pauli generators')
+    generators=[]
+    for item in value:
+        _object(item,('paulis',),('sign',))
+        generators.append((item.get('sign',1),_site_map(item['paulis'],n,paulis=True)))
+    return validate_generators(generators,n)
+
+
 def validate(document):
     _object(document, ('schema','n_qubits','operations','queries'),
             ('backend','decimal_places','limits','simplify','contraction'))
@@ -118,15 +129,19 @@ def validate(document):
         if not isinstance(query,dict):
             raise ValueError('each query must be an object')
         kind = query.get('kind')
-        field = {'probability':'outcomes','expectation':'paulis','distribution':'qubits'}.get(kind)
+        field = {'probability':'outcomes','expectation':'paulis','distribution':'qubits',
+                 'geometry':'generators'}.get(kind)
         if field is None:
-            raise ValueError('query kind must be probability, expectation or distribution')
+            raise ValueError('query kind must be probability, expectation, distribution or geometry')
         _object(query, ('id','kind',field))
         label = query['id']
         if not isinstance(label,str) or not 1<=len(label)<=80 or label in seen:
             raise ValueError('query IDs must be unique nonempty strings of at most 80 characters')
         seen.add(label)
-        if kind=='distribution':
+        if kind=='geometry':
+            from .emk_tensor import evaluation_count
+            evaluations += evaluation_count(_geometry_generators(query[field],circuit.n_qubits))
+        elif kind=='distribution':
             sites=query[field]
             if not isinstance(sites,list) or not 1<=len(sites)<=8:
                 raise ValueError('distribution queries require 1..8 distinct qubits')
@@ -238,7 +253,14 @@ def calculate(document):
         start=time.perf_counter(); observations=[]
         row=dict(id=query['id'],kind=query['kind'])
         try:
-            if query['kind']=='distribution':
+            if query['kind']=='geometry':
+                from .emk_tensor import geometry, serialize
+                tensor=geometry(circuit,_geometry_generators(query['generators'],circuit.n_qubits),
+                                backend=request['backend'],**options)
+                row.update(status='completed',algebraically_exact=True,
+                           geometry=serialize(tensor,lambda v:display(v,request['decimal_places'])),
+                           statistics=_summary(tensor['scalar_statistics']))
+            elif query['kind']=='distribution':
                 sites=query['qubits']; values={}; total=ZERO
                 for i in range(2**len(sites)):
                     label=format(i,f'0{len(sites)}b')

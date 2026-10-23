@@ -6,6 +6,12 @@ The [quantum-circuit calculator](native_relational_qc/CALCULATOR.md) accepts cus
 circuit/query JSON and returns exact answers, certified decimal enclosures and
 cost diagnostics through `python -m native_relational_qc calculate INPUT.json`.
 
+The [EMK geometry query](native_relational_qc/EMK_GEOMETRY.md) connects the recent
+finite-cut information/curvature tensor to exact circuit observations. It
+executes native EMK multiplication and certifies real tangent dependencies
+while retaining both tensor halves. Full UGD numeral substitution has separately
+recorded algebra and phase-adapter boundaries.
+
 The optional [streaming contraction](native_relational_qc/STREAMING_CONTRACTION.md)
 builds one exact site factor at a time and reuses signed equal matrix rows/columns.
 It includes a bounded 50-qubit, 16-round local calculation, with explicit larger
