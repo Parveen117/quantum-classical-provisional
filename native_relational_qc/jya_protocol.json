@@ -1,0 +1,368 @@
+{
+  "ablation": "linear_fusion uses the same local blocks, Pauli expansion and readout but multiplies every local gate without recurrence.",
+  "author": "Monty",
+  "baseline_commit": "94df948d0bfac2d9683b6b5c87bb9fb6eac8a3a5",
+  "cases": [
+    {
+      "case": "local_512",
+      "expected_exact": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "52770692932928051526569335741777678523130514095634346700131644180212323691283/115792089237316195423570985008687907853269984665640564039457584007913129639936",
+          "2081402783728329507663947268043069495471085726310540642851904953816450700807/7237005577332262213973186563042994240829374041602535252466099000494570602496",
+          "0",
+          "0"
+        ]
+      },
+      "semantic_sha256": "9708dad1efd3b123d56ef0f5ef8677e4331598209d5b12ccf7fd3b4a3b55a9be",
+      "strategy": "clifford_frame",
+      "timeout_seconds": 20
+    },
+    {
+      "case": "local_512",
+      "expected_exact": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "52770692932928051526569335741777678523130514095634346700131644180212323691283/115792089237316195423570985008687907853269984665640564039457584007913129639936",
+          "2081402783728329507663947268043069495471085726310540642851904953816450700807/7237005577332262213973186563042994240829374041602535252466099000494570602496",
+          "0",
+          "0"
+        ]
+      },
+      "semantic_sha256": "9708dad1efd3b123d56ef0f5ef8677e4331598209d5b12ccf7fd3b4a3b55a9be",
+      "strategy": "linear_fusion",
+      "timeout_seconds": 20
+    },
+    {
+      "case": "local_512",
+      "expected_exact": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "52770692932928051526569335741777678523130514095634346700131644180212323691283/115792089237316195423570985008687907853269984665640564039457584007913129639936",
+          "2081402783728329507663947268043069495471085726310540642851904953816450700807/7237005577332262213973186563042994240829374041602535252466099000494570602496",
+          "0",
+          "0"
+        ]
+      },
+      "semantic_sha256": "9708dad1efd3b123d56ef0f5ef8677e4331598209d5b12ccf7fd3b4a3b55a9be",
+      "strategy": "jya_frame",
+      "timeout_seconds": 20
+    },
+    {
+      "case": "ghz_2056_global_256",
+      "expected_exact": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "102267330020033454617836613375624694739/170141183460469231731687303715884105728",
+          "-95422037298562279698033971055546920689/340282366920938463463374607431768211456",
+          "0",
+          "0"
+        ]
+      },
+      "semantic_sha256": "0713879a7eafddd7dce97b7de4c9ecd4cae4a4a5607d3a73968127b063cdb3e2",
+      "strategy": "clifford_frame",
+      "timeout_seconds": 20
+    },
+    {
+      "case": "ghz_2056_global_256",
+      "expected_exact": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "102267330020033454617836613375624694739/170141183460469231731687303715884105728",
+          "-95422037298562279698033971055546920689/340282366920938463463374607431768211456",
+          "0",
+          "0"
+        ]
+      },
+      "semantic_sha256": "0713879a7eafddd7dce97b7de4c9ecd4cae4a4a5607d3a73968127b063cdb3e2",
+      "strategy": "linear_fusion",
+      "timeout_seconds": 20
+    },
+    {
+      "case": "ghz_2056_global_256",
+      "expected_exact": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "102267330020033454617836613375624694739/170141183460469231731687303715884105728",
+          "-95422037298562279698033971055546920689/340282366920938463463374607431768211456",
+          "0",
+          "0"
+        ]
+      },
+      "semantic_sha256": "0713879a7eafddd7dce97b7de4c9ecd4cae4a4a5607d3a73968127b063cdb3e2",
+      "strategy": "jya_frame",
+      "timeout_seconds": 20
+    },
+    {
+      "case": "ghz_2056_full_64",
+      "expected_exact": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1338892563/8589934592",
+          "1117142927/17179869184",
+          "0",
+          "0"
+        ]
+      },
+      "semantic_sha256": "766a1630b2aa60b1d26801fdbe707bf9fa387a064e3adf7cede7e79d89b7eec5",
+      "strategy": "clifford_frame",
+      "timeout_seconds": 20
+    },
+    {
+      "case": "ghz_2056_full_64",
+      "expected_exact": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1338892563/8589934592",
+          "1117142927/17179869184",
+          "0",
+          "0"
+        ]
+      },
+      "semantic_sha256": "766a1630b2aa60b1d26801fdbe707bf9fa387a064e3adf7cede7e79d89b7eec5",
+      "strategy": "linear_fusion",
+      "timeout_seconds": 20
+    },
+    {
+      "case": "ghz_2056_full_64",
+      "expected_exact": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1338892563/8589934592",
+          "1117142927/17179869184",
+          "0",
+          "0"
+        ]
+      },
+      "semantic_sha256": "766a1630b2aa60b1d26801fdbe707bf9fa387a064e3adf7cede7e79d89b7eec5",
+      "strategy": "jya_frame",
+      "timeout_seconds": 20
+    },
+    {
+      "case": "changing_returns",
+      "expected_exact": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "139377/524288",
+          "98531/1048576",
+          "0",
+          "0"
+        ]
+      },
+      "semantic_sha256": "538f581617921ad98c9636980c40b248ef2978519c1dbcf35d41e9bcd5fc1765",
+      "strategy": "clifford_frame",
+      "timeout_seconds": 20
+    },
+    {
+      "case": "changing_returns",
+      "expected_exact": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "139377/524288",
+          "98531/1048576",
+          "0",
+          "0"
+        ]
+      },
+      "semantic_sha256": "538f581617921ad98c9636980c40b248ef2978519c1dbcf35d41e9bcd5fc1765",
+      "strategy": "linear_fusion",
+      "timeout_seconds": 20
+    },
+    {
+      "case": "changing_returns",
+      "expected_exact": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "139377/524288",
+          "98531/1048576",
+          "0",
+          "0"
+        ]
+      },
+      "semantic_sha256": "538f581617921ad98c9636980c40b248ef2978519c1dbcf35d41e9bcd5fc1765",
+      "strategy": "jya_frame",
+      "timeout_seconds": 20
+    },
+    {
+      "case": "independent_t_12",
+      "expected_exact": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/64",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "semantic_sha256": "b578d1c862412ac619b22b6aca55ed499d1798f5f2ac50a65a8ea48ffa6d1225",
+      "strategy": "clifford_frame",
+      "timeout_seconds": 20
+    },
+    {
+      "case": "independent_t_12",
+      "expected_exact": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/64",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "semantic_sha256": "b578d1c862412ac619b22b6aca55ed499d1798f5f2ac50a65a8ea48ffa6d1225",
+      "strategy": "linear_fusion",
+      "timeout_seconds": 20
+    },
+    {
+      "case": "independent_t_12",
+      "expected_exact": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/64",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "semantic_sha256": "b578d1c862412ac619b22b6aca55ed499d1798f5f2ac50a65a8ea48ffa6d1225",
+      "strategy": "jya_frame",
+      "timeout_seconds": 20
+    },
+    {
+      "case": "clifford_only_2056",
+      "expected_exact": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "semantic_sha256": "699ad507003c3d5f78be0f85618fafb18f107fc1695566184d97131e1b3ef686",
+      "strategy": "clifford_frame",
+      "timeout_seconds": 20
+    },
+    {
+      "case": "clifford_only_2056",
+      "expected_exact": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "semantic_sha256": "699ad507003c3d5f78be0f85618fafb18f107fc1695566184d97131e1b3ef686",
+      "strategy": "linear_fusion",
+      "timeout_seconds": 20
+    },
+    {
+      "case": "clifford_only_2056",
+      "expected_exact": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "semantic_sha256": "699ad507003c3d5f78be0f85618fafb18f107fc1695566184d97131e1b3ef686",
+      "strategy": "jya_frame",
+      "timeout_seconds": 20
+    },
+    {
+      "case": "branch_limit",
+      "expected_exact": null,
+      "semantic_sha256": "970daf89bcb868098a127daa29d103690f218e3f3c92db6ac8df1423521794ca",
+      "strategy": "jya_frame",
+      "timeout_seconds": 20
+    },
+    {
+      "case": "coefficient_limit",
+      "expected_exact": null,
+      "semantic_sha256": "40ca49060b68f45cfe32b8a0f28a9c2a8843d530a59ae974fdb429edcf075e5d",
+      "strategy": "jya_frame",
+      "timeout_seconds": 20
+    },
+    {
+      "case": "pair_limit",
+      "expected_exact": null,
+      "semantic_sha256": "55d475ced0cdb77bb790049bb56f4ce93ae48eb38a200cace6308d3e4c78d5dd",
+      "strategy": "jya_frame",
+      "timeout_seconds": 20
+    },
+    {
+      "case": "work_limit",
+      "expected_exact": null,
+      "semantic_sha256": "5db51bcb1da058641fa4f5f41bfd1a13eded86b0e2536f9e54f06c7fa2140576",
+      "strategy": "jya_frame",
+      "timeout_seconds": 20
+    },
+    {
+      "case": "wall_limit",
+      "expected_exact": null,
+      "semantic_sha256": "b1a9968595bb7018a60e40849f66a4b80ab880993ead8dd796805a9ed9b24210",
+      "strategy": "jya_frame",
+      "timeout_seconds": 1e-09
+    }
+  ],
+  "comparison": "Fresh-process wall time and peak RSS; identical circuits/queries and 10M work,4096 coefficient-bit,4096 branch,1M pair,2056 generator caps unless explicit guard override. Work units differ by algorithm.",
+  "created_utc": "2026-10-23T18:19:28.348691+00:00",
+  "frozen_before_measured_runs": true,
+  "references": "Independent sequential 2x2 products plus analytic GHZ/Y identities; unchanged clifford_t exact expansion for changing_returns; analytic 1/64 and 1 for controls.",
+  "repetitions": 3,
+  "schema": "nrqc-jya-protocol-v1",
+  "scope": "Ideal classical simulation of selected observations; no hardware, noise, universal complexity or quantum advantage claim.",
+  "selection": "Structured repeated local words, entangled GHZ, changing returns, sparse-phase and Clifford controls; selected after correctness tests, before paired timing.",
+  "source_sha256": {
+    "native_relational_qc/__init__.py": "2df0c6684869d87776756cc78918199a9a09fa86f8c9e6d41d675591698c9350",
+    "native_relational_qc/__main__.py": "f41e3acdc29c738b9d6d6e5a0ade0bfe789d4a41c180a793224a300815cbaeba",
+    "native_relational_qc/algebra.py": "3d23b2a3a345b0760bfce1cff9e4eea9635543ee566c9dd6f0078405f211e9ab",
+    "native_relational_qc/bridge.py": "6c863d69da9b477ad17948e6c935d3c058d426f0322e5df99eb4f8c09a61b4b3",
+    "native_relational_qc/calculator.py": "ff681fead53f77d796b3ea3dee2a058fc77a29cc8adb8980220f51a32f5c014e",
+    "native_relational_qc/circuit.py": "6215adf52443de8ee1db01f8e641c4c50124810a7674fd3258d826ff08b9e366",
+    "native_relational_qc/clifford_frame.py": "2ed2759b25612b6cb276526f357f136a261727331d1f6ebcd83648278a07c864",
+    "native_relational_qc/clifford_t.py": "0942a9ad3c7cfd2299b261bb3b2f0e2106d99ab1224218289dd63ecd944b2e9a",
+    "native_relational_qc/compact.py": "1acff6eaa8664b4ba33285c66c9f433ecd0148aa8383a18f79dbd2ccb66e898d",
+    "native_relational_qc/compact_benchmark.py": "38a618ea91bd436c740b75f67a908b63067f1b7332468ca4382cf7921872d5a6",
+    "native_relational_qc/compact_qiskit.py": "92f7bd85d6e753e9c898bcbd6f28e65b7fcc4cdd0a3ddedab4ab94df2fddcf05",
+    "native_relational_qc/dyadic.py": "f57de994e59041fa203cffdda5f73e30b65552715286483b29b683b79d849832",
+    "native_relational_qc/dynamic.py": "88421139cba72f0d86f3644c5933e03dd44d8afa1fdc79b250b2e8bf5390acd9",
+    "native_relational_qc/dynamic_examples.py": "0d40d9b3dbf098623c7586f13cdb54d9c6f627e4af6f0c398e79f983129d259e",
+    "native_relational_qc/dynamic_qiskit.py": "be1ff2a0ff1187370dad1d42d5fa126f1f5b6ff1d46b976861ef917c2f930f58",
+    "native_relational_qc/dynamic_reference.py": "3ac7547482028029660081c4122bbce370d09a74b466432e4d4d48b529df89e1",
+    "native_relational_qc/dynamic_verify.py": "aa8b83844876d6627403443f0ea6e3d1504a9ad872b1f64ecc8bceab3f5eb5a2",
+    "native_relational_qc/emk_geometry_audit.py": "c06def18c9900b50dfabd2916c6b22c442aeb371180d1b6f18c7e7fb66091f8a",
+    "native_relational_qc/emk_tensor.py": "8decb85142fe5e55e895af0daaf9c1a688366b476ea6fe11ddab322034393707",
+    "native_relational_qc/entropy_logic.py": "5d13b8663b92623939b7bbb106b8dbf9f1bead17ffb0661df7fe71d5db86ad9f",
+    "native_relational_qc/exact.py": "cc0b3be70660ed819b3ad153620ea4338fb6bf57102a4474d4355da2805afdf6",
+    "native_relational_qc/examples.py": "2066bf7326cde2e064c9800de8fda87eb74314af99200593bc0fb39e3f8d47d5",
+    "native_relational_qc/factored.py": "db7bde341174f2f4f44a17b734b45cc93a6f7f4a07207fb91c0934466e721e6b",
+    "native_relational_qc/frame_qualification.py": "e9ece9cad8de9523b44898197841eafa31aa3e272b725bedd1a7b8b4bbac9af0",
+    "native_relational_qc/ibm_workloads.py": "2a4b86fc8bb1ab9aaaa979129e37aa49d7b87880a2cf5a38f63fc690028e317e",
+    "native_relational_qc/integer_matrix.py": "9301ec91dad88fa8b53b83083f0b62454eb44203c5c7bfc77f4b06015fe14e40",
+    "native_relational_qc/jya_frame.py": "cbece1e006c5e1a90b018132b3c2a2ab64752736a746c68dbd2efcb2960d7ee6",
+    "native_relational_qc/jya_qualification.py": "135c3598a47aa4adc0a9fb3350098259775151be1598663c55c1ca29659a2f28",
+    "native_relational_qc/large_register.py": "412cd9a60ae6941c0a8478287f233a276060cad65f200ff4a630e67f271e3f23",
+    "native_relational_qc/large_register_qualification.py": "ef4f415ba4727de648076ab2b12fff9559a19b885b384acea77ecca31b208ae2",
+    "native_relational_qc/observer.py": "eec5857176d20158e50c5d00a314483f9ce67a17a12fc7cc94416a754bd80833",
+    "native_relational_qc/pauli_engine.py": "b72489ecb8078ab3b15a41faaa68b7376210b41b19a7e36fcbecb958488fed14",
+    "native_relational_qc/qiskit_adapter.py": "d3e877d52f7aeeebc9e9db996b1675c1feb2a99815450111365acaf61c51f2b8",
+    "native_relational_qc/readout.py": "6b891b4434fc409046df33eab9059037e9f80b687e6dfc1e8ce8593c3ec5b4c7",
+    "native_relational_qc/reduction.py": "51017ce80182651b318d49acd1b177bcb03407c20686231693a728fb0ac2f28c",
+    "native_relational_qc/reduction_benchmark.py": "e9ad8162fb8c0020f6b00d57717d774763493081dda43d42e4c9821b922be9ba",
+    "native_relational_qc/reused_product.py": "8cf910b93ca7177afd373ee8c15ad801b9d493be872604a09baaaca2adc51a73",
+    "native_relational_qc/reversible_logic.py": "f566059dad85d01735e9384b9e7aa692f666f7b6909cf738696c47f5c4e12184",
+    "native_relational_qc/reversible_logic_demo.py": "dbb7e52dc90173eddc11539230816dbedbae58d59a8ffe2f9b2e3707e25cdaf8",
+    "native_relational_qc/stabilizer.py": "a490804f4cead55505410969496aa44eb71a4ed424bae2c23ff746221a51d19d",
+    "native_relational_qc/state.py": "2ff1413d09f36f6449eb6ae7ca8c53de71ac86b9b0711e080849987ab031093e",
+    "native_relational_qc/streaming.py": "d5f77ae1b7192de1e5ad0e488b791be2db537cac1cb535f5dd5fefc452c63e02",
+    "native_relational_qc/stress_benchmark.py": "c86ba3814939ee99bd61cba5646327c52c631db1b21f3070891bcefdf232303b",
+    "native_relational_qc/verify.py": "f3c03e25b279701155646a52c7ef96c9eab5696da74294ce9bc2a035c3c3ecf3",
+    "tests/test_native_clifford_frame.py": "2096b9b7a6a6aa9951d514b5ab433c44c1c6463b4501fac545a0c56504cd49ba",
+    "tests/test_native_jya_frame.py": "7f39c06c0701591ecd8f82ac0e1d7d45a62b3626ebe8aaf39c70a00c23a9ee97"
+  }
+}

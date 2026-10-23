@@ -11,4 +11,4 @@ class LargeCircuit(CompactCircuit):
         self._operations = []
 
     def state(self, **budgets):
-        raise ValueError('LargeCircuit requires an explicit stabilizer, clifford_t or clifford_frame observation engine')
+        raise ValueError('LargeCircuit requires an explicit stabilizer, clifford_t, clifford_frame or jya_frame observation engine')

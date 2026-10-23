@@ -91,6 +91,15 @@ No automatic backend
 switch, routing approximation, gate-name guessing, or arbitrary-angle rounding
 occurs. Unsupported gates are rejected before execution.
 
+The explicit [jya-frame backend](JYA_FRAME.md), `jya_frame`, uses the same
+gate alphabet, width and query types as `clifford_frame`. It combines adjacent
+single-qubit words containing T/Tdg, evaluates repeated prefixes by exact
+trace/determinant recurrence, and retains every resulting complex coefficient.
+An entangling gate or another wire ends a block. Input remains an ordinary
+expanded operation list; no repeat syntax, angle rounding or implicit fallback
+is added. Work includes input scanning and recurrence arithmetic. The existing
+frame branch/pair limits still apply.
+
 Named single-qubit gates are `id/x/y/z/h/s/sdg/t/tdg/sx/sxdg` and the native
 `r/k/rk` operators. Arbitrary continuous rotations, general QAOA angles, dynamic
 measurements, reset and noise are not added by this calculator interface.
@@ -98,7 +107,7 @@ measurements, reset and noise are not added by this calculator interface.
 | Limit | Default | Meaning |
 | --- | --- | --- |
 | Wall time | 20 s | Entire child batch including startup; adjustable through `--timeout`, at most 300 s |
-| Qubits | 1–256 or 1–2056 | 2056 only for explicit `stabilizer`/`clifford_t`/`clifford_frame`; not a performance guarantee |
+| Qubits | 1–256 or 1–2056 | 2056 only for explicit `stabilizer`/`clifford_t`/`clifford_frame`/`jya_frame`; not a performance guarantee |
 | Gates | 100,000 | Maximum declared operations |
 | Queries | 32 | Unique IDs required |
 | Scalar evaluations | 256 | Total across queries; a k-site distribution costs 2^k evaluations |
@@ -119,7 +128,7 @@ Set applicable backend limits with a `limits` object, for example
 probability can specify all sites without enumerating outcomes. Clifford+T
 probabilities explicitly expand 2^k projector terms for k requested sites and
 may therefore reject a wide probability query even when its circuit is easy.
-For `clifford_frame`, applicable representation limits are `max_generators`,
+For `clifford_frame` and `jya_frame`, applicable representation limits are `max_generators`,
 `max_branches` and `max_pairs`, in addition to work/coefficient bits. For example,
 `"limits": {"max_branches": 4096, "max_pairs": 1000000}`. `max_terms` and
 `contraction` do not apply to that backend. Its wide probabilities avoid the

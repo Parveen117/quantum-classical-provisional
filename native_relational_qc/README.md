@@ -1,5 +1,10 @@
 # Native Relational Quantum Computing — v0.1
 
+**New: [Surya/jya local returns](JYA_FRAME.md).** `jya_frame` folds repeated
+single-qubit words with exact trace/determinant recurrence and retained phase.
+It accepts the same 1–2056-site circuits as `clifford_frame`, preserves
+entangling-gate boundaries, and supports all calculator observation types.
+
 **New: [exact Clifford frame](CLIFFORD_FRAME.md).** `clifford_frame` removes the
 mandatory 2^k projector expansion for wide T-phase probability queries. It
 retains a bounded sparse residual vector, full interference and the Clifford

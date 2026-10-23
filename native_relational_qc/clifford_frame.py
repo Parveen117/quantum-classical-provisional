@@ -138,6 +138,11 @@ def expectation(circuit,paulis,*,max_work=10_000_000,max_coefficient_bits=4096,
     x,z=_word(paulis,circuit.n_qubits)
     budget.stats['query_support']=(x|z).bit_count()
     cliffords,amplitudes=_prepare(plan,budget)
+    return _expectation(cliffords,amplitudes,x,z,budget)
+
+
+def _expectation(cliffords,amplitudes,x,z,budget):
+    """Shared exact readout after a backend has certified its frame state."""
     row=_pullback((x,z,(x&z).bit_count()%4),cliffords,budget)
     if len(amplitudes)>budget.max_pairs:
         budget.fail('exact Clifford-frame expectation exceeds pair budget')
@@ -163,6 +168,11 @@ def probability(circuit,assignments,*,max_work=10_000_000,max_coefficient_bits=4
     budget.stats.update(query_support=k,measurement_generators=k,projector_expansion_avoided=True)
     if k>budget.max_generators:budget.fail('Clifford-frame observation exceeds generator-count budget')
     cliffords,amplitudes=_prepare(plan,budget)
+    return _probability(cliffords,amplitudes,assignments,budget)
+
+
+def _probability(cliffords,amplitudes,assignments,budget):
+    """Shared commuting-projector readout; the caller validates the query."""
     if not assignments:
         budget.stats.update(x_rank=0,diagonal_constraints=0,accepted_branches=len(amplitudes),pair_candidates=0)
         return budget.finish(ONE)

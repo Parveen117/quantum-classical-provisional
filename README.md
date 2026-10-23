@@ -2,6 +2,12 @@
 
 ## Native relational calculation engine
 
+The [Surya/jya local-return upgrade](native_relational_qc/JYA_FRAME.md)
+adds the explicit `jya_frame` backend. It folds repeated single-qubit words
+through an exact two-channel recurrence, retains their global phase and
+chronological order, and feeds the existing bounded Clifford-frame readout.
+An independent linear-fusion ablation separates recurrence savings from fusion.
+
 The [exact Clifford-frame upgrade](native_relational_qc/CLIFFORD_FRAME.md)
 adds 2056-site joint probabilities with retained T phase, using a bounded sparse
 residual state and generator elimination. It avoids the earlier mandatory

@@ -1,0 +1,162 @@
+{
+  "answers": [
+    {
+      "algebraically_exact": true,
+      "execution_seconds": 0.002711872999498155,
+      "id": "global_x",
+      "kind": "expectation",
+      "statistics": {
+        "algebraically_exact": true,
+        "backend": "jya_frame",
+        "branch_updates": 4,
+        "clifford_gates": 4,
+        "compile_gates": 68,
+        "compiled_blocks": 1,
+        "compressed_repetitions": 31,
+        "constraint_checks": 0,
+        "dense_statevector_constructed": false,
+        "final_branches": 4,
+        "folded_gates": 64,
+        "gate_visits": 16,
+        "input_gates": 68,
+        "input_qubits": 4,
+        "largest_repeat": 32,
+        "local_blocks": 1,
+        "local_products": 30,
+        "local_unitarity_checks": 1,
+        "max_coefficient_bits": 19,
+        "non_clifford_gates": 32,
+        "normalization_exact": true,
+        "normalization_terms": 4,
+        "pair_visits": 4,
+        "peak_branches": 4,
+        "peak_generators": 0,
+        "period_comparisons": 63,
+        "plan_gates": 5,
+        "processed_t_gates": 32,
+        "query_support": 4,
+        "recurrence_products": 36,
+        "repeated_blocks": 1,
+        "representation": "ordered exact local returns plus Clifford frame and sparse residual",
+        "row_products": 0,
+        "sparse_residual_constructed": true,
+        "truncated_terms": 0,
+        "work_definition": "plan gates, gate visits, branch updates, normalization terms, row products, constraint checks and pair visits; input scan, period comparisons, exact local/recurrence scalar products and unitarity checks",
+        "work_used": 231
+      },
+      "status": "completed",
+      "value": {
+        "decimal": "0.5982267115175",
+        "decimal_enclosure": {
+          "lower": "0.598226711517",
+          "maximum_absolute_display_error": "1/2000000000000",
+          "method": "integer-square-root bounds and outward rational rounding",
+          "upper": "0.598226711518"
+        },
+        "exact": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "11763/32768",
+            "11087/65536",
+            "0",
+            "0"
+          ]
+        },
+        "expression": "(11763/32768) + (11087/65536)*sqrt(2)"
+      }
+    },
+    {
+      "algebraically_exact": true,
+      "execution_seconds": 0.0025552770021022297,
+      "id": "zero",
+      "kind": "probability",
+      "statistics": {
+        "accepted_branches": 2,
+        "algebraically_exact": true,
+        "backend": "jya_frame",
+        "branch_updates": 4,
+        "clifford_gates": 4,
+        "compile_gates": 68,
+        "compiled_blocks": 1,
+        "compressed_repetitions": 31,
+        "constraint_checks": 8,
+        "dense_statevector_constructed": false,
+        "diagonal_constraints": 3,
+        "final_branches": 4,
+        "folded_gates": 64,
+        "gate_visits": 28,
+        "input_gates": 68,
+        "input_qubits": 4,
+        "largest_repeat": 32,
+        "local_blocks": 1,
+        "local_products": 30,
+        "local_unitarity_checks": 1,
+        "max_coefficient_bits": 19,
+        "measurement_generators": 4,
+        "non_clifford_gates": 32,
+        "normalization_exact": true,
+        "normalization_terms": 4,
+        "pair_candidates": 3,
+        "pair_visits": 3,
+        "peak_branches": 4,
+        "peak_generators": 4,
+        "period_comparisons": 63,
+        "plan_gates": 5,
+        "processed_t_gates": 32,
+        "projector_expansion_avoided": true,
+        "query_support": 4,
+        "recurrence_products": 36,
+        "repeated_blocks": 1,
+        "representation": "ordered exact local returns plus Clifford frame and sparse residual",
+        "row_products": 4,
+        "sparse_residual_constructed": true,
+        "truncated_terms": 0,
+        "work_definition": "plan gates, gate visits, branch updates, normalization terms, row products, constraint checks and pair visits; input scan, period comparisons, exact local/recurrence scalar products and unitarity checks",
+        "work_used": 254,
+        "x_rank": 1
+      },
+      "status": "completed",
+      "value": {
+        "decimal": "0.3995566778795",
+        "decimal_enclosure": {
+          "lower": "0.399556677879",
+          "maximum_absolute_display_error": "1/2000000000000",
+          "method": "integer-square-root bounds and outward rational rounding",
+          "upper": "0.399556677880"
+        },
+        "exact": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "44531/131072",
+            "11087/262144",
+            "0",
+            "0"
+          ]
+        },
+        "expression": "(44531/131072) + (11087/262144)*sqrt(2)"
+      }
+    }
+  ],
+  "backend": "jya_frame",
+  "circuit_sha256": "308785274551abf952b40d8412bd7817fffd718ae36e06bd18ef2e1caf98eee3",
+  "evidence_class": "LOCAL_IDEAL_CALCULATION",
+  "execution_seconds": 0.0053654980001738295,
+  "gates": 68,
+  "hardware_job_id": null,
+  "input_state": "all_zero",
+  "limits_per_scalar_evaluation": {
+    "max_branches": 4096,
+    "max_coefficient_bits": 4096,
+    "max_generators": 2056,
+    "max_pairs": 1000000,
+    "max_work": 10000000
+  },
+  "n_qubits": 4,
+  "peak_worker_rss_bytes": 24420352,
+  "peak_worker_rss_source": "Linux /proc/self/status VmHWM, including imports/setup",
+  "request_sha256": "8d358aca1e519f8ccb2f1cee502ef60e489a6538d61146164d8dcd5d26e7f715",
+  "schema": "nrqc-calculator-result-v1",
+  "status": "completed",
+  "timeout_seconds": 20,
+  "wall_seconds": 0.10509149100107607
+}

@@ -188,8 +188,10 @@ def geometry(circuit, generators, *, backend='factored', **options):
         from .clifford_t import expectation
     elif backend == 'clifford_frame':
         from .clifford_frame import expectation
+    elif backend == 'jya_frame':
+        from .jya_frame import expectation
     else:
-        raise ValueError('geometry backend must be factored, observer, stabilizer, clifford_t or clifford_frame')
+        raise ValueError('geometry backend must be factored, observer, stabilizer, clifford_t, clifford_frame or jya_frame')
     max_bits = _integer(options.get('max_coefficient_bits',4096),'coefficient bits',2,1_000_000)
     cache, observations = {():ONE}, []
 

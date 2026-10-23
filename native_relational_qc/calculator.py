@@ -93,9 +93,9 @@ def validate(document):
     if document['schema'] != INPUT_SCHEMA:
         raise ValueError('unsupported calculator input schema')
     backend = document.get('backend','factored')
-    if backend not in ('factored','observer','stabilizer','clifford_t','clifford_frame'):
-        raise ValueError('backend must be factored, observer, stabilizer, clifford_t or clifford_frame; no implicit fallback')
-    if backend in ('stabilizer','clifford_t','clifford_frame'):
+    if backend not in ('factored','observer','stabilizer','clifford_t','clifford_frame','jya_frame'):
+        raise ValueError('backend must be factored, observer, stabilizer, clifford_t, clifford_frame or jya_frame; no implicit fallback')
+    if backend in ('stabilizer','clifford_t','clifford_frame','jya_frame'):
         from .large_register import LargeCircuit
         circuit = LargeCircuit(document['n_qubits'])
     else:
@@ -119,7 +119,7 @@ def validate(document):
         circuit.add(name,*qs)
         if backend == 'factored' and (len(qs)>2 or (len(qs)==2 and abs(qs[0]-qs[1])!=1)):
             raise ValueError('factored backend needs adjacent two-site gates; route explicitly or select observer')
-    if backend in ('stabilizer','clifford_t','clifford_frame'):
+    if backend in ('stabilizer','clifford_t','clifford_frame','jya_frame'):
         from .pauli_engine import compile_plan
         compile_plan(circuit,allow_t=backend!='stabilizer')
     digits = _integer(document.get('decimal_places',12),'decimal_places',0,60)
@@ -127,7 +127,8 @@ def validate(document):
     applicable = {'max_work','max_coefficient_bits'} | {
         'factored':{'max_bond','max_coefficients'}, 'observer':{'max_terms'},
         'stabilizer':{'max_generators'}, 'clifford_t':{'max_terms'},
-        'clifford_frame':{'max_generators','max_branches','max_pairs'}}[backend]
+        'clifford_frame':{'max_generators','max_branches','max_pairs'},
+        'jya_frame':{'max_generators','max_branches','max_pairs'}}[backend]
     _object(supplied, (), applicable)
     limits = {k:DEFAULT_LIMITS[k] for k in applicable}
     for k,v in supplied.items():
@@ -230,7 +231,8 @@ def _summary(observations):
                 maxima[k]=max(maxima.get(k,0),v)
             if k in ('scalar_products','term_visits','row_products','forward_gates','gates_examined',
                      'work_used','plan_gates','gate_visits','branch_updates','normalization_terms',
-                     'constraint_checks','pair_visits'):
+                     'constraint_checks','pair_visits','compile_gates','period_comparisons',
+                     'local_products','recurrence_products','local_unitarity_checks'):
                 totals[k]=totals.get(k,0)+v
     return dict(completed_scalar_evaluations=len(observations),maxima=maxima,work_totals=totals)
 
@@ -246,6 +248,8 @@ def calculate(document):
         from .clifford_t import probability,expectation
     elif request['backend']=='clifford_frame':
         from .clifford_frame import probability,expectation
+    elif request['backend']=='jya_frame':
+        from .jya_frame import probability,expectation
     else:
         from .observer import probability,expectation
     started=time.perf_counter()

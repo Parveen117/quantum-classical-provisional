@@ -1,0 +1,37 @@
+{
+  "schema": "nrqc-jya-native-source-map-v1",
+  "author": "Monty",
+  "source_repository": "Parveen117/Recognition-Kernel-Framework",
+  "sources": [
+    {
+      "stage": "SE44",
+      "commit": "b07ccf7a97fbc1371119a3bfdb70c98ddeded14f",
+      "path": "research/lambda_counting/SE44_TVSP_LINES_ANGLE_AND_NATIVE_JYA.md",
+      "git_blob": "ea5abff1d123c8e183705e43b3cbb3228211ca22",
+      "used": "Retained fixed-turn two-channel recurrence, equations 44.13-44.18. The calculator specializes to exact named one-qubit words and derives a scalar trace/determinant adapter."
+    },
+    {
+      "stage": "SE44 scope",
+      "commit": "b07ccf7a97fbc1371119a3bfdb70c98ddeded14f",
+      "path": "research/lambda_counting/SE44_SCOPE.md",
+      "git_blob": "6a4243d57226d73bc3b681dcce40d05502042fb7",
+      "recorded_status": "32 scoped controls including 11 negative controls; inherited whole-engine pin mismatch disclosed."
+    },
+    {
+      "stage": "SE45",
+      "commit": "f4643e2ea3e3be843903e4856ced8be0baf2a43e",
+      "path": "research/lambda_counting/SE45_VARIABLE_JYA_CURVATURE_AND_TRACKING.md",
+      "git_blob": "16a7acaf67b61ae5e6a038e873f9612a060c865f",
+      "used": "Ordered changing-source retention contract, equation 45.14. The calculator keeps each changing local block in its actual chronological order and conjugates it into the retained Clifford frame."
+    },
+    {
+      "stage": "SE45 scope",
+      "commit": "f4643e2ea3e3be843903e4856ced8be0baf2a43e",
+      "path": "research/lambda_counting/SE45_SCOPE.md",
+      "git_blob": "605ad37a7edb0b06a4662eae485510a9bf9142ad",
+      "recorded_status": "36 scoped controls including 13 negative controls; inherited whole-engine pin mismatch disclosed."
+    }
+  ],
+  "source_replays_run_in_this_upgrade": false,
+  "boundary": "Immutable source text and scope were inspected. This upgrade independently tests its finite quantum adapter; it does not repair, recertify or claim full-engine PASS for RKF. Scalar feedback, curvature-flux recovery, physical noise correction and universal simulation efficiency are not imported."
+}
