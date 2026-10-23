@@ -2,6 +2,11 @@
 
 ## Native relational calculation engine
 
+The [2056-qubit theoretical design](native_relational_qc/DESIGN_2056.md)
+specifies 2048 data qubits plus eight reusable workspace qubits, native EMK
+operations, retained observation records and symbolic global-correlation tests.
+It is a design proposal; the current executable register cap remains 256.
+
 The [quantum-circuit calculator](native_relational_qc/CALCULATOR.md) accepts custom
 circuit/query JSON and returns exact answers, certified decimal enclosures and
 cost diagnostics through `python -m native_relational_qc calculate INPUT.json`.
