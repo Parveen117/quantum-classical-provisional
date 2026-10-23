@@ -225,6 +225,17 @@ python -m native_relational_qc calculate \
   --timeout 90 --out /tmp/local16.json
 ```
 
+## Shor factoring integration
+
+The [small Shor builder](SHOR.md) produces ordinary calculator requests for
+modular exponentiation and inverse QFT, then verifies continued-fraction period
+candidates before extracting factors. It supports both frame backends without
+changing their gate sets: controlled phases and Toffoli are explicitly lowered
+to exact Clifford+T. Precision is limited to three control bits; wider QFT angles
+are rejected. Saved inputs: [15](calculator_examples/shor15.json) and
+[21](calculator_examples/shor21.json). The assessment reports both strict CF and
+optional doubled-denominator policies, with their distinct success probabilities.
+
 ## Historical interface verification at 8004981
 
 [calculator_verification.json](calculator_verification.json) records the original

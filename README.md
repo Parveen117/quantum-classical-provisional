@@ -2,6 +2,11 @@
 
 ## Native relational calculation engine
 
+The [small Shor factoring qualification](native_relational_qc/SHOR.md) adds exact
+modular-oracle circuits, inverse QFT and verified period-to-factor processing.
+Paired N=15 and N=21 tests expose the current three-bit phase-precision boundary
+and compare the original frame with the Surya/jya route on identical circuits.
+
 The [Surya/jya local-return upgrade](native_relational_qc/JYA_FRAME.md)
 adds the explicit `jya_frame` backend. It folds repeated single-qubit words
 through an exact two-channel recurrence, retains their global phase and

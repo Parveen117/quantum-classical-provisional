@@ -1,5 +1,10 @@
 # Native Relational Quantum Computing — v0.1
 
+**New: [small Shor factoring test](SHOR.md).** Exact modular exponentiation,
+inverse QFT and verified factor extraction run through both frame backends.
+N=15 and N=21 demonstrate correctness and the current three-bit phase boundary;
+structured 2056-site support does not imply general Shor execution at that size.
+
 **New: [Surya/jya local returns](JYA_FRAME.md).** `jya_frame` folds repeated
 single-qubit words with exact trace/determinant recurrence and retained phase.
 It accepts the same 1–2056-site circuits as `clifford_frame`, preserves

@@ -1,0 +1,251 @@
+"""Small exact Shor order-finding integration on the existing calculator.
+
+No factors or order are supplied to the builder. Precision is deliberately
+limited to 1..3 control bits: the exact QFT then uses only available roots of
+unity. The bounded truth-table oracle is exponential synthesis, not a scalable
+modular-arithmetic construction. A separate N=15 rotation multiplier avoids
+that table and implements controlled multiplication on the full work register.
+"""
+import argparse
+from collections import Counter
+from dataclasses import dataclass
+from fractions import Fraction
+import json
+from math import gcd
+from pathlib import Path
+
+from .calculator import run_calculation,_digest
+from .compact import _integer
+from .exact import Exact,ONE,ZERO,OMEGA
+from .large_register import LargeCircuit
+from .reversible_logic import BooleanMap,compile_oracle
+
+
+def append_ccx(circuit,a,b,target):
+    """Exact seven-T Toffoli, including phase on every basis input."""
+    if len({a,b,target})!=3:raise ValueError('Toffoli requires three distinct wires')
+    for name,qs in (
+        ('h',(target,)),('cx',(b,target)),('tdg',(target,)),('cx',(a,target)),
+        ('t',(target,)),('cx',(b,target)),('tdg',(target,)),('cx',(a,target)),
+        ('t',(b,)),('t',(target,)),('h',(target,)),('cx',(a,b)),
+        ('t',(a,)),('tdg',(b,)),('cx',(a,b))):
+        circuit.add(name,*qs)
+
+
+def append_controlled_swap(circuit,control,a,b):
+    if len({control,a,b})!=3:raise ValueError('controlled swap requires distinct wires')
+    circuit.add('cx',b,a)
+    append_ccx(circuit,control,a,b)
+    circuit.add('cx',b,a)
+
+
+def append_inverse_phase(circuit,a,b,distance,*,clean_ancilla=None):
+    """diag(1,1,1,exp(-i*pi/2**distance)); distance 1 or 2.
+
+    The distance-two construction requires a distinct ancilla initially zero
+    and restores it. It is not a dirty-ancilla controlled-T identity.
+    """
+    if a==b:raise ValueError('controlled phase requires distinct wires')
+    _integer(distance,'phase distance',1,2)
+    if distance==1:
+        circuit.add('tdg',a).add('tdg',b).add('cx',a,b).add('t',b).add('cx',a,b)
+    else:
+        if clean_ancilla is None or clean_ancilla in (a,b):
+            raise ValueError('controlled T-dagger requires a distinct clean ancilla')
+        append_ccx(circuit,a,b,clean_ancilla)
+        circuit.add('tdg',clean_ancilla)
+        append_ccx(circuit,a,b,clean_ancilla)
+
+
+def append_inverse_qft(circuit,controls,*,clean_ancilla=None):
+    controls=tuple(controls)
+    _integer(len(controls),'exact QFT width',1,3)
+    if len(set(controls))!=len(controls):raise ValueError('QFT wires must be distinct')
+    if len(controls)==3 and (clean_ancilla is None or clean_ancilla in controls):
+        raise ValueError('three-bit exact QFT needs a clean ancilla')
+    for q in range(len(controls)//2):circuit.add('swap',controls[q],controls[-q-1])
+    for j in range(len(controls)):
+        for k in range(j):
+            append_inverse_phase(circuit,controls[j],controls[k],j-k,clean_ancilla=clean_ancilla)
+        circuit.add('h',controls[j])
+
+
+def append_mod15_multiplier(circuit,control,work,multiplier):
+    """Controlled M_b on all 16 work labels, with 0 and 15 fixed.
+
+    For b in {1,2,4,8}, multiplication modulo 15 is a cyclic bit rotation.
+    Which b is used comes from modular repeated squaring, never a known order.
+    """
+    work=tuple(work)
+    if len(work)!=4 or len(set((control,*work)))!=5:
+        raise ValueError('mod-15 rotation needs four distinct work wires and a control')
+    if multiplier==1:return
+    if multiplier==2:pairs=((3,2),(2,1),(1,0))
+    elif multiplier==4:pairs=((0,2),(1,3))
+    elif multiplier==8:pairs=((0,1),(1,2),(2,3))
+    else:raise ValueError('rotation multiplier must be 1,2,4 or 8')
+    for a,b in pairs:append_controlled_swap(circuit,control,work[a],work[b])
+
+
+@dataclass(frozen=True)
+class ShorProgram:
+    circuit: LargeCircuit
+    modulus: int
+    base: int
+    precision: int
+    controls: tuple
+    work: tuple
+    scratch: tuple
+    oracle: str
+    inverse_qft: bool
+    oracle_gates: int
+
+    def metadata(self):
+        return dict(modulus=self.modulus,base=self.base,precision_bits=self.precision,
+            n_qubits=self.circuit.n_qubits,controls_lsb_first=list(self.controls),
+            work_lsb_first=list(self.work),scratch=list(self.scratch),
+            scratch_precondition='all zero',scratch_postcondition='all zero',
+            oracle=self.oracle,inverse_qft=self.inverse_qft,
+            oracle_lowered_gates=self.oracle_gates,total_gates=len(self.circuit.operations),
+            gate_counts=dict(Counter(name for name,_ in self.circuit.operations)),
+            factors_or_order_supplied=False,
+            scope='small exact order-finding demonstration; low precision has no general Shor success guarantee',
+            oracle_scaling='bounded exponential truth table' if self.oracle=='table' else
+                           'special N=15 controlled cyclic bit rotations on the full work register')
+
+    def request(self,backend='jya_frame'):
+        if backend not in ('clifford_frame','jya_frame','clifford_t'):
+            raise ValueError('Shor comparison backend must be clifford_frame, jya_frame or clifford_t')
+        return dict(schema='nrqc-calculator-v1',n_qubits=self.circuit.n_qubits,backend=backend,
+            operations=[[name,list(qs)] for name,qs in self.circuit.operations],
+            queries=[dict(id='phase',kind='distribution',qubits=list(reversed(self.controls)))])
+
+
+def build(modulus=15,base=2,*,precision=3,oracle='rotation15',inverse_qft=True):
+    n=_integer(modulus,'modulus',3,255);a=_integer(base,'base',2,n-1)
+    m=_integer(precision,'exact phase-estimation width',1,3)
+    if n%2==0 or gcd(a,n)!=1:raise ValueError('choose an odd modulus and a coprime base')
+    if type(inverse_qft) is not bool:raise ValueError('inverse_qft must be boolean')
+    if oracle not in ('table','rotation15'):raise ValueError('unknown modular oracle')
+    width=(n-1).bit_length();controls=tuple(range(m));work=tuple(range(m,m+width))
+    logic=None
+    if oracle=='table':
+        # This is bounded function synthesis from N,a,x; no period or factors.
+        logic=compile_oracle(BooleanMap(m,width,tuple(pow(a,x,n) for x in range(1<<m))))
+        size=logic.circuit.n_qubits
+    else:
+        if n!=15 or a not in (2,4,8):raise ValueError('rotation15 supports N=15 and bases 2,4,8')
+        size=m+width
+    if inverse_qft and m==3 and size==m+width:size+=1
+    scratch=tuple(range(m+width,size));circuit=LargeCircuit(size)
+    for q in controls:circuit.add('h',q)
+    start=len(circuit.operations)
+    if logic is not None:
+        for name,qs in logic.circuit.operations:
+            if name=='ccx':append_ccx(circuit,*qs)
+            else:circuit.add(name,*qs)
+    else:
+        circuit.add('x',work[0])
+        for q,control in enumerate(controls):
+            append_mod15_multiplier(circuit,control,work,pow(a,1<<q,n))
+    oracle_gates=len(circuit.operations)-start
+    if inverse_qft:append_inverse_qft(circuit,controls,clean_ancilla=scratch[0] if scratch else None)
+    return ShorProgram(circuit,n,a,m,controls,work,scratch,oracle,inverse_qft,oracle_gates)
+
+
+def exact_phase_law(modulus,base,precision,*,inverse_qft=True):
+    """Independent finite Fourier sum; uses f(x)=a**x mod N, no order input."""
+    _integer(precision,'exact Fourier width',1,3)
+    size=1<<precision
+    if not inverse_qft:return {y:Exact(Fraction(1,size)) for y in range(size)}
+    root=OMEGA**(8//size);table=[pow(base,x,modulus) for x in range(size)]
+    return {y:sum((root**((y*(v-u))%size) for u in range(size) for v in range(size)
+                   if table[u]==table[v]),ZERO)*Exact(Fraction(1,size*size)) for y in range(size)}
+
+
+def convergents(numerator,denominator):
+    p0,p1,q0,q1=0,1,1,0
+    while denominator:
+        quotient,remainder=divmod(numerator,denominator)
+        p0,p1=p1,quotient*p1+p0;q0,q1=q1,quotient*q1+q0
+        yield p1,q1
+        numerator,denominator=denominator,remainder
+
+
+def decode(reading,modulus,base,precision,*,double_denominators=False):
+    """Test only continued-fraction denominators (optionally also twice each).
+
+    Every candidate is checked by modular exponentiation before a gcd step.
+    No search over all orders, factor hints, or replacement by the true order.
+    A verified period multiple can still yield only trivial gcds and fail.
+    """
+    n=_integer(modulus,'modulus',3,255);a=_integer(base,'base',2,n-1)
+    m=_integer(precision,'precision',1,3);y=_integer(reading,'phase reading',0,(1<<m)-1)
+    if gcd(a,n)!=1:raise ValueError('postprocessing requires a coprime base')
+    if type(double_denominators) is not bool:raise ValueError('double_denominators must be boolean')
+    if y==0:return dict(reading=y,status='no_information',attempts=[],factors=None)
+    attempts=[];seen=set()
+    for numerator,denominator in convergents(y,1<<m):
+        if not numerator:continue
+        for multiplier in (1,2) if double_denominators else (1,):
+            r=multiplier*denominator
+            if r in seen or r>=n:continue
+            seen.add(r);verified=pow(a,r,n)==1
+            record=dict(denominator=denominator,multiplier=multiplier,candidate_period=r,period_verified=verified)
+            attempts.append(record)
+            if not verified or r%2:continue
+            half=pow(a,r//2,n);g1,g2=gcd(half-1,n),gcd(half+1,n)
+            record.update(half_power=half,gcd_minus=g1,gcd_plus=g2)
+            for divisor in (g1,g2):
+                if 1<divisor<n:
+                    factors=sorted((divisor,n//divisor))
+                    return dict(reading=y,status='factored',attempts=attempts,factors=factors)
+    return dict(reading=y,status='no_nontrivial_factor',attempts=attempts,factors=None)
+
+
+def assess(program,report):
+    """Read actual completed calculator probabilities, then apply postprocessing."""
+    if report['status']!='completed':return dict(status='unavailable',reason=report['status'])
+    expected_digest=_digest(dict(n_qubits=program.circuit.n_qubits,
+        operations=[[name,list(qs)] for name,qs in program.circuit.operations]))
+    if report.get('circuit_sha256')!=expected_digest:raise ValueError('assessment circuit mismatch')
+    if (len(report['answers'])!=1 or report['answers'][0]['id']!='phase' or
+        report['answers'][0].get('bitstring_qubits_left_to_right')!=list(reversed(program.controls))):
+        raise ValueError('assessment readout mismatch')
+    probabilities=report['answers'][0]['probabilities']
+    if set(probabilities)!={format(y,f'0{program.precision}b') for y in range(1<<program.precision)}:
+        raise ValueError('assessment requires the complete phase distribution')
+    reference=exact_phase_law(program.modulus,program.base,program.precision,inverse_qft=program.inverse_qft)
+    policies={}
+    for doubled in (False,True):
+        success=ZERO;readings=[]
+        for label,probability in probabilities.items():
+            y=int(label,2);value=Exact(*(Fraction(x) for x in probability['exact']['coefficients']))
+            if value!=reference[y]:raise AssertionError('calculator disagrees with exact Fourier law')
+            outcome=decode(y,program.modulus,program.base,program.precision,double_denominators=doubled)
+            if outcome['status']=='factored':success+=value
+            readings.append(dict(outcome,probability=value.to_dict()))
+        policies['convergents_and_doubles' if doubled else 'convergents_only']=dict(
+            exact_success_probability=success.to_dict(),readings=readings)
+    return dict(status='verified',exact_fourier_law_agrees=True,policies=policies,
+                success_interpretation='ideal single-readout probability for this fixed base and low-precision circuit; no hardware shots')
+
+
+def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--modulus',type=int,default=15);parser.add_argument('--base',type=int,default=2)
+    parser.add_argument('--precision',type=int,default=3)
+    parser.add_argument('--oracle',choices=('rotation15','table'),default='rotation15')
+    parser.add_argument('--backend',choices=('clifford_frame','jya_frame','clifford_t'),default='jya_frame')
+    parser.add_argument('--timeout',type=float,default=20)
+    parser.add_argument('--example',action='store_true');parser.add_argument('--out',type=Path,required=True)
+    args=parser.parse_args();program=build(args.modulus,args.base,precision=args.precision,oracle=args.oracle)
+    if args.example:result=program.request(args.backend)
+    else:
+        report=run_calculation(program.request(args.backend),timeout_seconds=args.timeout)
+        result=dict(program=program.metadata(),calculation=report,assessment=assess(program,report))
+    args.out.write_text(json.dumps(result,indent=2,sort_keys=True)+'\n')
+    print(json.dumps(dict(output=str(args.out),program=program.metadata(),status='example' if args.example else result['calculation']['status']),sort_keys=True))
+
+
+if __name__=='__main__':main()

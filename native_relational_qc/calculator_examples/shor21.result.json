@@ -1,0 +1,781 @@
+{
+  "assessment": {
+    "exact_fourier_law_agrees": true,
+    "policies": {
+      "convergents_and_doubles": {
+        "exact_success_probability": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "readings": [
+          {
+            "attempts": [],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2)",
+              "coefficients": [
+                "3/16",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 0,
+            "status": "no_information"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 8,
+                "denominator": 8,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 16,
+                "denominator": 8,
+                "multiplier": 2,
+                "period_verified": false
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2)",
+              "coefficients": [
+                "1/8",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 1,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 4,
+                "denominator": 4,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 8,
+                "denominator": 4,
+                "multiplier": 2,
+                "period_verified": false
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2)",
+              "coefficients": [
+                "1/16",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 2,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 2,
+                "denominator": 2,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 4,
+                "denominator": 2,
+                "multiplier": 2,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 3,
+                "denominator": 3,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 6,
+                "denominator": 3,
+                "gcd_minus": 7,
+                "gcd_plus": 3,
+                "half_power": 8,
+                "multiplier": 2,
+                "period_verified": true
+              }
+            ],
+            "factors": [
+              3,
+              7
+            ],
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2)",
+              "coefficients": [
+                "1/8",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 3,
+            "status": "factored"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 2,
+                "denominator": 2,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 4,
+                "denominator": 2,
+                "multiplier": 2,
+                "period_verified": false
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2)",
+              "coefficients": [
+                "3/16",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 4,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 1,
+                "denominator": 1,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 2,
+                "denominator": 1,
+                "multiplier": 2,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 4,
+                "denominator": 2,
+                "multiplier": 2,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 3,
+                "denominator": 3,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 6,
+                "denominator": 3,
+                "gcd_minus": 7,
+                "gcd_plus": 3,
+                "half_power": 8,
+                "multiplier": 2,
+                "period_verified": true
+              }
+            ],
+            "factors": [
+              3,
+              7
+            ],
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2)",
+              "coefficients": [
+                "1/8",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 5,
+            "status": "factored"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 1,
+                "denominator": 1,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 2,
+                "denominator": 1,
+                "multiplier": 2,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 4,
+                "denominator": 4,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 8,
+                "denominator": 4,
+                "multiplier": 2,
+                "period_verified": false
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2)",
+              "coefficients": [
+                "1/16",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 6,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 1,
+                "denominator": 1,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 2,
+                "denominator": 1,
+                "multiplier": 2,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 8,
+                "denominator": 8,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 16,
+                "denominator": 8,
+                "multiplier": 2,
+                "period_verified": false
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2)",
+              "coefficients": [
+                "1/8",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 7,
+            "status": "no_nontrivial_factor"
+          }
+        ]
+      },
+      "convergents_only": {
+        "exact_success_probability": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "readings": [
+          {
+            "attempts": [],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2)",
+              "coefficients": [
+                "3/16",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 0,
+            "status": "no_information"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 8,
+                "denominator": 8,
+                "multiplier": 1,
+                "period_verified": false
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2)",
+              "coefficients": [
+                "1/8",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 1,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 4,
+                "denominator": 4,
+                "multiplier": 1,
+                "period_verified": false
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2)",
+              "coefficients": [
+                "1/16",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 2,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 2,
+                "denominator": 2,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 3,
+                "denominator": 3,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 8,
+                "denominator": 8,
+                "multiplier": 1,
+                "period_verified": false
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2)",
+              "coefficients": [
+                "1/8",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 3,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 2,
+                "denominator": 2,
+                "multiplier": 1,
+                "period_verified": false
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2)",
+              "coefficients": [
+                "3/16",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 4,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 1,
+                "denominator": 1,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 2,
+                "denominator": 2,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 3,
+                "denominator": 3,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 8,
+                "denominator": 8,
+                "multiplier": 1,
+                "period_verified": false
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2)",
+              "coefficients": [
+                "1/8",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 5,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 1,
+                "denominator": 1,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 4,
+                "denominator": 4,
+                "multiplier": 1,
+                "period_verified": false
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2)",
+              "coefficients": [
+                "1/16",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 6,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 1,
+                "denominator": 1,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 8,
+                "denominator": 8,
+                "multiplier": 1,
+                "period_verified": false
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2)",
+              "coefficients": [
+                "1/8",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 7,
+            "status": "no_nontrivial_factor"
+          }
+        ]
+      }
+    },
+    "status": "verified",
+    "success_interpretation": "ideal single-readout probability for this fixed base and low-precision circuit; no hardware shots"
+  },
+  "calculation": {
+    "answers": [
+      {
+        "algebraically_exact": true,
+        "bitstring_qubits_left_to_right": [
+          2,
+          1,
+          0
+        ],
+        "execution_seconds": 3.762110417999793,
+        "id": "phase",
+        "kind": "distribution",
+        "normalization": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "probabilities": {
+          "000": {
+            "decimal": "0.1875000000000",
+            "decimal_enclosure": {
+              "lower": "0.187500000000",
+              "maximum_absolute_display_error": "0",
+              "method": "integer-square-root bounds and outward rational rounding",
+              "upper": "0.187500000000"
+            },
+            "exact": {
+              "basis": "1,sqrt(2),i,i*sqrt(2)",
+              "coefficients": [
+                "3/16",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "expression": "3/16"
+          },
+          "001": {
+            "decimal": "0.1250000000000",
+            "decimal_enclosure": {
+              "lower": "0.125000000000",
+              "maximum_absolute_display_error": "0",
+              "method": "integer-square-root bounds and outward rational rounding",
+              "upper": "0.125000000000"
+            },
+            "exact": {
+              "basis": "1,sqrt(2),i,i*sqrt(2)",
+              "coefficients": [
+                "1/8",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "expression": "1/8"
+          },
+          "010": {
+            "decimal": "0.0625000000000",
+            "decimal_enclosure": {
+              "lower": "0.062500000000",
+              "maximum_absolute_display_error": "0",
+              "method": "integer-square-root bounds and outward rational rounding",
+              "upper": "0.062500000000"
+            },
+            "exact": {
+              "basis": "1,sqrt(2),i,i*sqrt(2)",
+              "coefficients": [
+                "1/16",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "expression": "1/16"
+          },
+          "011": {
+            "decimal": "0.1250000000000",
+            "decimal_enclosure": {
+              "lower": "0.125000000000",
+              "maximum_absolute_display_error": "0",
+              "method": "integer-square-root bounds and outward rational rounding",
+              "upper": "0.125000000000"
+            },
+            "exact": {
+              "basis": "1,sqrt(2),i,i*sqrt(2)",
+              "coefficients": [
+                "1/8",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "expression": "1/8"
+          },
+          "100": {
+            "decimal": "0.1875000000000",
+            "decimal_enclosure": {
+              "lower": "0.187500000000",
+              "maximum_absolute_display_error": "0",
+              "method": "integer-square-root bounds and outward rational rounding",
+              "upper": "0.187500000000"
+            },
+            "exact": {
+              "basis": "1,sqrt(2),i,i*sqrt(2)",
+              "coefficients": [
+                "3/16",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "expression": "3/16"
+          },
+          "101": {
+            "decimal": "0.1250000000000",
+            "decimal_enclosure": {
+              "lower": "0.125000000000",
+              "maximum_absolute_display_error": "0",
+              "method": "integer-square-root bounds and outward rational rounding",
+              "upper": "0.125000000000"
+            },
+            "exact": {
+              "basis": "1,sqrt(2),i,i*sqrt(2)",
+              "coefficients": [
+                "1/8",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "expression": "1/8"
+          },
+          "110": {
+            "decimal": "0.0625000000000",
+            "decimal_enclosure": {
+              "lower": "0.062500000000",
+              "maximum_absolute_display_error": "0",
+              "method": "integer-square-root bounds and outward rational rounding",
+              "upper": "0.062500000000"
+            },
+            "exact": {
+              "basis": "1,sqrt(2),i,i*sqrt(2)",
+              "coefficients": [
+                "1/16",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "expression": "1/16"
+          },
+          "111": {
+            "decimal": "0.1250000000000",
+            "decimal_enclosure": {
+              "lower": "0.125000000000",
+              "maximum_absolute_display_error": "0",
+              "method": "integer-square-root bounds and outward rational rounding",
+              "upper": "0.125000000000"
+            },
+            "exact": {
+              "basis": "1,sqrt(2),i,i*sqrt(2)",
+              "coefficients": [
+                "1/8",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "expression": "1/8"
+          }
+        },
+        "statistics": {
+          "completed_scalar_evaluations": 8,
+          "maxima": {
+            "max_coefficient_bits": 10,
+            "peak_branches": 128,
+            "peak_generators": 3
+          },
+          "work_totals": {
+            "branch_updates": 54464,
+            "constraint_checks": 0,
+            "gate_visits": 135456,
+            "normalization_terms": 768,
+            "pair_visits": 37248,
+            "plan_gates": 2840,
+            "row_products": 36864,
+            "work_used": 267640
+          }
+        },
+        "status": "completed"
+      }
+    ],
+    "backend": "clifford_frame",
+    "circuit_sha256": "99441c6865b4da76e584cffe959bb2f8d196a5bc3e1ae9b15b15f964f6f2a4f6",
+    "evidence_class": "LOCAL_IDEAL_CALCULATION",
+    "execution_seconds": 3.7623271139964345,
+    "gates": 355,
+    "hardware_job_id": null,
+    "input_state": "all_zero",
+    "limits_per_scalar_evaluation": {
+      "max_branches": 4096,
+      "max_coefficient_bits": 4096,
+      "max_generators": 2056,
+      "max_pairs": 1000000,
+      "max_work": 10000000
+    },
+    "n_qubits": 9,
+    "peak_worker_rss_bytes": 24719360,
+    "peak_worker_rss_source": "Linux /proc/self/status VmHWM, including imports/setup",
+    "request_sha256": "3132db08b9ca8a383427a6136ccc81fcc6ef7d8c6c542ab510120b07dad2a265",
+    "schema": "nrqc-calculator-result-v1",
+    "status": "completed",
+    "timeout_seconds": 20,
+    "wall_seconds": 3.9000671149988193
+  },
+  "program": {
+    "base": 2,
+    "controls_lsb_first": [
+      0,
+      1,
+      2
+    ],
+    "factors_or_order_supplied": false,
+    "gate_counts": {
+      "cx": 142,
+      "h": 50,
+      "swap": 1,
+      "t": 90,
+      "tdg": 71,
+      "x": 1
+    },
+    "inverse_qft": true,
+    "modulus": 21,
+    "n_qubits": 9,
+    "oracle": "table",
+    "oracle_lowered_gates": 307,
+    "oracle_scaling": "bounded exponential truth table",
+    "precision_bits": 3,
+    "scope": "small exact order-finding demonstration; low precision has no general Shor success guarantee",
+    "scratch": [
+      8
+    ],
+    "scratch_postcondition": "all zero",
+    "scratch_precondition": "all zero",
+    "total_gates": 355,
+    "work_lsb_first": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "provenance": "Repetition 1 from shor_results.json; no additional timing run"
+}
