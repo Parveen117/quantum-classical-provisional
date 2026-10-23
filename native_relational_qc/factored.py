@@ -319,6 +319,7 @@ def _evaluate(circuit,factors,*,max_bond=256,max_coefficients=1000000,max_work=1
               contraction='integer'):
     if not isinstance(circuit,CompactCircuit):
         raise TypeError('factored execution requires CompactCircuit')
+    _integer(circuit.n_qubits,'factored qubits',1,256)
     if contraction not in ('integer','sparse','reuse','streaming'):
         raise ValueError('contraction must be integer, sparse, reuse or streaming')
     # Reject unsupported gates even when an observer would make them invisible.

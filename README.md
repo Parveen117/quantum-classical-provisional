@@ -2,10 +2,13 @@
 
 ## Native relational calculation engine
 
-The [2056-qubit theoretical design](native_relational_qc/DESIGN_2056.md)
-specifies 2048 data qubits plus eight reusable workspace qubits, native EMK
-operations, retained observation records and symbolic global-correlation tests.
-It is a design proposal; the current executable register cap remains 256.
+The [2056-qubit execution upgrade](native_relational_qc/LARGE_REGISTER.md)
+adds an exact Clifford/stabilizer-generator backend and a bounded Clifford+T
+backend. Actual whole-register global correlations, full-assignment Clifford
+probabilities and EMK geometry are qualified with measured time/RAM. The
+[original architecture](native_relational_qc/DESIGN_2056.md) reserves 2048 data
+qubits plus eight workspace qubits; qualification uses all 2056 sites as data.
+This is classical ideal-circuit simulation with explicit algorithm limits.
 
 The [quantum-circuit calculator](native_relational_qc/CALCULATOR.md) accepts custom
 circuit/query JSON and returns exact answers, certified decimal enclosures and

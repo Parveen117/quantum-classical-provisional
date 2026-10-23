@@ -2,10 +2,20 @@
 
 Author: Monty. 23 October 2026.
 
-Status: theoretical architecture and written finite-register derivations.
-No 2056-qubit execution, hardware construction, performance measurement or
-new implementation certificate is claimed. The current calculator's 256-qubit
-input guard is unchanged. This document extends the declared quantum sector of
+Original status at commit `52c6aefd22d213da237da526ad0609682958126d`:
+theoretical architecture and written finite-register derivations, with no
+2056-qubit execution or new implementation evidence at that revision.
+
+Implementation update: [LARGE_REGISTER.md](LARGE_REGISTER.md) now records
+executable exact Clifford/stabilizer-generator pullback, bounded Clifford+T
+observations and measured 2056-qubit qualification. Only these two explicitly
+selected backends accept up to 2056 sites; the older backends retain 256.
+The implementation uses observation pullback rather than a reusable full-state
+tableau. Hardware construction, fault tolerance and general efficient deep-T
+execution remain outside this milestone. Historical design choices below are
+not all implemented by this update.
+
+This document extends the declared quantum sector of
 [THEOREM.md](THEOREM.md) and the finite-cut adapter in
 [EMK_GEOMETRY.md](EMK_GEOMETRY.md).
 

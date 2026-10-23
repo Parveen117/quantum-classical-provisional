@@ -19,10 +19,11 @@ INPUT_SCHEMA = 'nrqc-calculator-v1'
 OUTPUT_SCHEMA = 'nrqc-calculator-result-v1'
 MAX_INPUT_BYTES = 2 * 1024 * 1024
 DEFAULT_LIMITS = dict(max_work=10_000_000, max_coefficient_bits=4096,
-                      max_bond=256, max_coefficients=1_000_000, max_terms=100_000)
+                      max_bond=256, max_coefficients=1_000_000, max_terms=100_000,
+                      max_generators=2056)
 LIMIT_RANGES = dict(max_work=(1,1_000_000_000), max_coefficient_bits=(2,8192),
                     max_bond=(1,1024), max_coefficients=(1,1_000_000),
-                    max_terms=(1,1_000_000))
+                    max_terms=(1,1_000_000), max_generators=(1,2056))
 
 
 def _json(value):
@@ -90,14 +91,18 @@ def validate(document):
             ('backend','decimal_places','limits','simplify','contraction'))
     if document['schema'] != INPUT_SCHEMA:
         raise ValueError('unsupported calculator input schema')
-    circuit = CompactCircuit(document['n_qubits'])
     backend = document.get('backend','factored')
-    if backend not in ('factored','observer'):
-        raise ValueError('backend must be factored or observer; no implicit fallback')
+    if backend not in ('factored','observer','stabilizer','clifford_t'):
+        raise ValueError('backend must be factored, observer, stabilizer or clifford_t; no implicit fallback')
+    if backend in ('stabilizer','clifford_t'):
+        from .large_register import LargeCircuit
+        circuit = LargeCircuit(document['n_qubits'])
+    else:
+        circuit = CompactCircuit(document['n_qubits'])
     contraction = document.get('contraction','integer')
     if contraction not in ('integer','sparse','reuse','streaming'):
         raise ValueError('contraction must be integer, sparse, reuse or streaming')
-    if backend == 'observer' and 'contraction' in document:
+    if backend != 'factored' and 'contraction' in document:
         raise ValueError('contraction applies only to the factored backend')
     simplify = document.get('simplify','none')
     if simplify not in ('none','exact'):
@@ -113,10 +118,14 @@ def validate(document):
         circuit.add(name,*qs)
         if backend == 'factored' and (len(qs)>2 or (len(qs)==2 and abs(qs[0]-qs[1])!=1)):
             raise ValueError('factored backend needs adjacent two-site gates; route explicitly or select observer')
+    if backend in ('stabilizer','clifford_t'):
+        from .pauli_engine import compile_plan
+        compile_plan(circuit,allow_t=backend=='clifford_t')
     digits = _integer(document.get('decimal_places',12),'decimal_places',0,60)
     supplied = document.get('limits',{})
-    applicable = {'max_work','max_coefficient_bits'} | (
-        {'max_bond','max_coefficients'} if backend=='factored' else {'max_terms'})
+    applicable = {'max_work','max_coefficient_bits'} | {
+        'factored':{'max_bond','max_coefficients'}, 'observer':{'max_terms'},
+        'stabilizer':{'max_generators'}, 'clifford_t':{'max_terms'}}[backend]
     _object(supplied, (), applicable)
     limits = {k:DEFAULT_LIMITS[k] for k in applicable}
     for k,v in supplied.items():
@@ -217,7 +226,7 @@ def _summary(observations):
         for k,v in observation.items():
             if k.startswith('peak_') or k=='max_coefficient_bits':
                 maxima[k]=max(maxima.get(k,0),v)
-            if k in ('scalar_products','term_visits','forward_gates','gates_examined'):
+            if k in ('scalar_products','term_visits','row_products','forward_gates','gates_examined'):
                 totals[k]=totals.get(k,0)+v
     return dict(completed_scalar_evaluations=len(observations),maxima=maxima,work_totals=totals)
 
@@ -227,6 +236,10 @@ def calculate(document):
     circuit,request=validate(document)
     if request['backend']=='factored':
         from .factored import probability,expectation
+    elif request['backend']=='stabilizer':
+        from .stabilizer import probability,expectation
+    elif request['backend']=='clifford_t':
+        from .clifford_t import probability,expectation
     else:
         from .observer import probability,expectation
     started=time.perf_counter()

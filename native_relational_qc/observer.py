@@ -86,6 +86,7 @@ class Observation:
 def _propagate(circuit, terms, *, max_terms, max_work, max_coefficient_bits, progress=None):
     if not isinstance(circuit, CompactCircuit):
         raise TypeError("observer execution requires a declared CompactCircuit")
+    _integer(circuit.n_qubits,'observer qubits',1,256)
     max_terms = _integer(max_terms, "max_terms", 1, 10_000_000)
     max_work = _integer(max_work, "max_work", 1, 1_000_000_000)
     max_coefficient_bits = _integer(max_coefficient_bits, "coefficient bits", 2, 1_000_000)

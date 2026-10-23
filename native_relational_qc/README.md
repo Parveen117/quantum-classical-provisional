@@ -1,5 +1,12 @@
 # Native Relational Quantum Computing — v0.1
 
+**New: [2056-qubit exact selected observations](LARGE_REGISTER.md).** Explicit
+`stabilizer` and `clifford_t` backends execute supported large-register circuits
+using bit-packed Pauli pullback, generator elimination and bounded exact phase
+expansion. Measured whole-register checks and an independent 14,392-gate
+Clifford reference accompany the implementation. The existing factored and
+expanded-observer backends retain their 256-qubit input cap.
+
 **New: [custom quantum-circuit calculator](CALCULATOR.md).** Supply a circuit and
 probability, Pauli-expectation or marginal-distribution queries as JSON. Obtain
 exact answers, certified decimal display intervals and explicit resource status

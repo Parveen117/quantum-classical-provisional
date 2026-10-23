@@ -141,7 +141,7 @@ def reduce_circuit(circuit, *, max_input_gates=100_000):
             retained.append((name, qubits))
             for q in qubits:
                 stacks[q].append(index)
-    out = CompactCircuit(circuit.n_qubits)
+    out = type(circuit)(circuit.n_qubits)
     for operation in retained:
         if operation is not None:
             out.add(operation[0], *operation[1])

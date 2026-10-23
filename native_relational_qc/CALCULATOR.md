@@ -70,7 +70,17 @@ Its distinct nonidentity expectations count toward the same 256-evaluation cap.
 `factored` is the default: product-observer propagation plus exact sparse MPS
 contraction. It accepts named single-qubit gates and adjacent
 `cx/cz/ch/cs/ct/swap`. `observer` explicitly selects the existing expanded Pauli
-engine, which also accepts nonadjacent gates and `ccx`. No automatic backend
+engine, which also accepts nonadjacent gates and `ccx`.
+
+The new [large-register backends](LARGE_REGISTER.md) explicitly accept 1–2056
+sites. `stabilizer` performs exact Clifford Pauli pullback and commuting
+generator elimination for joint probabilities. `clifford_t` additionally admits
+T/Tdg with bounded exact Pauli expansion. They support
+`id/x/y/z/h/s/sdg/sx/sxdg/r/k/rk/cx/cz/swap`, plus `t/tdg` only for `clifford_t`.
+They reject `ch/cs/ct/ccx` before simplification. Logical nonadjacent gates are
+accepted; this does not supply hardware routing. Both support geometry queries.
+
+No automatic backend
 switch, routing approximation, gate-name guessing, or arbitrary-angle rounding
 occurs. Unsupported gates are rejected before execution.
 
@@ -81,7 +91,7 @@ measurements, reset and noise are not added by this calculator interface.
 | Limit | Default | Meaning |
 | --- | --- | --- |
 | Wall time | 20 s | Entire child batch including startup; adjustable through `--timeout`, at most 300 s |
-| Qubits | 1–256 | Accepted register width, not a performance guarantee |
+| Qubits | 1–256 or 1–2056 | 2056 only for explicit `stabilizer`/`clifford_t`; not a performance guarantee |
 | Gates | 100,000 | Maximum declared operations |
 | Queries | 32 | Unique IDs required |
 | Scalar evaluations | 256 | Total across queries; a k-site distribution costs 2^k evaluations |
@@ -90,11 +100,17 @@ measurements, reset and noise are not added by this calculator interface.
 | Coefficient bits | 4,096 | Backend coefficient budget per scalar evaluation |
 | Factored bond | 256 | Allocated representation dimension, not a minimal Schmidt rank |
 | Factored coefficients | 1,000,000 | Inspected coefficient-collection cap |
-| Observer terms | 100,000 | Expanded Pauli term cap |
+| Observer / Clifford+T terms | 100,000 | Expanded Pauli term cap |
+| Stabilizer generators | 2,056 | Requested joint-probability generator cap |
 
 Set applicable backend limits with a `limits` object, for example
 `"limits": {"max_work": 1000000, "max_bond": 64}` for `factored`, or
-`"limits": {"max_terms": 16384}` for `observer`. Unknown fields, duplicate JSON
+`"limits": {"max_terms": 16384}` for `observer` or `clifford_t`, or
+`"limits": {"max_generators": 2056}` for `stabilizer`. A stabilizer joint
+probability can specify all sites without enumerating outcomes. Clifford+T
+probabilities explicitly expand 2^k projector terms for k requested sites and
+may therefore reject a wide probability query even when its circuit is easy.
+Unknown fields, duplicate JSON
 keys, non-finite JSON constants, repeated query IDs and ambiguous qubit keys are
 rejected. Files are limited to 2 MiB. Parent-side input parsing/validation is
 bounded by these size caps and is outside the child wall timer.
@@ -149,7 +165,7 @@ zero; its logical gate counts are not physical entropy or energy estimates.
 ## Optional exact reduction
 
 Optional `"simplify": "exact"` now applies [guarded exact gate reduction](EXACT_REDUCTION.md)
-before either backend. It removes supported inverse pairs and combines named
+before the selected backend. It removes supported inverse pairs and combines named
 gate products while recording the complete global phase. Results retain the
 original circuit hash and identify the reduced execution circuit separately.
 The default is `"none"`; this does not remove the resource limits on arbitrary
