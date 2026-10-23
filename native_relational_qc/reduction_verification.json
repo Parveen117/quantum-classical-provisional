@@ -1,0 +1,39 @@
+{
+  "baseline_commit": "bbf9f050c8406dc39b71b3500750d05cb99aa3aa",
+  "benchmark_checks": {
+    "all_reduced_echo_values_equal_exact_base": true,
+    "echo_execution_hashes_match_reproduced_reduction": true,
+    "echo_matches_base_wire_orders_and_phase": true,
+    "random12_values_equal": true,
+    "random16_no_false_completion": true,
+    "small_echo_both_match_expanded_observer": true
+  },
+  "benchmark_failures_retained": 3,
+  "benchmark_rows": 11,
+  "benchmark_successes": 8,
+  "date": "2026-10-23",
+  "native_tests": {
+    "errors": 0,
+    "failed": 0,
+    "passed": 139,
+    "skipped": 0
+  },
+  "numpy": "2.3.5",
+  "python": "3.12.14",
+  "schema": "nrqc-exact-reduction-verification-v1",
+  "scope": "Exact finite gate reduction, full phase retained; structured benefit only; random 16-round resource failure remains. No hardware execution.",
+  "sdk_import_blocked_smoke": "Qiskit and Aer imports blocked; phase example completed with ledger -i, exact YY=1",
+  "source_and_artifact_sha256": {
+    "README.md": "892ee75c18c38cc01be44a72ebbc60a96080e951c884c40d7e6535525cca24c6",
+    "native_relational_qc/CALCULATOR.md": "56e452ba6035a01e829b925c0c14d7840c6f2e0ccc14c5a2d8f35ec98b241436",
+    "native_relational_qc/EXACT_REDUCTION.md": "77b9f14058fd8b9f2df918c9b1d998b906e7971bc45baad664769cc1dca4001d",
+    "native_relational_qc/calculator.py": "33909fe47482565b34183c23ece487735191ebc2fc37c508fa9b90c305852100",
+    "native_relational_qc/calculator_examples/phase_reduction.json": "ac4385a0b4f85fb54e80e443b8c70beef16984f4d0e95e9e12cdb88e504410a2",
+    "native_relational_qc/calculator_examples/phase_reduction.result.json": "c284808ca8bb7f930f391a2c10cdbed1d03a731b80340c52e693bf9409b93570",
+    "native_relational_qc/reduction.py": "8565e3c382a5b07168e7b7b10613a9ec1fa048ec03efcc39ab1a793675facd97",
+    "native_relational_qc/reduction_benchmark.py": "e9ad8162fb8c0020f6b00d57717d774763493081dda43d42e4c9821b922be9ba",
+    "native_relational_qc/reduction_results.json": "98c2fc2cf3671fa21fcc34e037d1cab8f1c05d3f3ec9bc9da20ec286e32c2502",
+    "native_relational_qc/reduction_test_results.json": "caef31f2634bfe0f0d31ccdf0dff0f36f5f2c1b5c38f69b650b668a081ef5dee",
+    "tests/test_native_reduction.py": "f2d376bc09c9381954968b637c15e13355f2c423609ec9d307b85b3ddee77efb"
+  }
+}

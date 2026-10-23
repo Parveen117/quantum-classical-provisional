@@ -125,6 +125,19 @@ The result hashes the canonical circuit separately from the full normalized
 request, so changing an observable changes the request hash while preserving
 the circuit hash. Hashes identify inputs; they are not a proof of correctness.
 
+## Optional exact reduction
+
+Optional `"simplify": "exact"` now applies [guarded exact gate reduction](EXACT_REDUCTION.md)
+before either backend. It removes supported inverse pairs and combines named
+gate products while recording the complete global phase. Results retain the
+original circuit hash and identify the reduced execution circuit separately.
+The default is `"none"`; this does not remove the resource limits on arbitrary
+deep circuits. Generate the 50-qubit structured example with:
+
+```bash
+python -m native_relational_qc.reduction_benchmark --example /tmp/echo50.json
+```
+
 ## Integer-contraction upgrade
 
 The default factored engine now uses exact integer matrix contraction. The

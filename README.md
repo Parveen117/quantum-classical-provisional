@@ -6,6 +6,11 @@ The [quantum-circuit calculator](native_relational_qc/CALCULATOR.md) accepts cus
 circuit/query JSON and returns exact answers, certified decimal enclosures and
 cost diagnostics through `python -m native_relational_qc calculate INPUT.json`.
 
+The optional [exact circuit reducer](native_relational_qc/EXACT_REDUCTION.md)
+removes provably redundant gates with a retained phase ledger. It includes a
+50-qubit compute/undo example, full-operator tests and an explicit comparison
+showing the remaining random-circuit resource boundary.
+
 The [integer-contraction upgrade](native_relational_qc/INTEGER_CONTRACTION.md)
 recovers selected 50-qubit, 12-round exact local and all-site parity answers
 within the previous 20-second per-query budget, with retained baseline failures,

@@ -76,13 +76,16 @@ def _site_map(value, n, paulis=False):
 
 def validate(document):
     _object(document, ('schema','n_qubits','operations','queries'),
-            ('backend','decimal_places','limits'))
+            ('backend','decimal_places','limits','simplify'))
     if document['schema'] != INPUT_SCHEMA:
         raise ValueError('unsupported calculator input schema')
     circuit = CompactCircuit(document['n_qubits'])
     backend = document.get('backend','factored')
     if backend not in ('factored','observer'):
         raise ValueError('backend must be factored or observer; no implicit fallback')
+    simplify = document.get('simplify','none')
+    if simplify not in ('none','exact'):
+        raise ValueError('simplify must be none or exact')
     operations = document['operations']
     if not isinstance(operations,list) or len(operations)>100_000:
         raise ValueError('operations must be a list of at most 100000 gates')
@@ -135,6 +138,8 @@ def validate(document):
     canonical = dict(schema=INPUT_SCHEMA,n_qubits=circuit.n_qubits,
                      operations=[[name,list(qs)] for name,qs in circuit.operations],
                      queries=queries,backend=backend,decimal_places=digits,limits=limits)
+    if simplify == 'exact':
+        canonical['simplify'] = simplify
     return circuit, canonical
 
 
@@ -203,12 +208,22 @@ def calculate(document):
     else:
         from .observer import probability,expectation
     started=time.perf_counter()
+    reduction = None
+    if request.get('simplify') == 'exact':
+        from .reduction import reduce_circuit
+        reduction = reduce_circuit(circuit)
+        circuit = reduction.circuit
+    simplification_seconds = time.perf_counter()-started
     report=dict(schema=OUTPUT_SCHEMA,status='completed',
                 evidence_class='LOCAL_IDEAL_CALCULATION',hardware_job_id=None,
                 input_state='all_zero',backend=request['backend'],
                 circuit_sha256=_digest(dict(n_qubits=circuit.n_qubits,operations=request['operations'])),
                 request_sha256=_digest(request),n_qubits=circuit.n_qubits,
-                gates=len(circuit.operations),limits_per_scalar_evaluation=request['limits'],answers=[])
+                gates=len(request['operations']),limits_per_scalar_evaluation=request['limits'],answers=[])
+    if reduction is not None:
+        report['simplification'] = dict(reduction.to_dict(),execution_seconds=simplification_seconds)
+        report['execution_circuit_sha256'] = _digest(dict(n_qubits=circuit.n_qubits,
+            operations=[[name,list(qs)] for name,qs in circuit.operations]))
     for query in request['queries']:
         start=time.perf_counter(); observations=[]
         row=dict(id=query['id'],kind=query['kind'])
