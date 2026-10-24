@@ -1,0 +1,2658 @@
+{
+  "schema": "native-photonic-io-v1",
+  "author": "Monty",
+  "status": "DESIGN_ONLY",
+  "domain": "grid=4, pair_sum=0, reference=0, two spectators zero",
+  "core_netlist_sha256": "4a14dbf2906f2c21b755c9fbc73b0ca30e755f3d9e3c857b60033395cd00392f",
+  "process_binding_sha256": "9363a27426e915e13c6fe439a2eae07a6fae3457e156fb9420dbce75162676b6",
+  "stage_order": [
+    "source routing",
+    "preparation",
+    "exchange core",
+    "guard test",
+    "analysis",
+    "detectors"
+  ],
+  "preparation": "H on ordered ports, then phase on second port; physically bypassed for basis inputs",
+  "analysis": "phase on second ordered port, then H; all other ports retain direct detection",
+  "routing": "external phase-calibrated patching between settings; no fast switch network claimed",
+  "phase_convention": "exp(i*k*pi/32), k modulo 64, relative to calibrated Hadamard ports",
+  "channels": [
+    "core_0",
+    "core_1",
+    "core_2",
+    "core_3",
+    "core_4",
+    "core_5",
+    "preparation",
+    "analysis",
+    "guard"
+  ],
+  "core_pairs": [
+    [
+      1,
+      4
+    ],
+    [
+      2,
+      8
+    ],
+    [
+      3,
+      12
+    ],
+    [
+      6,
+      9
+    ],
+    [
+      7,
+      13
+    ],
+    [
+      11,
+      14
+    ]
+  ],
+  "resources": {
+    "core_balanced_couplers": 12,
+    "preparation_balanced_couplers": 1,
+    "analysis_balanced_couplers": 1,
+    "guard_test_balanced_couplers": 2,
+    "installed_balanced_couplers": 16,
+    "logical_variable_phases": 9,
+    "signal_and_guard_detectors": 17,
+    "herald_detectors": 1,
+    "extra_port_trims_and_stabilization_actuators": null
+  },
+  "settings": [
+    {
+      "setting_id": "basis_0_0",
+      "kind": "basis_transfer",
+      "input_path": 0,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 0,
+      "phase_targets_pi_over_32": {
+        "core_0": 0,
+        "core_1": 0,
+        "core_2": 0,
+        "core_3": 0,
+        "core_4": 0,
+        "core_5": 0,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_0_1",
+      "kind": "basis_transfer",
+      "input_path": 1,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 0,
+      "phase_targets_pi_over_32": {
+        "core_0": 0,
+        "core_1": 0,
+        "core_2": 0,
+        "core_3": 0,
+        "core_4": 0,
+        "core_5": 0,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_0_2",
+      "kind": "basis_transfer",
+      "input_path": 2,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 0,
+      "phase_targets_pi_over_32": {
+        "core_0": 0,
+        "core_1": 0,
+        "core_2": 0,
+        "core_3": 0,
+        "core_4": 0,
+        "core_5": 0,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_0_3",
+      "kind": "basis_transfer",
+      "input_path": 3,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 0,
+      "phase_targets_pi_over_32": {
+        "core_0": 0,
+        "core_1": 0,
+        "core_2": 0,
+        "core_3": 0,
+        "core_4": 0,
+        "core_5": 0,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_0_4",
+      "kind": "basis_transfer",
+      "input_path": 4,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 0,
+      "phase_targets_pi_over_32": {
+        "core_0": 0,
+        "core_1": 0,
+        "core_2": 0,
+        "core_3": 0,
+        "core_4": 0,
+        "core_5": 0,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_0_5",
+      "kind": "basis_transfer",
+      "input_path": 5,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 0,
+      "phase_targets_pi_over_32": {
+        "core_0": 0,
+        "core_1": 0,
+        "core_2": 0,
+        "core_3": 0,
+        "core_4": 0,
+        "core_5": 0,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_0_6",
+      "kind": "basis_transfer",
+      "input_path": 6,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 0,
+      "phase_targets_pi_over_32": {
+        "core_0": 0,
+        "core_1": 0,
+        "core_2": 0,
+        "core_3": 0,
+        "core_4": 0,
+        "core_5": 0,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_0_7",
+      "kind": "basis_transfer",
+      "input_path": 7,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 0,
+      "phase_targets_pi_over_32": {
+        "core_0": 0,
+        "core_1": 0,
+        "core_2": 0,
+        "core_3": 0,
+        "core_4": 0,
+        "core_5": 0,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_0_8",
+      "kind": "basis_transfer",
+      "input_path": 8,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 0,
+      "phase_targets_pi_over_32": {
+        "core_0": 0,
+        "core_1": 0,
+        "core_2": 0,
+        "core_3": 0,
+        "core_4": 0,
+        "core_5": 0,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_0_9",
+      "kind": "basis_transfer",
+      "input_path": 9,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 0,
+      "phase_targets_pi_over_32": {
+        "core_0": 0,
+        "core_1": 0,
+        "core_2": 0,
+        "core_3": 0,
+        "core_4": 0,
+        "core_5": 0,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_0_10",
+      "kind": "basis_transfer",
+      "input_path": 10,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 0,
+      "phase_targets_pi_over_32": {
+        "core_0": 0,
+        "core_1": 0,
+        "core_2": 0,
+        "core_3": 0,
+        "core_4": 0,
+        "core_5": 0,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_0_11",
+      "kind": "basis_transfer",
+      "input_path": 11,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 0,
+      "phase_targets_pi_over_32": {
+        "core_0": 0,
+        "core_1": 0,
+        "core_2": 0,
+        "core_3": 0,
+        "core_4": 0,
+        "core_5": 0,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_0_12",
+      "kind": "basis_transfer",
+      "input_path": 12,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 0,
+      "phase_targets_pi_over_32": {
+        "core_0": 0,
+        "core_1": 0,
+        "core_2": 0,
+        "core_3": 0,
+        "core_4": 0,
+        "core_5": 0,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_0_13",
+      "kind": "basis_transfer",
+      "input_path": 13,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 0,
+      "phase_targets_pi_over_32": {
+        "core_0": 0,
+        "core_1": 0,
+        "core_2": 0,
+        "core_3": 0,
+        "core_4": 0,
+        "core_5": 0,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_0_14",
+      "kind": "basis_transfer",
+      "input_path": 14,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 0,
+      "phase_targets_pi_over_32": {
+        "core_0": 0,
+        "core_1": 0,
+        "core_2": 0,
+        "core_3": 0,
+        "core_4": 0,
+        "core_5": 0,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_0_15",
+      "kind": "basis_transfer",
+      "input_path": 15,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 0,
+      "phase_targets_pi_over_32": {
+        "core_0": 0,
+        "core_1": 0,
+        "core_2": 0,
+        "core_3": 0,
+        "core_4": 0,
+        "core_5": 0,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_8_0",
+      "kind": "basis_transfer",
+      "input_path": 0,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 8,
+      "phase_targets_pi_over_32": {
+        "core_0": 56,
+        "core_1": 56,
+        "core_2": 56,
+        "core_3": 56,
+        "core_4": 56,
+        "core_5": 56,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_8_1",
+      "kind": "basis_transfer",
+      "input_path": 1,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 8,
+      "phase_targets_pi_over_32": {
+        "core_0": 56,
+        "core_1": 56,
+        "core_2": 56,
+        "core_3": 56,
+        "core_4": 56,
+        "core_5": 56,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_8_2",
+      "kind": "basis_transfer",
+      "input_path": 2,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 8,
+      "phase_targets_pi_over_32": {
+        "core_0": 56,
+        "core_1": 56,
+        "core_2": 56,
+        "core_3": 56,
+        "core_4": 56,
+        "core_5": 56,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_8_3",
+      "kind": "basis_transfer",
+      "input_path": 3,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 8,
+      "phase_targets_pi_over_32": {
+        "core_0": 56,
+        "core_1": 56,
+        "core_2": 56,
+        "core_3": 56,
+        "core_4": 56,
+        "core_5": 56,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_8_4",
+      "kind": "basis_transfer",
+      "input_path": 4,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 8,
+      "phase_targets_pi_over_32": {
+        "core_0": 56,
+        "core_1": 56,
+        "core_2": 56,
+        "core_3": 56,
+        "core_4": 56,
+        "core_5": 56,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_8_5",
+      "kind": "basis_transfer",
+      "input_path": 5,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 8,
+      "phase_targets_pi_over_32": {
+        "core_0": 56,
+        "core_1": 56,
+        "core_2": 56,
+        "core_3": 56,
+        "core_4": 56,
+        "core_5": 56,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_8_6",
+      "kind": "basis_transfer",
+      "input_path": 6,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 8,
+      "phase_targets_pi_over_32": {
+        "core_0": 56,
+        "core_1": 56,
+        "core_2": 56,
+        "core_3": 56,
+        "core_4": 56,
+        "core_5": 56,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_8_7",
+      "kind": "basis_transfer",
+      "input_path": 7,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 8,
+      "phase_targets_pi_over_32": {
+        "core_0": 56,
+        "core_1": 56,
+        "core_2": 56,
+        "core_3": 56,
+        "core_4": 56,
+        "core_5": 56,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_8_8",
+      "kind": "basis_transfer",
+      "input_path": 8,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 8,
+      "phase_targets_pi_over_32": {
+        "core_0": 56,
+        "core_1": 56,
+        "core_2": 56,
+        "core_3": 56,
+        "core_4": 56,
+        "core_5": 56,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_8_9",
+      "kind": "basis_transfer",
+      "input_path": 9,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 8,
+      "phase_targets_pi_over_32": {
+        "core_0": 56,
+        "core_1": 56,
+        "core_2": 56,
+        "core_3": 56,
+        "core_4": 56,
+        "core_5": 56,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_8_10",
+      "kind": "basis_transfer",
+      "input_path": 10,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 8,
+      "phase_targets_pi_over_32": {
+        "core_0": 56,
+        "core_1": 56,
+        "core_2": 56,
+        "core_3": 56,
+        "core_4": 56,
+        "core_5": 56,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_8_11",
+      "kind": "basis_transfer",
+      "input_path": 11,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 8,
+      "phase_targets_pi_over_32": {
+        "core_0": 56,
+        "core_1": 56,
+        "core_2": 56,
+        "core_3": 56,
+        "core_4": 56,
+        "core_5": 56,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_8_12",
+      "kind": "basis_transfer",
+      "input_path": 12,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 8,
+      "phase_targets_pi_over_32": {
+        "core_0": 56,
+        "core_1": 56,
+        "core_2": 56,
+        "core_3": 56,
+        "core_4": 56,
+        "core_5": 56,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_8_13",
+      "kind": "basis_transfer",
+      "input_path": 13,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 8,
+      "phase_targets_pi_over_32": {
+        "core_0": 56,
+        "core_1": 56,
+        "core_2": 56,
+        "core_3": 56,
+        "core_4": 56,
+        "core_5": 56,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_8_14",
+      "kind": "basis_transfer",
+      "input_path": 14,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 8,
+      "phase_targets_pi_over_32": {
+        "core_0": 56,
+        "core_1": 56,
+        "core_2": 56,
+        "core_3": 56,
+        "core_4": 56,
+        "core_5": 56,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_8_15",
+      "kind": "basis_transfer",
+      "input_path": 15,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 8,
+      "phase_targets_pi_over_32": {
+        "core_0": 56,
+        "core_1": 56,
+        "core_2": 56,
+        "core_3": 56,
+        "core_4": 56,
+        "core_5": 56,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_16_0",
+      "kind": "basis_transfer",
+      "input_path": 0,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 16,
+      "phase_targets_pi_over_32": {
+        "core_0": 48,
+        "core_1": 48,
+        "core_2": 48,
+        "core_3": 48,
+        "core_4": 48,
+        "core_5": 48,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_16_1",
+      "kind": "basis_transfer",
+      "input_path": 1,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 16,
+      "phase_targets_pi_over_32": {
+        "core_0": 48,
+        "core_1": 48,
+        "core_2": 48,
+        "core_3": 48,
+        "core_4": 48,
+        "core_5": 48,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_16_2",
+      "kind": "basis_transfer",
+      "input_path": 2,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 16,
+      "phase_targets_pi_over_32": {
+        "core_0": 48,
+        "core_1": 48,
+        "core_2": 48,
+        "core_3": 48,
+        "core_4": 48,
+        "core_5": 48,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_16_3",
+      "kind": "basis_transfer",
+      "input_path": 3,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 16,
+      "phase_targets_pi_over_32": {
+        "core_0": 48,
+        "core_1": 48,
+        "core_2": 48,
+        "core_3": 48,
+        "core_4": 48,
+        "core_5": 48,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_16_4",
+      "kind": "basis_transfer",
+      "input_path": 4,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 16,
+      "phase_targets_pi_over_32": {
+        "core_0": 48,
+        "core_1": 48,
+        "core_2": 48,
+        "core_3": 48,
+        "core_4": 48,
+        "core_5": 48,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_16_5",
+      "kind": "basis_transfer",
+      "input_path": 5,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 16,
+      "phase_targets_pi_over_32": {
+        "core_0": 48,
+        "core_1": 48,
+        "core_2": 48,
+        "core_3": 48,
+        "core_4": 48,
+        "core_5": 48,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_16_6",
+      "kind": "basis_transfer",
+      "input_path": 6,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 16,
+      "phase_targets_pi_over_32": {
+        "core_0": 48,
+        "core_1": 48,
+        "core_2": 48,
+        "core_3": 48,
+        "core_4": 48,
+        "core_5": 48,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_16_7",
+      "kind": "basis_transfer",
+      "input_path": 7,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 16,
+      "phase_targets_pi_over_32": {
+        "core_0": 48,
+        "core_1": 48,
+        "core_2": 48,
+        "core_3": 48,
+        "core_4": 48,
+        "core_5": 48,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_16_8",
+      "kind": "basis_transfer",
+      "input_path": 8,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 16,
+      "phase_targets_pi_over_32": {
+        "core_0": 48,
+        "core_1": 48,
+        "core_2": 48,
+        "core_3": 48,
+        "core_4": 48,
+        "core_5": 48,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_16_9",
+      "kind": "basis_transfer",
+      "input_path": 9,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 16,
+      "phase_targets_pi_over_32": {
+        "core_0": 48,
+        "core_1": 48,
+        "core_2": 48,
+        "core_3": 48,
+        "core_4": 48,
+        "core_5": 48,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_16_10",
+      "kind": "basis_transfer",
+      "input_path": 10,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 16,
+      "phase_targets_pi_over_32": {
+        "core_0": 48,
+        "core_1": 48,
+        "core_2": 48,
+        "core_3": 48,
+        "core_4": 48,
+        "core_5": 48,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_16_11",
+      "kind": "basis_transfer",
+      "input_path": 11,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 16,
+      "phase_targets_pi_over_32": {
+        "core_0": 48,
+        "core_1": 48,
+        "core_2": 48,
+        "core_3": 48,
+        "core_4": 48,
+        "core_5": 48,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_16_12",
+      "kind": "basis_transfer",
+      "input_path": 12,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 16,
+      "phase_targets_pi_over_32": {
+        "core_0": 48,
+        "core_1": 48,
+        "core_2": 48,
+        "core_3": 48,
+        "core_4": 48,
+        "core_5": 48,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_16_13",
+      "kind": "basis_transfer",
+      "input_path": 13,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 16,
+      "phase_targets_pi_over_32": {
+        "core_0": 48,
+        "core_1": 48,
+        "core_2": 48,
+        "core_3": 48,
+        "core_4": 48,
+        "core_5": 48,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_16_14",
+      "kind": "basis_transfer",
+      "input_path": 14,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 16,
+      "phase_targets_pi_over_32": {
+        "core_0": 48,
+        "core_1": 48,
+        "core_2": 48,
+        "core_3": 48,
+        "core_4": 48,
+        "core_5": 48,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_16_15",
+      "kind": "basis_transfer",
+      "input_path": 15,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 16,
+      "phase_targets_pi_over_32": {
+        "core_0": 48,
+        "core_1": 48,
+        "core_2": 48,
+        "core_3": 48,
+        "core_4": 48,
+        "core_5": 48,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_24_0",
+      "kind": "basis_transfer",
+      "input_path": 0,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 24,
+      "phase_targets_pi_over_32": {
+        "core_0": 40,
+        "core_1": 40,
+        "core_2": 40,
+        "core_3": 40,
+        "core_4": 40,
+        "core_5": 40,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_24_1",
+      "kind": "basis_transfer",
+      "input_path": 1,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 24,
+      "phase_targets_pi_over_32": {
+        "core_0": 40,
+        "core_1": 40,
+        "core_2": 40,
+        "core_3": 40,
+        "core_4": 40,
+        "core_5": 40,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_24_2",
+      "kind": "basis_transfer",
+      "input_path": 2,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 24,
+      "phase_targets_pi_over_32": {
+        "core_0": 40,
+        "core_1": 40,
+        "core_2": 40,
+        "core_3": 40,
+        "core_4": 40,
+        "core_5": 40,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_24_3",
+      "kind": "basis_transfer",
+      "input_path": 3,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 24,
+      "phase_targets_pi_over_32": {
+        "core_0": 40,
+        "core_1": 40,
+        "core_2": 40,
+        "core_3": 40,
+        "core_4": 40,
+        "core_5": 40,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_24_4",
+      "kind": "basis_transfer",
+      "input_path": 4,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 24,
+      "phase_targets_pi_over_32": {
+        "core_0": 40,
+        "core_1": 40,
+        "core_2": 40,
+        "core_3": 40,
+        "core_4": 40,
+        "core_5": 40,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_24_5",
+      "kind": "basis_transfer",
+      "input_path": 5,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 24,
+      "phase_targets_pi_over_32": {
+        "core_0": 40,
+        "core_1": 40,
+        "core_2": 40,
+        "core_3": 40,
+        "core_4": 40,
+        "core_5": 40,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_24_6",
+      "kind": "basis_transfer",
+      "input_path": 6,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 24,
+      "phase_targets_pi_over_32": {
+        "core_0": 40,
+        "core_1": 40,
+        "core_2": 40,
+        "core_3": 40,
+        "core_4": 40,
+        "core_5": 40,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_24_7",
+      "kind": "basis_transfer",
+      "input_path": 7,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 24,
+      "phase_targets_pi_over_32": {
+        "core_0": 40,
+        "core_1": 40,
+        "core_2": 40,
+        "core_3": 40,
+        "core_4": 40,
+        "core_5": 40,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_24_8",
+      "kind": "basis_transfer",
+      "input_path": 8,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 24,
+      "phase_targets_pi_over_32": {
+        "core_0": 40,
+        "core_1": 40,
+        "core_2": 40,
+        "core_3": 40,
+        "core_4": 40,
+        "core_5": 40,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_24_9",
+      "kind": "basis_transfer",
+      "input_path": 9,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 24,
+      "phase_targets_pi_over_32": {
+        "core_0": 40,
+        "core_1": 40,
+        "core_2": 40,
+        "core_3": 40,
+        "core_4": 40,
+        "core_5": 40,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_24_10",
+      "kind": "basis_transfer",
+      "input_path": 10,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 24,
+      "phase_targets_pi_over_32": {
+        "core_0": 40,
+        "core_1": 40,
+        "core_2": 40,
+        "core_3": 40,
+        "core_4": 40,
+        "core_5": 40,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_24_11",
+      "kind": "basis_transfer",
+      "input_path": 11,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 24,
+      "phase_targets_pi_over_32": {
+        "core_0": 40,
+        "core_1": 40,
+        "core_2": 40,
+        "core_3": 40,
+        "core_4": 40,
+        "core_5": 40,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_24_12",
+      "kind": "basis_transfer",
+      "input_path": 12,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 24,
+      "phase_targets_pi_over_32": {
+        "core_0": 40,
+        "core_1": 40,
+        "core_2": 40,
+        "core_3": 40,
+        "core_4": 40,
+        "core_5": 40,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_24_13",
+      "kind": "basis_transfer",
+      "input_path": 13,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 24,
+      "phase_targets_pi_over_32": {
+        "core_0": 40,
+        "core_1": 40,
+        "core_2": 40,
+        "core_3": 40,
+        "core_4": 40,
+        "core_5": 40,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_24_14",
+      "kind": "basis_transfer",
+      "input_path": 14,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 24,
+      "phase_targets_pi_over_32": {
+        "core_0": 40,
+        "core_1": 40,
+        "core_2": 40,
+        "core_3": 40,
+        "core_4": 40,
+        "core_5": 40,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_24_15",
+      "kind": "basis_transfer",
+      "input_path": 15,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 24,
+      "phase_targets_pi_over_32": {
+        "core_0": 40,
+        "core_1": 40,
+        "core_2": 40,
+        "core_3": 40,
+        "core_4": 40,
+        "core_5": 40,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_32_0",
+      "kind": "basis_transfer",
+      "input_path": 0,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_32_1",
+      "kind": "basis_transfer",
+      "input_path": 1,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_32_2",
+      "kind": "basis_transfer",
+      "input_path": 2,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_32_3",
+      "kind": "basis_transfer",
+      "input_path": 3,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_32_4",
+      "kind": "basis_transfer",
+      "input_path": 4,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_32_5",
+      "kind": "basis_transfer",
+      "input_path": 5,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_32_6",
+      "kind": "basis_transfer",
+      "input_path": 6,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_32_7",
+      "kind": "basis_transfer",
+      "input_path": 7,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_32_8",
+      "kind": "basis_transfer",
+      "input_path": 8,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_32_9",
+      "kind": "basis_transfer",
+      "input_path": 9,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_32_10",
+      "kind": "basis_transfer",
+      "input_path": 10,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_32_11",
+      "kind": "basis_transfer",
+      "input_path": 11,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_32_12",
+      "kind": "basis_transfer",
+      "input_path": 12,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_32_13",
+      "kind": "basis_transfer",
+      "input_path": 13,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_32_14",
+      "kind": "basis_transfer",
+      "input_path": 14,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "basis_32_15",
+      "kind": "basis_transfer",
+      "input_path": 15,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "phase_0_0",
+      "kind": "cross_block_coherence",
+      "input_path": 1,
+      "preparation_ports": [
+        1,
+        0
+      ],
+      "analysis_ports": [
+        4,
+        0
+      ],
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": 4,
+      "minus_detector": 0
+    },
+    {
+      "setting_id": "phase_0_16",
+      "kind": "cross_block_coherence",
+      "input_path": 1,
+      "preparation_ports": [
+        1,
+        0
+      ],
+      "analysis_ports": [
+        4,
+        0
+      ],
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 48,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": 4,
+      "minus_detector": 0
+    },
+    {
+      "setting_id": "phase_0_32",
+      "kind": "cross_block_coherence",
+      "input_path": 1,
+      "preparation_ports": [
+        1,
+        0
+      ],
+      "analysis_ports": [
+        4,
+        0
+      ],
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 32,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": 4,
+      "minus_detector": 0
+    },
+    {
+      "setting_id": "phase_0_48",
+      "kind": "cross_block_coherence",
+      "input_path": 1,
+      "preparation_ports": [
+        1,
+        0
+      ],
+      "analysis_ports": [
+        4,
+        0
+      ],
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 16,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": 4,
+      "minus_detector": 0
+    },
+    {
+      "setting_id": "phase_1_0",
+      "kind": "cross_block_coherence",
+      "input_path": 2,
+      "preparation_ports": [
+        2,
+        0
+      ],
+      "analysis_ports": [
+        8,
+        0
+      ],
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": 8,
+      "minus_detector": 0
+    },
+    {
+      "setting_id": "phase_1_16",
+      "kind": "cross_block_coherence",
+      "input_path": 2,
+      "preparation_ports": [
+        2,
+        0
+      ],
+      "analysis_ports": [
+        8,
+        0
+      ],
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 48,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": 8,
+      "minus_detector": 0
+    },
+    {
+      "setting_id": "phase_1_32",
+      "kind": "cross_block_coherence",
+      "input_path": 2,
+      "preparation_ports": [
+        2,
+        0
+      ],
+      "analysis_ports": [
+        8,
+        0
+      ],
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 32,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": 8,
+      "minus_detector": 0
+    },
+    {
+      "setting_id": "phase_1_48",
+      "kind": "cross_block_coherence",
+      "input_path": 2,
+      "preparation_ports": [
+        2,
+        0
+      ],
+      "analysis_ports": [
+        8,
+        0
+      ],
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 16,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": 8,
+      "minus_detector": 0
+    },
+    {
+      "setting_id": "phase_2_0",
+      "kind": "cross_block_coherence",
+      "input_path": 3,
+      "preparation_ports": [
+        3,
+        0
+      ],
+      "analysis_ports": [
+        12,
+        0
+      ],
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": 12,
+      "minus_detector": 0
+    },
+    {
+      "setting_id": "phase_2_16",
+      "kind": "cross_block_coherence",
+      "input_path": 3,
+      "preparation_ports": [
+        3,
+        0
+      ],
+      "analysis_ports": [
+        12,
+        0
+      ],
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 48,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": 12,
+      "minus_detector": 0
+    },
+    {
+      "setting_id": "phase_2_32",
+      "kind": "cross_block_coherence",
+      "input_path": 3,
+      "preparation_ports": [
+        3,
+        0
+      ],
+      "analysis_ports": [
+        12,
+        0
+      ],
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 32,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": 12,
+      "minus_detector": 0
+    },
+    {
+      "setting_id": "phase_2_48",
+      "kind": "cross_block_coherence",
+      "input_path": 3,
+      "preparation_ports": [
+        3,
+        0
+      ],
+      "analysis_ports": [
+        12,
+        0
+      ],
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 16,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": 12,
+      "minus_detector": 0
+    },
+    {
+      "setting_id": "phase_3_0",
+      "kind": "cross_block_coherence",
+      "input_path": 6,
+      "preparation_ports": [
+        6,
+        0
+      ],
+      "analysis_ports": [
+        9,
+        0
+      ],
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": 9,
+      "minus_detector": 0
+    },
+    {
+      "setting_id": "phase_3_16",
+      "kind": "cross_block_coherence",
+      "input_path": 6,
+      "preparation_ports": [
+        6,
+        0
+      ],
+      "analysis_ports": [
+        9,
+        0
+      ],
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 48,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": 9,
+      "minus_detector": 0
+    },
+    {
+      "setting_id": "phase_3_32",
+      "kind": "cross_block_coherence",
+      "input_path": 6,
+      "preparation_ports": [
+        6,
+        0
+      ],
+      "analysis_ports": [
+        9,
+        0
+      ],
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 32,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": 9,
+      "minus_detector": 0
+    },
+    {
+      "setting_id": "phase_3_48",
+      "kind": "cross_block_coherence",
+      "input_path": 6,
+      "preparation_ports": [
+        6,
+        0
+      ],
+      "analysis_ports": [
+        9,
+        0
+      ],
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 16,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": 9,
+      "minus_detector": 0
+    },
+    {
+      "setting_id": "phase_4_0",
+      "kind": "cross_block_coherence",
+      "input_path": 7,
+      "preparation_ports": [
+        7,
+        0
+      ],
+      "analysis_ports": [
+        13,
+        0
+      ],
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": 13,
+      "minus_detector": 0
+    },
+    {
+      "setting_id": "phase_4_16",
+      "kind": "cross_block_coherence",
+      "input_path": 7,
+      "preparation_ports": [
+        7,
+        0
+      ],
+      "analysis_ports": [
+        13,
+        0
+      ],
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 48,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": 13,
+      "minus_detector": 0
+    },
+    {
+      "setting_id": "phase_4_32",
+      "kind": "cross_block_coherence",
+      "input_path": 7,
+      "preparation_ports": [
+        7,
+        0
+      ],
+      "analysis_ports": [
+        13,
+        0
+      ],
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 32,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": 13,
+      "minus_detector": 0
+    },
+    {
+      "setting_id": "phase_4_48",
+      "kind": "cross_block_coherence",
+      "input_path": 7,
+      "preparation_ports": [
+        7,
+        0
+      ],
+      "analysis_ports": [
+        13,
+        0
+      ],
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 16,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": 13,
+      "minus_detector": 0
+    },
+    {
+      "setting_id": "phase_5_0",
+      "kind": "cross_block_coherence",
+      "input_path": 11,
+      "preparation_ports": [
+        11,
+        0
+      ],
+      "analysis_ports": [
+        14,
+        0
+      ],
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": 14,
+      "minus_detector": 0
+    },
+    {
+      "setting_id": "phase_5_16",
+      "kind": "cross_block_coherence",
+      "input_path": 11,
+      "preparation_ports": [
+        11,
+        0
+      ],
+      "analysis_ports": [
+        14,
+        0
+      ],
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 48,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": 14,
+      "minus_detector": 0
+    },
+    {
+      "setting_id": "phase_5_32",
+      "kind": "cross_block_coherence",
+      "input_path": 11,
+      "preparation_ports": [
+        11,
+        0
+      ],
+      "analysis_ports": [
+        14,
+        0
+      ],
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 32,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": 14,
+      "minus_detector": 0
+    },
+    {
+      "setting_id": "phase_5_48",
+      "kind": "cross_block_coherence",
+      "input_path": 11,
+      "preparation_ports": [
+        11,
+        0
+      ],
+      "analysis_ports": [
+        14,
+        0
+      ],
+      "core_angle_steps": 32,
+      "phase_targets_pi_over_32": {
+        "core_0": 32,
+        "core_1": 32,
+        "core_2": 32,
+        "core_3": 32,
+        "core_4": 32,
+        "core_5": 32,
+        "preparation": 0,
+        "analysis": 16,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": 14,
+      "minus_detector": 0
+    },
+    {
+      "setting_id": "guard_0",
+      "kind": "deliberate_guard_coupling",
+      "input_path": 4,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 0,
+      "phase_targets_pi_over_32": {
+        "core_0": 0,
+        "core_1": 0,
+        "core_2": 0,
+        "core_3": 0,
+        "core_4": 0,
+        "core_5": 0,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 0
+      },
+      "guard_ports": null,
+      "guard_configuration": "physically_bypassed_or_removed",
+      "plus_detector": null,
+      "minus_detector": null
+    },
+    {
+      "setting_id": "guard_16",
+      "kind": "deliberate_guard_coupling",
+      "input_path": 4,
+      "preparation_ports": null,
+      "analysis_ports": null,
+      "core_angle_steps": 0,
+      "phase_targets_pi_over_32": {
+        "core_0": 0,
+        "core_1": 0,
+        "core_2": 0,
+        "core_3": 0,
+        "core_4": 0,
+        "core_5": 0,
+        "preparation": 0,
+        "analysis": 0,
+        "guard": 48
+      },
+      "guard_ports": [
+        4,
+        16
+      ],
+      "guard_configuration": "inserted_active",
+      "plus_detector": null,
+      "minus_detector": null
+    }
+  ],
+  "measurement_status": "NOT_RUN",
+  "fabricated": false,
+  "geometry": "PDK candidate binding is separate; no placed/routed GDS or DRC result"
+}

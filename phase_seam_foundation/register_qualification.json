@@ -1,5 +1,5 @@
 {
-  "schema": "phase-seam-register-v0.9",
+  "schema": "phase-seam-register-v0.10",
   "author": "Monty",
   "status": "wrapped-phase permutation compiler reusing existing native arithmetic",
   "assumptions": [
@@ -3455,6 +3455,54 @@
       "fabrication geometry, phase-voltage maps, errors, rates and budget remain unmeasured"
     ]
   },
+  "photonic_io": {
+    "status": "DESIGN_AND_OFFLINE_INTERFACE",
+    "evidence_class": "LOCAL_IDEAL_CALCULATION",
+    "settings": 106,
+    "resources": {
+      "core_balanced_couplers": 12,
+      "preparation_balanced_couplers": 1,
+      "analysis_balanced_couplers": 1,
+      "guard_test_balanced_couplers": 2,
+      "installed_balanced_couplers": 16,
+      "logical_variable_phases": 9,
+      "signal_and_guard_detectors": 17,
+      "herald_detectors": 1,
+      "extra_port_trims_and_stabilization_actuators": null
+    },
+    "verification": {
+      "backend": "existing Phase64Circuit",
+      "label_bits": 5,
+      "clean_workspace_bits": 3,
+      "min_gates": 164,
+      "max_gates": 449,
+      "gate_cap": 10000,
+      "boundary": "binary verification wires, not optical qubits or physical propagation"
+    },
+    "artifacts": {
+      "io": "photonic_io_design.json",
+      "io_sha256": "7d474967cf479f39207c0a890801b7bc8b7b9e05105429adc2d4560f0b154d24",
+      "calibration_template": "photonic_calibration_template.json",
+      "calibration_template_sha256": "18934e54c7ceabd703281e458ac82d0534c1999f0ba0aa4f56a7d00fd266db59",
+      "process_binding": "photonic_process_binding.json",
+      "process_binding_sha256": "c97bee1c5d89e7d40db77fada45dec91e4a7b15ba36406ceb46a8c8688c23477"
+    },
+    "process_candidate": "CORNERSTONE 300 nm SiN, TE, nominal 1550 nm",
+    "process_software_commit": "3323b17b4d75c852ed2372d7d13239408cca0eb1",
+    "pdk_mismatch": "mzi_nc defaults to mmi1x2_nc at its input; explicitly replace it with mmi2x2_nc for the two-input exchange",
+    "calibration": {
+      "status": "UNMEASURED_TEMPLATE",
+      "recorded_settings": 0,
+      "voltage_model": "joint configuration lookup only",
+      "physical_acceptance": "NOT_ASSESSED",
+      "hardware_submitted": false
+    },
+    "open": [
+      "heated placed/routed GDS and foundry design-rule review",
+      "calibration acquisition and inverse fitting",
+      "measured source/detector/loss/coherence and physical acceptance"
+    ]
+  },
   "limits": {
     "power_of_two_grids": [
       4,
@@ -3486,13 +3534,13 @@
     "native probability and time/energy laws independent of circuit assumptions"
   ],
   "validation": {
-    "tests": 181,
+    "tests": 193,
     "failures": 0,
     "errors": 0,
     "skipped": 0,
     "passed": true,
-    "seconds": 111.00783233699985,
-    "scope": "photonic design, continuous sector control, balanced reset, controller, compressed/full register, v0.3, v0.2, v0.1, calculator smoke and seven existing dynamic checks; full native/Shor suite not rerun",
+    "seconds": 121.04120530500222,
+    "scope": "photonic I/O and calibration binding, photonic design, continuous sector control, balanced reset, controller, compressed/full register, v0.3, v0.2, v0.1, calculator smoke and seven existing dynamic checks; full native/Shor suite not rerun",
     "selected_dynamic_tests": [
       "test_initial_classical_memory_and_empty_query",
       "test_measurement_retains_quantum_classical_correlation",
@@ -3505,8 +3553,8 @@
   },
   "checked_sources_sha256": {
     "phase_seam_foundation/register.py": "d29fa6736256368b5a4885744b79a852146bc63d60fa98ec4a3ac18c26fa2b9d",
-    "phase_seam_foundation/register_qualification.py": "91896131fb94905d2ef167984fbb2fedf25e43c376db51d7047710f3cb6604b0",
-    "phase_seam_foundation/register_source_manifest.json": "2029d69401bfc56268126fc13441650abd756fa448a122a0fbb7dba9bd0077d6",
+    "phase_seam_foundation/register_qualification.py": "f56d29663f8e65610a231a1a2fae991d4db2040406255ee615beda3b81eb85e1",
+    "phase_seam_foundation/register_source_manifest.json": "a4829dcfb99607c35a7b530522f609b2359ec26ba79a4fd05e56d980cd4e19a8",
     "phase_seam_foundation/model.py": "642984f5be7345683374719dc66193883d0688031e49ff9ebde12c5a36a939b8",
     "phase_seam_foundation/encoding.py": "93cd7ebca26e252756bdbaa9c8686a866826f7c9c8288e9881af0fa7ea8488c7",
     "phase_seam_foundation/joint.py": "53548114a84dfb24022acee866c10b67f0bd71ec9b9b203c014cf76af8ccbb36",
@@ -3517,12 +3565,15 @@
     "native_relational_qc/cyclotomic.py": "36a9f93fb9b6362a6141f13f4aef677de9f19642f6ea01ebb761614acab4ea86",
     "native_relational_qc/cyclotomic32.py": "33e203a7280bbe8341e37cb357f1bb6bfcaba9e695ff5144050e3a087733ab76",
     "native_relational_qc/cyclotomic64.py": "8fc9c42627feee330b00f1b56559031cc442746e830081eae09f535115d74e52",
-    "benchmarks/phase_seam_register_audit.py": "d62cc22784c161d1e3c7e954e19b63ace8c4ff65e8215c8a3e9f9c748bd92b13",
+    "benchmarks/phase_seam_register_audit.py": "8fe1681fd8cfa6346126ed043bcc9c7a5bbab9d0b427ff28b180bf8f7e8bc0f1",
     "phase_seam_foundation/controller.py": "ba74ab91b6ea9d1234256420225ba3ef5cc50a63ebf4ed0fa5d571af2169285d",
     "phase_seam_foundation/sector_control.py": "fe528d000e7465e5ba359c6195172720624d5bebca92f15f1d03f9af6cf5694a",
     "native_relational_qc/dynamic.py": "88421139cba72f0d86f3644c5933e03dd44d8afa1fdc79b250b2e8bf5390acd9",
     "tests/test_native_dynamic.py": "41f94d9520e98c80ed7f58fdacf0b60ba31455c63bbf5a313975f4d4ae6a0b27",
     "phase_seam_foundation/photonic_exchange.py": "1414ba5fffd110d35f339941059cccd086fd1b7cc4a3df84c3794095c4d77997",
+    "phase_seam_foundation/photonic_io.py": "ae4d8824bf239173309acf45f81292a1d3f85873d73006c950e8232ac5edaffe",
+    "phase_seam_foundation/photonic_process_binding.json": "c97bee1c5d89e7d40db77fada45dec91e4a7b15ba36406ceb46a8c8688c23477",
+    "tests/test_phase_seam_photonic_io.py": "696d402e7884b6b93ba9733c28b3bc43544dd53799eb7215a5ee89f6e4f3994f",
     "tests/test_phase_seam_photonic_exchange.py": "532cdb11b8b63410f4849a3ee727dbec80c09ef42ff06915bda7ff7bdff79fc5",
     "tests/test_phase_seam_sector_control.py": "3f69a2492214a8fdd97019a4d36e6d415251303e66abc1867108d038ab84643c",
     "tests/test_phase_seam_balanced_reset.py": "a43b73a7e762955284ae2d9195fe1f0cbde160f20ad90859b285000ab36b9bf0",

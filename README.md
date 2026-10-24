@@ -67,6 +67,15 @@ geometry and calibration. This is an encoded interaction demonstrator;
 16 paths are not 16 independent qubits or a scalable 2056-qubit device.
 The v0.9 combined audit passes 181 tests in 111.008 seconds.
 
+The [optical I/O and calibration adapter](phase_seam_foundation/PHOTONIC_IO.md)
+now compiles all 106 complete preparation/exchange/readout settings through
+the existing calculator. A pinned CORNERSTONE SiN300 candidate binding fixes
+the default MZI's one-input mismatch by specifying two-input splitters at
+both ends. Offline drive plans require complete recorded voltage vectors;
+the saved template contains no measured values. Heated mask layout and
+physical calibration remain open.
+The v0.10 combined audit passes 193 tests in 121.041 seconds.
+
 ## Native relational calculation engine
 
 The [linear-recognition upgrade](native_relational_qc/LINEAR_RECOGNITION.md)

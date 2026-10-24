@@ -1,6 +1,6 @@
 # Four-mode phase–seam cell: functional hardware contract
 
-Author: Monty. Version 0.9. Status: functional interface and first encoded
+Author: Monty. Version 0.10. Status: functional interface and first encoded
 carrier design; no fabricated device or measured tolerances/capacity.
 
 The [v0.2 joint-readout note](JOINT_READOUT.md) now supplies a conditional
@@ -79,6 +79,14 @@ source and SNSPD readout. An exact netlist and 106-setting unrun protocol
 are included. This represents a restricted native subspace, not four
 independent physical phase channels. The path count is not a qubit count.
 Fabrication geometry, phase-voltage maps and measured performance remain open.
+
+The [v0.10 I/O adapter](PHOTONIC_IO.md) supplies the ordered preparation and
+analysis stages, exact whole-setting verification and an offline interface
+for joint calibration records. A CORNERSTONE SiN300 software candidate is
+pinned; its default one-input MZI splitter must be replaced by a two-input
+component. Heated geometry and actual driver calibration remain to be
+supplied. Nine logical phase channels exclude extra port-trim/stabilization
+actuators. The generated calibration template contains no measured values.
 
 The proposed hardware primitive stores **four controllable cyclic modes**, a
 seam calibration and retained history. It is not specified as four qubits.
@@ -181,12 +189,13 @@ without treating its assumptions as established laws of nature.
 
 ## Concrete next deliverable
 
-The v0.9 carrier blueprint, logical netlist and ideal response protocol are
-ready for review by a photonics lab. Next, a chosen process kit or calibrated
-laboratory platform must supply the physical geometry, complete input/output
-network, phase-voltage maps, source/detector response and loss budget.
-Only then can measured intermediate-angle transfer and cross-block phase
-be compared with the proposed operator.
+The v0.9 core and v0.10 I/O routes, process-candidate mapping and calibration
+contract are ready for engineering review. Next, the pinned SiN candidate
+needs a placed/routed heated design, electrical interfaces and foundry rule
+checks. The external preparation/analysis modules need measured port phases
+and stable patch routing. Joint voltage-vector acquisition, source/detector
+response and a loss budget are required before physical comparison with
+the proposed intermediate-angle transfer and cross-block phase targets.
 
 The prototype's guard monitors optical code escape; closure is built into
 its fixed-sum code and is not independently verified on four physical

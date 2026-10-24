@@ -1,3 +1,15 @@
+test_ambiguous_actuators_rows_and_provenance_rejected (test_phase_seam_photonic_io.CalibrationBindingTests.test_ambiguous_actuators_rows_and_provenance_rejected) ... ok
+test_device_context_and_validity_must_match (test_phase_seam_photonic_io.CalibrationBindingTests.test_device_context_and_validity_must_match) ... ok
+test_empty_template_cannot_generate_commands (test_phase_seam_photonic_io.CalibrationBindingTests.test_empty_template_cannot_generate_commands) ... ok
+test_joint_vector_preserves_evidence_and_nonzero_zero_phase_drive (test_phase_seam_photonic_io.CalibrationBindingTests.test_joint_vector_preserves_evidence_and_nonzero_zero_phase_drive) ... ok
+test_malformed_joint_voltage_vectors_and_limits_fail (test_phase_seam_photonic_io.CalibrationBindingTests.test_malformed_joint_voltage_vectors_and_limits_fail) ... ok
+test_stale_design_target_and_missing_setting_cannot_be_reused (test_phase_seam_photonic_io.CalibrationBindingTests.test_stale_design_target_and_missing_setting_cannot_be_reused) ... ok
+test_valid_numeric_strings_are_not_interpolated_or_relabelled (test_phase_seam_photonic_io.CalibrationBindingTests.test_valid_numeric_strings_are_not_interpolated_or_relabelled) ... ok
+test_all_106_complete_circuits_match_exact_complex_targets (test_phase_seam_photonic_io.PhotonicIOTests.test_all_106_complete_circuits_match_exact_complex_targets) ... ok
+test_returned_design_cannot_mutate_later_targets (test_phase_seam_photonic_io.PhotonicIOTests.test_returned_design_cannot_mutate_later_targets) ... ok
+test_routes_keep_guard_isolated_and_all_outputs_observed (test_phase_seam_photonic_io.PhotonicIOTests.test_routes_keep_guard_isolated_and_all_outputs_observed) ... ok
+test_two_level_export_fixes_spectators_and_uncomputes_workspace (test_phase_seam_photonic_io.PhotonicIOTests.test_two_level_export_fixes_spectators_and_uncomputes_workspace) ... ok
+test_unknown_settings_and_gate_caps_reject_without_returning_partial_export (test_phase_seam_photonic_io.PhotonicIOTests.test_unknown_settings_and_gate_caps_reject_without_returning_partial_export) ... ok
 test_invalid_or_incomplete_trial_counts_rejected (test_phase_seam_photonic_exchange.PhotonicEvidenceGuards.test_invalid_or_incomplete_trial_counts_rejected) ... ok
 test_loss_and_multiclick_windows_keep_original_denominator (test_phase_seam_photonic_exchange.PhotonicEvidenceGuards.test_loss_and_multiclick_windows_keep_original_denominator) ... ok
 test_resource_caps_types_and_layout_tampering (test_phase_seam_photonic_exchange.PhotonicEvidenceGuards.test_resource_caps_types_and_layout_tampering) ... ok
@@ -181,6 +193,6 @@ test_feedforward_uses_current_memory_and_zero_condition (test_native_dynamic.Dyn
 test_budgets_fail_without_modifying_program (test_native_dynamic.DynamicTests.test_budgets_fail_without_modifying_program) ... ok
 
 ----------------------------------------------------------------------
-Ran 181 tests in 111.008s
+Ran 193 tests in 121.041s
 
 OK

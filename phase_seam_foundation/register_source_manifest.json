@@ -1,8 +1,8 @@
 {
-  "schema": "phase-seam-register-source-v6",
+  "schema": "phase-seam-register-source-v7",
   "author": "Monty",
   "date": "2026-10-24",
-  "parent_commit": "42de374e598681ae0594ccbead9a174e0bd782f7",
+  "parent_commit": "84268a6a4724deddb6f2b30696cec1bbb22843bf",
   "duplicate_audit": {
     "scope": "All seven branch-tip recursive trees; local Python/Markdown content search; read existing arithmetic, memory experiments, observer transport and master README. No claim about deleted branches or other repositories.",
     "trees": [
@@ -32,8 +32,8 @@
       },
       {
         "branch": "codex/native-relational-qc-v1-20261018",
-        "commit": "42de374e598681ae0594ccbead9a174e0bd782f7",
-        "files": 412,
+        "commit": "84268a6a4724deddb6f2b30696cec1bbb22843bf",
+        "files": 417,
         "truncated": false
       },
       {
@@ -234,5 +234,32 @@
       "nondestructive record measurement and recycling"
     ],
     "evidence_boundary": "Design and exact local algebra only. No experiment run, measured fidelity, procurement, hardware submission or transfer of earlier IBM evidence."
+  },
+  "v0_10_duplicate_check": {
+    "method": "All seven branch heads rechecked; other six unchanged. Read existing bridge calibration.py and photonic adapter; searched for PDK, heater calibration and optical I/O implementations.",
+    "finding": "Existing bridge calibration weights readout counts and is not an optical actuator map. No optical I/O compiler, placed mask or measured heater calibration found.",
+    "reuse": [
+      "existing photonic codebook/protocol/pulse coefficients",
+      "existing Phase64Circuit and _mcx clean ladder",
+      "existing full-herald-window accounting"
+    ],
+    "new_choices": [
+      "external preparation/analysis patch modules with ordered ports",
+      "grid-4 whole-setting verification through the existing calculator",
+      "pinned CORNERSTONE SiN300 candidate via gdsfactory/cspdk 3323b17b4d75c852ed2372d7d13239408cca0eb1",
+      "two 2x2 MMI interfaces per exchange block; no default 1x2 input splitter",
+      "complete recorded voltage-vector lookup, with no independent-heater model or interpolation"
+    ],
+    "sources": [
+      "https://cornerstone.sotonfab.co.uk/mpw/technology-platforms/",
+      "https://github.com/gdsfactory/cspdk/tree/3323b17b4d75c852ed2372d7d13239408cca0eb1/cspdk/sin300",
+      "https://arxiv.org/html/2203.01801v5"
+    ],
+    "unresolved": [
+      "heated placed/routed mask and foundry-specific rule checks",
+      "calibration acquisition and inverse fitting",
+      "measured optical transfer, phase residuals, source/detector response and physical acceptance"
+    ],
+    "evidence_boundary": "Exact software verification and offline profile binding. Test voltage vectors are synthetic; no lab record, PDK execution, GDS, instrument submission or fabricated device."
   }
 }

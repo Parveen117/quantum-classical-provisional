@@ -305,7 +305,7 @@ assert design.decode(design.partner(source)) == (0, 0, 1)
 assert design.experiment_plan()["settings_count"] == 106
 ```
 
-The combined audit passes **181 tests in 111.008 seconds**, with no failures,
+The v0.9 combined audit passed **181 tests in 111.008 seconds**, with no failures,
 errors or skips. The 11 new checks cover native exchange matching for every
 grid-4 codebook/pointer; full path partitions through grid 64; clean reset
 record retention; exact MZI transfer through the existing phase engine;
@@ -327,3 +327,8 @@ source, detector system and the restricted fixed-pair domain.
 Open: fabricated hardware, complete preparation/analysis layout, measured
 calibration and acceptance, independent physical native modes, nondestructive
 record readout and scalable quantum-computer architecture.
+
+The subsequent [v0.10 I/O adapter](PHOTONIC_IO.md) supplies all preparation
+and analyzer routes, a pinned process candidate and an offline joint-voltage
+calibration interface. Its full-setting checks retain this core's restricted
+domain and physical-evidence boundaries.

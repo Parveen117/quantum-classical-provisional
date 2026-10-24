@@ -1,0 +1,60 @@
+{
+  "schema": "native-photonic-process-binding-v1",
+  "author": "Monty",
+  "status": "CANDIDATE_REFERENCE_ONLY",
+  "checked_date": "2026-10-24",
+  "candidate": "CORNERSTONE 300 nm SiN, TE, nominal 1550 nm",
+  "provider_url": "https://cornerstone.sotonfab.co.uk/mpw/technology-platforms/",
+  "software_repository": "https://github.com/gdsfactory/cspdk",
+  "software_commit": "3323b17b4d75c852ed2372d7d13239408cca0eb1",
+  "source_git_blobs": {
+    "cspdk/sin300/cells.py": "90bb636fefd4c34dce17dfaefad3674f2dd5df83",
+    "cspdk/sin300/tech.py": "a45603ade5e779bf7789b4fa815108d32596da94",
+    "cspdk/sin300/models.py": "c43cb13f2da96cb9ed44e2ff977a1ac02c88dc60"
+  },
+  "provider_nominal_stack": {
+    "nitride_thickness_nm": 300,
+    "buried_oxide_thickness_nm": 3000
+  },
+  "pinned_pdk_defaults_um": {
+    "strip_width": 1.2,
+    "bend_radius": 30,
+    "mmi2x2_body_length": 232,
+    "mmi2x2_body_width": 18,
+    "mmi2x2_taper_length": 50,
+    "mmi2x2_taper_width": 4.5,
+    "mmi2x2_gap": 1.6
+  },
+  "core_binding": {
+    "module": "cspdk.sin300",
+    "cross_section": "xs_nc",
+    "two_port_splitter": "mmi2x2_nc",
+    "two_port_combiner": "mmi2x2_nc",
+    "blocks": 6,
+    "nominal_delta_length_um": 0,
+    "geometry_status": "recipe only; no placement, routing or mask generated"
+  },
+  "default_mzi_mismatch": "mzi_nc defaults to mmi1x2_nc at its input; explicitly replace it with mmi2x2_nc for the two-input exchange",
+  "required_extensions": [
+    "heated arms with electrical ports and selected heater geometry",
+    "port phase trims and block-to-bypass phase matching",
+    "all optical routing and crossings with foundry design-rule review",
+    "fiber interfaces, detector routing and external preparation/analysis modules"
+  ],
+  "model_boundary": "the pinned heater() raises NotImplementedError; default optical models are not a measured phase-voltage map or a device fidelity certificate",
+  "external_bench_modules": {
+    "preparation": "one calibrated 2x2 balanced splitter and relative phase, patched per setting",
+    "analysis": "relative phase followed by one calibrated 2x2 balanced splitter, patched per setting",
+    "guard": "one removable/bypassable 2x2 MZI on paths 4 and 16"
+  },
+  "pdk_executed": false,
+  "gds_generated": false,
+  "drc_passed": false,
+  "foundry_approved": false,
+  "measured_parameters": null,
+  "boundaries": [
+    "published nominal values and software defaults are not measured fabrication dimensions",
+    "pinned software API and provider stack do not certify full layout compatibility",
+    "no license-restricted software accessed, no fabrication order, no instrument job"
+  ]
+}

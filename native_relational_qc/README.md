@@ -46,8 +46,15 @@ The [photonic carrier adapter](../phase_seam_foundation/PHOTONIC_EXCHANGE.md)
 now supplies a logical path-interferometer netlist for a restricted native
 balanced exchange and an unrun lab characterization plan. Exact columns
 reuse existing coefficients and phase execution; no simulator is added.
-The current combined audit passes 181 tests. No optical hardware evidence
+The v0.9 combined audit passed 181 tests. No optical hardware evidence
 or scalable qubit capacity is inferred from that design.
+
+The [v0.10 I/O compiler](../phase_seam_foundation/PHOTONIC_IO.md) reuses
+Phase64Circuit and the existing clean control ladder for whole-experiment
+verification. Its eight binary verification wires encode optical labels
+and workspace. The accompanying calibration interface binds recorded joint
+voltage vectors to exact routes and returns offline plans only.
+The combined v0.10 audit passes 193 tests.
 
 **Latest: [six-bit Shor and proof-traced arithmetic rewrites](PHASE64_REWRITE.md).**
 `cyclotomic64` adds exact 5.625-degree phases. The optional `panini` rewrite

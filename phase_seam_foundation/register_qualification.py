@@ -6,6 +6,30 @@ from .register import compile_register, closure_codec, bind_cell, verify_program
 from .controller import compile_controller, bind_controller, verify_controller_transition
 from .sector_control import compile_sector_control, pulse_coefficients, verify_sector_control
 from .photonic_exchange import design_photonic_exchange, verify_photonic_exchange
+from .photonic_io import io_design, calibration_template, verification_circuit
+
+
+def photonic_io_report():
+    import hashlib,json
+    from pathlib import Path
+    design=io_design();template=calibration_template()
+    def digest(value):return hashlib.sha256((json.dumps(value,indent=2)+"\n").encode()).hexdigest()
+    counts=[len(verification_circuit(s["setting_id"]).operations) for s in design["settings"]]
+    process=json.loads(Path(__file__).with_name("photonic_process_binding.json").read_text())
+    return dict(status="DESIGN_AND_OFFLINE_INTERFACE",evidence_class="LOCAL_IDEAL_CALCULATION",
+                settings=len(design["settings"]),resources=design["resources"],
+                verification=dict(backend="existing Phase64Circuit",label_bits=5,clean_workspace_bits=3,
+                                  min_gates=min(counts),max_gates=max(counts),gate_cap=10000,
+                                  boundary="binary verification wires, not optical qubits or physical propagation"),
+                artifacts=dict(io="photonic_io_design.json",io_sha256=digest(design),
+                               calibration_template="photonic_calibration_template.json",calibration_template_sha256=digest(template),
+                               process_binding="photonic_process_binding.json",process_binding_sha256=digest(process)),
+                process_candidate=process["candidate"],process_software_commit=process["software_commit"],
+                pdk_mismatch=process["default_mzi_mismatch"],
+                calibration=dict(status=template["status"],recorded_settings=0,voltage_model="joint configuration lookup only",
+                                 physical_acceptance="NOT_ASSESSED",hardware_submitted=False),
+                open=["heated placed/routed GDS and foundry design-rule review","calibration acquisition and inverse fitting",
+                      "measured source/detector/loss/coherence and physical acceptance"])
 
 
 def photonic_report():
@@ -244,7 +268,7 @@ def report():
         ("three_operation_closed_word",word)):
         resource_cases[name] = compile_register(ops).resources()
     return dict(
-        schema="phase-seam-register-v0.9",author="Monty",
+        schema="phase-seam-register-v0.10",author="Monty",
         status="wrapped-phase permutation compiler reusing existing native arithmetic",
         assumptions=["orthogonal labels","clean workspace","standard coherent gate semantics if used as quantum circuit"],
         program=dict(source_operations=[dict(kind=o.kind,args=list(o.args)) for o in word],
@@ -271,6 +295,7 @@ def report():
         balanced_reset=balanced_reset_report(),
         sector_control=sector_control_report(),
         photonic_exchange=photonic_report(),
+        photonic_io=photonic_io_report(),
         limits=dict(power_of_two_grids=[1<<w for w in range(2,13)],max_gates=100000,
                     source_guards="Config parameter/event limits; bound Cell replay also checks lift and rational-cost limits",
                     closure="whole fixed sector preserved after each source operation; elementary gates may leave it",

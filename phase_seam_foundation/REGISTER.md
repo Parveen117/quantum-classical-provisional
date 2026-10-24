@@ -24,7 +24,8 @@ The [v0.8 native control targets](SECTOR_CONTROL.md) supply continuous
 sector-preserving operator paths, with a separate binary verification export.
 The [v0.9 photonic adapter](PHOTONIC_EXCHANGE.md) adds a restricted encoded
 carrier netlist and characterization plan. The current combined audit
-includes 181 tests; the v0.4/v0.5 results below retain
+includes 193 tests after the [v0.10 optical I/O extension](PHOTONIC_IO.md);
+the v0.4/v0.5 results below retain
 their milestone context.
 
 ## 1. Duplicate-work check and reuse

@@ -1,6 +1,16 @@
 # Phase–seam foundation prototype
 
-**New: [first photonic carrier design](PHOTONIC_EXCHANGE.md).**
+**New: [optical I/O and calibration binding](PHOTONIC_IO.md).**
+All 106 preparation/core/guard/analyzer routes now compile to the existing
+exact calculator. The candidate process is pinned to CORNERSTONE SiN300
+software, with two-input MMI interfaces explicitly selected. The offline
+calibration adapter requires a complete recorded voltage vector and matching
+device, assembly, phase-trim, temperature and validity context. No measured
+calibration or fabricated layout is supplied by the empty template.
+The v0.10 combined audit passes **193 tests in 121.041 seconds**, with no
+failures, errors or skips.
+
+**Previous: [first photonic carrier design](PHOTONIC_EXCHANGE.md).**
 The grid-4 fixed-pair balanced exchange maps exactly to six disjoint
 interferometers and four bypasses on 16 single-photon code paths, with one
 isolated guard. A logical netlist, 106-setting unrun characterization plan
