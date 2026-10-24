@@ -4,6 +4,11 @@ Author: Monty. Status: conditional mathematical completion with exact software
 checks. No physical device, experimental Bell violation or new law of nature
 is claimed.
 
+The [v0.3 encoding study](ENCODING.md) now supplies an injective tomographic
+phase/seam map, classical history retention and a limited transport compiler.
+It also proves why that encoding does not implement the full native cut
+semantics or prepare this section's pure Bell functional.
+
 The new result is a concrete two-site preparation, interaction, joint readout
 and sequential update law built on the existing EMK multiplication. It gives
 CHSH = 2 sqrt(2), normalized positive probabilities, non-signaling marginals,

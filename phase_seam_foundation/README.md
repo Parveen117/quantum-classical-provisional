@@ -1,5 +1,16 @@
 # Phase–seam foundation prototype
 
+**New: [tomographic phase/seam bridge](ENCODING.md).**
+All four phases and Gamma are recoverable from nine exact operator readings
+on supported grids through 64 bins. Classical provenance retains winding and
+event order. Opposed pair shifts and a paired swap have checked unitary
+translations; a balanced-cut counterexample excludes a full deterministic
+channel correspondence for this encoding. The mixed code does not contain
+the v0.2 pure Bell resource.
+
+The v0.3 combined audit passes **87 tests**: 23 encoding tests, 26 joint tests,
+26 v0.1 tests and 12 calculator checks, with no failures, errors or skips.
+
 **New: [two-site algebraic quantum completion](JOINT_READOUT.md).**
 EMK multiplication plus explicitly added positive-state, composition and
 measurement postulates gives exact CHSH=2 sqrt(2), non-signaling marginals,
@@ -43,6 +54,16 @@ python benchmarks/phase_seam_joint_audit.py
 [Joint qualification](joint_qualification.json) ·
 [Joint source/assumption manifest](joint_source_manifest.json) ·
 [Combined targeted tests](joint_test_results.txt)
+
+For the encoding:
+
+```bash
+python -m phase_seam_foundation.encoding_qualification
+python benchmarks/phase_seam_encoding_audit.py
+```
+
+[Encoding qualification](encoding_qualification.json) ·
+[Encoding test results](encoding_test_results.txt)
 
 Two different oriented cuts generate transport. The new balanced pair cut
 preserves the finite phase-closure sum. Exact histories distinguish paths

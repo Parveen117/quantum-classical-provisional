@@ -1,0 +1,36 @@
+{
+  "schema": "phase-seam-encoding-source-v1",
+  "author": "Monty",
+  "base_commit": "64a23ed3b4377b312adc6036129b6541824035a4",
+  "inherited_sources": [
+    "source_manifest.json",
+    "joint_source_manifest.json"
+  ],
+  "native_cayley_dependency": {
+    "repository": "Parveen117/Publications",
+    "commit": "35d63e4ac0d8cf161c549654ce6b430d68afbde4",
+    "path": "papers/emk-ugd-algebra/certificates/emk2_native_carrier.py",
+    "git_blob_sha": "eaf3c3f65476f37165c75031fcd6cfb2cb66f710",
+    "admitted_identity": "x=(1+y)/(1-y), y=(x-1)/(x+1)",
+    "new_choice": "identify positive seam ratio Gamma with x in this encoding",
+    "physical_calibration_derived": false
+  },
+  "arithmetic": {
+    "field": "Q(zeta_64)",
+    "implementation": "native_relational_qc/cyclotomic64.py",
+    "scope": "existing exact field only; no Shor/circuit probabilities imported"
+  },
+  "standard_channel_reference": {
+    "title": "Quantum Catalytic Space",
+    "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol350-tqc2025/html/LIPIcs.TQC.2025.11/LIPIcs.TQC.2025.11.html",
+    "admitted_fact": "trace-distance contractivity of deterministic CPTP maps",
+    "local_derivation": "the source pair, exact spectral resolution and output binary witness are supplied in ENCODING.md"
+  },
+  "new_choices": [
+    "four orthogonal signed Pauli pairs and ZZ seam reading",
+    "five equal-weight positive components",
+    "tomographic rather than single-shot phase decoding",
+    "separate classical initial-condition and operation tape"
+  ],
+  "claim_boundary": "Injective finite tomographic encoding, exact history recovery with retained tape, and restricted channel intertwiners. No full operational equivalence, quantum memory compression or physical device."
+}

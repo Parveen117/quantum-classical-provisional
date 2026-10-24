@@ -9,6 +9,11 @@ U(chi)=cos(chi)I-sin(chi)R_A L_B. The encoding from this four-phase cell to
 those operator states remains open; the classical device does not acquire
 quantum behavior through that separate probability postulate alone.
 
+The [v0.3 tomographic bridge](ENCODING.md) identifies a working subset:
+opposed phase transports map to local phase gates, and paired mode swaps map
+to site exchange. Its balanced-cut channel obstruction and mixed-state image
+bound prevent treating that subset as a complete physical hardware encoding.
+
 The proposed hardware primitive stores **four controllable cyclic modes**, a
 seam calibration and retained history. It is not specified as four qubits.
 Its required actions follow the finite operational model in

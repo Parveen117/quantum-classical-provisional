@@ -12,6 +12,11 @@ and constructs a finite inner-product representation. Physical realization
 and the full phase/seam-to-operator encoding remain open. Source identities,
 added postulates and hardware requirements are distinguished throughout.
 
+The [phase/seam encoding study](phase_seam_foundation/ENCODING.md) now preserves
+four phases and Gamma in exact tomographic readings, retains history in a
+classical tape, and checks a restricted transport compiler. It also gives an
+exact balanced-cut counterexample to full channel equivalence for that map.
+
 ## Native relational calculation engine
 
 The [linear-recognition upgrade](native_relational_qc/LINEAR_RECOGNITION.md)

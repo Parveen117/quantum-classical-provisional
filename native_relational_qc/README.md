@@ -8,6 +8,11 @@ conditionally recovers quantum correlations and a finite inner product using
 explicit positive-state and measurement postulates. Its physical realization
 and full encoding remain open; calculator semantics are unchanged.
 
+The [tomographic bridge](../phase_seam_foundation/ENCODING.md) adds an explicit
+phase/seam encoding and checked transport subset, with classical history
+retention and a proved obstruction to compiling a native balanced cut as a
+channel on that encoding alone.
+
 **Latest: [six-bit Shor and proof-traced arithmetic rewrites](PHASE64_REWRITE.md).**
 `cyclotomic64` adds exact 5.625-degree phases. The optional `panini` rewrite
 removes proved redundant X/CX/CCX words and independently replays each deletion.
