@@ -2,6 +2,13 @@
 
 ## Phase–seam foundation and hardware contract
 
+The [v0.15 bus/EMK gate](phase_seam_foundation/WEYL_BUS.md) proves the local-PH2
+entanglement obstruction and connects the existing joint interaction to
+conditional Weyl-bus kicks. Exact bus return holds for every initial bus
+state; an echo cancels specified local phase drift. Explicit fault maps and
+a restricted no-go result prevent treating this as immunity to in-gate noise.
+The added couplings are physical assumptions, not supplied by the SiN layout.
+
 The [v0.14 constitutive adapter](phase_seam_foundation/CONSTITUTIVE_RESPONSE.md)
 now generates constrained responses and first response layers from a declared
 cubic energy, reuses the existing EMK algebra and optical Jacobian, and derives

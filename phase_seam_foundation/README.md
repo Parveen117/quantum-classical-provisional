@@ -1,5 +1,13 @@
 # Phase–seam foundation prototype
 
+**New: [local-control obstruction and bus-mediated EMK gate](WEYL_BUS.md).**
+The v0.15 exact word checker connects the existing two-site interaction to a
+conditional bus loop. It proves arbitrary-state bus return, specified local
+drift cancellation and dimension requirements for this signed-control family.
+An explicit fault table shows which errors reach the data and why full Weyl
+fault immunity would remove this rectangle's entangling action. The physical
+bus couplings remain added assumptions; the geometric gate has known prior art.
+
 **New: [TVSP constitutive response and finite-patch bounds](CONSTITUTIVE_RESPONSE.md).**
 The v0.14 cubic-energy adapter supplies six constrained responses, first
 layers and selected EMK curvature, then generates the material phase/control
