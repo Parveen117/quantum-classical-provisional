@@ -1,5 +1,12 @@
 # Phase–seam foundation prototype
 
+**New: [TVSP constitutive response and finite-patch bounds](CONSTITUTIVE_RESPONSE.md).**
+The v0.14 cubic-energy adapter supplies six constrained responses, first
+layers and selected EMK curvature, then generates the material phase/control
+map. Rational patch bounds supply state and optical nonlinear-remainder
+bounds to the existing observer contract. Harmonic covariance retains common
+noise cancellation. All model coefficients remain declared, not measured.
+
 **New: [target-specific observer and uncertainty adapter](PHOTONIC_OBSERVER.md).**
 The v0.13 adapter applies the earlier observer theorem to an explicit angle
 or relative-phase target, with declared coordinate scales and nuisance

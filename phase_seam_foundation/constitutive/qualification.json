@@ -1,0 +1,678 @@
+{
+  "schema": "native-constitutive-response-audit-v1",
+  "author": "Monty",
+  "status": "DECLARED_MODEL_CHECKS",
+  "python_version": "3.12.14",
+  "tests": {
+    "count": 38,
+    "passed": true,
+    "seconds": 77.89186769800017,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "tlm_comparison": {
+    "status": "PASSED",
+    "repository": "Parveen117/Publications",
+    "commit": "babb4fb1922bd91c2eadc82abd4b9538a19745d0",
+    "source_git_blobs": {
+      "papers/native-tvsp-lambda-matrices/tvsp_adapter.cjs": "4a95a2c43a8c372057ee1cd6ef4204e656286b42",
+      "papers/native-common-cone-limit/native_engine/native_operator.cjs": "7b188defee82aa0edafc586eb3091baf0ceb6900",
+      "papers/native-common-cone-limit/native_engine/paninian_operator.cjs": "39d0cc2d2c0b42db319b02f4cd29c045910edbbc"
+    },
+    "node_version": "v24.22.1",
+    "case_count": 6,
+    "cases": [
+      {
+        "mu": "0",
+        "values": {
+          "lambdaP": "-9/5",
+          "lambdaV": "-2",
+          "lambdaS": "-5",
+          "zT": "-9/2",
+          "zS": "2",
+          "lambdaT": "20/9"
+        },
+        "first": {
+          "lambdaP": [
+            "-9/5",
+            "0"
+          ],
+          "lambdaV": [
+            "-2",
+            "0"
+          ],
+          "lambdaS": [
+            "0",
+            "-5"
+          ],
+          "zT": [
+            "0",
+            "-9/2"
+          ],
+          "zS": [
+            "-1/5",
+            "-1"
+          ],
+          "lambdaT": [
+            "-2/9",
+            "-10/9"
+          ]
+        },
+        "hessian": [
+          [
+            "2",
+            "1"
+          ],
+          [
+            "1",
+            "5"
+          ]
+        ],
+        "hessian_first": [
+          [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ],
+          [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ]
+        ]
+      },
+      {
+        "mu": "1",
+        "values": {
+          "lambdaP": "-9/5",
+          "lambdaV": "-2",
+          "lambdaS": "-5",
+          "zT": "-9/2",
+          "zS": "2",
+          "lambdaT": "20/9"
+        },
+        "first": {
+          "lambdaP": [
+            "-7/5",
+            "-1"
+          ],
+          "lambdaV": [
+            "-2",
+            "-1"
+          ],
+          "lambdaS": [
+            "0",
+            "-5"
+          ],
+          "zT": [
+            "1",
+            "-19/4"
+          ],
+          "zS": [
+            "-1/5",
+            "-1"
+          ],
+          "lambdaT": [
+            "22/81",
+            "-100/81"
+          ]
+        },
+        "hessian": [
+          [
+            "2",
+            "1"
+          ],
+          [
+            "1",
+            "5"
+          ]
+        ],
+        "hessian_first": [
+          [
+            [
+              "0",
+              "1"
+            ],
+            [
+              "1",
+              "0"
+            ]
+          ],
+          [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ]
+        ]
+      },
+      {
+        "mu": "-1",
+        "values": {
+          "lambdaP": "-9/5",
+          "lambdaV": "-2",
+          "lambdaS": "-5",
+          "zT": "-9/2",
+          "zS": "2",
+          "lambdaT": "20/9"
+        },
+        "first": {
+          "lambdaP": [
+            "-11/5",
+            "1"
+          ],
+          "lambdaV": [
+            "-2",
+            "1"
+          ],
+          "lambdaS": [
+            "0",
+            "-5"
+          ],
+          "zT": [
+            "-1",
+            "-17/4"
+          ],
+          "zS": [
+            "-1/5",
+            "-1"
+          ],
+          "lambdaT": [
+            "-58/81",
+            "-80/81"
+          ]
+        },
+        "hessian": [
+          [
+            "2",
+            "1"
+          ],
+          [
+            "1",
+            "5"
+          ]
+        ],
+        "hessian_first": [
+          [
+            [
+              "0",
+              "-1"
+            ],
+            [
+              "-1",
+              "0"
+            ]
+          ],
+          [
+            [
+              "-1",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ]
+        ]
+      },
+      {
+        "mu": "5",
+        "values": {
+          "lambdaP": "-9/5",
+          "lambdaV": "-2",
+          "lambdaS": "-5",
+          "zT": "-9/2",
+          "zS": "2",
+          "lambdaT": "20/9"
+        },
+        "first": {
+          "lambdaP": [
+            "1/5",
+            "-5"
+          ],
+          "lambdaV": [
+            "-2",
+            "-5"
+          ],
+          "lambdaS": [
+            "0",
+            "-5"
+          ],
+          "zT": [
+            "5",
+            "-23/4"
+          ],
+          "zS": [
+            "-1/5",
+            "-1"
+          ],
+          "lambdaT": [
+            "182/81",
+            "-140/81"
+          ]
+        },
+        "hessian": [
+          [
+            "2",
+            "1"
+          ],
+          [
+            "1",
+            "5"
+          ]
+        ],
+        "hessian_first": [
+          [
+            [
+              "0",
+              "5"
+            ],
+            [
+              "5",
+              "0"
+            ]
+          ],
+          [
+            [
+              "5",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ]
+        ]
+      },
+      {
+        "mu": "-5",
+        "values": {
+          "lambdaP": "-9/5",
+          "lambdaV": "-2",
+          "lambdaS": "-5",
+          "zT": "-9/2",
+          "zS": "2",
+          "lambdaT": "20/9"
+        },
+        "first": {
+          "lambdaP": [
+            "-19/5",
+            "5"
+          ],
+          "lambdaV": [
+            "-2",
+            "5"
+          ],
+          "lambdaS": [
+            "0",
+            "-5"
+          ],
+          "zT": [
+            "-5",
+            "-13/4"
+          ],
+          "zS": [
+            "-1/5",
+            "-1"
+          ],
+          "lambdaT": [
+            "-218/81",
+            "-40/81"
+          ]
+        },
+        "hessian": [
+          [
+            "2",
+            "1"
+          ],
+          [
+            "1",
+            "5"
+          ]
+        ],
+        "hessian_first": [
+          [
+            [
+              "0",
+              "-5"
+            ],
+            [
+              "-5",
+              "0"
+            ]
+          ],
+          [
+            [
+              "-5",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ]
+        ]
+      },
+      {
+        "mu": "1/3",
+        "values": {
+          "lambdaP": "-9/5",
+          "lambdaV": "-2",
+          "lambdaS": "-5",
+          "zT": "-9/2",
+          "zS": "2",
+          "lambdaT": "20/9"
+        },
+        "first": {
+          "lambdaP": [
+            "-5/3",
+            "-1/3"
+          ],
+          "lambdaV": [
+            "-2",
+            "-1/3"
+          ],
+          "lambdaS": [
+            "0",
+            "-5"
+          ],
+          "zT": [
+            "1/3",
+            "-55/12"
+          ],
+          "zS": [
+            "-1/5",
+            "-1"
+          ],
+          "lambdaT": [
+            "-14/243",
+            "-280/243"
+          ]
+        },
+        "hessian": [
+          [
+            "2",
+            "1"
+          ],
+          [
+            "1",
+            "5"
+          ]
+        ],
+        "hessian_first": [
+          [
+            [
+              "0",
+              "1/3"
+            ],
+            [
+              "1/3",
+              "0"
+            ]
+          ],
+          [
+            [
+              "1/3",
+              "0"
+            ],
+            [
+              "0",
+              "0"
+            ]
+          ]
+        ]
+      }
+    ],
+    "upstream_full_suite_replayed": false
+  },
+  "checked_sources_sha256": {
+    "phase_seam_foundation/constitutive_response.py": "a756b0de23936cbe0251d9a05756956f66eb999a5ea0a229844e5af1c0677683",
+    "phase_seam_foundation/CONSTITUTIVE_RESPONSE.md": "b87fc7847a9e2a1510f8e5b9b28875c88d744d99d56fa1c852ff0722150ba8fb",
+    "tests/test_constitutive_response.py": "ca8e8f6e8b40203d829c2cf555a8a6242f9bfd7730dfbc9681ecaf72c88a4794",
+    "benchmarks/constitutive_response_audit.py": "224aa22e7671950535b2242737171989c273f6395bc3d33d645684f09615ee58",
+    "phase_seam_foundation/photonic_response.py": "365409d0ef4fa63c1f315bb86c9113814ca6149e71fa86398c19ec965e50c347",
+    "phase_seam_foundation/photonic_observer.py": "64f6187d036f21b3e32486590a620b43ef709a81e08f586c470d3dbc7f4e4415",
+    "phase_seam_foundation/photonic_io.py": "6e7554b073e78cbd58ef26fcd2c2327f89f696bdb85d2d375f980914bb57d3bf",
+    "phase_seam_foundation/photonic_layout.py": "c6debe28447121ad7b4522acd91ca60e41cd58d0274905dc12908c5dfbf6d350",
+    "native_relational_qc/emk_tensor.py": "8decb85142fe5e55e895af0daaf9c1a688366b476ea6fe11ddab322034393707",
+    "native_relational_qc/exact.py": "cc0b3be70660ed819b3ad153620ea4338fb6bf57102a4474d4355da2805afdf6",
+    "native_relational_qc/cyclotomic64.py": "8fc9c42627feee330b00f1b56559031cc442746e830081eae09f535115d74e52",
+    "native_relational_qc/cyclotomic32.py": "33e203a7280bbe8341e37cb357f1bb6bfcaba9e695ff5144050e3a087733ab76",
+    "native_relational_qc/cyclotomic.py": "36a9f93fb9b6362a6141f13f4aef677de9f19642f6ea01ebb761614acab4ea86"
+  },
+  "retained_sources": {
+    "v0.12": "PRIOR_CHECKED_SOURCE_HASHES_UNCHANGED",
+    "v0.13": "PRIOR_CHECKED_SOURCE_HASHES_UNCHANGED"
+  },
+  "same_value_different_layer": [
+    {
+      "mu": 0,
+      "responses": {
+        "lambdaP": "-9/5",
+        "lambdaV": "-2",
+        "lambdaS": "-5",
+        "zT": "-9/2",
+        "zS": "2",
+        "lambdaT": "20/9"
+      },
+      "lambdaV_first": [
+        "-2",
+        "0"
+      ],
+      "curvature": "0"
+    },
+    {
+      "mu": 1,
+      "responses": {
+        "lambdaP": "-9/5",
+        "lambdaV": "-2",
+        "lambdaS": "-5",
+        "zT": "-9/2",
+        "zS": "2",
+        "lambdaT": "20/9"
+      },
+      "lambdaV_first": [
+        "-2",
+        "-1"
+      ],
+      "curvature": "5/324"
+    },
+    {
+      "mu": 5,
+      "responses": {
+        "lambdaP": "-9/5",
+        "lambdaV": "-2",
+        "lambdaS": "-5",
+        "zT": "-9/2",
+        "zS": "2",
+        "lambdaT": "20/9"
+      },
+      "lambdaV_first": [
+        "-2",
+        "-5"
+      ],
+      "curvature": "125/324"
+    },
+    {
+      "mu": -5,
+      "responses": {
+        "lambdaP": "-9/5",
+        "lambdaV": "-2",
+        "lambdaS": "-5",
+        "zT": "-9/2",
+        "zS": "2",
+        "lambdaT": "20/9"
+      },
+      "lambdaV_first": [
+        "-2",
+        "5"
+      ],
+      "curvature": "125/324"
+    }
+  ],
+  "bound_example": {
+    "schema": "native-constitutive-observer-bound-v1",
+    "evidence_class": "DECLARED_MODEL_BOUND",
+    "specification": {
+      "model": {
+        "kind": "NORMALIZED_CUBIC_ENERGY_2D",
+        "evidence_class": "DECLARED_MODEL",
+        "hessian": [
+          "2",
+          "1",
+          "5"
+        ],
+        "third": [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        "gradient": [
+          "10",
+          "-10"
+        ],
+        "origin": [
+          "1",
+          "1"
+        ]
+      },
+      "point": [
+        "0",
+        "0"
+      ],
+      "phase_per_state": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1/2",
+          "1/2"
+        ]
+      ],
+      "patch_radius": "1/20",
+      "force_radius": "1/100",
+      "observer_packet_sha256": "bd3ff51c6953b4756da66b3ea0c3e9350ac2e1388545e3aa3c2c5486344ef143"
+    },
+    "specification_sha256": "b6f1f3f7a9bf7540ffa0a3dab3ae9acf72731118db490a848ff1d3a496d72190",
+    "patch": {
+      "patch_radius": "1/20",
+      "force_radius": "1/100",
+      "point_lower_eigenvalue": "9/7",
+      "hessian_lipschitz": "3",
+      "patch_lower_eigenvalue": "159/140",
+      "state_displacement_bound": "7/795",
+      "inverse_linearization_remainder": "343/3792150"
+    },
+    "phase_displacement_l1_bound": "7/265",
+    "observer_bounds": {
+      "state_norm_bound": "7/265",
+      "nonlinear_remainder_bound": "98/14045"
+    },
+    "composed_force_to_reading_remainder": "245/25281",
+    "assumptions": [
+      "normalized affine energy chart",
+      "static conjugate-force equilibrium in the certified ball",
+      "constant declared material-state to phase map",
+      "existing ideal lossless optical word"
+    ],
+    "measured_records": 0,
+    "calibration_accepted": false,
+    "hardware_submitted": false
+  },
+  "harmonic_common_mode_example": {
+    "state_covariance": [
+      [
+        "1/10",
+        "0"
+      ],
+      [
+        "0",
+        "1/10"
+      ]
+    ],
+    "phase_covariance": [
+      [
+        "1/10",
+        "1/10",
+        "0",
+        "0",
+        "1/10"
+      ],
+      [
+        "1/10",
+        "1/10",
+        "0",
+        "0",
+        "1/10"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1/10",
+        "1/10",
+        "0",
+        "0",
+        "1/10"
+      ]
+    ],
+    "exchange_angle_variance": "0",
+    "evidence_class": "DECLARED_CLASSICAL_HARMONIC_MODEL"
+  },
+  "examples_evidence_class": "DECLARED_SYNTHETIC_MODELS",
+  "measured_records": 0,
+  "calibration_accepted": false,
+  "hardware_submitted": false,
+  "open": [
+    "material and conjugate-force calibration",
+    "dynamic thermal/electromagnetic response and bath spectra",
+    "nonideal optical loss/preparation/analyzer response",
+    "PH2 cycle-to-optical-gate compiler"
+  ],
+  "documentation_only_after_test_run": [
+    {
+      "path": "phase_seam_foundation/CONSTITUTIVE_RESPONSE.md",
+      "change": "Clarified that v0.13 total error remains a numerical estimate after receiving rational model bounds."
+    }
+  ]
+}

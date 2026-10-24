@@ -2,6 +2,12 @@
 
 ## Phase–seam foundation and hardware contract
 
+The [v0.14 constitutive adapter](phase_seam_foundation/CONSTITUTIVE_RESPONSE.md)
+now generates constrained responses and first response layers from a declared
+cubic energy, reuses the existing EMK algebra and optical Jacobian, and derives
+finite-patch nonlinear bounds. A quadratic harmonic model retains phase-noise
+cross-covariance. These are model calculations with no fitted material data.
+
 The [v0.13 target observer](phase_seam_foundation/PHOTONIC_OBSERVER.md) now
 checks the requested photonic target with explicit scales and nuisance
 directions, then reuses a separately supplied, pinned device uncertainty

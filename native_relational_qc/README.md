@@ -1,5 +1,10 @@
 # Native Relational Quantum Computing — v0.1
 
+The [v0.14 constitutive response adapter](../phase_seam_foundation/CONSTITUTIVE_RESPONSE.md)
+reuses the existing EMK product for TVSP source curvature and connects a
+declared cubic energy to the optical response and finite-patch error bounds.
+The general publication jet engine and calculator semantics are unchanged.
+
 The [v0.13 photonic observer adapter](../phase_seam_foundation/PHOTONIC_OBSERVER.md)
 specializes the earlier target-recovery framework, retaining exact field
 visibility and an optional pinned device engine for conditional uncertainty
