@@ -355,3 +355,9 @@ construct the full phase/seam/history-to-operator encoding; select and test a
 material interaction; derive energy/time/noise laws; establish universal or
 scalable computation. The immediate next research gate is the encoding and
 its retained-observation equivalence, not an increase in claimed qubit count.
+
+The later [v0.4 register adapter](REGISTER.md) supplies a conventional coherent
+realization of the wrapped-phase permutations on a larger orthogonal code.
+It reuses existing arithmetic, while Gamma, lifts and history remain
+classical. It does not derive the positive-state/probability postulates here
+or provide a physical preparation of the two-site Bell resource.

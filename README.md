@@ -17,6 +17,14 @@ four phases and Gamma in exact tomographic readings, retains history in a
 classical tape, and checks a restricted transport compiler. It also gives an
 exact balanced-cut counterexample to full channel equivalence for that map.
 
+The [orthogonal phase-register compiler](phase_seam_foundation/REGISTER.md)
+now lowers native cuts, balanced cuts, shifts, swaps and shears through the
+existing reversible arithmetic. It uses a different, larger label encoding:
+grid 64 requires 24 phase wires and 4 clean workspace wires. The combined
+audit passes 103 tests, including exact coherent phase retention. Gamma and
+lift/history/cost data remain in the original classical Cell; this is a
+logical circuit design, not fabricated quantum hardware.
+
 ## Native relational calculation engine
 
 The [linear-recognition upgrade](native_relational_qc/LINEAR_RECOGNITION.md)

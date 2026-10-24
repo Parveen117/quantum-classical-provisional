@@ -13,6 +13,12 @@ phase/seam encoding and checked transport subset, with classical history
 retention and a proved obstruction to compiling a native balanced cut as a
 channel on that encoding alone.
 
+The [phase-register adapter](../phase_seam_foundation/REGISTER.md) reuses this
+calculator's existing constant adder, gate IR and coherent test engine to
+compile native phase cuts and other reversible operations. Its larger
+orthogonal encoding uses 24 phase + 4 clean workspace wires at grid 64.
+The original two-site code and its obstruction remain unchanged.
+
 **Latest: [six-bit Shor and proof-traced arithmetic rewrites](PHASE64_REWRITE.md).**
 `cyclotomic64` adds exact 5.625-degree phases. The optional `panini` rewrite
 removes proved redundant X/CX/CCX words and independently replays each deletion.

@@ -311,8 +311,9 @@ Open: full source-measurement/channel equivalence; finite-shot decoding and
 physical calibration; preparation of a nonclassical resource from native
 physical primitives; material hardware, energy/time laws and scalable computing.
 
-The next design must explicitly choose how to handle the obstructed operation:
-change the quantum encoding, change which native transformations are physical
-channels, or include a controller/environment carrying additional information
-and count that resource. The current result supplies a checked boundary and
-a working compiler subset for making that choice.
+The [v0.4 register compiler](REGISTER.md) explores the change-of-encoding
+option: orthogonal phase labels permit coherent native cut permutations at
+the cost of 24 phase + 4 clean workspace wires on grid 64. It does not
+convert this two-site mixed code into exact labels, invalidate this
+obstruction, or encode Gamma and path history in those wires. Physical
+preparation and controller/environment accounting remain open.

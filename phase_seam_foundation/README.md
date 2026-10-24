@@ -1,6 +1,19 @@
 # Phase–seam foundation prototype
 
-**New: [tomographic phase/seam bridge](ENCODING.md).**
+**New: [native cuts on an orthogonal phase register](REGISTER.md).**
+An adapter to the existing reversible arithmetic compiles cuts, balanced cuts,
+shifts, swaps and shears, with whole-sector closure checks. At grid 64 the
+layout uses 24 phase wires + 4 clean workspace wires. Gamma, lifts, cost and
+history stay in the original Cell. This is a new larger encoding, with
+coherent circuit semantics explicitly assumed; the old code's obstruction
+remains valid. The combined v0.4 audit passes **103 tests** in 47.541 seconds,
+with no failures, errors or skips.
+
+Run `python benchmarks/phase_seam_register_audit.py`.
+[Qualification](register_qualification.json) · [Tests](register_test_results.txt) ·
+[Reuse/branch audit](register_source_manifest.json).
+
+**Previous: [tomographic phase/seam bridge](ENCODING.md).**
 All four phases and Gamma are recoverable from nine exact operator readings
 on supported grids through 64 bins. Classical provenance retains winding and
 event order. Opposed pair shifts and a paired swap have checked unitary
@@ -71,6 +84,8 @@ with equal phase or cost. The readout law is explicitly normalized, and its
 local Bell/CHSH bound is proved and checked. A separate conditional diagnostic
 prevents misidentifying the cut with universal quantum conjugation.
 
-This package is separate from `native_relational_qc`: it does not replace the
-existing six-bit Shor calculator, import its quantum probabilities, or inherit
-its 2056-site structured-simulation claims. Four modes are not four qubits.
+This package keeps the original foundation interpreter separate from the
+six-bit Shor calculator. The v0.4 adapter now imports its existing arithmetic
+and gate IR, and uses its coherent engine in explicitly quantum tests. It
+does not change the original classical law or inherit 2056-site
+structured-simulation claims. Four modes are not four qubits.

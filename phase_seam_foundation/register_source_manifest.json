@@ -1,0 +1,110 @@
+{
+  "schema": "phase-seam-register-source-v1",
+  "author": "Monty",
+  "date": "2026-10-24",
+  "parent_commit": "e7b1651068b068f4d080702251cbad8cff792112",
+  "duplicate_audit": {
+    "scope": "All seven branch-tip recursive trees; local Python/Markdown content search; read existing arithmetic, memory experiments, observer transport and master README. No claim about deleted branches or other repositories.",
+    "trees": [
+      {
+        "branch": "agent/qmet-hardware-depth-v1",
+        "commit": "0630f481606f5ca65d12b78b41bc91b36b7dc300",
+        "files": 118,
+        "truncated": false
+      },
+      {
+        "branch": "agent/qmet-hybrid-evidence-bundle-v1",
+        "commit": "51b28d768150e3543fb00f8841c26024b4f76487",
+        "files": 114,
+        "truncated": false
+      },
+      {
+        "branch": "claude/rnke-qec-gate-v1",
+        "commit": "e3bb8f5213a4515ec718d3daa0cad34be63c2baf",
+        "files": 107,
+        "truncated": false
+      },
+      {
+        "branch": "claude/thermo-decoherence-h1",
+        "commit": "92d2b61b6dd50443f151a665bdab40a634b7c99d",
+        "files": 136,
+        "truncated": false
+      },
+      {
+        "branch": "codex/native-relational-qc-v1-20261018",
+        "commit": "e7b1651068b068f4d080702251cbad8cff792112",
+        "files": 396,
+        "truncated": false
+      },
+      {
+        "branch": "codex/qec-error-control-lab-v1",
+        "commit": "d2290d12f3099dd98b18e989f52e6a7ff8f5406f",
+        "files": 101,
+        "truncated": false
+      },
+      {
+        "branch": "master",
+        "commit": "284302e1a65b6dfcc8b63531833394976bd4f331",
+        "files": 136,
+        "truncated": false
+      }
+    ],
+    "finding": "No existing compiler from phase_seam_foundation.Operation to reversible phase-register gates was found in this scope.",
+    "reuse": [
+      {
+        "path": "native_relational_qc/modular_arithmetic.py",
+        "use": "Existing _add and its clean multi-control ladder; unchanged."
+      },
+      {
+        "path": "native_relational_qc/compact.py",
+        "use": "Existing CompactCircuit gate IR; unchanged."
+      },
+      {
+        "path": "native_relational_qc/phase_backend.py",
+        "use": "Existing exact sparse engine for coherent verification only; unchanged."
+      },
+      {
+        "path": "phase_seam_foundation/model.py",
+        "use": "Original Operation, Config, Cell and history replay; unchanged."
+      }
+    ],
+    "related_but_distinct": [
+      {
+        "path": "native_relational_qc/reversible_logic.py",
+        "reason": "Boolean XOR oracles and an out-of-place ripple adder already exist; no duplicate arithmetic engine added."
+      },
+      {
+        "path": "native_relational_qc/COMPACT_THEOREM.md",
+        "reason": "Observer transport across a circuit cut is not the native phase reflection."
+      },
+      {
+        "path": "run_operator_controlled_memory_transistor_test.py",
+        "reason": "Existing IBM memory experiment; not a phase-label encoding or a source-operation compiler. Read only, never executed."
+      },
+      {
+        "path": "run_multi_ledger_operator_memory_test.py",
+        "reason": "Existing RK/KR order-memory interferometers; not the four-mode register compiler. Read only, never executed."
+      },
+      {
+        "path": "phase_seam_foundation/encoding.py",
+        "reason": "Two-site tomographic code with restricted intertwiners; retained unchanged and its cut obstruction still applies."
+      }
+    ]
+  },
+  "new_choices": [
+    "Orthogonal wrapped-phase labels, four little-endian registers",
+    "Fixed clean scratch pool of width-2 bits",
+    "Conventional coherent permutation extension when interpreted quantum mechanically",
+    "Whole-sector affine check at every source-operation boundary",
+    "Gamma, winding, cost and source history retained in the original classical Cell"
+  ],
+  "prior_methods": [
+    {
+      "title": "Reversible Logic Circuit Synthesis",
+      "authors": "Shende, Prasad, Markov, Hayes",
+      "url": "https://arxiv.org/abs/quant-ph/0207001",
+      "scope": "Established reversible circuit synthesis; no priority claim for permutation-to-unitary embedding."
+    }
+  ],
+  "claim_boundary": "A new adapter to existing arithmetic, not a new quantum postulate, physical device, quantum speedup, conversion from v0.3 code, or complete phase/seam/history quantum encoding."
+}

@@ -14,6 +14,17 @@ opposed phase transports map to local phase gates, and paired mode swaps map
 to site exchange. Its balanced-cut channel obstruction and mixed-state image
 bound prevent treating that subset as a complete physical hardware encoding.
 
+The [v0.4 register compiler](REGISTER.md) supplies a different orthogonal
+wrapped-phase encoding. Native reversible operations now compile through the
+existing X/CX/CCX arithmetic; grid 64 uses 24 phase + 4 clean workspace wires.
+The balanced cut (0,2,0) needs 59 logical gates in this implementation.
+This supplies an executable interface target, not a physical transfer law.
+The larger code retains distinguishable labels; it is not obtained by a
+channel that extracts exact labels from the v0.3 mixed code.
+Gamma and unwrapped path/cost/history stay in the original classical Cell.
+Closure holds at source-operation boundaries; elementary gate steps may
+leave the sector. A strictly constrained carrier needs additional design.
+
 The proposed hardware primitive stores **four controllable cyclic modes**, a
 seam calibration and retained history. It is not specified as four qubits.
 Its required actions follow the finite operational model in
@@ -110,11 +121,14 @@ without treating its assumptions as established laws of nature.
 
 ## Concrete next deliverable
 
-Complete one **two-cell operational experiment on paper**: preparation,
-allowed interaction, two independently chosen readout settings per cell,
-joint probabilities, and state updates. Derive its table from the proposed
-native law, retain every outcome, check normalization and no-signaling, and
-state its difference from the v0.1 local baseline. Then map those same
-operations to a carrier's physical variables and an experimentally measurable
-transfer law. This is the missing link between the current algebra and a
-defensible material hardware design.
+The v0.2 two-site preparation/readout model and v0.4 reversible phase-register
+interface now exist as separate conditional software constructions. The next
+physical design must specify a carrier's state variables, coherent preparation,
+at least one balanced-cut interaction, and an independent phase-sensitive
+readout. Compare the measured transfer law to the exact compiled example,
+including workspace cleanup and any intermediate closure-sector excursions.
+
+Read/reset and path-dependent records need an explicit controller/environment
+model with its storage and noise budget. The current classical Cell replay
+does not establish coherent history recording. These transfer and preparation
+laws remain the missing link to a defensible material hardware design.

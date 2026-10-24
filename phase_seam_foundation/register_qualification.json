@@ -1,0 +1,1463 @@
+{
+  "schema": "phase-seam-register-v0.4",
+  "author": "Monty",
+  "status": "wrapped-phase permutation compiler reusing existing native arithmetic",
+  "assumptions": [
+    "orthogonal labels",
+    "clean workspace",
+    "standard coherent gate semantics if used as quantum circuit"
+  ],
+  "program": {
+    "source_operations": [
+      {
+        "kind": "pair_cut",
+        "args": [
+          0,
+          2,
+          7
+        ]
+      },
+      {
+        "kind": "pair_shift",
+        "args": [
+          1,
+          3,
+          -5
+        ]
+      },
+      {
+        "kind": "swap",
+        "args": [
+          0,
+          1
+        ]
+      }
+    ],
+    "affine_matrix": [
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        63,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "affine_offset": [
+      59,
+      7,
+      57,
+      5
+    ],
+    "source_gate_binding_verified": true,
+    "elementary_operations": [
+      [
+        "ccx",
+        [
+          0,
+          13,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          14,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          15,
+          26
+        ]
+      ],
+      [
+        "ccx",
+        [
+          26,
+          16,
+          17
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          15,
+          26
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          14,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          13,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          13,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          14,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          15,
+          16
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          14,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          13,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          13,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          14,
+          15
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          13,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          13,
+          14
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          13
+        ]
+      ],
+      [
+        "ccx",
+        [
+          1,
+          14,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          15,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          16,
+          17
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          15,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          1,
+          14,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          1,
+          14,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          15,
+          16
+        ]
+      ],
+      [
+        "ccx",
+        [
+          1,
+          14,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          1,
+          14,
+          15
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          14
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          15,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          16,
+          17
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          15,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          15,
+          16
+        ]
+      ],
+      [
+        "cx",
+        [
+          2,
+          15
+        ]
+      ],
+      [
+        "ccx",
+        [
+          3,
+          16,
+          17
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          16
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          17
+        ]
+      ],
+      [
+        "ccx",
+        [
+          12,
+          13,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          14,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          15,
+          26
+        ]
+      ],
+      [
+        "ccx",
+        [
+          26,
+          16,
+          17
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          15,
+          26
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          14,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          12,
+          13,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          12,
+          13,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          14,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          15,
+          16
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          14,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          12,
+          13,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          12,
+          13,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          14,
+          15
+        ]
+      ],
+      [
+        "ccx",
+        [
+          12,
+          13,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      [
+        "cx",
+        [
+          12,
+          13
+        ]
+      ],
+      [
+        "x",
+        [
+          12
+        ]
+      ],
+      [
+        "ccx",
+        [
+          15,
+          16,
+          17
+        ]
+      ],
+      [
+        "cx",
+        [
+          15,
+          16
+        ]
+      ],
+      [
+        "x",
+        [
+          15
+        ]
+      ],
+      [
+        "cx",
+        [
+          16,
+          17
+        ]
+      ],
+      [
+        "x",
+        [
+          16
+        ]
+      ],
+      [
+        "x",
+        [
+          17
+        ]
+      ],
+      [
+        "x",
+        [
+          0
+        ]
+      ],
+      [
+        "x",
+        [
+          1
+        ]
+      ],
+      [
+        "x",
+        [
+          2
+        ]
+      ],
+      [
+        "x",
+        [
+          3
+        ]
+      ],
+      [
+        "x",
+        [
+          4
+        ]
+      ],
+      [
+        "x",
+        [
+          5
+        ]
+      ],
+      [
+        "ccx",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        "x",
+        [
+          3
+        ]
+      ],
+      [
+        "ccx",
+        [
+          6,
+          7,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          8,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          9,
+          26
+        ]
+      ],
+      [
+        "ccx",
+        [
+          26,
+          10,
+          11
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          9,
+          26
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          8,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          6,
+          7,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          6,
+          7,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          8,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          9,
+          10
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          8,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          6,
+          7,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          6,
+          7,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          8,
+          9
+        ]
+      ],
+      [
+        "ccx",
+        [
+          6,
+          7,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      [
+        "cx",
+        [
+          6,
+          7
+        ]
+      ],
+      [
+        "x",
+        [
+          6
+        ]
+      ],
+      [
+        "ccx",
+        [
+          7,
+          8,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          9,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          10,
+          11
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          9,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          7,
+          8,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          7,
+          8,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          9,
+          10
+        ]
+      ],
+      [
+        "ccx",
+        [
+          7,
+          8,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      [
+        "cx",
+        [
+          7,
+          8
+        ]
+      ],
+      [
+        "x",
+        [
+          7
+        ]
+      ],
+      [
+        "ccx",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      [
+        "cx",
+        [
+          9,
+          10
+        ]
+      ],
+      [
+        "x",
+        [
+          9
+        ]
+      ],
+      [
+        "cx",
+        [
+          10,
+          11
+        ]
+      ],
+      [
+        "x",
+        [
+          10
+        ]
+      ],
+      [
+        "x",
+        [
+          11
+        ]
+      ],
+      [
+        "ccx",
+        [
+          18,
+          19,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          20,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          21,
+          26
+        ]
+      ],
+      [
+        "ccx",
+        [
+          26,
+          22,
+          23
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          21,
+          26
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          20,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          18,
+          19,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          18,
+          19,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          20,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          21,
+          22
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          20,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          18,
+          19,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          18,
+          19,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          20,
+          21
+        ]
+      ],
+      [
+        "ccx",
+        [
+          18,
+          19,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      [
+        "cx",
+        [
+          18,
+          19
+        ]
+      ],
+      [
+        "x",
+        [
+          18
+        ]
+      ],
+      [
+        "ccx",
+        [
+          20,
+          21,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          22,
+          23
+        ]
+      ],
+      [
+        "ccx",
+        [
+          20,
+          21,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          20,
+          21,
+          22
+        ]
+      ],
+      [
+        "cx",
+        [
+          20,
+          21
+        ]
+      ],
+      [
+        "x",
+        [
+          20
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          6,
+          0
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          7,
+          1
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          2,
+          8
+        ]
+      ],
+      [
+        "cx",
+        [
+          8,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          2,
+          8
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          9
+        ]
+      ],
+      [
+        "cx",
+        [
+          9,
+          3
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          9
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          10
+        ]
+      ],
+      [
+        "cx",
+        [
+          10,
+          4
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          10
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          11
+        ]
+      ],
+      [
+        "cx",
+        [
+          11,
+          5
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          11
+        ]
+      ]
+    ]
+  },
+  "known_cell": {
+    "initial_lifts": [
+      1,
+      8,
+      19,
+      -28
+    ],
+    "final_lifts": [
+      3,
+      6,
+      14,
+      -23
+    ],
+    "initial_phases": [
+      1,
+      8,
+      19,
+      36
+    ],
+    "final_phases": [
+      3,
+      6,
+      14,
+      41
+    ],
+    "gamma": "2/3",
+    "cost": "1",
+    "events_retained": 4,
+    "verified": true
+  },
+  "coherent_control": {
+    "input": "(|0,0,0,0> + i |1,0,63,0>)/sqrt(2)",
+    "balanced_cut_output": [
+      {
+        "phase_labels": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "amplitude": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      },
+      {
+        "phase_labels": [
+          63,
+          0,
+          1,
+          0
+        ],
+        "amplitude": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      }
+    ],
+    "inverse_and_preparation_inverse_yield_zero": true,
+    "evidence_class": "LOCAL_IDEAL_CALCULATION",
+    "hardware_job_id": null
+  },
+  "prior_obstruction_pair": {
+    "inputs": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        16,
+        48,
+        0,
+        0
+      ]
+    ],
+    "outputs": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        48,
+        48,
+        32,
+        0
+      ]
+    ],
+    "input_trace_distance": 1,
+    "output_trace_distance": 1,
+    "reason": "distinct orthogonal labels; a different encoding, not a channel conversion of the old code",
+    "previous_two_site_obstruction_still_valid": true
+  },
+  "resources": {
+    "cut_axis_zero": {
+      "grid": 64,
+      "bits_per_mode": 6,
+      "phase_bits": 24,
+      "clean_scratch_bits": 4,
+      "total_logical_wires": 28,
+      "source_operations": 1,
+      "elementary_gates": 24,
+      "gate_counts": {
+        "x": 7,
+        "ccx": 16,
+        "cx": 1
+      },
+      "full_phase_dimension": 16777216,
+      "fixed_sector_information_bits": 18,
+      "compressed_sector_layout_implemented": false,
+      "gamma_lifts_history": "external original Cell; not included in wire count",
+      "physical_qubits_built": 0
+    },
+    "balanced_cut_axis_zero": {
+      "grid": 64,
+      "bits_per_mode": 6,
+      "phase_bits": 24,
+      "clean_scratch_bits": 4,
+      "total_logical_wires": 28,
+      "source_operations": 1,
+      "elementary_gates": 59,
+      "gate_counts": {
+        "ccx": 46,
+        "cx": 6,
+        "x": 7
+      },
+      "full_phase_dimension": 16777216,
+      "fixed_sector_information_bits": 18,
+      "compressed_sector_layout_implemented": false,
+      "gamma_lifts_history": "external original Cell; not included in wire count",
+      "physical_qubits_built": 0
+    },
+    "shear_minus3_reference5": {
+      "grid": 64,
+      "bits_per_mode": 6,
+      "phase_bits": 24,
+      "clean_scratch_bits": 4,
+      "total_logical_wires": 28,
+      "source_operations": 1,
+      "elementary_gates": 129,
+      "gate_counts": {
+        "ccx": 105,
+        "cx": 20,
+        "x": 4
+      },
+      "full_phase_dimension": 16777216,
+      "fixed_sector_information_bits": 18,
+      "compressed_sector_layout_implemented": false,
+      "gamma_lifts_history": "external original Cell; not included in wire count",
+      "physical_qubits_built": 0
+    },
+    "three_operation_closed_word": {
+      "grid": 64,
+      "bits_per_mode": 6,
+      "phase_bits": 24,
+      "clean_scratch_bits": 4,
+      "total_logical_wires": 28,
+      "source_operations": 3,
+      "elementary_gates": 145,
+      "gate_counts": {
+        "ccx": 94,
+        "cx": 33,
+        "x": 18
+      },
+      "full_phase_dimension": 16777216,
+      "fixed_sector_information_bits": 18,
+      "compressed_sector_layout_implemented": false,
+      "gamma_lifts_history": "external original Cell; not included in wire count",
+      "physical_qubits_built": 0
+    }
+  },
+  "limits": {
+    "power_of_two_grids": [
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256,
+      512,
+      1024,
+      2048,
+      4096
+    ],
+    "max_gates": 100000,
+    "source_guards": "Config parameter/event limits; bound Cell replay also checks lift and rational-cost limits",
+    "closure": "whole fixed sector preserved after each source operation; elementary gates may leave it",
+    "excluded": [
+      "read/reset instruments",
+      "Gamma quantum storage",
+      "quantum winding/history/cost register",
+      "18-bit compressed closure layout"
+    ]
+  },
+  "open": [
+    "native physical preparation of coherent phase-label superpositions",
+    "physical gate/readout/control calibration and noise",
+    "controller/environment accounting for read/reset and path-dependent records",
+    "native probability and time/energy laws independent of circuit assumptions"
+  ],
+  "validation": {
+    "tests": 103,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "seconds": 47.54102020800019,
+    "scope": "register, v0.3, v0.2, v0.1 and calculator smoke; full native/Shor suite not rerun"
+  },
+  "checked_sources_sha256": {
+    "phase_seam_foundation/register.py": "6aa167f5ebb1f1552cbd3632bbad8cbaa7f779568303e30a485024c0c2f9a657",
+    "phase_seam_foundation/register_qualification.py": "2fd1445b87c81247d24bce38bc32e4c3d7e5053867a45953037bdb7458783b11",
+    "phase_seam_foundation/register_source_manifest.json": "971a047ac0a2470c20597587c61a366857320e3f2994ffa954d431bc44349f3d",
+    "phase_seam_foundation/model.py": "efae81124f5d2058b7e728691b5b1feceee74a3d194835a7f2a9d2809fff6de2",
+    "phase_seam_foundation/encoding.py": "93cd7ebca26e252756bdbaa9c8686a866826f7c9c8288e9881af0fa7ea8488c7",
+    "phase_seam_foundation/joint.py": "53548114a84dfb24022acee866c10b67f0bd71ec9b9b203c014cf76af8ccbb36",
+    "native_relational_qc/modular_arithmetic.py": "dc59c9b09acf82cfee877d707901022f91fbe9a9284eb00cf6168e844b9368ce",
+    "native_relational_qc/compact.py": "1acff6eaa8664b4ba33285c66c9f433ecd0148aa8383a18f79dbd2ccb66e898d",
+    "native_relational_qc/phase_backend.py": "b47a5cfe04449a5def450aa3170ff11697436705427da83050f4aee08345dd98",
+    "native_relational_qc/exact.py": "cc0b3be70660ed819b3ad153620ea4338fb6bf57102a4474d4355da2805afdf6",
+    "native_relational_qc/cyclotomic.py": "36a9f93fb9b6362a6141f13f4aef677de9f19642f6ea01ebb761614acab4ea86",
+    "native_relational_qc/cyclotomic32.py": "33e203a7280bbe8341e37cb357f1bb6bfcaba9e695ff5144050e3a087733ab76",
+    "native_relational_qc/cyclotomic64.py": "8fc9c42627feee330b00f1b56559031cc442746e830081eae09f535115d74e52",
+    "benchmarks/phase_seam_register_audit.py": "e574dd18939904f6e2bec970978fd85a312b2e4c8cf9126c550f399785b98571",
+    "tests/test_phase_seam_register.py": "06be45bb6597e18dad072cb11789baa2c300a44179c70dae054a10adfef5971c",
+    "tests/test_phase_seam_encoding.py": "f933c3cbafa2238d29a0db29bb2e93ce7b2cfb621529b439a4653aa881ba1019",
+    "tests/test_phase_seam_joint.py": "e0ff847109cfa78a91b0b7766171830a1dc52e12c90a1e90c6a5bcb0235ae409",
+    "tests/test_phase_seam_foundation.py": "b2307143b9cbae80e7ffb63146be68cab105c15c5fdadf8a67048b4994f798c7",
+    "tests/test_native_calculator.py": "1730a1648fec31bcb7023c07e1a8913652ea51782ba554120323f75acaab1024"
+  }
+}
