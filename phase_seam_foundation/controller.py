@@ -13,6 +13,8 @@ from native_relational_qc.modular_arithmetic import _add
 from .model import Cell, Config, ResourceLimit, integer, index, verify_history
 from .register import MAX_GATES, _word, _sector_target, compile_register
 
+INSTRUMENTS = ("read", "reset", "pair_reset")
+
 
 @dataclass(frozen=True)
 class Record:
@@ -21,6 +23,7 @@ class Record:
     mode: int
     reference: int
     wires: tuple
+    reservoir: object = None
 
 
 @dataclass(frozen=True)
@@ -89,14 +92,14 @@ class ControllerProgram:
                     total_logical_wires=self.n_qubits,source_operations=len(self.operations),
                     elementary_gates=len(self.gates),gate_counts=dict(Counter(n for n,_ in self.gates)),
                     classical_output_bits_if_measured=self.record_bits,
-                    record_policy="one fresh width-bit register per read/reset; no overwrite or recycling",
+                    record_policy="one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
                     record_storage_minimality_claim=False,
                     external="Gamma, unwrapped lifts, operation tape, charged-cut cost",
                     physical_qubits_built=0)
 
 
 def _instrument_gates(op, layout, record):
-    grid=layout.config.grid; mode,ref=op.args
+    grid=layout.config.grid; mode,ref=op.args[0],op.args[-1]
     scratch=layout.scratch; registers=layout.registers
     out=[]
 
@@ -106,7 +109,7 @@ def _instrument_gates(op, layout, record):
     def accumulate(source, target, coefficient):
         for i,q in enumerate(source): add(target,coefficient*(1 << i),(q,))
 
-    if op.kind=="read":
+    if op.kind in ("read","pair_reset"):
         if mode==layout.omit_mode:
             add(record,_sector_target(layout.config)-ref)
             for wires in registers:
@@ -116,6 +119,13 @@ def _instrument_gates(op, layout, record):
             # unknown quantum state; superpositions become correlated.
             out.extend(("cx",(x,y)) for x,y in zip(registers[mode],record))
             add(record,-ref)
+        if op.kind=="pair_reset":
+            # Retain r first, then implement the balanced displacement (-r,+r).
+            # An omitted coordinate is derived from closure and needs no gate.
+            # Even dirty records preserve the data sum (with clean workspace).
+            reservoir=op.args[1]
+            if mode!=layout.omit_mode: accumulate(record,registers[mode],-1)
+            if reservoir!=layout.omit_mode: accumulate(record,registers[reservoir],1)
     else:
         # |x,y> -> |a+y,x-a>; clean y=0 gives reset with retained old outcome.
         wires=registers[mode]
@@ -133,7 +143,7 @@ def compile_controller(operations, *, config=None, omit_mode=None, max_records=1
     integer(max_records,"record cap"); integer(max_gates,"gate cap")
     if not 0 <= max_records <= 64 or not 0 <= max_gates <= MAX_GATES:
         raise ValueError("controller cap out of range")
-    count=sum(op.kind in ("read","reset") for op in operations)
+    count=sum(op.kind in INSTRUMENTS for op in operations)
     if count > max_records: raise ResourceLimit("retained record budget exceeded")
     if layout.n_qubits+count*layout.width > 256:
         raise ResourceLimit("controller exceeds existing 256-wire IR limit")
@@ -141,11 +151,12 @@ def compile_controller(operations, *, config=None, omit_mode=None, max_records=1
         raise ValueError("single-mode reset does not preserve the whole fixed closure sector")
     records=[];gates=[]
     for step,op in enumerate(operations):
-        if op.kind in ("read","reset"):
+        if op.kind in INSTRUMENTS:
             start=layout.n_qubits+len(records)*layout.width
             wires=tuple(range(start,start+layout.width))
             block=_instrument_gates(op,layout,wires)
-            records.append(Record(step,op.kind,*op.args,wires))
+            reservoir=op.args[1] if op.kind=="pair_reset" else None
+            records.append(Record(step,op.kind,op.args[0],op.args[-1],wires,reservoir))
         else:
             block=compile_register((op,),config=config,omit_mode=omit_mode,max_gates=max_gates).gates
         if len(gates)+len(block)>max_gates:
@@ -160,8 +171,12 @@ def verify_controller(program):
         if type(program) is not ControllerProgram: return False
         if type(program.records) is not tuple or len(program.records)>64: return False
         for r in program.records:
-            if type(r) is not Record or type(r.kind) is not str or r.kind not in ("read","reset"): return False
+            if type(r) is not Record or type(r.kind) is not str or r.kind not in INSTRUMENTS: return False
             integer(r.step,"record step"); index(r.mode,4,"record mode"); integer(r.reference,"record reference")
+            if r.kind=="pair_reset":
+                index(r.reservoir,4,"record reservoir")
+                if r.reservoir==r.mode: return False
+            elif r.reservoir is not None: return False
             if type(r.wires) is not tuple: return False
             for q in r.wires: index(q,program.n_qubits,"record wire")
         if type(program.gates) is not tuple or len(program.gates)>MAX_GATES: return False
@@ -191,7 +206,7 @@ def bind_controller(cell, program):
     after=cell;outcomes=[]
     for op in program.operations:
         after=after.apply(op)
-        if op.kind in ("read","reset"): outcomes.append(after.events[-1].outcome)
+        if op.kind in INSTRUMENTS: outcomes.append(after.events[-1].outcome)
     return ControllerTransition(cell,after,program,tuple(outcomes))
 
 

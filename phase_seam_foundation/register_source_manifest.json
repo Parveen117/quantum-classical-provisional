@@ -1,8 +1,8 @@
 {
-  "schema": "phase-seam-register-source-v3",
+  "schema": "phase-seam-register-source-v4",
   "author": "Monty",
   "date": "2026-10-24",
-  "parent_commit": "915d83f532d65d64a15eb2e0ce00973c6333f70c",
+  "parent_commit": "e494f85753940f0ff6e203de4a7df2c79fcab46d",
   "duplicate_audit": {
     "scope": "All seven branch-tip recursive trees; local Python/Markdown content search; read existing arithmetic, memory experiments, observer transport and master README. No claim about deleted branches or other repositories.",
     "trees": [
@@ -32,8 +32,8 @@
       },
       {
         "branch": "codex/native-relational-qc-v1-20261018",
-        "commit": "915d83f532d65d64a15eb2e0ce00973c6333f70c",
-        "files": 405,
+        "commit": "e494f85753940f0ff6e203de4a7df2c79fcab46d",
+        "files": 408,
         "truncated": false
       },
       {
@@ -65,7 +65,7 @@
       },
       {
         "path": "phase_seam_foundation/model.py",
-        "use": "Original Operation, Config, Cell and history replay; unchanged."
+        "use": "Original Operation, Config, Cell and history replay retained; v0.7 adds explicit pair_reset law with integer-sum preservation, existing guards and cost policy."
       },
       {
         "path": "native_relational_qc/dynamic.py",
@@ -144,6 +144,30 @@
       "computational-basis pointer measurement through existing quantum postulates",
       "records retained and never overwritten by the adapter",
       "single-mode reset restricted to an unrestricted full phase layout"
+    ]
+  },
+  "v0_7_duplicate_check": {
+    "method": "Rechecked all seven branch heads: other six remain identical to pinned tree audit. Searched local Python/Markdown for pair_reset, balanced reset and reservoir reset; existing controller docs explicitly leave it open.",
+    "finding": "Extend model.py and controller.py in place; reuse existing record read, controlled constant adder, fixed-sector layouts, codec, measurement and feedback. No second simulator, channel engine or adder.",
+    "changes": [
+      "explicit pair_reset(j,reservoir,a) source law",
+      "read old relative label into fresh record, then apply opposite record-controlled shifts",
+      "support full and every fixed-sector omission, including omitted reset mode",
+      "record metadata includes declared reservoir",
+      "qualification and existing serial audit extended"
+    ],
+    "new_choices": [
+      "reset lift ell_j to a and add ell_j-a to a distinct native mode",
+      "one fresh width-bit coherent record; no reuse",
+      "existing cut-only cost policy retained; no thermal energy claim"
+    ],
+    "proof_scope": "Integer-sum identity; clean-record isometry and Kraus completeness; full/compressed intertwining on the fixed sector. Source/gate verifier is shared-code consistency, not independent formal proof.",
+    "unchanged": [
+      "old source-operation semantics",
+      "single-mode fixed-sector reset rejection",
+      "all native_relational_qc implementations",
+      "v0.2 joint.py and v0.3 encoding.py",
+      "original supplied LaTeX"
     ]
   }
 }

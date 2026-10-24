@@ -1,12 +1,14 @@
 # Native read/reset with retained controller records
 
-Author: Monty. Version 0.6. Status: finite coherent record model, executable
+Author: Monty. Version 0.7. Status: finite coherent record model, executable
 gate compiler and export to the existing dynamic measurement engine.
 
 The phase-register model can now read a native phase and reset a mode while
 retaining its old relative phase in an explicit register. The original
-reversible compiler remains unchanged in scope: it still rejects read/reset.
+reversible compiler remains unchanged in scope: it rejects all instruments.
 `controller.py` composes that compiler with record operations.
+Version 0.7 adds the explicit source operation `pair_reset(j,reservoir,a)`:
+reset with a compensating native phase mode, preserving closure.
 
 ## 1. Existing work reused
 
@@ -37,7 +39,7 @@ For grid \(L=2^w\), the native relative reading is
 \[
 r=(x_j-a)\bmod L.
 \]
-Each read or reset receives its own fresh \(w\)-bit record \(M_k\), initially
+Each read, reset or pair_reset receives a fresh \(w\)-bit record \(M_k\), initially
 \(|0\rangle\), in a product state with the data and all other registers.
 Temporary carry workspace is separate and is returned to zero.
 
@@ -178,16 +180,139 @@ a channel on the whole fixed sector.
 
 The controller therefore supports:
 
-| Layout | Read | Single-mode reset |
-| --- | --- | --- |
-| Full unrestricted, sector 0 | Supported | Supported with retained record |
-| Full fixed sector | Supported | Rejected |
-| Compressed fixed sector | Supported, including omitted mode | Rejected |
+| Layout | Read | Single-mode reset | Balanced pair_reset |
+| --- | --- | --- | --- |
+| Full unrestricted, sector 0 | Supported | Supported with record | Supported with record |
+| Full fixed sector | Supported | Rejected | Supported with record |
+| Compressed fixed sector | Supported, including omitted mode | Rejected | Supported with record |
 
-A balanced reset with compensating transfer into another native mode would
-be a separate operation and model extension. It has not been silently
-substituted for the original reset. The compiler does not release or change
-the user's closure constraint automatically.
+The original `reset` still has exactly its earlier meaning and restrictions.
+Version 0.7 adds the separately named operation below. The compiler does not
+release or change the user's closure constraint automatically.
+
+### 6.1 Explicit balanced reset source law
+
+For distinct native modes \(j,b\), declare `pair_reset(j,b,a)`:
+\[
+\ell'_j=a,\qquad \ell'_b=\ell_b+\ell_j-a,\qquad
+r=(\ell_j-a)\bmod L.
+\]
+Other lifts and Gamma are unchanged. The integer sum, not only its residue,
+is preserved: \(a+\ell_b+\ell_j-a=\ell_j+\ell_b\). Therefore both closure
+signs and every allowed fixed twist are preserved whenever the finite lift
+limits pass. The old event limits and atomic rejection rules still apply.
+Reference rebasing sends \(a\mapsto a+\delta\).
+
+This is an **added operational choice**, motivated by balanced transport.
+It is not claimed as a theorem already proved by the supplied manuscripts.
+The reservoir here is another native phase mode; it is not a thermal bath,
+an uncounted ancilla or an energy model. The existing cut-cost counter is
+unchanged by pair_reset, which makes no claim that physical reset is free.
+
+The carrier-only source map has no inverse. For example, \((1,3)\) and
+\((2,2)\) both become \((0,4)\) at reference zero. The source Cell retains
+the before/after lifts in its event; the coherent circuit retains only the
+wrapped relative outcome. A record of \(r=0\) can accompany a nonzero
+unwrapped transfer by a multiple of \(L\).
+
+### 6.2 Coherent construction and channel
+
+With a fresh record and clean workspace, the gate word implements
+\[
+V_{j,b,a}|x_j,x_b,0\rangle
+ =|a,\ x_b+r,\ r\rangle,\qquad r=x_j-a\pmod L.
+\]
+All phase arithmetic in this equation is modulo \(L\). The output is
+injective in the old data: \(x_j=a+r\), \(x_b=x'_b-r\). Thus the extension
+is an isometry. The compiler first reuses the existing read into the new
+record, then applies opposite record-controlled shifts \((-r,+r)\) to the
+target and reservoir. It uses the existing constant adder and its restored
+carry workspace; no new arithmetic or probability engine is introduced.
+
+Let \(T_b(r)|z\rangle=|z+r\rangle\). On the full data domain the record
+branches are
+\[
+K_r=(|a\rangle\langle a+r|)_j\otimes T_b(r)\otimes I_{\rm untouched},
+\qquad V=\sum_rK_r\otimes|r\rangle .
+\]
+Since \(T_b(r)^\dagger T_b(r)=I\),
+\[
+K_r^\dagger K_r=P_r,\qquad \sum_rK_r^\dagger K_r=I.
+\]
+This proves normalization of the instrument, with
+\(p_r=\operatorname{Tr}(P_r\rho)\) and unnormalized branch
+\(K_r\rho K_r^\dagger\). Ignoring the record gives
+\(\sum_rK_r\rho K_r^\dagger\). Each \(K_r\) maps a fixed closure sector
+into that same sector, so the same identities restrict to the sector code.
+
+The reset mode factors as \(|a\rangle\langle a|\). The reservoir can change
+and become correlated with the record; the old information need not reside
+in the record alone. Any untouched modes/external reference keep their
+**unconditioned joint marginal**, since the complete channel acts only on
+\(j,b\). Selected outcome marginals can differ. This is not a claim that
+the reservoir stays unchanged or that the source mode was cloned.
+
+The inverse of the entire elementary gate word restores the input while
+the records remain coherent and available. Observing/discarding their
+coherence is not undone by this inverse.
+
+The need for a record survives the closure constraint: choose the \(L\)
+orthogonal pairs \((x_j,x_b)=(a+r,c-r)\), with the other modes fixed to
+the chosen sum. Every pair resets to \((a,c)\). An isometric implementation
+must keep \(L\) distinguishable alternatives elsewhere. The construction
+uses \(w\) bits for this single-event record. This is not a minimum-memory
+claim for a whole multi-event protocol.
+
+### 6.3 Every compressed layout and dirty-record boundary
+
+Let omitted mode \(o\) obey \(x_o=s-\sum_{i\ne o}x_i\). Compile the same
+read followed by the same shifts, simply skipping a shift on an omitted
+coordinate:
+
+| Omitted mode | Record computation | Stored data update |
+| --- | --- | --- |
+| Reset mode \(j\) | Existing derived-phase read | Add \(r\) to reservoir; derived target becomes \(a\) |
+| Reservoir \(b\) | Read stored target | Subtract \(r\) from target; derived reservoir compensates |
+| Another mode | Read stored target | Shift target by \(-r\) and reservoir by \(+r\) |
+
+No hidden fourth phase register is materialized. If \(J\) embeds the three
+stored coordinates into the full sector, these formulas give
+\[
+(J\otimes I_M)V_{\rm reduced}=V_{\rm full}J
+\]
+on fresh-record inputs. Exact coherent tests compare compress → operate →
+expand with full execution, including an external entangled reference.
+This equivalence concerns clean records; dirty-record extensions of the
+stored and derived reads differ.
+
+For a dirty initial record \(z\), the actual stored-mode read produces
+\(r=((z\mathbin{\mathrm{XOR}}x_j)-a)\bmod L\); an omitted-target read produces
+\(r=(z+x_j-a)\bmod L\). The subsequent data update is always
+\((x_j,x_b)\mapsto(x_j-r,x_b+r)\). With clean workspace this preserves the
+data sum for any record, but need not reset \(j\) to \(a\). Dirty carry
+workspace has no such arithmetic promise; the complete gate word is still
+a permutation and its inverse restores the entire dirty input.
+
+Closure is guaranteed at **source-operation boundaries**. Separate
+elementary additions may transiently leave the sector in a full layout.
+This does not yet implement a carrier confined to the sector at every
+physical instant.
+
+Example with unwrapped source history:
+
+```python
+from phase_seam_foundation.model import Cell, Config, Operation
+from phase_seam_foundation.controller import compile_controller, bind_controller
+
+cfg = Config(sector=1)
+program = compile_controller(
+    (Operation("pair_reset", (0, 2, 0)),), config=cfg, omit_mode=2,
+)
+transition = bind_controller(Cell.start((65, 0, -1, 0), config=cfg), program)
+assert transition.after.state.lifts == (0, 0, 64, 0)
+assert transition.outcomes == (1,)
+assert program.n_qubits == 28
+```
 
 ## 7. Existing measurement and feedback engine
 
@@ -222,8 +347,8 @@ The caller owns the clean-record, clean-workspace and fixed-sector input
 conditions. A classical outcome measurement does not demonstrate that a
 physical carrier prepared those conditions.
 
-`bind_controller(cell,program)` replays the unchanged original Cell,
-retains every event, and returns its ordered read/reset outcomes. Existing
+`bind_controller(cell,program)` replays the Cell, including the explicit
+pair_reset extension, retains every event, and returns ordered outcomes. Existing
 lift, cost, parameter and event limits remain enforced. This binding is for
 known classical source data, not for copying an unknown coherent history.
 
@@ -238,6 +363,18 @@ omitted mode 2.
 | Full reset(0,0) | 24 | 4 | 6 | 34 | 18 |
 | Full read(0,1), reset(0,2) | 24 | 4 | 12 | 40 | 99 |
 | Compressed read(2,0), derived omitted label | 18 | 4 | 6 | 28 | 378 |
+| Full pair_reset(0,2,0) | 24 | 4 | 6 | 34 | 193 |
+| pair_reset(0,2,0), omitted target 0 | 18 | 4 | 6 | 28 | 439 |
+| pair_reset(0,2,0), omitted mode 1 or 3 | 18 | 4 | 6 | 28 | 193 |
+| pair_reset(0,2,0), omitted reservoir 2 | 18 | 4 | 6 | 28 | 132 |
+
+Balanced-reset rows use sign +1 and twist 0. These are construction costs,
+not gate-optimality claims. Different references and omitted modes change
+costs; the qualification reports reference 0 and 7 for every omission.
+Conversion from an existing full register is separate: adding one retained
+record to its 28-wire peak needs 34 logical wires, and compress/expand each
+costs 183 gates in this sector. The 28-wire execution count assumes direct
+compressed preparation. No general speedup follows from storage reduction.
 
 Workspace is the inherited fixed allocation even when a particular word
 does not need every workspace bit. Records are additional retained storage,
@@ -271,23 +408,29 @@ retention, transfer of reference entanglement, unchanged remote marginals,
 inverse recovery and correlated repeated reads. Exported instruments and
 feedback are compared with the earlier dynamic engine.
 
-Seven relevant existing dynamic checks and all 117 previous targeted
-foundation/calculator checks are retained: **140 tests pass in 52.509 seconds**,
-with no failures, errors or skips. The full native/Shor suite and
-hardware jobs are not rerun.
+The preceding v0.6 audit passed 140 tests in 52.509 seconds. Version 0.7
+retains those checks and adds 16 balanced-reset tests: exhaustive grid-4
+full inputs and fixed-sector inputs across signs, twists, pairs, references
+and omissions; all grid-64 target values/references in all layouts; all
+supported widths; source lift/cost/rebase rules; dirty memory; exact coherent
+full/compressed equivalence; branch partial traces; untouched marginals;
+inverse recovery; and comparison with existing measurement/reset/feedback.
+The combined audit passes **156 tests in 97.389 seconds**, with no failures,
+errors or skips. Source hashes and results are in the linked qualification.
+The full native/Shor suite and hardware jobs are not rerun.
 
 ## 9. Closed interface and open physical work
 
-Closed within the declared circuit model: finite native phase read/reset,
+Closed within the declared circuit model: finite native phase read/reset/pair_reset,
 explicit pointer records, exact source outcomes, coherent information
 transfer, measured joint outcomes through the existing engine, and bounded
 memory/gate accounting.
 
-Added choices: fresh zero product records, one record per event, declared
-pointer basis, terminal measurement export and no record reuse. The earlier
+Added choices: compensating reservoir reset law, fresh zero product records,
+one record per event, declared pointer basis, terminal measurement export and no record reuse. The earlier
 quantum probability/composition assumptions remain in force.
 
-Open: physical record initialization and calibration, a native
-closure-preserving balanced reset, coherent unwrapped winding/cost records,
+Open: physical record initialization and calibration, continuous physical
+closure-preserving control, coherent unwrapped winding/cost records,
 record recycling and environment/heat accounting, and physical carrier
 dynamics. Logical reversibility does not establish a thermal-energy law.

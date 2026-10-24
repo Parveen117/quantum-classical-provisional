@@ -42,8 +42,16 @@ Pointer measurement uses the existing dynamic engine. At grid 64, one
 record adds 6 logical wires; full read(0,1) followed by reset(0,2) uses 40
 wires and 99 logical gates. Fresh physical record initialization, memory
 noise and record erasure/recycling remain unmeasured engineering requirements.
-Single-mode reset on a fixed closure sector is rejected; a compensating
-reservoir operation needs a separately declared model.
+Single-mode reset on a fixed closure sector remains rejected. The explicit
+v0.7 `pair_reset(j,b,a)` adds a compensating native-mode update:
+`x_j'=a, x_b'=x_b+x_j-a`, with a retained record `r=x_j-a mod L`.
+Its integer-lift version preserves the sum; its coherent circuit preserves
+wrapped closure at source boundaries and supports every compressed layout.
+At grid 64, sign +1, twist 0, pair_reset(0,2,0) uses 34 logical wires and
+193 gates in the full layout, or 28 wires and 132 gates with reservoir 2
+omitted. The reservoir is another phase mode, not a thermal environment.
+This is a declared software transfer law; physical continuous confinement
+to the sector, initialization and control remain unimplemented.
 
 The proposed hardware primitive stores **four controllable cyclic modes**, a
 seam calibration and retained history. It is not specified as four qubits.
@@ -63,6 +71,7 @@ Its required actions follow the finite operational model in
 | Event memory | Retain commands, references, outcomes, state estimates and rejection conditions | Replay records; preserve different histories at equal cumulative cost; detect incomplete logs |
 | Readout instrument | Report outcomes with a calibrated probability and state-update law | Check normalization and repeated/conditional outcome statistics; quantify backaction |
 | Reset | Prepare the reference state while recording relevant output/environment exchange | Show lost carrier information is not claimed recoverable without its record; measure heat/energy separately |
+| Balanced reset | Reset mode j to a, transfer x_j-a into a distinct native reservoir, and retain the wrapped outcome | Check the data sum at source boundaries, record correlations and inverse recovery with coherent records; account for intermediate excursions |
 | Admission/limits | Enforce declared closure sector, finite counters, memory and controls | Reject invalid commands as a whole; retain all rejected trials in experimental records |
 
 The current shear is an optional algebraic comparison, not a required physical
@@ -149,8 +158,9 @@ readout. Compare the measured transfer law to the exact compiled example,
 including workspace cleanup and any intermediate closure-sector excursions.
 
 The read/reset adapter now specifies a finite controller/environment record
-and logical storage budget. Physical initialization, noise, recycling and
-energy accounting remain open, as does a balanced reset preserving native
-closure. Current coherent records contain wrapped outcomes; classical Cell
+and logical storage budget, including an explicit closure-preserving
+balanced reset. Physical initialization, noise, recycling, continuous sector
+confinement and energy accounting remain open. Current coherent records
+contain wrapped outcomes; classical Cell
 replay does not establish coherent unwrapped path/cost history. These transfer
 and preparation laws remain the missing link to a material hardware design.

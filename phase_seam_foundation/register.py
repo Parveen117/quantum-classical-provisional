@@ -52,15 +52,15 @@ def _word(operations, config, *, allow_instruments=False):
     for op in operations:
         if type(op) is not Operation:
             raise TypeError("source word requires Operation values")
-        if op.kind in ("read", "reset") and not allow_instruments:
-            raise ValueError("read/reset require instruments; not permutation compilation")
+        if op.kind in ("read", "reset", "pair_reset") and not allow_instruments:
+            raise ValueError("read/reset/pair_reset require instruments; not permutation compilation")
         for arg in op.args:
             if abs(arg) > config.max_lift:
                 raise ResourceLimit("register source parameter limit")
         index(op.args[0], 4, "mode")
-        if op.kind in ("swap", "shear", "pair_cut", "pair_shift"):
+        if op.kind in ("swap", "shear", "pair_cut", "pair_shift", "pair_reset"):
             index(op.args[1], 4, "second mode")
-        if op.kind in ("shear", "pair_cut", "pair_shift") and op.args[0] == op.args[1]:
+        if op.kind in ("shear", "pair_cut", "pair_shift", "pair_reset") and op.args[0] == op.args[1]:
             raise ValueError("coupled modes must differ")
 
 

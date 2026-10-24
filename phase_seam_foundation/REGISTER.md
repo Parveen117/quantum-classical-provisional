@@ -15,10 +15,12 @@ reduces the phase storage from 24 to 18 wires and the total from 28 to 22
 wires. Full-to-compressed conversion has a separate 28-wire peak and gate
 cost. Section 8 gives the construction and its exact limits.
 
-The subsequent [v0.6 controller](CONTROLLER.md) composes this compiler with
+The subsequent [controller](CONTROLLER.md) composes this compiler with
 explicit read/reset records and the existing dynamic measurement engine.
 The permutation-only `compile_register` interface still rejects instruments.
-The current combined audit has 140 tests; the v0.4/v0.5 results below retain
+Version 0.7 adds explicit balanced reset with a compensating native mode.
+Read/reset/pair_reset remain instruments outside this permutation compiler.
+The current combined audit includes 156 tests; the v0.4/v0.5 results below retain
 their milestone context.
 
 ## 1. Duplicate-work check and reuse

@@ -25,7 +25,7 @@ closure, the same compiler now omits one dependent mode: 18 phase + 4
 workspace wires, 22 total. The example balanced cut drops from 59 to 24
 logical gates when its reservoir is omitted; other layouts can cost more.
 Reversible conversion retains off-sector residuals and has its own 28-wire
-peak. The combined audit passes 117 tests, including exact coherent
+peak. The v0.5 audit passed 117 tests, including exact coherent
 compression and phase retention. Gamma and
 lift/history/cost data remain in the original classical Cell; this is a
 logical circuit design, not fabricated quantum hardware.
@@ -36,7 +36,17 @@ exports its measurement to the existing dynamic engine. Coherent reset
 transfers old information and reference entanglement into the record; it
 does not erase them for free. At grid 64, one record adds 6 wires. Single-mode
 reset is supported only on the unrestricted full layout because it does not
-preserve the whole fixed closure sector. The current audit passes 140 tests.
+preserve the whole fixed closure sector. The v0.6 audit passed 140 tests.
+
+The explicit [balanced reset](phase_seam_foundation/CONTROLLER.md#61-explicit-balanced-reset-source-law)
+now fills that fixed-sector interface: `pair_reset(j,b,a)` sets mode j to a,
+adds the old phase difference to reservoir b, and keeps a coherent record.
+The integer lift sum is preserved and every compressed layout is supported.
+At grid 64, pair_reset(0,2,0) uses 34 logical wires / 193 gates in full form,
+or 28 wires / 132 gates with reservoir 2 omitted. This is a declared source
+extension using existing arithmetic and measurement engines; original
+single-mode reset restrictions remain. The v0.7 audit passes 156 tests in
+97.389 seconds, with no failures, errors or skips.
 
 ## Native relational calculation engine
 

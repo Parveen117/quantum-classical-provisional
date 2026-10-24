@@ -3,6 +3,11 @@
 Author: Monty. Status: finite operational proposal and source audit.
 
 This document retains the v0.1 classical operational law.
+The explicit [v0.7 balanced-reset extension](CONTROLLER.md#61-explicit-balanced-reset-source-law)
+adds `pair_reset(j,s,a)` with lifts `ell_j'=a` and `ell_s'=ell_s+ell_j-a`,
+retaining the wrapped outcome and original event history. It preserves the
+integer sum whenever the existing resource bounds pass; old operations keep
+their meanings. This new compensating transfer is a declared model choice.
 [The v0.2 joint-readout completion](JOINT_READOUT.md) adds explicit operator
 positivity and measurement postulates and constructs a quantum-compatible
 two-site sector. It does not invalidate the v0.1 bound or derive the added

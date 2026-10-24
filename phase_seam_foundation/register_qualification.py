@@ -47,8 +47,54 @@ def controller_report():
                 resources=cases,
                 limits=dict(default_max_records=16,max_records_option=64,max_total_wires=256,max_gates=100000,
                             reset="only unrestricted full layout; a single-mode reset is not whole-sector preserving"),
-                open=["physical initialization, pointer measurement and noise","balanced reset with a declared closure reservoir",
+                open=["physical initialization, pointer measurement and noise",
                       "record recycling and environment/energy accounting","coherent unwrapped winding and path-cost storage"])
+
+
+def balanced_reset_report():
+    cfg=Config(sector=1)
+    op=O("pair_reset",(0,2,0))
+    p=compile_controller((op,),config=cfg,omit_mode=2)
+    source=Cell.start((65,0,-1,0),config=cfg,gamma=F(3,7))
+    transition=bind_controller(source,p)
+    c=Phase64Circuit(p.n_qubits).add("h",0).add("p64",0)
+    initial=prepare(c).amplitudes
+    for name,qs in p.gates:c.add(name,*qs)
+    amplitudes=prepare(c).amplitudes
+    expected={((label&63) << p.records[0].wires[0]):value for label,value in initial.items()}
+    output=[dict(phases=list(p.unpack(label)[0]),records=list(p.unpack(label)[1]),amplitude=value.to_dict())
+            for label,value in sorted(amplitudes.items())]
+    for name,qs in p.to_circuit(inverse=True).operations:c.add(name,*qs)
+    inverse=prepare(c).amplitudes==initial
+    cases={}
+    for reference in (0,7):
+        cases[str(reference)]={str(omitted):compile_controller((O("pair_reset",(0,2,reference)),),config=cfg,
+                                                              omit_mode=omitted).resources()
+                               for omitted in (None,0,1,2,3)}
+    return dict(status="explicit pair_reset source law, compiled through existing retained-record controller",
+                source=dict(operation="pair_reset(j,reservoir,a)",lift_update="ell_j'=a; ell_s'=ell_s+ell_j-a",
+                            record="(ell_j-a) mod L",integer_sum_preserved=True,
+                            added_choice="compensating reservoir transfer, not derived from the supplied manuscripts",
+                            cost="does not charge the existing cut counter; physical energy unspecified"),
+                clean_isometry="|x_j,x_s,0> -> |a,x_s+x_j-a,x_j-a> modulo L",
+                lowering="existing read into fresh record r, then controlled shifts (-r,+r) on stored data modes",
+                known_cell=dict(input_lifts=list(source.state.lifts),output_lifts=list(transition.after.state.lifts),
+                                input_sum=sum(source.state.lifts),output_sum=sum(transition.after.state.lifts),
+                                outcomes=list(transition.outcomes),gamma=str(transition.after.gamma),
+                                history_verified=verify_controller_transition(transition)),
+                coherent_sector_example=dict(input="(|0,0,0,0> + zeta_64 |1,0,63,0>)/sqrt(2)",
+                                             omitted_reservoir=2,output=output,exact_amplitudes=amplitudes==expected,
+                                             coherent_inverse_restores_input=inverse,
+                                             evidence_class="LOCAL_IDEAL_CALCULATION"),
+                resources_by_reference_and_omitted_mode=cases,
+                boundaries=["single-mode reset remains rejected in fixed sectors",
+                            "reservoir is another native phase mode, not a thermal bath or free memory",
+                            "only untouched modes/reference have guaranteed unchanged unconditioned marginals",
+                            "sum preserved at source boundaries; elementary gates may leave the sector",
+                            "fresh zero records and clean workspace required for reset semantics",
+                            "record coherence and availability required for inverse recovery",
+                            "Gamma, unwrapped lift transfer and cost/history remain classical",
+                            "logical gate counts are construction costs, not optimality or physical performance"])
 
 
 def sector_report():
@@ -121,7 +167,7 @@ def report():
         ("three_operation_closed_word",word)):
         resource_cases[name] = compile_register(ops).resources()
     return dict(
-        schema="phase-seam-register-v0.6",author="Monty",
+        schema="phase-seam-register-v0.7",author="Monty",
         status="wrapped-phase permutation compiler reusing existing native arithmetic",
         assumptions=["orthogonal labels","clean workspace","standard coherent gate semantics if used as quantum circuit"],
         program=dict(source_operations=[dict(kind=o.kind,args=list(o.args)) for o in word],
@@ -145,6 +191,7 @@ def report():
         resources=resource_cases,
         sector_compression=sector_report(),
         controller=controller_report(),
+        balanced_reset=balanced_reset_report(),
         limits=dict(power_of_two_grids=[1<<w for w in range(2,13)],max_gates=100000,
                     source_guards="Config parameter/event limits; bound Cell replay also checks lift and rational-cost limits",
                     closure="whole fixed sector preserved after each source operation; elementary gates may leave it",

@@ -1,5 +1,5 @@
 {
-  "schema": "phase-seam-register-v0.6",
+  "schema": "phase-seam-register-v0.7",
   "author": "Monty",
   "status": "wrapped-phase permutation compiler reusing existing native arithmetic",
   "assumptions": [
@@ -2026,7 +2026,7 @@
           "cx": 6
         },
         "classical_output_bits_if_measured": 6,
-        "record_policy": "one fresh width-bit register per read/reset; no overwrite or recycling",
+        "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
         "record_storage_minimality_claim": false,
         "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
         "physical_qubits_built": 0
@@ -2043,7 +2043,7 @@
           "cx": 18
         },
         "classical_output_bits_if_measured": 6,
-        "record_policy": "one fresh width-bit register per read/reset; no overwrite or recycling",
+        "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
         "record_storage_minimality_claim": false,
         "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
         "physical_qubits_built": 0
@@ -2062,7 +2062,7 @@
           "x": 12
         },
         "classical_output_bits_if_measured": 12,
-        "record_policy": "one fresh width-bit register per read/reset; no overwrite or recycling",
+        "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
         "record_storage_minimality_claim": false,
         "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
         "physical_qubits_built": 0
@@ -2080,7 +2080,7 @@
           "cx": 63
         },
         "classical_output_bits_if_measured": 6,
-        "record_policy": "one fresh width-bit register per read/reset; no overwrite or recycling",
+        "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
         "record_storage_minimality_claim": false,
         "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
         "physical_qubits_built": 0
@@ -2095,9 +2095,348 @@
     },
     "open": [
       "physical initialization, pointer measurement and noise",
-      "balanced reset with a declared closure reservoir",
       "record recycling and environment/energy accounting",
       "coherent unwrapped winding and path-cost storage"
+    ]
+  },
+  "balanced_reset": {
+    "status": "explicit pair_reset source law, compiled through existing retained-record controller",
+    "source": {
+      "operation": "pair_reset(j,reservoir,a)",
+      "lift_update": "ell_j'=a; ell_s'=ell_s+ell_j-a",
+      "record": "(ell_j-a) mod L",
+      "integer_sum_preserved": true,
+      "added_choice": "compensating reservoir transfer, not derived from the supplied manuscripts",
+      "cost": "does not charge the existing cut counter; physical energy unspecified"
+    },
+    "clean_isometry": "|x_j,x_s,0> -> |a,x_s+x_j-a,x_j-a> modulo L",
+    "lowering": "existing read into fresh record r, then controlled shifts (-r,+r) on stored data modes",
+    "known_cell": {
+      "input_lifts": [
+        65,
+        0,
+        -1,
+        0
+      ],
+      "output_lifts": [
+        0,
+        0,
+        64,
+        0
+      ],
+      "input_sum": 64,
+      "output_sum": 64,
+      "outcomes": [
+        1
+      ],
+      "gamma": "3/7",
+      "history_verified": true
+    },
+    "coherent_sector_example": {
+      "input": "(|0,0,0,0> + zeta_64 |1,0,63,0>)/sqrt(2)",
+      "omitted_reservoir": 2,
+      "output": [
+        {
+          "phases": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "records": [
+            0
+          ],
+          "amplitude": {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        },
+        {
+          "phases": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "records": [
+            1
+          ],
+          "amplitude": {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        }
+      ],
+      "exact_amplitudes": true,
+      "coherent_inverse_restores_input": true,
+      "evidence_class": "LOCAL_IDEAL_CALCULATION"
+    },
+    "resources_by_reference_and_omitted_mode": {
+      "0": {
+        "None": {
+          "phase_bits": 24,
+          "clean_workspace_bits": 4,
+          "retained_record_bits": 6,
+          "retained_records": 1,
+          "total_logical_wires": 34,
+          "source_operations": 1,
+          "elementary_gates": 193,
+          "gate_counts": {
+            "cx": 33,
+            "ccx": 160
+          },
+          "classical_output_bits_if_measured": 6,
+          "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
+          "record_storage_minimality_claim": false,
+          "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+          "physical_qubits_built": 0
+        },
+        "0": {
+          "phase_bits": 18,
+          "clean_workspace_bits": 4,
+          "retained_record_bits": 6,
+          "retained_records": 1,
+          "total_logical_wires": 28,
+          "source_operations": 1,
+          "elementary_gates": 439,
+          "gate_counts": {
+            "ccx": 370,
+            "cx": 69
+          },
+          "classical_output_bits_if_measured": 6,
+          "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
+          "record_storage_minimality_claim": false,
+          "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+          "physical_qubits_built": 0
+        },
+        "1": {
+          "phase_bits": 18,
+          "clean_workspace_bits": 4,
+          "retained_record_bits": 6,
+          "retained_records": 1,
+          "total_logical_wires": 28,
+          "source_operations": 1,
+          "elementary_gates": 193,
+          "gate_counts": {
+            "cx": 33,
+            "ccx": 160
+          },
+          "classical_output_bits_if_measured": 6,
+          "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
+          "record_storage_minimality_claim": false,
+          "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+          "physical_qubits_built": 0
+        },
+        "2": {
+          "phase_bits": 18,
+          "clean_workspace_bits": 4,
+          "retained_record_bits": 6,
+          "retained_records": 1,
+          "total_logical_wires": 28,
+          "source_operations": 1,
+          "elementary_gates": 132,
+          "gate_counts": {
+            "cx": 27,
+            "ccx": 105
+          },
+          "classical_output_bits_if_measured": 6,
+          "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
+          "record_storage_minimality_claim": false,
+          "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+          "physical_qubits_built": 0
+        },
+        "3": {
+          "phase_bits": 18,
+          "clean_workspace_bits": 4,
+          "retained_record_bits": 6,
+          "retained_records": 1,
+          "total_logical_wires": 28,
+          "source_operations": 1,
+          "elementary_gates": 193,
+          "gate_counts": {
+            "cx": 33,
+            "ccx": 160
+          },
+          "classical_output_bits_if_measured": 6,
+          "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
+          "record_storage_minimality_claim": false,
+          "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+          "physical_qubits_built": 0
+        }
+      },
+      "7": {
+        "None": {
+          "phase_bits": 24,
+          "clean_workspace_bits": 4,
+          "retained_record_bits": 6,
+          "retained_records": 1,
+          "total_logical_wires": 34,
+          "source_operations": 1,
+          "elementary_gates": 217,
+          "gate_counts": {
+            "cx": 36,
+            "ccx": 177,
+            "x": 4
+          },
+          "classical_output_bits_if_measured": 6,
+          "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
+          "record_storage_minimality_claim": false,
+          "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+          "physical_qubits_built": 0
+        },
+        "0": {
+          "phase_bits": 18,
+          "clean_workspace_bits": 4,
+          "retained_record_bits": 6,
+          "retained_records": 1,
+          "total_logical_wires": 28,
+          "source_operations": 1,
+          "elementary_gates": 463,
+          "gate_counts": {
+            "ccx": 387,
+            "cx": 72,
+            "x": 4
+          },
+          "classical_output_bits_if_measured": 6,
+          "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
+          "record_storage_minimality_claim": false,
+          "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+          "physical_qubits_built": 0
+        },
+        "1": {
+          "phase_bits": 18,
+          "clean_workspace_bits": 4,
+          "retained_record_bits": 6,
+          "retained_records": 1,
+          "total_logical_wires": 28,
+          "source_operations": 1,
+          "elementary_gates": 217,
+          "gate_counts": {
+            "cx": 36,
+            "ccx": 177,
+            "x": 4
+          },
+          "classical_output_bits_if_measured": 6,
+          "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
+          "record_storage_minimality_claim": false,
+          "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+          "physical_qubits_built": 0
+        },
+        "2": {
+          "phase_bits": 18,
+          "clean_workspace_bits": 4,
+          "retained_record_bits": 6,
+          "retained_records": 1,
+          "total_logical_wires": 28,
+          "source_operations": 1,
+          "elementary_gates": 156,
+          "gate_counts": {
+            "cx": 30,
+            "ccx": 122,
+            "x": 4
+          },
+          "classical_output_bits_if_measured": 6,
+          "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
+          "record_storage_minimality_claim": false,
+          "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+          "physical_qubits_built": 0
+        },
+        "3": {
+          "phase_bits": 18,
+          "clean_workspace_bits": 4,
+          "retained_record_bits": 6,
+          "retained_records": 1,
+          "total_logical_wires": 28,
+          "source_operations": 1,
+          "elementary_gates": 217,
+          "gate_counts": {
+            "cx": 36,
+            "ccx": 177,
+            "x": 4
+          },
+          "classical_output_bits_if_measured": 6,
+          "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
+          "record_storage_minimality_claim": false,
+          "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+          "physical_qubits_built": 0
+        }
+      }
+    },
+    "boundaries": [
+      "single-mode reset remains rejected in fixed sectors",
+      "reservoir is another native phase mode, not a thermal bath or free memory",
+      "only untouched modes/reference have guaranteed unchanged unconditioned marginals",
+      "sum preserved at source boundaries; elementary gates may leave the sector",
+      "fresh zero records and clean workspace required for reset semantics",
+      "record coherence and availability required for inverse recovery",
+      "Gamma, unwrapped lift transfer and cost/history remain classical",
+      "logical gate counts are construction costs, not optimality or physical performance"
     ]
   },
   "limits": {
@@ -2131,13 +2470,13 @@
     "native probability and time/energy laws independent of circuit assumptions"
   ],
   "validation": {
-    "tests": 140,
+    "tests": 156,
     "failures": 0,
     "errors": 0,
     "skipped": 0,
     "passed": true,
-    "seconds": 52.50861072800035,
-    "scope": "controller, compressed/full register, v0.3, v0.2, v0.1, calculator smoke and seven existing dynamic checks; full native/Shor suite not rerun",
+    "seconds": 97.38917224000033,
+    "scope": "balanced reset, controller, compressed/full register, v0.3, v0.2, v0.1, calculator smoke and seven existing dynamic checks; full native/Shor suite not rerun",
     "selected_dynamic_tests": [
       "test_initial_classical_memory_and_empty_query",
       "test_measurement_retains_quantum_classical_correlation",
@@ -2149,10 +2488,10 @@
     ]
   },
   "checked_sources_sha256": {
-    "phase_seam_foundation/register.py": "383e7389b469f55847d27e8d9867f1572c477aa1e5aa0c0d18ba0f18f7f1fe78",
-    "phase_seam_foundation/register_qualification.py": "771197316ffefe2efe820c248ef96f0736a81899781cab6e3007b1e1624df146",
-    "phase_seam_foundation/register_source_manifest.json": "b475e9de6677c8b345a91c973c11810a1b5645e6098495a6782008be2652532e",
-    "phase_seam_foundation/model.py": "efae81124f5d2058b7e728691b5b1feceee74a3d194835a7f2a9d2809fff6de2",
+    "phase_seam_foundation/register.py": "d29fa6736256368b5a4885744b79a852146bc63d60fa98ec4a3ac18c26fa2b9d",
+    "phase_seam_foundation/register_qualification.py": "b72ea19f00afc1e5cbce1e018e01d6f476decd4fe15deea328d49aadcc44d6c7",
+    "phase_seam_foundation/register_source_manifest.json": "bc97be9cfe56a2fd8cd19fa68d52913631d39c41e6d3287204fbd09e75a769a9",
+    "phase_seam_foundation/model.py": "642984f5be7345683374719dc66193883d0688031e49ff9ebde12c5a36a939b8",
     "phase_seam_foundation/encoding.py": "93cd7ebca26e252756bdbaa9c8686a866826f7c9c8288e9881af0fa7ea8488c7",
     "phase_seam_foundation/joint.py": "53548114a84dfb24022acee866c10b67f0bd71ec9b9b203c014cf76af8ccbb36",
     "native_relational_qc/modular_arithmetic.py": "dc59c9b09acf82cfee877d707901022f91fbe9a9284eb00cf6168e844b9368ce",
@@ -2162,10 +2501,11 @@
     "native_relational_qc/cyclotomic.py": "36a9f93fb9b6362a6141f13f4aef677de9f19642f6ea01ebb761614acab4ea86",
     "native_relational_qc/cyclotomic32.py": "33e203a7280bbe8341e37cb357f1bb6bfcaba9e695ff5144050e3a087733ab76",
     "native_relational_qc/cyclotomic64.py": "8fc9c42627feee330b00f1b56559031cc442746e830081eae09f535115d74e52",
-    "benchmarks/phase_seam_register_audit.py": "c023fca10a2f1c04155683895d7bf41ae5bbe82a3d31b83e319bd487da8ebdf7",
-    "phase_seam_foundation/controller.py": "27ea088abb4311083a314da73b49c86b3e2437b094d02d5b02ca23e57712739a",
+    "benchmarks/phase_seam_register_audit.py": "21537bf314178f5067d9c490034bb837a4364a95595bbc0e4fe7440c7530e399",
+    "phase_seam_foundation/controller.py": "ba74ab91b6ea9d1234256420225ba3ef5cc50a63ebf4ed0fa5d571af2169285d",
     "native_relational_qc/dynamic.py": "88421139cba72f0d86f3644c5933e03dd44d8afa1fdc79b250b2e8bf5390acd9",
     "tests/test_native_dynamic.py": "41f94d9520e98c80ed7f58fdacf0b60ba31455c63bbf5a313975f4d4ae6a0b27",
+    "tests/test_phase_seam_balanced_reset.py": "a43b73a7e762955284ae2d9195fe1f0cbde160f20ad90859b285000ab36b9bf0",
     "tests/test_phase_seam_controller.py": "77e39bdbc8a46cd93cb654389e9e19761d5dc44805867f519d6f45c1d72a78d3",
     "tests/test_phase_seam_sector.py": "b1f536d0691da6e9d18a8e9607403d261c5933bf330abcbeb9bf080794df6a8f",
     "tests/test_phase_seam_register.py": "06be45bb6597e18dad072cb11789baa2c300a44179c70dae054a10adfef5971c",

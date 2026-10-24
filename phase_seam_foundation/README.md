@@ -1,6 +1,23 @@
 # Phase–seam foundation prototype
 
-**New: [native read/reset with retained controller records](CONTROLLER.md).**
+**New: [balanced reset with retained records](CONTROLLER.md#61-explicit-balanced-reset-source-law).**
+The explicit `pair_reset(j,reservoir,a)` sets one mode to its reference,
+adds the old phase difference to another mode, and retains that difference
+in a fresh coherent record. The integer lift sum is preserved. The same
+controller supports full and compressed fixed sectors, including an omitted
+reset mode. At grid 64, pair_reset(0,2,0) uses **34 logical wires / 193 gates**
+in full form and **28 wires / 132 gates** when reservoir 2 is omitted.
+These include the 6 retained record bits; full/compressed conversion is extra.
+Old operations keep their meanings, and single-mode fixed-sector reset
+remains rejected. This is a new declared transfer rule, not fabricated hardware.
+
+The v0.7 audit passes **156 tests in 97.389 seconds**, with no failures,
+errors or skips: 16 balanced-reset tests plus the prior 140, with exact
+coherent full/compressed comparisons, untouched-reference marginals, dirty
+record behavior, all supported widths and existing measurement/feedback checks.
+See the current [qualification](register_qualification.json) for results.
+
+**Previous: [native read/reset with retained controller records](CONTROLLER.md).**
 Each read/reset has a fresh record of its wrapped relative phase, using the
 existing compiler, arithmetic and dynamic measurement engine. Coherent reset
 transfers information into the record; joint inverse recovery requires

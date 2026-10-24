@@ -20,14 +20,19 @@ orthogonal encoding uses 24 phase + 4 clean workspace wires at grid 64.
 With a known fixed closure sector, `omit_mode` now reduces this to 18 phase
 + 4 workspace wires through the same compiler. A reversible codec retains
 off-sector residuals; conversion peaks at the original 28 wires. The combined
-audit passes 117 tests, including full/compressed coherent equivalence.
+v0.5 audit passed 117 tests, including full/compressed coherent equivalence.
 The original two-site code and its obstruction remain unchanged.
 
 The [native controller adapter](../phase_seam_foundation/CONTROLLER.md) adds
 explicit coherent records for phase read/reset and exports record measurement
 to the existing `DynamicCircuit` engine. It counts retained memory separately
 from clean workspace and keeps the original classical Cell history. The
-combined audit passes 140 tests, including seven existing dynamic checks.
+v0.6 audit passed 140 tests, including seven existing dynamic checks.
+Version 0.7 extends that same adapter with `pair_reset(j,reservoir,a)`:
+reset plus compensating phase transfer and a retained record, preserving
+the closure sum in full and compressed layouts. The new source law and
+16 added tests are documented in the controller note; all calculator
+implementation files remain unchanged.
 
 **Latest: [six-bit Shor and proof-traced arithmetic rewrites](PHASE64_REWRITE.md).**
 `cyclotomic64` adds exact 5.625-degree phases. The optional `panini` rewrite

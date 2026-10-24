@@ -72,7 +72,8 @@ class Operation:
 
     def __post_init__(self):
         arities = {"cut": 2, "shift": 2, "swap": 2, "shear": 4,
-                   "read": 2, "reset": 2, "pair_cut": 3, "pair_shift": 3}
+                   "read": 2, "reset": 2, "pair_cut": 3, "pair_shift": 3,
+                   "pair_reset": 3}
         if type(self.kind) is not str or self.kind not in arities:
             raise ValueError("unknown operation")
         if type(self.args) is not tuple or len(self.args) != arities[self.kind]:
@@ -92,7 +93,7 @@ class Operation:
         if self.kind == "pair_shift":
             a, b, d = self.args
             return Operation("pair_shift", (a, b, -d))
-        raise ValueError("read/reset instruments have no physical inverse here")
+        raise ValueError("read/reset/pair_reset instruments have no physical inverse here")
 
     def rebase(self, delta):
         """Coordinate change, not an extra physical operation."""
@@ -106,6 +107,8 @@ class Operation:
             a[3] += delta
         elif self.kind in ("read", "reset"):
             a[1] += delta
+        elif self.kind == "pair_reset":
+            a[2] += delta
         return Operation(self.kind, tuple(a))
 
 
@@ -220,9 +223,9 @@ class Cell:
             if abs(value) > cfg.max_lift:
                 raise ResourceLimit("operation parameter limit")
         index(args[0], 4, "mode")
-        if kind in ("swap", "shear", "pair_cut", "pair_shift"):
+        if kind in ("swap", "shear", "pair_cut", "pair_shift", "pair_reset"):
             index(args[1], 4, "second mode")
-        if kind in ("shear", "pair_cut", "pair_shift") and args[0] == args[1]:
+        if kind in ("shear", "pair_cut", "pair_shift", "pair_reset") and args[0] == args[1]:
             raise ValueError("coupled modes must differ")
         values = list(self.state.lifts)
         outcome, charged = None, False
@@ -248,6 +251,13 @@ class Cell:
             j, reservoir, d = args
             values[j] += d
             values[reservoir] -= d
+        elif kind == "pair_reset":
+            # Explicit v0.7 source extension: preserve the integer lift sum.
+            # The record is wrapped; the original lifts remain in the event.
+            j, reservoir, a = args
+            outcome = self.phase(j, a)
+            values[reservoir] += values[j] - a
+            values[j] = a
         else:
             j, a = args
             outcome = self.phase(j, a)
