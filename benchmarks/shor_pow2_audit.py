@@ -24,12 +24,15 @@ ROWS=(
     (141,2,8,'flat','cyclotomic_pow2'),
     (143,2,8,'flat','cyclotomic_pow2'),
     (187,2,8,'flat','cyclotomic_pow2'),
-    (21,2,10,'flat','cyclotomic_pow2'),
+    (141,2,10,'flat','cyclotomic_pow2'),
+    (143,2,10,'flat','cyclotomic_pow2'),
+    (187,2,10,'flat','cyclotomic_pow2'),
+    (21,2,12,'flat','cyclotomic_pow2'),
 )
 
 
 def decimal(value,precision):
-    field=field_of_order(max(8,1<<precision)) if 'sparse_coefficients' in value else Cyclotomic64
+    field=Cyclotomic64 if set(value)=={'basis','coefficients'} else field_of_order(max(8,1<<precision))
     return field.from_dict(value).display(10)['decimal']
 
 

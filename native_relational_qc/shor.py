@@ -223,8 +223,10 @@ def build(modulus=15,base=2,*,precision=3,oracle='rotation15',inverse_qft=True,r
     certificate=statistics=None
     if rewrite=='panini':
         from .modular_rewrite import rewrite_circuit,verify_rewrite
-        reduced=rewrite_circuit(circuit)
-        verify_rewrite(circuit,reduced.circuit,reduced.certificate)
+        # Flat circuits may exceed 100000 gates; the search and proof budgets scale with them.
+        budgets=dict(max_checks=10_000_000) if field=='flat' else {}
+        reduced=rewrite_circuit(circuit,**budgets)
+        verify_rewrite(circuit,reduced.circuit,reduced.certificate,**(dict(max_crossings=10_000_000) if field=='flat' else {}))
         circuit,certificate,statistics=reduced.circuit,reduced.certificate,reduced.statistics
     return ShorProgram(circuit,n,a,m,controls,work,scratch,oracle,inverse_qft,oracle_gates,
                        rewrite,certificate,statistics)
@@ -234,21 +236,27 @@ def exact_phase_law(modulus,base,precision,*,inverse_qft=True,field='nested'):
     """Independent finite Fourier sum; uses f(x)=a**x mod N, no order input.
 
     field='flat' returns values in Q(zeta_max(8,2**m)). It groups x by the
-    value f(x): P(y)=sum_v |sum_{f(x)=v} zeta**(y*x)|**2/size**2, which equals
-    the double sum over equal-value pairs used for the nested fields.
+    value f(x) and counts, for every difference d, the pairs (u,v) with
+    f(u)=f(v) and v-u=d mod size; then P(y)=sum_d pairs(d) zeta**(y*d)/size**2,
+    the same double sum over equal-value pairs used for the nested fields.
     """
     if field=='flat':
+        import numpy as np
         m=_integer(precision,'exact Fourier width',1,MAX_PRECISION);size=1<<m
-        F=field_of_order(max(8,size));step=F.ORDER//size
+        F=field_of_order(max(8,size));step=F.ORDER//size;n=F.N
         if not inverse_qft:return {y:F(Fraction(1,size)) for y in range(size)}
         classes={}
         for x in range(size):classes.setdefault(pow(base,x,modulus),[]).append(x)
-        law={}
+        pairs=np.zeros(size,dtype=np.int64)
+        for xs in classes.values():
+            xs=np.array(xs,dtype=np.int64)
+            pairs+=np.bincount(((xs[None,:]-xs[:,None])%size).ravel(),minlength=size)
+        d=np.arange(size,dtype=np.int64);law={}
         for y in range(size):
-            total=F()
-            for xs in classes.values():
-                amplitude=F._make(_root_sum(xs,y,size,step),1);total=total+amplitude*amplitude.conjugate()
-            law[y]=total/(size*size)
+            e=((y*d)%size)*step;wrap=e>=n
+            # pair counts total at most size**2 < 2**53, so float64 weights stay exact.
+            weights=np.bincount(np.where(wrap,e-n,e),weights=np.where(wrap,-pairs,pairs),minlength=n)
+            law[y]=F._build(np.rint(weights).astype(np.int64),size*size)
         return law
     _integer(precision,'exact Fourier width',1,6)
     size=1<<precision
@@ -257,16 +265,6 @@ def exact_phase_law(modulus,base,precision,*,inverse_qft=True,field='nested'):
     table=[pow(base,x,modulus) for x in range(size)];powers=[root**k for k in range(size)]
     return {y:sum((powers[(y*(v-u))%size] for u in range(size) for v in range(size)
                    if table[u]==table[v]),zero)*field(Fraction(1,size*size)) for y in range(size)}
-
-
-def _root_sum(xs,y,size,step):
-    """Integer power-basis coefficients of sum_x zeta_size**(y*x) in Q(zeta_order)."""
-    half=size*step//2;out={}
-    for x in xs:
-        e=((y*x)%size)*step
-        if e>=half:out[e-half]=out.get(e-half,0)-1
-        else:out[e]=out.get(e,0)+1
-    return out
 
 
 def convergents(numerator,denominator):

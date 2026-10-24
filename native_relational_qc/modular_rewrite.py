@@ -22,7 +22,8 @@ def _empty_like(circuit):
 
 def _validate(circuit):
     if not isinstance(circuit,CompactCircuit):raise TypeError('a declared circuit is required')
-    if len(circuit.operations)>100_000:raise ResourceLimit('rewrite input exceeds 100000 gates')
+    cap=getattr(circuit,'max_gates',100_000)
+    if len(circuit.operations)>cap:raise ResourceLimit(f'rewrite input exceeds {cap} gates')
     checked=_empty_like(circuit)
     for name,qs in circuit.operations:checked.add(name,*qs)
 

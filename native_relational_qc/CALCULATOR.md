@@ -124,8 +124,12 @@ calculator JSON `simplify: "exact"` remains unsupported for phase backends.
 The explicit [cyclotomic_pow2 backend](POW2_FIELD.md) uses one flat field
 Q(zeta_M), M=2^k up to 4096, instead of the quadratic tower. Gates
 `pK/pKdg/cpK/cpKdg` are accepted for every power of two K<=4096. The field order
-is the largest K in the request. Distributions may read up to 12 sites (4096
-outputs) on this backend only. Batch limits and failure contracts match
+is the largest K in the request. On this backend only, a request may declare up
+to 1,000,000 operations and read distributions over up to 12 sites (4096
+outputs). Exact values are reported as a denominator plus the integer
+numerators of the real power-basis half, `real_numerators`. Numerators are
+stored densely in the narrowest integer width, runs of permutation gates move
+all basis labels at once, and batch limits and failure contracts match
 `cyclotomic64`.
 
 The explicit [observer32 backend](OBSERVER_RECOGNITION.md) accepts the same

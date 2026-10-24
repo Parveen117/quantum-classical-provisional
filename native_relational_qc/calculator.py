@@ -121,8 +121,9 @@ def validate(document):
     if backend in ('cyclotomic','cyclotomic32','cyclotomic64','cyclotomic_pow2','observer32') and simplify!='none':
         raise ValueError('selected phase backend does not yet support circuit reduction')
     operations = document['operations']
-    if not isinstance(operations,list) or len(operations)>100_000:
-        raise ValueError('operations must be a list of at most 100000 gates')
+    gate_cap = getattr(circuit,'max_gates',100_000)
+    if not isinstance(operations,list) or len(operations)>gate_cap:
+        raise ValueError(f'operations must be a list of at most {gate_cap} gates')
     for operation in operations:
         if (not isinstance(operation,list) or len(operation)!=2 or
             not isinstance(operation[0],str) or not isinstance(operation[1],list)):

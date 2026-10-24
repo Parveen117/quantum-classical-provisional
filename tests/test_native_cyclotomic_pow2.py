@@ -3,10 +3,12 @@ from fractions import Fraction as F
 import random
 import unittest
 
+import numpy as np
+
 from native_relational_qc.exact import OMEGA,IMAG,INV_SQRT2
 from native_relational_qc.cyclotomic64 import Cyclotomic64
-from native_relational_qc.cyclotomic_pow2 import field_of_order,_pi_bounds,_cos_bounds
-from native_relational_qc.phase_backend import PowerPhaseCircuit,Phase64Circuit,required_order
+from native_relational_qc.cyclotomic_pow2 import field_of_order,_pi_bounds,_cos_bounds,_mul_wide
+from native_relational_qc.phase_backend import PowerPhaseCircuit,PhaseCircuit,Phase64Circuit,required_order
 from native_relational_qc.calculator import calculate,validate
 from native_relational_qc.shor import build,assess,decode,exact_phase_law
 
@@ -101,6 +103,61 @@ class FlatFieldTests(unittest.TestCase):
             with self.assertRaises(ValueError):field_of_order(bad)
         with self.assertRaises(ValueError):field_of_order(64)(field_of_order(128).root())
 
+    def test_dense_and_wide_products_match_independent_references(self):
+        rng=random.Random(11)
+        # Dense int64 path against a direct integer convolution and the big-integer path.
+        Z=field_of_order(4096);n=Z.N
+        for _ in range(3):
+            va=np.array([rng.randrange(-4000,4000) for _ in range(n)],dtype=np.int64)
+            vb=np.array([rng.randrange(-4000,4000) for _ in range(n)],dtype=np.int64)
+            a=Z._build(va.copy(),7);b=Z._build(vb.copy(),5)
+            conv=np.convolve(va,vb);ref=conv[:n].copy();ref[:n-1]-=conv[n:]
+            self.assertEqual(a*b,Z._build(ref,35))
+            self.assertEqual(Z._build(np.array(_mul_wide(va.tolist(),vb.tolist(),n),dtype=np.int64),35),a*b)
+            self.assertEqual(a.item,2);self.assertEqual(len(a.data),2*n)   # int16 storage
+        # Wide coefficients (beyond int64) against a rational dictionary reference.
+        Z=field_of_order(64);n=Z.N
+        def ref_mul(x,y):
+            out={}
+            for i,p in x.items():
+                for j,q in y.items():
+                    k,s=(i+j-n,-1) if i+j>=n else (i+j,1)
+                    out[k]=out.get(k,F(0))+s*p*q
+            return {k:v for k,v in out.items() if v}
+        def ref_add(x,y):
+            out=dict(x)
+            for k,v in y.items():out[k]=out.get(k,F(0))+v
+            return {k:v for k,v in out.items() if v}
+        def lift(d):
+            out=Z()
+            for e,c in d.items():out=out+Z(c)*Z.root(e)
+            return out
+        def drop(z):return {e:c for e,c in enumerate(z.coefficients) if c}
+        for _ in range(12):
+            da={rng.randrange(n):F(rng.randrange(-2**90,2**90),rng.randrange(1,2**40)) for _ in range(rng.randrange(1,9))}
+            db={rng.randrange(n):F(rng.randrange(-2**70,2**70),rng.randrange(1,2**30)) for _ in range(rng.randrange(1,9))}
+            a,b=lift(da),lift(db)
+            self.assertEqual(a.item,0)                     # Python-integer storage
+            self.assertEqual(drop(a),da);self.assertEqual(drop(a*b),ref_mul(da,db));self.assertEqual(drop(a+b),ref_add(da,db))
+            self.assertEqual(drop(a.conjugate()),{(n-e)%n:(-c if e else c) for e,c in da.items()})
+            self.assertEqual((a*a.conjugate()).real_sign(),1)
+            self.assertEqual(Z.from_dict(a.to_dict()),a);self.assertEqual(Z.from_dict((a*a.conjugate()).to_dict()),a*a.conjugate())
+
+    def test_serialization_forms(self):
+        Z=field_of_order(16)
+        real=Z(F(3,16))+Z(F(5,64))*(Z.root(2)-Z.root(6))   # equals the earlier N=21 success value
+        self.assertEqual(real.to_dict(),dict(basis=real.to_dict()['basis'],denominator='64',real_numerators=[12,0,5]))
+        self.assertEqual(Z.from_dict(real.to_dict()),real)
+        self.assertEqual(Z(1).to_dict()['real_numerators'],[1]);self.assertEqual(Z().to_dict()['real_numerators'],[])
+        mixed=Z.root(3)*Z(F(2,3))+Z(1)
+        self.assertEqual(set(mixed.to_dict()),{'basis','sparse_coefficients'})
+        self.assertEqual(Z.from_dict(mixed.to_dict()),mixed)
+        good=real.to_dict()
+        for bad in (dict(good,basis='other'),dict(good,denominator='0'),dict(good,denominator=64),
+                    dict(good,real_numerators=[1,True]),dict(good,real_numerators=[1]*5),
+                    dict(basis=good['basis'],sparse_coefficients=[[8,'1']]),dict(basis=good['basis'],sparse_coefficients=[[1,'1'],[1,'2']])):
+            with self.assertRaises(ValueError):Z.from_dict(bad)
+
 
 class FlatBackendTests(unittest.TestCase):
     def test_gate_names_and_inferred_order(self):
@@ -142,6 +199,46 @@ class FlatBackendTests(unittest.TestCase):
         report=calculate(doc)
         self.assertEqual(report['status'],'incomplete');self.assertEqual(report['answers'],[])
 
+    def test_vectorized_permutations_match_nested_backend(self):
+        names=('x','cx','ccx','swap','h','t','tdg','s','cp64','p32dg','cp16')
+        for seed in range(6):
+            rng=random.Random(seed);c=Phase64Circuit(5)
+            for _ in range(60):
+                name=rng.choice(names);width=3 if name=='ccx' else 2 if name in ('cx','swap') or name.startswith('cp') else 1
+                c.add(name,*rng.sample(range(5),width))
+            nested=calculate(request(c,'cyclotomic64',[4,3,2,1,0]));flat=calculate(request(c,'cyclotomic_pow2',[4,3,2,1,0]))
+            self.assertEqual(nested['status'],'completed',seed);self.assertEqual(flat['status'],'completed',seed)
+            for label,value in nested['answers'][0]['probabilities'].items():
+                self.assertEqual(value['decimal'],flat['answers'][0]['probabilities'][label]['decimal'],(seed,label))
+            for key in ('gate_visits','permutation_visits','peak_branches'):
+                self.assertEqual(nested['statistics'][key],flat['statistics'][key],(seed,key))
+
+    def test_bulk_work_accounting_fails_at_the_same_unit(self):
+        c=PowerPhaseCircuit(4,16).add('h',0).add('h',1).add('h',2)
+        for q in range(3):c.add('cx',q,3).add('ccx',q,(q+1)%3,3).add('swap',q,3).add('x',3)
+        report=calculate(request(c,qubits=[3,2,1,0]))
+        used=report['statistics']['work_used']
+        self.assertEqual(report['statistics']['permutation_visits'],12*8)
+        self.assertEqual(calculate(dict(request(c,qubits=[3,2,1,0]),limits={'max_work':used}))['status'],'completed')
+        short=calculate(dict(request(c,qubits=[3,2,1,0]),limits={'max_work':20}))
+        self.assertEqual(short['status'],'incomplete');self.assertEqual(short['statistics']['work_used'],21)
+
+    def test_wide_coefficients_match_nested_backend(self):
+        c=PhaseCircuit(1)
+        for _ in range(260):c.add('h',0).add('t',0)
+        nested=calculate(request(c,'cyclotomic',[0]));flat=calculate(request(c,'cyclotomic_pow2',[0]))
+        self.assertEqual(nested['status'],'completed');self.assertEqual(flat['status'],'completed')
+        self.assertGreater(flat['statistics']['max_coefficient_bits'],63)   # Python-integer path exercised
+        for label in ('0','1'):
+            self.assertEqual(nested['answers'][0]['probabilities'][label]['decimal'],flat['answers'][0]['probabilities'][label]['decimal'])
+
+    def test_flat_backend_gate_cap(self):
+        operations=[['id',[0]]]*100_001
+        doc=dict(schema='nrqc-calculator-v1',n_qubits=1,backend='cyclotomic_pow2',operations=operations,
+                 queries=[dict(id='p',kind='probability',outcomes={'0':0})])
+        validate(doc)
+        with self.assertRaises(ValueError):validate(dict(doc,backend='cyclotomic64'))
+
 
 class FlatShorTests(unittest.TestCase):
     def test_flat_law_equals_nested_law(self):
@@ -169,6 +266,13 @@ class FlatShorTests(unittest.TestCase):
         with self.assertRaises(ValueError):build(15,2,precision=7,oracle='arithmetic')
         with self.assertRaises(ValueError):build(15,2,precision=13,oracle='arithmetic',field='flat')
         self.assertEqual(decode(0,141,2,12)['status'],'no_information')
+
+    def test_ten_bit_program_exceeds_the_old_gate_cap_and_still_reads_out(self):
+        program=build(143,2,precision=10,oracle='arithmetic',field='flat')
+        self.assertGreater(len(program.circuit.operations),100_000)
+        validate(program.request('cyclotomic_pow2'))   # 10-site readout, 1024 outputs, >100000 gates
+        law=exact_phase_law(143,2,10,field='flat');Z=field_of_order(1024)
+        self.assertEqual(sum(law.values(),Z()),Z(1))
 
 
 if __name__=='__main__':unittest.main()

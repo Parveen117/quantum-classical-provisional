@@ -1,14 +1,14 @@
 {
   "machine": "x86_64",
-  "process_peak_rss_kib": 152356,
+  "process_peak_rss_kib": 415736,
   "python": "3.12.3",
   "rows": [
     {
       "assessment": "verified",
       "backend": "cyclotomic64",
       "base": 2,
-      "build_seconds": 2.274,
-      "calculation_seconds": 30.728,
+      "build_seconds": 1.674,
+      "calculation_seconds": 27.256,
       "circuit_field": "nested",
       "exact_fourier_law_agrees": true,
       "gates": 21080,
@@ -28,8 +28,8 @@
       "assessment": "verified",
       "backend": "cyclotomic_pow2",
       "base": 2,
-      "build_seconds": 2.446,
-      "calculation_seconds": 2.53,
+      "build_seconds": 1.969,
+      "calculation_seconds": 4.751,
       "circuit_field": "nested",
       "exact_fourier_law_agrees": true,
       "gates": 21080,
@@ -43,14 +43,14 @@
         "convergents_and_doubles": "0.04849036625",
         "convergents_only": "0.00000000000"
       },
-      "work_used": 1719485
+      "work_used": 1716577
     },
     {
       "assessment": "verified",
       "backend": "cyclotomic_pow2",
       "base": 2,
-      "build_seconds": 1.786,
-      "calculation_seconds": 1.755,
+      "build_seconds": 1.717,
+      "calculation_seconds": 1.079,
       "circuit_field": "flat",
       "exact_fourier_law_agrees": true,
       "gates": 20940,
@@ -64,14 +64,14 @@
         "convergents_and_doubles": "0.04849036625",
         "convergents_only": "0.00000000000"
       },
-      "work_used": 1401996
+      "work_used": 1399088
     },
     {
       "assessment": "verified",
       "backend": "cyclotomic_pow2",
       "base": 2,
-      "build_seconds": 2.625,
-      "calculation_seconds": 8.617,
+      "build_seconds": 2.345,
+      "calculation_seconds": 4.832,
       "circuit_field": "flat",
       "exact_fourier_law_agrees": true,
       "gates": 28896,
@@ -85,14 +85,14 @@
         "convergents_and_doubles": "0.31557217175",
         "convergents_only": "0.04354965345"
       },
-      "work_used": 7728110
+      "work_used": 7716386
     },
     {
       "assessment": "verified",
       "backend": "cyclotomic_pow2",
       "base": 2,
-      "build_seconds": 2.933,
-      "calculation_seconds": 7.758,
+      "build_seconds": 2.596,
+      "calculation_seconds": 4.832,
       "circuit_field": "flat",
       "exact_fourier_law_agrees": true,
       "gates": 31065,
@@ -106,14 +106,14 @@
         "convergents_and_doubles": "0.06496212605",
         "convergents_only": "0.00000000000"
       },
-      "work_used": 8269444
+      "work_used": 8254612
     },
     {
       "assessment": "verified",
       "backend": "cyclotomic_pow2",
       "base": 2,
-      "build_seconds": 3.463,
-      "calculation_seconds": 7.451,
+      "build_seconds": 2.7,
+      "calculation_seconds": 3.108,
       "circuit_field": "flat",
       "exact_fourier_law_agrees": true,
       "gates": 35152,
@@ -127,28 +127,91 @@
         "convergents_and_doubles": "0.11673636155",
         "convergents_only": "0.00000000000"
       },
-      "work_used": 9200749
+      "work_used": 9190701
     },
     {
       "assessment": "verified",
       "backend": "cyclotomic_pow2",
       "base": 2,
-      "build_seconds": 1.093,
-      "calculation_seconds": 39.283,
+      "build_seconds": 2.848,
+      "calculation_seconds": 36.956,
       "circuit_field": "flat",
       "exact_fourier_law_agrees": true,
-      "gates": 8681,
-      "modulus": 21,
-      "n_qubits": 29,
-      "peak_branches": 6140,
+      "gates": 36799,
+      "modulus": 141,
+      "n_qubits": 38,
+      "peak_branches": 47036,
       "precision_bits": 10,
       "representation": "sparse computational-basis amplitudes in flat Q(zeta_1024)",
       "status": "completed",
       "success_probability": {
-        "convergents_and_doubles": "0.66411959055",
-        "convergents_only": "0.33084321815"
+        "convergents_and_doubles": "0.67659302105",
+        "convergents_only": "0.23800262265"
       },
-      "work_used": 9138935
+      "work_used": 39546291
+    },
+    {
+      "assessment": "verified",
+      "backend": "cyclotomic_pow2",
+      "base": 2,
+      "build_seconds": 3.584,
+      "calculation_seconds": 36.14,
+      "circuit_field": "flat",
+      "exact_fourier_law_agrees": true,
+      "gates": 39544,
+      "modulus": 143,
+      "n_qubits": 38,
+      "peak_branches": 61424,
+      "precision_bits": 10,
+      "representation": "sparse computational-basis amplitudes in flat Q(zeta_1024)",
+      "status": "completed",
+      "success_probability": {
+        "convergents_and_doubles": "0.24977348185",
+        "convergents_only": "0.12859349195"
+      },
+      "work_used": 42096417
+    },
+    {
+      "assessment": "verified",
+      "backend": "cyclotomic_pow2",
+      "base": 2,
+      "build_seconds": 3.871,
+      "calculation_seconds": 20.664,
+      "circuit_field": "flat",
+      "exact_fourier_law_agrees": true,
+      "gates": 44847,
+      "modulus": 187,
+      "n_qubits": 38,
+      "peak_branches": 40768,
+      "precision_bits": 10,
+      "representation": "sparse computational-basis amplitudes in flat Q(zeta_1024)",
+      "status": "completed",
+      "success_probability": {
+        "convergents_and_doubles": "0.43054765325",
+        "convergents_only": "0.24511793055"
+      },
+      "work_used": 46779804
+    },
+    {
+      "assessment": "verified",
+      "backend": "cyclotomic_pow2",
+      "base": 2,
+      "build_seconds": 1.238,
+      "calculation_seconds": 90.745,
+      "circuit_field": "flat",
+      "exact_fourier_law_agrees": true,
+      "gates": 10413,
+      "modulus": 21,
+      "n_qubits": 31,
+      "peak_branches": 24572,
+      "precision_bits": 12,
+      "representation": "sparse computational-basis amplitudes in flat Q(zeta_4096)",
+      "status": "completed",
+      "success_probability": {
+        "convergents_and_doubles": "0.66602222255",
+        "convergents_only": "0.33270320245"
+      },
+      "work_used": 43919555
     }
   ],
   "schema": "nrqc-pow2-shor-audit-v1",
