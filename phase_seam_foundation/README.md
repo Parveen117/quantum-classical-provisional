@@ -1,5 +1,14 @@
 # Phase–seam foundation prototype
 
+**New: [coupled response and optical observer](PHOTONIC_RESPONSE.md).**
+The v0.12 local audit differentiates the actual four-phase component word in
+the existing exact field. At the ideal quadrature target, basis powers read
+one phase combination; coherent local probes read three; interference with
+a bypass reads four relative combinations. Reference drift is explicit.
+The unrun acquisition plan binds the GDS and reserves all 28 heater responses
+per unit, with all 31 assembled controls recorded. No material coefficients,
+thermal/Maxwell solve or drive voltages are supplied by this ideal audit.
+
 **New: [heated-core GDS and physical calibration](PHOTONIC_LAYOUT.md).**
 The generated core subassembly places six exchange units, four bypasses and
 an isolated guard. Its 28 heaters and 56 pads have a mapped physical

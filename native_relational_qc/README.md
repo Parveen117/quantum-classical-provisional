@@ -62,6 +62,12 @@ Exact phase-word checks reuse this calculator; CAD geometry checks use a
 separate optional toolchain. No optical/thermal performance model is inferred
 from the generated polygons.
 
+The [v0.12 response audit](../phase_seam_foundation/PHOTONIC_RESPONSE.md)
+uses the same cyclotomic field for analytic component derivatives and checks
+reference interference against Phase64Circuit. It exposes blind measurement
+directions before fitting electrothermal/optical response. Its empty
+acquisition plan carries no measured coefficients or drive commands.
+
 **Latest: [six-bit Shor and proof-traced arithmetic rewrites](PHASE64_REWRITE.md).**
 `cyclotomic64` adds exact 5.625-degree phases. The optional `panini` rewrite
 removes proved redundant X/CX/CCX words and independently replays each deletion.

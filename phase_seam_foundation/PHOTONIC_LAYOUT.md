@@ -7,6 +7,10 @@ geometry checks; no fabrication submission, packaged apparatus or lab data.
 [Geometry qualification](layout/layout_qualification.json) ·
 [31-channel calibration template](layout/physical_calibration_template.json).
 
+The subsequent [v0.12 response audit](PHOTONIC_RESPONSE.md) derives optical
+observer sensitivity for this component word and a coupled acquisition plan.
+Its exact ideal Jacobian does not replace the open material/measurement work.
+
 ![Actual generated exchange-unit geometry](layout/exchange_unit.png)
 
 ## 1. What is now drawn

@@ -85,6 +85,14 @@ binds the GDS bytes and all bias controls. Optical coupling, packaging,
 full foundry review and measured calibration remain open.
 Validation: 199 targeted calculator tests and 9 separate CAD tests pass.
 
+The [v0.12 coupled-response audit](phase_seam_foundation/PHOTONIC_RESPONSE.md)
+now identifies which phase changes those optical measurements can read.
+At a quadrature target, basis powers have rank one, local coherent readings
+rank three, and bypass-reference readings rank four. The reference can drift;
+global phase remains invisible. An unmeasured plan binds all 28 chip heater
+responses to the GDS. Exact component algebra and material calibration remain
+separate: no thermal/Maxwell prediction or physical performance is inferred.
+
 ## Native relational calculation engine
 
 The [linear-recognition upgrade](native_relational_qc/LINEAR_RECOGNITION.md)
