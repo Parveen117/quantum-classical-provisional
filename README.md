@@ -58,6 +58,15 @@ The v0.8 audit passes 170 tests in 110.823 seconds. Realizing the declared
 generator in a material device remains open; binary verification circuits
 do not establish continuous physical confinement.
 
+The [first carrier blueprint](phase_seam_foundation/PHOTONIC_EXCHANGE.md)
+maps a grid-4 fixed-pair balanced exchange to 16 single-photon optical code
+paths: six interferometers and four bypasses, plus an isolated guard.
+It includes a logical netlist and 106-setting unrun characterization
+protocol. The selected SiN/source/detector architecture still needs process
+geometry and calibration. This is an encoded interaction demonstrator;
+16 paths are not 16 independent qubits or a scalable 2056-qubit device.
+The v0.9 combined audit passes 181 tests in 111.008 seconds.
+
 ## Native relational calculation engine
 
 The [linear-recognition upgrade](native_relational_qc/LINEAR_RECOGNITION.md)

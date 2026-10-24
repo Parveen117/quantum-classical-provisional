@@ -1,8 +1,8 @@
 {
-  "schema": "phase-seam-register-source-v5",
+  "schema": "phase-seam-register-source-v6",
   "author": "Monty",
   "date": "2026-10-24",
-  "parent_commit": "deeb6f13ff166eabf64e5c4e36bf1d8b183975c7",
+  "parent_commit": "42de374e598681ae0594ccbead9a174e0bd782f7",
   "duplicate_audit": {
     "scope": "All seven branch-tip recursive trees; local Python/Markdown content search; read existing arithmetic, memory experiments, observer transport and master README. No claim about deleted branches or other repositories.",
     "trees": [
@@ -32,8 +32,8 @@
       },
       {
         "branch": "codex/native-relational-qc-v1-20261018",
-        "commit": "deeb6f13ff166eabf64e5c4e36bf1d8b183975c7",
-        "files": 409,
+        "commit": "42de374e598681ae0594ccbead9a174e0bd782f7",
+        "files": 412,
         "truncated": false
       },
       {
@@ -123,6 +123,24 @@
       "authors": "Kempe, Bacon, Lidar, Whaley",
       "url": "https://arxiv.org/abs/quant-ph/0004064",
       "scope": "Established Hamiltonian control preserving encoded subspaces throughout gates; source for context only. Its decoherence-free/noise assumptions and exchange locality results are not transferred to this native phase code."
+    },
+    {
+      "title": "An Optimal Design for Universal Multiport Interferometers",
+      "authors": "Clements, Humphreys, Metcalf, Kolthammer, Walmsley",
+      "url": "https://arxiv.org/abs/1603.08788",
+      "scope": "Established optical unitary decomposition using beam splitters and phase shifters; no novelty claim for optical interferometry."
+    },
+    {
+      "title": "20-Mode Universal Quantum Photonic Processor",
+      "authors": "Taballione et al.",
+      "url": "https://arxiv.org/abs/2203.01801v5",
+      "scope": "Published Si3N4 multiport and control implementation establishes component-scale precedent, not performance of this unbuilt design."
+    },
+    {
+      "title": "A manufacturable platform for photonic quantum computing",
+      "authors": "PsiQuantum team",
+      "url": "https://www.nature.com/articles/s41586-025-08820-7",
+      "scope": "Published heralded sources, interferometers and detection modules; reported conditional benchmarks are not loss-inclusive guarantees for this design."
     }
   ],
   "claim_boundary": "A new adapter to existing arithmetic, not a new quantum postulate, physical device, quantum speedup, conversion from v0.3 code, or complete phase/seam/history quantum encoding.",
@@ -191,5 +209,30 @@
       "laboratory pulse area is not derived native time"
     ],
     "claim_boundary": "Conditional operator-level continuous sector preservation, not a material implementation, one/two-qubit locality theorem, noise-free device or speedup. Binary verification gates can leave the sector."
+  },
+  "v0_9_duplicate_check": {
+    "method": "All seven branch heads checked; six others unchanged. Searched local Python/Markdown for photonic, waveguide, Mach-Zehnder, beamsplitter and carrier implementations. Read 2056-site design and Qmet evidence boundary; did not replay IBM jobs.",
+    "finding": "No existing photonic exchange netlist found. Existing 2056 design is technology-neutral; Qmet/IBM evidence is separate and cannot establish optical validation.",
+    "changes": [
+      "photonic_exchange.py: bounded mode routing, exact scattering columns, netlist and unrun experiment plan",
+      "fixed-pair single-photon encoding of native balanced exchange",
+      "herald-window bookkeeping retains core, guard, no-click and multiple-click categories",
+      "reuse existing cyclotomic coefficients, native control map and phase engine"
+    ],
+    "new_choices": [
+      "grid-4 fixed-pair demonstrator: 16 core paths and one isolated guard",
+      "Si3N4 path interferometers, nominal 1550 nm, external heralded SPDC source and SNSPD detection",
+      "six disjoint exchange MZIs and four fixed bypasses with calibrated port phases",
+      "fixed pair sum/reference encoding; not four independent physical phase modes",
+      "guard-injection optics physically bypassed in ordinary operation",
+      "106 proposed characterization settings; shot count/confidence/tolerances not assigned before calibration"
+    ],
+    "unresolved": [
+      "foundry/process design kit and mask geometry",
+      "physical source, loss, phase, detector and timing calibration",
+      "native independent-mode realization and scalable multi-photon gates",
+      "nondestructive record measurement and recycling"
+    ],
+    "evidence_boundary": "Design and exact local algebra only. No experiment run, measured fidelity, procurement, hardware submission or transfer of earlier IBM evidence."
   }
 }

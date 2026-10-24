@@ -38,9 +38,16 @@ The [continuous native control targets](../phase_seam_foundation/SECTOR_CONTROL.
 derive sector-preserving paths from native permutation involutions.
 `sector_control.py` exports exact fractional-angle verification to this
 calculator's existing phase engine and controlled arithmetic, adding no
-new amplitude backend. The current audit passes 170 tests. The abstract
+new amplitude backend. The v0.8 audit passed 170 tests. The abstract
 generator and the binary verification gadget have different physical
 claims: the latter does not prove sector confinement during its gates.
+
+The [photonic carrier adapter](../phase_seam_foundation/PHOTONIC_EXCHANGE.md)
+now supplies a logical path-interferometer netlist for a restricted native
+balanced exchange and an unrun lab characterization plan. Exact columns
+reuse existing coefficients and phase execution; no simulator is added.
+The current combined audit passes 181 tests. No optical hardware evidence
+or scalable qubit capacity is inferred from that design.
 
 **Latest: [six-bit Shor and proof-traced arithmetic rewrites](PHASE64_REWRITE.md).**
 `cyclotomic64` adds exact 5.625-degree phases. The optional `panini` rewrite

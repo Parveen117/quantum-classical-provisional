@@ -345,3 +345,10 @@ coupling/time/energy, leakage and coherence measurements, initialization
 and record recycling. Coherent unwrapped lift/path/cost storage remains open.
 The next hardware milestone is a carrier-specific implementation of this
 interaction and its intermediate-angle acceptance tests.
+
+The subsequent [v0.9 photonic design](PHOTONIC_EXCHANGE.md) supplies one
+restricted encoded realization: a fixed-pair exchange on single-photon
+paths, with an exact MZI factorization, logical netlist and unrun
+characterization plan. It does not establish independently conserved
+four-mode material phases or fabrication/calibration. This v0.8
+mathematical construction and its implementation remain unchanged.

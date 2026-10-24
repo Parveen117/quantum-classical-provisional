@@ -5,6 +5,33 @@ from .model import Cell, Config, Operation as O
 from .register import compile_register, closure_codec, bind_cell, verify_program, verify_transition
 from .controller import compile_controller, bind_controller, verify_controller_transition
 from .sector_control import compile_sector_control, pulse_coefficients, verify_sector_control
+from .photonic_exchange import design_photonic_exchange, verify_photonic_exchange
+
+
+def photonic_report():
+    import hashlib,json
+    layout=design_photonic_exchange()
+    def digest(value):return hashlib.sha256((json.dumps(value,indent=2)+"\n").encode()).hexdigest()
+    netlist=layout.netlist();protocol=layout.experiment_plan()
+    return dict(status="DESIGN_ONLY",evidence_class="LOCAL_IDEAL_CALCULATION",hardware_job_id=None,
+                candidate=netlist["engineering_choice"],resources=layout.resources(),
+                native_domain="fixed pair sum q=0, reference a=0, two spectator modes fixed zero, one retained pointer",
+                route_pairs=[list(p) for p in layout.pairs],fixed_ports=list(layout.fixed),guard=layout.guard,
+                canonical_layout_verified=verify_photonic_exchange(layout),
+                transfer="each two-cycle uses H diag(1,exp(-i*theta)) H; fixed paths are identity",
+                artifacts=dict(netlist="photonic_exchange_netlist.json",netlist_sha256=digest(netlist),
+                               protocol="photonic_exchange_protocol.json",protocol_sha256=digest(protocol)),
+                proposed_settings=dict(total=protocol["settings_count"],basis=80,cross_block_coherence=24,guard_controls=2,
+                                       herald_windows_per_setting=None,measurements=None),
+                scale_comparison={str(grid):design_photonic_exchange(grid=grid).resources() for grid in (4,8,64)},
+                boundaries=["one photon across many paths is not many independent qubits",
+                            "four independent physical phase channels are not built or measured",
+                            "guard tests optical code leakage, not an independent native closure charge",
+                            "ordinary photon detection destroys the joint data/pointer carrier",
+                            "bright-light calibration is not quantum-carrier qualification",
+                            "all losses and herald-window categories must be retained",
+                            "generic mesh endpoint equivalence does not prove its internal path stays in the code",
+                            "fabrication geometry, phase-voltage maps, errors, rates and budget remain unmeasured"])
 
 
 def sector_control_report():
@@ -217,7 +244,7 @@ def report():
         ("three_operation_closed_word",word)):
         resource_cases[name] = compile_register(ops).resources()
     return dict(
-        schema="phase-seam-register-v0.8",author="Monty",
+        schema="phase-seam-register-v0.9",author="Monty",
         status="wrapped-phase permutation compiler reusing existing native arithmetic",
         assumptions=["orthogonal labels","clean workspace","standard coherent gate semantics if used as quantum circuit"],
         program=dict(source_operations=[dict(kind=o.kind,args=list(o.args)) for o in word],
@@ -243,6 +270,7 @@ def report():
         controller=controller_report(),
         balanced_reset=balanced_reset_report(),
         sector_control=sector_control_report(),
+        photonic_exchange=photonic_report(),
         limits=dict(power_of_two_grids=[1<<w for w in range(2,13)],max_gates=100000,
                     source_guards="Config parameter/event limits; bound Cell replay also checks lift and rational-cost limits",
                     closure="whole fixed sector preserved after each source operation; elementary gates may leave it",

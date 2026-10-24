@@ -1,7 +1,7 @@
 # Four-mode phase–seam cell: functional hardware contract
 
-Author: Monty. Version 0.1. Status: testable interface proposal; no fabricated
-device, component selection, measured tolerances, or quantum capacity claim.
+Author: Monty. Version 0.9. Status: functional interface and first encoded
+carrier design; no fabricated device or measured tolerances/capacity.
 
 The [v0.2 joint-readout note](JOINT_READOUT.md) now supplies a conditional
 two-site algebraic quantum completion and the explicit coupling target
@@ -70,6 +70,16 @@ verifies exact sampled operators; its intermediate gates still need not
 preserve the sector. The unchanged hardware task is to realize the
 declared native symmetric generator and measure its intermediate evolution.
 
+The [v0.9 photonic prototype](PHOTONIC_EXCHANGE.md) selects a first encoded
+realization: a single photon across 16 SiN code paths for a grid-4 fixed
+pair sum and one pointer. Six disjoint MZIs and four bypass paths implement
+the balanced exchange; an isolated guard path monitors optical code escape.
+The nominal operating target is 1550 nm, with an external heralded SPDC
+source and SNSPD readout. An exact netlist and 106-setting unrun protocol
+are included. This represents a restricted native subspace, not four
+independent physical phase channels. The path count is not a qubit count.
+Fabrication geometry, phase-voltage maps and measured performance remain open.
+
 The proposed hardware primitive stores **four controllable cyclic modes**, a
 seam calibration and retained history. It is not specified as four qubits.
 Its required actions follow the finite operational model in
@@ -113,12 +123,13 @@ updates and expose the same interface as the Python model. Such a device would
 test classical phase transfer, calibration and memory; it would not establish
 quantum coherence or an unknown quantum-state measurement law.
 
-We have **not** selected electronic oscillators, optical modes, spins or
-another material as the quantum substrate. The manuscripts do not yet give
-a physical interaction/readout law from which to choose one. Choosing a
-carrier now as the definitive QPU would add an unsupported physical premise.
-Neither cryogenic operation nor room-temperature quantum operation follows
-from the phase/seam notation alone.
+The selected first **encoded demonstrator** uses optical paths, with a
+derived MZI transfer matrix for the native exchange. This does not select
+a definitive scalable QPU substrate or prove a material realization of
+four independent native modes. Carrier choice is an engineering addition;
+the selected SNSPD readout also requires detector cooling. Neither a
+room-temperature apparatus nor a full quantum computer follows from the
+phase/seam notation.
 
 The executable minimum has these interfaces:
 
@@ -144,10 +155,12 @@ uncertainties; writing a target value into a log is not evidence it happened.
 1. **Finite consistency — implemented.** Exact cell transitions, closure
    checks, bounded records, explicit normalized classical preparation/readout,
    and local-composition limitations have tests and reproducible reports.
-2. **Physical transfer laws — open.** Specify a candidate carrier, preparation,
-   cut, coupled transfer and measurement instrument. Give the state-dependent
-   dynamics and noise/cost units. Resolve how a lift/path is observed and how
-   the positive Gamma ratio sets a seam axis.
+2. **Physical transfer laws — candidate specified, validation open.** The
+   v0.9 encoded photonic route has an explicit coupled transfer, codebook,
+   source/readout choice and characterization plan. Fabrication, calibrated
+   state preparation, noise/cost units and measured transfer remain open.
+   Independent lift/path observation and the physical Gamma/seam mapping
+   are not supplied by that encoding.
 3. **Quantum recovery or distinguishable new prediction — open.** Define the
    native joint-state law, recover the required quantum probabilities or give
    a falsifiable alternative. Current positive shared preparations plus local
@@ -168,19 +181,16 @@ without treating its assumptions as established laws of nature.
 
 ## Concrete next deliverable
 
-The v0.2 two-site preparation/readout model and v0.4 reversible phase-register
-interface now exist as separate conditional software constructions. The next
-physical design must specify a carrier's state variables, coherent preparation,
-at least one balanced-cut interaction, and an independent phase-sensitive
-readout. Compare the measured transfer law to the exact compiled example,
-including workspace cleanup and any intermediate closure-sector excursions.
+The v0.9 carrier blueprint, logical netlist and ideal response protocol are
+ready for review by a photonics lab. Next, a chosen process kit or calibrated
+laboratory platform must supply the physical geometry, complete input/output
+network, phase-voltage maps, source/detector response and loss budget.
+Only then can measured intermediate-angle transfer and cross-block phase
+be compared with the proposed operator.
 
-The read/reset adapter now specifies a finite controller/environment record
-and logical storage budget, including an explicit closure-preserving
-balanced reset. The v0.8 construction supplies its conditional continuous
-operator path and off-sector perturbation bound. Physical initialization,
-noise, recycling, material realization of that path and energy accounting
-remain open. Current coherent records
-contain wrapped outcomes; classical Cell
-replay does not establish coherent unwrapped path/cost history. These transfer
-and preparation laws remain the missing link to a material hardware design.
+The prototype's guard monitors optical code escape; closure is built into
+its fixed-sum code and is not independently verified on four physical
+phase channels. Terminal photon detection destroys the joint data/pointer
+carrier, so nondestructive record measurement and recycling remain open.
+Coherent unwrapped path/cost history and a scalable architecture also remain
+separate requirements. No hardware experiment has been submitted.

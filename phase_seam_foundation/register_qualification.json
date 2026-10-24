@@ -1,5 +1,5 @@
 {
-  "schema": "phase-seam-register-v0.8",
+  "schema": "phase-seam-register-v0.9",
   "author": "Monty",
   "status": "wrapped-phase permutation compiler reusing existing native arithmetic",
   "assumptions": [
@@ -3285,6 +3285,176 @@
     "evidence_class": "LOCAL_IDEAL_CALCULATION",
     "hardware_job_id": null
   },
+  "photonic_exchange": {
+    "status": "DESIGN_ONLY",
+    "evidence_class": "LOCAL_IDEAL_CALCULATION",
+    "hardware_job_id": null,
+    "candidate": {
+      "carrier": "single photon in Si3N4 waveguide paths",
+      "nominal_wavelength_nm": 1550,
+      "source": "external heralded SPDC photon-pair source",
+      "readout": "SNSPDs and time tagging",
+      "guard_test": "physically bypassed or removed in normal operation"
+    },
+    "resources": {
+      "grid": 4,
+      "signal_photons_in_code": 1,
+      "independent_data_label_bits": 2,
+      "retained_pointer_label_bits": 2,
+      "core_optical_paths": 16,
+      "monitored_guard_paths": 1,
+      "total_layout_paths": 17,
+      "exchange_interferometers": 6,
+      "balanced_couplers_in_exchange_core": 12,
+      "variable_differential_phases": 6,
+      "fixed_bypass_paths": 4,
+      "independent_physical_qubits_claim": false,
+      "physical_device_built": false,
+      "excluded_from_core_count": [
+        "photon source and herald channel",
+        "input routing and coherent preparation",
+        "phase trims and stabilization",
+        "output analysis, detectors and time tagging",
+        "guard-injection test coupler",
+        "second pass or second bank for recovery tests"
+      ],
+      "scaling": "L**2 paths for this restricted pair plus one pointer; full fixed four-mode sector plus one pointer needs L**4"
+    },
+    "native_domain": "fixed pair sum q=0, reference a=0, two spectator modes fixed zero, one retained pointer",
+    "route_pairs": [
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        12
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        7,
+        13
+      ],
+      [
+        11,
+        14
+      ]
+    ],
+    "fixed_ports": [
+      0,
+      5,
+      10,
+      15
+    ],
+    "guard": 16,
+    "canonical_layout_verified": true,
+    "transfer": "each two-cycle uses H diag(1,exp(-i*theta)) H; fixed paths are identity",
+    "artifacts": {
+      "netlist": "photonic_exchange_netlist.json",
+      "netlist_sha256": "af60e2cce5cd60965431b4e86d3f1c6ebda8fc8cee83561c79410d1286d5fb58",
+      "protocol": "photonic_exchange_protocol.json",
+      "protocol_sha256": "d909f38168989b964256c77c90b4a8eaddb8316bfad2dec7c14f3f45eaa974c2"
+    },
+    "proposed_settings": {
+      "total": 106,
+      "basis": 80,
+      "cross_block_coherence": 24,
+      "guard_controls": 2,
+      "herald_windows_per_setting": null,
+      "measurements": null
+    },
+    "scale_comparison": {
+      "4": {
+        "grid": 4,
+        "signal_photons_in_code": 1,
+        "independent_data_label_bits": 2,
+        "retained_pointer_label_bits": 2,
+        "core_optical_paths": 16,
+        "monitored_guard_paths": 1,
+        "total_layout_paths": 17,
+        "exchange_interferometers": 6,
+        "balanced_couplers_in_exchange_core": 12,
+        "variable_differential_phases": 6,
+        "fixed_bypass_paths": 4,
+        "independent_physical_qubits_claim": false,
+        "physical_device_built": false,
+        "excluded_from_core_count": [
+          "photon source and herald channel",
+          "input routing and coherent preparation",
+          "phase trims and stabilization",
+          "output analysis, detectors and time tagging",
+          "guard-injection test coupler",
+          "second pass or second bank for recovery tests"
+        ],
+        "scaling": "L**2 paths for this restricted pair plus one pointer; full fixed four-mode sector plus one pointer needs L**4"
+      },
+      "8": {
+        "grid": 8,
+        "signal_photons_in_code": 1,
+        "independent_data_label_bits": 3,
+        "retained_pointer_label_bits": 3,
+        "core_optical_paths": 64,
+        "monitored_guard_paths": 1,
+        "total_layout_paths": 65,
+        "exchange_interferometers": 28,
+        "balanced_couplers_in_exchange_core": 56,
+        "variable_differential_phases": 28,
+        "fixed_bypass_paths": 8,
+        "independent_physical_qubits_claim": false,
+        "physical_device_built": false,
+        "excluded_from_core_count": [
+          "photon source and herald channel",
+          "input routing and coherent preparation",
+          "phase trims and stabilization",
+          "output analysis, detectors and time tagging",
+          "guard-injection test coupler",
+          "second pass or second bank for recovery tests"
+        ],
+        "scaling": "L**2 paths for this restricted pair plus one pointer; full fixed four-mode sector plus one pointer needs L**4"
+      },
+      "64": {
+        "grid": 64,
+        "signal_photons_in_code": 1,
+        "independent_data_label_bits": 6,
+        "retained_pointer_label_bits": 6,
+        "core_optical_paths": 4096,
+        "monitored_guard_paths": 1,
+        "total_layout_paths": 4097,
+        "exchange_interferometers": 2016,
+        "balanced_couplers_in_exchange_core": 4032,
+        "variable_differential_phases": 2016,
+        "fixed_bypass_paths": 64,
+        "independent_physical_qubits_claim": false,
+        "physical_device_built": false,
+        "excluded_from_core_count": [
+          "photon source and herald channel",
+          "input routing and coherent preparation",
+          "phase trims and stabilization",
+          "output analysis, detectors and time tagging",
+          "guard-injection test coupler",
+          "second pass or second bank for recovery tests"
+        ],
+        "scaling": "L**2 paths for this restricted pair plus one pointer; full fixed four-mode sector plus one pointer needs L**4"
+      }
+    },
+    "boundaries": [
+      "one photon across many paths is not many independent qubits",
+      "four independent physical phase channels are not built or measured",
+      "guard tests optical code leakage, not an independent native closure charge",
+      "ordinary photon detection destroys the joint data/pointer carrier",
+      "bright-light calibration is not quantum-carrier qualification",
+      "all losses and herald-window categories must be retained",
+      "generic mesh endpoint equivalence does not prove its internal path stays in the code",
+      "fabrication geometry, phase-voltage maps, errors, rates and budget remain unmeasured"
+    ]
+  },
   "limits": {
     "power_of_two_grids": [
       4,
@@ -3316,13 +3486,13 @@
     "native probability and time/energy laws independent of circuit assumptions"
   ],
   "validation": {
-    "tests": 170,
+    "tests": 181,
     "failures": 0,
     "errors": 0,
     "skipped": 0,
     "passed": true,
-    "seconds": 110.82323935700333,
-    "scope": "continuous sector control, balanced reset, controller, compressed/full register, v0.3, v0.2, v0.1, calculator smoke and seven existing dynamic checks; full native/Shor suite not rerun",
+    "seconds": 111.00783233699985,
+    "scope": "photonic design, continuous sector control, balanced reset, controller, compressed/full register, v0.3, v0.2, v0.1, calculator smoke and seven existing dynamic checks; full native/Shor suite not rerun",
     "selected_dynamic_tests": [
       "test_initial_classical_memory_and_empty_query",
       "test_measurement_retains_quantum_classical_correlation",
@@ -3335,8 +3505,8 @@
   },
   "checked_sources_sha256": {
     "phase_seam_foundation/register.py": "d29fa6736256368b5a4885744b79a852146bc63d60fa98ec4a3ac18c26fa2b9d",
-    "phase_seam_foundation/register_qualification.py": "3412be4b7f113275464044c5259e07b59fe1dbbe3c7fbcdcf00466ac51d5329a",
-    "phase_seam_foundation/register_source_manifest.json": "19600520ff26c2657bce26061694bbc9732064de6405ecb7b193ce5dc8a37edb",
+    "phase_seam_foundation/register_qualification.py": "91896131fb94905d2ef167984fbb2fedf25e43c376db51d7047710f3cb6604b0",
+    "phase_seam_foundation/register_source_manifest.json": "2029d69401bfc56268126fc13441650abd756fa448a122a0fbb7dba9bd0077d6",
     "phase_seam_foundation/model.py": "642984f5be7345683374719dc66193883d0688031e49ff9ebde12c5a36a939b8",
     "phase_seam_foundation/encoding.py": "93cd7ebca26e252756bdbaa9c8686a866826f7c9c8288e9881af0fa7ea8488c7",
     "phase_seam_foundation/joint.py": "53548114a84dfb24022acee866c10b67f0bd71ec9b9b203c014cf76af8ccbb36",
@@ -3347,11 +3517,13 @@
     "native_relational_qc/cyclotomic.py": "36a9f93fb9b6362a6141f13f4aef677de9f19642f6ea01ebb761614acab4ea86",
     "native_relational_qc/cyclotomic32.py": "33e203a7280bbe8341e37cb357f1bb6bfcaba9e695ff5144050e3a087733ab76",
     "native_relational_qc/cyclotomic64.py": "8fc9c42627feee330b00f1b56559031cc442746e830081eae09f535115d74e52",
-    "benchmarks/phase_seam_register_audit.py": "7f050854ecce1213b5f88fedf15e51119b8c21043b1bc65bfcaf84cec9d200f0",
+    "benchmarks/phase_seam_register_audit.py": "d62cc22784c161d1e3c7e954e19b63ace8c4ff65e8215c8a3e9f9c748bd92b13",
     "phase_seam_foundation/controller.py": "ba74ab91b6ea9d1234256420225ba3ef5cc50a63ebf4ed0fa5d571af2169285d",
     "phase_seam_foundation/sector_control.py": "fe528d000e7465e5ba359c6195172720624d5bebca92f15f1d03f9af6cf5694a",
     "native_relational_qc/dynamic.py": "88421139cba72f0d86f3644c5933e03dd44d8afa1fdc79b250b2e8bf5390acd9",
     "tests/test_native_dynamic.py": "41f94d9520e98c80ed7f58fdacf0b60ba31455c63bbf5a313975f4d4ae6a0b27",
+    "phase_seam_foundation/photonic_exchange.py": "1414ba5fffd110d35f339941059cccd086fd1b7cc4a3df84c3794095c4d77997",
+    "tests/test_phase_seam_photonic_exchange.py": "532cdb11b8b63410f4849a3ee727dbec80c09ef42ff06915bda7ff7bdff79fc5",
     "tests/test_phase_seam_sector_control.py": "3f69a2492214a8fdd97019a4d36e6d415251303e66abc1867108d038ab84643c",
     "tests/test_phase_seam_balanced_reset.py": "a43b73a7e762955284ae2d9195fe1f0cbde160f20ad90859b285000ab36b9bf0",
     "tests/test_phase_seam_controller.py": "77e39bdbc8a46cd93cb654389e9e19761d5dc44805867f519d6f45c1d72a78d3",
