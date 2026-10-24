@@ -1,6 +1,11 @@
 # Native Relational Quantum Computing — v0.1
 
-**Latest: [minimum linear future banks](LINEAR_RECOGNITION.md).** Exact row-space
+**Latest: [six-bit Shor and proof-traced arithmetic rewrites](PHASE64_REWRITE.md).**
+`cyclotomic64` adds exact 5.625-degree phases. The optional `panini` rewrite
+removes proved redundant X/CX/CCX words and independently replays each deletion.
+The 141/143/187 comparison separates phase precision from circuit simplification.
+
+**Previous: [minimum linear future banks](LINEAR_RECOGNITION.md).** Exact row-space
 closure reduces a seven-qubit CCX observer bank from 64 coordinates to eight
 combined readings. A separate verifier checks independence, reachability and
 all-future updates; the execution API replays declared words using the bank.

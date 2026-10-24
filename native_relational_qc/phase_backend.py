@@ -37,6 +37,14 @@ class Phase32Circuit(PhaseCircuit):
         phase_gates[name]=(width,root**power)
 
 
+class Phase64Circuit(Phase32Circuit):
+    from .cyclotomic64 import Cyclotomic64 as field,ZETA as root
+    backend='cyclotomic64'
+    phase_gates=dict(Phase32Circuit.phase_gates)
+    for name,width,power in (('p64',1,1),('p64dg',1,-1),('cp64',2,1),('cp64dg',2,-1)):
+        phase_gates[name]=(width,root**power)
+
+
 class Budget:
     def __init__(self,max_work=10_000_000,max_coefficient_bits=4096,max_branches=4096):
         self.max_work=_integer(max_work,'max_work',1,1_000_000_000)
@@ -126,7 +134,7 @@ def prepare(circuit,**limits):
     phase_gates=getattr(circuit,'phase_gates',PhaseCircuit.phase_gates)
     b=Budget(**limits);b.stats['preparation_count']=1;state={0:one}
     b.stats.update(backend=getattr(circuit,'backend','cyclotomic'),
-        representation='sparse computational-basis amplitudes in '+('Q(zeta_32)' if field is Phase32Circuit.field else 'Q(zeta_16)'),
+        representation='sparse computational-basis amplitudes in '+('Q(zeta_64)' if field is Phase64Circuit.field else 'Q(zeta_32)' if field is Phase32Circuit.field else 'Q(zeta_16)'),
         permutation_visits=0)
     for name,qs in circuit.operations:
         b.tick('gate_visits')
@@ -145,7 +153,7 @@ def prepare(circuit,**limits):
         elif name in phase_gates:
             width,phase=phase_gates[name];phase=field.coerce(phase)
             # Revalidate even if called directly with another circuit implementation.
-            (Phase32Circuit if field is Phase32Circuit.field else PhaseCircuit)(circuit.n_qubits).add(name,*qs)
+            (Phase64Circuit if field is Phase64Circuit.field else Phase32Circuit if field is Phase32Circuit.field else PhaseCircuit)(circuit.n_qubits).add(name,*qs)
             out={}
             for ket,value in state.items():
                 b.tick('gate_visits')

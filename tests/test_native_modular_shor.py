@@ -180,7 +180,7 @@ class ModularShorTests(unittest.TestCase):
         for b in ('cyclotomic','clifford_frame'):
             wrong=request(Phase32Circuit(1).add('p32',0));wrong['backend']=b
             with self.assertRaises(ValueError):validate(wrong)
-        with self.assertRaises(ValueError):build(21,2,precision=6,oracle='arithmetic')
+        with self.assertRaises(ValueError):build(21,2,precision=7,oracle='arithmetic')
         with self.assertRaises(ValueError):build(21,2,precision=5,oracle='arithmetic').request('cyclotomic')
         with self.assertRaises(ValueError):validate(dict(d,simplify='exact'))
         with self.assertRaises(ValueError):validate(dict(d,n_qubits=257))

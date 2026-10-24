@@ -112,7 +112,7 @@ class ShorTests(unittest.TestCase):
         self.assertNotEqual(exact_phase_law(15,2,3),exact_phase_law(15,2,3,inverse_qft=False))
 
     def test_invalid_cases_and_unsupported_precision_fail_explicitly(self):
-        for args in ({'modulus':16},{'base':3},{'precision':6},{'precision':True},
+        for args in ({'modulus':16},{'base':3},{'precision':7},{'precision':True},
                      {'modulus':21},{'base':7},{'oracle':'magic'},{'inverse_qft':'yes'}):
             with self.assertRaises(ValueError):build(**args)
         with self.assertRaises(ValueError):append_inverse_qft(LargeCircuit(5),range(4),clean_ancilla=4)
