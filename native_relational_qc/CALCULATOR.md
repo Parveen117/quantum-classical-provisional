@@ -125,6 +125,15 @@ reduction are unavailable. The separate Python `future_bank` compiler
 returns exact transition rows for all words of a declared action alphabet;
 it does not claim minimum rank or an efficient bank for arbitrary circuits.
 
+The subsequent [linear bank API](LINEAR_RECOGNITION.md) replaces coordinate
+closure with exact Gaussian row closure. `linear_future_bank` emits the
+minimum homogeneous linear observer space for its declared seed/alphabet;
+`verify_linear_bank` checks independence, provenance and closure, and
+`run_linear_bank` verifies then executes a word from a computational-basis
+input. These are explicit Python APIs, not a new calculator backend. They
+have additional rank and total-coefficient budgets; smaller rank does not
+guarantee faster compilation or smaller resident memory.
+
 Named single-qubit gates are `id/x/y/z/h/s/sdg/t/tdg/sx/sxdg` and the native
 `r/k/rk` operators. Arbitrary continuous rotations, general QAOA angles, dynamic
 measurements, reset and noise are not added by this calculator interface.

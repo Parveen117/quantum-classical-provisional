@@ -1,0 +1,5748 @@
+{
+  "all_completed_values_verified": true,
+  "all_expected_statuses_verified": true,
+  "all_guards_verified": true,
+  "completed_utc": "2026-10-24T03:57:22.990695+00:00",
+  "example_certificate": {
+    "action_sha256": "2603bc66d78bd01577249b21af417b66b41901bb8edf04a3b2d29d7dba83b49d",
+    "actions": [
+      [
+        "ccx",
+        [
+          0,
+          1,
+          6
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          3,
+          6
+        ]
+      ],
+      [
+        "ccx",
+        [
+          4,
+          5,
+          6
+        ]
+      ]
+    ],
+    "basis": [
+      [
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "64"
+        }
+      ],
+      [
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "65"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "66"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "67"
+        }
+      ],
+      [
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "68"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "72"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "76"
+        }
+      ],
+      [
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "80"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "96"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "112"
+        }
+      ],
+      [
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "69"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "70"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "71"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "73"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "74"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "75"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "77"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "78"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "79"
+        }
+      ],
+      [
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "81"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "82"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "83"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "97"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "98"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "99"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "113"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "114"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "115"
+        }
+      ],
+      [
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "84"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "88"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "92"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "100"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "104"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "108"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "116"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "120"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "124"
+        }
+      ],
+      [
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "85"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "86"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "87"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "89"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "90"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "91"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "93"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "94"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "95"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "101"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "102"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "103"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "105"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "106"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "107"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "109"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "110"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "111"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "117"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "118"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "119"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "121"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "122"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "123"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "125"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "126"
+        },
+        {
+          "coefficient": {
+            "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "x": "0",
+          "z": "127"
+        }
+      ]
+    ],
+    "minimality_scope": "minimum homogeneous K-linear observer dimension on the full operator carrier; K=Q(zeta_32); declared seed and alphabet only",
+    "n_qubits": 7,
+    "origins": [
+      {
+        "action": null,
+        "divisor": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "parent": null,
+        "subtracted": []
+      },
+      {
+        "action": 0,
+        "divisor": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "parent": 0,
+        "subtracted": [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 0
+          }
+        ]
+      },
+      {
+        "action": 1,
+        "divisor": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "parent": 0,
+        "subtracted": [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 0
+          }
+        ]
+      },
+      {
+        "action": 2,
+        "divisor": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "parent": 0,
+        "subtracted": [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 0
+          }
+        ]
+      },
+      {
+        "action": 1,
+        "divisor": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "parent": 1,
+        "subtracted": [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 1
+          }
+        ]
+      },
+      {
+        "action": 2,
+        "divisor": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "parent": 1,
+        "subtracted": [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 1
+          }
+        ]
+      },
+      {
+        "action": 2,
+        "divisor": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "parent": 2,
+        "subtracted": [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 2
+          }
+        ]
+      },
+      {
+        "action": 2,
+        "divisor": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "parent": 4,
+        "subtracted": [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 4
+          }
+        ]
+      }
+    ],
+    "pivots": [
+      {
+        "x": "0",
+        "z": "64"
+      },
+      {
+        "x": "0",
+        "z": "65"
+      },
+      {
+        "x": "0",
+        "z": "68"
+      },
+      {
+        "x": "0",
+        "z": "80"
+      },
+      {
+        "x": "0",
+        "z": "69"
+      },
+      {
+        "x": "0",
+        "z": "81"
+      },
+      {
+        "x": "0",
+        "z": "84"
+      },
+      {
+        "x": "0",
+        "z": "85"
+      }
+    ],
+    "retained_dimension": 8,
+    "schema": "nrqc-linear-future-bank-v1",
+    "seed": {
+      "x": "0",
+      "z": "64"
+    },
+    "statistics": {
+      "basis_nonzeros": 64,
+      "basis_scans": 343,
+      "cache_hits": 380,
+      "disjoint_term_visits": 0,
+      "field_inversions": 7,
+      "field_products": 2304,
+      "field_sums": 1281,
+      "gate_scans": 48,
+      "local_images_built": 4,
+      "max_coefficient_bits": 2,
+      "parsed_terms": 0,
+      "peak_terms": 36,
+      "provenance_nonzeros": 15,
+      "rank": 8,
+      "reading_steps": 0,
+      "row_reductions": 49,
+      "statevector_constructed": false,
+      "stored_coefficients": 127,
+      "term_visits": 384,
+      "transition_nonzeros": 48,
+      "transition_terms": 1536,
+      "truncated_terms": 0,
+      "work_used": 5952
+    },
+    "transition_rows": [
+      [
+        [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 0
+          },
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 1
+          }
+        ],
+        [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "3/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 0
+          },
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "-1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 1
+          }
+        ],
+        [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 2
+          },
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 4
+          }
+        ],
+        [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 3
+          },
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 5
+          }
+        ],
+        [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "3/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 2
+          },
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "-1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 4
+          }
+        ],
+        [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "3/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 3
+          },
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "-1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 5
+          }
+        ],
+        [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 6
+          },
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 7
+          }
+        ],
+        [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "3/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 6
+          },
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "-1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 7
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 0
+          },
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 2
+          }
+        ],
+        [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 1
+          },
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 4
+          }
+        ],
+        [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "3/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 0
+          },
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "-1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 2
+          }
+        ],
+        [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 3
+          },
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 6
+          }
+        ],
+        [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "3/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 1
+          },
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "-1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 4
+          }
+        ],
+        [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 5
+          },
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 7
+          }
+        ],
+        [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "3/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 3
+          },
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "-1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 6
+          }
+        ],
+        [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "3/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 5
+          },
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "-1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 7
+          }
+        ]
+      ],
+      [
+        [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 0
+          },
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 3
+          }
+        ],
+        [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 1
+          },
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 5
+          }
+        ],
+        [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 2
+          },
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 6
+          }
+        ],
+        [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "3/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 0
+          },
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "-1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 3
+          }
+        ],
+        [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 4
+          },
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 7
+          }
+        ],
+        [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "3/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 1
+          },
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "-1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 5
+          }
+        ],
+        [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "3/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 2
+          },
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "-1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 6
+          }
+        ],
+        [
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "3/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 4
+          },
+          {
+            "coefficient": {
+              "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+              "coefficients": [
+                "-1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "column": 7
+          }
+        ]
+      ]
+    ]
+  },
+  "guards": [
+    {
+      "case": "rank_guard",
+      "report": {
+        "answers": [],
+        "end_to_end_seconds": 0.05849389800005156,
+        "error": "linear observer rank limit",
+        "failure_phase": "compile",
+        "peak_worker_rss_bytes": 26521600,
+        "statistics": {
+          "basis_nonzeros": 10,
+          "basis_scans": 14,
+          "cache_hits": 5,
+          "disjoint_term_visits": 0,
+          "field_inversions": 3,
+          "field_products": 55,
+          "field_sums": 16,
+          "gate_scans": 5,
+          "local_images_built": 4,
+          "max_coefficient_bits": 2,
+          "parsed_terms": 0,
+          "peak_terms": 12,
+          "provenance_nonzeros": 7,
+          "rank": 4,
+          "reading_steps": 0,
+          "row_reductions": 6,
+          "statevector_constructed": false,
+          "stored_coefficients": 17,
+          "term_visits": 9,
+          "transition_nonzeros": 0,
+          "transition_terms": 36,
+          "truncated_terms": 0,
+          "work_used": 144
+        },
+        "status": "incomplete",
+        "wall_seconds": 0.17316787199979444
+      }
+    },
+    {
+      "case": "storage_guard",
+      "report": {
+        "answers": [],
+        "end_to_end_seconds": 0.05027795500063803,
+        "error": "linear observer stored coefficient limit",
+        "failure_phase": "compile",
+        "peak_worker_rss_bytes": 26537984,
+        "statistics": {
+          "basis_nonzeros": 19,
+          "basis_scans": 19,
+          "cache_hits": 8,
+          "disjoint_term_visits": 0,
+          "field_inversions": 5,
+          "field_products": 88,
+          "field_sums": 19,
+          "gate_scans": 6,
+          "local_images_built": 4,
+          "max_coefficient_bits": 2,
+          "parsed_terms": 0,
+          "peak_terms": 12,
+          "provenance_nonzeros": 9,
+          "rank": 5,
+          "reading_steps": 0,
+          "row_reductions": 7,
+          "statevector_constructed": false,
+          "stored_coefficients": 28,
+          "term_visits": 12,
+          "transition_nonzeros": 0,
+          "transition_terms": 48,
+          "truncated_terms": 0,
+          "work_used": 204
+        },
+        "status": "incomplete",
+        "wall_seconds": 0.14872513800037268
+      }
+    },
+    {
+      "case": "wall_guard",
+      "report": {
+        "answers": [],
+        "status": "time_limit",
+        "wall_seconds": 0.0006528119993163273
+      }
+    }
+  ],
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "protocol_sha256": "182eced9228ad506d71dcf535542094bc65f3fa91cac0d7162178ff8f963dc78",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "runs": [
+    {
+      "case": "ch2",
+      "method": "coordinate",
+      "repetition": 1,
+      "report": {
+        "certificate_bytes": 4538,
+        "certificate_sha256": "15c6b3eda8659b234ab624f43ab4ce20a997f9b9b47e5cc6b6193860bc9d4dc5",
+        "compile_seconds": 0.007635477999428986,
+        "compile_statistics": {
+          "cache_hits": 0,
+          "disjoint_term_visits": 0,
+          "field_products": 0,
+          "field_sums": 0,
+          "gate_scans": 4,
+          "local_images_built": 4,
+          "max_coefficient_bits": 2,
+          "peak_terms": 4,
+          "statevector_constructed": false,
+          "term_visits": 4,
+          "transition_terms": 16,
+          "truncated_terms": 0,
+          "work_used": 24
+        },
+        "end_to_end_seconds": 0.145204642999488,
+        "peak_worker_rss_bytes": 26533888,
+        "rank": 4,
+        "replay_seconds": 0.137569165000059,
+        "replay_statistics": {
+          "cache_hits": 0,
+          "disjoint_term_visits": 0,
+          "field_products": 2032,
+          "field_sums": 2032,
+          "gate_scans": 0,
+          "local_images_built": 0,
+          "max_coefficient_bits": 2,
+          "peak_terms": 0,
+          "statevector_constructed": false,
+          "term_visits": 0,
+          "transition_terms": 0,
+          "truncated_terms": 0,
+          "work_used": 4064
+        },
+        "status": "completed",
+        "value": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "wall_seconds": 0.2447995330003323
+      }
+    },
+    {
+      "case": "ch2",
+      "method": "linear",
+      "repetition": 1,
+      "report": {
+        "certificate_bytes": 3578,
+        "certificate_sha256": "e5e6019d89c459e2b9fc83950fddaf600a36304fc37cc01364167acc07d5267d",
+        "compile_seconds": 0.012318719999711902,
+        "compile_statistics": {
+          "basis_nonzeros": 4,
+          "basis_scans": 7,
+          "cache_hits": 4,
+          "disjoint_term_visits": 0,
+          "field_inversions": 1,
+          "field_products": 48,
+          "field_sums": 25,
+          "gate_scans": 4,
+          "local_images_built": 4,
+          "max_coefficient_bits": 2,
+          "parsed_terms": 0,
+          "peak_terms": 4,
+          "provenance_nonzeros": 3,
+          "rank": 2,
+          "reading_steps": 0,
+          "row_reductions": 5,
+          "statevector_constructed": false,
+          "stored_coefficients": 11,
+          "term_visits": 8,
+          "transition_nonzeros": 4,
+          "transition_terms": 32,
+          "truncated_terms": 0,
+          "work_used": 130
+        },
+        "end_to_end_seconds": 0.06068257100014307,
+        "peak_worker_rss_bytes": 26546176,
+        "rank": 2,
+        "replay_seconds": 0.04836385100043117,
+        "replay_statistics": {
+          "basis_nonzeros": 4,
+          "basis_scans": 0,
+          "cache_hits": 1,
+          "disjoint_term_visits": 0,
+          "field_inversions": 0,
+          "field_products": 542,
+          "field_sums": 516,
+          "gate_scans": 3,
+          "local_images_built": 4,
+          "max_coefficient_bits": 2,
+          "parsed_terms": 12,
+          "peak_terms": 4,
+          "provenance_nonzeros": 3,
+          "rank": 2,
+          "reading_steps": 512,
+          "row_reductions": 0,
+          "statevector_constructed": false,
+          "stored_coefficients": 11,
+          "term_visits": 5,
+          "transition_nonzeros": 4,
+          "transition_terms": 20,
+          "truncated_terms": 0,
+          "work_used": 1610
+        },
+        "status": "completed",
+        "value": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "wall_seconds": 0.15553763300067658
+      }
+    },
+    {
+      "case": "cp32",
+      "method": "coordinate",
+      "repetition": 1,
+      "report": {
+        "certificate_bytes": 4644,
+        "certificate_sha256": "cd685aca1e28537869af3717a8da53df1afd7d2938f774f526ae3c742158a43f",
+        "compile_seconds": 0.020409144000041124,
+        "compile_statistics": {
+          "cache_hits": 0,
+          "disjoint_term_visits": 0,
+          "field_products": 208,
+          "field_sums": 64,
+          "gate_scans": 4,
+          "local_images_built": 4,
+          "max_coefficient_bits": 4,
+          "peak_terms": 4,
+          "statevector_constructed": false,
+          "term_visits": 4,
+          "transition_terms": 16,
+          "truncated_terms": 0,
+          "work_used": 296
+        },
+        "end_to_end_seconds": 0.1074946059998183,
+        "peak_worker_rss_bytes": 26525696,
+        "rank": 4,
+        "replay_seconds": 0.08708546199977718,
+        "replay_statistics": {
+          "cache_hits": 0,
+          "disjoint_term_visits": 0,
+          "field_products": 2032,
+          "field_sums": 2032,
+          "gate_scans": 0,
+          "local_images_built": 0,
+          "max_coefficient_bits": 1,
+          "peak_terms": 0,
+          "statevector_constructed": false,
+          "term_visits": 0,
+          "transition_terms": 0,
+          "truncated_terms": 0,
+          "work_used": 4064
+        },
+        "status": "completed",
+        "value": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "wall_seconds": 0.20654657700015377
+      }
+    },
+    {
+      "case": "cp32",
+      "method": "linear",
+      "repetition": 1,
+      "report": {
+        "certificate_bytes": 5842,
+        "certificate_sha256": "22480d13d31198767944aab02f89ccf2d8fa1e0b7431547a9e5555c28f5806aa",
+        "compile_seconds": 0.04042903200024739,
+        "compile_statistics": {
+          "basis_nonzeros": 6,
+          "basis_scans": 15,
+          "cache_hits": 8,
+          "disjoint_term_visits": 0,
+          "field_inversions": 2,
+          "field_products": 288,
+          "field_sums": 115,
+          "gate_scans": 6,
+          "local_images_built": 4,
+          "max_coefficient_bits": 5,
+          "parsed_terms": 0,
+          "peak_terms": 4,
+          "provenance_nonzeros": 6,
+          "rank": 3,
+          "reading_steps": 0,
+          "row_reductions": 7,
+          "statevector_constructed": false,
+          "stored_coefficients": 20,
+          "term_visits": 12,
+          "transition_nonzeros": 8,
+          "transition_terms": 48,
+          "truncated_terms": 0,
+          "work_used": 493
+        },
+        "end_to_end_seconds": 0.12347519000013563,
+        "peak_worker_rss_bytes": 26562560,
+        "rank": 3,
+        "replay_seconds": 0.08304615799988824,
+        "replay_statistics": {
+          "basis_nonzeros": 6,
+          "basis_scans": 0,
+          "cache_hits": 6,
+          "disjoint_term_visits": 0,
+          "field_inversions": 0,
+          "field_products": 1292,
+          "field_sums": 1106,
+          "gate_scans": 5,
+          "local_images_built": 4,
+          "max_coefficient_bits": 5,
+          "parsed_terms": 21,
+          "peak_terms": 4,
+          "provenance_nonzeros": 6,
+          "rank": 3,
+          "reading_steps": 1022,
+          "row_reductions": 0,
+          "statevector_constructed": false,
+          "stored_coefficients": 20,
+          "term_visits": 10,
+          "transition_nonzeros": 8,
+          "transition_terms": 40,
+          "truncated_terms": 0,
+          "work_used": 3496
+        },
+        "status": "completed",
+        "value": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "wall_seconds": 0.21722309600045264
+      }
+    },
+    {
+      "case": "ccx3",
+      "method": "coordinate",
+      "repetition": 1,
+      "report": {
+        "certificate_bytes": 184447,
+        "certificate_sha256": "15733094dc2fd1e10f8bb68e8bd6a39de3879b91cb198178cba8eb452fb06afe",
+        "compile_seconds": 0.05258577899985539,
+        "compile_statistics": {
+          "cache_hits": 188,
+          "disjoint_term_visits": 0,
+          "field_products": 0,
+          "field_sums": 0,
+          "gate_scans": 192,
+          "local_images_built": 4,
+          "max_coefficient_bits": 2,
+          "peak_terms": 64,
+          "statevector_constructed": false,
+          "term_visits": 192,
+          "transition_terms": 768,
+          "truncated_terms": 0,
+          "work_used": 1152
+        },
+        "end_to_end_seconds": 3.249503414999708,
+        "peak_worker_rss_bytes": 28839936,
+        "rank": 64,
+        "replay_seconds": 3.196917635999853,
+        "replay_statistics": {
+          "cache_hits": 0,
+          "disjoint_term_visits": 0,
+          "field_products": 32512,
+          "field_sums": 32512,
+          "gate_scans": 0,
+          "local_images_built": 0,
+          "max_coefficient_bits": 2,
+          "peak_terms": 0,
+          "statevector_constructed": false,
+          "term_visits": 0,
+          "transition_terms": 0,
+          "truncated_terms": 0,
+          "work_used": 65024
+        },
+        "status": "completed",
+        "value": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "wall_seconds": 3.3512706050005363
+      }
+    },
+    {
+      "case": "ccx3",
+      "method": "linear",
+      "repetition": 1,
+      "report": {
+        "certificate_bytes": 31628,
+        "certificate_sha256": "a222ab9156cc6e4c5657fe9752beca67790f13f5a52980304f2aa642cd63dfca",
+        "compile_seconds": 0.3134692619996713,
+        "compile_statistics": {
+          "basis_nonzeros": 64,
+          "basis_scans": 343,
+          "cache_hits": 380,
+          "disjoint_term_visits": 0,
+          "field_inversions": 7,
+          "field_products": 2304,
+          "field_sums": 1281,
+          "gate_scans": 48,
+          "local_images_built": 4,
+          "max_coefficient_bits": 2,
+          "parsed_terms": 0,
+          "peak_terms": 36,
+          "provenance_nonzeros": 15,
+          "rank": 8,
+          "reading_steps": 0,
+          "row_reductions": 49,
+          "statevector_constructed": false,
+          "stored_coefficients": 127,
+          "term_visits": 384,
+          "transition_nonzeros": 48,
+          "transition_terms": 1536,
+          "truncated_terms": 0,
+          "work_used": 5952
+        },
+        "end_to_end_seconds": 0.7223351909997291,
+        "peak_worker_rss_bytes": 27004928,
+        "rank": 8,
+        "replay_seconds": 0.4088659290000578,
+        "replay_statistics": {
+          "basis_nonzeros": 64,
+          "basis_scans": 0,
+          "cache_hits": 209,
+          "disjoint_term_visits": 0,
+          "field_inversions": 0,
+          "field_products": 3354,
+          "field_sums": 2384,
+          "gate_scans": 31,
+          "local_images_built": 4,
+          "max_coefficient_bits": 5,
+          "parsed_terms": 128,
+          "peak_terms": 36,
+          "provenance_nonzeros": 15,
+          "rank": 8,
+          "reading_steps": 2096,
+          "row_reductions": 0,
+          "statevector_constructed": false,
+          "stored_coefficients": 127,
+          "term_visits": 213,
+          "transition_nonzeros": 48,
+          "transition_terms": 852,
+          "truncated_terms": 0,
+          "work_used": 9058
+        },
+        "status": "completed",
+        "value": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "wall_seconds": 0.83875585900023
+      }
+    },
+    {
+      "case": "no_reduction",
+      "method": "coordinate",
+      "repetition": 1,
+      "report": {
+        "certificate_bytes": 2657,
+        "certificate_sha256": "125a170b86220383931f00a43d43fbbf33c16ced249b7aed74bf616f36b4f9b8",
+        "compile_seconds": 0.0067950619995826855,
+        "compile_statistics": {
+          "cache_hits": 0,
+          "disjoint_term_visits": 0,
+          "field_products": 42,
+          "field_sums": 12,
+          "gate_scans": 6,
+          "local_images_built": 6,
+          "max_coefficient_bits": 3,
+          "peak_terms": 3,
+          "statevector_constructed": false,
+          "term_visits": 6,
+          "transition_terms": 8,
+          "truncated_terms": 0,
+          "work_used": 74
+        },
+        "end_to_end_seconds": 0.1273302049994527,
+        "peak_worker_rss_bytes": 26533888,
+        "rank": 3,
+        "replay_seconds": 0.12053514299987,
+        "replay_statistics": {
+          "cache_hits": 0,
+          "disjoint_term_visits": 0,
+          "field_products": 507,
+          "field_sums": 507,
+          "gate_scans": 0,
+          "local_images_built": 0,
+          "max_coefficient_bits": 57,
+          "peak_terms": 0,
+          "statevector_constructed": false,
+          "term_visits": 0,
+          "transition_terms": 0,
+          "truncated_terms": 0,
+          "work_used": 1014
+        },
+        "status": "completed",
+        "value": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "3697097599976835/9007199254740992",
+            "-1831297571801741/18014398509481984",
+            "0",
+            "0",
+            "3483266986975753/36028797018963968",
+            "848305035306731/18014398509481984",
+            "90046845748829/36028797018963968",
+            "-1786656916362291/36028797018963968",
+            "-3650723503764295/72057594037927936",
+            "-2114546369923877/18014398509481984",
+            "-11787783516671839/72057594037927936",
+            "1826362970357457/72057594037927936",
+            "-10284548450052965/72057594037927936",
+            "1017132501613443/18014398509481984",
+            "6631822509338051/72057594037927936",
+            "7719253510218067/72057594037927936"
+          ]
+        },
+        "wall_seconds": 0.2398742109999148
+      }
+    },
+    {
+      "case": "no_reduction",
+      "method": "linear",
+      "repetition": 1,
+      "report": {
+        "certificate_bytes": 4606,
+        "certificate_sha256": "dd34fbb605bc6bb7c48045e01206d4a56092b64087d5947a043385eed1979ae5",
+        "compile_seconds": 0.01160138100021868,
+        "compile_statistics": {
+          "basis_nonzeros": 3,
+          "basis_scans": 31,
+          "cache_hits": 6,
+          "disjoint_term_visits": 0,
+          "field_inversions": 1,
+          "field_products": 67,
+          "field_sums": 26,
+          "gate_scans": 12,
+          "local_images_built": 6,
+          "max_coefficient_bits": 3,
+          "parsed_terms": 0,
+          "peak_terms": 2,
+          "provenance_nonzeros": 4,
+          "rank": 3,
+          "reading_steps": 0,
+          "row_reductions": 13,
+          "statevector_constructed": false,
+          "stored_coefficients": 15,
+          "term_visits": 12,
+          "transition_nonzeros": 8,
+          "transition_terms": 16,
+          "truncated_terms": 0,
+          "work_used": 178
+        },
+        "end_to_end_seconds": 0.1498113910001848,
+        "peak_worker_rss_bytes": 26550272,
+        "rank": 3,
+        "replay_seconds": 0.13821000999996613,
+        "replay_statistics": {
+          "basis_nonzeros": 3,
+          "basis_scans": 0,
+          "cache_hits": 2,
+          "disjoint_term_visits": 0,
+          "field_inversions": 0,
+          "field_products": 569,
+          "field_sums": 520,
+          "gate_scans": 8,
+          "local_images_built": 6,
+          "max_coefficient_bits": 57,
+          "parsed_terms": 16,
+          "peak_terms": 2,
+          "provenance_nonzeros": 4,
+          "rank": 3,
+          "reading_steps": 510,
+          "row_reductions": 0,
+          "statevector_constructed": false,
+          "stored_coefficients": 15,
+          "term_visits": 8,
+          "transition_nonzeros": 8,
+          "transition_terms": 11,
+          "truncated_terms": 0,
+          "work_used": 1642
+        },
+        "status": "completed",
+        "value": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "3697097599976835/9007199254740992",
+            "-1831297571801741/18014398509481984",
+            "0",
+            "0",
+            "3483266986975753/36028797018963968",
+            "848305035306731/18014398509481984",
+            "90046845748829/36028797018963968",
+            "-1786656916362291/36028797018963968",
+            "-3650723503764295/72057594037927936",
+            "-2114546369923877/18014398509481984",
+            "-11787783516671839/72057594037927936",
+            "1826362970357457/72057594037927936",
+            "-10284548450052965/72057594037927936",
+            "1017132501613443/18014398509481984",
+            "6631822509338051/72057594037927936",
+            "7719253510218067/72057594037927936"
+          ]
+        },
+        "wall_seconds": 0.27486330900046596
+      }
+    },
+    {
+      "case": "ccx3_cap48",
+      "method": "coordinate",
+      "repetition": 1,
+      "report": {
+        "answers": [],
+        "end_to_end_seconds": 0.04804247699939879,
+        "error": "observer32 future bank exceeds term limit",
+        "failure_phase": "compile",
+        "peak_worker_rss_bytes": 26505216,
+        "statistics": {
+          "cache_hits": 47,
+          "disjoint_term_visits": 0,
+          "field_products": 0,
+          "field_sums": 0,
+          "gate_scans": 51,
+          "local_images_built": 4,
+          "max_coefficient_bits": 2,
+          "peak_terms": 48,
+          "statevector_constructed": false,
+          "term_visits": 51,
+          "transition_terms": 204,
+          "truncated_terms": 0,
+          "work_used": 306
+        },
+        "status": "incomplete",
+        "wall_seconds": 0.16115513800014014
+      }
+    },
+    {
+      "case": "ccx3_cap48",
+      "method": "linear",
+      "repetition": 1,
+      "report": {
+        "certificate_bytes": 31628,
+        "certificate_sha256": "a222ab9156cc6e4c5657fe9752beca67790f13f5a52980304f2aa642cd63dfca",
+        "compile_seconds": 0.2808354290000352,
+        "compile_statistics": {
+          "basis_nonzeros": 64,
+          "basis_scans": 343,
+          "cache_hits": 380,
+          "disjoint_term_visits": 0,
+          "field_inversions": 7,
+          "field_products": 2304,
+          "field_sums": 1281,
+          "gate_scans": 48,
+          "local_images_built": 4,
+          "max_coefficient_bits": 2,
+          "parsed_terms": 0,
+          "peak_terms": 36,
+          "provenance_nonzeros": 15,
+          "rank": 8,
+          "reading_steps": 0,
+          "row_reductions": 49,
+          "statevector_constructed": false,
+          "stored_coefficients": 127,
+          "term_visits": 384,
+          "transition_nonzeros": 48,
+          "transition_terms": 1536,
+          "truncated_terms": 0,
+          "work_used": 5952
+        },
+        "end_to_end_seconds": 0.6525091699995755,
+        "peak_worker_rss_bytes": 27004928,
+        "rank": 8,
+        "replay_seconds": 0.3716737409995403,
+        "replay_statistics": {
+          "basis_nonzeros": 64,
+          "basis_scans": 0,
+          "cache_hits": 209,
+          "disjoint_term_visits": 0,
+          "field_inversions": 0,
+          "field_products": 3354,
+          "field_sums": 2384,
+          "gate_scans": 31,
+          "local_images_built": 4,
+          "max_coefficient_bits": 5,
+          "parsed_terms": 128,
+          "peak_terms": 36,
+          "provenance_nonzeros": 15,
+          "rank": 8,
+          "reading_steps": 2096,
+          "row_reductions": 0,
+          "statevector_constructed": false,
+          "stored_coefficients": 127,
+          "term_visits": 213,
+          "transition_nonzeros": 48,
+          "transition_terms": 852,
+          "truncated_terms": 0,
+          "work_used": 9058
+        },
+        "status": "completed",
+        "value": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "wall_seconds": 0.7586783900005685
+      }
+    },
+    {
+      "case": "ccx3_cap48",
+      "method": "linear",
+      "repetition": 2,
+      "report": {
+        "certificate_bytes": 31628,
+        "certificate_sha256": "a222ab9156cc6e4c5657fe9752beca67790f13f5a52980304f2aa642cd63dfca",
+        "compile_seconds": 0.2781933090000166,
+        "compile_statistics": {
+          "basis_nonzeros": 64,
+          "basis_scans": 343,
+          "cache_hits": 380,
+          "disjoint_term_visits": 0,
+          "field_inversions": 7,
+          "field_products": 2304,
+          "field_sums": 1281,
+          "gate_scans": 48,
+          "local_images_built": 4,
+          "max_coefficient_bits": 2,
+          "parsed_terms": 0,
+          "peak_terms": 36,
+          "provenance_nonzeros": 15,
+          "rank": 8,
+          "reading_steps": 0,
+          "row_reductions": 49,
+          "statevector_constructed": false,
+          "stored_coefficients": 127,
+          "term_visits": 384,
+          "transition_nonzeros": 48,
+          "transition_terms": 1536,
+          "truncated_terms": 0,
+          "work_used": 5952
+        },
+        "end_to_end_seconds": 0.6282848509999894,
+        "peak_worker_rss_bytes": 27000832,
+        "rank": 8,
+        "replay_seconds": 0.35009154199997283,
+        "replay_statistics": {
+          "basis_nonzeros": 64,
+          "basis_scans": 0,
+          "cache_hits": 209,
+          "disjoint_term_visits": 0,
+          "field_inversions": 0,
+          "field_products": 3354,
+          "field_sums": 2384,
+          "gate_scans": 31,
+          "local_images_built": 4,
+          "max_coefficient_bits": 5,
+          "parsed_terms": 128,
+          "peak_terms": 36,
+          "provenance_nonzeros": 15,
+          "rank": 8,
+          "reading_steps": 2096,
+          "row_reductions": 0,
+          "statevector_constructed": false,
+          "stored_coefficients": 127,
+          "term_visits": 213,
+          "transition_nonzeros": 48,
+          "transition_terms": 852,
+          "truncated_terms": 0,
+          "work_used": 9058
+        },
+        "status": "completed",
+        "value": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "wall_seconds": 0.7270791689998077
+      }
+    },
+    {
+      "case": "ccx3_cap48",
+      "method": "coordinate",
+      "repetition": 2,
+      "report": {
+        "answers": [],
+        "end_to_end_seconds": 0.04543111900056829,
+        "error": "observer32 future bank exceeds term limit",
+        "failure_phase": "compile",
+        "peak_worker_rss_bytes": 26509312,
+        "statistics": {
+          "cache_hits": 47,
+          "disjoint_term_visits": 0,
+          "field_products": 0,
+          "field_sums": 0,
+          "gate_scans": 51,
+          "local_images_built": 4,
+          "max_coefficient_bits": 2,
+          "peak_terms": 48,
+          "statevector_constructed": false,
+          "term_visits": 51,
+          "transition_terms": 204,
+          "truncated_terms": 0,
+          "work_used": 306
+        },
+        "status": "incomplete",
+        "wall_seconds": 0.1440094549998321
+      }
+    },
+    {
+      "case": "no_reduction",
+      "method": "linear",
+      "repetition": 2,
+      "report": {
+        "certificate_bytes": 4606,
+        "certificate_sha256": "dd34fbb605bc6bb7c48045e01206d4a56092b64087d5947a043385eed1979ae5",
+        "compile_seconds": 0.01044751500012353,
+        "compile_statistics": {
+          "basis_nonzeros": 3,
+          "basis_scans": 31,
+          "cache_hits": 6,
+          "disjoint_term_visits": 0,
+          "field_inversions": 1,
+          "field_products": 67,
+          "field_sums": 26,
+          "gate_scans": 12,
+          "local_images_built": 6,
+          "max_coefficient_bits": 3,
+          "parsed_terms": 0,
+          "peak_terms": 2,
+          "provenance_nonzeros": 4,
+          "rank": 3,
+          "reading_steps": 0,
+          "row_reductions": 13,
+          "statevector_constructed": false,
+          "stored_coefficients": 15,
+          "term_visits": 12,
+          "transition_nonzeros": 8,
+          "transition_terms": 16,
+          "truncated_terms": 0,
+          "work_used": 178
+        },
+        "end_to_end_seconds": 0.14967001600052754,
+        "peak_worker_rss_bytes": 26558464,
+        "rank": 3,
+        "replay_seconds": 0.139222501000404,
+        "replay_statistics": {
+          "basis_nonzeros": 3,
+          "basis_scans": 0,
+          "cache_hits": 2,
+          "disjoint_term_visits": 0,
+          "field_inversions": 0,
+          "field_products": 569,
+          "field_sums": 520,
+          "gate_scans": 8,
+          "local_images_built": 6,
+          "max_coefficient_bits": 57,
+          "parsed_terms": 16,
+          "peak_terms": 2,
+          "provenance_nonzeros": 4,
+          "rank": 3,
+          "reading_steps": 510,
+          "row_reductions": 0,
+          "statevector_constructed": false,
+          "stored_coefficients": 15,
+          "term_visits": 8,
+          "transition_nonzeros": 8,
+          "transition_terms": 11,
+          "truncated_terms": 0,
+          "work_used": 1642
+        },
+        "status": "completed",
+        "value": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "3697097599976835/9007199254740992",
+            "-1831297571801741/18014398509481984",
+            "0",
+            "0",
+            "3483266986975753/36028797018963968",
+            "848305035306731/18014398509481984",
+            "90046845748829/36028797018963968",
+            "-1786656916362291/36028797018963968",
+            "-3650723503764295/72057594037927936",
+            "-2114546369923877/18014398509481984",
+            "-11787783516671839/72057594037927936",
+            "1826362970357457/72057594037927936",
+            "-10284548450052965/72057594037927936",
+            "1017132501613443/18014398509481984",
+            "6631822509338051/72057594037927936",
+            "7719253510218067/72057594037927936"
+          ]
+        },
+        "wall_seconds": 0.24786154899993562
+      }
+    },
+    {
+      "case": "no_reduction",
+      "method": "coordinate",
+      "repetition": 2,
+      "report": {
+        "certificate_bytes": 2657,
+        "certificate_sha256": "125a170b86220383931f00a43d43fbbf33c16ced249b7aed74bf616f36b4f9b8",
+        "compile_seconds": 0.006413926999812247,
+        "compile_statistics": {
+          "cache_hits": 0,
+          "disjoint_term_visits": 0,
+          "field_products": 42,
+          "field_sums": 12,
+          "gate_scans": 6,
+          "local_images_built": 6,
+          "max_coefficient_bits": 3,
+          "peak_terms": 3,
+          "statevector_constructed": false,
+          "term_visits": 6,
+          "transition_terms": 8,
+          "truncated_terms": 0,
+          "work_used": 74
+        },
+        "end_to_end_seconds": 0.1243924420004987,
+        "peak_worker_rss_bytes": 26529792,
+        "rank": 3,
+        "replay_seconds": 0.11797851500068646,
+        "replay_statistics": {
+          "cache_hits": 0,
+          "disjoint_term_visits": 0,
+          "field_products": 507,
+          "field_sums": 507,
+          "gate_scans": 0,
+          "local_images_built": 0,
+          "max_coefficient_bits": 57,
+          "peak_terms": 0,
+          "statevector_constructed": false,
+          "term_visits": 0,
+          "transition_terms": 0,
+          "truncated_terms": 0,
+          "work_used": 1014
+        },
+        "status": "completed",
+        "value": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "3697097599976835/9007199254740992",
+            "-1831297571801741/18014398509481984",
+            "0",
+            "0",
+            "3483266986975753/36028797018963968",
+            "848305035306731/18014398509481984",
+            "90046845748829/36028797018963968",
+            "-1786656916362291/36028797018963968",
+            "-3650723503764295/72057594037927936",
+            "-2114546369923877/18014398509481984",
+            "-11787783516671839/72057594037927936",
+            "1826362970357457/72057594037927936",
+            "-10284548450052965/72057594037927936",
+            "1017132501613443/18014398509481984",
+            "6631822509338051/72057594037927936",
+            "7719253510218067/72057594037927936"
+          ]
+        },
+        "wall_seconds": 0.22293524799988518
+      }
+    },
+    {
+      "case": "ccx3",
+      "method": "linear",
+      "repetition": 2,
+      "report": {
+        "certificate_bytes": 31628,
+        "certificate_sha256": "a222ab9156cc6e4c5657fe9752beca67790f13f5a52980304f2aa642cd63dfca",
+        "compile_seconds": 0.27035870000054274,
+        "compile_statistics": {
+          "basis_nonzeros": 64,
+          "basis_scans": 343,
+          "cache_hits": 380,
+          "disjoint_term_visits": 0,
+          "field_inversions": 7,
+          "field_products": 2304,
+          "field_sums": 1281,
+          "gate_scans": 48,
+          "local_images_built": 4,
+          "max_coefficient_bits": 2,
+          "parsed_terms": 0,
+          "peak_terms": 36,
+          "provenance_nonzeros": 15,
+          "rank": 8,
+          "reading_steps": 0,
+          "row_reductions": 49,
+          "statevector_constructed": false,
+          "stored_coefficients": 127,
+          "term_visits": 384,
+          "transition_nonzeros": 48,
+          "transition_terms": 1536,
+          "truncated_terms": 0,
+          "work_used": 5952
+        },
+        "end_to_end_seconds": 0.64244981200045,
+        "peak_worker_rss_bytes": 26992640,
+        "rank": 8,
+        "replay_seconds": 0.3720911119999073,
+        "replay_statistics": {
+          "basis_nonzeros": 64,
+          "basis_scans": 0,
+          "cache_hits": 209,
+          "disjoint_term_visits": 0,
+          "field_inversions": 0,
+          "field_products": 3354,
+          "field_sums": 2384,
+          "gate_scans": 31,
+          "local_images_built": 4,
+          "max_coefficient_bits": 5,
+          "parsed_terms": 128,
+          "peak_terms": 36,
+          "provenance_nonzeros": 15,
+          "rank": 8,
+          "reading_steps": 2096,
+          "row_reductions": 0,
+          "statevector_constructed": false,
+          "stored_coefficients": 127,
+          "term_visits": 213,
+          "transition_nonzeros": 48,
+          "transition_terms": 852,
+          "truncated_terms": 0,
+          "work_used": 9058
+        },
+        "status": "completed",
+        "value": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "wall_seconds": 0.7382334229996559
+      }
+    },
+    {
+      "case": "ccx3",
+      "method": "coordinate",
+      "repetition": 2,
+      "report": {
+        "certificate_bytes": 184447,
+        "certificate_sha256": "15733094dc2fd1e10f8bb68e8bd6a39de3879b91cb198178cba8eb452fb06afe",
+        "compile_seconds": 0.05454767199989874,
+        "compile_statistics": {
+          "cache_hits": 188,
+          "disjoint_term_visits": 0,
+          "field_products": 0,
+          "field_sums": 0,
+          "gate_scans": 192,
+          "local_images_built": 4,
+          "max_coefficient_bits": 2,
+          "peak_terms": 64,
+          "statevector_constructed": false,
+          "term_visits": 192,
+          "transition_terms": 768,
+          "truncated_terms": 0,
+          "work_used": 1152
+        },
+        "end_to_end_seconds": 3.367887465000422,
+        "peak_worker_rss_bytes": 28835840,
+        "rank": 64,
+        "replay_seconds": 3.313339793000523,
+        "replay_statistics": {
+          "cache_hits": 0,
+          "disjoint_term_visits": 0,
+          "field_products": 32512,
+          "field_sums": 32512,
+          "gate_scans": 0,
+          "local_images_built": 0,
+          "max_coefficient_bits": 2,
+          "peak_terms": 0,
+          "statevector_constructed": false,
+          "term_visits": 0,
+          "transition_terms": 0,
+          "truncated_terms": 0,
+          "work_used": 65024
+        },
+        "status": "completed",
+        "value": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "wall_seconds": 3.4831128840005476
+      }
+    },
+    {
+      "case": "cp32",
+      "method": "linear",
+      "repetition": 2,
+      "report": {
+        "certificate_bytes": 5842,
+        "certificate_sha256": "22480d13d31198767944aab02f89ccf2d8fa1e0b7431547a9e5555c28f5806aa",
+        "compile_seconds": 0.04669866699987324,
+        "compile_statistics": {
+          "basis_nonzeros": 6,
+          "basis_scans": 15,
+          "cache_hits": 8,
+          "disjoint_term_visits": 0,
+          "field_inversions": 2,
+          "field_products": 288,
+          "field_sums": 115,
+          "gate_scans": 6,
+          "local_images_built": 4,
+          "max_coefficient_bits": 5,
+          "parsed_terms": 0,
+          "peak_terms": 4,
+          "provenance_nonzeros": 6,
+          "rank": 3,
+          "reading_steps": 0,
+          "row_reductions": 7,
+          "statevector_constructed": false,
+          "stored_coefficients": 20,
+          "term_visits": 12,
+          "transition_nonzeros": 8,
+          "transition_terms": 48,
+          "truncated_terms": 0,
+          "work_used": 493
+        },
+        "end_to_end_seconds": 0.14321249299973715,
+        "peak_worker_rss_bytes": 26574848,
+        "rank": 3,
+        "replay_seconds": 0.09651382599986391,
+        "replay_statistics": {
+          "basis_nonzeros": 6,
+          "basis_scans": 0,
+          "cache_hits": 6,
+          "disjoint_term_visits": 0,
+          "field_inversions": 0,
+          "field_products": 1292,
+          "field_sums": 1106,
+          "gate_scans": 5,
+          "local_images_built": 4,
+          "max_coefficient_bits": 5,
+          "parsed_terms": 21,
+          "peak_terms": 4,
+          "provenance_nonzeros": 6,
+          "rank": 3,
+          "reading_steps": 1022,
+          "row_reductions": 0,
+          "statevector_constructed": false,
+          "stored_coefficients": 20,
+          "term_visits": 10,
+          "transition_nonzeros": 8,
+          "transition_terms": 40,
+          "truncated_terms": 0,
+          "work_used": 3496
+        },
+        "status": "completed",
+        "value": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "wall_seconds": 0.25665494599979866
+      }
+    },
+    {
+      "case": "cp32",
+      "method": "coordinate",
+      "repetition": 2,
+      "report": {
+        "certificate_bytes": 4644,
+        "certificate_sha256": "cd685aca1e28537869af3717a8da53df1afd7d2938f774f526ae3c742158a43f",
+        "compile_seconds": 0.0222651969997969,
+        "compile_statistics": {
+          "cache_hits": 0,
+          "disjoint_term_visits": 0,
+          "field_products": 208,
+          "field_sums": 64,
+          "gate_scans": 4,
+          "local_images_built": 4,
+          "max_coefficient_bits": 4,
+          "peak_terms": 4,
+          "statevector_constructed": false,
+          "term_visits": 4,
+          "transition_terms": 16,
+          "truncated_terms": 0,
+          "work_used": 296
+        },
+        "end_to_end_seconds": 0.11100877500030037,
+        "peak_worker_rss_bytes": 26521600,
+        "rank": 4,
+        "replay_seconds": 0.08874357800050348,
+        "replay_statistics": {
+          "cache_hits": 0,
+          "disjoint_term_visits": 0,
+          "field_products": 2032,
+          "field_sums": 2032,
+          "gate_scans": 0,
+          "local_images_built": 0,
+          "max_coefficient_bits": 1,
+          "peak_terms": 0,
+          "statevector_constructed": false,
+          "term_visits": 0,
+          "transition_terms": 0,
+          "truncated_terms": 0,
+          "work_used": 4064
+        },
+        "status": "completed",
+        "value": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "wall_seconds": 0.21478845399997226
+      }
+    },
+    {
+      "case": "ch2",
+      "method": "linear",
+      "repetition": 2,
+      "report": {
+        "certificate_bytes": 3578,
+        "certificate_sha256": "e5e6019d89c459e2b9fc83950fddaf600a36304fc37cc01364167acc07d5267d",
+        "compile_seconds": 0.013062832999821694,
+        "compile_statistics": {
+          "basis_nonzeros": 4,
+          "basis_scans": 7,
+          "cache_hits": 4,
+          "disjoint_term_visits": 0,
+          "field_inversions": 1,
+          "field_products": 48,
+          "field_sums": 25,
+          "gate_scans": 4,
+          "local_images_built": 4,
+          "max_coefficient_bits": 2,
+          "parsed_terms": 0,
+          "peak_terms": 4,
+          "provenance_nonzeros": 3,
+          "rank": 2,
+          "reading_steps": 0,
+          "row_reductions": 5,
+          "statevector_constructed": false,
+          "stored_coefficients": 11,
+          "term_visits": 8,
+          "transition_nonzeros": 4,
+          "transition_terms": 32,
+          "truncated_terms": 0,
+          "work_used": 130
+        },
+        "end_to_end_seconds": 0.06142549600008351,
+        "peak_worker_rss_bytes": 26542080,
+        "rank": 2,
+        "replay_seconds": 0.04836266300026182,
+        "replay_statistics": {
+          "basis_nonzeros": 4,
+          "basis_scans": 0,
+          "cache_hits": 1,
+          "disjoint_term_visits": 0,
+          "field_inversions": 0,
+          "field_products": 542,
+          "field_sums": 516,
+          "gate_scans": 3,
+          "local_images_built": 4,
+          "max_coefficient_bits": 2,
+          "parsed_terms": 12,
+          "peak_terms": 4,
+          "provenance_nonzeros": 3,
+          "rank": 2,
+          "reading_steps": 512,
+          "row_reductions": 0,
+          "statevector_constructed": false,
+          "stored_coefficients": 11,
+          "term_visits": 5,
+          "transition_nonzeros": 4,
+          "transition_terms": 20,
+          "truncated_terms": 0,
+          "work_used": 1610
+        },
+        "status": "completed",
+        "value": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "wall_seconds": 0.1668919130006543
+      }
+    },
+    {
+      "case": "ch2",
+      "method": "coordinate",
+      "repetition": 2,
+      "report": {
+        "certificate_bytes": 4538,
+        "certificate_sha256": "15c6b3eda8659b234ab624f43ab4ce20a997f9b9b47e5cc6b6193860bc9d4dc5",
+        "compile_seconds": 0.008016879000024346,
+        "compile_statistics": {
+          "cache_hits": 0,
+          "disjoint_term_visits": 0,
+          "field_products": 0,
+          "field_sums": 0,
+          "gate_scans": 4,
+          "local_images_built": 4,
+          "max_coefficient_bits": 2,
+          "peak_terms": 4,
+          "statevector_constructed": false,
+          "term_visits": 4,
+          "transition_terms": 16,
+          "truncated_terms": 0,
+          "work_used": 24
+        },
+        "end_to_end_seconds": 0.16094124099981855,
+        "peak_worker_rss_bytes": 26533888,
+        "rank": 4,
+        "replay_seconds": 0.1529243619997942,
+        "replay_statistics": {
+          "cache_hits": 0,
+          "disjoint_term_visits": 0,
+          "field_products": 2032,
+          "field_sums": 2032,
+          "gate_scans": 0,
+          "local_images_built": 0,
+          "max_coefficient_bits": 2,
+          "peak_terms": 0,
+          "statevector_constructed": false,
+          "term_visits": 0,
+          "transition_terms": 0,
+          "truncated_terms": 0,
+          "work_used": 4064
+        },
+        "status": "completed",
+        "value": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "wall_seconds": 0.2758173669999451
+      }
+    },
+    {
+      "case": "ch2",
+      "method": "coordinate",
+      "repetition": 3,
+      "report": {
+        "certificate_bytes": 4538,
+        "certificate_sha256": "15c6b3eda8659b234ab624f43ab4ce20a997f9b9b47e5cc6b6193860bc9d4dc5",
+        "compile_seconds": 0.007573470999886922,
+        "compile_statistics": {
+          "cache_hits": 0,
+          "disjoint_term_visits": 0,
+          "field_products": 0,
+          "field_sums": 0,
+          "gate_scans": 4,
+          "local_images_built": 4,
+          "max_coefficient_bits": 2,
+          "peak_terms": 4,
+          "statevector_constructed": false,
+          "term_visits": 4,
+          "transition_terms": 16,
+          "truncated_terms": 0,
+          "work_used": 24
+        },
+        "end_to_end_seconds": 0.15639369600012287,
+        "peak_worker_rss_bytes": 26533888,
+        "rank": 4,
+        "replay_seconds": 0.14882022500023595,
+        "replay_statistics": {
+          "cache_hits": 0,
+          "disjoint_term_visits": 0,
+          "field_products": 2032,
+          "field_sums": 2032,
+          "gate_scans": 0,
+          "local_images_built": 0,
+          "max_coefficient_bits": 2,
+          "peak_terms": 0,
+          "statevector_constructed": false,
+          "term_visits": 0,
+          "transition_terms": 0,
+          "truncated_terms": 0,
+          "work_used": 4064
+        },
+        "status": "completed",
+        "value": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "wall_seconds": 0.2624701200002164
+      }
+    },
+    {
+      "case": "ch2",
+      "method": "linear",
+      "repetition": 3,
+      "report": {
+        "certificate_bytes": 3578,
+        "certificate_sha256": "e5e6019d89c459e2b9fc83950fddaf600a36304fc37cc01364167acc07d5267d",
+        "compile_seconds": 0.013750238999818976,
+        "compile_statistics": {
+          "basis_nonzeros": 4,
+          "basis_scans": 7,
+          "cache_hits": 4,
+          "disjoint_term_visits": 0,
+          "field_inversions": 1,
+          "field_products": 48,
+          "field_sums": 25,
+          "gate_scans": 4,
+          "local_images_built": 4,
+          "max_coefficient_bits": 2,
+          "parsed_terms": 0,
+          "peak_terms": 4,
+          "provenance_nonzeros": 3,
+          "rank": 2,
+          "reading_steps": 0,
+          "row_reductions": 5,
+          "statevector_constructed": false,
+          "stored_coefficients": 11,
+          "term_visits": 8,
+          "transition_nonzeros": 4,
+          "transition_terms": 32,
+          "truncated_terms": 0,
+          "work_used": 130
+        },
+        "end_to_end_seconds": 0.06390330599970184,
+        "peak_worker_rss_bytes": 26554368,
+        "rank": 2,
+        "replay_seconds": 0.05015306699988287,
+        "replay_statistics": {
+          "basis_nonzeros": 4,
+          "basis_scans": 0,
+          "cache_hits": 1,
+          "disjoint_term_visits": 0,
+          "field_inversions": 0,
+          "field_products": 542,
+          "field_sums": 516,
+          "gate_scans": 3,
+          "local_images_built": 4,
+          "max_coefficient_bits": 2,
+          "parsed_terms": 12,
+          "peak_terms": 4,
+          "provenance_nonzeros": 3,
+          "rank": 2,
+          "reading_steps": 512,
+          "row_reductions": 0,
+          "statevector_constructed": false,
+          "stored_coefficients": 11,
+          "term_visits": 5,
+          "transition_nonzeros": 4,
+          "transition_terms": 20,
+          "truncated_terms": 0,
+          "work_used": 1610
+        },
+        "status": "completed",
+        "value": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "wall_seconds": 0.1761886129997947
+      }
+    },
+    {
+      "case": "cp32",
+      "method": "coordinate",
+      "repetition": 3,
+      "report": {
+        "certificate_bytes": 4644,
+        "certificate_sha256": "cd685aca1e28537869af3717a8da53df1afd7d2938f774f526ae3c742158a43f",
+        "compile_seconds": 0.022154190000037488,
+        "compile_statistics": {
+          "cache_hits": 0,
+          "disjoint_term_visits": 0,
+          "field_products": 208,
+          "field_sums": 64,
+          "gate_scans": 4,
+          "local_images_built": 4,
+          "max_coefficient_bits": 4,
+          "peak_terms": 4,
+          "statevector_constructed": false,
+          "term_visits": 4,
+          "transition_terms": 16,
+          "truncated_terms": 0,
+          "work_used": 296
+        },
+        "end_to_end_seconds": 0.11207223600013094,
+        "peak_worker_rss_bytes": 26533888,
+        "rank": 4,
+        "replay_seconds": 0.08991804600009345,
+        "replay_statistics": {
+          "cache_hits": 0,
+          "disjoint_term_visits": 0,
+          "field_products": 2032,
+          "field_sums": 2032,
+          "gate_scans": 0,
+          "local_images_built": 0,
+          "max_coefficient_bits": 1,
+          "peak_terms": 0,
+          "statevector_constructed": false,
+          "term_visits": 0,
+          "transition_terms": 0,
+          "truncated_terms": 0,
+          "work_used": 4064
+        },
+        "status": "completed",
+        "value": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "wall_seconds": 0.22267044299951522
+      }
+    },
+    {
+      "case": "cp32",
+      "method": "linear",
+      "repetition": 3,
+      "report": {
+        "certificate_bytes": 5842,
+        "certificate_sha256": "22480d13d31198767944aab02f89ccf2d8fa1e0b7431547a9e5555c28f5806aa",
+        "compile_seconds": 0.04034539300027973,
+        "compile_statistics": {
+          "basis_nonzeros": 6,
+          "basis_scans": 15,
+          "cache_hits": 8,
+          "disjoint_term_visits": 0,
+          "field_inversions": 2,
+          "field_products": 288,
+          "field_sums": 115,
+          "gate_scans": 6,
+          "local_images_built": 4,
+          "max_coefficient_bits": 5,
+          "parsed_terms": 0,
+          "peak_terms": 4,
+          "provenance_nonzeros": 6,
+          "rank": 3,
+          "reading_steps": 0,
+          "row_reductions": 7,
+          "statevector_constructed": false,
+          "stored_coefficients": 20,
+          "term_visits": 12,
+          "transition_nonzeros": 8,
+          "transition_terms": 48,
+          "truncated_terms": 0,
+          "work_used": 493
+        },
+        "end_to_end_seconds": 0.12526786000034917,
+        "peak_worker_rss_bytes": 26570752,
+        "rank": 3,
+        "replay_seconds": 0.08492246700006945,
+        "replay_statistics": {
+          "basis_nonzeros": 6,
+          "basis_scans": 0,
+          "cache_hits": 6,
+          "disjoint_term_visits": 0,
+          "field_inversions": 0,
+          "field_products": 1292,
+          "field_sums": 1106,
+          "gate_scans": 5,
+          "local_images_built": 4,
+          "max_coefficient_bits": 5,
+          "parsed_terms": 21,
+          "peak_terms": 4,
+          "provenance_nonzeros": 6,
+          "rank": 3,
+          "reading_steps": 1022,
+          "row_reductions": 0,
+          "statevector_constructed": false,
+          "stored_coefficients": 20,
+          "term_visits": 10,
+          "transition_nonzeros": 8,
+          "transition_terms": 40,
+          "truncated_terms": 0,
+          "work_used": 3496
+        },
+        "status": "completed",
+        "value": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "wall_seconds": 0.22211790599976666
+      }
+    },
+    {
+      "case": "ccx3",
+      "method": "coordinate",
+      "repetition": 3,
+      "report": {
+        "certificate_bytes": 184447,
+        "certificate_sha256": "15733094dc2fd1e10f8bb68e8bd6a39de3879b91cb198178cba8eb452fb06afe",
+        "compile_seconds": 0.057249628999670676,
+        "compile_statistics": {
+          "cache_hits": 188,
+          "disjoint_term_visits": 0,
+          "field_products": 0,
+          "field_sums": 0,
+          "gate_scans": 192,
+          "local_images_built": 4,
+          "max_coefficient_bits": 2,
+          "peak_terms": 64,
+          "statevector_constructed": false,
+          "term_visits": 192,
+          "transition_terms": 768,
+          "truncated_terms": 0,
+          "work_used": 1152
+        },
+        "end_to_end_seconds": 3.5594532900004197,
+        "peak_worker_rss_bytes": 28839936,
+        "rank": 64,
+        "replay_seconds": 3.502203661000749,
+        "replay_statistics": {
+          "cache_hits": 0,
+          "disjoint_term_visits": 0,
+          "field_products": 32512,
+          "field_sums": 32512,
+          "gate_scans": 0,
+          "local_images_built": 0,
+          "max_coefficient_bits": 2,
+          "peak_terms": 0,
+          "statevector_constructed": false,
+          "term_visits": 0,
+          "transition_terms": 0,
+          "truncated_terms": 0,
+          "work_used": 65024
+        },
+        "status": "completed",
+        "value": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "wall_seconds": 3.661365609999848
+      }
+    },
+    {
+      "case": "ccx3",
+      "method": "linear",
+      "repetition": 3,
+      "report": {
+        "certificate_bytes": 31628,
+        "certificate_sha256": "a222ab9156cc6e4c5657fe9752beca67790f13f5a52980304f2aa642cd63dfca",
+        "compile_seconds": 0.2726147719995424,
+        "compile_statistics": {
+          "basis_nonzeros": 64,
+          "basis_scans": 343,
+          "cache_hits": 380,
+          "disjoint_term_visits": 0,
+          "field_inversions": 7,
+          "field_products": 2304,
+          "field_sums": 1281,
+          "gate_scans": 48,
+          "local_images_built": 4,
+          "max_coefficient_bits": 2,
+          "parsed_terms": 0,
+          "peak_terms": 36,
+          "provenance_nonzeros": 15,
+          "rank": 8,
+          "reading_steps": 0,
+          "row_reductions": 49,
+          "statevector_constructed": false,
+          "stored_coefficients": 127,
+          "term_visits": 384,
+          "transition_nonzeros": 48,
+          "transition_terms": 1536,
+          "truncated_terms": 0,
+          "work_used": 5952
+        },
+        "end_to_end_seconds": 0.6075686590002078,
+        "peak_worker_rss_bytes": 26992640,
+        "rank": 8,
+        "replay_seconds": 0.3349538870006654,
+        "replay_statistics": {
+          "basis_nonzeros": 64,
+          "basis_scans": 0,
+          "cache_hits": 209,
+          "disjoint_term_visits": 0,
+          "field_inversions": 0,
+          "field_products": 3354,
+          "field_sums": 2384,
+          "gate_scans": 31,
+          "local_images_built": 4,
+          "max_coefficient_bits": 5,
+          "parsed_terms": 128,
+          "peak_terms": 36,
+          "provenance_nonzeros": 15,
+          "rank": 8,
+          "reading_steps": 2096,
+          "row_reductions": 0,
+          "statevector_constructed": false,
+          "stored_coefficients": 127,
+          "term_visits": 213,
+          "transition_nonzeros": 48,
+          "transition_terms": 852,
+          "truncated_terms": 0,
+          "work_used": 9058
+        },
+        "status": "completed",
+        "value": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "wall_seconds": 0.7227011779996246
+      }
+    },
+    {
+      "case": "no_reduction",
+      "method": "coordinate",
+      "repetition": 3,
+      "report": {
+        "certificate_bytes": 2657,
+        "certificate_sha256": "125a170b86220383931f00a43d43fbbf33c16ced249b7aed74bf616f36b4f9b8",
+        "compile_seconds": 0.006252289000258315,
+        "compile_statistics": {
+          "cache_hits": 0,
+          "disjoint_term_visits": 0,
+          "field_products": 42,
+          "field_sums": 12,
+          "gate_scans": 6,
+          "local_images_built": 6,
+          "max_coefficient_bits": 3,
+          "peak_terms": 3,
+          "statevector_constructed": false,
+          "term_visits": 6,
+          "transition_terms": 8,
+          "truncated_terms": 0,
+          "work_used": 74
+        },
+        "end_to_end_seconds": 0.12168711899994378,
+        "peak_worker_rss_bytes": 26521600,
+        "rank": 3,
+        "replay_seconds": 0.11543482999968546,
+        "replay_statistics": {
+          "cache_hits": 0,
+          "disjoint_term_visits": 0,
+          "field_products": 507,
+          "field_sums": 507,
+          "gate_scans": 0,
+          "local_images_built": 0,
+          "max_coefficient_bits": 57,
+          "peak_terms": 0,
+          "statevector_constructed": false,
+          "term_visits": 0,
+          "transition_terms": 0,
+          "truncated_terms": 0,
+          "work_used": 1014
+        },
+        "status": "completed",
+        "value": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "3697097599976835/9007199254740992",
+            "-1831297571801741/18014398509481984",
+            "0",
+            "0",
+            "3483266986975753/36028797018963968",
+            "848305035306731/18014398509481984",
+            "90046845748829/36028797018963968",
+            "-1786656916362291/36028797018963968",
+            "-3650723503764295/72057594037927936",
+            "-2114546369923877/18014398509481984",
+            "-11787783516671839/72057594037927936",
+            "1826362970357457/72057594037927936",
+            "-10284548450052965/72057594037927936",
+            "1017132501613443/18014398509481984",
+            "6631822509338051/72057594037927936",
+            "7719253510218067/72057594037927936"
+          ]
+        },
+        "wall_seconds": 0.21817375299997366
+      }
+    },
+    {
+      "case": "no_reduction",
+      "method": "linear",
+      "repetition": 3,
+      "report": {
+        "certificate_bytes": 4606,
+        "certificate_sha256": "dd34fbb605bc6bb7c48045e01206d4a56092b64087d5947a043385eed1979ae5",
+        "compile_seconds": 0.010103524999976798,
+        "compile_statistics": {
+          "basis_nonzeros": 3,
+          "basis_scans": 31,
+          "cache_hits": 6,
+          "disjoint_term_visits": 0,
+          "field_inversions": 1,
+          "field_products": 67,
+          "field_sums": 26,
+          "gate_scans": 12,
+          "local_images_built": 6,
+          "max_coefficient_bits": 3,
+          "parsed_terms": 0,
+          "peak_terms": 2,
+          "provenance_nonzeros": 4,
+          "rank": 3,
+          "reading_steps": 0,
+          "row_reductions": 13,
+          "statevector_constructed": false,
+          "stored_coefficients": 15,
+          "term_visits": 12,
+          "transition_nonzeros": 8,
+          "transition_terms": 16,
+          "truncated_terms": 0,
+          "work_used": 178
+        },
+        "end_to_end_seconds": 0.1401127279996217,
+        "peak_worker_rss_bytes": 26554368,
+        "rank": 3,
+        "replay_seconds": 0.1300092029996449,
+        "replay_statistics": {
+          "basis_nonzeros": 3,
+          "basis_scans": 0,
+          "cache_hits": 2,
+          "disjoint_term_visits": 0,
+          "field_inversions": 0,
+          "field_products": 569,
+          "field_sums": 520,
+          "gate_scans": 8,
+          "local_images_built": 6,
+          "max_coefficient_bits": 57,
+          "parsed_terms": 16,
+          "peak_terms": 2,
+          "provenance_nonzeros": 4,
+          "rank": 3,
+          "reading_steps": 510,
+          "row_reductions": 0,
+          "statevector_constructed": false,
+          "stored_coefficients": 15,
+          "term_visits": 8,
+          "transition_nonzeros": 8,
+          "transition_terms": 11,
+          "truncated_terms": 0,
+          "work_used": 1642
+        },
+        "status": "completed",
+        "value": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "3697097599976835/9007199254740992",
+            "-1831297571801741/18014398509481984",
+            "0",
+            "0",
+            "3483266986975753/36028797018963968",
+            "848305035306731/18014398509481984",
+            "90046845748829/36028797018963968",
+            "-1786656916362291/36028797018963968",
+            "-3650723503764295/72057594037927936",
+            "-2114546369923877/18014398509481984",
+            "-11787783516671839/72057594037927936",
+            "1826362970357457/72057594037927936",
+            "-10284548450052965/72057594037927936",
+            "1017132501613443/18014398509481984",
+            "6631822509338051/72057594037927936",
+            "7719253510218067/72057594037927936"
+          ]
+        },
+        "wall_seconds": 0.235648695999771
+      }
+    },
+    {
+      "case": "ccx3_cap48",
+      "method": "coordinate",
+      "repetition": 3,
+      "report": {
+        "answers": [],
+        "end_to_end_seconds": 0.052700534999530646,
+        "error": "observer32 future bank exceeds term limit",
+        "failure_phase": "compile",
+        "peak_worker_rss_bytes": 26501120,
+        "statistics": {
+          "cache_hits": 47,
+          "disjoint_term_visits": 0,
+          "field_products": 0,
+          "field_sums": 0,
+          "gate_scans": 51,
+          "local_images_built": 4,
+          "max_coefficient_bits": 2,
+          "peak_terms": 48,
+          "statevector_constructed": false,
+          "term_visits": 51,
+          "transition_terms": 204,
+          "truncated_terms": 0,
+          "work_used": 306
+        },
+        "status": "incomplete",
+        "wall_seconds": 0.16111345199988136
+      }
+    },
+    {
+      "case": "ccx3_cap48",
+      "method": "linear",
+      "repetition": 3,
+      "report": {
+        "certificate_bytes": 31628,
+        "certificate_sha256": "a222ab9156cc6e4c5657fe9752beca67790f13f5a52980304f2aa642cd63dfca",
+        "compile_seconds": 0.29601611899943236,
+        "compile_statistics": {
+          "basis_nonzeros": 64,
+          "basis_scans": 343,
+          "cache_hits": 380,
+          "disjoint_term_visits": 0,
+          "field_inversions": 7,
+          "field_products": 2304,
+          "field_sums": 1281,
+          "gate_scans": 48,
+          "local_images_built": 4,
+          "max_coefficient_bits": 2,
+          "parsed_terms": 0,
+          "peak_terms": 36,
+          "provenance_nonzeros": 15,
+          "rank": 8,
+          "reading_steps": 0,
+          "row_reductions": 49,
+          "statevector_constructed": false,
+          "stored_coefficients": 127,
+          "term_visits": 384,
+          "transition_nonzeros": 48,
+          "transition_terms": 1536,
+          "truncated_terms": 0,
+          "work_used": 5952
+        },
+        "end_to_end_seconds": 0.6567936079991341,
+        "peak_worker_rss_bytes": 27004928,
+        "rank": 8,
+        "replay_seconds": 0.36077748899970175,
+        "replay_statistics": {
+          "basis_nonzeros": 64,
+          "basis_scans": 0,
+          "cache_hits": 209,
+          "disjoint_term_visits": 0,
+          "field_inversions": 0,
+          "field_products": 3354,
+          "field_sums": 2384,
+          "gate_scans": 31,
+          "local_images_built": 4,
+          "max_coefficient_bits": 5,
+          "parsed_terms": 128,
+          "peak_terms": 36,
+          "provenance_nonzeros": 15,
+          "rank": 8,
+          "reading_steps": 2096,
+          "row_reductions": 0,
+          "statevector_constructed": false,
+          "stored_coefficients": 127,
+          "term_visits": 213,
+          "transition_nonzeros": 48,
+          "transition_terms": 852,
+          "truncated_terms": 0,
+          "work_used": 9058
+        },
+        "status": "completed",
+        "value": {
+          "basis": "Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z",
+          "coefficients": [
+            "-1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "wall_seconds": 0.7665979140001582
+      }
+    }
+  ],
+  "schema": "nrqc-linear-observer-results-v1",
+  "started_utc": "2026-10-24T03:57:03.018557+00:00",
+  "summaries": [
+    {
+      "case": "ch2",
+      "certificate_bytes": 4538,
+      "maximum_peak_worker_rss_bytes": 26533888,
+      "median_compile_seconds": 0.007635477999428986,
+      "median_replay_seconds": 0.14882022500023595,
+      "median_wall_seconds": 0.2624701200002164,
+      "method": "coordinate",
+      "rank": 4,
+      "statuses": [
+        "completed",
+        "completed",
+        "completed"
+      ]
+    },
+    {
+      "case": "ch2",
+      "certificate_bytes": 3578,
+      "maximum_peak_worker_rss_bytes": 26554368,
+      "median_compile_seconds": 0.013062832999821694,
+      "median_replay_seconds": 0.04836385100043117,
+      "median_wall_seconds": 0.1668919130006543,
+      "method": "linear",
+      "rank": 2,
+      "statuses": [
+        "completed",
+        "completed",
+        "completed"
+      ]
+    },
+    {
+      "case": "cp32",
+      "certificate_bytes": 4644,
+      "maximum_peak_worker_rss_bytes": 26533888,
+      "median_compile_seconds": 0.022154190000037488,
+      "median_replay_seconds": 0.08874357800050348,
+      "median_wall_seconds": 0.21478845399997226,
+      "method": "coordinate",
+      "rank": 4,
+      "statuses": [
+        "completed",
+        "completed",
+        "completed"
+      ]
+    },
+    {
+      "case": "cp32",
+      "certificate_bytes": 5842,
+      "maximum_peak_worker_rss_bytes": 26574848,
+      "median_compile_seconds": 0.04042903200024739,
+      "median_replay_seconds": 0.08492246700006945,
+      "median_wall_seconds": 0.22211790599976666,
+      "method": "linear",
+      "rank": 3,
+      "statuses": [
+        "completed",
+        "completed",
+        "completed"
+      ]
+    },
+    {
+      "case": "ccx3",
+      "certificate_bytes": 184447,
+      "maximum_peak_worker_rss_bytes": 28839936,
+      "median_compile_seconds": 0.05454767199989874,
+      "median_replay_seconds": 3.313339793000523,
+      "median_wall_seconds": 3.4831128840005476,
+      "method": "coordinate",
+      "rank": 64,
+      "statuses": [
+        "completed",
+        "completed",
+        "completed"
+      ]
+    },
+    {
+      "case": "ccx3",
+      "certificate_bytes": 31628,
+      "maximum_peak_worker_rss_bytes": 27004928,
+      "median_compile_seconds": 0.2726147719995424,
+      "median_replay_seconds": 0.3720911119999073,
+      "median_wall_seconds": 0.7382334229996559,
+      "method": "linear",
+      "rank": 8,
+      "statuses": [
+        "completed",
+        "completed",
+        "completed"
+      ]
+    },
+    {
+      "case": "no_reduction",
+      "certificate_bytes": 2657,
+      "maximum_peak_worker_rss_bytes": 26533888,
+      "median_compile_seconds": 0.006413926999812247,
+      "median_replay_seconds": 0.11797851500068646,
+      "median_wall_seconds": 0.22293524799988518,
+      "method": "coordinate",
+      "rank": 3,
+      "statuses": [
+        "completed",
+        "completed",
+        "completed"
+      ]
+    },
+    {
+      "case": "no_reduction",
+      "certificate_bytes": 4606,
+      "maximum_peak_worker_rss_bytes": 26558464,
+      "median_compile_seconds": 0.01044751500012353,
+      "median_replay_seconds": 0.13821000999996613,
+      "median_wall_seconds": 0.24786154899993562,
+      "method": "linear",
+      "rank": 3,
+      "statuses": [
+        "completed",
+        "completed",
+        "completed"
+      ]
+    },
+    {
+      "case": "ccx3_cap48",
+      "maximum_peak_worker_rss_bytes": 26509312,
+      "median_wall_seconds": 0.16111345199988136,
+      "method": "coordinate",
+      "statuses": [
+        "incomplete",
+        "incomplete",
+        "incomplete"
+      ]
+    },
+    {
+      "case": "ccx3_cap48",
+      "certificate_bytes": 31628,
+      "maximum_peak_worker_rss_bytes": 27004928,
+      "median_compile_seconds": 0.2808354290000352,
+      "median_replay_seconds": 0.36077748899970175,
+      "median_wall_seconds": 0.7586783900005685,
+      "method": "linear",
+      "rank": 8,
+      "statuses": [
+        "completed",
+        "completed",
+        "completed"
+      ]
+    }
+  ]
+}

@@ -2,6 +2,12 @@
 
 ## Native relational calculation engine
 
+The [linear-recognition upgrade](native_relational_qc/LINEAR_RECOGNITION.md)
+constructs the minimum exact linear future-observation space for a declared
+Pauli seed and gate alphabet, with explicit resource limits. A checkable
+provenance/closure certificate and execution API accompany a measured
+64-to-8 reduction in a seven-qubit reversible-gate example.
+
 The [observer-recognition upgrade](native_relational_qc/OBSERVER_RECOGNITION.md)
 extends exact selected measurements to p16/p32 phases without amplitude
 preparation and adds a bounded future-closed Pauli bank compiler. A connected

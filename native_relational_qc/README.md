@@ -1,6 +1,12 @@
 # Native Relational Quantum Computing — v0.1
 
-**Latest: [exact phase observers and future-complete recognition](OBSERVER_RECOGNITION.md).**
+**Latest: [minimum linear future banks](LINEAR_RECOGNITION.md).** Exact row-space
+closure reduces a seven-qubit CCX observer bank from 64 coordinates to eight
+combined readings. A separate verifier checks independence, reachability and
+all-future updates; the execution API replays declared words using the bank.
+Compilation cost, coefficient storage and no-reduction cases remain explicit.
+
+**Previous: [exact phase observers and future-complete recognition](OBSERVER_RECOGNITION.md).**
 `observer32` pulls back selected p16/p32 measurements without amplitude
 preparation. A separate bounded compiler returns exact future-closed Pauli
 banks. Source-pinned morphic/representation/analytic review, paired successes
