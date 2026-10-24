@@ -1,6 +1,6 @@
-# Native cuts on an orthogonal phase register
+# Native cuts and fixed-closure register compression
 
-Author: Monty. Version 0.4. Status: exact software compiler and conditional
+Author: Monty. Version 0.5. Status: exact software compiler and conditional
 coherent realization of wrapped-phase permutations. No physical device.
 
 The [v0.3 code](ENCODING.md) cannot implement every native balanced cut by
@@ -8,6 +8,12 @@ a fixed channel on its two-site state alone. This revision supplies a
 **different encoding** with more distinguishable states. It reuses the
 existing reversible arithmetic and circuit engine, adding the missing
 translation from native phase operations.
+
+The v0.5 extension uses the existing closure constraint to omit one phase
+register, without recreating the compiler or arithmetic. At grid 64 it
+reduces the phase storage from 24 to 18 wires and the total from 28 to 22
+wires. Full-to-compressed conversion has a separate 28-wire peak and gate
+cost. Section 8 gives the construction and its exact limits.
 
 ## 1. Duplicate-work check and reuse
 
@@ -19,6 +25,11 @@ ones already present locally. Differences on older branches concern QEC,
 calibration, tests and documentation. No existing four-phase native-operation
 compiler was found in this scope; deleted branches and other repos were not
 searched in this revision.
+
+Before v0.5, all seven heads were checked again: the six other branches were
+unchanged, while the working branch was at the v0.4 commit. The existing
+notes explicitly marked the compressed layout as unimplemented. The new
+option, conversion codec and qualification therefore extend the same files.
 
 | Existing work | Reused or distinguished here |
 | --- | --- |
@@ -59,17 +70,17 @@ one label probabilistically and is disturbed. A classical mixture
 \(\sum_xp_x|x\rangle\langle x|\) reproduces the v0.1 wrapped-label statistics.
 Preparing coherent superpositions is an additional physical capability.
 
-At \(L=64\), the layout is 24 phase wires plus 4 clean workspace wires:
+At \(L=64\), the default full layout is 24 phase wires plus 4 clean workspace wires:
 **28 logical circuit wires**. Basis labels can also be stored as 24 ordinary
 classical bits. The circuit notation does not mean 28 physical qubits were
 built or that the PC gained a quantum speedup.
 
 With fixed closure sign/twist there are \(L^3\) allowed labels, giving an
-18-bit information lower bound at \(L=64\). A compressed 18-wire compiler
-is **not implemented**; the present layout still uses 24+4 wires.
+18-bit information lower bound at \(L=64\). The optional `omit_mode` layout
+now attains 18 phase wires with the same 4 clean workspace wires: 22 total.
 Gamma, integer winding lifts, event records and path-dependent cost remain
 in the original classical Cell. They are additional storage, absent from the
-28-wire count. The new register is not a complete quantum encoding of Cell.
+register-wire count. Neither layout is a complete quantum encoding of Cell.
 
 ## 3. Compilation identities
 
@@ -197,8 +208,11 @@ The saved [qualification](register_qualification.json) contains the compiled
 gate word, affine witness, known-cell transition, exact coherent output and
 resource counts. [Test output](register_test_results.txt) records the combined
 suite.
-The combined run passes **103 tests in 47.541 seconds**, with no failures,
+The v0.4 run passed **103 tests in 47.541 seconds**, with no failures,
 errors or skips: 16 register tests plus the 87 prior targeted checks.
+The current saved audit additionally covers the v0.5 compression and codec
+tests: **117 tests in 53.016 seconds**, with no failures, errors or skips.
+Its source hashes and unrounded runtime are in the qualification JSON.
 The full native/Shor suite was not rerun; those implementations are unchanged.
 New coverage includes all 256 grid-4 tuples for 46 declared words;
 all 4096 active input pairs for one grid-64 balanced cut and one shear;
@@ -236,3 +250,146 @@ a physical implementation of at least one balanced cut on superpositions,
 independent phase-sensitive readout, and an explicit controller/environment
 for reset and retained path records. The 2056-site plan, general quantum
 simulation limits and Shor results are unchanged.
+
+## 8. Exact compression within a known closure sector
+
+Fix the known residue \(s\) from the closure sign and twist, and choose an
+omitted mode \(o\). Let \(R=\{0,1,2,3\}\setminus\{o\}\). Store the three
+coordinates \(y=(x_j)_{j\in R}\), in increasing mode order, and reconstruct
+\[
+x_o=s-\sum_{j\in R}y_j\pmod L.
+\]
+This is a bijection between \(\mathbb Z_L^3\) and the fixed sector. In
+particular, it loses no wrapped-phase information **within that sector**.
+The coherent embedding
+\[
+J_s|y\rangle=|x(y)\rangle
+\]
+is an isometry because different \(y\)'s give distinct orthogonal labels.
+For every admitted source permutation \(f\), its reduced permutation is
+\(g(y)=(f(x(y)))_R\). Sector preservation gives
+\[
+U_fJ_s=J_sU_g,\qquad U_g^\dagger U_g=I.
+\]
+The equality holds for arbitrary superpositions in the fixed sector and
+when an untouched external reference is present. It does not compress an
+unknown closure sign/twist or a superposition spanning different sectors.
+No new physical postulate is used beyond the v0.4 circuit assumptions.
+
+For the full affine witness \(x'=Ax+b\), the stored map is explicitly
+\[
+M_{ij}=A_{ij}-A_{io},\qquad
+d_i=b_i+A_{io}s\pmod L,\qquad i,j\in R.
+\]
+`stored_affine()` returns this \(3\times3\) matrix and offset.
+The compiler still checks the original full source map at every native
+boundary, so the reduced coordinates do not silently admit forbidden words.
+
+### Direct lowering without a hidden fourth register
+
+The source instructions are first rewritten using the closure identity,
+then passed to the **same** existing gate lowerer. No fourth register is
+materialized during compressed execution.
+
+| Source operation involving \(o\) | Action on retained coordinates |
+| --- | --- |
+| pair_shift(j,o,d) | \(x_j'=x_j+d\) |
+| pair_shift(o,r,d) | \(x_r'=x_r-d\) |
+| pair_cut(j,o,h) | \(x_j'=h-x_j\) |
+| pair_cut(o,r,h) | \(x_r'=2s-h-x_r-2\sum_{j\in R\setminus\{r\}}x_j\) |
+| swap(o,r) | \(x_r'=s-x_r-\sum_{j\in R\setminus\{r\}}x_j\) |
+
+The last two rows are one retained cut followed by two existing shears.
+Operations not involving \(o\) retain their earlier lowering. Source shifts
+by a multiple of \(L\) and shears with coefficient a multiple of \(L\) have
+identity wrapped action; their native events and changed lifts are still
+retained by Cell replay. Single cuts and nontrivial single shears do not
+preserve the whole fixed sector for these grids and remain rejected.
+Read/reset remain outside this reversible compiler.
+
+```python
+cfg = Config(sector=1)
+program = compile_register(
+    (Operation("pair_cut", (0, 2, 0)),),
+    config=cfg, omit_mode=2,
+)
+assert program.n_qubits == 22
+assert len(program.gates) == 24
+assert program.unpack(program.pack((16, 48, 0, 0))) == (16, 48, 0, 0)
+assert program.image((16, 48, 0, 0)) == (48, 48, 32, 0)
+```
+
+The four independent-register layout remains the default. Omitting a mode
+requires explicit `sector=+1` or `sector=-1`. `pack` rejects off-sector
+labels; `unpack` rejects nonzero workspace. Existing source history and
+lift/cost/resource guards still apply when binding a Cell.
+
+### Reversible conversion and the off-sector control
+
+`closure_codec(config, omit_mode)` acts on the **full** layout:
+\[
+C_s:|x_R,x_o\rangle\longmapsto
+|x_R,\ x_o+\sum_{j\in R}x_j-s\rangle.
+\]
+The displayed register ordering is schematic; wire positions remain those
+of the original four-mode layout. This modular-addition map is bijective
+on all inputs. On the fixed sector the omitted register becomes the pure
+zero state, uncorrelated with the retained data and any external reference.
+It can then be detached. The inverse codec restores the dependent fourth
+label from zero. The three retained wire groups are relabelled in increasing
+mode order; physical SWAP routing is not included.
+
+Off-sector input leaves a nonzero residual in the omitted register.
+Superpositions over sectors can entangle it with retained data. Dropping it
+then need not be lossless. The codec performs no measurement, reset,
+postselection or silent projection onto the desired sector.
+
+At grid 64, sign +1 and twist 0, either conversion direction uses 183
+logical gates and a **28-wire peak**. For the example cut, compress →
+24-gate cut → expand totals 390 gates, compared with 59 gates for direct
+full-register execution. The 22-wire figure describes compressed execution
+or direct compressed preparation, not this conversion's peak. Conversion
+therefore makes sense when its cost can be justified by the intended use;
+this revision reports no universal runtime improvement.
+
+### Layout-dependent gate costs
+
+All rows use grid 64, sign +1 and twist 0. Reduced layouts each use 22 wires;
+the full layout uses 28.
+
+| Source word | Full gates | Omit 0 | Omit 1 | Omit 2 | Omit 3 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| pair_cut(0,2,0) | 59 | 154 | 59 | 24 | 59 |
+| pair_shift(0,2,1) | 59 | 41 | 59 | 18 | 59 |
+| swap(0,2) | 18 | 276 | 18 | 276 | 18 |
+| Saved three-operation closed word | 145 | 488 | 368 | 86 | 121 |
+
+The last word is pair_cut(0,2,7), pair_shift(1,3,-5), swap(0,1).
+Omitting the reservoir of the example cut reduces gates; exchanging an
+omitted mode can increase them sharply. The counts compare four declared
+layouts, not all possible circuit optimizations. No automatic physical
+device selection or optimized pulse synthesis is claimed.
+
+### Verification and physical consequence
+
+The 14 new tests cover every grid-4 sector label for 86 generator words
+under all four omissions; all grid-8 labels for one composed word under
+both signs, four twists and four omissions; 4096 active grid-64 pairs per
+omission for another word; and all supported widths. The codec is checked
+on **all** full grid-4 inputs, including off-sector ones, under both signs,
+four twists and four omissions. Negative controls cover dirty workspace,
+wrong sectors, invalid layouts, modified witnesses and source limits.
+
+A direct 22-wire coherent execution retains the exact \(\zeta_{64}\)
+relative phase and restores interference under its inverse. Separately,
+full → compressed → transformed → full agrees in every exact amplitude
+with direct full execution for an eight-term coherent input entangled with
+an external reference, under all four omissions.
+
+The phase-storage reduction is 24→18 bits, or 25%; total logical width is
+28→22, about 21.43%. It exploits a known invariant constraint, not generic
+compression of arbitrary quantum states. Gamma, winding, cost and history
+remain external. An omitted phase reconstructed by definition is **not an
+independent experimental confirmation of closure**. A carrier experiment
+must measure an independent closure residual or validate the preparation
+and transfer laws; otherwise the constraint is only assumed.

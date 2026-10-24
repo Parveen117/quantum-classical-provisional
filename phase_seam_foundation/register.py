@@ -23,6 +23,27 @@ def _config(config):
     return config.grid.bit_length() - 1
 
 
+def _sector_target(config):
+    if config.sector not in (-1, 1):
+        raise ValueError("a fixed closure sign is required")
+    grid = config.grid
+    return ((0 if config.sector == 1 else grid//2) - grid//4*config.twist) % grid
+
+
+def _layout(config, omit_mode):
+    width = _config(config)
+    if omit_mode is not None:
+        index(omit_mode, 4, "omitted mode")
+        _sector_target(config)
+    registers = []; start = 0
+    for mode in range(4):
+        if mode == omit_mode: registers.append(())
+        else:
+            registers.append(tuple(range(start, start+width)))
+            start += width
+    return tuple(registers), tuple(range(start, start+width-2))
+
+
 def _word(operations, config):
     if type(operations) is not tuple:
         raise TypeError("operations must be an immutable tuple")
@@ -75,7 +96,7 @@ def _preserves_sector(rows, offset, config):
     if not config.sector:
         return True
     grid = config.grid
-    target = ((0 if config.sector == 1 else grid//2) - grid//4*config.twist) % grid
+    target = _sector_target(config)
     sums = tuple(sum(row[j] for row in rows) % grid for j in range(4))
     return len(set(sums)) == 1 and (sums[0]*target + sum(offset) - target) % grid == 0
 
@@ -114,6 +135,41 @@ def _primitive_word(op, registers, scratch, grid):
     return tuple(out)
 
 
+def _sector_word(op, omitted, config):
+    """Eliminate x_omitted = target - sum(retained) before gate lowering.
+
+    Called only after whole-sector admissibility has passed. The generated
+    operations are arithmetic instructions, not extra native Cell events.
+    """
+    kind, args = op.kind, op.args
+    if kind == "pair_shift":
+        j, s, d = args
+        if j == omitted: return (Operation("shift", (s, -d)),)
+        if s == omitted: return (Operation("shift", (j, d)),)
+    elif kind == "pair_cut":
+        j, s, h = args
+        if s == omitted: return (Operation("cut", (j, h)),)
+        if j == omitted:
+            other = tuple(m for m in range(4) if m not in (omitted, s))
+            return (Operation("cut", (s, 2*_sector_target(config)-h)),) + tuple(
+                Operation("shear", (m, s, -2, 0)) for m in other)
+    elif kind == "swap":
+        j, s = args
+        if j == s: return ()
+        if omitted in args:
+            retained = s if j == omitted else j
+            other = tuple(m for m in range(4) if m not in (omitted, retained))
+            return (Operation("cut", (retained, _sector_target(config))),) + tuple(
+                Operation("shear", (m, retained, -1, 0)) for m in other)
+    elif kind == "shift" and args[1] % config.grid == 0:
+        return ()
+    elif kind == "shear" and args[2] % config.grid == 0:
+        return ()
+    if omitted in (args[:2] if kind in ("shear", "swap", "pair_cut", "pair_shift") else args[:1]):
+        raise ValueError("no lowering for this operation on the omitted mode")
+    return (op,)
+
+
 @dataclass(frozen=True)
 class RegisterProgram:
     config: Config
@@ -121,37 +177,55 @@ class RegisterProgram:
     gates: tuple
     matrix: tuple
     offset: tuple
+    omit_mode: object = None
 
     @property
     def width(self): return _config(self.config)
 
     @property
     def registers(self):
-        w = self.width
-        return tuple(tuple(range(j*w, (j+1)*w)) for j in range(4))
+        return _layout(self.config, self.omit_mode)[0]
 
     @property
-    def scratch(self): return tuple(range(4*self.width, 5*self.width-2))
+    def scratch(self): return _layout(self.config, self.omit_mode)[1]
 
     @property
-    def n_qubits(self): return 4*self.width + len(self.scratch)
+    def phase_bits(self): return (4 if self.omit_mode is None else 3)*self.width
+
+    @property
+    def n_qubits(self): return self.phase_bits + len(self.scratch)
 
     def pack(self, phases):
         if type(phases) is not tuple or len(phases) != 4:
             raise ValueError("four wrapped phase labels required")
         for x in phases: index(x, self.config.grid, "wrapped phase")
-        return sum(x << (j*self.width) for j, x in enumerate(phases))
+        registers = self.registers
+        if self.omit_mode is not None and sum(phases) % self.config.grid != _sector_target(self.config):
+            raise ValueError("phase labels are outside the encoded closure sector")
+        return sum(x << wires[0] for x, wires in zip(phases, registers) if wires)
 
     def unpack(self, label):
         integer(label, "basis label")
-        if not 0 <= label < 1 << (4*self.width):
+        if not 0 <= label < 1 << self.phase_bits:
             raise ValueError("basis label includes nonzero workspace or is out of range")
-        return tuple((label >> (j*self.width)) & (self.config.grid-1) for j in range(4))
+        phases = [(label >> wires[0]) & (self.config.grid-1) if wires else 0 for wires in self.registers]
+        if self.omit_mode is not None:
+            phases[self.omit_mode] = (_sector_target(self.config) - sum(phases)) % self.config.grid
+        return tuple(phases)
 
     def image(self, phases):
         self.pack(phases)
         return tuple((sum(a*x for a, x in zip(row, phases))+b) % self.config.grid
                      for row, b in zip(self.matrix, self.offset))
+
+    def stored_affine(self):
+        """Map on stored coordinates after exact closure substitution."""
+        if self.omit_mode is None: return self.matrix, self.offset
+        omitted = self.omit_mode; target = _sector_target(self.config)
+        kept = tuple(j for j in range(4) if j != omitted); grid = self.config.grid
+        rows = tuple(tuple((self.matrix[i][j]-self.matrix[i][omitted]) % grid for j in kept) for i in kept)
+        offset = tuple((self.offset[i]+self.matrix[i][omitted]*target) % grid for i in kept)
+        return rows, offset
 
     def to_circuit(self, *, inverse=False):
         """Fresh existing IR; validates witness before returning any circuit.
@@ -168,35 +242,66 @@ class RegisterProgram:
 
     def resources(self):
         return dict(grid=self.config.grid, bits_per_mode=self.width,
-                    phase_bits=4*self.width, clean_scratch_bits=len(self.scratch),
+                    phase_bits=self.phase_bits, clean_scratch_bits=len(self.scratch),
                     total_logical_wires=self.n_qubits, source_operations=len(self.operations),
                     elementary_gates=len(self.gates), gate_counts=dict(Counter(n for n, _ in self.gates)),
                     full_phase_dimension=self.config.grid**4,
+                    encoded_phase_labels=1 << self.phase_bits,
+                    omitted_mode=self.omit_mode,
                     fixed_sector_information_bits=3*self.width,
-                    compressed_sector_layout_implemented=False,
+                    compressed_sector_layout_implemented=self.omit_mode is not None,
                     gamma_lifts_history="external original Cell; not included in wire count",
                     physical_qubits_built=0)
 
 
-def compile_register(operations, *, config=None, max_gates=MAX_GATES):
+def compile_register(operations, *, config=None, max_gates=MAX_GATES, omit_mode=None):
+    """Full layout by default; omit one mode only in a fixed closure sector."""
     config = Config() if config is None else config
-    width = _config(config); _word(operations, config)
+    registers, scratch = _layout(config, omit_mode); _word(operations, config)
     integer(max_gates, "gate cap")
     if not 0 <= max_gates <= MAX_GATES: raise ValueError("gate cap out of range")
     rows = tuple(tuple(int(i == j) for j in range(4)) for i in range(4))
     offset = (0, 0, 0, 0)
-    registers = tuple(tuple(range(j*width, (j+1)*width)) for j in range(4))
-    scratch = tuple(range(4*width, 5*width-2))
     gates = []
     for op in operations:
         rows, offset = _affine_step(rows, offset, op, config.grid)
         if not _preserves_sector(rows, offset, config):
             raise ValueError("operation prefix does not preserve the whole required closure sector")
+        lower = (op,) if omit_mode is None else _sector_word(op, omit_mode, config)
+        for instruction in lower:
+            block = _primitive_word(instruction, registers, scratch, config.grid)
+            if len(gates) + len(block) > max_gates:
+                raise ResourceLimit("register gate budget exceeded; no circuit returned")
+            gates.extend(block)
+    return RegisterProgram(config, operations, tuple(gates), rows, offset, omit_mode)
+
+
+def closure_codec(config, omit_mode, *, inverse=False, max_gates=MAX_GATES):
+    """Full-register unitary: x_omitted <- sum(x)-sector_target (mod grid).
+
+    On the declared sector the omitted register becomes zero and may be
+    detached. Outside that sector it retains a nonzero syndrome; no erasure
+    or sector projection is performed. The inverse restores four labels from
+    three plus zero omitted register. Conversion itself still uses full width.
+    """
+    _layout(config, omit_mode)
+    if omit_mode is None: raise ValueError("codec requires an omitted mode")
+    if type(inverse) is not bool: raise TypeError("inverse must be bool")
+    integer(max_gates, "codec gate cap")
+    if not 0 <= max_gates <= MAX_GATES: raise ValueError("codec gate cap out of range")
+    target = _sector_target(config)
+    registers, scratch = _layout(config, None)
+    word = tuple(Operation("shear", (m, omit_mode, 1, 0)) for m in range(4) if m != omit_mode)
+    word += (Operation("shift", (omit_mode, -target)),)
+    gates = []
+    for op in word:
         block = _primitive_word(op, registers, scratch, config.grid)
         if len(gates) + len(block) > max_gates:
-            raise ResourceLimit("register gate budget exceeded; no circuit returned")
+            raise ResourceLimit("closure codec gate budget exceeded; no circuit returned")
         gates.extend(block)
-    return RegisterProgram(config, operations, tuple(gates), rows, offset)
+    circuit = CompactCircuit(4*_config(config)+len(scratch))
+    for name, qs in reversed(gates) if inverse else gates: circuit.add(name, *qs)
+    return circuit
 
 
 def verify_program(program):
@@ -221,7 +326,7 @@ def verify_program(program):
             for x in row: index(x, program.config.grid, "affine coefficient")
         if type(program.offset) is not tuple or len(program.offset) != 4: return False
         for x in program.offset: index(x, program.config.grid, "affine offset")
-        return compile_register(program.operations, config=program.config) == program
+        return compile_register(program.operations, config=program.config, omit_mode=program.omit_mode) == program
     except (ValueError, TypeError, AttributeError, IndexError):
         return False
 

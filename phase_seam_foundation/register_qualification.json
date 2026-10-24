@@ -1,5 +1,5 @@
 {
-  "schema": "phase-seam-register-v0.4",
+  "schema": "phase-seam-register-v0.5",
   "author": "Monty",
   "status": "wrapped-phase permutation compiler reusing existing native arithmetic",
   "assumptions": [
@@ -1337,6 +1337,8 @@
         "cx": 1
       },
       "full_phase_dimension": 16777216,
+      "encoded_phase_labels": 16777216,
+      "omitted_mode": null,
       "fixed_sector_information_bits": 18,
       "compressed_sector_layout_implemented": false,
       "gamma_lifts_history": "external original Cell; not included in wire count",
@@ -1356,6 +1358,8 @@
         "x": 7
       },
       "full_phase_dimension": 16777216,
+      "encoded_phase_labels": 16777216,
+      "omitted_mode": null,
       "fixed_sector_information_bits": 18,
       "compressed_sector_layout_implemented": false,
       "gamma_lifts_history": "external original Cell; not included in wire count",
@@ -1375,6 +1379,8 @@
         "x": 4
       },
       "full_phase_dimension": 16777216,
+      "encoded_phase_labels": 16777216,
+      "omitted_mode": null,
       "fixed_sector_information_bits": 18,
       "compressed_sector_layout_implemented": false,
       "gamma_lifts_history": "external original Cell; not included in wire count",
@@ -1394,11 +1400,421 @@
         "x": 18
       },
       "full_phase_dimension": 16777216,
+      "encoded_phase_labels": 16777216,
+      "omitted_mode": null,
       "fixed_sector_information_bits": 18,
       "compressed_sector_layout_implemented": false,
       "gamma_lifts_history": "external original Cell; not included in wire count",
       "physical_qubits_built": 0
     }
+  },
+  "sector_compression": {
+    "status": "fixed-closure exact coordinate elimination inside the existing register compiler",
+    "closure": {
+      "sign": 1,
+      "twist": 0,
+      "sum_residue": 0,
+      "omitted_mode": 2,
+      "identity": "x2 = -(x0+x1+x3) mod 64"
+    },
+    "full_resources": {
+      "grid": 64,
+      "bits_per_mode": 6,
+      "phase_bits": 24,
+      "clean_scratch_bits": 4,
+      "total_logical_wires": 28,
+      "source_operations": 1,
+      "elementary_gates": 59,
+      "gate_counts": {
+        "ccx": 46,
+        "cx": 6,
+        "x": 7
+      },
+      "full_phase_dimension": 16777216,
+      "encoded_phase_labels": 16777216,
+      "omitted_mode": null,
+      "fixed_sector_information_bits": 18,
+      "compressed_sector_layout_implemented": false,
+      "gamma_lifts_history": "external original Cell; not included in wire count",
+      "physical_qubits_built": 0
+    },
+    "compressed_resources": {
+      "grid": 64,
+      "bits_per_mode": 6,
+      "phase_bits": 18,
+      "clean_scratch_bits": 4,
+      "total_logical_wires": 22,
+      "source_operations": 1,
+      "elementary_gates": 24,
+      "gate_counts": {
+        "x": 7,
+        "ccx": 16,
+        "cx": 1
+      },
+      "full_phase_dimension": 16777216,
+      "encoded_phase_labels": 262144,
+      "omitted_mode": 2,
+      "fixed_sector_information_bits": 18,
+      "compressed_sector_layout_implemented": true,
+      "gamma_lifts_history": "external original Cell; not included in wire count",
+      "physical_qubits_built": 0
+    },
+    "stored_affine_matrix": [
+      [
+        63,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "stored_affine_offset": [
+      0,
+      0,
+      0
+    ],
+    "elementary_operations": [
+      [
+        "x",
+        [
+          0
+        ]
+      ],
+      [
+        "x",
+        [
+          1
+        ]
+      ],
+      [
+        "x",
+        [
+          2
+        ]
+      ],
+      [
+        "x",
+        [
+          3
+        ]
+      ],
+      [
+        "x",
+        [
+          4
+        ]
+      ],
+      [
+        "x",
+        [
+          5
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          1,
+          18
+        ]
+      ],
+      [
+        "ccx",
+        [
+          18,
+          2,
+          19
+        ]
+      ],
+      [
+        "ccx",
+        [
+          19,
+          3,
+          20
+        ]
+      ],
+      [
+        "ccx",
+        [
+          20,
+          4,
+          5
+        ]
+      ],
+      [
+        "ccx",
+        [
+          19,
+          3,
+          20
+        ]
+      ],
+      [
+        "ccx",
+        [
+          18,
+          2,
+          19
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          1,
+          18
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          1,
+          18
+        ]
+      ],
+      [
+        "ccx",
+        [
+          18,
+          2,
+          19
+        ]
+      ],
+      [
+        "ccx",
+        [
+          19,
+          3,
+          4
+        ]
+      ],
+      [
+        "ccx",
+        [
+          18,
+          2,
+          19
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          1,
+          18
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          1,
+          18
+        ]
+      ],
+      [
+        "ccx",
+        [
+          18,
+          2,
+          3
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          1,
+          18
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        "x",
+        [
+          0
+        ]
+      ]
+    ],
+    "source_gate_binding_verified": true,
+    "coherent_control": {
+      "actual_amplitudes": [
+        {
+          "labels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "amplitude": {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        },
+        {
+          "labels": [
+            63,
+            0,
+            1,
+            0
+          ],
+          "amplitude": {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        }
+      ],
+      "exact_amplitude_match": true,
+      "inverse_interference_restores_zero": true,
+      "execution_logical_wires": 22,
+      "evidence_class": "LOCAL_IDEAL_CALCULATION"
+    },
+    "codec": {
+      "peak_logical_wires": 28,
+      "compression_gates": 183,
+      "expansion_gates": 183,
+      "on_sector": "omitted register and workspace end zero",
+      "off_sector": "omitted register retains sum(x)-s, not discarded",
+      "full_compress_apply_expand_gates": 390,
+      "comparison": "conversion costs counted separately; direct compressed preparation uses 22 wires"
+    },
+    "gate_tradeoffs": {
+      "balanced_cut_axis_zero": {
+        "full_gates": 59,
+        "gates_by_omitted_mode": {
+          "0": 154,
+          "1": 59,
+          "2": 24,
+          "3": 59
+        }
+      },
+      "paired_shift": {
+        "full_gates": 59,
+        "gates_by_omitted_mode": {
+          "0": 41,
+          "1": 59,
+          "2": 18,
+          "3": 59
+        }
+      },
+      "mode_swap": {
+        "full_gates": 18,
+        "gates_by_omitted_mode": {
+          "0": 276,
+          "1": 18,
+          "2": 276,
+          "3": 18
+        }
+      },
+      "three_operation_closed_word": {
+        "full_gates": 145,
+        "gates_by_omitted_mode": {
+          "0": 488,
+          "1": 368,
+          "2": 86,
+          "3": 121
+        }
+      }
+    },
+    "no_new_physical_postulate": true,
+    "restrictions": [
+      "fixed sign and twist are known",
+      "only operations preserving the whole sector at every source boundary",
+      "no cross-sector superposition compression",
+      "Gamma, winding, event/cost data remain external",
+      "no new physical preparation or measurement law",
+      "reconstructed omitted label is derived, not an independent closure measurement"
+    ]
   },
   "limits": {
     "power_of_two_grids": [
@@ -1421,7 +1837,7 @@
       "read/reset instruments",
       "Gamma quantum storage",
       "quantum winding/history/cost register",
-      "18-bit compressed closure layout"
+      "unknown-sector compression"
     ]
   },
   "open": [
@@ -1431,18 +1847,18 @@
     "native probability and time/energy laws independent of circuit assumptions"
   ],
   "validation": {
-    "tests": 103,
+    "tests": 117,
     "failures": 0,
     "errors": 0,
     "skipped": 0,
     "passed": true,
-    "seconds": 47.54102020800019,
-    "scope": "register, v0.3, v0.2, v0.1 and calculator smoke; full native/Shor suite not rerun"
+    "seconds": 53.01584479799931,
+    "scope": "compressed/full register, v0.3, v0.2, v0.1 and calculator smoke; full native/Shor suite not rerun"
   },
   "checked_sources_sha256": {
-    "phase_seam_foundation/register.py": "6aa167f5ebb1f1552cbd3632bbad8cbaa7f779568303e30a485024c0c2f9a657",
-    "phase_seam_foundation/register_qualification.py": "2fd1445b87c81247d24bce38bc32e4c3d7e5053867a45953037bdb7458783b11",
-    "phase_seam_foundation/register_source_manifest.json": "971a047ac0a2470c20597587c61a366857320e3f2994ffa954d431bc44349f3d",
+    "phase_seam_foundation/register.py": "1489c0dc2163a2795f1f53e9ed5bb0fc4f999fc39e7a7e834497e02ddc3fa88b",
+    "phase_seam_foundation/register_qualification.py": "4dd6eef16cf86b38dc5ac1309353723791529ddd07c18de1dfca9e35afe90ce4",
+    "phase_seam_foundation/register_source_manifest.json": "36d51bb4d31381e6011cdd40e326291ac2e06002c3f615c9fa3bf48ac8970555",
     "phase_seam_foundation/model.py": "efae81124f5d2058b7e728691b5b1feceee74a3d194835a7f2a9d2809fff6de2",
     "phase_seam_foundation/encoding.py": "93cd7ebca26e252756bdbaa9c8686a866826f7c9c8288e9881af0fa7ea8488c7",
     "phase_seam_foundation/joint.py": "53548114a84dfb24022acee866c10b67f0bd71ec9b9b203c014cf76af8ccbb36",
@@ -1453,7 +1869,8 @@
     "native_relational_qc/cyclotomic.py": "36a9f93fb9b6362a6141f13f4aef677de9f19642f6ea01ebb761614acab4ea86",
     "native_relational_qc/cyclotomic32.py": "33e203a7280bbe8341e37cb357f1bb6bfcaba9e695ff5144050e3a087733ab76",
     "native_relational_qc/cyclotomic64.py": "8fc9c42627feee330b00f1b56559031cc442746e830081eae09f535115d74e52",
-    "benchmarks/phase_seam_register_audit.py": "e574dd18939904f6e2bec970978fd85a312b2e4c8cf9126c550f399785b98571",
+    "benchmarks/phase_seam_register_audit.py": "66a6f830dd5bbd7ecf6d51decacc66a4d339804d656346692f60dcd924c95a48",
+    "tests/test_phase_seam_sector.py": "b1f536d0691da6e9d18a8e9607403d261c5933bf330abcbeb9bf080794df6a8f",
     "tests/test_phase_seam_register.py": "06be45bb6597e18dad072cb11789baa2c300a44179c70dae054a10adfef5971c",
     "tests/test_phase_seam_encoding.py": "f933c3cbafa2238d29a0db29bb2e93ce7b2cfb621529b439a4653aa881ba1019",
     "tests/test_phase_seam_joint.py": "e0ff847109cfa78a91b0b7766171830a1dc52e12c90a1e90c6a5bcb0235ae409",

@@ -1,3 +1,17 @@
+test_all_grid4_full_inputs_syndrome_retention_and_inverse (test_phase_seam_sector.ClosureCodecTests.test_all_grid4_full_inputs_syndrome_retention_and_inverse) ... ok
+test_codec_guards (test_phase_seam_sector.ClosureCodecTests.test_codec_guards) ... ok
+test_coherent_full_compress_apply_expand_equals_full_operation (test_phase_seam_sector.ClosureCodecTests.test_coherent_full_compress_apply_expand_equals_full_operation) ... ok
+test_grid64_codec_roundtrip_for_all_single_register_values (test_phase_seam_sector.ClosureCodecTests.test_grid64_codec_roundtrip_for_all_single_register_values) ... ok
+test_all_grid4_generators_on_all_sector_labels_each_omission (test_phase_seam_sector.SectorBasisTests.test_all_grid4_generators_on_all_sector_labels_each_omission) ... ok
+test_all_grid8_labels_signs_twists_and_composed_words (test_phase_seam_sector.SectorBasisTests.test_all_grid8_labels_signs_twists_and_composed_words) ... ok
+test_all_supported_widths_and_source_inverses (test_phase_seam_sector.SectorBasisTests.test_all_supported_widths_and_source_inverses) ... ok
+test_grid64_all_active_pairs_for_each_omission (test_phase_seam_sector.SectorBasisTests.test_grid64_all_active_pairs_for_each_omission) ... ok
+test_scratch_really_needed_and_never_silently_reset (test_phase_seam_sector.SectorBasisTests.test_scratch_really_needed_and_never_silently_reset) ... ok
+test_compressed_execution_retains_phase_and_interference (test_phase_seam_sector.SectorContractTests.test_compressed_execution_retains_phase_and_interference) ... ok
+test_gate_cap_native_resource_failures_and_tampering (test_phase_seam_sector.SectorContractTests.test_gate_cap_native_resource_failures_and_tampering) ... ok
+test_reject_unfixed_sector_invalid_omission_and_cross_sector_labels (test_phase_seam_sector.SectorContractTests.test_reject_unfixed_sector_invalid_omission_and_cross_sector_labels) ... ok
+test_source_cell_cost_winding_and_history_stay_external (test_phase_seam_sector.SectorContractTests.test_source_cell_cost_winding_and_history_stay_external) ... ok
+test_wire_gate_counts_and_full_layout_compatibility (test_phase_seam_sector.SectorContractTests.test_wire_gate_counts_and_full_layout_compatibility) ... ok
 test_all_grid64_active_pairs_for_balanced_cut_and_shear (test_phase_seam_register.RegisterBasisTests.test_all_grid64_active_pairs_for_balanced_cut_and_shear) ... ok
 test_dirty_scratch_changes_promise_but_inverse_still_restores (test_phase_seam_register.RegisterBasisTests.test_dirty_scratch_changes_promise_but_inverse_still_restores) ... ok
 test_every_grid4_phase_tuple_for_generators_and_composition (test_phase_seam_register.RegisterBasisTests.test_every_grid4_phase_tuple_for_generators_and_composition) ... ok
@@ -103,6 +117,6 @@ test_large_cancellation_keeps_certified_interval (test_native_calculator.Decimal
 test_signed_rational_and_irrational_enclosures (test_native_calculator.DecimalEnclosureTests.test_signed_rational_and_irrational_enclosures) ... ok
 
 ----------------------------------------------------------------------
-Ran 103 tests in 47.541s
+Ran 117 tests in 53.016s
 
 OK

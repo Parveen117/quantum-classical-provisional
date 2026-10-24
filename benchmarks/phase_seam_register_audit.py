@@ -14,7 +14,7 @@ from phase_seam_foundation.register_qualification import report
 
 def main():
     suite=unittest.TestSuite(); loader=unittest.TestLoader()
-    patterns=("test_phase_seam_register.py","test_phase_seam_encoding.py",
+    patterns=("test_phase_seam_sector.py","test_phase_seam_register.py","test_phase_seam_encoding.py",
               "test_phase_seam_joint.py","test_phase_seam_foundation.py","test_native_calculator.py")
     for pattern in patterns:
         suite.addTests(loader.discover(str(ROOT/"tests"),pattern=pattern))
@@ -24,7 +24,7 @@ def main():
     out=report()
     out["validation"]=dict(tests=result.testsRun,failures=len(result.failures),errors=len(result.errors),
                           skipped=len(result.skipped),passed=result.wasSuccessful(),seconds=elapsed,
-                          scope="register, v0.3, v0.2, v0.1 and calculator smoke; full native/Shor suite not rerun")
+                          scope="compressed/full register, v0.3, v0.2, v0.1 and calculator smoke; full native/Shor suite not rerun")
     names=("phase_seam_foundation/register.py","phase_seam_foundation/register_qualification.py",
            "phase_seam_foundation/register_source_manifest.json","phase_seam_foundation/model.py",
            "phase_seam_foundation/encoding.py","phase_seam_foundation/joint.py",

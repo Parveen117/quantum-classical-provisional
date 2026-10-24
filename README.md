@@ -20,8 +20,13 @@ exact balanced-cut counterexample to full channel equivalence for that map.
 The [orthogonal phase-register compiler](phase_seam_foundation/REGISTER.md)
 now lowers native cuts, balanced cuts, shifts, swaps and shears through the
 existing reversible arithmetic. It uses a different, larger label encoding:
-grid 64 requires 24 phase wires and 4 clean workspace wires. The combined
-audit passes 103 tests, including exact coherent phase retention. Gamma and
+grid 64 uses 24 phase + 4 clean workspace wires by default. With known fixed
+closure, the same compiler now omits one dependent mode: 18 phase + 4
+workspace wires, 22 total. The example balanced cut drops from 59 to 24
+logical gates when its reservoir is omitted; other layouts can cost more.
+Reversible conversion retains off-sector residuals and has its own 28-wire
+peak. The combined audit passes 117 tests, including exact coherent
+compression and phase retention. Gamma and
 lift/history/cost data remain in the original classical Cell; this is a
 logical circuit design, not fabricated quantum hardware.
 

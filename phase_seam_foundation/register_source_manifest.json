@@ -1,8 +1,8 @@
 {
-  "schema": "phase-seam-register-source-v1",
+  "schema": "phase-seam-register-source-v2",
   "author": "Monty",
   "date": "2026-10-24",
-  "parent_commit": "e7b1651068b068f4d080702251cbad8cff792112",
+  "parent_commit": "b3e3e02cb34551865c3f2158eb3d0fcff42de6c0",
   "duplicate_audit": {
     "scope": "All seven branch-tip recursive trees; local Python/Markdown content search; read existing arithmetic, memory experiments, observer transport and master README. No claim about deleted branches or other repositories.",
     "trees": [
@@ -32,8 +32,8 @@
       },
       {
         "branch": "codex/native-relational-qc-v1-20261018",
-        "commit": "e7b1651068b068f4d080702251cbad8cff792112",
-        "files": 396,
+        "commit": "b3e3e02cb34551865c3f2158eb3d0fcff42de6c0",
+        "files": 404,
         "truncated": false
       },
       {
@@ -96,7 +96,10 @@
     "Fixed clean scratch pool of width-2 bits",
     "Conventional coherent permutation extension when interpreted quantum mechanically",
     "Whole-sector affine check at every source-operation boundary",
-    "Gamma, winding, cost and source history retained in the original classical Cell"
+    "Gamma, winding, cost and source history retained in the original classical Cell",
+    "Optional omission of one phase coordinate in a fixed closure sector",
+    "Residual-sum codec for full-to-compressed conversion, peak conversion width counted",
+    "Omitted-mode choice changes gate cost; all four choices reported"
   ],
   "prior_methods": [
     {
@@ -106,5 +109,16 @@
       "scope": "Established reversible circuit synthesis; no priority claim for permutation-to-unitary embedding."
     }
   ],
-  "claim_boundary": "A new adapter to existing arithmetic, not a new quantum postulate, physical device, quantum speedup, conversion from v0.3 code, or complete phase/seam/history quantum encoding."
+  "claim_boundary": "A new adapter to existing arithmetic, not a new quantum postulate, physical device, quantum speedup, conversion from v0.3 code, or complete phase/seam/history quantum encoding.",
+  "v0_5_duplicate_check": {
+    "method": "Rechecked all seven branch heads; six other tips unchanged from v0.4 tree audit. Searched working branch Python/Markdown for compressed-sector compiler and codec. Existing REGISTER.md explicitly identified the 18-bit layout as unimplemented.",
+    "finding": "Extend register.py, qualification and audit in place. No second compiler or arithmetic implementation.",
+    "changes": [
+      "optional omit_mode layout",
+      "exact elimination rules",
+      "coherent closure codec retaining off-sector syndrome",
+      "stored three-coordinate affine map"
+    ],
+    "assumptions": "known fixed closure sign and twist; existing coherent gate and clean-workspace assumptions retained; no new physical postulate"
+  }
 }

@@ -17,6 +17,10 @@ The [phase-register adapter](../phase_seam_foundation/REGISTER.md) reuses this
 calculator's existing constant adder, gate IR and coherent test engine to
 compile native phase cuts and other reversible operations. Its larger
 orthogonal encoding uses 24 phase + 4 clean workspace wires at grid 64.
+With a known fixed closure sector, `omit_mode` now reduces this to 18 phase
++ 4 workspace wires through the same compiler. A reversible codec retains
+off-sector residuals; conversion peaks at the original 28 wires. The combined
+audit passes 117 tests, including full/compressed coherent equivalence.
 The original two-site code and its obstruction remain unchanged.
 
 **Latest: [six-bit Shor and proof-traced arithmetic rewrites](PHASE64_REWRITE.md).**

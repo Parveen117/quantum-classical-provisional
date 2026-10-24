@@ -25,6 +25,16 @@ Gamma and unwrapped path/cost/history stay in the original classical Cell.
 Closure holds at source-operation boundaries; elementary gate steps may
 leave the sector. A strictly constrained carrier needs additional design.
 
+The v0.5 fixed-sector layout reduces stored phase coordinates to three:
+18 phase + 4 clean workspace wires at grid 64. For pair_cut(0,2,0), omitting
+mode 2 reduces the count to 24 logical gates. A reversible full-register
+codec zeros the omitted register exactly on the known sector and otherwise
+retains the closure residual. Conversion still peaks at 28 wires; each
+direction takes 183 logical gates for sign +1, twist 0. Direct compressed
+preparation and physical gate costs remain separate engineering requirements.
+Reconstructing a fourth phase from the constraint is not an independent
+measurement confirming that constraint.
+
 The proposed hardware primitive stores **four controllable cyclic modes**, a
 seam calibration and retained history. It is not specified as four qubits.
 Its required actions follow the finite operational model in

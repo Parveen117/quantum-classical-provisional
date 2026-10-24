@@ -1,6 +1,20 @@
 # Phase–seam foundation prototype
 
-**New: [native cuts on an orthogonal phase register](REGISTER.md).**
+**New: [fixed-closure compression in the phase-register compiler](REGISTER.md).**
+The optional `omit_mode` layout derives one phase from the other three and
+the known closure sum. At grid 64 it uses **18 phase + 4 workspace = 22
+logical wires**, down from 28. The example pair_cut(0,2,0) uses 24 rather than
+59 gates when mode 2 is omitted. Other omission choices can increase gate
+cost. Reversible conversion retains any off-sector residual; its 28-wire
+peak and conversion gates are counted separately. Full/compressed execution
+agrees in exact amplitudes, including a coherent external reference.
+
+The v0.5 combined audit passes **117 tests in 53.016 seconds**, with no
+failures, errors or skips. The known-sector constraint and earlier quantum
+circuit assumptions remain explicit; no new physical postulate is added.
+Gamma, winding and event/cost history remain in the original classical Cell.
+
+**Previous: [native cuts on an orthogonal phase register](REGISTER.md).**
 An adapter to the existing reversible arithmetic compiles cuts, balanced cuts,
 shifts, swaps and shears, with whole-sector closure checks. At grid 64 the
 layout uses 24 phase wires + 4 clean workspace wires. Gamma, lifts, cost and
@@ -9,7 +23,7 @@ coherent circuit semantics explicitly assumed; the old code's obstruction
 remains valid. The combined v0.4 audit passes **103 tests** in 47.541 seconds,
 with no failures, errors or skips.
 
-Run `python benchmarks/phase_seam_register_audit.py`.
+Run `python benchmarks/phase_seam_register_audit.py` for the current combined audit.
 [Qualification](register_qualification.json) · [Tests](register_test_results.txt) ·
 [Reuse/branch audit](register_source_manifest.json).
 
