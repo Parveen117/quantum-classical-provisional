@@ -2,6 +2,13 @@
 
 ## Phase–seam foundation and hardware contract
 
+The [v0.16 Hamiltonian bridge](phase_seam_foundation/BUS_HAMILTONIAN.md)
+reuses the collaboration branch's unchanged flat exact field for centered
+bus generators. It derives a conditional interaction/Fourier schedule,
+continuous area-error sensitivity and a bare-input Jaynes–Cummings error
+bound that retains top-level leakage. Explicit control counts and normalized
+time costs expose the accuracy/time trade-off; no material fit is assumed.
+
 The [v0.15 bus/EMK gate](phase_seam_foundation/WEYL_BUS.md) proves the local-PH2
 entanglement obstruction and connects the existing joint interaction to
 conditional Weyl-bus kicks. Exact bus return holds for every initial bus

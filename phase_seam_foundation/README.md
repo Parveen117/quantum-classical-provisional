@@ -1,5 +1,13 @@
 # Phase–seam foundation prototype
 
+**New: [effective Hamiltonian and microscopic error bridge](BUS_HAMILTONIAN.md).**
+The v0.16 design compiles both bus kicks from a conditional level-shift
+interaction and bus Fourier transforms. Centering needs finer exact phases,
+supplied by the unchanged collaboration arithmetic module. Analytic area
+sensitivities retain finite-level boundary projectors, and a JC comparison
+retains bare-state dressing, nonlinear shifts and outside-code transitions.
+All physical controls and additional error budgets remain declared inputs.
+
 **New: [local-control obstruction and bus-mediated EMK gate](WEYL_BUS.md).**
 The v0.15 exact word checker connects the existing two-site interaction to a
 conditional bus loop. It proves arbitrary-state bus return, specified local

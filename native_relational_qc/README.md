@@ -1,5 +1,11 @@
 # Native Relational Quantum Computing — v0.1
 
+The [v0.16 bus Hamiltonian adapter](../phase_seam_foundation/BUS_HAMILTONIAN.md)
+imports the unchanged `cyclotomic_pow2.py` from collaboration commit f2b9697
+for exact centered-generator phases, including Q(zeta_128). The calculator's
+backend registration and the source branch's wider Shor changes are not
+imported by this scoped reuse; existing calculator behavior is unchanged.
+
 The [v0.15 Weyl-bus adapter](../phase_seam_foundation/WEYL_BUS.md) reuses the
 exact phase field and existing joint EMK algebra to verify a conditional
 entangling-gate decomposition, echo and fault boundaries. Its four-branch
