@@ -130,7 +130,9 @@ outputs). Exact values are reported as a denominator plus the integer
 numerators of the real power-basis half, `real_numerators`. Numerators are
 stored densely in the narrowest integer width, runs of permutation gates move
 all basis labels at once, and batch limits and failure contracts match
-`cyclotomic64`.
+`cyclotomic64`. The separate [record-conditioned phase estimation](RECORD_PHASE.md)
+runs order finding on this field with one control wire read m times, following
+both outcomes of every reading exactly.
 
 The explicit [observer32 backend](OBSERVER_RECOGNITION.md) accepts the same
 1–256-site phase gate alphabet, but expands selected Pauli observations

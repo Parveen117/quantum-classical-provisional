@@ -205,16 +205,15 @@ def _permute_run(circuit,operations,index,state,b):
     return dict(zip(kets.tolist(),values)),index
 
 
-def prepare(circuit,**limits):
-    if not isinstance(circuit,CompactCircuit):raise TypeError('phase backend requires a declared circuit')
-    _integer(circuit.n_qubits,'phase backend qubits',1,256)
-    field=getattr(circuit,'field',Cyclotomic);zero,one=field(),field(1)
+def execute(circuit,state,b):
+    """Apply circuit.operations to a sparse basis-label -> amplitude state.
+
+    Shared by prepare (from the all-zero label) and by executors that start
+    from another exact state, such as the record-conditioned phase estimation.
+    """
+    field=getattr(circuit,'field',Cyclotomic)
     phase_gates=getattr(circuit,'phase_gates',PhaseCircuit.phase_gates)
-    flat=isinstance(circuit,PowerPhaseCircuit);vectorize=flat and circuit.n_qubits<=62
-    b=Budget(**limits);b.stats['preparation_count']=1;state={0:one}
-    b.stats.update(backend=getattr(circuit,'backend','cyclotomic'),
-        representation='sparse computational-basis amplitudes in '+(f'flat Q(zeta_{circuit.order})' if isinstance(circuit,PowerPhaseCircuit) else 'Q(zeta_64)' if field is Phase64Circuit.field else 'Q(zeta_32)' if field is Phase32Circuit.field else 'Q(zeta_16)'),
-        permutation_visits=0)
+    vectorize=isinstance(circuit,PowerPhaseCircuit) and circuit.n_qubits<=62
     operations=circuit.operations;index=0
     while index<len(operations):
         name,qs=operations[index]
@@ -253,6 +252,19 @@ def prepare(circuit,**limits):
                     for reading in (0,1):
                         if matrix[reading][bit]:b.put(out,base|(reading<<target),b.mul(matrix[reading][bit],value))
                 state=out
+    return state
+
+
+def prepare(circuit,**limits):
+    if not isinstance(circuit,CompactCircuit):raise TypeError('phase backend requires a declared circuit')
+    _integer(circuit.n_qubits,'phase backend qubits',1,256)
+    field=getattr(circuit,'field',Cyclotomic);zero,one=field(),field(1)
+    flat=isinstance(circuit,PowerPhaseCircuit)
+    b=Budget(**limits);b.stats['preparation_count']=1;state={0:one}
+    b.stats.update(backend=getattr(circuit,'backend','cyclotomic'),
+        representation='sparse computational-basis amplitudes in '+(f'flat Q(zeta_{circuit.order})' if isinstance(circuit,PowerPhaseCircuit) else 'Q(zeta_64)' if field is Phase64Circuit.field else 'Q(zeta_32)' if field is Phase32Circuit.field else 'Q(zeta_16)'),
+        permutation_visits=0)
+    state=execute(circuit,state,b)
     norm=zero;norms={} if flat else None
     for ket,value in state.items():
         squared=b.mul(value.conjugate(),value);norm=b.add(norm,squared)
