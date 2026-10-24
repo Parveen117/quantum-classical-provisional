@@ -1,6 +1,25 @@
 # Phase–seam foundation prototype
 
-**New: [balanced reset with retained records](CONTROLLER.md#61-explicit-balanced-reset-source-law).**
+**New: [continuous control inside the closure sector](SECTOR_CONTROL.md).**
+The balanced reset now has an explicit involutive data/record exchange.
+Its proposed generator `H(t)=hbar*g(t)*(I-P)/2` preserves the modular
+phase-sum sector at every real pulse angle. The proof uses the native
+involution and sector projectors; a physical realization of that generator
+is an added engineering assumption.
+
+The adapter reuses the existing compiler, controlled arithmetic and exact
+phase engine. It covers balanced cuts, shifts, swaps, reads and balanced
+reset in full and compressed layouts. Exact fractional verification checks
+coherent intermediate states, flag cleanup and zero ideal leakage. A
+single-mode negative control leaks probability 1/2 at a half pulse.
+Its binary verification gates are not a physical continuously constrained
+implementation. No new simulator or material-device claim is introduced.
+
+The v0.8 combined audit passes **170 tests in 110.823 seconds**, with no
+failures, errors or skips. Material coupling, locality, pointer preparation,
+calibrated rates and physical leakage remain open.
+
+**Previous: [balanced reset with retained records](CONTROLLER.md#61-explicit-balanced-reset-source-law).**
 The explicit `pair_reset(j,reservoir,a)` sets one mode to its reference,
 adds the old phase difference to another mode, and retains that difference
 in a fresh coherent record. The integer lift sum is preserved. The same

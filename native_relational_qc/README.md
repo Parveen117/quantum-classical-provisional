@@ -34,6 +34,14 @@ the closure sum in full and compressed layouts. The new source law and
 16 added tests are documented in the controller note; all calculator
 implementation files remain unchanged.
 
+The [continuous native control targets](../phase_seam_foundation/SECTOR_CONTROL.md)
+derive sector-preserving paths from native permutation involutions.
+`sector_control.py` exports exact fractional-angle verification to this
+calculator's existing phase engine and controlled arithmetic, adding no
+new amplitude backend. The current audit passes 170 tests. The abstract
+generator and the binary verification gadget have different physical
+claims: the latter does not prove sector confinement during its gates.
+
 **Latest: [six-bit Shor and proof-traced arithmetic rewrites](PHASE64_REWRITE.md).**
 `cyclotomic64` adds exact 5.625-degree phases. The optional `panini` rewrite
 removes proved redundant X/CX/CCX words and independently replays each deletion.

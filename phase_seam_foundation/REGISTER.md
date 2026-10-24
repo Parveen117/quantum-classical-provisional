@@ -20,7 +20,9 @@ explicit read/reset records and the existing dynamic measurement engine.
 The permutation-only `compile_register` interface still rejects instruments.
 Version 0.7 adds explicit balanced reset with a compensating native mode.
 Read/reset/pair_reset remain instruments outside this permutation compiler.
-The current combined audit includes 156 tests; the v0.4/v0.5 results below retain
+The [v0.8 native control targets](SECTOR_CONTROL.md) supply continuous
+sector-preserving operator paths, with a separate binary verification export.
+The current combined audit includes 170 tests; the v0.4/v0.5 results below retain
 their milestone context.
 
 ## 1. Duplicate-work check and reuse

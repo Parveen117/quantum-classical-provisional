@@ -48,6 +48,16 @@ extension using existing arithmetic and measurement engines; original
 single-mode reset restrictions remain. The v0.7 audit passes 156 tests in
 97.389 seconds, with no failures, errors or skips.
 
+The [continuous sector-control extension](phase_seam_foundation/SECTOR_CONTROL.md)
+now derives an all-angle path from native involutions:
+`U(theta)=(I+P)/2+exp(-i theta)*(I-P)/2`. The associated proposed generator
+commutes with the closure projectors, preserving the sector throughout its
+ideal evolution. Exact samples reuse the existing phase engine and include
+full/compressed comparisons and a symmetry-breaking negative control.
+The v0.8 audit passes 170 tests in 110.823 seconds. Realizing the declared
+generator in a material device remains open; binary verification circuits
+do not establish continuous physical confinement.
+
 ## Native relational calculation engine
 
 The [linear-recognition upgrade](native_relational_qc/LINEAR_RECOGNITION.md)

@@ -1,8 +1,8 @@
 {
-  "schema": "phase-seam-register-source-v4",
+  "schema": "phase-seam-register-source-v5",
   "author": "Monty",
   "date": "2026-10-24",
-  "parent_commit": "e494f85753940f0ff6e203de4a7df2c79fcab46d",
+  "parent_commit": "deeb6f13ff166eabf64e5c4e36bf1d8b183975c7",
   "duplicate_audit": {
     "scope": "All seven branch-tip recursive trees; local Python/Markdown content search; read existing arithmetic, memory experiments, observer transport and master README. No claim about deleted branches or other repositories.",
     "trees": [
@@ -32,8 +32,8 @@
       },
       {
         "branch": "codex/native-relational-qc-v1-20261018",
-        "commit": "e494f85753940f0ff6e203de4a7df2c79fcab46d",
-        "files": 408,
+        "commit": "deeb6f13ff166eabf64e5c4e36bf1d8b183975c7",
+        "files": 409,
         "truncated": false
       },
       {
@@ -117,6 +117,12 @@
       "author": "John Watrous",
       "url": "https://jhwatrous.github.io/TQI.pdf",
       "scope": "Standard Kraus/Stinespring channel representations; finite native read/reset dilation derived explicitly in CONTROLLER.md."
+    },
+    {
+      "title": "Theory of Decoherence-Free Fault-Tolerant Universal Quantum Computation",
+      "authors": "Kempe, Bacon, Lidar, Whaley",
+      "url": "https://arxiv.org/abs/quant-ph/0004064",
+      "scope": "Established Hamiltonian control preserving encoded subspaces throughout gates; source for context only. Its decoherence-free/noise assumptions and exchange locality results are not transferred to this native phase code."
     }
   ],
   "claim_boundary": "A new adapter to existing arithmetic, not a new quantum postulate, physical device, quantum speedup, conversion from v0.3 code, or complete phase/seam/history quantum encoding.",
@@ -169,5 +175,21 @@
       "v0.2 joint.py and v0.3 encoding.py",
       "original supplied LaTeX"
     ]
+  },
+  "v0_8_duplicate_check": {
+    "method": "Rechecked all seven branch heads: six other branches unchanged. Searched local phase/native sources for involutions, generators and continuous sector control; read existing joint coupling, phase engine, controlled ladder and closure compiler.",
+    "finding": "Existing JOINT_READOUT.md has a two-site EMK interaction target; it is not the four-mode phase-sum-conserving controller. Reuse reflection/projector algebra and all arithmetic/phase engines; add the missing native control targets and verification adapter.",
+    "changes": [
+      "sector_control.py: native involution plan, endpoint synthesis and exact-angle export to existing Phase64Circuit",
+      "balanced exchange involution with explicit dirty-record semantics",
+      "all-real-angle algebraic closure proof and bounded off-sector perturbation criterion",
+      "no changes to v0.7 source law/controller or any calculator implementation"
+    ],
+    "new_assumptions": [
+      "laboratory realization of H(t)=hbar*g(t)*(I-P)/2 for the chosen high-dimensional native involution",
+      "fresh record initialization for reset semantics; coherent records retained",
+      "laboratory pulse area is not derived native time"
+    ],
+    "claim_boundary": "Conditional operator-level continuous sector preservation, not a material implementation, one/two-qubit locality theorem, noise-free device or speedup. Binary verification gates can leave the sector."
   }
 }

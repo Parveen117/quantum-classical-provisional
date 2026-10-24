@@ -9,6 +9,10 @@ reversible compiler remains unchanged in scope: it rejects all instruments.
 `controller.py` composes that compiler with record operations.
 Version 0.7 adds the explicit source operation `pair_reset(j,reservoir,a)`:
 reset with a compensating native phase mode, preserving closure.
+The subsequent [v0.8 control construction](SECTOR_CONTROL.md) retains this
+source law and supplies an involutive extension and a continuous
+sector-preserving operator path. Its dirty-record extension differs
+explicitly; `controller.py` and the v0.7 gate words below remain unchanged.
 
 ## 1. Existing work reused
 
@@ -295,8 +299,10 @@ a permutation and its inverse restores the entire dirty input.
 
 Closure is guaranteed at **source-operation boundaries**. Separate
 elementary additions may transiently leave the sector in a full layout.
-This does not yet implement a carrier confined to the sector at every
-physical instant.
+This does not implement a carrier confined to the sector at every physical
+instant. The subsequent [native control target](SECTOR_CONTROL.md) derives
+an all-angle conserving path under a separately declared generator;
+its material realization remains open.
 
 Example with unwrapped source history:
 
@@ -430,7 +436,7 @@ Added choices: compensating reservoir reset law, fresh zero product records,
 one record per event, declared pointer basis, terminal measurement export and no record reuse. The earlier
 quantum probability/composition assumptions remain in force.
 
-Open: physical record initialization and calibration, continuous physical
-closure-preserving control, coherent unwrapped winding/cost records,
+Open: physical record initialization and calibration, material realization
+of the v0.8 continuous closure-preserving generator, coherent unwrapped winding/cost records,
 record recycling and environment/heat accounting, and physical carrier
 dynamics. Logical reversibility does not establish a thermal-energy law.

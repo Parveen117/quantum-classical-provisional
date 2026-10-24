@@ -4,6 +4,56 @@ from native_relational_qc.phase_backend import Phase64Circuit, prepare
 from .model import Cell, Config, Operation as O
 from .register import compile_register, closure_codec, bind_cell, verify_program, verify_transition
 from .controller import compile_controller, bind_controller, verify_controller_transition
+from .sector_control import compile_sector_control, pulse_coefficients, verify_sector_control
+
+
+def sector_control_report():
+    cfg=Config(sector=1)
+    p=compile_sector_control((O("pair_reset",(0,2,0)),),config=cfg,omit_mode=2)
+    samples=[];initial=p.controller.pack((1,0,63,0))
+    for step in (0,1,8,16,24,32):
+        c=Phase64Circuit(p.n_qubits+2).add("x",0)
+        verification=p.verification_circuit((step,))
+        for name,qs in verification.operations:c.add(name,*qs)
+        state=prepare(c);alpha,beta=pulse_coefficients(step)
+        expected={}
+        for label,value in ((initial,alpha),(p.image(0,initial),beta)):
+            if value:expected[label]=expected.get(label,c.field(0))+value
+        leakage=sum((v.norm2() for label,v in state.amplitudes.items()
+                     if sum(p.controller.unpack(label&((1<<p.n_qubits)-1))[0])%64),c.field(0))
+        samples.append(dict(angle_pi_over_32_steps=step,exact_amplitude_match=state.amplitudes==expected,
+                            closure_leakage_probability=leakage.to_dict(),
+                            reset_probability=state.probability({q:0 for q in p.controller.layout.registers[0]}).to_dict(),
+                            flags_zero_probability=state.probability({p.n_qubits:0,p.n_qubits+1:0}).to_dict(),
+                            verification_gates=len(verification.operations)))
+    wrong=Phase64Circuit(10).add("h",8).add("cx",8,0).add("h",8)
+    for _ in range(16):wrong.add("p64dg",8)
+    wrong.add("h",8).add("cx",8,0).add("h",8)
+    negative=prepare(wrong).probability({0:1})
+    cases={str(o):compile_sector_control((O("pair_reset",(0,2,0)),),config=cfg,omit_mode=o).resources()
+           for o in (None,0,1,2,3)}
+    for o,r in cases.items():
+        program=compile_sector_control((O("pair_reset",(0,2,0)),),config=cfg,omit_mode=None if o=="None" else int(o))
+        r["half_angle_verification_gates"]=len(program.verification_circuit((16,)).operations)
+    return dict(status="conditional continuous control theorem plus existing-engine exact samples",
+                algebra=dict(exchange="P: (x_j,x_b,m) -> (a+m,x_b+x_j-a-m,x_j-a) mod L",
+                             involution="P^2=I, P*=P",closure="[P,Q_s]=0 for every modular-sum sector",
+                             interpolation="U(theta)=(I+P)/2+exp(-i*theta)*(I-P)/2",
+                             generator="H(t)=hbar*g(t)*(I-P)/2; theta=integral g(t) dt",
+                             all_real_angle_theorem="[U(theta),Q_s]=0; U(0)=I; U(pi)=P",
+                             clock="laboratory pulse area, not a derivation of native time"),
+                source_consistency=verify_sector_control(p),exact_samples=samples,
+                negative_control=dict(generator="single data-bit X, not a balanced exchange",angle="pi/2",
+                                      outside_sum_zero_probability=negative.to_dict()),
+                resources=cases,
+                choice="new involutive dirty-record extension; agrees with v0.7 clean-record endpoints",
+                verification_boundary="binary gadget is a mathematical verification circuit, not a sector-confined physical gate path",
+                error_budget="for initial sector Q and H=H0+V with [H0,Q]=0, leakage <= min(1,(integral ||(I-Q)VQ||/hbar dt)^2)",
+                new_assumption="device can realize the declared high-dimensional symmetric generator and initialized records",
+                unresolved=["material carrier, locality and native coupling synthesis","calibrated pulse strengths, time and energy",
+                            "noise coupling to forbidden sectors and protected continuous implementation",
+                            "record recycling and coherent unwrapped lift/cost storage"],
+                evidence_class="LOCAL_IDEAL_CALCULATION",hardware_job_id=None)
 
 
 def controller_report():
@@ -167,7 +217,7 @@ def report():
         ("three_operation_closed_word",word)):
         resource_cases[name] = compile_register(ops).resources()
     return dict(
-        schema="phase-seam-register-v0.7",author="Monty",
+        schema="phase-seam-register-v0.8",author="Monty",
         status="wrapped-phase permutation compiler reusing existing native arithmetic",
         assumptions=["orthogonal labels","clean workspace","standard coherent gate semantics if used as quantum circuit"],
         program=dict(source_operations=[dict(kind=o.kind,args=list(o.args)) for o in word],
@@ -192,6 +242,7 @@ def report():
         sector_compression=sector_report(),
         controller=controller_report(),
         balanced_reset=balanced_reset_report(),
+        sector_control=sector_control_report(),
         limits=dict(power_of_two_grids=[1<<w for w in range(2,13)],max_gates=100000,
                     source_guards="Config parameter/event limits; bound Cell replay also checks lift and rational-cost limits",
                     closure="whole fixed sector preserved after each source operation; elementary gates may leave it",

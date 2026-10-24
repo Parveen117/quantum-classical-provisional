@@ -53,6 +53,23 @@ omitted. The reservoir is another phase mode, not a thermal environment.
 This is a declared software transfer law; physical continuous confinement
 to the sector, initialization and control remain unimplemented.
 
+The [v0.8 sector-control construction](SECTOR_CONTROL.md) now specifies the
+continuous interaction target. Its balanced exchange
+`P:(x_j,x_b,m)->(a+m,x_b+x_j-a-m,x_j-a)` is an involution conserving the
+data sum for every pointer value. The proposed drive
+`H(t)=hbar*g(t)*(I-P)/2` gives
+`U(theta)=(I+P)/2+exp(-i*theta)*(I-P)/2` and preserves the closure sector
+for every real pulse area, completing reset at area pi with a fresh pointer.
+The pointer is neutral under the logical data-closure operator; material
+charge assignments must be specified separately.
+
+This closes the operator-level interpolation requirement conditionally.
+It does not supply a local material Hamiltonian, a calibrated pulse,
+automatic noise protection or a derived clock. Existing binary arithmetic
+verifies exact sampled operators; its intermediate gates still need not
+preserve the sector. The unchanged hardware task is to realize the
+declared native symmetric generator and measure its intermediate evolution.
+
 The proposed hardware primitive stores **four controllable cyclic modes**, a
 seam calibration and retained history. It is not specified as four qubits.
 Its required actions follow the finite operational model in
@@ -72,6 +89,7 @@ Its required actions follow the finite operational model in
 | Readout instrument | Report outcomes with a calibrated probability and state-update law | Check normalization and repeated/conditional outcome statistics; quantify backaction |
 | Reset | Prepare the reference state while recording relevant output/environment exchange | Show lost carrier information is not claimed recoverable without its record; measure heat/energy separately |
 | Balanced reset | Reset mode j to a, transfer x_j-a into a distinct native reservoir, and retain the wrapped outcome | Check the data sum at source boundaries, record correlations and inverse recovery with coherent records; account for intermediate excursions |
+| Continuous symmetric drive | Realize the declared native generator while preserving the data-closure charge | Sample intermediate pulse areas; measure leakage and coherent phase against the v0.8 target; compare a symmetry-breaking control |
 | Admission/limits | Enforce declared closure sector, finite counters, memory and controls | Reject invalid commands as a whole; retain all rejected trials in experimental records |
 
 The current shear is an optional algebraic comparison, not a required physical
@@ -159,8 +177,10 @@ including workspace cleanup and any intermediate closure-sector excursions.
 
 The read/reset adapter now specifies a finite controller/environment record
 and logical storage budget, including an explicit closure-preserving
-balanced reset. Physical initialization, noise, recycling, continuous sector
-confinement and energy accounting remain open. Current coherent records
+balanced reset. The v0.8 construction supplies its conditional continuous
+operator path and off-sector perturbation bound. Physical initialization,
+noise, recycling, material realization of that path and energy accounting
+remain open. Current coherent records
 contain wrapped outcomes; classical Cell
 replay does not establish coherent unwrapped path/cost history. These transfer
 and preparation laws remain the missing link to a material hardware design.
