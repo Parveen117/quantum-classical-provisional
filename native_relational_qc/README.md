@@ -1,6 +1,12 @@
 # Native Relational Quantum Computing — v0.1
 
-**Latest: [modular arithmetic and five phase bits](MODULAR_SHOR.md).**
+**Latest: [exact phase observers and future-complete recognition](OBSERVER_RECOGNITION.md).**
+`observer32` pulls back selected p16/p32 measurements without amplitude
+preparation. A separate bounded compiler returns exact future-closed Pauli
+banks. Source-pinned morphic/representation/analytic review, paired successes
+and failures, and 279 passing native tests accompany the adapter.
+
+**Previous: [modular arithmetic and five phase bits](MODULAR_SHOR.md).**
 `cyclotomic32` adds exact 11.25-degree phases. The `arithmetic` Shor oracle
 constructs reversible modular multipliers without truth tables, restores clean
 workspace and gives nonzero strict-CF factor recovery for N=21 at five bits.

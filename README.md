@@ -2,6 +2,13 @@
 
 ## Native relational calculation engine
 
+The [observer-recognition upgrade](native_relational_qc/OBSERVER_RECOGNITION.md)
+extends exact selected measurements to p16/p32 phases without amplitude
+preparation and adds a bounded future-closed Pauli bank compiler. A connected
+50-qubit local observation needs two terms; reverse resource failures remain
+explicit. Morphic, representation, spectral and analytic sources are pinned
+with their distinct hypotheses and limits.
+
 The [modular-arithmetic upgrade](native_relational_qc/MODULAR_SHOR.md) adds
 polynomial reversible multiplier construction and an explicit `cyclotomic32`
 backend with exact 11.25-degree phases. Five-bit Shor now gives nonzero strict

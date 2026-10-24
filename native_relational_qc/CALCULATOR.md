@@ -115,6 +115,16 @@ the same width, query, support and whole-batch limit contracts. Both sparse
 phase backends move unchanged amplitudes for X/CX/CCX/SWAP permutations while
 counting every primitive visit; neither skips whole arithmetic circuits.
 
+The explicit [observer32 backend](OBSERVER_RECOGNITION.md) accepts the same
+1–256-site phase gate alphabet, but expands selected Pauli observations
+backwards without preparing amplitudes. Its default `max_terms` is 4096;
+`max_work` and `max_coefficient_bits` default to 10M and 4096. These limits
+apply to the whole batch, which is discarded on any resource failure.
+Joint projectors still require 2^k initial terms. Geometry and exact circuit
+reduction are unavailable. The separate Python `future_bank` compiler
+returns exact transition rows for all words of a declared action alphabet;
+it does not claim minimum rank or an efficient bank for arbitrary circuits.
+
 Named single-qubit gates are `id/x/y/z/h/s/sdg/t/tdg/sx/sxdg` and the native
 `r/k/rk` operators. Arbitrary continuous rotations, general QAOA angles, dynamic
 measurements, reset and noise are not added by this calculator interface.
