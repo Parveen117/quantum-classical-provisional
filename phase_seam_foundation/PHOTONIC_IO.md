@@ -4,6 +4,11 @@ Author: Monty. Version 0.10. Status: complete logical experiment routes,
 exact calculator export and offline calibration interface. No physical
 experiment, fabricated chip, placed/routed mask or measured calibration.
 
+This note records the v0.10 interface. The subsequent
+[v0.11 layout](PHOTONIC_LAYOUT.md) adds a core GDS subassembly and an explicit
+31-channel physical profile; the original nine-channel logical profile is
+retained for its earlier scope.
+
 The [v0.9 exchange core](PHOTONIC_EXCHANGE.md) now has explicit input and
 output operations for all 106 proposed settings. The adapter compiles the
 whole experiment into the existing exact phase calculator, including the

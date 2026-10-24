@@ -76,6 +76,15 @@ the saved template contains no measured values. Heated mask layout and
 physical calibration remain open.
 The v0.10 combined audit passes 193 tests in 121.041 seconds.
 
+The [heated-core layout](phase_seam_foundation/PHOTONIC_LAYOUT.md) now provides
+a reproducible GDS subassembly using pinned PDK geometry: six exchange units,
+four trimmed bypasses and an isolated guard, with 28 heaters and 56 pads.
+Independent KLayout connectivity/feature checks and deliberate broken-layout
+controls accompany it. A separate 31-channel physical calibration profile
+binds the GDS bytes and all bias controls. Optical coupling, packaging,
+full foundry review and measured calibration remain open.
+Validation: 199 targeted calculator tests and 9 separate CAD tests pass.
+
 ## Native relational calculation engine
 
 The [linear-recognition upgrade](native_relational_qc/LINEAR_RECOGNITION.md)

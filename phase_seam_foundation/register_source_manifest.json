@@ -1,8 +1,8 @@
 {
-  "schema": "phase-seam-register-source-v7",
+  "schema": "phase-seam-register-source-v8",
   "author": "Monty",
   "date": "2026-10-24",
-  "parent_commit": "84268a6a4724deddb6f2b30696cec1bbb22843bf",
+  "parent_commit": "a22c883b359c0f3c955da425863d1f58f0b703cd",
   "duplicate_audit": {
     "scope": "All seven branch-tip recursive trees; local Python/Markdown content search; read existing arithmetic, memory experiments, observer transport and master README. No claim about deleted branches or other repositories.",
     "trees": [
@@ -32,8 +32,8 @@
       },
       {
         "branch": "codex/native-relational-qc-v1-20261018",
-        "commit": "84268a6a4724deddb6f2b30696cec1bbb22843bf",
-        "files": 417,
+        "commit": "a22c883b359c0f3c955da425863d1f58f0b703cd",
+        "files": 423,
         "truncated": false
       },
       {
@@ -261,5 +261,31 @@
       "measured optical transfer, phase residuals, source/detector response and physical acceptance"
     ],
     "evidence_boundary": "Exact software verification and offline profile binding. Test voltage vectors are synthetic; no lab record, PDK execution, GDS, instrument submission or fabricated device."
+  },
+  "v0_11_duplicate_check": {
+    "method": "All seven branch heads rechecked; other six unchanged. No existing placed photonic GDS or layout checker found in repository.",
+    "reuse": [
+      "unchanged pinned CORNERSTONE MMI and heater GDS macros, with upstream MIT license",
+      "existing phase engine and exact exchange targets",
+      "existing offline calibration validation extended with explicit physical scope"
+    ],
+    "new_choices": [
+      "six equal-arm routed units, four trimmed bypasses and isolated guard",
+      "four heaters per exchange: lower exchange arm, upper common phase, input trim and output trim",
+      "28 chip heaters plus three external phases; complete 31-channel recorded vector",
+      "open optical ports on core subassembly; no invented fiber coupler or loss model"
+    ],
+    "evidence": [
+      "independent KLayout geometry/partition checks",
+      "broken input, guard short, pad bridge, displaced heater, thin feature and vendor-tamper negative controls",
+      "exact directional-coupler phase-word comparison through the existing calculator"
+    ],
+    "source_rules": "CORNERSTONE SiN300 MPW13 June 2026 guidelines; local subset only; downloaded proprietary pre-DRC read but not executed or redistributed",
+    "unresolved": [
+      "fiber coupling and packaging",
+      "full foundry checks",
+      "measured optical transfer, loss, thermal crosstalk and voltage calibration"
+    ],
+    "boundary": "Generated core GDS is not a fabrication submission, packaged apparatus or experimental quantum result."
   }
 }

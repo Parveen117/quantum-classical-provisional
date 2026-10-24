@@ -1,3 +1,9 @@
+test_directional_couplers_and_port_trims_match_all_exact_angles (test_phase_seam_layout_controls.LayoutControlTests.test_directional_couplers_and_port_trims_match_all_exact_angles) ... ok
+test_full_physical_binding_remains_offline_and_preserves_synthetic_evidence (test_phase_seam_layout_controls.LayoutControlTests.test_full_physical_binding_remains_offline_and_preserves_synthetic_evidence) ... ok
+test_layout_template_requires_all_physical_and_external_channels (test_phase_seam_layout_controls.LayoutControlTests.test_layout_template_requires_all_physical_and_external_channels) ... ok
+test_physical_profile_requires_explicit_scope_and_full_vector (test_phase_seam_layout_controls.LayoutControlTests.test_physical_profile_requires_explicit_scope_and_full_vector) ... ok
+test_scope_is_not_truthiness_coerced (test_phase_seam_layout_controls.LayoutControlTests.test_scope_is_not_truthiness_coerced) ... ok
+test_stale_gds_spec_and_logical_only_target_cannot_bind (test_phase_seam_layout_controls.LayoutControlTests.test_stale_gds_spec_and_logical_only_target_cannot_bind) ... ok
 test_ambiguous_actuators_rows_and_provenance_rejected (test_phase_seam_photonic_io.CalibrationBindingTests.test_ambiguous_actuators_rows_and_provenance_rejected) ... ok
 test_device_context_and_validity_must_match (test_phase_seam_photonic_io.CalibrationBindingTests.test_device_context_and_validity_must_match) ... ok
 test_empty_template_cannot_generate_commands (test_phase_seam_photonic_io.CalibrationBindingTests.test_empty_template_cannot_generate_commands) ... ok
@@ -193,6 +199,6 @@ test_feedforward_uses_current_memory_and_zero_condition (test_native_dynamic.Dyn
 test_budgets_fail_without_modifying_program (test_native_dynamic.DynamicTests.test_budgets_fail_without_modifying_program) ... ok
 
 ----------------------------------------------------------------------
-Ran 193 tests in 121.041s
+Ran 199 tests in 123.801s
 
 OK

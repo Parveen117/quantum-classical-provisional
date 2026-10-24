@@ -56,6 +56,12 @@ and workspace. The accompanying calibration interface binds recorded joint
 voltage vectors to exact routes and returns offline plans only.
 The combined v0.10 audit passes 193 tests.
 
+The [v0.11 heated layout](../phase_seam_foundation/PHOTONIC_LAYOUT.md) adds
+physical phase conventions and a complete-actuator calibration profile.
+Exact phase-word checks reuse this calculator; CAD geometry checks use a
+separate optional toolchain. No optical/thermal performance model is inferred
+from the generated polygons.
+
 **Latest: [six-bit Shor and proof-traced arithmetic rewrites](PHASE64_REWRITE.md).**
 `cyclotomic64` adds exact 5.625-degree phases. The optional `panini` rewrite
 removes proved redundant X/CX/CCX words and independently replays each deletion.

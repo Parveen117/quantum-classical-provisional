@@ -1,0 +1,78 @@
+{
+  "status": "LOCAL_GEOMETRY_CHECKS",
+  "passed": true,
+  "failures": {
+    "layer_203_width": 0,
+    "layer_203_gap": 0,
+    "layer_39_width": 0,
+    "layer_39_gap": 0,
+    "layer_41_width": 0,
+    "layer_41_gap": 0,
+    "outline": 0,
+    "outside_outline": 0,
+    "grid": 0,
+    "optical_partition": 0,
+    "heater_count": 0,
+    "pad_count": 0,
+    "two_pads_per_heater": 0,
+    "one_heater_per_pad": 0,
+    "heater_alignment": 0
+  },
+  "checked_thresholds": {
+    "layer_203_width_nm": 350,
+    "layer_203_gap_nm": 250,
+    "layer_39_width_nm": 600,
+    "layer_39_gap_nm": 5000,
+    "layer_41_width_nm": 2000,
+    "layer_41_gap_nm": 5000
+  },
+  "optical_connected_components": 11,
+  "heaters": 28,
+  "pads": 56,
+  "klayout_version": "0.30.4-1",
+  "foundry_drc_run": false,
+  "foundry_approved": false,
+  "limitations": [
+    "not the proprietary foundry pre-DRC script or full deck",
+    "angle-limited width checks do not cover every geometric rule",
+    "no coupling/loss/thermal/power/phase-response prediction",
+    "optical interfaces are unconnected to fiber couplers"
+  ],
+  "tests": {
+    "count": 9,
+    "passed": true,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 1.686017242998787
+  },
+  "gdstk_version": "1.0.0",
+  "schema": "native-photonic-layout-audit-v1",
+  "author": "Monty",
+  "artifacts_sha256": {
+    "exchange_core.gds": "f6777bc1ecf2c6887363ca59e942b2129fbd3996c93132cb1a9291f3c6f9d3ab",
+    "exchange_core_ports.json": "a4a450b2eca35238ccffe7280257abc91d9046424ad34cd3a74c38247ad5b866",
+    "exchange_core.png": "b38f30668e4fe68e5caeb598f82f76fe39872f4eb65657bc0a28859b2838a872",
+    "exchange_unit.png": "72cc696c619c8cfa87e40abece0ebb13a4d861ccea07eb76bea38f2148371807",
+    "physical_calibration_template.json": "3a724e8699f2b69533fcd9cadf50f6e742fdc1b2de017ecbea6a578d5e102e44"
+  },
+  "checked_sources_sha256": {
+    "phase_seam_foundation/photonic_layout.py": "c6debe28447121ad7b4522acd91ca60e41cd58d0274905dc12908c5dfbf6d350",
+    "phase_seam_foundation/photonic_io.py": "6e7554b073e78cbd58ef26fcd2c2327f89f696bdb85d2d375f980914bb57d3bf",
+    "phase_seam_foundation/photonic_process_binding.json": "28e718a5a2af0224e36443ae16f789f1ca1c4474b58a53063c1610dca2d25718",
+    "benchmarks/photonic_layout_audit.py": "c211180cb45476b64df6a3aa5d88b7a99aed09839323b18716428fe27d37f326",
+    "tests/test_photonic_layout_geometry.py": "5460771bfcf780d02b60cbd25779860f75e72e803756ead40946e39547d8ec88",
+    "phase_seam_foundation/layout/requirements.txt": "047954263bc38a30518688c5f04b9bb6b6836adeffb1252b1a4d8f62a386c97c",
+    "phase_seam_foundation/layout/vendor/cornerstone_sin300/mmi2x2.gds": "11f66e914be0068099119e58d24b9f2749eae105fccf4121421f07247d5b2fbd",
+    "phase_seam_foundation/layout/vendor/cornerstone_sin300/heater.gds": "ae90704456839d8d7685a317405b27b1f01d9d88094a6e5c4d9f9f1b502cb656",
+    "phase_seam_foundation/layout/vendor/cornerstone_sin300/LICENSE": "855dd6b4623121391bdc1e0c8c4a7ec7a09b7a6f1202bf69b51375b5bb24b525"
+  },
+  "sources": {
+    "pdk_commit": "3323b17b4d75c852ed2372d7d13239408cca0eb1",
+    "rule_pdf_url": "https://cornerstone.sotonfab.co.uk/wp-content/uploads/2026/06/CORNERSTONE-Silicon-Nitride-MPW-13-Design-Guidelines.pdf",
+    "rule_pdf_sha256": "10ad02eaa39abcf1fcb82b09ce10bc08b9795e54ed094f44007c860b0b2d9f71",
+    "pre_drc_archive_url": "https://cornerstone.sotonfab.co.uk/wp-content/uploads/2026/06/Klayout-DRC-script-SiN_v3_0.zip",
+    "pre_drc_archive_sha256": "df49c7fb1b75484258a3cccd6924ebc884d4411479a1acb145046e65cca9179e",
+    "pre_drc_read_not_executed": "archive filename v3_0; internal proprietary macro declares version 4.0, 2026-05-29; not redistributed"
+  }
+}

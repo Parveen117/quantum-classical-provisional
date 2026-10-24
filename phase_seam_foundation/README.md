@@ -1,6 +1,18 @@
 # Phase–seam foundation prototype
 
-**New: [optical I/O and calibration binding](PHOTONIC_IO.md).**
+**New: [heated-core GDS and physical calibration](PHOTONIC_LAYOUT.md).**
+The generated core subassembly places six exchange units, four bypasses and
+an isolated guard. Its 28 heaters and 56 pads have a mapped physical
+interface. Independent KLayout checks cover selected feature rules and
+optical/electrical connectivity, including deliberately damaged layouts.
+The explicit physical calibration profile requires 31 recorded channels
+and binds both the layout specification and GDS byte hash. It contains no
+measured values. Optical coupling, packaging and full foundry review remain
+open; the drawing is not a fabricated or experimentally validated device.
+The v0.11 register audit passes **199 tests in 123.801 seconds**; the separate
+CAD audit passes **9 tests**. Both report zero failures, errors and skips.
+
+**Previous: [optical I/O and calibration binding](PHOTONIC_IO.md).**
 All 106 preparation/core/guard/analyzer routes now compile to the existing
 exact calculator. The candidate process is pinned to CORNERSTONE SiN300
 software, with two-input MMI interfaces explicitly selected. The offline

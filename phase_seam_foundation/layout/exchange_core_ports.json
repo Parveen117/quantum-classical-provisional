@@ -1,0 +1,702 @@
+{
+  "schema": "native-photonic-layout-v1",
+  "author": "Monty",
+  "status": "CORE_SUBASSEMBLY_ONLY",
+  "top_cell": "NATIVE_EXCHANGE_CORE",
+  "unit_um": 1,
+  "manufacturing_grid_nm": 1,
+  "design_area_um": [
+    11470,
+    15450
+  ],
+  "strip_width_um": 1.2,
+  "transition_length_um": 300,
+  "min_analytic_centerline_radius_um": 253.47898617958026,
+  "exchange_groups": [
+    {
+      "id": "exchange_0",
+      "labels": [
+        1,
+        4
+      ],
+      "origin_um": [
+        1000,
+        600
+      ]
+    },
+    {
+      "id": "exchange_1",
+      "labels": [
+        2,
+        8
+      ],
+      "origin_um": [
+        1000,
+        1500
+      ]
+    },
+    {
+      "id": "exchange_2",
+      "labels": [
+        3,
+        12
+      ],
+      "origin_um": [
+        1000,
+        2400
+      ]
+    },
+    {
+      "id": "exchange_3",
+      "labels": [
+        6,
+        9
+      ],
+      "origin_um": [
+        1000,
+        3300
+      ]
+    },
+    {
+      "id": "exchange_4",
+      "labels": [
+        7,
+        13
+      ],
+      "origin_um": [
+        1000,
+        4200
+      ]
+    },
+    {
+      "id": "exchange_5",
+      "labels": [
+        11,
+        14
+      ],
+      "origin_um": [
+        1000,
+        5100
+      ]
+    },
+    {
+      "id": "path_0",
+      "labels": [
+        0
+      ]
+    },
+    {
+      "id": "path_5",
+      "labels": [
+        5
+      ]
+    },
+    {
+      "id": "path_10",
+      "labels": [
+        10
+      ]
+    },
+    {
+      "id": "path_15",
+      "labels": [
+        15
+      ]
+    },
+    {
+      "id": "path_16",
+      "labels": [
+        16
+      ]
+    }
+  ],
+  "optical_ports": [
+    {
+      "label": 1,
+      "side": "in",
+      "xy_um": [
+        1000,
+        663.5
+      ],
+      "component": "exchange_0"
+    },
+    {
+      "label": 1,
+      "side": "out",
+      "xy_um": [
+        4164,
+        663.5
+      ],
+      "component": "exchange_0"
+    },
+    {
+      "label": 4,
+      "side": "in",
+      "xy_um": [
+        1000,
+        536.5
+      ],
+      "component": "exchange_0"
+    },
+    {
+      "label": 4,
+      "side": "out",
+      "xy_um": [
+        4164,
+        536.5
+      ],
+      "component": "exchange_0"
+    },
+    {
+      "label": 2,
+      "side": "in",
+      "xy_um": [
+        1000,
+        1563.5
+      ],
+      "component": "exchange_1"
+    },
+    {
+      "label": 2,
+      "side": "out",
+      "xy_um": [
+        4164,
+        1563.5
+      ],
+      "component": "exchange_1"
+    },
+    {
+      "label": 8,
+      "side": "in",
+      "xy_um": [
+        1000,
+        1436.5
+      ],
+      "component": "exchange_1"
+    },
+    {
+      "label": 8,
+      "side": "out",
+      "xy_um": [
+        4164,
+        1436.5
+      ],
+      "component": "exchange_1"
+    },
+    {
+      "label": 3,
+      "side": "in",
+      "xy_um": [
+        1000,
+        2463.5
+      ],
+      "component": "exchange_2"
+    },
+    {
+      "label": 3,
+      "side": "out",
+      "xy_um": [
+        4164,
+        2463.5
+      ],
+      "component": "exchange_2"
+    },
+    {
+      "label": 12,
+      "side": "in",
+      "xy_um": [
+        1000,
+        2336.5
+      ],
+      "component": "exchange_2"
+    },
+    {
+      "label": 12,
+      "side": "out",
+      "xy_um": [
+        4164,
+        2336.5
+      ],
+      "component": "exchange_2"
+    },
+    {
+      "label": 6,
+      "side": "in",
+      "xy_um": [
+        1000,
+        3363.5
+      ],
+      "component": "exchange_3"
+    },
+    {
+      "label": 6,
+      "side": "out",
+      "xy_um": [
+        4164,
+        3363.5
+      ],
+      "component": "exchange_3"
+    },
+    {
+      "label": 9,
+      "side": "in",
+      "xy_um": [
+        1000,
+        3236.5
+      ],
+      "component": "exchange_3"
+    },
+    {
+      "label": 9,
+      "side": "out",
+      "xy_um": [
+        4164,
+        3236.5
+      ],
+      "component": "exchange_3"
+    },
+    {
+      "label": 7,
+      "side": "in",
+      "xy_um": [
+        1000,
+        4263.5
+      ],
+      "component": "exchange_4"
+    },
+    {
+      "label": 7,
+      "side": "out",
+      "xy_um": [
+        4164,
+        4263.5
+      ],
+      "component": "exchange_4"
+    },
+    {
+      "label": 13,
+      "side": "in",
+      "xy_um": [
+        1000,
+        4136.5
+      ],
+      "component": "exchange_4"
+    },
+    {
+      "label": 13,
+      "side": "out",
+      "xy_um": [
+        4164,
+        4136.5
+      ],
+      "component": "exchange_4"
+    },
+    {
+      "label": 11,
+      "side": "in",
+      "xy_um": [
+        1000,
+        5163.5
+      ],
+      "component": "exchange_5"
+    },
+    {
+      "label": 11,
+      "side": "out",
+      "xy_um": [
+        4164,
+        5163.5
+      ],
+      "component": "exchange_5"
+    },
+    {
+      "label": 14,
+      "side": "in",
+      "xy_um": [
+        1000,
+        5036.5
+      ],
+      "component": "exchange_5"
+    },
+    {
+      "label": 14,
+      "side": "out",
+      "xy_um": [
+        4164,
+        5036.5
+      ],
+      "component": "exchange_5"
+    },
+    {
+      "label": 0,
+      "side": "in",
+      "xy_um": [
+        1000,
+        6000
+      ],
+      "component": "path_0"
+    },
+    {
+      "label": 0,
+      "side": "out",
+      "xy_um": [
+        4164,
+        6000
+      ],
+      "component": "path_0"
+    },
+    {
+      "label": 5,
+      "side": "in",
+      "xy_um": [
+        1000,
+        6400
+      ],
+      "component": "path_5"
+    },
+    {
+      "label": 5,
+      "side": "out",
+      "xy_um": [
+        4164,
+        6400
+      ],
+      "component": "path_5"
+    },
+    {
+      "label": 10,
+      "side": "in",
+      "xy_um": [
+        1000,
+        6800
+      ],
+      "component": "path_10"
+    },
+    {
+      "label": 10,
+      "side": "out",
+      "xy_um": [
+        4164,
+        6800
+      ],
+      "component": "path_10"
+    },
+    {
+      "label": 15,
+      "side": "in",
+      "xy_um": [
+        1000,
+        7200
+      ],
+      "component": "path_15"
+    },
+    {
+      "label": 15,
+      "side": "out",
+      "xy_um": [
+        4164,
+        7200
+      ],
+      "component": "path_15"
+    },
+    {
+      "label": 16,
+      "side": "in",
+      "xy_um": [
+        1000,
+        7600
+      ],
+      "component": "path_16"
+    },
+    {
+      "label": 16,
+      "side": "out",
+      "xy_um": [
+        4164,
+        7600
+      ],
+      "component": "path_16"
+    }
+  ],
+  "heaters": [
+    {
+      "channel": "core_0",
+      "center_um": [
+        2582,
+        525
+      ],
+      "pads_down": true,
+      "component": "exchange_0"
+    },
+    {
+      "channel": "core_0_common",
+      "center_um": [
+        2582,
+        675
+      ],
+      "pads_down": false,
+      "component": "exchange_0"
+    },
+    {
+      "channel": "core_0_input_trim",
+      "center_um": [
+        1200,
+        536.5
+      ],
+      "pads_down": true,
+      "component": "exchange_0"
+    },
+    {
+      "channel": "core_0_output_trim",
+      "center_um": [
+        3964,
+        536.5
+      ],
+      "pads_down": true,
+      "component": "exchange_0"
+    },
+    {
+      "channel": "core_1",
+      "center_um": [
+        2582,
+        1425
+      ],
+      "pads_down": true,
+      "component": "exchange_1"
+    },
+    {
+      "channel": "core_1_common",
+      "center_um": [
+        2582,
+        1575
+      ],
+      "pads_down": false,
+      "component": "exchange_1"
+    },
+    {
+      "channel": "core_1_input_trim",
+      "center_um": [
+        1200,
+        1436.5
+      ],
+      "pads_down": true,
+      "component": "exchange_1"
+    },
+    {
+      "channel": "core_1_output_trim",
+      "center_um": [
+        3964,
+        1436.5
+      ],
+      "pads_down": true,
+      "component": "exchange_1"
+    },
+    {
+      "channel": "core_2",
+      "center_um": [
+        2582,
+        2325
+      ],
+      "pads_down": true,
+      "component": "exchange_2"
+    },
+    {
+      "channel": "core_2_common",
+      "center_um": [
+        2582,
+        2475
+      ],
+      "pads_down": false,
+      "component": "exchange_2"
+    },
+    {
+      "channel": "core_2_input_trim",
+      "center_um": [
+        1200,
+        2336.5
+      ],
+      "pads_down": true,
+      "component": "exchange_2"
+    },
+    {
+      "channel": "core_2_output_trim",
+      "center_um": [
+        3964,
+        2336.5
+      ],
+      "pads_down": true,
+      "component": "exchange_2"
+    },
+    {
+      "channel": "core_3",
+      "center_um": [
+        2582,
+        3225
+      ],
+      "pads_down": true,
+      "component": "exchange_3"
+    },
+    {
+      "channel": "core_3_common",
+      "center_um": [
+        2582,
+        3375
+      ],
+      "pads_down": false,
+      "component": "exchange_3"
+    },
+    {
+      "channel": "core_3_input_trim",
+      "center_um": [
+        1200,
+        3236.5
+      ],
+      "pads_down": true,
+      "component": "exchange_3"
+    },
+    {
+      "channel": "core_3_output_trim",
+      "center_um": [
+        3964,
+        3236.5
+      ],
+      "pads_down": true,
+      "component": "exchange_3"
+    },
+    {
+      "channel": "core_4",
+      "center_um": [
+        2582,
+        4125
+      ],
+      "pads_down": true,
+      "component": "exchange_4"
+    },
+    {
+      "channel": "core_4_common",
+      "center_um": [
+        2582,
+        4275
+      ],
+      "pads_down": false,
+      "component": "exchange_4"
+    },
+    {
+      "channel": "core_4_input_trim",
+      "center_um": [
+        1200,
+        4136.5
+      ],
+      "pads_down": true,
+      "component": "exchange_4"
+    },
+    {
+      "channel": "core_4_output_trim",
+      "center_um": [
+        3964,
+        4136.5
+      ],
+      "pads_down": true,
+      "component": "exchange_4"
+    },
+    {
+      "channel": "core_5",
+      "center_um": [
+        2582,
+        5025
+      ],
+      "pads_down": true,
+      "component": "exchange_5"
+    },
+    {
+      "channel": "core_5_common",
+      "center_um": [
+        2582,
+        5175
+      ],
+      "pads_down": false,
+      "component": "exchange_5"
+    },
+    {
+      "channel": "core_5_input_trim",
+      "center_um": [
+        1200,
+        5036.5
+      ],
+      "pads_down": true,
+      "component": "exchange_5"
+    },
+    {
+      "channel": "core_5_output_trim",
+      "center_um": [
+        3964,
+        5036.5
+      ],
+      "pads_down": true,
+      "component": "exchange_5"
+    },
+    {
+      "channel": "bypass_0",
+      "center_um": [
+        2500,
+        6000
+      ],
+      "pads_down": false,
+      "component": "path_0"
+    },
+    {
+      "channel": "bypass_5",
+      "center_um": [
+        2500,
+        6400
+      ],
+      "pads_down": false,
+      "component": "path_5"
+    },
+    {
+      "channel": "bypass_10",
+      "center_um": [
+        2500,
+        6800
+      ],
+      "pads_down": false,
+      "component": "path_10"
+    },
+    {
+      "channel": "bypass_15",
+      "center_um": [
+        2500,
+        7200
+      ],
+      "pads_down": false,
+      "component": "path_15"
+    }
+  ],
+  "resources": {
+    "mmi2x2": 12,
+    "heaters": 28,
+    "electrical_pads": 56,
+    "open_optical_ports": 34,
+    "isolated_guard_paths": 1,
+    "external_phase_channels": 3,
+    "total_recorded_channels": 31
+  },
+  "layers": {
+    "nitride": 203,
+    "filament": 39,
+    "contact": 41,
+    "outline": 99
+  },
+  "vendor_sha256": {
+    "mmi2x2.gds": "11f66e914be0068099119e58d24b9f2749eae105fccf4121421f07247d5b2fbd",
+    "heater.gds": "ae90704456839d8d7685a317405b27b1f01d9d88094a6e5c4d9f9f1b502cb656",
+    "LICENSE": "855dd6b4623121391bdc1e0c8c4a7ec7a09b7a6f1202bf69b51375b5bb24b525"
+  },
+  "missing": [
+    "fiber/edge couplers and packaging",
+    "electrical fan-out beyond imported bond pads",
+    "source, detectors and external preparation/analysis/guard modules",
+    "measured phase/loss/crosstalk, thermal model and foundry approval"
+  ],
+  "boundary": "geometric subassembly; open optical interfaces are not a packaged experiment"
+}

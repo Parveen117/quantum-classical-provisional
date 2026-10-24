@@ -135,17 +135,39 @@ def verification_circuit(setting_id, *, max_gates=MAX_EXPORT_GATES):
     return c
 
 
-def calibration_template():
+def _physical_identity():
+    from .photonic_layout import layout_spec
+    gds=Path(__file__).with_name("layout")/"exchange_core.gds"
+    return dict(layout_spec_sha256=fingerprint(layout_spec()),
+                layout_gds_sha256=hashlib.sha256(gds.read_bytes()).hexdigest())
+
+
+def calibration_target(setting_id, *, physical_layout=False):
+    if type(physical_layout) is not bool:raise TypeError("physical_layout must be boolean")
+    row=_setting(setting_id)
+    if physical_layout:
+        from .photonic_layout import physical_phase_targets
+        row["physical_phase_targets_pi_over_32"]=physical_phase_targets(row["phase_targets_pi_over_32"])
+        row.update(_physical_identity())
+    return row
+
+
+def calibration_template(*, physical_layout=False):
     """No measured values or pretend zero-voltage defaults."""
-    return dict(schema="native-photonic-calibration-v1",status="UNMEASURED_TEMPLATE",
+    if type(physical_layout) is not bool:raise TypeError("physical_layout must be boolean")
+    from .photonic_layout import EXTRA_CHANNELS
+    channels=CHANNELS+EXTRA_CHANNELS if physical_layout else CHANNELS
+    result=dict(schema="native-photonic-calibration-v2" if physical_layout else "native-photonic-calibration-v1",status="UNMEASURED_TEMPLATE",
                 evidence_class=None,device_id=None,calibration_id=None,
                 io_sha256=fingerprint(io_design()),valid_from_utc=None,valid_until_utc=None,
                 context=dict(wavelength_nm=None,chip_temperature_c=None,
                              assembly_revision=None,fixed_trim_revision=None),
-                actuator_map={ch:None for ch in CHANNELS},
-                voltage_limits={ch:None for ch in CHANNELS},settings=[],
-                row_contract="setting_id, target_sha256, volts for all nine logical channels, evidence_sha256",
+                actuator_map={ch:None for ch in channels},
+                voltage_limits={ch:None for ch in channels},settings=[],
+                row_contract=f"setting_id, target_sha256, volts for all {len(channels)} channels, evidence_sha256",
                 scope="full-configuration lookup; no interpolation or independent-heater assumption")
+    if physical_layout:result.update(_physical_identity())
+    return result
 
 
 def _text(value, name):
@@ -188,15 +210,20 @@ def _utc(value):
     return result.astimezone(timezone.utc)
 
 
-def compile_drive_plan(setting_id, calibration, *, device_id, context, at_utc):
+def compile_drive_plan(setting_id, calibration, *, device_id, context, at_utc, physical_layout=False):
     """Bind recorded joint voltages to a route. Returns an OFFLINE plan only.
 
     Evidence hashes identify supplied records; they do not authenticate the
     measurements or establish fidelity. No instrument/network calls exist.
     """
-    design = io_design(); route = _setting(setting_id,design)
-    if type(calibration) is not dict or calibration.get("schema") != "native-photonic-calibration-v1":
+    design = io_design(); route = calibration_target(setting_id,physical_layout=physical_layout)
+    from .photonic_layout import EXTRA_CHANNELS
+    ordered_channels=CHANNELS+EXTRA_CHANNELS if physical_layout else CHANNELS
+    schema="native-photonic-calibration-v2" if physical_layout else "native-photonic-calibration-v1"
+    if type(calibration) is not dict or calibration.get("schema") != schema:
         raise ValueError("calibration schema required")
+    if physical_layout and any(calibration.get(k)!=v for k,v in _physical_identity().items()):
+        raise ValueError("stale physical geometry binding")
     if calibration.get("status") != "RECORDED": raise ValueError("no recorded calibration")
     evidence = calibration.get("evidence_class")
     if evidence not in ("LAB_RECORDED","SYNTHETIC_TEST_FIXTURE"): raise ValueError("explicit evidence class required")
@@ -207,7 +234,7 @@ def compile_drive_plan(setting_id, calibration, *, device_id, context, at_utc):
     if _context(context) != _context(calibration.get("context")): raise ValueError("calibration context mismatch")
     start,end,now = (_utc(calibration.get("valid_from_utc")),_utc(calibration.get("valid_until_utc")),_utc(at_utc))
     if not start <= now < end: raise ValueError("outside declared calibration validity interval")
-    channels = set(CHANNELS)
+    channels = set(ordered_channels)
     mapping,limits = calibration.get("actuator_map"),calibration.get("voltage_limits")
     if type(mapping) is not dict or set(mapping) != channels: raise ValueError("complete actuator mapping required")
     if len({_text(v,"driver channel") for v in mapping.values()}) != len(channels):
@@ -224,7 +251,7 @@ def compile_drive_plan(setting_id, calibration, *, device_id, context, at_utc):
     seen = set(); chosen = None
     for row in rows:
         if type(row) is not dict: raise ValueError("invalid calibration row")
-        canonical = _setting(row.get("setting_id"),design); sid = canonical["setting_id"]
+        canonical = calibration_target(row.get("setting_id"),physical_layout=physical_layout); sid = canonical["setting_id"]
         if sid in seen: raise ValueError("duplicate calibration setting")
         seen.add(sid)
         if row.get("target_sha256") != fingerprint(canonical): raise ValueError("route/phase target mismatch")
@@ -241,6 +268,7 @@ def compile_drive_plan(setting_id, calibration, *, device_id, context, at_utc):
                 device_id=device_id,calibration_id=calibration_id,io_sha256=fingerprint(design),
                 calibration_sha256=fingerprint(calibration),target_sha256=fingerprint(route),
                 evidence_sha256=evidence_hash,setting_id=setting_id,route=route,
-                commands=[dict(logical_channel=ch,driver_channel=mapping[ch],volts=str(values[ch])) for ch in CHANNELS],
+                commands=[dict(logical_channel=ch,driver_channel=mapping[ch],volts=str(values[ch])) for ch in ordered_channels],
+                physical_layout=physical_layout,
                 physical_acceptance="NOT_ASSESSED",hardware_submitted=False,
                 boundary="lookup and provenance consistency only; source/detector/loss/coherence qualification remains separate")

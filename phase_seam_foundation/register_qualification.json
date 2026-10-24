@@ -1,5 +1,5 @@
 {
-  "schema": "phase-seam-register-v0.10",
+  "schema": "phase-seam-register-v0.11",
   "author": "Monty",
   "status": "wrapped-phase permutation compiler reusing existing native arithmetic",
   "assumptions": [
@@ -3481,11 +3481,11 @@
     },
     "artifacts": {
       "io": "photonic_io_design.json",
-      "io_sha256": "7d474967cf479f39207c0a890801b7bc8b7b9e05105429adc2d4560f0b154d24",
+      "io_sha256": "162823f8bd641cf9545cdfebe72681847beb55f5f3863dcdf327b2c7d6930396",
       "calibration_template": "photonic_calibration_template.json",
-      "calibration_template_sha256": "18934e54c7ceabd703281e458ac82d0534c1999f0ba0aa4f56a7d00fd266db59",
+      "calibration_template_sha256": "31e0b642e29db7de6ec168902655a62645d3f8576f1fe22440c8e5c356a1a686",
       "process_binding": "photonic_process_binding.json",
-      "process_binding_sha256": "c97bee1c5d89e7d40db77fada45dec91e4a7b15ba36406ceb46a8c8688c23477"
+      "process_binding_sha256": "28e718a5a2af0224e36443ae16f789f1ca1c4474b58a53063c1610dca2d25718"
     },
     "process_candidate": "CORNERSTONE 300 nm SiN, TE, nominal 1550 nm",
     "process_software_commit": "3323b17b4d75c852ed2372d7d13239408cca0eb1",
@@ -3498,9 +3498,41 @@
       "hardware_submitted": false
     },
     "open": [
-      "heated placed/routed GDS and foundry design-rule review",
+      "complete packaged optical layout and foundry design-rule review",
       "calibration acquisition and inverse fitting",
       "measured source/detector/loss/coherence and physical acceptance"
+    ]
+  },
+  "photonic_layout": {
+    "status": "CORE_GDS_SUBASSEMBLY",
+    "qualification": "layout/layout_qualification.json",
+    "qualification_sha256": "fef8ab143ffc77c0ccb0764b7f2caf7801e75d1d735f1aa0860266a935177d80",
+    "local_geometry_passed": true,
+    "cad_tests": {
+      "count": 9,
+      "passed": true,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 1.686017242998787
+    },
+    "artifacts_sha256": {
+      "exchange_core.gds": "f6777bc1ecf2c6887363ca59e942b2129fbd3996c93132cb1a9291f3c6f9d3ab",
+      "exchange_core_ports.json": "a4a450b2eca35238ccffe7280257abc91d9046424ad34cd3a74c38247ad5b866",
+      "exchange_core.png": "b38f30668e4fe68e5caeb598f82f76fe39872f4eb65657bc0a28859b2838a872",
+      "exchange_unit.png": "72cc696c619c8cfa87e40abece0ebb13a4d861ccea07eb76bea38f2148371807",
+      "physical_calibration_template.json": "3a724e8699f2b69533fcd9cadf50f6e742fdc1b2de017ecbea6a578d5e102e44"
+    },
+    "physical_calibration_channels": 31,
+    "physical_profile_schema": "native-photonic-calibration-v2",
+    "layout_gds_sha256": "f6777bc1ecf2c6887363ca59e942b2129fbd3996c93132cb1a9291f3c6f9d3ab",
+    "foundry_drc_run": false,
+    "foundry_approved": false,
+    "physical_measurements": null,
+    "open": [
+      "fiber coupling and packaging",
+      "full foundry DRC and rule review",
+      "optical and thermal calibration"
     ]
   },
   "limits": {
@@ -3534,13 +3566,13 @@
     "native probability and time/energy laws independent of circuit assumptions"
   ],
   "validation": {
-    "tests": 193,
+    "tests": 199,
     "failures": 0,
     "errors": 0,
     "skipped": 0,
     "passed": true,
-    "seconds": 121.04120530500222,
-    "scope": "photonic I/O and calibration binding, photonic design, continuous sector control, balanced reset, controller, compressed/full register, v0.3, v0.2, v0.1, calculator smoke and seven existing dynamic checks; full native/Shor suite not rerun",
+    "seconds": 123.80132497199884,
+    "scope": "layout phase controls and physical calibration binding, photonic I/O, photonic design, continuous sector control, balanced reset, controller, compressed/full register, v0.3, v0.2, v0.1, calculator smoke and seven existing dynamic checks; CAD geometry suite separate; full native/Shor suite not rerun",
     "selected_dynamic_tests": [
       "test_initial_classical_memory_and_empty_query",
       "test_measurement_retains_quantum_classical_correlation",
@@ -3553,8 +3585,8 @@
   },
   "checked_sources_sha256": {
     "phase_seam_foundation/register.py": "d29fa6736256368b5a4885744b79a852146bc63d60fa98ec4a3ac18c26fa2b9d",
-    "phase_seam_foundation/register_qualification.py": "f56d29663f8e65610a231a1a2fae991d4db2040406255ee615beda3b81eb85e1",
-    "phase_seam_foundation/register_source_manifest.json": "a4829dcfb99607c35a7b530522f609b2359ec26ba79a4fd05e56d980cd4e19a8",
+    "phase_seam_foundation/register_qualification.py": "934dc2bc53a292b0551eb58fe6e807a84f969c16d0ddc549eb29e7c6a5738ab3",
+    "phase_seam_foundation/register_source_manifest.json": "fd14c8445e48580e0372a153f3189601b44e57d1b5cd5c4472352f06f0c60516",
     "phase_seam_foundation/model.py": "642984f5be7345683374719dc66193883d0688031e49ff9ebde12c5a36a939b8",
     "phase_seam_foundation/encoding.py": "93cd7ebca26e252756bdbaa9c8686a866826f7c9c8288e9881af0fa7ea8488c7",
     "phase_seam_foundation/joint.py": "53548114a84dfb24022acee866c10b67f0bd71ec9b9b203c014cf76af8ccbb36",
@@ -3565,14 +3597,20 @@
     "native_relational_qc/cyclotomic.py": "36a9f93fb9b6362a6141f13f4aef677de9f19642f6ea01ebb761614acab4ea86",
     "native_relational_qc/cyclotomic32.py": "33e203a7280bbe8341e37cb357f1bb6bfcaba9e695ff5144050e3a087733ab76",
     "native_relational_qc/cyclotomic64.py": "8fc9c42627feee330b00f1b56559031cc442746e830081eae09f535115d74e52",
-    "benchmarks/phase_seam_register_audit.py": "8fe1681fd8cfa6346126ed043bcc9c7a5bbab9d0b427ff28b180bf8f7e8bc0f1",
+    "benchmarks/phase_seam_register_audit.py": "5dc5c2eb09c91e4fe13b31a4dad8c7800ffeb838476e7d8666005c04d7a8ff93",
     "phase_seam_foundation/controller.py": "ba74ab91b6ea9d1234256420225ba3ef5cc50a63ebf4ed0fa5d571af2169285d",
     "phase_seam_foundation/sector_control.py": "fe528d000e7465e5ba359c6195172720624d5bebca92f15f1d03f9af6cf5694a",
     "native_relational_qc/dynamic.py": "88421139cba72f0d86f3644c5933e03dd44d8afa1fdc79b250b2e8bf5390acd9",
     "tests/test_native_dynamic.py": "41f94d9520e98c80ed7f58fdacf0b60ba31455c63bbf5a313975f4d4ae6a0b27",
     "phase_seam_foundation/photonic_exchange.py": "1414ba5fffd110d35f339941059cccd086fd1b7cc4a3df84c3794095c4d77997",
-    "phase_seam_foundation/photonic_io.py": "ae4d8824bf239173309acf45f81292a1d3f85873d73006c950e8232ac5edaffe",
-    "phase_seam_foundation/photonic_process_binding.json": "c97bee1c5d89e7d40db77fada45dec91e4a7b15ba36406ceb46a8c8688c23477",
+    "phase_seam_foundation/photonic_io.py": "6e7554b073e78cbd58ef26fcd2c2327f89f696bdb85d2d375f980914bb57d3bf",
+    "phase_seam_foundation/photonic_process_binding.json": "28e718a5a2af0224e36443ae16f789f1ca1c4474b58a53063c1610dca2d25718",
+    "phase_seam_foundation/photonic_layout.py": "c6debe28447121ad7b4522acd91ca60e41cd58d0274905dc12908c5dfbf6d350",
+    "phase_seam_foundation/layout/exchange_core.gds": "f6777bc1ecf2c6887363ca59e942b2129fbd3996c93132cb1a9291f3c6f9d3ab",
+    "phase_seam_foundation/layout/layout_qualification.json": "fef8ab143ffc77c0ccb0764b7f2caf7801e75d1d735f1aa0860266a935177d80",
+    "phase_seam_foundation/layout/exchange_core_ports.json": "a4a450b2eca35238ccffe7280257abc91d9046424ad34cd3a74c38247ad5b866",
+    "phase_seam_foundation/layout/physical_calibration_template.json": "3a724e8699f2b69533fcd9cadf50f6e742fdc1b2de017ecbea6a578d5e102e44",
+    "tests/test_phase_seam_layout_controls.py": "a3c55e25820eeb7ef85fe16cd149d8e31bd19c7772645409fcbeb7966c459b9c",
     "tests/test_phase_seam_photonic_io.py": "696d402e7884b6b93ba9733c28b3bc43544dd53799eb7215a5ee89f6e4f3994f",
     "tests/test_phase_seam_photonic_exchange.py": "532cdb11b8b63410f4849a3ee727dbec80c09ef42ff06915bda7ff7bdff79fc5",
     "tests/test_phase_seam_sector_control.py": "3f69a2492214a8fdd97019a4d36e6d415251303e66abc1867108d038ab84643c",

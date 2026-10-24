@@ -1,6 +1,6 @@
 # Four-mode phase–seam cell: functional hardware contract
 
-Author: Monty. Version 0.10. Status: functional interface and first encoded
+Author: Monty. Version 0.11. Status: functional interface and first encoded
 carrier design; no fabricated device or measured tolerances/capacity.
 
 The [v0.2 joint-readout note](JOINT_READOUT.md) now supplies a conditional
@@ -87,6 +87,14 @@ pinned; its default one-input MZI splitter must be replaced by a two-input
 component. Heated geometry and actual driver calibration remain to be
 supplied. Nine logical phase channels exclude extra port-trim/stabilization
 actuators. The generated calibration template contains no measured values.
+
+The [v0.11 core subassembly](PHOTONIC_LAYOUT.md) now supplies placed/routed
+GDS geometry with 28 heaters, 56 pads and 34 open optical ports. The four
+heaters in each exchange support arm, common-phase and input/output phase
+control; four more trim the bypasses. Local KLayout checks and negative
+controls cover selected geometric properties. The physical calibration
+profile records all 31 chip/external phase channels and binds the GDS hash.
+This is not a full foundry DRC pass, packaged chip or measured transfer.
 
 The proposed hardware primitive stores **four controllable cyclic modes**, a
 seam calibration and retained history. It is not specified as four qubits.
@@ -189,13 +197,13 @@ without treating its assumptions as established laws of nature.
 
 ## Concrete next deliverable
 
-The v0.9 core and v0.10 I/O routes, process-candidate mapping and calibration
-contract are ready for engineering review. Next, the pinned SiN candidate
-needs a placed/routed heated design, electrical interfaces and foundry rule
-checks. The external preparation/analysis modules need measured port phases
-and stable patch routing. Joint voltage-vector acquisition, source/detector
-response and a loss budget are required before physical comparison with
-the proposed intermediate-angle transfer and cross-block phase targets.
+The v0.11 heated core now has explicit geometry and open interfaces. Next,
+it needs optical coupling/packaging, probe/PCB integration and full foundry
+rule review. The external preparation/analysis modules need measured port
+phases and stable patch routing. Joint voltage-vector acquisition across
+the complete actuator set, source/detector response and a loss budget are
+required before physical comparison with the proposed intermediate-angle
+transfer and cross-block phase targets.
 
 The prototype's guard monitors optical code escape; closure is built into
 its fixed-sum code and is not independently verified on four physical

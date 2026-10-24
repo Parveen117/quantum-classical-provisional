@@ -32,14 +32,13 @@
     "two_port_combiner": "mmi2x2_nc",
     "blocks": 6,
     "nominal_delta_length_um": 0,
-    "geometry_status": "recipe only; no placement, routing or mask generated"
+    "geometry_status": "heated core subassembly generated in layout/exchange_core.gds; no fiber coupling or full foundry DRC"
   },
   "default_mzi_mismatch": "mzi_nc defaults to mmi1x2_nc at its input; explicitly replace it with mmi2x2_nc for the two-input exchange",
   "required_extensions": [
-    "heated arms with electrical ports and selected heater geometry",
-    "port phase trims and block-to-bypass phase matching",
-    "all optical routing and crossings with foundry design-rule review",
-    "fiber interfaces, detector routing and external preparation/analysis modules"
+    "fiber coupling and packaging",
+    "full foundry design-rule review",
+    "measured phase transfer and 31-channel assembled-system calibration"
   ],
   "model_boundary": "the pinned heater() raises NotImplementedError; default optical models are not a measured phase-voltage map or a device fidelity certificate",
   "external_bench_modules": {
@@ -48,7 +47,7 @@
     "guard": "one removable/bypassable 2x2 MZI on paths 4 and 16"
   },
   "pdk_executed": false,
-  "gds_generated": false,
+  "gds_generated": true,
   "drc_passed": false,
   "foundry_approved": false,
   "measured_parameters": null,
@@ -56,5 +55,6 @@
     "published nominal values and software defaults are not measured fabrication dimensions",
     "pinned software API and provider stack do not certify full layout compatibility",
     "no license-restricted software accessed, no fabrication order, no instrument job"
-  ]
+  ],
+  "layout_stage": "gdstk assembly of pinned MMI/heater polygons; gdsfactory PDK code not executed"
 }
