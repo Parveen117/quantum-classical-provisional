@@ -1,0 +1,73 @@
+{
+  "interpretation": "Scoped source certificates replay; strict numeral carry and digit product are not substituted for the circuit coefficient field.",
+  "phase_adapter_witness": {
+    "K": 4,
+    "left_exponent": 1,
+    "quantum_phase_homomorphism": false,
+    "quantum_phase_product_exponent": 2,
+    "right_exponent": 1,
+    "source_product_exponent": 1
+  },
+  "schema": "nrqc-native-source-adapter-audit-v1",
+  "source_certificates": {
+    "emk": {
+      "canonical_json_sha256": "1aec0ea282671a9a5a3b7afb21754726d48766b8f54221da994980a0e70b9d0f",
+      "verdicts": {
+        "T1_z2_grading": "PASS",
+        "T2_ugd_multiplicative_law_in_seam_channel": "PASS",
+        "T3_cfe_rebuilt_on_native_carrier": "PASS",
+        "T4_residue_on_native_carrier": "PASS",
+        "T5_the_dial_was_the_odd_grade": "PASS"
+      }
+    },
+    "ugd": {
+      "canonical_json_sha256": "a5403e86b2f8f8eeebbb382ac04652101a2132b641bfc2f31e6b13348590a0e3",
+      "verdicts": {
+        "T1_phase_alphabet_and_quarter_turn": "PASS",
+        "T2_carry_discipline_conserves": "PASS",
+        "T3_scale_convolution_multiplication": "PASS",
+        "T4_classical_projection_is_blind_to_seam": "PASS",
+        "T5_cut_zero": "PASS",
+        "T6_lambda_logic": "PASS"
+      }
+    }
+  },
+  "source_commit": "35d63e4ac0d8cf161c549654ce6b430d68afbde4",
+  "source_modified": false,
+  "source_pins": {
+    "emk": {
+      "git_blob": "eaf3c3f65476f37165c75031fcd6cfb2cb66f710",
+      "sha256": "49d8548e7e3ccc2ce77bdc0f5a317b737f3bd37dc4d9e1f90c9f87852c37d1c0"
+    },
+    "ugd": {
+      "git_blob": "c833e6d1f85772dea171906ac11135976ac06b09",
+      "sha256": "23430ebc060a9a8dd1aab670392bcb82d46dd148c6a643bda87d61a4e206dc85"
+    }
+  },
+  "source_repository": "Parveen117/Publications",
+  "status": "PASS",
+  "strict_carry_witness": {
+    "equal_total_charge": true,
+    "left": {
+      "digits": {
+        "0": [
+          0,
+          1
+        ]
+      },
+      "ledger": 0,
+      "total_seam": 1
+    },
+    "right": {
+      "digits": {
+        "0": [
+          0,
+          0
+        ]
+      },
+      "ledger": 1,
+      "total_seam": 1
+    },
+    "strict_equality": false
+  }
+}

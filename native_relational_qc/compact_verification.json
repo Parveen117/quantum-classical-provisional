@@ -1,0 +1,627 @@
+{
+  "approximate_truncation": false,
+  "claim": "Exact native selected-observation execution and bounded compression; no quantum-hardware obsolescence claim.",
+  "evidence_class": "BOUNDED_LOCAL_EXACT_CALCULATION_AND_RESOURCE_COMPARISON",
+  "hardware_jobs": 0,
+  "ordering_growth_control": [
+    {
+      "adjacent_formula": 3,
+      "adjacent_nodes": 3,
+      "crossed_formula": 3,
+      "crossed_nodes": 3,
+      "pairs": 1
+    },
+    {
+      "adjacent_formula": 6,
+      "adjacent_nodes": 6,
+      "crossed_formula": 9,
+      "crossed_nodes": 9,
+      "pairs": 2
+    },
+    {
+      "adjacent_formula": 9,
+      "adjacent_nodes": 9,
+      "crossed_formula": 21,
+      "crossed_nodes": 21,
+      "pairs": 3
+    },
+    {
+      "adjacent_formula": 12,
+      "adjacent_nodes": 12,
+      "crossed_formula": 45,
+      "crossed_nodes": 45,
+      "pairs": 4
+    },
+    {
+      "adjacent_formula": 15,
+      "adjacent_nodes": 15,
+      "crossed_formula": 93,
+      "crossed_nodes": 93,
+      "pairs": 5
+    },
+    {
+      "adjacent_formula": 18,
+      "adjacent_nodes": 18,
+      "crossed_formula": 189,
+      "crossed_nodes": 189,
+      "pairs": 6
+    },
+    {
+      "adjacent_formula": 21,
+      "adjacent_nodes": 21,
+      "crossed_formula": 381,
+      "crossed_nodes": 381,
+      "pairs": 7
+    }
+  ],
+  "passed": true,
+  "protocol": {
+    "analytic_answer": "(2+sqrt(2))/8",
+    "baseline_scope": "one maintained MPS implementation and one dense reference, not a best-known-classical search",
+    "dense_correctness_audit": "SDK readout error is retained; independently audit the same amplitudes with math.fsum at unchanged 1e-12 tolerance, outside timing",
+    "dense_unexecuted_sizes": "only theoretical amplitude bytes; no claim of a measured allocation failure",
+    "input": "zero state; H,T at each site; nearest-neighbor CZ; final H on q0",
+    "input_construction_timed": false,
+    "memory": "DD full retained Python graph and MPS numeric tensor payload are distinct metrics; neither is peak process RSS",
+    "mps": "zero truncation threshold, no maximum bond dimension, one thread; timed selected-probability save only; full tensor memory audit in separate untimed execution; no sampled measurement",
+    "observer_transfer_tables": "cleared before first execution at each size; reused for warm executions",
+    "preliminary_diagnostic": "first aggregate run failed the 1e-12 dense-readout check at n=20 (1.144140338027455e-12); compensated summation of the same entries had 1.9984014443252818e-15 error",
+    "query": "P(q0=0,q1=0)",
+    "task_scope": "selected local observable in this structured family, not a full-distribution benchmark",
+    "timing_clock": "perf_counter"
+  },
+  "rows": [
+    {
+      "dense_theoretical_amplitude_bytes": 4096,
+      "exact_dd": {
+        "cumulative_recursive_work_units": 1494,
+        "dense_complex128_amplitude_bytes": 4096,
+        "distinct_retained_weights": 8,
+        "exact_match": true,
+        "first_seconds": 0.06353789899731055,
+        "live_nodes": 15,
+        "max_retained_coefficient_bits": 6,
+        "peak_allocated_nodes": 39,
+        "peak_edge_coefficient_bits": 6,
+        "qubits": 8,
+        "retained_python_graph_bytes": 8708,
+        "value": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "1/8",
+            "0",
+            "0"
+          ]
+        },
+        "warm_median_seconds": 0.06307543499860913,
+        "warm_seconds": [
+          0.06307543499860913
+        ]
+      },
+      "expected": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/4",
+          "1/8",
+          "0",
+          "0"
+        ]
+      },
+      "gates": 24,
+      "observer": {
+        "exact_match": true,
+        "final_terms": 6,
+        "first_seconds": 0.010286473996529821,
+        "gates_examined": 24,
+        "gates_proved_invariant": 20,
+        "max_coefficient_bits": 4,
+        "peak_terms": 6,
+        "source_boundary_terms": 2,
+        "statevector_constructed": false,
+        "term_visits": 98,
+        "truncated_terms": 0,
+        "value": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "1/8",
+            "0",
+            "0"
+          ]
+        },
+        "warm_median_seconds": 0.0005244869971647859,
+        "warm_seconds": [
+          0.0015895830001682043,
+          0.0005244869971647859,
+          0.0005186980051803403
+        ]
+      },
+      "qiskit_aer_mps": {
+        "absolute_error": 5.551115123125783e-16,
+        "first_seconds": 0.0017724439967423677,
+        "maximum_bond_dimension": 2,
+        "probability": 0.4267766952966363,
+        "retained_numeric_payload_bytes": 1008,
+        "warm_median_seconds": 0.0007368910009972751,
+        "warm_seconds": [
+          0.0007368910009972751,
+          0.0008874729974195361,
+          0.0006192169967107475
+        ]
+      },
+      "qiskit_dense": {
+        "absolute_error": 1.2212453270876722e-15,
+        "amplitude_payload_bytes": 4096,
+        "compensated_sum_absolute_error": 8.326672684688674e-16,
+        "compensated_sum_probability": 0.42677669529663603,
+        "first_seconds": 0.0012010479986201972,
+        "probability": 0.42677669529663564,
+        "warm_median_seconds": 0.0005275509975035675,
+        "warm_seconds": [
+          0.0005447360017569736,
+          0.0005275509975035675,
+          0.0004676530006690882
+        ]
+      },
+      "qubits": 8
+    },
+    {
+      "dense_theoretical_amplitude_bytes": 1048576,
+      "exact_dd": {
+        "cumulative_recursive_work_units": 7074,
+        "dense_complex128_amplitude_bytes": 1048576,
+        "distinct_retained_weights": 8,
+        "exact_match": true,
+        "first_seconds": 0.29822371400223346,
+        "live_nodes": 31,
+        "max_retained_coefficient_bits": 10,
+        "peak_allocated_nodes": 79,
+        "peak_edge_coefficient_bits": 10,
+        "qubits": 16,
+        "retained_python_graph_bytes": 17036,
+        "value": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "1/8",
+            "0",
+            "0"
+          ]
+        },
+        "warm_median_seconds": 0.33097601900226437,
+        "warm_seconds": [
+          0.33097601900226437
+        ]
+      },
+      "expected": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/4",
+          "1/8",
+          "0",
+          "0"
+        ]
+      },
+      "gates": 48,
+      "observer": {
+        "exact_match": true,
+        "final_terms": 6,
+        "first_seconds": 0.010961554005916696,
+        "gates_examined": 48,
+        "gates_proved_invariant": 44,
+        "max_coefficient_bits": 4,
+        "peak_terms": 6,
+        "source_boundary_terms": 2,
+        "statevector_constructed": false,
+        "term_visits": 194,
+        "truncated_terms": 0,
+        "value": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "1/8",
+            "0",
+            "0"
+          ]
+        },
+        "warm_median_seconds": 0.0006045240006642416,
+        "warm_seconds": [
+          0.0006045240006642416,
+          0.0007179630047176033,
+          0.0005355230023269542
+        ]
+      },
+      "qiskit_aer_mps": {
+        "absolute_error": 5.551115123125783e-16,
+        "first_seconds": 0.0016688899995642714,
+        "maximum_bond_dimension": 2,
+        "probability": 0.4267766952966363,
+        "retained_numeric_payload_bytes": 2160,
+        "warm_median_seconds": 0.001080829999409616,
+        "warm_seconds": [
+          0.0016056160020525567,
+          0.0009732800026540644,
+          0.001080829999409616
+        ]
+      },
+      "qiskit_dense": {
+        "absolute_error": 1.616484723854228e-13,
+        "amplitude_payload_bytes": 1048576,
+        "compensated_sum_absolute_error": 1.6653345369377348e-15,
+        "compensated_sum_probability": 0.4267766952966352,
+        "first_seconds": 0.031930908997310326,
+        "probability": 0.4267766952964752,
+        "warm_median_seconds": 0.017719725998176727,
+        "warm_seconds": [
+          0.028544492000946775,
+          0.017719725998176727,
+          0.01654661000065971
+        ]
+      },
+      "qubits": 16
+    },
+    {
+      "dense_theoretical_amplitude_bytes": 16777216,
+      "exact_dd": {
+        "cumulative_recursive_work_units": 11472,
+        "dense_complex128_amplitude_bytes": 16777216,
+        "distinct_retained_weights": 8,
+        "exact_match": true,
+        "first_seconds": 0.48634721999405883,
+        "live_nodes": 39,
+        "max_retained_coefficient_bits": 12,
+        "peak_allocated_nodes": 99,
+        "peak_edge_coefficient_bits": 12,
+        "qubits": 20,
+        "retained_python_graph_bytes": 20636,
+        "value": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "1/8",
+            "0",
+            "0"
+          ]
+        },
+        "warm_median_seconds": 0.46440123399952427,
+        "warm_seconds": [
+          0.46440123399952427
+        ]
+      },
+      "expected": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/4",
+          "1/8",
+          "0",
+          "0"
+        ]
+      },
+      "gates": 60,
+      "observer": {
+        "exact_match": true,
+        "final_terms": 6,
+        "first_seconds": 0.010232074004306924,
+        "gates_examined": 60,
+        "gates_proved_invariant": 56,
+        "max_coefficient_bits": 4,
+        "peak_terms": 6,
+        "source_boundary_terms": 2,
+        "statevector_constructed": false,
+        "term_visits": 242,
+        "truncated_terms": 0,
+        "value": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "1/8",
+            "0",
+            "0"
+          ]
+        },
+        "warm_median_seconds": 0.0006004180031595752,
+        "warm_seconds": [
+          0.0007980809969012626,
+          0.0006004180031595752,
+          0.0005612599998130463
+        ]
+      },
+      "qiskit_aer_mps": {
+        "absolute_error": 5.551115123125783e-16,
+        "first_seconds": 0.0016742270017857663,
+        "maximum_bond_dimension": 2,
+        "probability": 0.4267766952966363,
+        "retained_numeric_payload_bytes": 2736,
+        "warm_median_seconds": 0.0010277210021740757,
+        "warm_seconds": [
+          0.0013169890007702634,
+          0.0010277210021740757,
+          0.0009408420010004193
+        ]
+      },
+      "qiskit_dense": {
+        "absolute_error": 1.144140338027455e-12,
+        "amplitude_payload_bytes": 16777216,
+        "compensated_sum_absolute_error": 1.9984014443252818e-15,
+        "compensated_sum_probability": 0.42677669529663487,
+        "first_seconds": 0.5510750649991678,
+        "probability": 0.426776695297781,
+        "warm_median_seconds": 0.5176256090053357,
+        "warm_seconds": [
+          0.5583023510043859,
+          0.4145980329994927,
+          0.5176256090053357
+        ]
+      },
+      "qubits": 20
+    },
+    {
+      "dense_theoretical_amplitude_bytes": 68719476736,
+      "exact_dd": {
+        "cumulative_recursive_work_units": 31098,
+        "dense_complex128_amplitude_bytes": 68719476736,
+        "distinct_retained_weights": 8,
+        "exact_match": true,
+        "first_seconds": 1.3713903810057673,
+        "live_nodes": 63,
+        "max_retained_coefficient_bits": 18,
+        "peak_allocated_nodes": 159,
+        "peak_edge_coefficient_bits": 18,
+        "qubits": 32,
+        "retained_python_graph_bytes": 33628,
+        "value": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "1/8",
+            "0",
+            "0"
+          ]
+        },
+        "warm_median_seconds": 1.5145640500049922,
+        "warm_seconds": [
+          1.5145640500049922
+        ]
+      },
+      "expected": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/4",
+          "1/8",
+          "0",
+          "0"
+        ]
+      },
+      "gates": 96,
+      "observer": {
+        "exact_match": true,
+        "final_terms": 6,
+        "first_seconds": 0.01060103099734988,
+        "gates_examined": 96,
+        "gates_proved_invariant": 92,
+        "max_coefficient_bits": 4,
+        "peak_terms": 6,
+        "source_boundary_terms": 2,
+        "statevector_constructed": false,
+        "term_visits": 386,
+        "truncated_terms": 0,
+        "value": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "1/8",
+            "0",
+            "0"
+          ]
+        },
+        "warm_median_seconds": 0.0005367140038288198,
+        "warm_seconds": [
+          0.0005367140038288198,
+          0.0006262669994612224,
+          0.000517726999532897
+        ]
+      },
+      "qiskit_aer_mps": {
+        "absolute_error": 5.551115123125783e-16,
+        "first_seconds": 0.0022631789979641326,
+        "maximum_bond_dimension": 2,
+        "probability": 0.4267766952966363,
+        "retained_numeric_payload_bytes": 4464,
+        "warm_median_seconds": 0.0013688549952348694,
+        "warm_seconds": [
+          0.0013688549952348694,
+          0.001311059997533448,
+          0.0014318789981189184
+        ]
+      },
+      "qiskit_dense": {
+        "executed": false,
+        "reason": "dense runs deliberately limited to 20 qubits"
+      },
+      "qubits": 32
+    },
+    {
+      "dense_theoretical_amplitude_bytes": 295147905179352825856,
+      "exact_dd": {
+        "cumulative_recursive_work_units": 130602,
+        "dense_complex128_amplitude_bytes": 295147905179352825856,
+        "distinct_retained_weights": 8,
+        "exact_match": true,
+        "first_seconds": 6.329580605997762,
+        "live_nodes": 127,
+        "max_retained_coefficient_bits": 34,
+        "peak_allocated_nodes": 319,
+        "peak_edge_coefficient_bits": 34,
+        "qubits": 64,
+        "retained_python_graph_bytes": 67288,
+        "value": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "1/8",
+            "0",
+            "0"
+          ]
+        },
+        "warm_median_seconds": 6.51494657999865,
+        "warm_seconds": [
+          6.51494657999865
+        ]
+      },
+      "expected": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/4",
+          "1/8",
+          "0",
+          "0"
+        ]
+      },
+      "gates": 192,
+      "observer": {
+        "exact_match": true,
+        "final_terms": 6,
+        "first_seconds": 0.010583794006379321,
+        "gates_examined": 192,
+        "gates_proved_invariant": 188,
+        "max_coefficient_bits": 4,
+        "peak_terms": 6,
+        "source_boundary_terms": 2,
+        "statevector_constructed": false,
+        "term_visits": 770,
+        "truncated_terms": 0,
+        "value": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "1/8",
+            "0",
+            "0"
+          ]
+        },
+        "warm_median_seconds": 0.0005875399947399274,
+        "warm_seconds": [
+          0.0006050349984434433,
+          0.0005875399947399274,
+          0.0005691120022675022
+        ]
+      },
+      "qiskit_aer_mps": {
+        "absolute_error": 5.551115123125783e-16,
+        "first_seconds": 0.003729554002347868,
+        "maximum_bond_dimension": 2,
+        "probability": 0.4267766952966363,
+        "retained_numeric_payload_bytes": 9072,
+        "warm_median_seconds": 0.0024921380027080886,
+        "warm_seconds": [
+          0.0026387249963590875,
+          0.002465394005412236,
+          0.0024921380027080886
+        ]
+      },
+      "qiskit_dense": {
+        "executed": false,
+        "reason": "dense runs deliberately limited to 20 qubits"
+      },
+      "qubits": 64
+    },
+    {
+      "dense_theoretical_amplitude_bytes": 5444517870735015415413993718908291383296,
+      "exact_dd": {
+        "executed": false,
+        "reason": "bounded benchmark stops DD execution at 64 qubits"
+      },
+      "expected": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/4",
+          "1/8",
+          "0",
+          "0"
+        ]
+      },
+      "gates": 384,
+      "observer": {
+        "exact_match": true,
+        "final_terms": 6,
+        "first_seconds": 0.010420421000162605,
+        "gates_examined": 384,
+        "gates_proved_invariant": 380,
+        "max_coefficient_bits": 4,
+        "peak_terms": 6,
+        "source_boundary_terms": 2,
+        "statevector_constructed": false,
+        "term_visits": 1538,
+        "truncated_terms": 0,
+        "value": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "1/8",
+            "0",
+            "0"
+          ]
+        },
+        "warm_median_seconds": 0.0008010360033949837,
+        "warm_seconds": [
+          0.0008010360033949837,
+          0.0007269959969562478,
+          0.0008783500015852042
+        ]
+      },
+      "qiskit_aer_mps": {
+        "absolute_error": 5.551115123125783e-16,
+        "first_seconds": 0.006055781996110454,
+        "maximum_bond_dimension": 2,
+        "probability": 0.4267766952966363,
+        "retained_numeric_payload_bytes": 18288,
+        "warm_median_seconds": 0.004607253002177458,
+        "warm_seconds": [
+          0.004810799000551924,
+          0.004607253002177458,
+          0.004540779998933431
+        ]
+      },
+      "qiskit_dense": {
+        "executed": false,
+        "reason": "dense runs deliberately limited to 20 qubits"
+      },
+      "qubits": 128
+    }
+  ],
+  "schema": "native-exact-compact-observer-benchmark-v1",
+  "source_sha256": {
+    "native_relational_qc/__init__.py": "2df0c6684869d87776756cc78918199a9a09fa86f8c9e6d41d675591698c9350",
+    "native_relational_qc/__main__.py": "c6203974637a24db3e87d63be17d4cad0a01ab23da898f4237b5f612f944a4f0",
+    "native_relational_qc/algebra.py": "3d23b2a3a345b0760bfce1cff9e4eea9635543ee566c9dd6f0078405f211e9ab",
+    "native_relational_qc/bridge.py": "6c863d69da9b477ad17948e6c935d3c058d426f0322e5df99eb4f8c09a61b4b3",
+    "native_relational_qc/circuit.py": "6215adf52443de8ee1db01f8e641c4c50124810a7674fd3258d826ff08b9e366",
+    "native_relational_qc/compact.py": "1acff6eaa8664b4ba33285c66c9f433ecd0148aa8383a18f79dbd2ccb66e898d",
+    "native_relational_qc/compact_benchmark.py": "38a618ea91bd436c740b75f67a908b63067f1b7332468ca4382cf7921872d5a6",
+    "native_relational_qc/compact_qiskit.py": "92f7bd85d6e753e9c898bcbd6f28e65b7fcc4cdd0a3ddedab4ab94df2fddcf05",
+    "native_relational_qc/exact.py": "cc0b3be70660ed819b3ad153620ea4338fb6bf57102a4474d4355da2805afdf6",
+    "native_relational_qc/examples.py": "2066bf7326cde2e064c9800de8fda87eb74314af99200593bc0fb39e3f8d47d5",
+    "native_relational_qc/observer.py": "5338e32fc5f28e8d1975aa2c62885419c7026bb5cbf88b133eda60a3bc8c4601",
+    "native_relational_qc/qiskit_adapter.py": "d3e877d52f7aeeebc9e9db996b1675c1feb2a99815450111365acaf61c51f2b8",
+    "native_relational_qc/state.py": "2ff1413d09f36f6449eb6ae7ca8c53de71ac86b9b0711e080849987ab031093e",
+    "native_relational_qc/verify.py": "f3c03e25b279701155646a52c7ef96c9eab5696da74294ce9bc2a035c3c3ecf3",
+    "tests/test_native_compact.py": "193e1a4a4005b047c0e6dfd5ded886df7f6fe349eac7364ab485e2e3b15faab6",
+    "tests/test_native_observer.py": "89914d95fa87f9526caa193b185ce20666279100a6cdc87a7930e4cd3f27a31c",
+    "tests/test_native_qiskit_adapter.py": "c6f2c4c584fb8b619839fc1ea881a8c1b15a5ecc43c077d5652e3acf9f33a430",
+    "tests/test_native_relational_qc.py": "4d70497ff3cc85284a4404bd8f25eddc8c9d54cf119ce52d626807df642dcaba"
+  },
+  "tests": {
+    "errors": 0,
+    "failure_details": [],
+    "failures": 0,
+    "run": 64,
+    "skipped": 0
+  },
+  "versions": {
+    "numpy": "2.5.4",
+    "python": "3.12.14",
+    "qiskit": "2.6.0",
+    "qiskit_aer": "0.17.2"
+  }
+}

@@ -1,0 +1,263 @@
+{
+  "version": 1,
+  "description": "Frozen after development pilots. Exact packed-integer contraction and cached site-budget inspection. Same circuit generator, seeds and 20-second per-query budget as the historical factored protocol. All failures retained. Runs sequentially in fresh single-thread processes.",
+  "budget": {
+    "max_terms": 262144,
+    "max_bond": 256,
+    "max_coefficients": 1000000,
+    "max_work": 100000000,
+    "max_coefficient_bits": 4096,
+    "execution_seconds": 20,
+    "startup_seconds": 15,
+    "rss_bytes": 1342177280
+  },
+  "cases": [
+    {
+      "n": 6,
+      "rounds": 4,
+      "query": "local00",
+      "method": "factored",
+      "seed": 20261018,
+      "cohort": "small_independent_reference"
+    },
+    {
+      "n": 6,
+      "rounds": 4,
+      "query": "local00",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "small_independent_reference"
+    },
+    {
+      "n": 6,
+      "rounds": 4,
+      "query": "local00",
+      "method": "statevector",
+      "seed": 20261018,
+      "cohort": "small_independent_reference"
+    },
+    {
+      "n": 6,
+      "rounds": 4,
+      "query": "local00",
+      "method": "factored",
+      "seed": 20261018,
+      "cohort": "small_sparse_reference",
+      "factored_options": {
+        "contraction": "sparse"
+      }
+    },
+    {
+      "n": 6,
+      "rounds": 4,
+      "query": "parity",
+      "method": "factored",
+      "seed": 20261018,
+      "cohort": "small_independent_reference"
+    },
+    {
+      "n": 6,
+      "rounds": 4,
+      "query": "parity",
+      "method": "observer",
+      "seed": 20261018,
+      "cohort": "small_independent_reference"
+    },
+    {
+      "n": 6,
+      "rounds": 4,
+      "query": "parity",
+      "method": "statevector",
+      "seed": 20261018,
+      "cohort": "small_independent_reference"
+    },
+    {
+      "n": 6,
+      "rounds": 4,
+      "query": "parity",
+      "method": "factored",
+      "seed": 20261018,
+      "cohort": "small_sparse_reference",
+      "factored_options": {
+        "contraction": "sparse"
+      }
+    },
+    {
+      "n": 50,
+      "rounds": 8,
+      "query": "local00",
+      "method": "factored",
+      "seed": 20261018,
+      "cohort": "regression"
+    },
+    {
+      "n": 50,
+      "rounds": 8,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "regression"
+    },
+    {
+      "n": 50,
+      "rounds": 8,
+      "query": "parity",
+      "method": "factored",
+      "seed": 20261018,
+      "cohort": "regression"
+    },
+    {
+      "n": 50,
+      "rounds": 8,
+      "query": "parity",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "regression"
+    },
+    {
+      "n": 50,
+      "rounds": 12,
+      "query": "local00",
+      "method": "factored",
+      "seed": 20261018,
+      "cohort": "primary_repeated",
+      "repeat": 1
+    },
+    {
+      "n": 50,
+      "rounds": 12,
+      "query": "parity",
+      "method": "factored",
+      "seed": 20261018,
+      "cohort": "primary_repeated",
+      "repeat": 1
+    },
+    {
+      "n": 50,
+      "rounds": 12,
+      "query": "local00",
+      "method": "factored",
+      "seed": 20261018,
+      "cohort": "primary_repeated",
+      "repeat": 2
+    },
+    {
+      "n": 50,
+      "rounds": 12,
+      "query": "parity",
+      "method": "factored",
+      "seed": 20261018,
+      "cohort": "primary_repeated",
+      "repeat": 2
+    },
+    {
+      "n": 50,
+      "rounds": 12,
+      "query": "local00",
+      "method": "factored",
+      "seed": 20261018,
+      "cohort": "primary_repeated",
+      "repeat": 3
+    },
+    {
+      "n": 50,
+      "rounds": 12,
+      "query": "parity",
+      "method": "factored",
+      "seed": 20261018,
+      "cohort": "primary_repeated",
+      "repeat": 3
+    },
+    {
+      "n": 50,
+      "rounds": 12,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "primary_reference"
+    },
+    {
+      "n": 50,
+      "rounds": 12,
+      "query": "local00",
+      "method": "factored",
+      "seed": 20261019,
+      "cohort": "second_seed"
+    },
+    {
+      "n": 50,
+      "rounds": 12,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261019,
+      "cohort": "second_seed"
+    },
+    {
+      "n": 50,
+      "rounds": 12,
+      "query": "parity",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "primary_reference"
+    },
+    {
+      "n": 50,
+      "rounds": 12,
+      "query": "parity",
+      "method": "factored",
+      "seed": 20261019,
+      "cohort": "second_seed"
+    },
+    {
+      "n": 50,
+      "rounds": 12,
+      "query": "parity",
+      "method": "mps",
+      "seed": 20261019,
+      "cohort": "second_seed"
+    },
+    {
+      "n": 50,
+      "rounds": 16,
+      "query": "local00",
+      "method": "factored",
+      "seed": 20261018,
+      "cohort": "failure_boundary"
+    },
+    {
+      "n": 50,
+      "rounds": 16,
+      "query": "local00",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "failure_boundary"
+    },
+    {
+      "n": 50,
+      "rounds": 16,
+      "query": "parity",
+      "method": "factored",
+      "seed": 20261018,
+      "cohort": "failure_boundary"
+    },
+    {
+      "n": 50,
+      "rounds": 16,
+      "query": "parity",
+      "method": "mps",
+      "seed": 20261018,
+      "cohort": "failure_boundary"
+    },
+    {
+      "n": 50,
+      "rounds": 8,
+      "query": "parity",
+      "method": "factored",
+      "seed": 20261018,
+      "cohort": "sparse_ablation",
+      "factored_options": {
+        "contraction": "sparse"
+      }
+    }
+  ]
+}

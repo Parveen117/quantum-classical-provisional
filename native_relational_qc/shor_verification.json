@@ -1,0 +1,152 @@
+{
+  "artifact_sha256": {
+    "README.md": "5d9f481083bea9909498828365a048caeab70998942213822b21c23bec4de72b",
+    "native_relational_qc/CALCULATOR.md": "580731a8c8755428d6e16871324cae5b949243ad1c3288aa3787431145f79340",
+    "native_relational_qc/README.md": "07c0c184195e2256dfc2155c84fec5e71c7382b7d4dfdddb3700bcee8105cf2f",
+    "native_relational_qc/SHOR.md": "ddb82db991a5cb065606dd13e6458d1eeab31fbdf8651585a20cc91d1e3c7650",
+    "native_relational_qc/calculator_examples/shor15.json": "588bbd8d54cacc3a277237f229c2072472d4eeabad8ad5761fed39ab8aeef676",
+    "native_relational_qc/calculator_examples/shor15.result.json": "d553846ea52979c4288337846479acde293408dfef987421f3c50eb531f9781a",
+    "native_relational_qc/calculator_examples/shor21.json": "429a5b63bfce88d03f1979f83940d892058c9a73ea234fb5a208456670cdee2a",
+    "native_relational_qc/calculator_examples/shor21.result.json": "cac93600859733130f77caa15964557f85a45d6d2697ff993230541f0cf3e291",
+    "native_relational_qc/shor_pilot.json": "d1ac7276137730ec5a42b4a2b722793fd1c6d762fa672ebd5dfb677015060b9d",
+    "native_relational_qc/shor_protocol.json": "af91388bc46d3dab5aa759beb1dd8cdf50a6d28915a3b4e73dec975887ab0c05",
+    "native_relational_qc/shor_results.json": "6e366d28b042702e142697a12f9ae15e0201c0279c30c70a3bf614354833a2ef",
+    "native_relational_qc/shor_test_results.txt": "6e0e4acdfeba7a4014960639824182e2bf658897d5f8e4f68105e1e818317625"
+  },
+  "author": "Monty",
+  "baseline_commit": "fcc53d49098ddc86a2eee098dc3d9c6f6ce44133",
+  "checks": [
+    "Exact Toffoli and controlled swap on all basis inputs, including phase",
+    "Exact controlled S/T-dagger with clean scratch and explicit dirty-scratch counterexample",
+    "Full exact inverse-QFT matrices at widths 1,2,3 including global phase",
+    "All controlled modular-15 multiplier basis actions, including unused work label 15",
+    "Seven full complex-state Qiskit checks against direct pow/Fourier formula, atol 8e-13, no phase alignment",
+    "Every complete calculator distribution equals independent exact finite Fourier sum",
+    "CF-only and CF-plus-doubles policies assessed separately with modular verification",
+    "Bad-base and no-IQFT controls retained; no-IQFT can still produce useful classical candidates",
+    "Input identity, wire order and complete distribution required before assessment",
+    "Unsupported precision, resource exhaustion and wall timeout do not produce factors"
+  ],
+  "created_utc": "2026-10-23T18:49:55.734557+00:00",
+  "environment": {
+    "numpy": "2.3.5",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "qiskit": "2.6.0"
+  },
+  "exact_reference_matches": 36,
+  "guard_rejections": 4,
+  "jya_compilation_audit": [
+    {
+      "case": "15_rotation",
+      "compiled_blocks": 8,
+      "recurrence_products": 0,
+      "repeated_blocks": 0
+    },
+    {
+      "case": "15_table",
+      "compiled_blocks": 7,
+      "recurrence_products": 0,
+      "repeated_blocks": 0
+    },
+    {
+      "case": "15_base7",
+      "compiled_blocks": 7,
+      "recurrence_products": 0,
+      "repeated_blocks": 0
+    },
+    {
+      "case": "21_table",
+      "compiled_blocks": 23,
+      "recurrence_products": 0,
+      "repeated_blocks": 0
+    },
+    {
+      "case": "15_trivial_gcd",
+      "compiled_blocks": 3,
+      "recurrence_products": 0,
+      "repeated_blocks": 0
+    },
+    {
+      "case": "15_no_qft",
+      "compiled_blocks": 5,
+      "recurrence_products": 0,
+      "repeated_blocks": 0
+    }
+  ],
+  "limits": [
+    "Only 1..3 phase bits and odd N<=255 at the builder interface; qualification is N=15 and N=21 only",
+    "N=15 arithmetic uses a special full-register rotation identity; other examples use exponential truth-table synthesis",
+    "N=21 strict low-precision CF success is zero; explicitly testing doubled denominators yields 1/4 ideal success",
+    "Jya backend is slower in all six measured cases; no repeated local words and no memory improvement established",
+    "Current calculator prepares the circuit separately for each requested outcome",
+    "No physical hardware, noise model, quantum advantage, scalable classical factoring or 2056-qubit Shor claim"
+  ],
+  "old_engine_files_identical_to_baseline": [
+    "calculator.py",
+    "clifford_frame.py",
+    "jya_frame.py",
+    "reversible_logic.py",
+    "exact.py"
+  ],
+  "paired_calculations": 36,
+  "schema": "nrqc-shor-verification-v1",
+  "source_sha256": {
+    "native_relational_qc/__init__.py": "2df0c6684869d87776756cc78918199a9a09fa86f8c9e6d41d675591698c9350",
+    "native_relational_qc/__main__.py": "f41e3acdc29c738b9d6d6e5a0ade0bfe789d4a41c180a793224a300815cbaeba",
+    "native_relational_qc/algebra.py": "3d23b2a3a345b0760bfce1cff9e4eea9635543ee566c9dd6f0078405f211e9ab",
+    "native_relational_qc/bridge.py": "6c863d69da9b477ad17948e6c935d3c058d426f0322e5df99eb4f8c09a61b4b3",
+    "native_relational_qc/calculator.py": "ff681fead53f77d796b3ea3dee2a058fc77a29cc8adb8980220f51a32f5c014e",
+    "native_relational_qc/circuit.py": "6215adf52443de8ee1db01f8e641c4c50124810a7674fd3258d826ff08b9e366",
+    "native_relational_qc/clifford_frame.py": "2ed2759b25612b6cb276526f357f136a261727331d1f6ebcd83648278a07c864",
+    "native_relational_qc/clifford_t.py": "0942a9ad3c7cfd2299b261bb3b2f0e2106d99ab1224218289dd63ecd944b2e9a",
+    "native_relational_qc/compact.py": "1acff6eaa8664b4ba33285c66c9f433ecd0148aa8383a18f79dbd2ccb66e898d",
+    "native_relational_qc/compact_benchmark.py": "38a618ea91bd436c740b75f67a908b63067f1b7332468ca4382cf7921872d5a6",
+    "native_relational_qc/compact_qiskit.py": "92f7bd85d6e753e9c898bcbd6f28e65b7fcc4cdd0a3ddedab4ab94df2fddcf05",
+    "native_relational_qc/dyadic.py": "f57de994e59041fa203cffdda5f73e30b65552715286483b29b683b79d849832",
+    "native_relational_qc/dynamic.py": "88421139cba72f0d86f3644c5933e03dd44d8afa1fdc79b250b2e8bf5390acd9",
+    "native_relational_qc/dynamic_examples.py": "0d40d9b3dbf098623c7586f13cdb54d9c6f627e4af6f0c398e79f983129d259e",
+    "native_relational_qc/dynamic_qiskit.py": "be1ff2a0ff1187370dad1d42d5fa126f1f5b6ff1d46b976861ef917c2f930f58",
+    "native_relational_qc/dynamic_reference.py": "3ac7547482028029660081c4122bbce370d09a74b466432e4d4d48b529df89e1",
+    "native_relational_qc/dynamic_verify.py": "aa8b83844876d6627403443f0ea6e3d1504a9ad872b1f64ecc8bceab3f5eb5a2",
+    "native_relational_qc/emk_geometry_audit.py": "c06def18c9900b50dfabd2916c6b22c442aeb371180d1b6f18c7e7fb66091f8a",
+    "native_relational_qc/emk_tensor.py": "8decb85142fe5e55e895af0daaf9c1a688366b476ea6fe11ddab322034393707",
+    "native_relational_qc/entropy_logic.py": "5d13b8663b92623939b7bbb106b8dbf9f1bead17ffb0661df7fe71d5db86ad9f",
+    "native_relational_qc/exact.py": "cc0b3be70660ed819b3ad153620ea4338fb6bf57102a4474d4355da2805afdf6",
+    "native_relational_qc/examples.py": "2066bf7326cde2e064c9800de8fda87eb74314af99200593bc0fb39e3f8d47d5",
+    "native_relational_qc/factored.py": "db7bde341174f2f4f44a17b734b45cc93a6f7f4a07207fb91c0934466e721e6b",
+    "native_relational_qc/frame_qualification.py": "e9ece9cad8de9523b44898197841eafa31aa3e272b725bedd1a7b8b4bbac9af0",
+    "native_relational_qc/ibm_workloads.py": "2a4b86fc8bb1ab9aaaa979129e37aa49d7b87880a2cf5a38f63fc690028e317e",
+    "native_relational_qc/integer_matrix.py": "9301ec91dad88fa8b53b83083f0b62454eb44203c5c7bfc77f4b06015fe14e40",
+    "native_relational_qc/jya_frame.py": "cbece1e006c5e1a90b018132b3c2a2ab64752736a746c68dbd2efcb2960d7ee6",
+    "native_relational_qc/jya_qualification.py": "135c3598a47aa4adc0a9fb3350098259775151be1598663c55c1ca29659a2f28",
+    "native_relational_qc/large_register.py": "412cd9a60ae6941c0a8478287f233a276060cad65f200ff4a630e67f271e3f23",
+    "native_relational_qc/large_register_qualification.py": "ef4f415ba4727de648076ab2b12fff9559a19b885b384acea77ecca31b208ae2",
+    "native_relational_qc/observer.py": "eec5857176d20158e50c5d00a314483f9ce67a17a12fc7cc94416a754bd80833",
+    "native_relational_qc/pauli_engine.py": "b72489ecb8078ab3b15a41faaa68b7376210b41b19a7e36fcbecb958488fed14",
+    "native_relational_qc/qiskit_adapter.py": "d3e877d52f7aeeebc9e9db996b1675c1feb2a99815450111365acaf61c51f2b8",
+    "native_relational_qc/readout.py": "6b891b4434fc409046df33eab9059037e9f80b687e6dfc1e8ce8593c3ec5b4c7",
+    "native_relational_qc/reduction.py": "51017ce80182651b318d49acd1b177bcb03407c20686231693a728fb0ac2f28c",
+    "native_relational_qc/reduction_benchmark.py": "e9ad8162fb8c0020f6b00d57717d774763493081dda43d42e4c9821b922be9ba",
+    "native_relational_qc/reused_product.py": "8cf910b93ca7177afd373ee8c15ad801b9d493be872604a09baaaca2adc51a73",
+    "native_relational_qc/reversible_logic.py": "f566059dad85d01735e9384b9e7aa692f666f7b6909cf738696c47f5c4e12184",
+    "native_relational_qc/reversible_logic_demo.py": "dbb7e52dc90173eddc11539230816dbedbae58d59a8ffe2f9b2e3707e25cdaf8",
+    "native_relational_qc/shor.py": "e5e322d9932c6fcab8c468689743906aaf010b120a4d188a2b31f14a7d7f5eaa",
+    "native_relational_qc/shor_qualification.py": "550ad604df884cee35b099b61068bbabe9de4a4dcf8c9ed67e204565d85a158f",
+    "native_relational_qc/stabilizer.py": "a490804f4cead55505410969496aa44eb71a4ed424bae2c23ff746221a51d19d",
+    "native_relational_qc/state.py": "2ff1413d09f36f6449eb6ae7ca8c53de71ac86b9b0711e080849987ab031093e",
+    "native_relational_qc/streaming.py": "d5f77ae1b7192de1e5ad0e488b791be2db537cac1cb535f5dd5fefc452c63e02",
+    "native_relational_qc/stress_benchmark.py": "c86ba3814939ee99bd61cba5646327c52c631db1b21f3070891bcefdf232303b",
+    "native_relational_qc/verify.py": "f3c03e25b279701155646a52c7ef96c9eab5696da74294ce9bc2a035c3c3ecf3",
+    "tests/test_native_shor.py": "8df930ce94a770a680818c230e9c24e3ade4626ae0ce3eae214cc965f385b367"
+  },
+  "tests": {
+    "command": "python -m unittest discover -s tests -p 'test_native*.py' -v",
+    "errors": 0,
+    "failures": 0,
+    "new_methods": 12,
+    "passed": 243,
+    "seconds": 56.383,
+    "skips": 0
+  }
+}

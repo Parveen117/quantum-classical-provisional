@@ -1,0 +1,121 @@
+{
+  "answers": [
+    {
+      "algebraically_exact": true,
+      "execution_seconds": 0.4072701640034211,
+      "id": "local00",
+      "kind": "probability",
+      "statistics": {
+        "active_qubits": 18,
+        "algebraically_exact": true,
+        "causal_gates": 258,
+        "causal_pruning": true,
+        "contracted_sites": 18,
+        "forward_gates": 256,
+        "input_gates": 1146,
+        "input_qubits": 50,
+        "max_coefficient_bits": 50,
+        "peak_bond": 16,
+        "peak_stored_coefficients": 2298,
+        "peak_temporary_coefficients": 256,
+        "prefix_expanded_terms": 4,
+        "prefix_local_coefficients": 20,
+        "product_suffix": true,
+        "product_suffix_gates": 2,
+        "representation": "product-observer suffix + sparse exact MPS contraction",
+        "scalar_products": 70026,
+        "statevector_constructed": false,
+        "truncated_terms": 0
+      },
+      "status": "completed",
+      "value": {
+        "decimal": "0.2471937985278930165",
+        "decimal_enclosure": {
+          "lower": "0.247193798527893016",
+          "maximum_absolute_display_error": "1/2000000000000000000",
+          "method": "integer-square-root bounds and outward rational rounding",
+          "upper": "0.247193798527893017"
+        },
+        "exact": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "35102818810449/140737488355328",
+            "-54100655/34359738368",
+            "0",
+            "0"
+          ]
+        },
+        "expression": "(35102818810449/140737488355328) + (-54100655/34359738368)*sqrt(2)"
+      }
+    },
+    {
+      "algebraically_exact": true,
+      "execution_seconds": 2.531070921999344,
+      "id": "global_parity",
+      "kind": "expectation",
+      "statistics": {
+        "active_qubits": 50,
+        "algebraically_exact": true,
+        "causal_gates": 1146,
+        "causal_pruning": true,
+        "contracted_sites": 50,
+        "forward_gates": 972,
+        "input_gates": 1146,
+        "input_qubits": 50,
+        "max_coefficient_bits": 226,
+        "peak_bond": 16,
+        "peak_stored_coefficients": 9264,
+        "peak_temporary_coefficients": 256,
+        "prefix_expanded_terms": 1125899906842624,
+        "prefix_local_coefficients": 100,
+        "product_suffix": true,
+        "product_suffix_gates": 174,
+        "representation": "product-observer suffix + sparse exact MPS contraction",
+        "scalar_products": 308656,
+        "statevector_constructed": false,
+        "truncated_terms": 0
+      },
+      "status": "completed",
+      "value": {
+        "decimal": "-0.0000000149208031055",
+        "decimal_enclosure": {
+          "lower": "-0.000000014920803106",
+          "maximum_absolute_display_error": "1/2000000000000000000",
+          "method": "integer-square-root bounds and outward rational rounding",
+          "upper": "-0.000000014920803105"
+        },
+        "exact": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "-970347732509980210138030522697004459968710869322066169664451/53919893334301279589334030174039261347274288845081144962207220498432",
+            "58626089097878626868047843977572757919940942204095257879265/26959946667150639794667015087019630673637144422540572481103610249216",
+            "0",
+            "0"
+          ]
+        },
+        "expression": "(-970347732509980210138030522697004459968710869322066169664451/53919893334301279589334030174039261347274288845081144962207220498432) + (58626089097878626868047843977572757919940942204095257879265/26959946667150639794667015087019630673637144422540572481103610249216)*sqrt(2)"
+      }
+    }
+  ],
+  "backend": "factored",
+  "circuit_sha256": "84e241df0ce20b0c1f48f535e639b972fb8d2fa7cff99ff162d36ddfc1d6930d",
+  "evidence_class": "LOCAL_IDEAL_CALCULATION",
+  "execution_seconds": 2.938921916000254,
+  "gates": 1146,
+  "hardware_job_id": null,
+  "input_state": "all_zero",
+  "limits_per_scalar_evaluation": {
+    "max_bond": 256,
+    "max_coefficient_bits": 4096,
+    "max_coefficients": 1000000,
+    "max_work": 10000000
+  },
+  "n_qubits": 50,
+  "peak_worker_rss_bytes": 34050048,
+  "peak_worker_rss_source": "Linux /proc/self/status VmHWM, including imports/setup",
+  "request_sha256": "130224d04723ff434dd230d900dd828c4601b459add9bb88dadf6744a5811f88",
+  "schema": "nrqc-calculator-result-v1",
+  "status": "completed",
+  "timeout_seconds": 20,
+  "wall_seconds": 3.2901310739980545
+}

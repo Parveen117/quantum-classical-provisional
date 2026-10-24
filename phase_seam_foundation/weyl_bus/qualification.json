@@ -1,0 +1,729 @@
+{
+  "schema": "native-weyl-bus-audit-v1",
+  "author": "Monty",
+  "status": "CONDITIONAL_OPERATOR_CHECKS",
+  "python_version": "3.12.14",
+  "tests": {
+    "count": 41,
+    "passed": true,
+    "seconds": 11.51986568500024,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "checked_sources_sha256": {
+    "phase_seam_foundation/weyl_bus.py": "468f6a69b82f0696e7c2988fbb438a41aee912a44b6c3a0c3cf4b6d88fe12ff4",
+    "phase_seam_foundation/WEYL_BUS.md": "4f6734f756fbe92c55018065eade094d7086a38397355701e18b0c079ee6ec34",
+    "tests/test_weyl_bus.py": "32757e3778318f7d72c5e7ef016e7aadc0fe7defb38b0f6b6812be23fb31611b",
+    "tests/test_phase_seam_joint.py": "e0ff847109cfa78a91b0b7766171830a1dc52e12c90a1e90c6a5bcb0235ae409",
+    "benchmarks/weyl_bus_audit.py": "9f42347528711d53d4ccafe05ee06714b72e39fb8e3df1749e3e170de0dc5f89",
+    "phase_seam_foundation/joint.py": "53548114a84dfb24022acee866c10b67f0bd71ec9b9b203c014cf76af8ccbb36",
+    "phase_seam_foundation/model.py": "642984f5be7345683374719dc66193883d0688031e49ff9ebde12c5a36a939b8",
+    "native_relational_qc/exact.py": "cc0b3be70660ed819b3ad153620ea4338fb6bf57102a4474d4355da2805afdf6",
+    "native_relational_qc/cyclotomic.py": "36a9f93fb9b6362a6141f13f4aef677de9f19642f6ea01ebb761614acab4ea86",
+    "native_relational_qc/cyclotomic32.py": "33e203a7280bbe8341e37cb357f1bb6bfcaba9e695ff5144050e3a087733ab76",
+    "native_relational_qc/cyclotomic64.py": "8fc9c42627feee330b00f1b56559031cc442746e830081eae09f535115d74e52"
+  },
+  "retained_sources": {
+    "v0.12": "CHECKED_SOURCE_HASHES_UNCHANGED_SUITES_NOT_RERUN",
+    "v0.13": "CHECKED_SOURCE_HASHES_UNCHANGED_SUITES_NOT_RERUN",
+    "v0.14": "CHECKED_SOURCE_HASHES_UNCHANGED_SUITES_NOT_RERUN"
+  },
+  "admitted_control_contract": "two independent data qubits; coherent signed X/Z bus kicks and their inverses",
+  "examples_evidence_class": "EXACT_IDEAL_OPERATOR_MODELS",
+  "rectangle": {
+    "schema": "native-weyl-bus-word-v1",
+    "status": "CONDITIONAL_OPERATOR_IDENTITY",
+    "dimension": 64,
+    "word_length": 4,
+    "controlled_bus_pulses": 4,
+    "local_flip_pulses": 0,
+    "branches": [
+      {
+        "data_out": 0,
+        "shift": 0,
+        "clock": 0,
+        "phase_steps": 8
+      },
+      {
+        "data_out": 1,
+        "shift": 0,
+        "clock": 0,
+        "phase_steps": 56
+      },
+      {
+        "data_out": 2,
+        "shift": 0,
+        "clock": 0,
+        "phase_steps": 56
+      },
+      {
+        "data_out": 3,
+        "shift": 0,
+        "clock": 0,
+        "phase_steps": 8
+      }
+    ],
+    "data_bus_factorized": true,
+    "bus_returned": true,
+    "common_bus_word": [
+      0,
+      0
+    ],
+    "local_output_flip_mask": 0,
+    "nonlocal_phase_steps": 32,
+    "entangling": true,
+    "plus_input_concurrence_squared": {
+      "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+      "coefficients": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "physical_interactions_assumed": true,
+    "physical_device_built": false,
+    "universal_simulation_claim": false
+  },
+  "echoed": {
+    "schema": "native-weyl-bus-word-v1",
+    "status": "CONDITIONAL_OPERATOR_IDENTITY",
+    "dimension": 64,
+    "word_length": 16,
+    "controlled_bus_pulses": 8,
+    "local_flip_pulses": 4,
+    "branches": [
+      {
+        "data_out": 0,
+        "shift": 0,
+        "clock": 0,
+        "phase_steps": 8
+      },
+      {
+        "data_out": 1,
+        "shift": 0,
+        "clock": 0,
+        "phase_steps": 56
+      },
+      {
+        "data_out": 2,
+        "shift": 0,
+        "clock": 0,
+        "phase_steps": 56
+      },
+      {
+        "data_out": 3,
+        "shift": 0,
+        "clock": 0,
+        "phase_steps": 8
+      }
+    ],
+    "data_bus_factorized": true,
+    "bus_returned": true,
+    "common_bus_word": [
+      0,
+      0
+    ],
+    "local_output_flip_mask": 0,
+    "nonlocal_phase_steps": 32,
+    "entangling": true,
+    "plus_input_concurrence_squared": {
+      "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+      "coefficients": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "physical_interactions_assumed": true,
+    "physical_device_built": false,
+    "universal_simulation_claim": false
+  },
+  "smallest_signed_rectangle": {
+    "schema": "native-weyl-bus-word-v1",
+    "status": "CONDITIONAL_OPERATOR_IDENTITY",
+    "dimension": 8,
+    "word_length": 4,
+    "controlled_bus_pulses": 4,
+    "local_flip_pulses": 0,
+    "branches": [
+      {
+        "data_out": 0,
+        "shift": 0,
+        "clock": 0,
+        "phase_steps": 8
+      },
+      {
+        "data_out": 1,
+        "shift": 0,
+        "clock": 0,
+        "phase_steps": 56
+      },
+      {
+        "data_out": 2,
+        "shift": 0,
+        "clock": 0,
+        "phase_steps": 56
+      },
+      {
+        "data_out": 3,
+        "shift": 0,
+        "clock": 0,
+        "phase_steps": 8
+      }
+    ],
+    "data_bus_factorized": true,
+    "bus_returned": true,
+    "common_bus_word": [
+      0,
+      0
+    ],
+    "local_output_flip_mask": 0,
+    "nonlocal_phase_steps": 32,
+    "entangling": true,
+    "plus_input_concurrence_squared": {
+      "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+      "coefficients": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "physical_interactions_assumed": true,
+    "physical_device_built": false,
+    "universal_simulation_claim": false
+  },
+  "smallest_identical_half_echo": {
+    "schema": "native-weyl-bus-word-v1",
+    "status": "CONDITIONAL_OPERATOR_IDENTITY",
+    "dimension": 16,
+    "word_length": 16,
+    "controlled_bus_pulses": 8,
+    "local_flip_pulses": 4,
+    "branches": [
+      {
+        "data_out": 0,
+        "shift": 0,
+        "clock": 0,
+        "phase_steps": 8
+      },
+      {
+        "data_out": 1,
+        "shift": 0,
+        "clock": 0,
+        "phase_steps": 56
+      },
+      {
+        "data_out": 2,
+        "shift": 0,
+        "clock": 0,
+        "phase_steps": 56
+      },
+      {
+        "data_out": 3,
+        "shift": 0,
+        "clock": 0,
+        "phase_steps": 8
+      }
+    ],
+    "data_bus_factorized": true,
+    "bus_returned": true,
+    "common_bus_word": [
+      0,
+      0
+    ],
+    "local_output_flip_mask": 0,
+    "nonlocal_phase_steps": 32,
+    "entangling": true,
+    "plus_input_concurrence_squared": {
+      "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+      "coefficients": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "physical_interactions_assumed": true,
+    "physical_device_built": false,
+    "universal_simulation_claim": false
+  },
+  "unit_faults": [
+    {
+      "after": 0,
+      "fault": [
+        1,
+        1
+      ],
+      "common_bus_word": [
+        1,
+        1
+      ],
+      "data_error_steps": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "nonlocal_error_steps": 0,
+      "local_one_phase_steps": [
+        0,
+        0
+      ],
+      "data_unchanged_up_to_global_phase": true
+    },
+    {
+      "after": 1,
+      "fault": [
+        1,
+        1
+      ],
+      "common_bus_word": [
+        1,
+        1
+      ],
+      "data_error_steps": [
+        2,
+        62,
+        2,
+        62
+      ],
+      "nonlocal_error_steps": 0,
+      "local_one_phase_steps": [
+        60,
+        0
+      ],
+      "data_unchanged_up_to_global_phase": false
+    },
+    {
+      "after": 2,
+      "fault": [
+        1,
+        1
+      ],
+      "common_bus_word": [
+        1,
+        1
+      ],
+      "data_error_steps": [
+        62,
+        58,
+        6,
+        2
+      ],
+      "nonlocal_error_steps": 0,
+      "local_one_phase_steps": [
+        60,
+        8
+      ],
+      "data_unchanged_up_to_global_phase": false
+    },
+    {
+      "after": 3,
+      "fault": [
+        1,
+        1
+      ],
+      "common_bus_word": [
+        1,
+        1
+      ],
+      "data_error_steps": [
+        60,
+        60,
+        4,
+        4
+      ],
+      "nonlocal_error_steps": 0,
+      "local_one_phase_steps": [
+        0,
+        8
+      ],
+      "data_unchanged_up_to_global_phase": false
+    },
+    {
+      "after": 4,
+      "fault": [
+        1,
+        1
+      ],
+      "common_bus_word": [
+        1,
+        1
+      ],
+      "data_error_steps": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "nonlocal_error_steps": 0,
+      "local_one_phase_steps": [
+        0,
+        0
+      ],
+      "data_unchanged_up_to_global_phase": true
+    }
+  ],
+  "echo_fault_counterexample": {
+    "after": 1,
+    "fault": [
+      0,
+      1
+    ],
+    "common_bus_word": [
+      0,
+      1
+    ],
+    "data_error_steps": [
+      1,
+      63,
+      1,
+      63
+    ],
+    "nonlocal_error_steps": 0,
+    "local_one_phase_steps": [
+      62,
+      0
+    ],
+    "data_unchanged_up_to_global_phase": false
+  },
+  "initialized_bus_false_positive": {
+    "schema": "native-weyl-bus-word-v1",
+    "status": "CONDITIONAL_OPERATOR_IDENTITY",
+    "dimension": 64,
+    "word_length": 3,
+    "controlled_bus_pulses": 3,
+    "local_flip_pulses": 0,
+    "branches": [
+      {
+        "data_out": 0,
+        "shift": 0,
+        "clock": 4,
+        "phase_steps": 8
+      },
+      {
+        "data_out": 1,
+        "shift": 0,
+        "clock": 4,
+        "phase_steps": 56
+      },
+      {
+        "data_out": 2,
+        "shift": 0,
+        "clock": 60,
+        "phase_steps": 56
+      },
+      {
+        "data_out": 3,
+        "shift": 0,
+        "clock": 60,
+        "phase_steps": 8
+      }
+    ],
+    "data_bus_factorized": false,
+    "bus_returned": false,
+    "common_bus_word": null,
+    "local_output_flip_mask": 0,
+    "nonlocal_phase_steps": null,
+    "entangling": null,
+    "plus_input_concurrence_squared": null,
+    "physical_interactions_assumed": true,
+    "physical_device_built": false,
+    "universal_simulation_claim": false
+  },
+  "native_emk_bridge": {
+    "equal": true,
+    "target": {
+      "sites": 2,
+      "coefficients": [
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "1/2",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "-1/2",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      ]
+    }
+  },
+  "coverage": {
+    "rectangle_parameter_cases": 5460,
+    "single_weyl_fault_seam_cases": 20480,
+    "selected_64_level_words_checked_on_all_256_columns": 4,
+    "seeded_mixed_words": 48,
+    "external_bus_reference_checked": true
+  },
+  "protection": {
+    "arbitrary_bus_initial_state": true,
+    "equal_integrated_local_z_drift_with_ideal_echo": true,
+    "arbitrary_midgate_bus_noise": false,
+    "correlated_zz_drift": false,
+    "control_area_error": false,
+    "loss_or_leakage": false
+  },
+  "prior_art": [
+    "https://arxiv.org/abs/1402.6674",
+    "https://arxiv.org/abs/0804.3240"
+  ],
+  "novelty_established": false,
+  "physical_device_built": false,
+  "hardware_submitted": false,
+  "open": [
+    "derive conditional kicks from a physical interaction Hamiltonian",
+    "control and leakage/loss costs with realistic bus dynamics",
+    "end-to-end resource comparison and fault-tolerant architecture"
+  ]
+}

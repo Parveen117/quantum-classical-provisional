@@ -1,0 +1,42 @@
+{
+  "schema": "phase-seam-joint-source-manifest-v1",
+  "author": "Monty",
+  "inherited_manuscripts": "source_manifest.json",
+  "native_algebra": {
+    "repository": "Parveen117/Publications",
+    "commit": "35d63e4ac0d8cf161c549654ce6b430d68afbde4",
+    "path": "papers/emk-ugd-algebra/certificates/emk2_native_carrier.py",
+    "git_blob_sha": "eaf3c3f65476f37165c75031fcd6cfb2cb66f710",
+    "admitted_content": "K^2=I, R^2=-I, KR=-RK, basis I,K,R,RK",
+    "not_imported": "source physical-memory, curvature, uniqueness or continuum claims",
+    "source_certificate_executed_this_revision": false
+  },
+  "local_exact_arithmetic": {
+    "path": "native_relational_qc/exact.py",
+    "base_commit": "5acd53b5c1ec579da879147db2430be71cd954c5",
+    "role": "Q(sqrt(2),i) coefficients only; no circuit state or probability engine imported"
+  },
+  "established_mathematical_context": [
+    {
+      "title": "On states of quantum theory",
+      "author": "Amir R. Arab",
+      "url": "https://arxiv.org/abs/2110.00793",
+      "role": "positive-functional and GNS context; finite construction is supplied explicitly"
+    },
+    {
+      "title": "Causality, Joint measurement and Tsirelson's bound",
+      "authors": "S. K. Choudhary, G. Kar, S. Kunkri, R. Rahaman",
+      "url": "https://arxiv.org/abs/quant-ph/0608100",
+      "role": "quantum CHSH context; a direct sum-of-squares proof is supplied here"
+    }
+  ],
+  "new_assumptions": [
+    "complex scalar extension with conjugate-linear star",
+    "cross-site commuting product",
+    "positive normalized operator preparation functional",
+    "projector readout and sandwich instrument",
+    "complete channel rule",
+    "proposed joint interaction and selected preparation"
+  ],
+  "claim_boundary": "Conditional algebraic quantum completion, not a new derivation of the probability postulates or physical realization."
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "nrqc-calculator-v1",
+  "n_qubits": 2,
+  "simplify": "exact",
+  "operations": [
+    [
+      "h",
+      [
+        0
+      ]
+    ],
+    [
+      "cx",
+      [
+        0,
+        1
+      ]
+    ],
+    [
+      "x",
+      [
+        1
+      ]
+    ],
+    [
+      "y",
+      [
+        1
+      ]
+    ]
+  ],
+  "queries": [
+    {
+      "id": "yy",
+      "kind": "expectation",
+      "paulis": {
+        "0": "Y",
+        "1": "Y"
+      }
+    },
+    {
+      "id": "law",
+      "kind": "distribution",
+      "qubits": [
+        0,
+        1
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "backend": "observer",
+  "n_qubits": 3,
+  "operations": [
+    [
+      "h",
+      [
+        0
+      ]
+    ],
+    [
+      "h",
+      [
+        1
+      ]
+    ],
+    [
+      "x",
+      [
+        2
+      ]
+    ],
+    [
+      "h",
+      [
+        2
+      ]
+    ],
+    [
+      "cx",
+      [
+        0,
+        2
+      ]
+    ],
+    [
+      "cx",
+      [
+        1,
+        2
+      ]
+    ],
+    [
+      "h",
+      [
+        0
+      ]
+    ],
+    [
+      "h",
+      [
+        1
+      ]
+    ]
+  ],
+  "queries": [
+    {
+      "id": "interference_11",
+      "kind": "probability",
+      "outcomes": {
+        "0": 1,
+        "1": 1
+      }
+    },
+    {
+      "id": "phase_marker_x",
+      "kind": "expectation",
+      "paulis": {
+        "2": "X"
+      }
+    }
+  ],
+  "schema": "nrqc-calculator-v1"
+}

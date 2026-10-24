@@ -1,0 +1,244 @@
+{
+  "version": 1,
+  "status": "PASS_BOUNDED_INTEGER_CONTRACTION_UPGRADE",
+  "baseline_commit": "800498118a4b03fbbf54d07b21bd5bba9bfca229",
+  "scope": "Selected ideal all-zero nearest-neighbor circuits; exact arithmetic, not physical hardware or general quantum advantage.",
+  "environment": {
+    "cgroup_memory_max": "8589934592",
+    "cpu_count": 9,
+    "cpu_max": "800000 100000",
+    "numpy": "2.3.5",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "qiskit": "2.6.0",
+    "qiskit_aer": "0.17.2"
+  },
+  "protocol_sha256": "f1af05df6e3e4e5cffbefa8871c4247da0eb2d5c81039982dc561d5c24c593b8",
+  "benchmark_rows": 29,
+  "outcome_counts": {
+    "factored/completed": 15,
+    "observer/completed": 2,
+    "statevector/completed": 2,
+    "mps/completed": 6,
+    "factored/resource_limit": 2,
+    "mps/time_limit": 2
+  },
+  "primary_repeats": {
+    "local00": {
+      "repeats": 3,
+      "median_seconds": 1.9622946590025094,
+      "minimum_seconds": 1.8913619680024567,
+      "maximum_seconds": 2.012470374997065,
+      "maximum_peak_rss_bytes": 40349696,
+      "exact_value": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "2475859145126021431308460617/9903520314283042199192993792",
+          "46178737831515614491/604462909807314587353088",
+          "0",
+          "0"
+        ]
+      }
+    },
+    "parity": {
+      "repeats": 3,
+      "median_seconds": 17.000795851003204,
+      "minimum_seconds": 16.961015364999184,
+      "maximum_seconds": 17.43890314100281,
+      "maximum_peak_rss_bytes": 60567552,
+      "exact_value": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "-2182381531995163374702758324957961991950239926164709127128604188990544832377500829767573701/68351585149469122636640694597425667667286544715412888638305331450311031224980497600734786781970432",
+          "-176797418804236470996320947630773264719931029194211414390621171245395921366607085546157871/34175792574734561318320347298712833833643272357706444319152665725155515612490248800367393390985216",
+          "0",
+          "0"
+        ]
+      }
+    }
+  },
+  "exact_checks": [
+    {
+      "kind": "baseline_exact_equality",
+      "rounds": 8,
+      "query": "local00",
+      "matches": 1
+    },
+    {
+      "kind": "baseline_exact_equality",
+      "rounds": 8,
+      "query": "parity",
+      "matches": 2
+    },
+    {
+      "kind": "independent_expanded_and_sparse_exact_equality",
+      "n": 6,
+      "rounds": 4,
+      "query": "local00"
+    },
+    {
+      "kind": "independent_expanded_and_sparse_exact_equality",
+      "n": 6,
+      "rounds": 4,
+      "query": "parity"
+    }
+  ],
+  "reference_comparisons": [
+    {
+      "n": 6,
+      "rounds": 4,
+      "query": "local00",
+      "seed": 20261018,
+      "reference": "statevector",
+      "native_decimal": "0.241149902343750000000000000000000000000000000000000",
+      "reference_float": 0.24114990234374928,
+      "absolute_difference": "7.21644966006351751275360584259033203125E-16",
+      "relative_difference": "2.9925161030240615269287541919767147557580359402682865097443685143001771703366236E-15"
+    },
+    {
+      "n": 6,
+      "rounds": 4,
+      "query": "parity",
+      "seed": 20261018,
+      "reference": "statevector",
+      "native_decimal": "-0.103054426584001827480345064144797504011010360690165",
+      "reference_float": -0.10305442658400145,
+      "absolute_difference": "3.7852820138834796438186190052029709859375E-16",
+      "relative_difference": "3.6730901712388033860700668581499201485441338929128468640720382296542156416053633E-15"
+    },
+    {
+      "n": 50,
+      "rounds": 8,
+      "query": "local00",
+      "seed": 20261018,
+      "reference": "mps",
+      "native_decimal": "0.247193798527893016409000023120145225449149126897305",
+      "reference_float": 0.2471937985281556,
+      "absolute_difference": "2.625785422721550301025570196466494698825E-13",
+      "relative_difference": "1.0622375797284656389182613626806767542420869565687718818680678980959364006879626E-12"
+    },
+    {
+      "n": 50,
+      "rounds": 8,
+      "query": "parity",
+      "seed": 20261018,
+      "reference": "mps",
+      "native_decimal": "-1.4920803105074964324789173538048307411235995E-8",
+      "reference_float": -1.4920803105285793e-08,
+      "absolute_difference": "2.10829146584147070200628347885427961470670998096466064453125E-19",
+      "relative_difference": "1.4129879276567789903914016406707523611704185904918524682276582599560936765371771E-11"
+    },
+    {
+      "n": 50,
+      "rounds": 12,
+      "query": "local00",
+      "seed": 20261018,
+      "reference": "mps",
+      "native_decimal": "0.250105926964624692447797111412913326987963312106565",
+      "reference_float": 0.25010592696466993,
+      "absolute_difference": "4.5241006591117297827477684277898830935E-14",
+      "relative_difference": "1.8088738295880626864136074537498992827863728299970664402613260496880922496692167E-13"
+    },
+    {
+      "n": 50,
+      "rounds": 12,
+      "query": "local00",
+      "seed": 20261019,
+      "reference": "mps",
+      "native_decimal": "0.250694423450004589324974871676477457951203012588165",
+      "reference_float": 0.2506944234493512,
+      "absolute_difference": "6.5336685901094297814820296634736073269625E-13",
+      "relative_difference": "2.6062281323191954604299559687686254445046686058621417181059105323946682865336192E-12"
+    },
+    {
+      "n": 50,
+      "rounds": 12,
+      "query": "parity",
+      "seed": 20261018,
+      "reference": "mps",
+      "native_decimal": "-3.9244739402316730065651961808716778860933545E-8",
+      "reference_float": -3.9244739419019335e-08,
+      "absolute_difference": "1.67026053128814773073665023452818157257641851902008056640625E-17",
+      "relative_difference": "4.2560112685817642047583096858156282126810046644324477053165707996817262463212776E-10"
+    },
+    {
+      "n": 50,
+      "rounds": 12,
+      "query": "parity",
+      "seed": 20261019,
+      "reference": "mps",
+      "native_decimal": "3.1135686514187457076258060910850937965370745E-8",
+      "reference_float": 3.113568650741854e-08,
+      "absolute_difference": "6.76891488195397682894091562403781186210818588733673095703125E-18",
+      "relative_difference": "2.1740053423487598647063849014276074914282746342106167824429011038480648875237807E-10"
+    }
+  ],
+  "tests": {
+    "tests_run": 128,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "details": "integer_test_results.json"
+  },
+  "sdk_import_blocker": {
+    "passed": true,
+    "n_qubits": 50,
+    "rounds": 8,
+    "contraction": "integer",
+    "quantum_sdks_imported": false
+  },
+  "calculator_smoke": {
+    "status": "completed",
+    "calculation_seconds": 18.317737395998847,
+    "wall_seconds": 18.800635820000025,
+    "peak_worker_rss_bytes": 58540032,
+    "exact_answers_match_benchmark": true,
+    "enclosures_checked_with_exact_order": true
+  },
+  "all_circuit_hashes_recomputed": true,
+  "all_failed_rows_have_no_answer": true,
+  "sha256": {
+    "native_relational_qc/__init__.py": "2df0c6684869d87776756cc78918199a9a09fa86f8c9e6d41d675591698c9350",
+    "native_relational_qc/__main__.py": "f41e3acdc29c738b9d6d6e5a0ade0bfe789d4a41c180a793224a300815cbaeba",
+    "native_relational_qc/algebra.py": "3d23b2a3a345b0760bfce1cff9e4eea9635543ee566c9dd6f0078405f211e9ab",
+    "native_relational_qc/bridge.py": "6c863d69da9b477ad17948e6c935d3c058d426f0322e5df99eb4f8c09a61b4b3",
+    "native_relational_qc/calculator.py": "94fd6f4d20a0bc7965521d8e9b27139af6dc6e2adfa149443e6b7d134c243ecd",
+    "native_relational_qc/calculator_examples/brickwork_50q_12r.json": "4e2e281536e73712dda03b7931cce7604435985f7ddda6e95f482e2f2fa07ca6",
+    "native_relational_qc/calculator_examples/brickwork_50q_12r.result.json": "e06cb7194e68d6f20c27179eecd68c42f23c8e6c5f5660b6307adfb9f0c20c51",
+    "native_relational_qc/circuit.py": "6215adf52443de8ee1db01f8e641c4c50124810a7674fd3258d826ff08b9e366",
+    "native_relational_qc/compact.py": "1acff6eaa8664b4ba33285c66c9f433ecd0148aa8383a18f79dbd2ccb66e898d",
+    "native_relational_qc/compact_benchmark.py": "38a618ea91bd436c740b75f67a908b63067f1b7332468ca4382cf7921872d5a6",
+    "native_relational_qc/compact_qiskit.py": "92f7bd85d6e753e9c898bcbd6f28e65b7fcc4cdd0a3ddedab4ab94df2fddcf05",
+    "native_relational_qc/dyadic.py": "f57de994e59041fa203cffdda5f73e30b65552715286483b29b683b79d849832",
+    "native_relational_qc/dynamic.py": "88421139cba72f0d86f3644c5933e03dd44d8afa1fdc79b250b2e8bf5390acd9",
+    "native_relational_qc/dynamic_examples.py": "0d40d9b3dbf098623c7586f13cdb54d9c6f627e4af6f0c398e79f983129d259e",
+    "native_relational_qc/dynamic_qiskit.py": "be1ff2a0ff1187370dad1d42d5fa126f1f5b6ff1d46b976861ef917c2f930f58",
+    "native_relational_qc/dynamic_reference.py": "3ac7547482028029660081c4122bbce370d09a74b466432e4d4d48b529df89e1",
+    "native_relational_qc/dynamic_verify.py": "aa8b83844876d6627403443f0ea6e3d1504a9ad872b1f64ecc8bceab3f5eb5a2",
+    "native_relational_qc/exact.py": "cc0b3be70660ed819b3ad153620ea4338fb6bf57102a4474d4355da2805afdf6",
+    "native_relational_qc/examples.py": "2066bf7326cde2e064c9800de8fda87eb74314af99200593bc0fb39e3f8d47d5",
+    "native_relational_qc/factored.py": "690fa44957c26324b8a6fceaf52503694009c2d6a5234763502449c191e968f6",
+    "native_relational_qc/ibm_workloads.py": "2a4b86fc8bb1ab9aaaa979129e37aa49d7b87880a2cf5a38f63fc690028e317e",
+    "native_relational_qc/integer_baseline.json": "df842cb2ed6eee7599ae69dc21693fcfbcd947692871ee939fb94d8f29b25e0d",
+    "native_relational_qc/integer_matrix.py": "9df59338d2c82a1276fd1b3f2ba78c7ff8868e632cfb881044ea6f45a10304e3",
+    "native_relational_qc/integer_protocol.json": "f1af05df6e3e4e5cffbefa8871c4247da0eb2d5c81039982dc561d5c24c593b8",
+    "native_relational_qc/integer_results.json": "432e90e5186042bee1a13231654dd268bce4217a593f6b34590df3f3b0f664f7",
+    "native_relational_qc/integer_test_results.json": "37e960e9f08536f491cb96c64942f339f96aaa082d1260845bfe99e3f63d63f0",
+    "native_relational_qc/observer.py": "132e4de5e9df0c051825e6bc5babcd124cfb52c7f128b72a9a5c08992b09fbf0",
+    "native_relational_qc/qiskit_adapter.py": "d3e877d52f7aeeebc9e9db996b1675c1feb2a99815450111365acaf61c51f2b8",
+    "native_relational_qc/readout.py": "6b891b4434fc409046df33eab9059037e9f80b687e6dfc1e8ce8593c3ec5b4c7",
+    "native_relational_qc/state.py": "2ff1413d09f36f6449eb6ae7ca8c53de71ac86b9b0711e080849987ab031093e",
+    "native_relational_qc/stress_benchmark.py": "c86ba3814939ee99bd61cba5646327c52c631db1b21f3070891bcefdf232303b",
+    "native_relational_qc/verify.py": "f3c03e25b279701155646a52c7ef96c9eab5696da74294ce9bc2a035c3c3ecf3",
+    "tests/test_native_calculator.py": "1730a1648fec31bcb7023c07e1a8913652ea51782ba554120323f75acaab1024",
+    "tests/test_native_compact.py": "193e1a4a4005b047c0e6dfd5ded886df7f6fe349eac7364ab485e2e3b15faab6",
+    "tests/test_native_dynamic.py": "41f94d9520e98c80ed7f58fdacf0b60ba31455c63bbf5a313975f4d4ae6a0b27",
+    "tests/test_native_factored.py": "a9aabcc81b66acee9918b9d820ae714838bb28208f6748d6d61c6aabe84c782d",
+    "tests/test_native_integer_matrix.py": "64eff6eb03843909c9ce48cc385e7162414adcea858d731d912bb856f8ef3484",
+    "tests/test_native_observer.py": "89914d95fa87f9526caa193b185ce20666279100a6cdc87a7930e4cd3f27a31c",
+    "tests/test_native_qiskit_adapter.py": "c6f2c4c584fb8b619839fc1ea881a8c1b15a5ecc43c077d5652e3acf9f33a430",
+    "tests/test_native_readout.py": "0aab6e9d97ddeeff080f9b896466aa769112162891d7d919acfecd9d77697866",
+    "tests/test_native_relational_qc.py": "4d70497ff3cc85284a4404bd8f25eddc8c9d54cf119ce52d626807df642dcaba",
+    "tests/test_native_stress.py": "98b91f7ef4f7da7aaa3ee68767796465809026a20403fa4c0d979670859caa95"
+  }
+}

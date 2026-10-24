@@ -1,0 +1,34 @@
+{
+  "backend": "cyclotomic32",
+  "n_qubits": 1,
+  "operations": [
+    [
+      "h",
+      [
+        0
+      ]
+    ],
+    [
+      "p32",
+      [
+        0
+      ]
+    ],
+    [
+      "h",
+      [
+        0
+      ]
+    ]
+  ],
+  "queries": [
+    {
+      "id": "phase",
+      "kind": "distribution",
+      "qubits": [
+        0
+      ]
+    }
+  ],
+  "schema": "nrqc-calculator-v1"
+}

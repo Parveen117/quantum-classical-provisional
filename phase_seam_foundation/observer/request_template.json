@@ -1,0 +1,322 @@
+{
+  "schema": "native-photonic-observer-request-v1",
+  "status": "UNMEASURED_REQUEST",
+  "packet": {
+    "schema": "native-photonic-target-packet-v1",
+    "author": "Monty",
+    "scope": "LOCAL_PHASE_ONLY_IDEAL_COMPONENT",
+    "evidence_class": "IDEAL_COMPONENT_ALGEBRA",
+    "unit": "exchange_0",
+    "phase_steps": [
+      16,
+      0,
+      48,
+      48
+    ],
+    "reference_steps": 0,
+    "target_name": "relative_phases",
+    "measurement_family": "reference",
+    "measurement_labels": [
+      "local:0->0",
+      "local:0->1",
+      "local:0->+",
+      "local:0->+i",
+      "local:1->0",
+      "local:1->1",
+      "local:1->+",
+      "local:1->+i",
+      "local:+->0",
+      "local:+->1",
+      "local:+->+",
+      "local:+->+i",
+      "local:+i->0",
+      "local:+i->1",
+      "local:+i->+",
+      "local:+i->+i",
+      "reference:0->0:analyzer_0",
+      "reference:0->0:analyzer_16",
+      "reference:0->1:analyzer_0",
+      "reference:0->1:analyzer_16",
+      "reference:1->0:analyzer_0",
+      "reference:1->0:analyzer_16",
+      "reference:1->1:analyzer_0",
+      "reference:1->1:analyzer_16"
+    ],
+    "state_order": [
+      "lower_arm",
+      "upper_arm",
+      "input_trim",
+      "output_trim",
+      "reference"
+    ],
+    "native_phase_unit": "radian",
+    "scales": {
+      "state": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "reading": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "target": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    "norm_model": "NORMALIZED_EUCLIDEAN_2_NORM",
+    "sensor_rank": 4,
+    "target_rank": 4,
+    "target_blind_dimension": 0,
+    "exact_target_faithful": true,
+    "export_status": "EXACT_RATIONAL",
+    "sensor": [
+      [
+        "1/2",
+        "-1/2",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "-1/2",
+        "1/2",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "-1/2",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "-1/2",
+        "1/2",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1/2",
+        "-1/2",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1/2",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-1/2",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1/2",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1/2",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "-1/2",
+        "0",
+        "0"
+      ],
+      [
+        "1/2",
+        "-1/2",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "3/8",
+        "-1/8",
+        "0",
+        "0",
+        "-1/4"
+      ],
+      [
+        "1/8",
+        "-3/8",
+        "0",
+        "0",
+        "1/4"
+      ],
+      [
+        "-3/8",
+        "1/8",
+        "0",
+        "-1/4",
+        "1/4"
+      ],
+      [
+        "-1/8",
+        "-1/8",
+        "0",
+        "-1/4",
+        "1/4"
+      ],
+      [
+        "-3/8",
+        "1/8",
+        "-1/4",
+        "0",
+        "1/4"
+      ],
+      [
+        "-1/8",
+        "-1/8",
+        "-1/4",
+        "0",
+        "1/4"
+      ],
+      [
+        "3/8",
+        "-1/8",
+        "1/4",
+        "1/4",
+        "-1/4"
+      ],
+      [
+        "1/8",
+        "-3/8",
+        "-1/4",
+        "-1/4",
+        "1/4"
+      ]
+    ],
+    "target": [
+      [
+        "1",
+        "0",
+        "0",
+        "0",
+        "-1"
+      ],
+      [
+        "0",
+        "1",
+        "0",
+        "0",
+        "-1"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1",
+        "0"
+      ]
+    ],
+    "exact_model_sha256": "f7dd64a4d3341ff883a5bc2ef56fa08c12269d7a5259be52871f54377bb9b000",
+    "layout_binding": {
+      "io_sha256": "e06a8e5211083deacb951833a0128a5bad7b390800a46b5de91bb2b2f5b9b4b3",
+      "layout_spec_sha256": "5bcd481cc6a62ecc8e2638a48b8c5af0f9f60840925a4b4865c31ce431ccd8c2",
+      "layout_gds_sha256": "f6777bc1ecf2c6887363ca59e942b2129fbd3996c93132cb1a9291f3c6f9d3ab"
+    },
+    "device_id": null,
+    "hardware_submitted": false,
+    "calibration_accepted": false,
+    "packet_sha256": "459ce54db57aef797bd2be555aeaeb2cb8a84f1b8ca9cb5a33616aa4e710ef77"
+  },
+  "bounds": {
+    "sensor_noise_bound": null,
+    "calibration_drift_operator_bound": null,
+    "state_norm_bound": null,
+    "target_error_budget": null,
+    "nonlinear_remainder_bound": null
+  },
+  "device_id": null,
+  "raw_evidence_sha256": [],
+  "calibration_accepted": false,
+  "hardware_submitted": false
+}

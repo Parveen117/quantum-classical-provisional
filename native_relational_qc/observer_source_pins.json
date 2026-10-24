@@ -1,0 +1,80 @@
+{
+  "author": "Monty",
+  "policy": "Source-pinned adaptation and local finite checks; no blanket certification or novelty claim. Source files are not vendored.",
+  "review_date": "2026-10-24",
+  "schema": "nrqc-observer-source-pins-v1",
+  "sources": [
+    {
+      "boundary": "Finite linear closure RA=AR; sparse Pauli coordinate closure is sufficient, not minimum row-space realization. No universal efficient rank bound.",
+      "commit": "b72432d3efba6c462848fe9ce9adb98c827a6089",
+      "path": "theorum/morphic_recognition/04_future_complete_linear_recognition.md",
+      "repo": "Recognition-Kernel-Framework",
+      "role": "direct finite-linear adaptation",
+      "sha256": "e18f4ab62cb0f87d4ecae3f48d7865bebb960688a19700348a995bb991d98494",
+      "url": "https://github.com/Parveen117/Recognition-Kernel-Framework/blob/b72432d3efba6c462848fe9ce9adb98c827a6089/theorum/morphic_recognition/04_future_complete_linear_recognition.md"
+    },
+    {
+      "boundary": "Current observations alone can be insufficient under future actions. Partial finite-state theorem is not substituted for quantum linear algebra.",
+      "commit": "b72432d3efba6c462848fe9ce9adb98c827a6089",
+      "path": "theorum/morphic_recognition/06_guarded_lopa_future_equivalence.md",
+      "repo": "Recognition-Kernel-Framework",
+      "role": "boundary check",
+      "sha256": "c088d11be1601c202dc145ab54c36c81e7b10e1a98bf6fdc4b024516587905be",
+      "url": "https://github.com/Parveen117/Recognition-Kernel-Framework/blob/b72432d3efba6c462848fe9ce9adb98c827a6089/theorum/morphic_recognition/06_guarded_lopa_future_equivalence.md"
+    },
+    {
+      "boundary": "A0 absorption/congruence are assumptions; prove the gate-specific intertwining instead of assuming them. Full manuscript was not re-certified.",
+      "commit": "b72432d3efba6c462848fe9ce9adb98c827a6089",
+      "path": "theorum/morphic_algebra/main.tex",
+      "repo": "Recognition-Kernel-Framework",
+      "role": "selected axioms reviewed",
+      "sha256": "41673c8ecf55b6208d0eb78c83593e9f3b2fe8b0f538d3ac6284f405c7cad3a3",
+      "url": "https://github.com/Parveen117/Recognition-Kernel-Framework/blob/b72432d3efba6c462848fe9ce9adb98c827a6089/theorum/morphic_algebra/main.tex"
+    },
+    {
+      "boundary": "RNKE verified with open obligations; full mathematical certification and proof-assistant certification are false.",
+      "commit": "b72432d3efba6c462848fe9ce9adb98c827a6089",
+      "path": "theorum/morphic_algebra/CERTIFICATION_STATUS.md",
+      "repo": "Recognition-Kernel-Framework",
+      "role": "source status",
+      "sha256": "f6e893a5e07db16e584ff609a4736058dceb02056ba4168368dfcfedb19b42c8",
+      "url": "https://github.com/Parveen117/Recognition-Kernel-Framework/blob/b72432d3efba6c462848fe9ce9adb98c827a6089/theorum/morphic_algebra/CERTIFICATION_STATUS.md"
+    },
+    {
+      "boundary": "Polynomial spectral features need not recover missing directional/mixed responses. No new simulator theorem consumed.",
+      "commit": "bec73061e92b56f4772d5a31063dde4da0bcaa65",
+      "path": "papers/nonlinear-spectral-blindness/NSB2_NONLINEAR_RESPONSE_CLOSURE.md",
+      "repo": "Publications",
+      "role": "spectral boundary",
+      "sha256": "b4d3014fee440c262c8315dbd5f9b2201f6645c8adeac3b08cdb432cbb30f826",
+      "url": "https://github.com/Parveen117/Publications/blob/bec73061e92b56f4772d5a31063dde4da0bcaa65/papers/nonlinear-spectral-blindness/NSB2_NONLINEAR_RESPONSE_CLOSURE.md"
+    },
+    {
+      "boundary": "Arithmetic radius and analytic tail are distinct; completed exact finite observations have zero arithmetic and truncation errors, with a separate outward decimal display.",
+      "commit": "b72432d3efba6c462848fe9ce9adb98c827a6089",
+      "path": "theorum/45_directed_arithmetic_analytic_closure_theorem.md",
+      "repo": "Recognition-Kernel-Framework",
+      "role": "error accounting",
+      "sha256": "4ad80ae2604f1e1f74e67355d9564b05c6912a86d250ba63fb6beaf0a3e9daa6",
+      "url": "https://github.com/Parveen117/Recognition-Kernel-Framework/blob/b72432d3efba6c462848fe9ce9adb98c827a6089/theorum/45_directed_arithmetic_analytic_closure_theorem.md"
+    },
+    {
+      "boundary": "Bounded-source positivity through L=17/20 is a working computer-assisted result; all-width/RH and quantum gate compression are not established. Certificate computations not rerun here.",
+      "commit": "605370ebc416c3957d535fbaf03e309ea712c43f",
+      "path": "proof_lab/rh_l075/README.md",
+      "repo": "Publications",
+      "role": "recent RH boundary",
+      "sha256": "a03352fc5ebcda71f143a3397fc260b64b3b37213daa360baa9cb7cce4a88d41",
+      "url": "https://github.com/Parveen117/Publications/blob/605370ebc416c3957d535fbaf03e309ea712c43f/proof_lab/rh_l075/README.md"
+    },
+    {
+      "boundary": "Target-faithful completion retains target-relevant blind directions. Does not guarantee a small or efficiently constructible observer; no private manuscript content copied.",
+      "commit": "2884642a3c1580c39838cb2e794587a3ec72c1cb",
+      "path": "papers/rh_initial_journey/sections/07j_bilateral_recognition_closure.tex",
+      "repo": "MP",
+      "role": "representation motivation",
+      "sha256": "4a04add5f59c67bf1de86da2ec81567eb52cda1c8216d9811bb762317a34510f",
+      "url": "https://github.com/Parveen117/MP/blob/2884642a3c1580c39838cb2e794587a3ec72c1cb/papers/rh_initial_journey/sections/07j_bilateral_recognition_closure.tex"
+    }
+  ]
+}

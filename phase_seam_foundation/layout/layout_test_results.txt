@@ -1,0 +1,14 @@
+test_broken_input_is_detected (test_photonic_layout_geometry.GeometryTests.test_broken_input_is_detected) ... ok
+test_displaced_heater_is_detected (test_photonic_layout_geometry.GeometryTests.test_displaced_heater_is_detected) ... ok
+test_gds_generation_is_deterministic_and_uses_verified_macros (test_photonic_layout_geometry.GeometryTests.test_gds_generation_is_deterministic_and_uses_verified_macros) ... ok
+test_guard_short_is_detected (test_photonic_layout_geometry.GeometryTests.test_guard_short_is_detected) ... ok
+test_independent_reader_checks_geometry_and_connected_components (test_photonic_layout_geometry.GeometryTests.test_independent_reader_checks_geometry_and_connected_components) ... ok
+test_pad_bridge_is_detected (test_photonic_layout_geometry.GeometryTests.test_pad_bridge_is_detected) ... ok
+test_thin_disconnected_feature_is_detected (test_photonic_layout_geometry.GeometryTests.test_thin_disconnected_feature_is_detected) ... ok
+test_unexpected_layer_rejected (test_photonic_layout_geometry.GeometryTests.test_unexpected_layer_rejected) ... ok
+test_vendor_tamper_is_rejected (test_photonic_layout_geometry.GeometryTests.test_vendor_tamper_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 1.666s
+
+OK

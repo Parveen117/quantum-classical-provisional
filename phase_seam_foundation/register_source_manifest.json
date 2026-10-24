@@ -1,0 +1,291 @@
+{
+  "schema": "phase-seam-register-source-v8",
+  "author": "Monty",
+  "date": "2026-10-24",
+  "parent_commit": "a22c883b359c0f3c955da425863d1f58f0b703cd",
+  "duplicate_audit": {
+    "scope": "All seven branch-tip recursive trees; local Python/Markdown content search; read existing arithmetic, memory experiments, observer transport and master README. No claim about deleted branches or other repositories.",
+    "trees": [
+      {
+        "branch": "agent/qmet-hardware-depth-v1",
+        "commit": "0630f481606f5ca65d12b78b41bc91b36b7dc300",
+        "files": 118,
+        "truncated": false
+      },
+      {
+        "branch": "agent/qmet-hybrid-evidence-bundle-v1",
+        "commit": "51b28d768150e3543fb00f8841c26024b4f76487",
+        "files": 114,
+        "truncated": false
+      },
+      {
+        "branch": "claude/rnke-qec-gate-v1",
+        "commit": "e3bb8f5213a4515ec718d3daa0cad34be63c2baf",
+        "files": 107,
+        "truncated": false
+      },
+      {
+        "branch": "claude/thermo-decoherence-h1",
+        "commit": "92d2b61b6dd50443f151a665bdab40a634b7c99d",
+        "files": 136,
+        "truncated": false
+      },
+      {
+        "branch": "codex/native-relational-qc-v1-20261018",
+        "commit": "a22c883b359c0f3c955da425863d1f58f0b703cd",
+        "files": 423,
+        "truncated": false
+      },
+      {
+        "branch": "codex/qec-error-control-lab-v1",
+        "commit": "d2290d12f3099dd98b18e989f52e6a7ff8f5406f",
+        "files": 101,
+        "truncated": false
+      },
+      {
+        "branch": "master",
+        "commit": "284302e1a65b6dfcc8b63531833394976bd4f331",
+        "files": 136,
+        "truncated": false
+      }
+    ],
+    "finding": "No existing compiler from phase_seam_foundation.Operation to reversible phase-register gates was found in this scope.",
+    "reuse": [
+      {
+        "path": "native_relational_qc/modular_arithmetic.py",
+        "use": "Existing _add and its clean multi-control ladder; unchanged."
+      },
+      {
+        "path": "native_relational_qc/compact.py",
+        "use": "Existing CompactCircuit gate IR; unchanged."
+      },
+      {
+        "path": "native_relational_qc/phase_backend.py",
+        "use": "Existing exact sparse engine for coherent verification only; unchanged."
+      },
+      {
+        "path": "phase_seam_foundation/model.py",
+        "use": "Original Operation, Config, Cell and history replay retained; v0.7 adds explicit pair_reset law with integer-sum preservation, existing guards and cost policy."
+      },
+      {
+        "path": "native_relational_qc/dynamic.py",
+        "use": "Existing measurement, reset, classical-memory and feedback engine reused by controller export and independent comparisons; unchanged."
+      }
+    ],
+    "related_but_distinct": [
+      {
+        "path": "native_relational_qc/reversible_logic.py",
+        "reason": "Boolean XOR oracles and an out-of-place ripple adder already exist; no duplicate arithmetic engine added."
+      },
+      {
+        "path": "native_relational_qc/COMPACT_THEOREM.md",
+        "reason": "Observer transport across a circuit cut is not the native phase reflection."
+      },
+      {
+        "path": "run_operator_controlled_memory_transistor_test.py",
+        "reason": "Existing IBM memory experiment; not a phase-label encoding or a source-operation compiler. Read only, never executed."
+      },
+      {
+        "path": "run_multi_ledger_operator_memory_test.py",
+        "reason": "Existing RK/KR order-memory interferometers; not the four-mode register compiler. Read only, never executed."
+      },
+      {
+        "path": "phase_seam_foundation/encoding.py",
+        "reason": "Two-site tomographic code with restricted intertwiners; retained unchanged and its cut obstruction still applies."
+      }
+    ]
+  },
+  "new_choices": [
+    "Orthogonal wrapped-phase labels, four little-endian registers",
+    "Fixed clean scratch pool of width-2 bits",
+    "Conventional coherent permutation extension when interpreted quantum mechanically",
+    "Whole-sector affine check at every source-operation boundary",
+    "Gamma, winding, cost and source history retained in the original classical Cell",
+    "Optional omission of one phase coordinate in a fixed closure sector",
+    "Residual-sum codec for full-to-compressed conversion, peak conversion width counted",
+    "Omitted-mode choice changes gate cost; all four choices reported"
+  ],
+  "prior_methods": [
+    {
+      "title": "Reversible Logic Circuit Synthesis",
+      "authors": "Shende, Prasad, Markov, Hayes",
+      "url": "https://arxiv.org/abs/quant-ph/0207001",
+      "scope": "Established reversible circuit synthesis; no priority claim for permutation-to-unitary embedding."
+    },
+    {
+      "title": "The Theory of Quantum Information, Section 2.2, Corollary 2.27",
+      "author": "John Watrous",
+      "url": "https://jhwatrous.github.io/TQI.pdf",
+      "scope": "Standard Kraus/Stinespring channel representations; finite native read/reset dilation derived explicitly in CONTROLLER.md."
+    },
+    {
+      "title": "Theory of Decoherence-Free Fault-Tolerant Universal Quantum Computation",
+      "authors": "Kempe, Bacon, Lidar, Whaley",
+      "url": "https://arxiv.org/abs/quant-ph/0004064",
+      "scope": "Established Hamiltonian control preserving encoded subspaces throughout gates; source for context only. Its decoherence-free/noise assumptions and exchange locality results are not transferred to this native phase code."
+    },
+    {
+      "title": "An Optimal Design for Universal Multiport Interferometers",
+      "authors": "Clements, Humphreys, Metcalf, Kolthammer, Walmsley",
+      "url": "https://arxiv.org/abs/1603.08788",
+      "scope": "Established optical unitary decomposition using beam splitters and phase shifters; no novelty claim for optical interferometry."
+    },
+    {
+      "title": "20-Mode Universal Quantum Photonic Processor",
+      "authors": "Taballione et al.",
+      "url": "https://arxiv.org/abs/2203.01801v5",
+      "scope": "Published Si3N4 multiport and control implementation establishes component-scale precedent, not performance of this unbuilt design."
+    },
+    {
+      "title": "A manufacturable platform for photonic quantum computing",
+      "authors": "PsiQuantum team",
+      "url": "https://www.nature.com/articles/s41586-025-08820-7",
+      "scope": "Published heralded sources, interferometers and detection modules; reported conditional benchmarks are not loss-inclusive guarantees for this design."
+    }
+  ],
+  "claim_boundary": "A new adapter to existing arithmetic, not a new quantum postulate, physical device, quantum speedup, conversion from v0.3 code, or complete phase/seam/history quantum encoding.",
+  "v0_5_duplicate_check": {
+    "method": "Rechecked all seven branch heads; six other tips unchanged from v0.4 tree audit. Searched working branch Python/Markdown for compressed-sector compiler and codec. Existing REGISTER.md explicitly identified the 18-bit layout as unimplemented.",
+    "finding": "Extend register.py, qualification and audit in place. No second compiler or arithmetic implementation.",
+    "changes": [
+      "optional omit_mode layout",
+      "exact elimination rules",
+      "coherent closure codec retaining off-sector syndrome",
+      "stored three-coordinate affine map"
+    ],
+    "assumptions": "known fixed closure sign and twist; existing coherent gate and clean-workspace assumptions retained; no new physical postulate"
+  },
+  "v0_6_duplicate_check": {
+    "method": "All seven branch heads rechecked; other six unchanged. Searched local Python/Markdown and read dynamic.py, DYNAMIC.md, dynamic tests, model.py and joint.py.",
+    "finding": "Measurement/reset/feedback and Kraus-state laws already exist. Missing adapter is native multi-bit phase read/reset with explicit coherent records and resource accounting.",
+    "changes": [
+      "controller.py composes the existing register compiler and arithmetic",
+      "record measurements exported to existing DynamicCircuit",
+      "existing qualification/audit extended instead of adding another engine"
+    ],
+    "new_choices": [
+      "one fresh zero record per read/reset",
+      "computational-basis pointer measurement through existing quantum postulates",
+      "records retained and never overwritten by the adapter",
+      "single-mode reset restricted to an unrestricted full phase layout"
+    ]
+  },
+  "v0_7_duplicate_check": {
+    "method": "Rechecked all seven branch heads: other six remain identical to pinned tree audit. Searched local Python/Markdown for pair_reset, balanced reset and reservoir reset; existing controller docs explicitly leave it open.",
+    "finding": "Extend model.py and controller.py in place; reuse existing record read, controlled constant adder, fixed-sector layouts, codec, measurement and feedback. No second simulator, channel engine or adder.",
+    "changes": [
+      "explicit pair_reset(j,reservoir,a) source law",
+      "read old relative label into fresh record, then apply opposite record-controlled shifts",
+      "support full and every fixed-sector omission, including omitted reset mode",
+      "record metadata includes declared reservoir",
+      "qualification and existing serial audit extended"
+    ],
+    "new_choices": [
+      "reset lift ell_j to a and add ell_j-a to a distinct native mode",
+      "one fresh width-bit coherent record; no reuse",
+      "existing cut-only cost policy retained; no thermal energy claim"
+    ],
+    "proof_scope": "Integer-sum identity; clean-record isometry and Kraus completeness; full/compressed intertwining on the fixed sector. Source/gate verifier is shared-code consistency, not independent formal proof.",
+    "unchanged": [
+      "old source-operation semantics",
+      "single-mode fixed-sector reset rejection",
+      "all native_relational_qc implementations",
+      "v0.2 joint.py and v0.3 encoding.py",
+      "original supplied LaTeX"
+    ]
+  },
+  "v0_8_duplicate_check": {
+    "method": "Rechecked all seven branch heads: six other branches unchanged. Searched local phase/native sources for involutions, generators and continuous sector control; read existing joint coupling, phase engine, controlled ladder and closure compiler.",
+    "finding": "Existing JOINT_READOUT.md has a two-site EMK interaction target; it is not the four-mode phase-sum-conserving controller. Reuse reflection/projector algebra and all arithmetic/phase engines; add the missing native control targets and verification adapter.",
+    "changes": [
+      "sector_control.py: native involution plan, endpoint synthesis and exact-angle export to existing Phase64Circuit",
+      "balanced exchange involution with explicit dirty-record semantics",
+      "all-real-angle algebraic closure proof and bounded off-sector perturbation criterion",
+      "no changes to v0.7 source law/controller or any calculator implementation"
+    ],
+    "new_assumptions": [
+      "laboratory realization of H(t)=hbar*g(t)*(I-P)/2 for the chosen high-dimensional native involution",
+      "fresh record initialization for reset semantics; coherent records retained",
+      "laboratory pulse area is not derived native time"
+    ],
+    "claim_boundary": "Conditional operator-level continuous sector preservation, not a material implementation, one/two-qubit locality theorem, noise-free device or speedup. Binary verification gates can leave the sector."
+  },
+  "v0_9_duplicate_check": {
+    "method": "All seven branch heads checked; six others unchanged. Searched local Python/Markdown for photonic, waveguide, Mach-Zehnder, beamsplitter and carrier implementations. Read 2056-site design and Qmet evidence boundary; did not replay IBM jobs.",
+    "finding": "No existing photonic exchange netlist found. Existing 2056 design is technology-neutral; Qmet/IBM evidence is separate and cannot establish optical validation.",
+    "changes": [
+      "photonic_exchange.py: bounded mode routing, exact scattering columns, netlist and unrun experiment plan",
+      "fixed-pair single-photon encoding of native balanced exchange",
+      "herald-window bookkeeping retains core, guard, no-click and multiple-click categories",
+      "reuse existing cyclotomic coefficients, native control map and phase engine"
+    ],
+    "new_choices": [
+      "grid-4 fixed-pair demonstrator: 16 core paths and one isolated guard",
+      "Si3N4 path interferometers, nominal 1550 nm, external heralded SPDC source and SNSPD detection",
+      "six disjoint exchange MZIs and four fixed bypasses with calibrated port phases",
+      "fixed pair sum/reference encoding; not four independent physical phase modes",
+      "guard-injection optics physically bypassed in ordinary operation",
+      "106 proposed characterization settings; shot count/confidence/tolerances not assigned before calibration"
+    ],
+    "unresolved": [
+      "foundry/process design kit and mask geometry",
+      "physical source, loss, phase, detector and timing calibration",
+      "native independent-mode realization and scalable multi-photon gates",
+      "nondestructive record measurement and recycling"
+    ],
+    "evidence_boundary": "Design and exact local algebra only. No experiment run, measured fidelity, procurement, hardware submission or transfer of earlier IBM evidence."
+  },
+  "v0_10_duplicate_check": {
+    "method": "All seven branch heads rechecked; other six unchanged. Read existing bridge calibration.py and photonic adapter; searched for PDK, heater calibration and optical I/O implementations.",
+    "finding": "Existing bridge calibration weights readout counts and is not an optical actuator map. No optical I/O compiler, placed mask or measured heater calibration found.",
+    "reuse": [
+      "existing photonic codebook/protocol/pulse coefficients",
+      "existing Phase64Circuit and _mcx clean ladder",
+      "existing full-herald-window accounting"
+    ],
+    "new_choices": [
+      "external preparation/analysis patch modules with ordered ports",
+      "grid-4 whole-setting verification through the existing calculator",
+      "pinned CORNERSTONE SiN300 candidate via gdsfactory/cspdk 3323b17b4d75c852ed2372d7d13239408cca0eb1",
+      "two 2x2 MMI interfaces per exchange block; no default 1x2 input splitter",
+      "complete recorded voltage-vector lookup, with no independent-heater model or interpolation"
+    ],
+    "sources": [
+      "https://cornerstone.sotonfab.co.uk/mpw/technology-platforms/",
+      "https://github.com/gdsfactory/cspdk/tree/3323b17b4d75c852ed2372d7d13239408cca0eb1/cspdk/sin300",
+      "https://arxiv.org/html/2203.01801v5"
+    ],
+    "unresolved": [
+      "heated placed/routed mask and foundry-specific rule checks",
+      "calibration acquisition and inverse fitting",
+      "measured optical transfer, phase residuals, source/detector response and physical acceptance"
+    ],
+    "evidence_boundary": "Exact software verification and offline profile binding. Test voltage vectors are synthetic; no lab record, PDK execution, GDS, instrument submission or fabricated device."
+  },
+  "v0_11_duplicate_check": {
+    "method": "All seven branch heads rechecked; other six unchanged. No existing placed photonic GDS or layout checker found in repository.",
+    "reuse": [
+      "unchanged pinned CORNERSTONE MMI and heater GDS macros, with upstream MIT license",
+      "existing phase engine and exact exchange targets",
+      "existing offline calibration validation extended with explicit physical scope"
+    ],
+    "new_choices": [
+      "six equal-arm routed units, four trimmed bypasses and isolated guard",
+      "four heaters per exchange: lower exchange arm, upper common phase, input trim and output trim",
+      "28 chip heaters plus three external phases; complete 31-channel recorded vector",
+      "open optical ports on core subassembly; no invented fiber coupler or loss model"
+    ],
+    "evidence": [
+      "independent KLayout geometry/partition checks",
+      "broken input, guard short, pad bridge, displaced heater, thin feature and vendor-tamper negative controls",
+      "exact directional-coupler phase-word comparison through the existing calculator"
+    ],
+    "source_rules": "CORNERSTONE SiN300 MPW13 June 2026 guidelines; local subset only; downloaded proprietary pre-DRC read but not executed or redistributed",
+    "unresolved": [
+      "fiber coupling and packaging",
+      "full foundry checks",
+      "measured optical transfer, loss, thermal crosstalk and voltage calibration"
+    ],
+    "boundary": "Generated core GDS is not a fabrication submission, packaged apparatus or experimental quantum result."
+  }
+}
