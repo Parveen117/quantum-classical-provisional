@@ -14,10 +14,16 @@ SCHEMA='nrqc-modular-rewrite-v1'
 ARITY={'x':1,'cx':2,'ccx':3}
 
 
+def _empty_like(circuit):
+    """Same circuit class and declared field order, with no operations."""
+    order=getattr(circuit,'order',None)
+    return type(circuit)(circuit.n_qubits) if order is None else type(circuit)(circuit.n_qubits,order)
+
+
 def _validate(circuit):
     if not isinstance(circuit,CompactCircuit):raise TypeError('a declared circuit is required')
     if len(circuit.operations)>100_000:raise ResourceLimit('rewrite input exceeds 100000 gates')
-    checked=type(circuit)(circuit.n_qubits)
+    checked=_empty_like(circuit)
     for name,qs in circuit.operations:checked.add(name,*qs)
 
 
@@ -61,7 +67,7 @@ def rewrite_circuit(circuit,*,lookback=64,max_checks=1_000_000):
                     del active[position];cancelled=True;break
                 if not _commute(previous,op):break
         if not cancelled:active.append(right)
-    output=type(circuit)(circuit.n_qubits)
+    output=_empty_like(circuit)
     for index in active:
         name,qs=ops[index];output.add(name,*qs)
     certificate=dict(schema=SCHEMA,source_sha256=_binding(circuit),

@@ -1,0 +1,156 @@
+{
+  "machine": "x86_64",
+  "process_peak_rss_kib": 152356,
+  "python": "3.12.3",
+  "rows": [
+    {
+      "assessment": "verified",
+      "backend": "cyclotomic64",
+      "base": 2,
+      "build_seconds": 2.274,
+      "calculation_seconds": 30.728,
+      "circuit_field": "nested",
+      "exact_fourier_law_agrees": true,
+      "gates": 21080,
+      "modulus": 141,
+      "n_qubits": 34,
+      "peak_branches": 2908,
+      "precision_bits": 6,
+      "representation": "sparse computational-basis amplitudes in Q(zeta_64)",
+      "status": "completed",
+      "success_probability": {
+        "convergents_and_doubles": "0.04849036625",
+        "convergents_only": "0.00000000000"
+      },
+      "work_used": 1719485
+    },
+    {
+      "assessment": "verified",
+      "backend": "cyclotomic_pow2",
+      "base": 2,
+      "build_seconds": 2.446,
+      "calculation_seconds": 2.53,
+      "circuit_field": "nested",
+      "exact_fourier_law_agrees": true,
+      "gates": 21080,
+      "modulus": 141,
+      "n_qubits": 34,
+      "peak_branches": 2908,
+      "precision_bits": 6,
+      "representation": "sparse computational-basis amplitudes in flat Q(zeta_64)",
+      "status": "completed",
+      "success_probability": {
+        "convergents_and_doubles": "0.04849036625",
+        "convergents_only": "0.00000000000"
+      },
+      "work_used": 1719485
+    },
+    {
+      "assessment": "verified",
+      "backend": "cyclotomic_pow2",
+      "base": 2,
+      "build_seconds": 1.786,
+      "calculation_seconds": 1.755,
+      "circuit_field": "flat",
+      "exact_fourier_law_agrees": true,
+      "gates": 20940,
+      "modulus": 141,
+      "n_qubits": 34,
+      "peak_branches": 2908,
+      "precision_bits": 6,
+      "representation": "sparse computational-basis amplitudes in flat Q(zeta_64)",
+      "status": "completed",
+      "success_probability": {
+        "convergents_and_doubles": "0.04849036625",
+        "convergents_only": "0.00000000000"
+      },
+      "work_used": 1401996
+    },
+    {
+      "assessment": "verified",
+      "backend": "cyclotomic_pow2",
+      "base": 2,
+      "build_seconds": 2.625,
+      "calculation_seconds": 8.617,
+      "circuit_field": "flat",
+      "exact_fourier_law_agrees": true,
+      "gates": 28896,
+      "modulus": 141,
+      "n_qubits": 36,
+      "peak_branches": 11724,
+      "precision_bits": 8,
+      "representation": "sparse computational-basis amplitudes in flat Q(zeta_256)",
+      "status": "completed",
+      "success_probability": {
+        "convergents_and_doubles": "0.31557217175",
+        "convergents_only": "0.04354965345"
+      },
+      "work_used": 7728110
+    },
+    {
+      "assessment": "verified",
+      "backend": "cyclotomic_pow2",
+      "base": 2,
+      "build_seconds": 2.933,
+      "calculation_seconds": 7.758,
+      "circuit_field": "flat",
+      "exact_fourier_law_agrees": true,
+      "gates": 31065,
+      "modulus": 143,
+      "n_qubits": 36,
+      "peak_branches": 14832,
+      "precision_bits": 8,
+      "representation": "sparse computational-basis amplitudes in flat Q(zeta_256)",
+      "status": "completed",
+      "success_probability": {
+        "convergents_and_doubles": "0.06496212605",
+        "convergents_only": "0.00000000000"
+      },
+      "work_used": 8269444
+    },
+    {
+      "assessment": "verified",
+      "backend": "cyclotomic_pow2",
+      "base": 2,
+      "build_seconds": 3.463,
+      "calculation_seconds": 7.451,
+      "circuit_field": "flat",
+      "exact_fourier_law_agrees": true,
+      "gates": 35152,
+      "modulus": 187,
+      "n_qubits": 36,
+      "peak_branches": 10048,
+      "precision_bits": 8,
+      "representation": "sparse computational-basis amplitudes in flat Q(zeta_256)",
+      "status": "completed",
+      "success_probability": {
+        "convergents_and_doubles": "0.11673636155",
+        "convergents_only": "0.00000000000"
+      },
+      "work_used": 9200749
+    },
+    {
+      "assessment": "verified",
+      "backend": "cyclotomic_pow2",
+      "base": 2,
+      "build_seconds": 1.093,
+      "calculation_seconds": 39.283,
+      "circuit_field": "flat",
+      "exact_fourier_law_agrees": true,
+      "gates": 8681,
+      "modulus": 21,
+      "n_qubits": 29,
+      "peak_branches": 6140,
+      "precision_bits": 10,
+      "representation": "sparse computational-basis amplitudes in flat Q(zeta_1024)",
+      "status": "completed",
+      "success_probability": {
+        "convergents_and_doubles": "0.66411959055",
+        "convergents_only": "0.33084321815"
+      },
+      "work_used": 9138935
+    }
+  ],
+  "schema": "nrqc-pow2-shor-audit-v1",
+  "scope": "ideal local exact calculation of fixed bases; success is single-readout probability, not shots or hardware"
+}
