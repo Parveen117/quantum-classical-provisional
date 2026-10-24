@@ -1,0 +1,18 @@
+{
+  "schema": "native-learning-model-v1",
+  "architecture": "four-qubit-parity-five-ry-v1",
+  "phase_steps": [
+    32,
+    0,
+    0,
+    32,
+    0
+  ],
+  "phase_unit": "pi/32",
+  "feature_view": "xor_bits",
+  "training_sha256": "6ea3e50c424479e5434464f95c06e5d1ea21ef88a6e47ee980efae75815d2f5c",
+  "execution": "EXACT_CLASSICAL_SIMULATION",
+  "hardware_authorized": false,
+  "proof_status": "NOT_A_MATHEMATICAL_PROOF",
+  "fingerprint": "5dd9b305a387170b6246633d21352f0c4dee4087b3b6c46ae4d09c65d95f6f03"
+}

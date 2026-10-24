@@ -45,6 +45,41 @@ class Phase64Circuit(Phase32Circuit):
         phase_gates[name]=(width,root**power)
 
 
+class PowerPhaseCircuit(PhaseCircuit):
+    """Sparse exact execution in flat Q(zeta_M), M=2**k, 8<=M<=4096.
+
+    Phase gates pK/pKdg/cpK/cpKdg mean diag(1,exp(+-2*pi*i/K)) for every power
+    of two 2<=K<=M; p16/p32/p64 keep their earlier meanings.
+    """
+    backend='cyclotomic_pow2'
+
+    def __init__(self,n_qubits,order=64):
+        from .cyclotomic_pow2 import field_of_order
+        super().__init__(n_qubits)
+        self.field=field_of_order(order);self.order=order
+        self.phase_gates={}
+        K=2
+        while K<=order:
+            for name,width,power in ((f'p{K}',1,1),(f'p{K}dg',1,-1),(f'cp{K}',2,1),(f'cp{K}dg',2,-1)):
+                self.phase_gates[name]=(width,self.field.root(power*(order//K)))
+            K*=2
+
+    def revalidate(self,name,qs):PowerPhaseCircuit(self.n_qubits,self.order).add(name,*qs)
+
+
+def required_order(operations):
+    """Smallest supported power-of-two order containing every declared phase gate."""
+    import re
+    order=8
+    for name,_ in operations:
+        match=re.fullmatch(r'c?p([1-9][0-9]*)(dg)?',name)
+        if match:
+            K=int(match.group(1))
+            if K&(K-1) or K<2:raise ValueError('phase gate order must be a power of two')
+            order=max(order,K)
+    return order
+
+
 class Budget:
     def __init__(self,max_work=10_000_000,max_coefficient_bits=4096,max_branches=4096):
         self.max_work=_integer(max_work,'max_work',1,1_000_000_000)
@@ -85,7 +120,7 @@ class Budget:
 class Prepared:
     def __init__(self,circuit,budget,amplitudes):
         self.n_qubits=circuit.n_qubits;self.budget=budget;self.amplitudes=amplitudes
-        self.field=getattr(circuit,'field',Cyclotomic)
+        self.field=getattr(circuit,'field',Cyclotomic);self.order=getattr(circuit,'order',None)
 
     def probability(self,outcomes):
         from .calculator import _site_map
@@ -98,8 +133,8 @@ class Prepared:
         return total
 
     def distribution(self,sites):
-        sites=tuple(sites)
-        if not 1<=len(sites)<=8 or len(set(sites))!=len(sites):raise ValueError('distribution needs 1..8 distinct wires')
+        sites=tuple(sites);width=12 if getattr(self,'order',None) else 8
+        if not 1<=len(sites)<=width or len(set(sites))!=len(sites):raise ValueError(f'distribution needs 1..{width} distinct wires')
         for q in sites:_integer(q,'qubit',0,self.n_qubits-1)
         out={format(y,f'0{len(sites)}b'):self.field() for y in range(1<<len(sites))};b=self.budget
         for ket,value in self.amplitudes.items():
@@ -134,7 +169,7 @@ def prepare(circuit,**limits):
     phase_gates=getattr(circuit,'phase_gates',PhaseCircuit.phase_gates)
     b=Budget(**limits);b.stats['preparation_count']=1;state={0:one}
     b.stats.update(backend=getattr(circuit,'backend','cyclotomic'),
-        representation='sparse computational-basis amplitudes in '+('Q(zeta_64)' if field is Phase64Circuit.field else 'Q(zeta_32)' if field is Phase32Circuit.field else 'Q(zeta_16)'),
+        representation='sparse computational-basis amplitudes in '+(f'flat Q(zeta_{circuit.order})' if isinstance(circuit,PowerPhaseCircuit) else 'Q(zeta_64)' if field is Phase64Circuit.field else 'Q(zeta_32)' if field is Phase32Circuit.field else 'Q(zeta_16)'),
         permutation_visits=0)
     for name,qs in circuit.operations:
         b.tick('gate_visits')
@@ -153,7 +188,8 @@ def prepare(circuit,**limits):
         elif name in phase_gates:
             width,phase=phase_gates[name];phase=field.coerce(phase)
             # Revalidate even if called directly with another circuit implementation.
-            (Phase64Circuit if field is Phase64Circuit.field else Phase32Circuit if field is Phase32Circuit.field else PhaseCircuit)(circuit.n_qubits).add(name,*qs)
+            if isinstance(circuit,PowerPhaseCircuit):circuit.revalidate(name,qs)
+            else:(Phase64Circuit if field is Phase64Circuit.field else Phase32Circuit if field is Phase32Circuit.field else PhaseCircuit)(circuit.n_qubits).add(name,*qs)
             out={}
             for ket,value in state.items():
                 b.tick('gate_visits')
