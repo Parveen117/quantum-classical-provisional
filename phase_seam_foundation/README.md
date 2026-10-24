@@ -1,5 +1,13 @@
 # Phase–seam foundation prototype
 
+**New: [target-specific observer and uncertainty adapter](PHOTONIC_OBSERVER.md).**
+The v0.13 adapter applies the earlier observer theorem to an explicit angle
+or relative-phase target, with declared coordinate scales and nuisance
+responses. An optional byte-pinned adapter reuses the existing device engine
+without vendoring its private code. Missing bounds, target blindness and
+numerically unreliable decoding cannot pass the conditional model gate.
+No result accepts a physical calibration or submits hardware work.
+
 **New: [coupled response and optical observer](PHOTONIC_RESPONSE.md).**
 The v0.12 local audit differentiates the actual four-phase component word in
 the existing exact field. At the ideal quadrature target, basis powers read

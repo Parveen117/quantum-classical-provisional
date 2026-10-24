@@ -2,6 +2,12 @@
 
 ## Phase–seam foundation and hardware contract
 
+The [v0.13 target observer](phase_seam_foundation/PHOTONIC_OBSERVER.md) now
+checks the requested photonic target with explicit scales and nuisance
+directions, then reuses a separately supplied, pinned device uncertainty
+engine. Its conditional numerical budget checks cannot accept hardware
+calibration; the empty request still needs physical evidence.
+
 The [four-mode foundation prototype](phase_seam_foundation/README.md) makes
 oriented cuts, closure-preserving paired transport, retained history and an
 explicit normalized readout executable without a primitive inner product.

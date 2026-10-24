@@ -1,5 +1,10 @@
 # Native Relational Quantum Computing — v0.1
 
+The [v0.13 photonic observer adapter](../phase_seam_foundation/PHOTONIC_OBSERVER.md)
+specializes the earlier target-recovery framework, retaining exact field
+visibility and an optional pinned device engine for conditional uncertainty
+checks. It does not alter calculator semantics or qualify hardware.
+
 **Foundational research: [four-mode phase–seam cell](../phase_seam_foundation/README.md).**
 A separate finite proposal tests oriented cuts, closure, memory and a declared
 readout law, with a functional hardware contract. The
