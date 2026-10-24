@@ -2,9 +2,11 @@
 
 **Foundational research: [four-mode phase–seam cell](../phase_seam_foundation/README.md).**
 A separate finite proposal tests oriented cuts, closure, memory and a declared
-readout law, with a functional hardware contract. It has no primitive inner
-product, but its current positive local probability law is classical. Quantum
-recovery and physical realization remain open; calculator semantics are unchanged.
+readout law, with a functional hardware contract. The
+[two-site operator completion](../phase_seam_foundation/JOINT_READOUT.md)
+conditionally recovers quantum correlations and a finite inner product using
+explicit positive-state and measurement postulates. Its physical realization
+and full encoding remain open; calculator semantics are unchanged.
 
 **Latest: [six-bit Shor and proof-traced arithmetic rewrites](PHASE64_REWRITE.md).**
 `cyclotomic64` adds exact 5.625-degree phases. The optional `panini` rewrite

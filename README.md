@@ -5,11 +5,12 @@
 The [four-mode foundation prototype](phase_seam_foundation/README.md) makes
 oriented cuts, closure-preserving paired transport, retained history and an
 explicit normalized readout executable without a primitive inner product.
-It distinguishes source identities from new operational assumptions. Its
-current probability law is classical; the Bell bound, conditional quantum
-conjugation obstruction, and missing physical laws are explicit in the
-[hardware contract](phase_seam_foundation/HARDWARE_CONTRACT.md).
-This is a separate foundational proposal, not a new physical quantum backend.
+Its v0.1 probability law is classical. The separate
+[two-site operator completion](phase_seam_foundation/JOINT_READOUT.md) adds
+explicit positive-state and measurement postulates, derives CHSH=2 sqrt(2)
+and constructs a finite inner-product representation. Physical realization
+and the full phase/seam-to-operator encoding remain open. Source identities,
+added postulates and hardware requirements are distinguished throughout.
 
 ## Native relational calculation engine
 

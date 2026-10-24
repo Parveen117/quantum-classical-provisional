@@ -1,6 +1,17 @@
 # Phase–seam foundation prototype
 
-An executable finite proposal based on Monty's four supplied LaTeX
+**New: [two-site algebraic quantum completion](JOINT_READOUT.md).**
+EMK multiplication plus explicitly added positive-state, composition and
+measurement postulates gives exact CHSH=2 sqrt(2), non-signaling marginals,
+sequential instruments and a recovered four-dimensional GNS representation.
+This is a conditional quantum-compatible completion, not a physical device
+or a derivation of the probability postulates from phase points.
+
+The combined v0.2 audit passes **64 tests**: 26 joint-algebra/readout tests,
+26 v0.1 foundation tests, and 12 existing calculator tests, with no failures,
+errors or skips.
+
+The original v0.1 is an executable finite proposal based on Monty's four supplied LaTeX
 manuscripts. The cell uses phases, oriented cuts, a seam label and retained
 history. It has no primitive amplitude vector or inner product. Its declared
 probability/composition law is currently classical; Hilbert/Born recovery and
@@ -21,6 +32,17 @@ full native suite or certification of the complete manuscripts.
 python -m phase_seam_foundation
 python benchmarks/phase_seam_audit.py
 ```
+
+For the new completion:
+
+```bash
+python -m phase_seam_foundation.joint_qualification
+python benchmarks/phase_seam_joint_audit.py
+```
+
+[Joint qualification](joint_qualification.json) ·
+[Joint source/assumption manifest](joint_source_manifest.json) ·
+[Combined targeted tests](joint_test_results.txt)
 
 Two different oriented cuts generate transport. The new balanced pair cut
 preserves the finite phase-closure sum. Exact histories distinguish paths

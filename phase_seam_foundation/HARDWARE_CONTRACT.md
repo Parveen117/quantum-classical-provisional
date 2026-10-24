@@ -3,6 +3,12 @@
 Author: Monty. Version 0.1. Status: testable interface proposal; no fabricated
 device, component selection, measured tolerances, or quantum capacity claim.
 
+The [v0.2 joint-readout note](JOINT_READOUT.md) now supplies a conditional
+two-site algebraic quantum completion and the explicit coupling target
+U(chi)=cos(chi)I-sin(chi)R_A L_B. The encoding from this four-phase cell to
+those operator states remains open; the classical device does not acquire
+quantum behavior through that separate probability postulate alone.
+
 The proposed hardware primitive stores **four controllable cyclic modes**, a
 seam calibration and retained history. It is not specified as four qubits.
 Its required actions follow the finite operational model in

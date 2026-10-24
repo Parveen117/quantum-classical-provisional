@@ -2,6 +2,12 @@
 
 Author: Monty. Status: finite operational proposal and source audit.
 
+This document retains the v0.1 classical operational law.
+[The v0.2 joint-readout completion](JOINT_READOUT.md) adds explicit operator
+positivity and measurement postulates and constructs a quantum-compatible
+two-site sector. It does not invalidate the v0.1 bound or derive the added
+postulates from these four phase coordinates.
+
 The four supplied manuscripts motivate a phase/seam primitive, with an inner
 product to be recovered rather than assumed. This implementation makes a
 limited part of that program executable: oriented cuts, transport, a closure
@@ -71,7 +77,7 @@ conventions. Hardware must specify which path/lift it actually implements.
 Direct substitution proves
 
 \[
-C_{j,h}^{,2}=I,\qquad C_{j,b}C_{j,a}=T_{j,b-a},
+C_{j,h}^{2}=I,\qquad C_{j,b}C_{j,a}=T_{j,b-a},
 \qquad J_\beta J_\alpha z=e^{2i(\beta-\alpha)}z.
 \]
 
