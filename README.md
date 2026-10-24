@@ -1,5 +1,16 @@
 # Quantum-Classical Recognition Validation
 
+## Phase–seam foundation and hardware contract
+
+The [four-mode foundation prototype](phase_seam_foundation/README.md) makes
+oriented cuts, closure-preserving paired transport, retained history and an
+explicit normalized readout executable without a primitive inner product.
+It distinguishes source identities from new operational assumptions. Its
+current probability law is classical; the Bell bound, conditional quantum
+conjugation obstruction, and missing physical laws are explicit in the
+[hardware contract](phase_seam_foundation/HARDWARE_CONTRACT.md).
+This is a separate foundational proposal, not a new physical quantum backend.
+
 ## Native relational calculation engine
 
 The [linear-recognition upgrade](native_relational_qc/LINEAR_RECOGNITION.md)

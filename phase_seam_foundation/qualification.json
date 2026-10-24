@@ -1,0 +1,167 @@
+{
+  "schema": "phase-seam-foundation-v0.1",
+  "status": "finite classical operational proposal; quantum recovery and hardware realization open",
+  "default_cell": {
+    "modes": 4,
+    "phase_bins": 64,
+    "phase_step_degrees": "45/8",
+    "cut_axis_step_degrees": "45/16",
+    "max_events": 1024,
+    "max_lift": 2147483647,
+    "rational_bits": 4096,
+    "closure_sector": "unrestricted unless explicitly selected"
+  },
+  "cut_order": {
+    "initial": [
+      2,
+      0,
+      0,
+      0
+    ],
+    "order_a_b": [
+      3,
+      0,
+      0,
+      0
+    ],
+    "order_b_a": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "same_cost": "3/2",
+    "charged_cuts": 2,
+    "history_verified": true
+  },
+  "closure_preserving_pair": {
+    "initial": [
+      2,
+      1,
+      0,
+      -3
+    ],
+    "final": [
+      3,
+      0,
+      0,
+      -3
+    ],
+    "initial_sum": 0,
+    "final_sum": 0,
+    "closure_sign": 1,
+    "history_verified": true
+  },
+  "winding": {
+    "wrapped": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "lifts": [
+      64,
+      0,
+      0,
+      0
+    ],
+    "algebraic_winding": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "physical_path_inferred": false
+  },
+  "reset": {
+    "outcome": 4,
+    "before": [
+      70,
+      2,
+      3,
+      4
+    ],
+    "after": [
+      2,
+      2,
+      3,
+      4
+    ],
+    "history_verified": true
+  },
+  "joint_readout": {
+    "probabilities": {
+      "0,0": "1/2",
+      "32,32": "1/2"
+    },
+    "total": "1",
+    "correlations": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "CHSH": "2",
+    "general_local_bound": "2",
+    "bound_assumptions": "positive setting-independent preparation and local response, no postselection"
+  },
+  "hilbert_recovery_guard": {
+    "assumption": "cut identified with universal conjugation of unknown quantum amplitudes",
+    "partial_transpose": [
+      [
+        "1/2",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1/2",
+        "0"
+      ],
+      [
+        "0",
+        "1/2",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "1/2"
+      ]
+    ],
+    "normalized_negative_expectation": "-1/2",
+    "conclusion": "not completely positive under this identification",
+    "scope": "does not prohibit classical phase reflection or a restricted-state encoding"
+  },
+  "not_established": [
+    "Born rule from winding",
+    "nonlocal quantum joint composition",
+    "time-tensor closure/uniqueness",
+    "physical cut/coupling/readout laws",
+    "energy units or fixed-point attraction",
+    "quantum advantage or physical qubit count"
+  ],
+  "validation": {
+    "tests": 38,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "seconds": 1.1941822349999711,
+    "note": "Targeted foundation plus calculator smoke tests; earlier full native suite not rerun"
+  },
+  "checked_sources_sha256": {
+    "phase_seam_foundation/__init__.py": "cf70be9ef06c41af5647c2363a63d24dd52dc7bb1445482f3780d2f62cedf1dc",
+    "phase_seam_foundation/__main__.py": "68e7e8a53fcb8b2e29d01c7437275c98e81f66fb29951cc3d3f4fd88515c3922",
+    "phase_seam_foundation/model.py": "efae81124f5d2058b7e728691b5b1feceee74a3d194835a7f2a9d2809fff6de2",
+    "phase_seam_foundation/qualification.py": "fcb0ed7ba53a9049a1a79dfdd03bcb844f407fdce6123cc40635887c0055b78b",
+    "tests/test_phase_seam_foundation.py": "b2307143b9cbae80e7ffb63146be68cab105c15c5fdadf8a67048b4994f798c7",
+    "tests/test_native_calculator.py": "1730a1648fec31bcb7023c07e1a8913652ea51782ba554120323f75acaab1024",
+    "phase_seam_foundation/source_manifest.json": "f216959aa968473cf2c3889789b35a810d84b2a0157a5497bce3967de880d136",
+    "benchmarks/phase_seam_audit.py": "ab665d6fde7de45bb46b16003ccb148d4af6b52d69f65c1dff2bb8341f9313af"
+  }
+}
