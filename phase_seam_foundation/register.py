@@ -44,7 +44,7 @@ def _layout(config, omit_mode):
     return tuple(registers), tuple(range(start, start+width-2))
 
 
-def _word(operations, config):
+def _word(operations, config, *, allow_instruments=False):
     if type(operations) is not tuple:
         raise TypeError("operations must be an immutable tuple")
     if len(operations) > config.max_events:
@@ -52,7 +52,7 @@ def _word(operations, config):
     for op in operations:
         if type(op) is not Operation:
             raise TypeError("source word requires Operation values")
-        if op.kind in ("read", "reset"):
+        if op.kind in ("read", "reset") and not allow_instruments:
             raise ValueError("read/reset require instruments; not permutation compilation")
         for arg in op.args:
             if abs(arg) > config.max_lift:

@@ -1,5 +1,5 @@
 {
-  "schema": "phase-seam-register-v0.5",
+  "schema": "phase-seam-register-v0.6",
   "author": "Monty",
   "status": "wrapped-phase permutation compiler reusing existing native arithmetic",
   "assumptions": [
@@ -1816,6 +1816,290 @@
       "reconstructed omitted label is derived, not an independent closure measurement"
     ]
   },
+  "controller": {
+    "status": "coherent native read/reset records with existing dynamic measurement export",
+    "equations": {
+      "read_clean_record": "|x,0> -> |x,x_j-a mod L>",
+      "read_retained_mode_dirty_record": "|x,y> -> |x,(y XOR x_j)-a mod L>",
+      "read_omitted_mode_dirty_record": "|x,y> -> |x,y+x_j-a mod L>",
+      "reset": "|x_j,y> -> |a+y,x_j-a mod L>"
+    },
+    "record_precondition": "fresh zero product registers, separate from temporary clean workspace",
+    "known_cell": {
+      "input_lifts": [
+        65,
+        0,
+        0,
+        0
+      ],
+      "output_lifts": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "outcomes": [
+        0,
+        63
+      ],
+      "gamma": "3/7",
+      "verified": true
+    },
+    "coherent_reset": {
+      "input": "entangled data/reference with relative zeta_64 phase",
+      "output": [
+        {
+          "data_and_record": [
+            [
+              5,
+              0,
+              0,
+              0
+            ],
+            [
+              59
+            ]
+          ],
+          "reference": 0,
+          "amplitude": {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        },
+        {
+          "data_and_record": [
+            [
+              5,
+              0,
+              0,
+              0
+            ],
+            [
+              60
+            ]
+          ],
+          "reference": 1,
+          "amplitude": {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        }
+      ],
+      "exact_amplitude_transfer": true,
+      "inverse_restores_input": true,
+      "reset_data_probability": {
+        "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "scope": "coherent retained record; inverse does not undo discarded or measured coherence"
+    },
+    "existing_dynamic_engine": {
+      "reset_zero_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "two_records_both_one_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "implementation": "native_relational_qc.dynamic, unchanged"
+    },
+    "resources": {
+      "full_read_reference0": {
+        "phase_bits": 24,
+        "clean_workspace_bits": 4,
+        "retained_record_bits": 6,
+        "retained_records": 1,
+        "total_logical_wires": 34,
+        "source_operations": 1,
+        "elementary_gates": 6,
+        "gate_counts": {
+          "cx": 6
+        },
+        "classical_output_bits_if_measured": 6,
+        "record_policy": "one fresh width-bit register per read/reset; no overwrite or recycling",
+        "record_storage_minimality_claim": false,
+        "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+        "physical_qubits_built": 0
+      },
+      "full_reset_reference0": {
+        "phase_bits": 24,
+        "clean_workspace_bits": 4,
+        "retained_record_bits": 6,
+        "retained_records": 1,
+        "total_logical_wires": 34,
+        "source_operations": 1,
+        "elementary_gates": 18,
+        "gate_counts": {
+          "cx": 18
+        },
+        "classical_output_bits_if_measured": 6,
+        "record_policy": "one fresh width-bit register per read/reset; no overwrite or recycling",
+        "record_storage_minimality_claim": false,
+        "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+        "physical_qubits_built": 0
+      },
+      "read_reference1_then_reset_reference2": {
+        "phase_bits": 24,
+        "clean_workspace_bits": 4,
+        "retained_record_bits": 12,
+        "retained_records": 2,
+        "total_logical_wires": 40,
+        "source_operations": 2,
+        "elementary_gates": 99,
+        "gate_counts": {
+          "cx": 34,
+          "ccx": 53,
+          "x": 12
+        },
+        "classical_output_bits_if_measured": 12,
+        "record_policy": "one fresh width-bit register per read/reset; no overwrite or recycling",
+        "record_storage_minimality_claim": false,
+        "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+        "physical_qubits_built": 0
+      },
+      "compressed_omitted_read": {
+        "phase_bits": 18,
+        "clean_workspace_bits": 4,
+        "retained_record_bits": 6,
+        "retained_records": 1,
+        "total_logical_wires": 28,
+        "source_operations": 1,
+        "elementary_gates": 378,
+        "gate_counts": {
+          "ccx": 315,
+          "cx": 63
+        },
+        "classical_output_bits_if_measured": 6,
+        "record_policy": "one fresh width-bit register per read/reset; no overwrite or recycling",
+        "record_storage_minimality_claim": false,
+        "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+        "physical_qubits_built": 0
+      }
+    },
+    "limits": {
+      "default_max_records": 16,
+      "max_records_option": 64,
+      "max_total_wires": 256,
+      "max_gates": 100000,
+      "reset": "only unrestricted full layout; a single-mode reset is not whole-sector preserving"
+    },
+    "open": [
+      "physical initialization, pointer measurement and noise",
+      "balanced reset with a declared closure reservoir",
+      "record recycling and environment/energy accounting",
+      "coherent unwrapped winding and path-cost storage"
+    ]
+  },
   "limits": {
     "power_of_two_grids": [
       4,
@@ -1834,7 +2118,7 @@
     "source_guards": "Config parameter/event limits; bound Cell replay also checks lift and rational-cost limits",
     "closure": "whole fixed sector preserved after each source operation; elementary gates may leave it",
     "excluded": [
-      "read/reset instruments",
+      "single-mode reset in a fixed closure sector",
       "Gamma quantum storage",
       "quantum winding/history/cost register",
       "unknown-sector compression"
@@ -1843,22 +2127,31 @@
   "open": [
     "native physical preparation of coherent phase-label superpositions",
     "physical gate/readout/control calibration and noise",
-    "controller/environment accounting for read/reset and path-dependent records",
+    "physical controller/environment and record recycling; coherent unwrapped path records",
     "native probability and time/energy laws independent of circuit assumptions"
   ],
   "validation": {
-    "tests": 117,
+    "tests": 140,
     "failures": 0,
     "errors": 0,
     "skipped": 0,
     "passed": true,
-    "seconds": 53.01584479799931,
-    "scope": "compressed/full register, v0.3, v0.2, v0.1 and calculator smoke; full native/Shor suite not rerun"
+    "seconds": 52.50861072800035,
+    "scope": "controller, compressed/full register, v0.3, v0.2, v0.1, calculator smoke and seven existing dynamic checks; full native/Shor suite not rerun",
+    "selected_dynamic_tests": [
+      "test_initial_classical_memory_and_empty_query",
+      "test_measurement_retains_quantum_classical_correlation",
+      "test_measurement_overwrites_old_memory",
+      "test_reset_preserves_remote_mixed_state_and_old_record",
+      "test_repeated_measurement_and_later_basis_change",
+      "test_feedforward_uses_current_memory_and_zero_condition",
+      "test_budgets_fail_without_modifying_program"
+    ]
   },
   "checked_sources_sha256": {
-    "phase_seam_foundation/register.py": "1489c0dc2163a2795f1f53e9ed5bb0fc4f999fc39e7a7e834497e02ddc3fa88b",
-    "phase_seam_foundation/register_qualification.py": "4dd6eef16cf86b38dc5ac1309353723791529ddd07c18de1dfca9e35afe90ce4",
-    "phase_seam_foundation/register_source_manifest.json": "36d51bb4d31381e6011cdd40e326291ac2e06002c3f615c9fa3bf48ac8970555",
+    "phase_seam_foundation/register.py": "383e7389b469f55847d27e8d9867f1572c477aa1e5aa0c0d18ba0f18f7f1fe78",
+    "phase_seam_foundation/register_qualification.py": "771197316ffefe2efe820c248ef96f0736a81899781cab6e3007b1e1624df146",
+    "phase_seam_foundation/register_source_manifest.json": "b475e9de6677c8b345a91c973c11810a1b5645e6098495a6782008be2652532e",
     "phase_seam_foundation/model.py": "efae81124f5d2058b7e728691b5b1feceee74a3d194835a7f2a9d2809fff6de2",
     "phase_seam_foundation/encoding.py": "93cd7ebca26e252756bdbaa9c8686a866826f7c9c8288e9881af0fa7ea8488c7",
     "phase_seam_foundation/joint.py": "53548114a84dfb24022acee866c10b67f0bd71ec9b9b203c014cf76af8ccbb36",
@@ -1869,7 +2162,11 @@
     "native_relational_qc/cyclotomic.py": "36a9f93fb9b6362a6141f13f4aef677de9f19642f6ea01ebb761614acab4ea86",
     "native_relational_qc/cyclotomic32.py": "33e203a7280bbe8341e37cb357f1bb6bfcaba9e695ff5144050e3a087733ab76",
     "native_relational_qc/cyclotomic64.py": "8fc9c42627feee330b00f1b56559031cc442746e830081eae09f535115d74e52",
-    "benchmarks/phase_seam_register_audit.py": "66a6f830dd5bbd7ecf6d51decacc66a4d339804d656346692f60dcd924c95a48",
+    "benchmarks/phase_seam_register_audit.py": "c023fca10a2f1c04155683895d7bf41ae5bbe82a3d31b83e319bd487da8ebdf7",
+    "phase_seam_foundation/controller.py": "27ea088abb4311083a314da73b49c86b3e2437b094d02d5b02ca23e57712739a",
+    "native_relational_qc/dynamic.py": "88421139cba72f0d86f3644c5933e03dd44d8afa1fdc79b250b2e8bf5390acd9",
+    "tests/test_native_dynamic.py": "41f94d9520e98c80ed7f58fdacf0b60ba31455c63bbf5a313975f4d4ae6a0b27",
+    "tests/test_phase_seam_controller.py": "77e39bdbc8a46cd93cb654389e9e19761d5dc44805867f519d6f45c1d72a78d3",
     "tests/test_phase_seam_sector.py": "b1f536d0691da6e9d18a8e9607403d261c5933bf330abcbeb9bf080794df6a8f",
     "tests/test_phase_seam_register.py": "06be45bb6597e18dad072cb11789baa2c300a44179c70dae054a10adfef5971c",
     "tests/test_phase_seam_encoding.py": "f933c3cbafa2238d29a0db29bb2e93ce7b2cfb621529b439a4653aa881ba1019",

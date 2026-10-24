@@ -3,6 +3,52 @@ from fractions import Fraction as F
 from native_relational_qc.phase_backend import Phase64Circuit, prepare
 from .model import Cell, Config, Operation as O
 from .register import compile_register, closure_codec, bind_cell, verify_program, verify_transition
+from .controller import compile_controller, bind_controller, verify_controller_transition
+
+
+def controller_report():
+    from native_relational_qc.dynamic import probability
+    p=compile_controller((O("read",(0,1)),O("reset",(0,2))))
+    source=Cell.start((65,0,0,0),gamma=F(3,7))
+    transition=bind_controller(source,p)
+    reset=compile_controller((O("reset",(0,5)),))
+    ref=reset.n_qubits
+    c=Phase64Circuit(ref+1).add("h",ref).add("p64",ref).add("cx",ref,0)
+    initial=prepare(c).amplitudes
+    for name,qs in reset.gates:c.add(name,*qs)
+    state=prepare(c)
+    expected={5|(((label&63)-5)%64 << reset.records[0].wires[0])|(label&(1<<ref)):amp for label,amp in initial.items()}
+    records=[dict(data_and_record=list(reset.unpack(label&((1<<ref)-1))),reference=(label>>ref)&1,
+                  amplitude=amp.to_dict()) for label,amp in sorted(state.amplitudes.items())]
+    for name,qs in reset.to_circuit(inverse=True).operations:c.add(name,*qs)
+    inverse_matches=prepare(c).amplitudes==initial
+    dynamic=compile_controller((O("read",(0,0)),O("reset",(0,0))),config=Config(grid=4)).to_dynamic((("h",(0,)),("t",(0,))))
+    cases={
+        "full_read_reference0":compile_controller((O("read",(0,0)),)).resources(),
+        "full_reset_reference0":compile_controller((O("reset",(0,0)),)).resources(),
+        "read_reference1_then_reset_reference2":p.resources(),
+        "compressed_omitted_read":compile_controller((O("read",(2,0)),),config=Config(sector=1),omit_mode=2).resources()}
+    return dict(status="coherent native read/reset records with existing dynamic measurement export",
+                equations=dict(read_clean_record="|x,0> -> |x,x_j-a mod L>",
+                               read_retained_mode_dirty_record="|x,y> -> |x,(y XOR x_j)-a mod L>",
+                               read_omitted_mode_dirty_record="|x,y> -> |x,y+x_j-a mod L>",
+                               reset="|x_j,y> -> |a+y,x_j-a mod L>"),
+                record_precondition="fresh zero product registers, separate from temporary clean workspace",
+                known_cell=dict(input_lifts=list(source.state.lifts),output_lifts=list(transition.after.state.lifts),
+                                outcomes=list(transition.outcomes),gamma=str(transition.after.gamma),
+                                verified=verify_controller_transition(transition)),
+                coherent_reset=dict(input="entangled data/reference with relative zeta_64 phase",output=records,
+                                    exact_amplitude_transfer=state.amplitudes==expected,inverse_restores_input=inverse_matches,
+                                    reset_data_probability=state.probability({q:(5>>i)&1 for i,q in enumerate(reset.layout.registers[0])}).to_dict(),
+                                    scope="coherent retained record; inverse does not undo discarded or measured coherence"),
+                existing_dynamic_engine=dict(reset_zero_probability=probability(dynamic,quantum={0:0,1:0}).value.to_dict(),
+                                             two_records_both_one_probability=probability(dynamic,classical={0:1,1:0,2:1,3:0}).value.to_dict(),
+                                             implementation="native_relational_qc.dynamic, unchanged"),
+                resources=cases,
+                limits=dict(default_max_records=16,max_records_option=64,max_total_wires=256,max_gates=100000,
+                            reset="only unrestricted full layout; a single-mode reset is not whole-sector preserving"),
+                open=["physical initialization, pointer measurement and noise","balanced reset with a declared closure reservoir",
+                      "record recycling and environment/energy accounting","coherent unwrapped winding and path-cost storage"])
 
 
 def sector_report():
@@ -75,7 +121,7 @@ def report():
         ("three_operation_closed_word",word)):
         resource_cases[name] = compile_register(ops).resources()
     return dict(
-        schema="phase-seam-register-v0.5",author="Monty",
+        schema="phase-seam-register-v0.6",author="Monty",
         status="wrapped-phase permutation compiler reusing existing native arithmetic",
         assumptions=["orthogonal labels","clean workspace","standard coherent gate semantics if used as quantum circuit"],
         program=dict(source_operations=[dict(kind=o.kind,args=list(o.args)) for o in word],
@@ -98,13 +144,14 @@ def report():
             previous_two_site_obstruction_still_valid=True),
         resources=resource_cases,
         sector_compression=sector_report(),
+        controller=controller_report(),
         limits=dict(power_of_two_grids=[1<<w for w in range(2,13)],max_gates=100000,
                     source_guards="Config parameter/event limits; bound Cell replay also checks lift and rational-cost limits",
                     closure="whole fixed sector preserved after each source operation; elementary gates may leave it",
-                    excluded=["read/reset instruments","Gamma quantum storage","quantum winding/history/cost register","unknown-sector compression"]),
+                    excluded=["single-mode reset in a fixed closure sector","Gamma quantum storage","quantum winding/history/cost register","unknown-sector compression"]),
         open=["native physical preparation of coherent phase-label superpositions",
               "physical gate/readout/control calibration and noise",
-              "controller/environment accounting for read/reset and path-dependent records",
+              "physical controller/environment and record recycling; coherent unwrapped path records",
               "native probability and time/energy laws independent of circuit assumptions"])
 
 

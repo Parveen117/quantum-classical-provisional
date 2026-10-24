@@ -1,8 +1,8 @@
 {
-  "schema": "phase-seam-register-source-v2",
+  "schema": "phase-seam-register-source-v3",
   "author": "Monty",
   "date": "2026-10-24",
-  "parent_commit": "b3e3e02cb34551865c3f2158eb3d0fcff42de6c0",
+  "parent_commit": "915d83f532d65d64a15eb2e0ce00973c6333f70c",
   "duplicate_audit": {
     "scope": "All seven branch-tip recursive trees; local Python/Markdown content search; read existing arithmetic, memory experiments, observer transport and master README. No claim about deleted branches or other repositories.",
     "trees": [
@@ -32,8 +32,8 @@
       },
       {
         "branch": "codex/native-relational-qc-v1-20261018",
-        "commit": "b3e3e02cb34551865c3f2158eb3d0fcff42de6c0",
-        "files": 404,
+        "commit": "915d83f532d65d64a15eb2e0ce00973c6333f70c",
+        "files": 405,
         "truncated": false
       },
       {
@@ -66,6 +66,10 @@
       {
         "path": "phase_seam_foundation/model.py",
         "use": "Original Operation, Config, Cell and history replay; unchanged."
+      },
+      {
+        "path": "native_relational_qc/dynamic.py",
+        "use": "Existing measurement, reset, classical-memory and feedback engine reused by controller export and independent comparisons; unchanged."
       }
     ],
     "related_but_distinct": [
@@ -107,6 +111,12 @@
       "authors": "Shende, Prasad, Markov, Hayes",
       "url": "https://arxiv.org/abs/quant-ph/0207001",
       "scope": "Established reversible circuit synthesis; no priority claim for permutation-to-unitary embedding."
+    },
+    {
+      "title": "The Theory of Quantum Information, Section 2.2, Corollary 2.27",
+      "author": "John Watrous",
+      "url": "https://jhwatrous.github.io/TQI.pdf",
+      "scope": "Standard Kraus/Stinespring channel representations; finite native read/reset dilation derived explicitly in CONTROLLER.md."
     }
   ],
   "claim_boundary": "A new adapter to existing arithmetic, not a new quantum postulate, physical device, quantum speedup, conversion from v0.3 code, or complete phase/seam/history quantum encoding.",
@@ -120,5 +130,20 @@
       "stored three-coordinate affine map"
     ],
     "assumptions": "known fixed closure sign and twist; existing coherent gate and clean-workspace assumptions retained; no new physical postulate"
+  },
+  "v0_6_duplicate_check": {
+    "method": "All seven branch heads rechecked; other six unchanged. Searched local Python/Markdown and read dynamic.py, DYNAMIC.md, dynamic tests, model.py and joint.py.",
+    "finding": "Measurement/reset/feedback and Kraus-state laws already exist. Missing adapter is native multi-bit phase read/reset with explicit coherent records and resource accounting.",
+    "changes": [
+      "controller.py composes the existing register compiler and arithmetic",
+      "record measurements exported to existing DynamicCircuit",
+      "existing qualification/audit extended instead of adding another engine"
+    ],
+    "new_choices": [
+      "one fresh zero record per read/reset",
+      "computational-basis pointer measurement through existing quantum postulates",
+      "records retained and never overwritten by the adapter",
+      "single-mode reset restricted to an unrestricted full phase layout"
+    ]
   }
 }

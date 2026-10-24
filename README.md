@@ -30,6 +30,14 @@ compression and phase retention. Gamma and
 lift/history/cost data remain in the original classical Cell; this is a
 logical circuit design, not fabricated quantum hardware.
 
+The [native read/reset controller](phase_seam_foundation/CONTROLLER.md) now
+retains each relative phase outcome in a fresh explicit record register and
+exports its measurement to the existing dynamic engine. Coherent reset
+transfers old information and reference entanglement into the record; it
+does not erase them for free. At grid 64, one record adds 6 wires. Single-mode
+reset is supported only on the unrestricted full layout because it does not
+preserve the whole fixed closure sector. The current audit passes 140 tests.
+
 ## Native relational calculation engine
 
 The [linear-recognition upgrade](native_relational_qc/LINEAR_RECOGNITION.md)

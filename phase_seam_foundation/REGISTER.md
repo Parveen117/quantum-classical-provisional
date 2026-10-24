@@ -15,6 +15,12 @@ reduces the phase storage from 24 to 18 wires and the total from 28 to 22
 wires. Full-to-compressed conversion has a separate 28-wire peak and gate
 cost. Section 8 gives the construction and its exact limits.
 
+The subsequent [v0.6 controller](CONTROLLER.md) composes this compiler with
+explicit read/reset records and the existing dynamic measurement engine.
+The permutation-only `compile_register` interface still rejects instruments.
+The current combined audit has 140 tests; the v0.4/v0.5 results below retain
+their milestone context.
+
 ## 1. Duplicate-work check and reuse
 
 The [source manifest](register_source_manifest.json) pins the seven branch
@@ -167,9 +173,9 @@ It shares the compiler, so it is a consistency verifier, **not an independent
 formal proof checker**. The written identities, independent bit interpreter,
 original Cell reference and exact coherent engine provide different checks.
 
-Read/reset remain unsupported by this permutation compiler. Reading can be
-specified as an instrument, while resetting and keeping the old outcome
-requires an explicit record/environment. Neither is silently discarded.
+Read/reset remain unsupported by this permutation compiler. The separate
+[controller adapter](CONTROLLER.md) now provides their explicit records and
+measurement export; neither instrument is silently substituted here.
 
 ## 5. What happened to the old obstruction?
 

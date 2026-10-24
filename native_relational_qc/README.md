@@ -23,6 +23,12 @@ off-sector residuals; conversion peaks at the original 28 wires. The combined
 audit passes 117 tests, including full/compressed coherent equivalence.
 The original two-site code and its obstruction remain unchanged.
 
+The [native controller adapter](../phase_seam_foundation/CONTROLLER.md) adds
+explicit coherent records for phase read/reset and exports record measurement
+to the existing `DynamicCircuit` engine. It counts retained memory separately
+from clean workspace and keeps the original classical Cell history. The
+combined audit passes 140 tests, including seven existing dynamic checks.
+
 **Latest: [six-bit Shor and proof-traced arithmetic rewrites](PHASE64_REWRITE.md).**
 `cyclotomic64` adds exact 5.625-degree phases. The optional `panini` rewrite
 removes proved redundant X/CX/CCX words and independently replays each deletion.

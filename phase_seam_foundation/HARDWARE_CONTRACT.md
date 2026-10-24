@@ -35,6 +35,16 @@ preparation and physical gate costs remain separate engineering requirements.
 Reconstructing a fourth phase from the constraint is not an independent
 measurement confirming that constraint.
 
+The [v0.6 controller](CONTROLLER.md) makes read/reset records explicit.
+Every native read/reset allocates a fresh width-bit pointer; coherent reset
+moves the old phase information and its correlations into that pointer.
+Pointer measurement uses the existing dynamic engine. At grid 64, one
+record adds 6 logical wires; full read(0,1) followed by reset(0,2) uses 40
+wires and 99 logical gates. Fresh physical record initialization, memory
+noise and record erasure/recycling remain unmeasured engineering requirements.
+Single-mode reset on a fixed closure sector is rejected; a compensating
+reservoir operation needs a separately declared model.
+
 The proposed hardware primitive stores **four controllable cyclic modes**, a
 seam calibration and retained history. It is not specified as four qubits.
 Its required actions follow the finite operational model in
@@ -138,7 +148,9 @@ at least one balanced-cut interaction, and an independent phase-sensitive
 readout. Compare the measured transfer law to the exact compiled example,
 including workspace cleanup and any intermediate closure-sector excursions.
 
-Read/reset and path-dependent records need an explicit controller/environment
-model with its storage and noise budget. The current classical Cell replay
-does not establish coherent history recording. These transfer and preparation
-laws remain the missing link to a defensible material hardware design.
+The read/reset adapter now specifies a finite controller/environment record
+and logical storage budget. Physical initialization, noise, recycling and
+energy accounting remain open, as does a balanced reset preserving native
+closure. Current coherent records contain wrapped outcomes; classical Cell
+replay does not establish coherent unwrapped path/cost history. These transfer
+and preparation laws remain the missing link to a material hardware design.

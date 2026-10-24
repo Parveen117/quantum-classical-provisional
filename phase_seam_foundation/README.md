@@ -1,6 +1,21 @@
 # Phase–seam foundation prototype
 
-**New: [fixed-closure compression in the phase-register compiler](REGISTER.md).**
+**New: [native read/reset with retained controller records](CONTROLLER.md).**
+Each read/reset has a fresh record of its wrapped relative phase, using the
+existing compiler, arithmetic and dynamic measurement engine. Coherent reset
+transfers information into the record; joint inverse recovery requires
+coherent records to remain available. At grid 64, a full stored-phase read
+at reference zero uses 6 gates and reset uses 18, each with 6 retained record
+wires in addition to the 28-wire full layout. The compressed layout supports
+read, including its derived omitted phase; single-mode fixed-sector reset
+is rejected. Gamma, lifts and path/cost history remain classical.
+
+The v0.6 combined audit passes **140 tests in 52.509 seconds**, with no
+failures, errors or skips: 16 controller tests, the prior 117 targeted tests,
+and seven relevant existing dynamic-engine checks. Fresh pointer records and
+their measurement are explicit model choices; no physical device is inferred.
+
+**Previous: [fixed-closure compression in the phase-register compiler](REGISTER.md).**
 The optional `omit_mode` layout derives one phase from the other three and
 the known closure sum. At grid 64 it uses **18 phase + 4 workspace = 22
 logical wires**, down from 28. The example pair_cut(0,2,0) uses 24 rather than
