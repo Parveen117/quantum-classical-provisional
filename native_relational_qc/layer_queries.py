@@ -131,21 +131,25 @@ def classical_reader(A,b,bits):
 
 
 def shift_blind_pair(shifts,bits,n):
-    """Proposition Q3(vi): for k <= n-1 shift vectors, two different classes with identical shift readings 2 A s mod M.
+    """Proposition Q3(vi): shift vectors singular mod 2 leave two different classes with identical shift readings 2 A s mod M.
 
     Returns (N, v): N = (M/4) v v^T with v in {0,1}^n nonzero and v.s even for every shift, so 2 N s = 0 mod M for every
-    shift (the reading of A = 0) while N is nonzero mod M/2. Requires M >= 4 and len(shifts) < n.
+    shift (the reading of A = 0) while N is nonzero mod M/2. Requires M >= 4. Fewer than n shifts always leave such a v
+    (k < n homogeneous equations over F_2 have a nonzero solution); n or more shifts leave one exactly when their matrix
+    has rank < n over F_2. When the shifts span F_2^n the function raises ValueError: then (2 A s)_s determines A mod M/2
+    (Q3(ii) with S invertible mod 2), so no blind pair exists.
     """
     M=1<<bits
     if M<4:raise ValueError('M >= 4 required')
     shifts=[tuple(_integer(x,'shift entry',0,M-1) for x in sh) for sh in shifts]
-    if len(shifts)>=n or any(len(sh)!=n for sh in shifts):raise ValueError('fewer than n shift vectors of length n required')
+    if any(len(sh)!=n for sh in shifts):raise ValueError('shift vectors of length n required')
     for bitsv in range(1,1<<n):
         v=tuple((bitsv>>k)&1 for k in range(n))
         if all(sum(vi*si for vi,si in zip(v,sh))%2==0 for sh in shifts):
             N=tuple(tuple((M//4)*v[i]*v[j] for j in range(n)) for i in range(n))
             return N,v
-    raise ArithmeticError('no blind vector found')   # impossible: k < n homogeneous equations over F_2 have a nonzero solution
+    if len(shifts)<n:raise ArithmeticError('no blind vector found')   # impossible: k < n homogeneous equations over F_2 have a nonzero solution
+    raise ValueError('the shifts span F_2^n: the shift readings determine A mod M/2, no blind pair exists')
 
 
 # Circuits -----------------------------------------------------------------------------

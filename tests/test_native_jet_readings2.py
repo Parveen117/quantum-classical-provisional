@@ -526,8 +526,25 @@ class LayerQueryTests(unittest.TestCase):
         N3,v3=shift_blind_pair([(0,0,0),(0,0,1)],3,3);self.assertEqual(v3,(1,0,0));self.assertEqual(N3[0][0],2)
         self.assertTrue(all(sum(2*N3[i][k]*s[k] for k in range(3))%8==0 for s in ((0,0,0),(0,0,1)) for i in range(3)))
         self.assertFalse(same_function(N3,(0,0,0),((0,0,0),(0,0,0),(0,0,0)),(0,0,0),3))
-        with self.assertRaises(ValueError):shift_blind_pair([(1,0),(0,1)],2,2)
+        with self.assertRaises(ValueError):shift_blind_pair([(1,0),(0,1)],2,2)   # the unit shifts span F_2^2
         with self.assertRaises(ValueError):shift_blind_pair([(1,0)],1,2)
+        # Exactly n shifts: a blind pair exists iff the shift matrix is singular mod 2 (exhaustive at (4,2)), and the
+        # readings (2 A s)_s separate all symmetric A mod M/2 iff det S is odd.
+        M=4;zero=((0,0),(0,0));sym=[((a,c),(c,d)) for a in range(2) for c in range(2) for d in range(2)]
+        singular=invertible=0
+        for S in product(product(range(M),repeat=2),repeat=2):
+            readings=lambda A:tuple(tuple(sum(2*A[i][k]*s[k] for k in range(2))%M for i in range(2)) for s in S)
+            if (S[0][0]*S[1][1]-S[0][1]*S[1][0])%2:
+                invertible+=1
+                with self.assertRaises(ValueError):shift_blind_pair(list(S),2,2)
+                self.assertEqual(len({readings(A) for A in sym}),len(sym))
+            else:
+                singular+=1;N,v=shift_blind_pair(list(S),2,2)
+                self.assertTrue(any(N[i][j]%(M//2) for i in range(2) for j in range(2)))
+                self.assertEqual(readings(N),readings(zero));self.assertFalse(same_function(N,(0,0),zero,(0,0),2))
+                self.assertLess(len({readings(A) for A in sym}),len(sym))
+        self.assertEqual((singular,invertible),(160,96))
+        self.assertEqual(shift_blind_pair([(1,0),(1,2)],3,2),(((0,0),(0,2)),(0,1)))   # even determinant at M = 8: 2 x_2^2 is blind
 
     def test_oracle_uses_are_counted_on_the_circuits_not_asserted(self):
         from unittest import mock

@@ -56,7 +56,11 @@
   ],
   "four_point_sets_failing_at_4_2": 1820,
   "quantum_fewer_than_exact_classical_iff": "n >= 3 (2n+1 < n(n+3)/2); tie at n = 2; worse at n = 1; independent of M >= 4",
-  "shift_blind_tuples": 180
+  "shift_blind_tuples": 180,
+  "shift_square_tuples": {
+   "invertible": 1771,
+   "singular": 3001
+  }
  },
  "design_criterion": {
   "collinear": 824,
@@ -463,7 +467,7 @@
   }
  },
  "evidence_class": "LOCAL_IDEAL_CALCULATION",
- "exact_checks": 56448,
+ "exact_checks": 61220,
  "function_classes": [
   {
    "bits": 2,
@@ -486,7 +490,7 @@
   "grid_cases": 64,
   "random_cases": 120
  },
- "negative_controls": 336,
+ "negative_controls": 3337,
  "nonlinear_chart": {
   "gradient_changed_result": 40,
   "kappa_changed": 34,
@@ -530,7 +534,7 @@
    "quantum_fewer_than_classical_bound": false,
    "quantum_fewer_than_classical_complexity": false,
    "registers": 1,
-   "seconds": 0.37
+   "seconds": 0.328
   },
   {
    "bits": 3,
@@ -542,7 +546,7 @@
    "quantum_fewer_than_classical_bound": false,
    "quantum_fewer_than_classical_complexity": false,
    "registers": 1,
-   "seconds": 2.575
+   "seconds": 2.61
   },
   {
    "bits": 2,
@@ -554,7 +558,7 @@
    "quantum_fewer_than_classical_bound": false,
    "quantum_fewer_than_classical_complexity": false,
    "registers": 2,
-   "seconds": 1.792
+   "seconds": 1.815
   },
   {
    "bits": 3,
@@ -566,7 +570,7 @@
    "quantum_fewer_than_classical_bound": false,
    "quantum_fewer_than_classical_complexity": false,
    "registers": 2,
-   "seconds": 5.398
+   "seconds": 4.613
   },
   {
    "bits": 2,
@@ -578,7 +582,7 @@
    "quantum_fewer_than_classical_bound": false,
    "quantum_fewer_than_classical_complexity": true,
    "registers": 3,
-   "seconds": 2.907
+   "seconds": 3.208
   },
   {
    "bits": 3,
@@ -590,7 +594,7 @@
    "quantum_fewer_than_classical_bound": false,
    "quantum_fewer_than_classical_complexity": true,
    "registers": 3,
-   "seconds": 16.867
+   "seconds": 16.937
   },
   {
    "bits": 3,
@@ -602,15 +606,15 @@
    "quantum_fewer_than_classical_bound": true,
    "quantum_fewer_than_classical_complexity": true,
    "registers": 4,
-   "seconds": 79.906
+   "seconds": 75.853
   }
  ],
  "schema": "nrqc-jet-readings-v2-audit",
- "seconds": 289.82,
+ "seconds": 293.518,
  "sections": {
   "classical_complexity": {
-   "checks": 34704,
-   "negative_controls": 181
+   "checks": 39476,
+   "negative_controls": 3182
   },
   "design_criterion": {
    "checks": 17605,
@@ -654,10 +658,10 @@
   "native_relational_qc/enclosure_learner.py": "37a8d2862502d0ec125e7259c88391e4a58c411c",
   "native_relational_qc/hessian_metric.py": "2b52466e64ee2aabf3fdc231aeb0944c5a05f6d0",
   "native_relational_qc/jet_readings.py": "7d375a348afff89443b4ec151b81dc723d5155c9",
-  "native_relational_qc/layer_queries.py": "8bbf95cb1e0e65f4dfcba5577e4f5b7137ee1a5a",
+  "native_relational_qc/layer_queries.py": "e16a13feffedd737e811cebd7a56e97c59a62799",
   "native_relational_qc/phase_backend.py": "3593694554fcd7e415a9b3f4a2a006036156a2e3",
   "native_relational_qc/shor.py": "07ff038e70ba347f25d8593b35b3ff1b589e4fd8",
-  "tests/test_native_jet_readings2.py": "96e88195192336e7d90651031ac279e7f76f9c51"
+  "tests/test_native_jet_readings2.py": "15b541eb0d079155dd183f7378519a1c488a2173"
  },
  "statements_proved_here": false
 }

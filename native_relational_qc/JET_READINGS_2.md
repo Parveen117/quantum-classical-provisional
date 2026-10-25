@@ -50,7 +50,8 @@ Modules `native_relational_qc/hessian_metric.py`, `enclosure_learner.py`,
    duality and Nakayama's lemma, attained by a nonadaptive reader), so the
    quantum count, counted on the executed circuits, is below the classical
    one from `n = 3` on (`7` against `9`), ties at `n = 2` and loses at `n =
-   1`; fewer than `n` shifts cannot read the quadratic part (Q3(vi)).
+   1`; fewer than `n` shifts, or `n` shifts whose matrix is singular mod `2`,
+   cannot read the quadratic part, adaptively or not (Q3(vi)).
 
 ## 1. Theorem J5 (selected connection = Levi-Civita; kappa = Gaussian curvature)
 
@@ -464,7 +465,9 @@ here concerns any instrument.
 ## 4. Theorem Q3 (second layer by shifted queries)
 
 Let `f(x) = sum_i A_ii x_i^2 + 2 sum_{i<j} A_ij x_i x_j + sum_i b_i x_i mod M`
-on `Z_M^n`, `M = 2^b`, `O_f|x> = zeta_M^{f(x)}|x>`.
+on `Z_M^n`, `M = 2^b`, `O_f|x> = zeta_M^{f(x)}|x>`. (The letter `b` names
+both the register width in `M = 2^b` and the linear coefficient vector, as in
+the module's signatures; the width only ever appears inside `2^b`.)
 
 (i) *Identification class.* `(A,b)` and `(A',b')` define the same function iff
 `A' = A mod M/2` entrywise and `b' = b + (M/2) e mod M`, where `e_i = 1` when
@@ -563,8 +566,19 @@ over `F_2`) and `N = (M/4) v v^T`; then `N != 0 mod M/2`, so `(0,0)` and `(N,0)`
 differ by (i), while `2 N s_j = (M/2) v (v . s_j) = 0 mod M` is the reading of
 `A = 0` (`shift_blind_pair`; the test runs both shifted passes on the engine
 and gets the same point mass). So any protocol that uses only shift readings
-needs at least `n` shifts; `e_1, ..., e_n` suffice by (ii), as does any set
-whose matrix is invertible mod `2`.
+needs at least `n` shifts. This covers adaptive readers: the shifts a
+deterministic protocol chooses on the input `(0,0)` form one fixed tuple, and
+`(N,0)` built from that tuple returns the same all-zero reading at every step,
+so the protocol follows the same path and outputs the same class for both.
+Conversely `e_1, ..., e_n` suffice by (ii), as does any `n`-tuple `S` whose
+matrix is invertible mod `2`: `2AS mod M` gives `AS mod M/2`, and `det S` odd
+is a unit of `Z_{M/2}`, so `A = (AS) S^{-1} mod M/2`. For exactly `n` shifts
+this condition is also necessary: if `det S` is even, `S` is singular over
+`F_2`, a nonzero `v` with `v . s_j` even for all `j` exists, and the same
+`N = (M/4) v v^T` is blind. (`shift_blind_pair` accepts any shift list that is
+singular mod `2` and raises when the shifts span `F_2^n`; the audit sweeps
+every `n`-tuple at `(4,2)` and `(8,2)`: a blind pair exists iff `det S` is
+even, and the readings separate all classes iff `det S` is odd.)
 
 (vii) *Degree and differences (stated; the cubic is not executed on the engine
 here).* For a polynomial phase of total degree `d`, one shift lowers the degree

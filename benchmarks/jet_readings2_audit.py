@@ -391,7 +391,38 @@ def main():
             N,v=shift_blind_pair(list(shifts),bits,n);zero=tuple(tuple(0 for _ in range(n)) for _ in range(n))
             t.control(any(N[i][j]%(M//2) for i in range(n) for j in range(n)) and not same_function(N,(0,)*n,zero,(0,)*n,bits),'classical_complexity',('blind pair differs',bits,n))
             t.check(all(sum(2*N[i][k]*s[k] for k in range(n))%M==0 for s in shifts for i in range(n)),'classical_complexity',('blind pair reads like zero',bits,n));blind+=1
-    report['classical_complexity']=dict(cases=classical,four_point_sets_failing_at_4_2=failing,shift_blind_tuples=blind,
+    # Q3(vi) sharpened: for exactly n shifts a blind pair exists iff the shift matrix is singular mod 2, and the shift
+    # readings separate all symmetric A mod M/2 iff it is invertible mod 2; every n-tuple at (4,2), (8,2); random at (4,3), (8,3).
+    square=dict(singular=0,invertible=0)
+    for bits,n,tuples in ((2,2,None),(3,2,None),(2,3,300),(3,3,120)):
+        M=1<<bits;allshifts=list(product(range(M),repeat=n));zero=tuple(tuple(0 for _ in range(n)) for _ in range(n))
+        pool=list(product(allshifts,repeat=n)) if tuples is None else [tuple(rng.choice(allshifts) for _ in range(n)) for _ in range(tuples)]
+        pairs=[(i,j) for i in range(n) for j in range(i,n)];sym=[]
+        for vals in product(range(M//2),repeat=len(pairs)):
+            A=[[0]*n for _ in range(n)]
+            for (i,j),a in zip(pairs,vals):A[i][j]=A[j][i]=a
+            sym.append(tuple(map(tuple,A)))
+        for shifts in pool:
+            rows=[sum((s[k]&1)<<k for k in range(n)) for s in shifts];rank=0   # rank over F_2 by elimination on bit rows
+            for col in range(n):
+                pivot=next((r for r in range(rank,n) if rows[r]>>col&1),None)
+                if pivot is None:continue
+                rows[rank],rows[pivot]=rows[pivot],rows[rank]
+                for r in range(n):
+                    if r!=rank and rows[r]>>col&1:rows[r]^=rows[rank]
+                rank+=1
+            read=lambda A:tuple(tuple(sum(2*A[i][k]*s[k] for k in range(n))%M for i in range(n)) for s in shifts)
+            distinct=len({read(A) for A in sym})
+            if rank<n:
+                N,v=shift_blind_pair(list(shifts),bits,n);square['singular']+=1
+                t.check(any(N[i][j]%(M//2) for i in range(n) for j in range(n)) and read(N)==read(zero) and distinct<len(sym),'classical_complexity',('singular mod 2: blind pair',bits,n))
+                t.control(not same_function(N,(0,)*n,zero,(0,)*n,bits),'classical_complexity',('singular mod 2: blind pair differs',bits,n))
+            else:
+                square['invertible']+=1
+                try:shift_blind_pair(list(shifts),bits,n);raised=False
+                except ValueError:raised=True
+                t.check(raised and distinct==len(sym),'classical_complexity',('invertible mod 2: readings separate',bits,n))
+    report['classical_complexity']=dict(cases=classical,four_point_sets_failing_at_4_2=failing,shift_blind_tuples=blind,shift_square_tuples=square,
         quantum_fewer_than_exact_classical_iff='n >= 3 (2n+1 < n(n+3)/2); tie at n = 2; worse at n = 1; independent of M >= 4')
     t.check(any(not row['quantum_fewer_than_classical_bound'] for row in quantum),'quadratic_layer_reading','no separation at small n is recorded')
     t.check(any(row['quantum_fewer_than_classical_bound'] for row in quantum),'quadratic_layer_reading','separation against the counting bound at n=4, bits=3')
