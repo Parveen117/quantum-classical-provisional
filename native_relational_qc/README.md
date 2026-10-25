@@ -169,6 +169,7 @@ submission is performed by this package.
 | IBM compilation | Offline compilation against a supplied Qiskit Target, preserving returned layout |
 | Existing evidence bridge | Circuit-derived ExpectedModel with a declared TVD tolerance and circuit hash |
 | Software verification | Analytic answers, independent Qiskit comparisons, phase/order negative controls |
+| Readings to jets | Exact jets of a declared Hessian field learned from point readings, affine-chart transport with invariant curvature, one-query linear-layer reading; [JET_READINGS.md](JET_READINGS.md) |
 
 The mathematical bridge and its explicit hypotheses are in [THEOREM.md](THEOREM.md).
 Evidence from this package is labeled LOCAL_IDEAL or MODEL_PREDICTION. It does
