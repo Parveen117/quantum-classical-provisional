@@ -1,5 +1,13 @@
 # Native Relational Quantum Computing — v0.1
 
+**Experimental branch: [bounded self-learning and native curvature](SELF_LEARNING.md).**
+A four-qubit classifier trains five phases through the existing exact executor,
+retains model checkpoints and evaluates a predeclared held-out parameter grid.
+The collaboration phase kernel is imported unchanged for direct learning use;
+generic calculator registration and wider Shor integration remain separate.
+The report includes a classical product baseline and an information-blind
+point-response control. No hardware learning or speedup is claimed.
+
 The [v0.16 bus Hamiltonian adapter](../phase_seam_foundation/BUS_HAMILTONIAN.md)
 imports the unchanged `cyclotomic_pow2.py` from collaboration commit f2b9697
 for exact centered-generator phases, including Q(zeta_128). The calculator's
