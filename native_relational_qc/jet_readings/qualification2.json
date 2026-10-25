@@ -1,0 +1,663 @@
+{
+ "classical_complexity": {
+  "cases": [
+   {
+    "bits": 2,
+    "counting_bound": 2,
+    "parameter_vectors": 16,
+    "readings": 2,
+    "registers": 1
+   },
+   {
+    "bits": 3,
+    "counting_bound": 2,
+    "parameter_vectors": 64,
+    "readings": 2,
+    "registers": 1
+   },
+   {
+    "bits": 2,
+    "counting_bound": 4,
+    "parameter_vectors": 1024,
+    "readings": 5,
+    "registers": 2
+   },
+   {
+    "bits": 3,
+    "counting_bound": 4,
+    "parameter_vectors": 32768,
+    "readings": 5,
+    "registers": 2
+   },
+   {
+    "bits": 2,
+    "counting_bound": 6,
+    "parameter_vectors": 400,
+    "readings": 9,
+    "registers": 3,
+    "sampled": true
+   },
+   {
+    "bits": 3,
+    "counting_bound": 7,
+    "parameter_vectors": 200,
+    "readings": 9,
+    "registers": 3,
+    "sampled": true
+   },
+   {
+    "bits": 3,
+    "counting_bound": 11,
+    "parameter_vectors": 50,
+    "readings": 14,
+    "registers": 4,
+    "sampled": true
+   }
+  ],
+  "four_point_sets_failing_at_4_2": 1820,
+  "quantum_fewer_than_exact_classical_iff": "n >= 3 (2n+1 < n(n+3)/2); tie at n = 2; worse at n = 1; independent of M >= 4",
+  "shift_blind_tuples": 180
+ },
+ "design_criterion": {
+  "collinear": 824,
+  "designs_with_max_det": 24,
+  "first_layer_factor_by_order": {
+   "1": "8/3",
+   "2": "8/3",
+   "3": "28/3"
+  },
+  "larger_det_and_wider_pairs": 1371,
+  "max_abs_det": "9/4",
+  "min_first_layer_row_sum": "4/3",
+  "nonsingular": 17600,
+  "random_pairs": 20000,
+  "swap_descent_example": {
+   "after_swaps": "100/63",
+   "global_minimum": "168/107",
+   "greedy": "224/135"
+  },
+  "triples": 18424
+ },
+ "enclosure_learner": {
+  "design": [
+   [
+    "-3/4",
+    "-3/4"
+   ],
+   [
+    "3/4",
+    "3/4"
+   ],
+   [
+    "-3/4",
+    "3/4"
+   ]
+  ],
+  "exact_threshold": {
+   "grid_supremum": "1/13",
+   "integrable_witnesses": 24,
+   "learner_certifies_beyond_threshold_plus_1_over_50": 0,
+   "per_case": {
+    "-1,-1": {
+     "threshold": "1/8",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "-1,-3": {
+     "threshold": "1/4",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "-1,-5": {
+     "threshold": "1/4",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "-1,-7": {
+     "threshold": "21/89",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "-1,1": {
+     "threshold": "1/13",
+     "witness_integrable": true,
+     "witness_kappa": "0"
+    },
+    "-1,3": {
+     "threshold": "3/23",
+     "witness_integrable": true,
+     "witness_kappa": "0"
+    },
+    "-1,5": {
+     "threshold": "5/33",
+     "witness_integrable": true,
+     "witness_kappa": "0"
+    },
+    "-1,7": {
+     "threshold": "7/43",
+     "witness_integrable": true,
+     "witness_kappa": "0"
+    },
+    "-3,-1": {
+     "threshold": "1/8",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "-3,-3": {
+     "threshold": "3/8",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "-3,-5": {
+     "threshold": "5/8",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "-3,-7": {
+     "threshold": "7/11",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "-3,1": {
+     "threshold": "3/31",
+     "witness_integrable": true,
+     "witness_kappa": "0"
+    },
+    "-3,3": {
+     "threshold": "1/5",
+     "witness_integrable": true,
+     "witness_kappa": "0"
+    },
+    "-3,5": {
+     "threshold": "15/59",
+     "witness_integrable": true,
+     "witness_kappa": "0"
+    },
+    "-3,7": {
+     "threshold": "21/73",
+     "witness_integrable": true,
+     "witness_kappa": "0"
+    },
+    "-5,-1": {
+     "threshold": "1/8",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "-5,-3": {
+     "threshold": "3/8",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "-5,-5": {
+     "threshold": "5/8",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "-5,-7": {
+     "threshold": "7/8",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "-5,1": {
+     "threshold": "5/49",
+     "witness_integrable": true,
+     "witness_kappa": "0"
+    },
+    "-5,3": {
+     "threshold": "15/67",
+     "witness_integrable": true,
+     "witness_kappa": "0"
+    },
+    "-5,5": {
+     "threshold": "5/17",
+     "witness_integrable": true,
+     "witness_kappa": "0"
+    },
+    "-5,7": {
+     "threshold": "35/103",
+     "witness_integrable": true,
+     "witness_kappa": "0"
+    },
+    "-7,-1": {
+     "threshold": "1/8",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "-7,-3": {
+     "threshold": "3/8",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "-7,-5": {
+     "threshold": "5/8",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "-7,-7": {
+     "threshold": "7/8",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "-7,1": {
+     "threshold": "7/67",
+     "witness_integrable": true,
+     "witness_kappa": "0"
+    },
+    "-7,3": {
+     "threshold": "21/89",
+     "witness_integrable": true,
+     "witness_kappa": "0"
+    },
+    "-7,5": {
+     "threshold": "35/111",
+     "witness_integrable": true,
+     "witness_kappa": "0"
+    },
+    "-7,7": {
+     "threshold": "7/19",
+     "witness_integrable": true,
+     "witness_kappa": "0"
+    },
+    "1,-1": {
+     "threshold": "1/11",
+     "witness_integrable": true,
+     "witness_kappa": "0"
+    },
+    "1,-3": {
+     "threshold": "3/17",
+     "witness_integrable": true,
+     "witness_kappa": "0"
+    },
+    "1,-5": {
+     "threshold": "5/23",
+     "witness_integrable": true,
+     "witness_kappa": "0"
+    },
+    "1,-7": {
+     "threshold": "7/29",
+     "witness_integrable": true,
+     "witness_kappa": "0"
+    },
+    "1,1": {
+     "threshold": "1/8",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "1,3": {
+     "threshold": "1/4",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "1,5": {
+     "threshold": "1/4",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "1,7": {
+     "threshold": "1/4",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "3,-1": {
+     "threshold": "3/25",
+     "witness_integrable": true,
+     "witness_kappa": "0"
+    },
+    "3,-3": {
+     "threshold": "1/3",
+     "witness_integrable": true,
+     "witness_kappa": "0"
+    },
+    "3,-5": {
+     "threshold": "15/29",
+     "witness_integrable": true,
+     "witness_kappa": "0"
+    },
+    "3,-7": {
+     "threshold": "21/31",
+     "witness_integrable": true,
+     "witness_kappa": "0"
+    },
+    "3,1": {
+     "threshold": "9/77",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "3,3": {
+     "threshold": "9/29",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "3,5": {
+     "threshold": "45/97",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "3,7": {
+     "threshold": "63/107",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "5,-1": {
+     "threshold": "1/8",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "5,-3": {
+     "threshold": "3/8",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "5,-5": {
+     "threshold": "5/8",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "5,-7": {
+     "threshold": "7/8",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "5,1": {
+     "threshold": "15/131",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "5,3": {
+     "threshold": "5/17",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "5,5": {
+     "threshold": "3/7",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "5,7": {
+     "threshold": "105/197",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "7,-1": {
+     "threshold": "1/8",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "7,-3": {
+     "threshold": "3/8",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "7,-5": {
+     "threshold": "5/8",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "7,-7": {
+     "threshold": "7/8",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "7,1": {
+     "threshold": "21/185",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "7,3": {
+     "threshold": "21/73",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "7,5": {
+     "threshold": "105/253",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    },
+    "7,7": {
+     "threshold": "21/41",
+     "witness_integrable": false,
+     "witness_kappa": "0"
+    }
+   },
+   "route_ii_certifies_at_route_i_threshold": 0,
+   "scaled_supremum": "1/7",
+   "scaled_witness_integrable": true,
+   "witness_case": "-1,1",
+   "witness_hessian": [
+    "27/13",
+    "12/13",
+    "66/13"
+   ],
+   "witness_integrable": true,
+   "witness_kappa": "0",
+   "witness_readings": [
+    [
+     "147/52",
+     "12/13",
+     "225/52"
+    ],
+    [
+     "69/52",
+     "12/13",
+     "303/52"
+    ],
+    [
+     "139/52",
+     "14/13",
+     "295/52"
+    ]
+   ]
+  },
+  "first_layer_width_factor": "8/3",
+  "grid_tolerance_half_width": {
+   "bisection_steps": 20,
+   "certified_at": "80659/1048576",
+   "not_certified_at": "20165/262144"
+  },
+  "route_ii_attempts": 98,
+  "route_ii_strict_tightenings": 40,
+  "scaled_design_radius": "3/2",
+  "scaled_tolerance": {
+   "certified_at": "37449/262144",
+   "not_certified_at": "149797/1048576"
+  }
+ },
+ "evidence_class": "LOCAL_IDEAL_CALCULATION",
+ "exact_checks": 56448,
+ "function_classes": [
+  {
+   "bits": 2,
+   "functions": 8,
+   "registers": 1
+  },
+  {
+   "bits": 3,
+   "functions": 32,
+   "registers": 1
+  },
+  {
+   "bits": 2,
+   "functions": 128,
+   "registers": 2
+  }
+ ],
+ "hardware_jobs": 0,
+ "hessian_metric": {
+  "grid_cases": 64,
+  "random_cases": 120
+ },
+ "negative_controls": 336,
+ "nonlinear_chart": {
+  "gradient_changed_result": 40,
+  "kappa_changed": 34,
+  "kappa_defined_after": 34,
+  "nullspace_charts": 2,
+  "scout_example": {
+   "chart": "(s'+v'^2/2, v')",
+   "energy": "cubic(3,-5)",
+   "kappa_after": "-22/841",
+   "kappa_before": "-5/108"
+  },
+  "sign_changed": 14,
+  "transports": 40,
+  "zero_hessian_chart": {
+   "chart": "(s'+t v'^3, v')",
+   "gradient": "(10,-10)",
+   "kappa_after": "(-15+180t)/324",
+   "kappa_at_1_over_7": "25/756",
+   "sign_flip_at": "t=1/7"
+  }
+ },
+ "numerator_routes": {
+  "asymmetric": {
+   "designs": 100,
+   "reading_corners_strictly_inside": 100,
+   "route_ii_tightens_reading_corners": 33
+  },
+  "reading_corners_strictly_inside_coefficient_corners": 128,
+  "route_ii_strict_tightenings_on_symmetric_design": 0,
+  "symmetric_cases": 128
+ },
+ "proof_location": "native_relational_qc/JET_READINGS_2.md",
+ "quadratic_layer": [
+  {
+   "bits": 2,
+   "cases": 16,
+   "classical_complexity": 2,
+   "classical_lower_bound": 2,
+   "oracle_uses": 3,
+   "peak_branches": 4,
+   "quantum_fewer_than_classical_bound": false,
+   "quantum_fewer_than_classical_complexity": false,
+   "registers": 1,
+   "seconds": 0.37
+  },
+  {
+   "bits": 3,
+   "cases": 64,
+   "classical_complexity": 2,
+   "classical_lower_bound": 2,
+   "oracle_uses": 3,
+   "peak_branches": 8,
+   "quantum_fewer_than_classical_bound": false,
+   "quantum_fewer_than_classical_complexity": false,
+   "registers": 1,
+   "seconds": 2.575
+  },
+  {
+   "bits": 2,
+   "cases": 24,
+   "classical_complexity": 5,
+   "classical_lower_bound": 4,
+   "oracle_uses": 5,
+   "peak_branches": 16,
+   "quantum_fewer_than_classical_bound": false,
+   "quantum_fewer_than_classical_complexity": false,
+   "registers": 2,
+   "seconds": 1.792
+  },
+  {
+   "bits": 3,
+   "cases": 24,
+   "classical_complexity": 5,
+   "classical_lower_bound": 4,
+   "oracle_uses": 5,
+   "peak_branches": 64,
+   "quantum_fewer_than_classical_bound": false,
+   "quantum_fewer_than_classical_complexity": false,
+   "registers": 2,
+   "seconds": 5.398
+  },
+  {
+   "bits": 2,
+   "cases": 12,
+   "classical_complexity": 9,
+   "classical_lower_bound": 6,
+   "oracle_uses": 7,
+   "peak_branches": 64,
+   "quantum_fewer_than_classical_bound": false,
+   "quantum_fewer_than_classical_complexity": true,
+   "registers": 3,
+   "seconds": 2.907
+  },
+  {
+   "bits": 3,
+   "cases": 8,
+   "classical_complexity": 9,
+   "classical_lower_bound": 7,
+   "oracle_uses": 7,
+   "peak_branches": 512,
+   "quantum_fewer_than_classical_bound": false,
+   "quantum_fewer_than_classical_complexity": true,
+   "registers": 3,
+   "seconds": 16.867
+  },
+  {
+   "bits": 3,
+   "cases": 3,
+   "classical_complexity": 14,
+   "classical_lower_bound": 11,
+   "oracle_uses": 9,
+   "peak_branches": 4096,
+   "quantum_fewer_than_classical_bound": true,
+   "quantum_fewer_than_classical_complexity": true,
+   "registers": 4,
+   "seconds": 79.906
+  }
+ ],
+ "schema": "nrqc-jet-readings-v2-audit",
+ "seconds": 289.82,
+ "sections": {
+  "classical_complexity": {
+   "checks": 34704,
+   "negative_controls": 181
+  },
+  "design_criterion": {
+   "checks": 17605,
+   "negative_controls": 3
+  },
+  "enclosure_learner": {
+   "checks": 2753,
+   "negative_controls": 131
+  },
+  "enclosure_scope": {
+   "checks": 6,
+   "negative_controls": 3
+  },
+  "enclosure_tightening": {
+   "checks": 161,
+   "negative_controls": 0
+  },
+  "hessian_metric_curvature": {
+   "checks": 432,
+   "negative_controls": 0
+  },
+  "nonlinear_chart": {
+   "checks": 128,
+   "negative_controls": 5
+  },
+  "numerator_routes": {
+   "checks": 502,
+   "negative_controls": 1
+  },
+  "quadratic_layer_classes": {
+   "checks": 3,
+   "negative_controls": 12
+  },
+  "quadratic_layer_reading": {
+   "checks": 154,
+   "negative_controls": 0
+  }
+ },
+ "source_blob_sha1": {
+  "native_relational_qc/cyclotomic_pow2.py": "d6ea8738d33ab5ea7317424a36969fa8adf0c1a4",
+  "native_relational_qc/enclosure_learner.py": "37a8d2862502d0ec125e7259c88391e4a58c411c",
+  "native_relational_qc/hessian_metric.py": "2b52466e64ee2aabf3fdc231aeb0944c5a05f6d0",
+  "native_relational_qc/jet_readings.py": "7d375a348afff89443b4ec151b81dc723d5155c9",
+  "native_relational_qc/layer_queries.py": "8bbf95cb1e0e65f4dfcba5577e4f5b7137ee1a5a",
+  "native_relational_qc/phase_backend.py": "3593694554fcd7e415a9b3f4a2a006036156a2e3",
+  "native_relational_qc/shor.py": "07ff038e70ba347f25d8593b35b3ff1b589e4fd8",
+  "tests/test_native_jet_readings2.py": "96e88195192336e7d90651031ac279e7f76f9c51"
+ },
+ "statements_proved_here": false
+}
