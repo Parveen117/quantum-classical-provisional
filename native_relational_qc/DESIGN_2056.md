@@ -17,6 +17,11 @@ tableau. Hardware construction, fault tolerance and general efficient deep-T
 execution remain outside this milestone. Historical design choices below are
 not all implemented by this update.
 
+Family update: [REGISTER_FAMILY.md](REGISTER_FAMILY.md) treats 2056 as one
+point of the parametric family `N = banks*width + workspace`. The engines'
+constant became a declared bound (default 2056) and families A and B were
+run exactly up to 32896 sites. Nothing below depends on the specific value.
+
 This document extends the declared quantum sector of
 [THEOREM.md](THEOREM.md) and the finite-cut adapter in
 [EMK_GEOMETRY.md](EMK_GEOMETRY.md).

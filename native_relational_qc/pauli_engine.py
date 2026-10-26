@@ -10,7 +10,7 @@ import sys
 
 from .compact import CompactCircuit, ResourceLimit, _integer
 from .exact import Exact, ONE, ZERO, INV_SQRT2
-from .large_register import MAX_LARGE_QUBITS
+from . import large_register as _large_register
 
 CLIFFORD_GATES = frozenset(('id','x','y','z','h','s','sdg','sx','sxdg','r','k','rk','cx','cz','swap'))
 T_GATES = frozenset(('t','tdg'))
@@ -19,7 +19,7 @@ T_GATES = frozenset(('t','tdg'))
 def compile_plan(circuit, allow_t=False):
     if not isinstance(circuit,CompactCircuit):
         raise TypeError('exact Pauli execution requires a declared circuit')
-    _integer(circuit.n_qubits,'qubits',1,MAX_LARGE_QUBITS)
+    _integer(circuit.n_qubits,'qubits',1,_large_register.register_bound())
     operations=circuit.operations
     if len(operations)>100_000:
         raise ValueError('large-register circuit exceeds 100000 gates')
@@ -187,7 +187,7 @@ def _expand(terms,plan,budget):
 def expectation(circuit,paulis,*,allow_t=False,max_work=10_000_000,
                 max_coefficient_bits=4096,max_terms=100_000,max_generators=2056,progress=None):
     plan=compile_plan(circuit,allow_t)
-    _integer(max_generators,'max_generators',1,MAX_LARGE_QUBITS)
+    _integer(max_generators,'max_generators',1,_large_register.register_bound())
     budget=_Budget(circuit,'clifford_t' if allow_t else 'stabilizer',max_work,
                    max_coefficient_bits,max_terms,progress)
     x,z=_word(paulis,circuit.n_qubits)
@@ -204,7 +204,7 @@ def expectation(circuit,paulis,*,allow_t=False,max_work=10_000_000,
 def probability(circuit,assignments,*,allow_t=False,max_work=10_000_000,
                 max_coefficient_bits=4096,max_terms=100_000,max_generators=2056,progress=None):
     plan=compile_plan(circuit,allow_t)
-    max_generators=_integer(max_generators,'max_generators',1,MAX_LARGE_QUBITS)
+    max_generators=_integer(max_generators,'max_generators',1,_large_register.register_bound())
     budget=_Budget(circuit,'clifford_t' if allow_t else 'stabilizer',max_work,
                    max_coefficient_bits,max_terms,progress)
     assignments=dict(assignments)

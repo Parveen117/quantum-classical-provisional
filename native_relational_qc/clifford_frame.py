@@ -8,7 +8,7 @@ from fractions import Fraction
 
 from .compact import ResourceLimit, _integer
 from .exact import Exact, ONE, ZERO, IMAG, HALF, OMEGA
-from .large_register import MAX_LARGE_QUBITS
+from . import large_register as _large_register
 from .pauli_engine import Observation, T_GATES, compile_plan, _conjugate, _multiply, _word
 
 PHASES=(ONE,IMAG,-ONE,-IMAG)
@@ -20,7 +20,7 @@ class _Budget:
         self.max_bits=_integer(max_coefficient_bits,'coefficient bits',2,1_000_000)
         self.max_branches=_integer(max_branches,'max_branches',1,65_536)
         self.max_pairs=_integer(max_pairs,'max_pairs',1,10_000_000)
-        self.max_generators=_integer(max_generators,'max_generators',1,MAX_LARGE_QUBITS)
+        self.max_generators=_integer(max_generators,'max_generators',1,_large_register.register_bound())
         self.progress=progress
         self.stats=dict(backend='clifford_frame',input_qubits=circuit.n_qubits,
             input_gates=len(circuit.operations),work_used=0,plan_gates=0,gate_visits=0,

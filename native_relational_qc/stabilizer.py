@@ -1,4 +1,4 @@
-"""Exact Clifford observations on up to 2056 ideal circuit qubits."""
+"""Exact Clifford observations on up to the declared register bound (default 2056) of ideal circuit qubits."""
 from . import pauli_engine
 
 

@@ -163,6 +163,9 @@ residual state and generator elimination. It avoids the earlier mandatory
 full-projector expansion and compares both execution choices on identical
 circuits, including a control where the earlier route is faster.
 
+The [register family](native_relational_qc/REGISTER_FAMILY.md) makes 2056 a
+default declared bound rather than a limit: plans `N = banks*width + workspace`,
+polynomial cost laws, and exact GHZ families run up to 32896 sites.
 The [2056-qubit execution upgrade](native_relational_qc/LARGE_REGISTER.md)
 adds an exact Clifford/stabilizer-generator backend and a bounded Clifford+T
 backend. Actual whole-register global correlations, full-assignment Clifford
