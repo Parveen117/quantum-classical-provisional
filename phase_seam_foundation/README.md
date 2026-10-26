@@ -1,6 +1,6 @@
 # Phase–seam foundation prototype
 
-**New: [810 nm heralded source spec](SOURCE_SPEC_810.md)** (exact pair statistics, g2 = 2x, purity law, fail-closed source grade) and [810 nm re-target of the SiN core](CORE_RETARGET_810.md) (scaled nominal, fail-closed readiness grade).
+**New: [loss budget with Theorem L1](LOSS_BUDGET_810.md)** (false-herald fraction (1-η)/(2-η), engine-checked), [810 nm heralded source spec](SOURCE_SPEC_810.md) (exact pair statistics, g2 = 2x, purity law, fail-closed source grade) and [810 nm re-target of the SiN core](CORE_RETARGET_810.md) (scaled nominal, fail-closed readiness grade).
 
 **[Dual-rail route for room-temperature operation](DUAL_RAIL.md).**
 The v0.18 module adds an exact few-photon boson engine in the calculator's
