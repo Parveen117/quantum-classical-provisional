@@ -1,0 +1,121 @@
+{
+  "schema": "native-ledger-violations-audit-v1",
+  "author": "Monty",
+  "status": "V1_V2_EXACT_BUDGET_DECLARED",
+  "tests_run": 9,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 2.528,
+  "V1_same_rail_by_angle": {
+    "0": "1",
+    "4": "7414213562373/8000000000000",
+    "8": "3/4",
+    "12": "2292893218813/4000000000000",
+    "16": "1/2",
+    "20": "2292893218813/4000000000000",
+    "24": "3/4",
+    "28": "7414213562373/8000000000000",
+    "32": "1",
+    "36": "7414213562373/8000000000000",
+    "40": "3/4",
+    "44": "2292893218813/4000000000000",
+    "48": "1/2",
+    "52": "2292893218813/4000000000000",
+    "56": "3/4",
+    "60": "7414213562373/8000000000000",
+    "64": "1"
+  },
+  "declared_point": {
+    "x": "1/40",
+    "theta_steps": 16,
+    "eta_site": "243/4000",
+    "dark_per_mode": "1/100000"
+  },
+  "budgets_declared_point": {
+    "3:threshold": {
+      "witness": "0.996944",
+      "wrong_fraction": "0.00101963",
+      "dominant": "multi-pair"
+    },
+    "3:number_resolving": {
+      "witness": "0.999114",
+      "wrong_fraction": "0.00029526",
+      "dominant": "dark counts"
+    },
+    "8:threshold": {
+      "witness": "0.991872",
+      "wrong_fraction": "0.00101963",
+      "dominant": "multi-pair"
+    },
+    "8:number_resolving": {
+      "witness": "0.99764",
+      "wrong_fraction": "0.00029526",
+      "dominant": "dark counts"
+    },
+    "64:threshold": {
+      "witness": "0.936796",
+      "wrong_fraction": "0.00101963",
+      "dominant": "multi-pair"
+    },
+    "64:number_resolving": {
+      "witness": "0.981278",
+      "wrong_fraction": "0.00029526",
+      "dominant": "dark counts"
+    },
+    "256:threshold": {
+      "witness": "0.77016",
+      "wrong_fraction": "0.00101963",
+      "dominant": "multi-pair"
+    },
+    "256:number_resolving": {
+      "witness": "0.927189",
+      "wrong_fraction": "0.00029526",
+      "dominant": "dark counts"
+    },
+    "2056:threshold": {
+      "witness": "0.122773",
+      "wrong_fraction": "0.00101963",
+      "dominant": "multi-pair"
+    },
+    "2056:number_resolving": {
+      "witness": "0.544904",
+      "wrong_fraction": "0.00029526",
+      "dominant": "dark counts"
+    }
+  },
+  "budgets_eta_half_dark_1e6": {
+    "64": {
+      "threshold": "0.67761",
+      "number_resolving": "0.999875"
+    },
+    "2056": {
+      "threshold": "3.71728e-06",
+      "number_resolving": "0.995996"
+    }
+  },
+  "max_wrong_fraction_for_witness_half": {
+    "3": [
+      "56707167621/274877906944",
+      "226828670485/1099511627776"
+    ],
+    "8": [
+      "45627509777/549755813888",
+      "91255019555/1099511627776"
+    ],
+    "64": [
+      "11843924747/1099511627776",
+      "2960981187/274877906944"
+    ],
+    "2056": [
+      "185310051/549755813888",
+      "370620103/1099511627776"
+    ]
+  },
+  "verdict_without_ledger": "UNDETERMINED",
+  "boundaries": [
+    "x, eta, dark rate and angle are declared; nothing measured",
+    "one-survivor multi-pair case is right for a single-site preparation only; in a fused register it is declared",
+    "the witness law treats an accepted wrong site as a random X outcome",
+    "thermal class is a separate ledger and is untouched by the dual-rail verdict"
+  ]
+}
