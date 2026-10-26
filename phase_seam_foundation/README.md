@@ -1,6 +1,8 @@
 # Phase–seam foundation prototype
 
-**New: [dual-rail route for room-temperature operation](DUAL_RAIL.md).**
+**New: [810 nm re-target of the SiN core](CORE_RETARGET_810.md)** (scaled nominal, fail-closed readiness grade).
+
+**[Dual-rail route for room-temperature operation](DUAL_RAIL.md).**
 The v0.18 module adds an exact few-photon boson engine in the calculator's
 field, proves single-site universality from the existing four-heater unit,
 evaluates type-I fusion of two Bell pairs exactly (success 1/2, heralded
