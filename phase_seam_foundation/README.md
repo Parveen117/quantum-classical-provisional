@@ -1,17 +1,16 @@
 # Phase–seam foundation prototype
 
-**New: [optical fresh-node transfer and encoded Bell factory](OPTICAL_REFRESH.md).**
-The v0.30 decoder uses single-photon measurements and feedback. Its
-two-coupler Bell analyser has exact success 1/2; all detector patterns are
-included. A seven-photon resource is assembled by two type-I fusions, with
-48 expected ideal Bell pairs under an explicit full-restart, zero-loss
-factory policy. Known-loss and fixed measurement policies have separate
-acceptance budgets; fresh-payload loss is not certified by a Bell herald.
-Conditional fidelity 1 is verified in the ideal model, including two
-transfers with joint success 1/4. Physical supply, latency and device
-performance remain unmeasured. [Audit](optical_refresh/qualification.json).
+**New: [building and running the classifier cluster on the route](CLUSTER_BUILD.md).**
+The v0.31 packet settles what v0.29 left open, exactly: Lemma A turns the
+pattern's Pauli corrections into a heater-trim sign flip and an outcome relabel
+(no rail switch; six feedforward stages), witnessed end to end with a tracked
+frame along several outcome paths; the 13-photon tree is produced sign-exactly
+by seven of v0.30's corrected type-I merges from eight stars (1/128); the
+build costs ≈ 3533 Bell pairs under v0.30's full-restart policy or ≈ 202
+conditional with spare leaves; the online ledger counts every required click
+(η¹³ dominates). No device, no measured number. [Audit](cluster_build/qualification.json).
 
-**Previous: [the trained classifier as a measurement pattern on a fusion-built cluster](CLUSTER_COMPILE.md).**
+**Previous:** [optical fresh-node transfer and encoded Bell factory](OPTICAL_REFRESH.md) (v0.30: single-photon decoder, two-coupler Bell analyser at exactly 1/2, seven-photon encoded Bell resource at 48 Bell pairs under full restart), he trained classifier as a measurement pattern on a fusion-built cluster](CLUSTER_COMPILE.md).**
 The v0.29 packet compiles the self-learning branch's four-qubit, five-angle,
 three-CNOT classifier into the only form the dual-rail route can execute: a
 13-photon tree cluster (12 edges, 7 heralded fusions) read by ten single-photon

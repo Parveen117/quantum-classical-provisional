@@ -1,0 +1,1067 @@
+{
+ "schema": "native-cluster-build-audit-v1",
+ "author": "Monty",
+ "status": "DECLARED_BUILD_NO_DEVICE",
+ "tests": {
+  "run": 10,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 22.56
+ },
+ "plan": {
+  "schema": "native-cluster-build-v1",
+  "author": "Monty",
+  "status": "DECLARED_BUILD_NO_DEVICE",
+  "adaptation": {
+   "lemma_a_all_angles": true,
+   "rail_switches": 0,
+   "stages": 6,
+   "first_layer": [
+    0,
+    2,
+    4,
+    8
+   ]
+  },
+  "tree": {
+   "exact": true,
+   "photons_before": 20,
+   "merges": 7,
+   "success": "1/128"
+  },
+  "cost": {
+   "full_restart_bell_pairs": "17664/5",
+   "spare4_bell_pairs_conditional": "225138496/1116713"
+  },
+  "claims": {
+   "exact": [
+    "Lemma A at all 64 angles",
+    "adaptive end-to-end witness",
+    "tree from seven v0.30 merges, sign-exact",
+    "cost and ledger laws"
+   ],
+   "never": [
+    "device",
+    "measured number",
+    "fidelity from a loss number",
+    "speedup or advantage"
+   ],
+   "open": [
+    "storage during star growth",
+    "switch and buffer loss",
+    "multi-pair, dark counts and visibility on the 13 nodes",
+    "source rate at 810 nm"
+   ]
+  }
+ },
+ "lemma_a_all_64": true,
+ "feedforward": {
+  "layer": {
+   "0": 0,
+   "2": 0,
+   "4": 0,
+   "5": 1,
+   "8": 0,
+   "9": 1,
+   "6": 2,
+   "10": 3,
+   "11": 4,
+   "12": 5
+  },
+  "writers": {
+   "0": [],
+   "2": [],
+   "4": [],
+   "5": [
+    4
+   ],
+   "8": [],
+   "9": [
+    8
+   ],
+   "6": [
+    0,
+    2,
+    4,
+    5
+   ],
+   "10": [
+    6,
+    8,
+    9
+   ],
+   "11": [
+    9,
+    10
+   ],
+   "12": [
+    10,
+    11
+   ]
+  },
+  "stages": 6,
+  "parallel_first_layer": [
+   0,
+   2,
+   4,
+   8
+  ]
+ },
+ "adaptive_runs": [
+  {
+   "features": [
+    0,
+    0
+   ],
+   "parameters": [
+    32,
+    0,
+    0,
+    32,
+    0
+   ],
+   "path": null,
+   "exact_equality": true,
+   "probability": "0.0000000000000",
+   "angles_flipped": 0,
+   "outcomes_relabelled": 0,
+   "readout": {
+    "nominal_angle": 0,
+    "adapted_angle": 0,
+    "frame": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "features": [
+    0,
+    0
+   ],
+   "parameters": [
+    32,
+    0,
+    0,
+    32,
+    0
+   ],
+   "path": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "exact_equality": true,
+   "probability": "0.0000000000000",
+   "angles_flipped": 2,
+   "outcomes_relabelled": 3,
+   "readout": {
+    "nominal_angle": 0,
+    "adapted_angle": 0,
+    "frame": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "features": [
+    0,
+    0
+   ],
+   "parameters": [
+    32,
+    0,
+    0,
+    32,
+    0
+   ],
+   "path": [
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1
+   ],
+   "exact_equality": true,
+   "probability": "0.0000000000000",
+   "angles_flipped": 2,
+   "outcomes_relabelled": 3,
+   "readout": {
+    "nominal_angle": 0,
+    "adapted_angle": 0,
+    "frame": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "features": [
+    0,
+    0
+   ],
+   "parameters": [
+    32,
+    0,
+    0,
+    32,
+    0
+   ],
+   "path": [
+    0,
+    1,
+    1,
+    0,
+    1,
+    0,
+    1,
+    1,
+    1
+   ],
+   "exact_equality": true,
+   "probability": "0.0000000000000",
+   "angles_flipped": 3,
+   "outcomes_relabelled": 1,
+   "readout": {
+    "nominal_angle": 0,
+    "adapted_angle": 0,
+    "frame": [
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "features": [
+    0,
+    32
+   ],
+   "parameters": [
+    32,
+    0,
+    0,
+    32,
+    0
+   ],
+   "path": null,
+   "exact_equality": true,
+   "probability": "1.0000000000000",
+   "angles_flipped": 0,
+   "outcomes_relabelled": 0,
+   "readout": {
+    "nominal_angle": 0,
+    "adapted_angle": 0,
+    "frame": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "features": [
+    0,
+    32
+   ],
+   "parameters": [
+    32,
+    0,
+    0,
+    32,
+    0
+   ],
+   "path": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "exact_equality": true,
+   "probability": "1.0000000000000",
+   "angles_flipped": 2,
+   "outcomes_relabelled": 3,
+   "readout": {
+    "nominal_angle": 0,
+    "adapted_angle": 0,
+    "frame": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "features": [
+    0,
+    32
+   ],
+   "parameters": [
+    32,
+    0,
+    0,
+    32,
+    0
+   ],
+   "path": [
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1
+   ],
+   "exact_equality": true,
+   "probability": "1.0000000000000",
+   "angles_flipped": 2,
+   "outcomes_relabelled": 3,
+   "readout": {
+    "nominal_angle": 0,
+    "adapted_angle": 0,
+    "frame": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "features": [
+    0,
+    32
+   ],
+   "parameters": [
+    32,
+    0,
+    0,
+    32,
+    0
+   ],
+   "path": [
+    0,
+    1,
+    1,
+    0,
+    1,
+    0,
+    1,
+    1,
+    1
+   ],
+   "exact_equality": true,
+   "probability": "1.0000000000000",
+   "angles_flipped": 3,
+   "outcomes_relabelled": 1,
+   "readout": {
+    "nominal_angle": 0,
+    "adapted_angle": 0,
+    "frame": [
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "features": [
+    32,
+    0
+   ],
+   "parameters": [
+    32,
+    0,
+    0,
+    32,
+    0
+   ],
+   "path": null,
+   "exact_equality": true,
+   "probability": "1.0000000000000",
+   "angles_flipped": 0,
+   "outcomes_relabelled": 0,
+   "readout": {
+    "nominal_angle": 0,
+    "adapted_angle": 0,
+    "frame": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "features": [
+    32,
+    0
+   ],
+   "parameters": [
+    32,
+    0,
+    0,
+    32,
+    0
+   ],
+   "path": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "exact_equality": true,
+   "probability": "1.0000000000000",
+   "angles_flipped": 2,
+   "outcomes_relabelled": 3,
+   "readout": {
+    "nominal_angle": 0,
+    "adapted_angle": 0,
+    "frame": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "features": [
+    32,
+    0
+   ],
+   "parameters": [
+    32,
+    0,
+    0,
+    32,
+    0
+   ],
+   "path": [
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1
+   ],
+   "exact_equality": true,
+   "probability": "1.0000000000000",
+   "angles_flipped": 2,
+   "outcomes_relabelled": 3,
+   "readout": {
+    "nominal_angle": 0,
+    "adapted_angle": 0,
+    "frame": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "features": [
+    32,
+    0
+   ],
+   "parameters": [
+    32,
+    0,
+    0,
+    32,
+    0
+   ],
+   "path": [
+    0,
+    1,
+    1,
+    0,
+    1,
+    0,
+    1,
+    1,
+    1
+   ],
+   "exact_equality": true,
+   "probability": "1.0000000000000",
+   "angles_flipped": 3,
+   "outcomes_relabelled": 1,
+   "readout": {
+    "nominal_angle": 0,
+    "adapted_angle": 0,
+    "frame": [
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "features": [
+    32,
+    32
+   ],
+   "parameters": [
+    32,
+    0,
+    0,
+    32,
+    0
+   ],
+   "path": null,
+   "exact_equality": true,
+   "probability": "0.0000000000000",
+   "angles_flipped": 0,
+   "outcomes_relabelled": 0,
+   "readout": {
+    "nominal_angle": 0,
+    "adapted_angle": 0,
+    "frame": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "features": [
+    32,
+    32
+   ],
+   "parameters": [
+    32,
+    0,
+    0,
+    32,
+    0
+   ],
+   "path": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "exact_equality": true,
+   "probability": "0.0000000000000",
+   "angles_flipped": 2,
+   "outcomes_relabelled": 3,
+   "readout": {
+    "nominal_angle": 0,
+    "adapted_angle": 0,
+    "frame": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "features": [
+    32,
+    32
+   ],
+   "parameters": [
+    32,
+    0,
+    0,
+    32,
+    0
+   ],
+   "path": [
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1
+   ],
+   "exact_equality": true,
+   "probability": "0.0000000000000",
+   "angles_flipped": 2,
+   "outcomes_relabelled": 3,
+   "readout": {
+    "nominal_angle": 0,
+    "adapted_angle": 0,
+    "frame": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "features": [
+    32,
+    32
+   ],
+   "parameters": [
+    32,
+    0,
+    0,
+    32,
+    0
+   ],
+   "path": [
+    0,
+    1,
+    1,
+    0,
+    1,
+    0,
+    1,
+    1,
+    1
+   ],
+   "exact_equality": true,
+   "probability": "0.0000000000000",
+   "angles_flipped": 3,
+   "outcomes_relabelled": 1,
+   "readout": {
+    "nominal_angle": 0,
+    "adapted_angle": 0,
+    "frame": [
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "features": [
+    5,
+    17
+   ],
+   "parameters": [
+    3,
+    41,
+    22,
+    9,
+    50
+   ],
+   "path": null,
+   "exact_equality": true,
+   "probability": "0.1411345436015",
+   "angles_flipped": 0,
+   "outcomes_relabelled": 0,
+   "readout": {
+    "nominal_angle": 14,
+    "adapted_angle": 14,
+    "frame": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "features": [
+    5,
+    17
+   ],
+   "parameters": [
+    3,
+    41,
+    22,
+    9,
+    50
+   ],
+   "path": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "exact_equality": true,
+   "probability": "0.1411345436015",
+   "angles_flipped": 2,
+   "outcomes_relabelled": 3,
+   "readout": {
+    "nominal_angle": 14,
+    "adapted_angle": 14,
+    "frame": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "features": [
+    5,
+    17
+   ],
+   "parameters": [
+    3,
+    41,
+    22,
+    9,
+    50
+   ],
+   "path": [
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1
+   ],
+   "exact_equality": true,
+   "probability": "0.1411345436015",
+   "angles_flipped": 2,
+   "outcomes_relabelled": 3,
+   "readout": {
+    "nominal_angle": 14,
+    "adapted_angle": 14,
+    "frame": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "features": [
+    5,
+    17
+   ],
+   "parameters": [
+    3,
+    41,
+    22,
+    9,
+    50
+   ],
+   "path": [
+    0,
+    1,
+    1,
+    0,
+    1,
+    0,
+    1,
+    1,
+    1
+   ],
+   "exact_equality": true,
+   "probability": "0.1411345436015",
+   "angles_flipped": 4,
+   "outcomes_relabelled": 1,
+   "readout": {
+    "nominal_angle": 14,
+    "adapted_angle": 50,
+    "frame": [
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "features": [
+    61,
+    2
+   ],
+   "parameters": [
+    7,
+    13,
+    29,
+    44,
+    58
+   ],
+   "path": null,
+   "exact_equality": true,
+   "probability": "0.7428533484775",
+   "angles_flipped": 0,
+   "outcomes_relabelled": 0,
+   "readout": {
+    "nominal_angle": 6,
+    "adapted_angle": 6,
+    "frame": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "features": [
+    61,
+    2
+   ],
+   "parameters": [
+    7,
+    13,
+    29,
+    44,
+    58
+   ],
+   "path": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "exact_equality": true,
+   "probability": "0.7428533484775",
+   "angles_flipped": 2,
+   "outcomes_relabelled": 3,
+   "readout": {
+    "nominal_angle": 6,
+    "adapted_angle": 6,
+    "frame": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "features": [
+    61,
+    2
+   ],
+   "parameters": [
+    7,
+    13,
+    29,
+    44,
+    58
+   ],
+   "path": [
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1
+   ],
+   "exact_equality": true,
+   "probability": "0.7428533484775",
+   "angles_flipped": 2,
+   "outcomes_relabelled": 3,
+   "readout": {
+    "nominal_angle": 6,
+    "adapted_angle": 6,
+    "frame": [
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "features": [
+    61,
+    2
+   ],
+   "parameters": [
+    7,
+    13,
+    29,
+    44,
+    58
+   ],
+   "path": [
+    0,
+    1,
+    1,
+    0,
+    1,
+    0,
+    1,
+    1,
+    1
+   ],
+   "exact_equality": true,
+   "probability": "0.7428533484775",
+   "angles_flipped": 4,
+   "outcomes_relabelled": 1,
+   "readout": {
+    "nominal_angle": 6,
+    "adapted_angle": 58,
+    "frame": [
+     1,
+     1
+    ]
+   }
+  }
+ ],
+ "tree_from_stars": {
+  "photons_before": "20",
+  "merges": "7",
+  "photons_after": "13",
+  "labels": [
+   6,
+   1,
+   0,
+   3,
+   2,
+   5,
+   4,
+   7,
+   10,
+   9,
+   8,
+   11,
+   12
+  ],
+  "tree_graph_exact": "True",
+  "kept_states": "8192",
+  "full_final_basis": "True",
+  "probability_per_click_sequence": "1/16384",
+  "click_sequences": "128",
+  "success_probability": "1/128",
+  "phase_corrections_per_merge": [
+   16,
+   48
+  ]
+ },
+ "cost": {
+  "full_restart": {
+   "policy": "FULL_RESTART_V030",
+   "bell_pairs_per_candidate": "138/5",
+   "success": "1/128",
+   "expected_candidates": "128",
+   "expected_bell_pairs_per_delivered_cluster": "17664/5",
+   "expected_merge_rounds_per_candidate": "127/64",
+   "expected_merge_rounds_per_delivered_cluster": "254",
+   "storage_loss_included": "False",
+   "star_preparation_time_included": "False"
+  },
+  "stars": {
+   "6": {
+    "size": "5",
+    "expected_bell_pairs": "88/5"
+   },
+   "7": {
+    "size": "2",
+    "expected_bell_pairs": "1"
+   },
+   "10": {
+    "size": "3",
+    "expected_bell_pairs": "4"
+   },
+   "1": {
+    "size": "2",
+    "expected_bell_pairs": "1"
+   },
+   "3": {
+    "size": "2",
+    "expected_bell_pairs": "1"
+   },
+   "5": {
+    "size": "2",
+    "expected_bell_pairs": "1"
+   },
+   "9": {
+    "size": "2",
+    "expected_bell_pairs": "1"
+   },
+   "11": {
+    "size": "2",
+    "expected_bell_pairs": "1"
+   }
+  },
+  "spare_leaves": {
+   "spare=2": {
+    "p_build": "847/4096",
+    "bell_pairs_conditional": "980671/10010"
+   },
+   "spare=4": {
+    "p_build": "288021/524288",
+    "bell_pairs_conditional": "225138496/1116713"
+   },
+   "spare=8": {
+    "p_build": "1965490471/2147483648",
+    "bell_pairs_conditional": "90221537089993/201176583895"
+   }
+  }
+ },
+ "ledger": [
+  {
+   "memory": "999/1000",
+   "efficiency": "1",
+   "acceptance": "0.984119"
+  },
+  {
+   "memory": "999/1000",
+   "efficiency": "9/10",
+   "acceptance": "0.25015"
+  },
+  {
+   "memory": "999/1000",
+   "efficiency": "1/2",
+   "acceptance": "0.000120132"
+  },
+  {
+   "memory": "99/100",
+   "efficiency": "1",
+   "acceptance": "0.851458"
+  },
+  {
+   "memory": "99/100",
+   "efficiency": "9/10",
+   "acceptance": "0.216429"
+  },
+  {
+   "memory": "99/100",
+   "efficiency": "1/2",
+   "acceptance": "0.000103938"
+  },
+  {
+   "memory": "9/10",
+   "efficiency": "1",
+   "acceptance": "0.185302"
+  },
+  {
+   "memory": "9/10",
+   "efficiency": "9/10",
+   "acceptance": "0.0471013"
+  },
+  {
+   "memory": "9/10",
+   "efficiency": "1/2",
+   "acceptance": "2.26199e-05"
+  }
+ ],
+ "grades": {
+  "empty": {
+   "grade": "BUILD_DECLARED",
+   "reasons": [
+    "stars block needs LAB_RECORDED ghz5_witness and ghz3_witness"
+   ]
+  }
+ },
+ "disclaimers": [
+  "no device; every number is an exact consequence of declared inputs",
+  "loss is counted as rejected runs (rate), never as fidelity",
+  "storage during star growth, switch/buffer loss, multi-pair, dark counts and visibility on the 13 nodes are open"
+ ]
+}
