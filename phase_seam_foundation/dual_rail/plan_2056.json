@@ -1,0 +1,42 @@
+{
+  "schema": "native-dual-rail-plan-v1",
+  "author": "Monty",
+  "status": "DECLARED_DESIGN",
+  "sites": 2056,
+  "modes": 4112,
+  "photons_per_shot": 2056,
+  "single_site_gate": "four-heater exchange unit per site (Z-X-Z Euler, Theorem D1)",
+  "heaters_single_site": 8224,
+  "two_site_primitive": "type-I fusion on one balanced coupler, heralded success 1/2 (Theorem D2)",
+  "fusion_couplers_per_entangling_step": 1,
+  "wavelength_nm": 810,
+  "detector": {
+    "option": "si_spad_810",
+    "signal_band_nm": [
+      700,
+      900
+    ],
+    "detector_temperature_c_range": [
+      15,
+      35
+    ],
+    "thermal_class_if_recorded": "ROOM_TEMPERATURE",
+    "design_change": "signal wavelength near 810 nm: new SPDC crystal/pump, re-targeted SiN cross-section and MMI, new calibration"
+  },
+  "source": "degenerate SPDC pairs near 810 nm from a 405 nm pump; heralded",
+  "thermal_class_target": "ROOM_TEMPERATURE",
+  "measurement_order": [
+    "bright-light calibration",
+    "heralded g2(0)",
+    "HOM visibility V at one unit",
+    "single-site protocol",
+    "fusion of two heralded pairs: success rate and <XXX> against V",
+    "temperature sweep of all of the above"
+  ],
+  "claim_boundary": [
+    "loss, multi-pair emission and detector efficiency are not modelled: success 1/2 is the lossless identity",
+    "fusion is heralded and probabilistic; a computer needs multiplexing or a fusion network, not supplied here",
+    "no fabricated 810 nm core exists; the v0.11 GDS targets 1550 nm",
+    "the temperature verdict grades only recorded logs"
+  ]
+}

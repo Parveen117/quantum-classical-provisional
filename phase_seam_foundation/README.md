@@ -1,5 +1,13 @@
 # Phase–seam foundation prototype
 
+**New: [dual-rail route for room-temperature operation](DUAL_RAIL.md).**
+The v0.18 module adds an exact few-photon boson engine in the calculator's
+field, proves single-site universality from the existing four-heater unit,
+evaluates type-I fusion of two Bell pairs exactly (success 1/2, heralded
+phases, GHZ merge), shows distinguishable photons keep the success rate but
+lose all coherence, and derives the witness-equals-visibility law. The plan
+declares 810 nm and silicon detectors for any register size.
+
 **New: [temperature-sweep evidence contract](TEMPERATURE_SWEEP.md).**
 The v0.17 module separates room-temperature operation, temperature-independent
 logical transfer and temperature-independent physics. It proves exact
