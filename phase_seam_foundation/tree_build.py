@@ -19,7 +19,7 @@ from math import comb
 
 from .model import ResourceLimit, integer, rational
 from .fusion_network import FUSION_SUCCESS, chain_walk
-from .loss_tolerant_code import effective_memory, tree
+from .loss_tolerant_code import effective_memory, tree, record_probability, record_tolerance
 from .chain_memory import memory_walk
 
 BELL_PAIRS_PER_GHZ3 = Fraction(2) / FUSION_SUCCESS   # two Bell pairs, one fusion at 1/2: four expected
@@ -119,9 +119,14 @@ def site_build(branching, spare, memory, success=FUSION_SUCCESS):
 
 
 def net_benefit(target_sites, branching, spare, memory):
-    """Does the encoded site pay? Compare the v0.25 bare walk with the encoded
-    walk (v0.26, lower bound) multiplied by the build survival, per site, and
-    report the Bell pairs per logical site."""
+    """Historical v0.27 comparison under ideal per-round renewal (v0.28).
+
+    Initial/offline site construction is not logical state refresh. These
+    numbers omit repeated renewal, encoded fusion, switch/buffer losses and
+    star-growth storage. `pays` compares the idealised probability only;
+    neither it nor the legacy lower_bound keys is an end-to-end device bound.
+    The old resource estimate uses successful-build conditional consumption.
+    """
     e = effective_memory(branching, memory)
     b = site_build(branching, spare, memory)
     floor = Fraction(int(e["m_eff"] * (1 << 20)), 1 << 20)
@@ -131,7 +136,9 @@ def net_benefit(target_sites, branching, spare, memory):
     n = integer(target_sites, "sites")
     one_shot = per_site_build ** n if n <= 4096 else None
     delivered_cost = b["expected_bell_pairs_per_site_lower_bound"] / per_site_build if per_site_build else None
-    return dict(target_sites=n, branching=list(branching), spare=spare, memory=b["memory"], m_eff=e["m_eff"],
+    return dict(status="HISTORICAL_IDEAL_REFRESH_COMPARISON_NOT_DEVICE_BOUND",
+                physical_lower_bound=False, repeated_refresh_cost_included=False,
+                target_sites=n, branching=list(branching), spare=spare, memory=b["memory"], m_eff=e["m_eff"],
                 p_reach_bare=bare, p_reach_encoded_lower_bound=enc,
                 p_site_built_and_stored=per_site_build,
                 one_shot=dict(p_all_sites=one_shot, pays=(enc * one_shot > bare) if one_shot is not None else None,
@@ -153,20 +160,29 @@ def build_grade(record):
         raise ValueError("record must be a dict")
     reasons = []
     blk = record.get("block")
-    if not (type(blk) is dict and blk.get("evidence_class") == "LAB_RECORDED" and int(blk.get("size", 0)) >= 3
+    if not (type(blk) is dict and blk.get("evidence_class") == "LAB_RECORDED"
+            and type(blk.get("size")) is int and blk["size"] >= 3
             and blk.get("ghz_witness") is not None and blk.get("rule") == "exactly one click per site"):
         reasons.append("block needs LAB_RECORDED size >= 3, ghz_witness and the per-site rule")
         return dict(grade="BUILD_DECLARED", reasons=reasons)
+    if record_probability(blk["ghz_witness"], "GHZ witness") < Fraction(1, 2):
+        return dict(grade="BUILD_DECLARED", reasons=["block GHZ witness below the declared 1/2 floor"])
     att = record.get("attachment")
     if not (type(att) is dict and att.get("evidence_class") == "LAB_RECORDED" and att.get("heralded") is True
             and att.get("stabiliser_witness") is not None and att.get("success_rate") is not None):
         reasons.append("attachment needs LAB_RECORDED heralded fusion with stabiliser_witness and success_rate")
         return dict(grade="BLOCK_RECORDED", reasons=reasons)
-    tol = Fraction(str(att.get("tolerance", "1/10")))
+    if record_probability(att["stabiliser_witness"], "stabiliser witness") < Fraction(1, 2):
+        return dict(grade="BLOCK_RECORDED", reasons=["attachment witness below the declared 1/2 floor"])
+    tol = record_tolerance(att.get("tolerance", "1/10"))
     rate = _unit(att["success_rate"], "success rate")
     surv = att.get("storage_survival")
     declared = att.get("declared_survival")
-    if rate < FUSION_SUCCESS * (1 - tol) or surv is None or declared is None or Fraction(str(surv)) < Fraction(str(declared)) * (1 - tol):
+    if surv is not None:
+        surv = record_probability(surv, "storage survival")
+    if declared is not None:
+        declared = record_probability(declared, "declared survival")
+    if rate < FUSION_SUCCESS * (1 - tol) or surv is None or declared is None or declared == 0 or surv < declared * (1 - tol):
         reasons.append("attachment success rate or storage survival below declared beyond tolerance")
         return dict(grade="ATTACHMENT_RECORDED", reasons=reasons)
     return dict(grade="BUILD_QUALIFIED", reasons=reasons)

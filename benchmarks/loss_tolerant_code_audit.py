@@ -45,7 +45,7 @@ def main():
                   polynomials=polys, crossover_eps_where_code_stops_beating_bare=cross, encoded_walks=walks, grade=code_grade({}),
                   boundaries=['recovery is a stabiliser-support statement over every loss pattern; no literature recursion is used',
                               'photon loss epsilon is declared; the encoded site must itself be built by fusions, whose cost is not counted here',
-                              'encoded walk results are rigorous lower bounds (m_eff floored to 20 bits)',
+                              'encoded walk results are lower bounds only in the ideal per-round renewal model; not physical device bounds (see LOSS_REFRESH.md)',
                               'nothing here changes the temperature verdict'])
     (out/'qualification.json').write_text(json.dumps(report, indent=2)+'\n')
     print(json.dumps({k: report[k] for k in ('tests_run', 'failures', 'crossover_eps_where_code_stops_beating_bare', 'encoded_walks')}, indent=1))

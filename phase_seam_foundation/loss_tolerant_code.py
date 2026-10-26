@@ -12,8 +12,10 @@ of each logical operator survives on the remaining photons. The success
 probabilities are therefore exact polynomials in the photon loss epsilon,
 not a literature recursion. Controls: the bare photon (1 - epsilon) and the
 depth-1 repetition block, which protects Z_L but not X_L. The effective
-per-site survival feeds the v0.25 walk as m_eff = P_both(1 - m). Nothing is
-measured; photon counts per logical site are the price.
+per-site survival feeds the v0.25 walk as m_eff = P_both(1 - m) ONLY under
+ideal renewal of every surviving block after every round. Without renewal,
+loss accumulates: see loss_refresh.py and LOSS_REFRESH.md (v0.28). Nothing is
+measured; photon counts per logical site alone do not price a refresh.
 """
 from fractions import Fraction
 from itertools import combinations
@@ -33,6 +35,8 @@ def tree(branching):
     parent, level = [], []
     frontier = [-1]
     for depth, count in enumerate(b):
+        if len(parent) + len(frontier) * count > MAX_PHOTONS:
+            raise ResourceLimit(f"at most {MAX_PHOTONS} photons per logical site")
         new = []
         for p in frontier:
             for _ in range(count):
@@ -165,24 +169,33 @@ def evaluate(poly, epsilon):
 
 
 def effective_memory(branching, memory):
-    """A tree-encoded site survives one storage round with P_both(1 - m); the
-    v0.25 walk then runs with that as its per-site survival."""
+    """One-round recoverability P_both(1-m), not an unrefreshed memory channel.
+    Reusing this probability each round requires fresh-block renewal."""
     m = rational(Fraction(str(memory)) if type(memory) is str else memory, "memory", 256)
     poly = loss_polynomials(branching)
     return dict(branching=list(branching), photons=poly["photons"], memory=m, m_eff=evaluate(poly, 1 - m)["p_both"])
 
 
 def encoded_walk(target_sites, branching, memory, bits=20):
-    """The v0.25 walk with the encoded survival. m_eff is floored to `bits`
-    binary digits before the solve, so the encoded result is a rigorous lower
-    bound (the walk is monotone in m) and the exact linear algebra stays small."""
+    """Ideal-refresh reference model, NOT a physical lower bound.
+
+    Every surviving logical site is restored to a fresh code block after
+    every attempt, at zero latency/cost and with perfect logical fusions.
+    Flooring m_eff gives a lower bound only within that stronger model.
+    """
+    bits = integer(bits, "floor bits")
+    if not 1 <= bits <= 32:
+        raise ResourceLimit("floor bits in [1, 32]")
     e = effective_memory(branching, memory)
     floor = Fraction(int(e["m_eff"] * (1 << bits)), 1 << bits)
     bare = memory_walk(target_sites, memory)
     enc = memory_walk(target_sites, floor)
     return dict(target_sites=target_sites, branching=list(branching), photons_per_site=e["photons"], memory=e["memory"], m_eff=e["m_eff"],
                 m_eff_floored=floor, p_reach_bare=bare["p_reach_target"], p_reach_encoded_lower_bound=enc["p_reach_target"],
-                photons_in_register=target_sites * e["photons"])
+                photons_in_register=target_sites * e["photons"],
+                status="IDEAL_REFRESH_REFERENCE_NOT_HARDWARE_BOUND",
+                ideal_refresh_every_round=True, physical_lower_bound=False,
+                assumption="perfect fresh-block renewal and logical fusion; zero refresh latency and resource cost")
 
 
 def crossover(branching, lo=Fraction(0), hi=Fraction(1, 2), bits=24):
@@ -203,6 +216,23 @@ def crossover(branching, lo=Fraction(0), hi=Fraction(1, 2), bits=24):
     return dict(branching=list(branching), beats_bare_at_small_loss=True, crossover_bounds=(a, b))
 
 
+def record_probability(value, label):
+    """Strict rational validation for evidence fields; no float/bool coercion."""
+    if type(value) is str:
+        value = Fraction(value)
+    value = rational(value, label, 256)
+    if not 0 <= value <= 1:
+        raise ValueError(f"{label} must lie in [0, 1]")
+    return value
+
+
+def record_tolerance(value):
+    tol = record_probability(value, "tolerance")
+    if tol == 1:
+        raise ValueError("tolerance must be less than one")
+    return tol
+
+
 def code_grade(record):
     """Fail-closed: CODE_DECLARED -> ENCODED_SITE_RECORDED (LAB_RECORDED tree
     state of the declared branching with its stabiliser witnesses) ->
@@ -216,15 +246,23 @@ def code_grade(record):
     if not (type(s) is dict and s.get("evidence_class") == "LAB_RECORDED" and s.get("branching") and s.get("stabiliser_witnesses") is not None):
         reasons.append("encoded_site block needs LAB_RECORDED branching and stabiliser_witnesses")
         return dict(grade="CODE_DECLARED", reasons=reasons)
+    n = code(s["branching"])["photons"]
+    witnesses = s["stabiliser_witnesses"]
+    if type(witnesses) is not int or witnesses < n - 1:
+        return dict(grade="CODE_DECLARED", reasons=["need a nonnegative integer count of at least photons-1 stabiliser witnesses"])
     r = record.get("recovery")
     if not (type(r) is dict and r.get("evidence_class") == "LAB_RECORDED" and r.get("epsilon") is not None
             and r.get("p_x") is not None and r.get("p_z") is not None and r.get("removed_photon") is True):
         reasons.append("recovery block needs LAB_RECORDED epsilon, p_x, p_z with a deliberately removed photon")
         return dict(grade="ENCODED_SITE_RECORDED", reasons=reasons)
     poly = loss_polynomials(s["branching"])
-    ex = evaluate(poly, r["epsilon"])
-    tol = Fraction(str(r.get("tolerance", "1/10")))
-    px, pz = Fraction(str(r["p_x"])), Fraction(str(r["p_z"]))
+    epsilon = record_probability(r["epsilon"], "epsilon")
+    if not 0 < epsilon < 1:
+        raise ValueError("loss recovery evidence needs 0 < epsilon < 1")
+    ex = evaluate(poly, epsilon)
+    tol = record_tolerance(r.get("tolerance", "1/10"))
+    px = record_probability(r["p_x"], "p_x")
+    pz = record_probability(r["p_z"], "p_z")
     if px < ex["p_x"] * (1 - tol) or pz < ex["p_z"] * (1 - tol):
         reasons.append("recorded recovery below the exact polynomial beyond tolerance")
         return dict(grade="LOSS_RECOVERY_RECORDED", reasons=reasons, exact=dict(p_x=ex["p_x"], p_z=ex["p_z"]))

@@ -633,5 +633,13 @@
     "photon loss epsilon is declared; the encoded site must itself be built by fusions, whose cost is not counted here",
     "encoded walk results are rigorous lower bounds (m_eff floored to 20 bits)",
     "nothing here changes the temperature verdict"
-  ]
+  ],
+  "v028_interpretation_notice": {
+    "document": "../LOSS_REFRESH.md",
+    "original_run_and_numeric_values_preserved": true,
+    "new_validation_run": "../refresh/qualification.json",
+    "physical_lower_bound": false,
+    "encoded_walk_assumption": "perfect fresh-block renewal after every round, zero latency/cost, perfect encoded fusion",
+    "scope": "single-round polynomials unchanged; old test counts describe their original historical run"
+  }
 }

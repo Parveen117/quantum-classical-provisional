@@ -237,5 +237,14 @@
     "spare leaves and block sizes are design choices; m is declared",
     "site multiplexing needs a buffer and a switch, whose loss is not counted here",
     "nothing here changes the temperature verdict"
-  ]
+  ],
+  "v028_interpretation_notice": {
+    "document": "../LOSS_REFRESH.md",
+    "original_run_and_numeric_values_preserved": true,
+    "new_validation_run": "../refresh/qualification.json",
+    "physical_lower_bound": false,
+    "encoded_walk_assumption": "perfect fresh-block renewal after every round, zero latency/cost, perfect encoded fusion",
+    "scope": "single-round polynomials unchanged; old test counts describe their original historical run",
+    "resource_scope": "initial/offline preparation only; conditional successful-build consumption and mixed storage assumptions do not give a full renewal resource cost"
+  }
 }

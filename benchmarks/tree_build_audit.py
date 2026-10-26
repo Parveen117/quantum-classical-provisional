@@ -39,10 +39,12 @@ def main():
                                                      bell_pairs_per_delivered_site=_f(nb['site_multiplexed']['bell_pairs_per_delivered_site']),
                                                      bell_pairs_register=_f(nb['site_multiplexed']['bell_pairs_for_register']),
                                                      multiplexed_pays=nb['site_multiplexed']['pays'])
-    report = dict(schema='native-tree-build-audit-v1', author='Monty', status='BUILD_COST_EXACT_NO_SITE_BUILT',
+    report = dict(schema='native-tree-build-audit-v1', author='Monty', status='PROVISIONAL_BUILD_COST_IDEAL_REFRESH_REFERENCE_NO_SITE_BUILT',
                   tests_run=result.testsRun, failures=len(result.failures), errors=len(result.errors), seconds=round(elapsed, 3),
                   star_growth=stars, attachment_p_build=att, site_builds=sites, net_benefit=net, grade=build_grade({}),
-                  boundaries=['star growth rounds are not charged to storage; the root star is counted whole: a mixed bound, labelled',
+                  boundaries=['star growth rounds are not charged to storage; root-star overcount gives a mixed estimate, not an end-to-end bound',
+                              'Bell-pair consumption is conditioned on successful attachment, not a complete failed-build renewal ledger',
+                              'the register walk assumes perfect fresh-block renewal every round and perfect encoded fusion; resource construction alone does not implement this',
                               'spare leaves and block sizes are design choices; m is declared',
                               'site multiplexing needs a buffer and a switch, whose loss is not counted here',
                               'nothing here changes the temperature verdict'])

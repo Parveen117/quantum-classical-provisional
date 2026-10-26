@@ -1,5 +1,11 @@
 # Loss-tolerant encoding of a site: the tree code, exactly — v0.26
 
+**v0.28 correction:** [Age-aware memory and coherent refresh](LOSS_REFRESH.md)
+supersedes the repeated-storage interpretation below. A fixed block survives
+`t` rounds with `P_both(1-m^t)`. The v0.26 chain table assumes perfect fresh
+encoding after every round and perfect encoded fusions; it is not a physical
+lower bound. Single-round stabiliser polynomials are unchanged.
+
 **Author: Monty.** CHAIN_MEMORY.md (Theorem M1) showed that any memory loss
 m < 1 suppresses sequential growth as m^(3J + J(J−1)). The one lever left
 inside the model is to let a logical site survive the loss of some of its
@@ -35,20 +41,23 @@ beats the bare photon on both.
 
 | tree | photons | P_both at ε = 1/10 | at ε = 1/5 | bare 1 − ε | beats bare up to ε ≈ |
 | --- | --- | --- | --- | --- | --- |
-| [2,2] | 6 | 0.925 | 0.70 | 0.9 / 0.8 | 0.146 |
-| [3,2] | 9 | 0.977 | 0.85 | | 0.275 |
-| [3,3] | 12 | 0.959 | 0.78 | | 0.192 |
-| [4,3] | 16 | 0.986 | 0.88 | | 0.266 |
+| [2,2] | 6 | 0.925 | 0.754 | 0.9 / 0.8 | 0.146 |
+| [3,2] | 9 | 0.977 | 0.866 | | 0.275 |
+| [3,3] | 12 | 0.959 | 0.791 | | 0.192 |
+| [4,3] | 16 | 0.986 | 0.873 | | 0.266 |
 
 Both-basis counts for [3,3]: [1, 12, 66, 156, 204, 144, 48, 0, …]: every loss
-of up to three photons out of twelve is recoverable in both bases, and none of
-seven or more. Crossovers are bracketed exactly by bisection on the
+of up to two photons out of twelve is recoverable in both bases. At three
+losses only 156 of the 220 patterns are recoverable; none of seven or more
+is recoverable. Crossovers are bracketed exactly by bisection on the
 polynomial.
 
-## 3. Effect on the chain (rigorous lower bounds)
+## 3. Historical ideal-refresh chain reference
 
-An encoded site survives a storage round with m_eff = P_both(1 − m). Floored
-to 20 bits (the walk is monotone in m, so the result is a lower bound):
+An encoded site is recoverable after one round with m_eff = P_both(1 − m).
+Reusing it as a memoryless survival probability assumes full fresh-block
+renewal after each round, with zero time/cost and perfect encoded fusions.
+Flooring to 20 bits gives a lower bound only within this idealised model:
 
 | m | tree | N | bare P(reach N) | encoded (lower bound) | photons in register |
 | --- | --- | --- | --- | --- | --- |
@@ -59,14 +68,16 @@ to 20 bits (the walk is monotone in m, so the result is a lower bound):
 | 99/100 | [4,3] | 64 | 4.5 × 10⁻¹⁰ | 0.756 | 1024 |
 
 So with m = 0.99 per attempt (≈ 0.04 dB, 0.1 µs latency in the declared fibre
-table) a [4,3]-encoded chain of 64 sites reaches the v0.22 lossless limit
-3 − √5 ≈ 0.764 to three digits, at 16 photons per site. With m = 0.9 (1 µs
+table) the ideal-refresh [4,3] chain of 64 sites gives about 0.756, still below
+the v0.22 lossless limit 3 − √5 ≈ 0.764, at 16 photons per site. With m = 0.9 (1 µs
 latency) even [4,3] leaves 16 sites at 9 %: the encoding does not rescue a
 slow attempt loop. Theorem M1 still holds with m_eff in place of m; the
 encoding moves the base, not the quadratic exponent.
 
 ## 4. What this costs and does not cover
 
+The missing renewal/coupling costs are addressed as explicit inputs in
+LOSS_REFRESH.md; no physical lower bound follows from this table.
 Each encoded site is itself built by fusions (one per edge in the tree, each
 heralded at 1/2 before boosting) and those fusions store photons too; that
 cost is not counted here and is the next open item. The polynomials assume

@@ -1,5 +1,15 @@
 # Building the encoded site: fusion cost and storage — v0.27
 
+**v0.28 interpretation correction:** [Coherent refresh](LOSS_REFRESH.md)
+separates offline resource construction from renewal of an unknown stored
+state. The walk numbers below require perfect renewal after every round;
+the factory here does not implement that operation. The resource estimates
+also use successful-build conditional block consumption, omit star-growth
+storage and switch/buffer losses, and mix optimistic and pessimistic counts.
+They are historical provisional estimates, not end-to-end lower bounds or
+demonstrated engineering operating points. The v0.28 budget requires an
+explicit total resource cost rather than importing these values as exact.
+
 **Author: Monty.** TREE_CODE.md priced a logical site in photons and showed
 the gain in the chain walk. This note prices the build itself: the fusions
 that make the tree and the storage rounds they take. The result is a
