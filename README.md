@@ -2,6 +2,16 @@
 
 ## Phase–seam foundation and hardware contract
 
+The [v0.32 encoded Bell transfer](phase_seam_foundation/ENCODED_BELL.md)
+operates directly on encoded blocks and infers loss from detector records.
+For the six-photon code it raises ideal transfer success from 1/2 to 3/4
+with conditional entanglement fidelity 1. It reuses the classifier's native
+heater interface with an explicit coherent-phase adjustment and connects
+the output frame to v0.31's heater-only terminal readout. A twelve-photon
+Bell resource costs 192 expected ideal Bell pairs under the stated lossless
+restart policy; larger-code success values assume supplied resources.
+The loss budget separates the herald from fresh-payload survival.
+
 The [v0.30 optical refresh](phase_seam_foundation/OPTICAL_REFRESH.md) lowers
 coherent loss recovery to single-photon controls and a two-coupler Bell
 analyser with exact success 1/2. A seven-photon encoded Bell resource has an

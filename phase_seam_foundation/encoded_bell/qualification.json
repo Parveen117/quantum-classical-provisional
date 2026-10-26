@@ -1,0 +1,8075 @@
+{
+  "schema": "native-encoded-bell-audit-v1",
+  "author": "Monty",
+  "status": "IDEAL_ENCODED_OPTICAL_CHANNEL_VERIFIED_NO_DEVICE",
+  "generated_at": "2026-10-26T20:28:48.772780+00:00",
+  "checkout_base_commit": "78a7599f9364503188efba81bccedf7f99d046fa",
+  "reviewed_collaborator_commit": "78a7599f9364503188efba81bccedf7f99d046fa",
+  "reused_collaborator_interfaces": [
+    "cluster_compile.heater_setting",
+    "cluster_build.adaptation_lemma"
+  ],
+  "tests_run": 94,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "seconds": 301.171,
+  "source_sha256": {
+    "README.md": "44cb46d2c4bb14340ae1ea84d26e949515e51f5060dab01e2d32ac59f5ab27a9",
+    "benchmarks/encoded_bell_audit.py": "05772a0562e3aff395f3c75cc3feca7c6ea4252b80dee4261a456df5adfd6ab5",
+    "native_relational_qc/__init__.py": "2df0c6684869d87776756cc78918199a9a09fa86f8c9e6d41d675591698c9350",
+    "native_relational_qc/algebra.py": "3d23b2a3a345b0760bfce1cff9e4eea9635543ee566c9dd6f0078405f211e9ab",
+    "native_relational_qc/calculator.py": "019dfa25703f3766aeed8a53259984927ae64f0b87670e594b0a606fc407c62b",
+    "native_relational_qc/circuit.py": "6215adf52443de8ee1db01f8e641c4c50124810a7674fd3258d826ff08b9e366",
+    "native_relational_qc/compact.py": "1acff6eaa8664b4ba33285c66c9f433ecd0148aa8383a18f79dbd2ccb66e898d",
+    "native_relational_qc/cyclotomic.py": "36a9f93fb9b6362a6141f13f4aef677de9f19642f6ea01ebb761614acab4ea86",
+    "native_relational_qc/cyclotomic32.py": "33e203a7280bbe8341e37cb357f1bb6bfcaba9e695ff5144050e3a087733ab76",
+    "native_relational_qc/cyclotomic64.py": "8fc9c42627feee330b00f1b56559031cc442746e830081eae09f535115d74e52",
+    "native_relational_qc/dynamic.py": "88421139cba72f0d86f3644c5933e03dd44d8afa1fdc79b250b2e8bf5390acd9",
+    "native_relational_qc/dynamic_examples.py": "0d40d9b3dbf098623c7586f13cdb54d9c6f627e4af6f0c398e79f983129d259e",
+    "native_relational_qc/exact.py": "cc0b3be70660ed819b3ad153620ea4338fb6bf57102a4474d4355da2805afdf6",
+    "native_relational_qc/modular_arithmetic.py": "dc59c9b09acf82cfee877d707901022f91fbe9a9284eb00cf6168e844b9368ce",
+    "native_relational_qc/observer.py": "eec5857176d20158e50c5d00a314483f9ce67a17a12fc7cc94416a754bd80833",
+    "native_relational_qc/phase_backend.py": "b47a5cfe04449a5def450aa3170ff11697436705427da83050f4aee08345dd98",
+    "native_relational_qc/state.py": "2ff1413d09f36f6449eb6ae7ca8c53de71ac86b9b0711e080849987ab031093e",
+    "phase_seam_foundation/CLUSTER_BUILD.md": "ba2bbc7eeff4f9a99d14ed6c47aa58746ff5e989fa3e822a4fc914dce03e4e3e",
+    "phase_seam_foundation/CLUSTER_COMPILE.md": "e12a42e7c23a1f84a21a0affca185095c88114ec5add51d208d60a5efec9fa58",
+    "phase_seam_foundation/ENCODED_BELL.md": "4e7fc3302838010f9e76c95648555e2ca9615ce879a7084c4db3e9278e4ed47a",
+    "phase_seam_foundation/LOSS_REFRESH.md": "ce69fc10f656f0594ebe4e9722a81a305b865dbe1c1441a8b60bacd636b3439e",
+    "phase_seam_foundation/OPTICAL_REFRESH.md": "19e7cbe1a54b2c090ff7c7c761db5782d038d75ff906ce2676446acae279feef",
+    "phase_seam_foundation/README.md": "c15335b2939f9821ed3d95c77e0d269e477d31370af0d92b609d380a8bb207c3",
+    "phase_seam_foundation/TREE_CODE.md": "12a3deac3d12257a9d65d6560c313d704f29647c6bd0310ef970fb6d2dd9cae1",
+    "phase_seam_foundation/__init__.py": "cf70be9ef06c41af5647c2363a63d24dd52dc7bb1445482f3780d2f62cedf1dc",
+    "phase_seam_foundation/chain_memory.py": "74dc2300dc8b16e4c9eefccf1e30c5372529c1bbf3f6a90680570fa0192e9af5",
+    "phase_seam_foundation/cluster_build.py": "2d0787a5ec0921c1280456abee08e567d92630b06eee944a49868922f332a02c",
+    "phase_seam_foundation/cluster_compile.py": "89ce8ae89170fcf99185b15632377b2c4d024ba94ec635c28e331cacc5b4b5e0",
+    "phase_seam_foundation/controller.py": "ba74ab91b6ea9d1234256420225ba3ef5cc50a63ebf4ed0fa5d571af2169285d",
+    "phase_seam_foundation/dual_rail.py": "47062f1c68bad43033f8d22d99dfac759d0edc01a07b16a6cd1295cf5b3650d2",
+    "phase_seam_foundation/encoded_bell.py": "e26cdefb3ed92d7f2a00461e23accc7bbd82661b399bfd29940e087f0c2dfe0a",
+    "phase_seam_foundation/fusion_network.py": "5b3e4fb6e49c445c7796e1c474a981c2c35eb8ceb046332986ee75e10b2de10f",
+    "phase_seam_foundation/ledger_violations.py": "e30f01973c95f90cdeee6ff472b8ee33a031ce9061a1aad9d77a52d561e4b72a",
+    "phase_seam_foundation/loss_budget.py": "5313b33097fdd6a820c3b05b9a1ae95b5ea165695681ad8066715176dc22ff58",
+    "phase_seam_foundation/loss_refresh.py": "97126259eb95466263e212baf835e2772dd7d2dcca258e7e54cc7f0b72afe4f7",
+    "phase_seam_foundation/loss_tolerant_code.py": "c3ef9a10dd0a714f0c9e89d59ce6e17f8df9213de57089e36a7c9b098a293d6f",
+    "phase_seam_foundation/model.py": "642984f5be7345683374719dc66193883d0688031e49ff9ebde12c5a36a939b8",
+    "phase_seam_foundation/optical_refresh.py": "d1a50d94862c96bdf765fa865d5c9d6674b2d878ab746633644277f94506eb23",
+    "phase_seam_foundation/photonic_exchange.py": "1414ba5fffd110d35f339941059cccd086fd1b7cc4a3df84c3794095c4d77997",
+    "phase_seam_foundation/photonic_io.py": "6e7554b073e78cbd58ef26fcd2c2327f89f696bdb85d2d375f980914bb57d3bf",
+    "phase_seam_foundation/photonic_layout.py": "c6debe28447121ad7b4522acd91ca60e41cd58d0274905dc12908c5dfbf6d350",
+    "phase_seam_foundation/photonic_response.py": "365409d0ef4fa63c1f315bb86c9113814ca6149e71fa86398c19ec965e50c347",
+    "phase_seam_foundation/register.py": "d29fa6736256368b5a4885744b79a852146bc63d60fa98ec4a3ac18c26fa2b9d",
+    "phase_seam_foundation/sector_control.py": "fe528d000e7465e5ba359c6195172720624d5bebca92f15f1d03f9af6cf5694a",
+    "phase_seam_foundation/source_spec.py": "31623c54b6f5afa708d445dc81d0c89d97985a2e3df7f450d440eed0e7e99c32",
+    "phase_seam_foundation/temperature_sweep.py": "1cf266cebfd235e76208291f6d6dbdcf95c44e56aa534ab3526e9e5f46d85615",
+    "phase_seam_foundation/tree_build.py": "e821489410a0fd4904f383bca2f3dea0e1d1387c4534d23f6eb59eab5da19ff7",
+    "tests/test_phase_seam_cluster_build.py": "8fd258400526f8439fd5de923b90f2440766a78f90e7ad413edb79d3ec6df36b",
+    "tests/test_phase_seam_cluster_compile.py": "1991236b4197c23451ae4491a8136d4bd55fdafe819774665c53c8ea07c5625a",
+    "tests/test_phase_seam_encoded_bell.py": "ef363f8fa53af04737a2859217ef984ee49c7284f0c3f8f32ba0c5aad8fcec26",
+    "tests/test_phase_seam_loss_refresh.py": "c5eebcfd38677299e75df3af6b585d4669f79807aa43dccafe1617caa8cdb54b",
+    "tests/test_phase_seam_optical_refresh.py": "08b9f5ca3a010e707191df48aefc18c071a37c758a73ba1514607918f5b8ddb5"
+  },
+  "netlist_sha256": "64a98a698697b41b07bd26271bd7f90d1039af47d18e0164db51235b8b7b002d",
+  "test_log_sha256": "9dcf5499f382291ef4c4f4a40f22a2ef6b0bbcc330d0bff9223f57186f7c9407",
+  "basis_bridge": {
+    "source": "cluster_compile.heater_setting(0)",
+    "phase_period": 64,
+    "measurement_heaters": {
+      "lower": 16,
+      "upper": 0,
+      "before": 32,
+      "after": 48
+    },
+    "coherent_heaters": {
+      "lower": 16,
+      "upper": 0,
+      "before": 32,
+      "after": 32
+    },
+    "relative_output_phase_removed": 16,
+    "unitary": [
+      [
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1/2",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1/2",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      ],
+      [
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1/2",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "-1/2",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      ]
+    ],
+    "global_phase": {
+      "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+      "coefficients": [
+        "0",
+        "1/2",
+        "0",
+        "-1/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "coherent_h_up_to_global_phase": true,
+    "calibrated_voltage_or_temperature_claim": false
+  },
+  "coarse_instrument": {
+    "status": "EXACT_FOCK_DERIVED_COARSE_INSTRUMENT",
+    "effects": {
+      "even": [
+        [
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        [
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        [
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        [
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ]
+      ],
+      "odd_plus": [
+        [
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        [
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        [
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        [
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ]
+      ],
+      "odd_minus": [
+        [
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        [
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "-1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        [
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "-1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        [
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ]
+      ]
+    },
+    "records": [
+      {
+        "counts": [
+          2,
+          0,
+          0,
+          0
+        ],
+        "group": "even",
+        "possible": true,
+        "zz": 0,
+        "xx": null
+      },
+      {
+        "counts": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "group": "odd_plus",
+        "possible": true,
+        "zz": 1,
+        "xx": 0
+      },
+      {
+        "counts": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "group": "even",
+        "possible": false,
+        "zz": 0,
+        "xx": null
+      },
+      {
+        "counts": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "group": "odd_minus",
+        "possible": true,
+        "zz": 1,
+        "xx": 1
+      },
+      {
+        "counts": [
+          0,
+          2,
+          0,
+          0
+        ],
+        "group": "even",
+        "possible": true,
+        "zz": 0,
+        "xx": null
+      },
+      {
+        "counts": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "group": "odd_minus",
+        "possible": true,
+        "zz": 1,
+        "xx": 1
+      },
+      {
+        "counts": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "group": "even",
+        "possible": false,
+        "zz": 0,
+        "xx": null
+      },
+      {
+        "counts": [
+          0,
+          0,
+          2,
+          0
+        ],
+        "group": "even",
+        "possible": true,
+        "zz": 0,
+        "xx": null
+      },
+      {
+        "counts": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "group": "odd_plus",
+        "possible": true,
+        "zz": 1,
+        "xx": 0
+      },
+      {
+        "counts": [
+          0,
+          0,
+          0,
+          2
+        ],
+        "group": "even",
+        "possible": true,
+        "zz": 0,
+        "xx": null
+      }
+    ],
+    "even_phase_resolved": false,
+    "complete": true
+  },
+  "collaborator_readout_handoff": {
+    "detector_counts": [
+      [
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "decoded_frame": {
+      "accepted": true,
+      "branching": [
+        2,
+        2
+      ],
+      "pair_lost_mask": 0,
+      "selected_group": 1,
+      "logical_xx_bit": 1,
+      "logical_zz_bit": 1,
+      "x_correction": 1,
+      "z_correction": 1,
+      "requires_external_erasure_map": false
+    },
+    "terminal_readout": {
+      "status": "EXACT_TERMINAL_MEASUREMENT_FRAME_HANDOFF",
+      "branching": [
+        2,
+        2
+      ],
+      "source": "cluster_build.adaptation_lemma",
+      "physical_x_mask": 1,
+      "physical_z_mask": 15,
+      "rows": [
+        {
+          "photon": 0,
+          "physical_frame": [
+            1,
+            1
+          ],
+          "nominal_angle": 5,
+          "adapted_angle": 59,
+          "outcome_xor": 1,
+          "heaters": {
+            "lower": 16,
+            "upper": 0,
+            "before": 37,
+            "after": 48
+          }
+        },
+        {
+          "photon": 1,
+          "physical_frame": [
+            0,
+            1
+          ],
+          "nominal_angle": 17,
+          "adapted_angle": 17,
+          "outcome_xor": 1,
+          "heaters": {
+            "lower": 16,
+            "upper": 0,
+            "before": 15,
+            "after": 48
+          }
+        },
+        {
+          "photon": 2,
+          "physical_frame": [
+            0,
+            1
+          ],
+          "nominal_angle": 22,
+          "adapted_angle": 22,
+          "outcome_xor": 1,
+          "heaters": {
+            "lower": 16,
+            "upper": 0,
+            "before": 10,
+            "after": 48
+          }
+        },
+        {
+          "photon": 3,
+          "physical_frame": [
+            0,
+            1
+          ],
+          "nominal_angle": 9,
+          "adapted_angle": 9,
+          "outcome_xor": 1,
+          "heaters": {
+            "lower": 16,
+            "upper": 0,
+            "before": 23,
+            "after": 48
+          }
+        },
+        {
+          "photon": 4,
+          "physical_frame": [
+            0,
+            0
+          ],
+          "nominal_angle": 50,
+          "adapted_angle": 50,
+          "outcome_xor": 0,
+          "heaters": {
+            "lower": 16,
+            "upper": 0,
+            "before": 46,
+            "after": 48
+          }
+        },
+        {
+          "photon": 5,
+          "physical_frame": [
+            0,
+            0
+          ],
+          "nominal_angle": 14,
+          "adapted_angle": 14,
+          "outcome_xor": 0,
+          "heaters": {
+            "lower": 16,
+            "upper": 0,
+            "before": 18,
+            "after": 48
+          }
+        }
+      ],
+      "active_pauli_gates_before_these_measurements": 0,
+      "scope": "subsequent single-photon equatorial measurements; no intervening gates",
+      "encoded_logical_classifier_compiled": false
+    }
+  },
+  "six_photon_mask_probabilities": [
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 0,
+      "complete_groups": [
+        0,
+        1
+      ],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "3/4",
+        "decimal": 0.75
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 1,
+      "complete_groups": [
+        1
+      ],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "1/2",
+        "decimal": 0.5
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 2,
+      "complete_groups": [
+        0
+      ],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "1/2",
+        "decimal": 0.5
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 3,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 4,
+      "complete_groups": [
+        1
+      ],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "1/2",
+        "decimal": 0.5
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 5,
+      "complete_groups": [
+        1
+      ],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "1/2",
+        "decimal": 0.5
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 6,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 7,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 8,
+      "complete_groups": [
+        1
+      ],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "1/2",
+        "decimal": 0.5
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 9,
+      "complete_groups": [
+        1
+      ],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "1/2",
+        "decimal": 0.5
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 10,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 11,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 12,
+      "complete_groups": [
+        1
+      ],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "1/2",
+        "decimal": 0.5
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 13,
+      "complete_groups": [
+        1
+      ],
+      "every_group_has_pair": false,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 14,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 15,
+      "complete_groups": [],
+      "every_group_has_pair": false,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 16,
+      "complete_groups": [
+        0
+      ],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "1/2",
+        "decimal": 0.5
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 17,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 18,
+      "complete_groups": [
+        0
+      ],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "1/2",
+        "decimal": 0.5
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 19,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 20,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 21,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 22,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 23,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 24,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 25,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 26,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 27,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 28,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 29,
+      "complete_groups": [],
+      "every_group_has_pair": false,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 30,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 31,
+      "complete_groups": [],
+      "every_group_has_pair": false,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 32,
+      "complete_groups": [
+        0
+      ],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "1/2",
+        "decimal": 0.5
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 33,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 34,
+      "complete_groups": [
+        0
+      ],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "1/2",
+        "decimal": 0.5
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 35,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 36,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 37,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 38,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 39,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 40,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 41,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 42,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 43,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 44,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 45,
+      "complete_groups": [],
+      "every_group_has_pair": false,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 46,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 47,
+      "complete_groups": [],
+      "every_group_has_pair": false,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 48,
+      "complete_groups": [
+        0
+      ],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "1/2",
+        "decimal": 0.5
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 49,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 50,
+      "complete_groups": [
+        0
+      ],
+      "every_group_has_pair": false,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 51,
+      "complete_groups": [],
+      "every_group_has_pair": false,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 52,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 53,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 54,
+      "complete_groups": [],
+      "every_group_has_pair": false,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 55,
+      "complete_groups": [],
+      "every_group_has_pair": false,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 56,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 57,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 58,
+      "complete_groups": [],
+      "every_group_has_pair": false,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 59,
+      "complete_groups": [],
+      "every_group_has_pair": false,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 60,
+      "complete_groups": [],
+      "every_group_has_pair": true,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 61,
+      "complete_groups": [],
+      "every_group_has_pair": false,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 62,
+      "complete_groups": [],
+      "every_group_has_pair": false,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "pair_lost_mask": 63,
+      "complete_groups": [],
+      "every_group_has_pair": false,
+      "success_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      }
+    }
+  ],
+  "six_photon_coherent_witnesses": [
+    {
+      "status": "IDEAL_ENCODED_OPTICAL_TRANSFER_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "pair_lost_mask": 0,
+      "success_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "3/4",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/4",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "3/4",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "disjoint_first_odd_group_events": [
+        {
+          "selected_group": 0,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        },
+        {
+          "selected_group": 1,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/4",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/4",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        }
+      ],
+      "requires_external_erasure_map": false,
+      "witness_conditions_on_declared_erasure_pattern": true,
+      "even_pair_phases_used": false,
+      "output_data_photons": 6
+    },
+    {
+      "status": "IDEAL_ENCODED_OPTICAL_TRANSFER_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "pair_lost_mask": 1,
+      "success_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "disjoint_first_odd_group_events": [
+        {
+          "selected_group": 1,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        }
+      ],
+      "requires_external_erasure_map": false,
+      "witness_conditions_on_declared_erasure_pattern": true,
+      "even_pair_phases_used": false,
+      "output_data_photons": 6
+    },
+    {
+      "status": "IDEAL_ENCODED_OPTICAL_TRANSFER_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "pair_lost_mask": 2,
+      "success_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "disjoint_first_odd_group_events": [
+        {
+          "selected_group": 0,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        }
+      ],
+      "requires_external_erasure_map": false,
+      "witness_conditions_on_declared_erasure_pattern": true,
+      "even_pair_phases_used": false,
+      "output_data_photons": 6
+    },
+    {
+      "status": "IDEAL_ENCODED_OPTICAL_TRANSFER_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "pair_lost_mask": 4,
+      "success_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "disjoint_first_odd_group_events": [
+        {
+          "selected_group": 1,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        }
+      ],
+      "requires_external_erasure_map": false,
+      "witness_conditions_on_declared_erasure_pattern": true,
+      "even_pair_phases_used": false,
+      "output_data_photons": 6
+    },
+    {
+      "status": "IDEAL_ENCODED_OPTICAL_TRANSFER_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "pair_lost_mask": 5,
+      "success_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "disjoint_first_odd_group_events": [
+        {
+          "selected_group": 1,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        }
+      ],
+      "requires_external_erasure_map": false,
+      "witness_conditions_on_declared_erasure_pattern": true,
+      "even_pair_phases_used": false,
+      "output_data_photons": 6
+    },
+    {
+      "status": "IDEAL_ENCODED_OPTICAL_TRANSFER_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "pair_lost_mask": 8,
+      "success_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "disjoint_first_odd_group_events": [
+        {
+          "selected_group": 1,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        }
+      ],
+      "requires_external_erasure_map": false,
+      "witness_conditions_on_declared_erasure_pattern": true,
+      "even_pair_phases_used": false,
+      "output_data_photons": 6
+    },
+    {
+      "status": "IDEAL_ENCODED_OPTICAL_TRANSFER_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "pair_lost_mask": 9,
+      "success_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "disjoint_first_odd_group_events": [
+        {
+          "selected_group": 1,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        }
+      ],
+      "requires_external_erasure_map": false,
+      "witness_conditions_on_declared_erasure_pattern": true,
+      "even_pair_phases_used": false,
+      "output_data_photons": 6
+    },
+    {
+      "status": "IDEAL_ENCODED_OPTICAL_TRANSFER_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "pair_lost_mask": 12,
+      "success_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "disjoint_first_odd_group_events": [
+        {
+          "selected_group": 1,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        }
+      ],
+      "requires_external_erasure_map": false,
+      "witness_conditions_on_declared_erasure_pattern": true,
+      "even_pair_phases_used": false,
+      "output_data_photons": 6
+    },
+    {
+      "status": "IDEAL_ENCODED_OPTICAL_TRANSFER_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "pair_lost_mask": 16,
+      "success_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "disjoint_first_odd_group_events": [
+        {
+          "selected_group": 0,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        }
+      ],
+      "requires_external_erasure_map": false,
+      "witness_conditions_on_declared_erasure_pattern": true,
+      "even_pair_phases_used": false,
+      "output_data_photons": 6
+    },
+    {
+      "status": "IDEAL_ENCODED_OPTICAL_TRANSFER_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "pair_lost_mask": 18,
+      "success_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "disjoint_first_odd_group_events": [
+        {
+          "selected_group": 0,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        }
+      ],
+      "requires_external_erasure_map": false,
+      "witness_conditions_on_declared_erasure_pattern": true,
+      "even_pair_phases_used": false,
+      "output_data_photons": 6
+    },
+    {
+      "status": "IDEAL_ENCODED_OPTICAL_TRANSFER_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "pair_lost_mask": 32,
+      "success_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "disjoint_first_odd_group_events": [
+        {
+          "selected_group": 0,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        }
+      ],
+      "requires_external_erasure_map": false,
+      "witness_conditions_on_declared_erasure_pattern": true,
+      "even_pair_phases_used": false,
+      "output_data_photons": 6
+    },
+    {
+      "status": "IDEAL_ENCODED_OPTICAL_TRANSFER_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "pair_lost_mask": 34,
+      "success_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "disjoint_first_odd_group_events": [
+        {
+          "selected_group": 0,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        }
+      ],
+      "requires_external_erasure_map": false,
+      "witness_conditions_on_declared_erasure_pattern": true,
+      "even_pair_phases_used": false,
+      "output_data_photons": 6
+    },
+    {
+      "status": "IDEAL_ENCODED_OPTICAL_TRANSFER_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "pair_lost_mask": 48,
+      "success_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "disjoint_first_odd_group_events": [
+        {
+          "selected_group": 0,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        }
+      ],
+      "requires_external_erasure_map": false,
+      "witness_conditions_on_declared_erasure_pattern": true,
+      "even_pair_phases_used": false,
+      "output_data_photons": 6
+    }
+  ],
+  "larger_shape_witnesses": [
+    {
+      "status": "IDEAL_ENCODED_OPTICAL_TRANSFER_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        3,
+        2
+      ],
+      "pair_lost_mask": 0,
+      "success_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "7/8",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/8",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "7/8",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "disjoint_first_odd_group_events": [
+        {
+          "selected_group": 0,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        },
+        {
+          "selected_group": 1,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/4",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/4",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        },
+        {
+          "selected_group": 2,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/8",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/8",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        }
+      ],
+      "requires_external_erasure_map": false,
+      "witness_conditions_on_declared_erasure_pattern": true,
+      "even_pair_phases_used": false,
+      "output_data_photons": 9
+    },
+    {
+      "status": "IDEAL_ENCODED_OPTICAL_TRANSFER_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        4,
+        3
+      ],
+      "pair_lost_mask": 0,
+      "success_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "15/16",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/16",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "15/16",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "disjoint_first_odd_group_events": [
+        {
+          "selected_group": 0,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        },
+        {
+          "selected_group": 1,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/4",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/4",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        },
+        {
+          "selected_group": 2,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/8",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/8",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        },
+        {
+          "selected_group": 3,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/16",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/16",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        }
+      ],
+      "requires_external_erasure_map": false,
+      "witness_conditions_on_declared_erasure_pattern": true,
+      "even_pair_phases_used": false,
+      "output_data_photons": 16
+    },
+    {
+      "status": "IDEAL_ENCODED_OPTICAL_TRANSFER_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        8,
+        1
+      ],
+      "pair_lost_mask": 0,
+      "success_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "255/256",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/256",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "255/256",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "disjoint_first_odd_group_events": [
+        {
+          "selected_group": 0,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        },
+        {
+          "selected_group": 1,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/4",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/4",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        },
+        {
+          "selected_group": 2,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/8",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/8",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        },
+        {
+          "selected_group": 3,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/16",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/16",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        },
+        {
+          "selected_group": 4,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/32",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/32",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        },
+        {
+          "selected_group": 5,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/64",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/64",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        },
+        {
+          "selected_group": 6,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/128",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/128",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        },
+        {
+          "selected_group": 7,
+          "probability": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/256",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "joint_bell_projector": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/256",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "conditional_fidelity": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        }
+      ],
+      "requires_external_erasure_map": false,
+      "witness_conditions_on_declared_erasure_pattern": true,
+      "even_pair_phases_used": false,
+      "output_data_photons": 16
+    }
+  ],
+  "no_feedback_control": {
+    "status": "IDEAL_ENCODED_OPTICAL_TRANSFER_WITH_SUPPLIED_RESOURCE",
+    "branching": [
+      2,
+      2
+    ],
+    "pair_lost_mask": 0,
+    "success_probability": {
+      "basis": "1,sqrt(2),i,i*sqrt(2)",
+      "coefficients": [
+        "3/4",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "rejected_probability": {
+      "basis": "1,sqrt(2),i,i*sqrt(2)",
+      "coefficients": [
+        "1/4",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "joint_bell_projector": {
+      "basis": "1,sqrt(2),i,i*sqrt(2)",
+      "coefficients": [
+        "1/8",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "conditional_entanglement_fidelity": {
+      "basis": "1,sqrt(2),i,i*sqrt(2)",
+      "coefficients": [
+        "1/6",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "disjoint_first_odd_group_events": [
+      {
+        "selected_group": 0,
+        "probability": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/2",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "joint_bell_projector": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/8",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "conditional_fidelity": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      },
+      {
+        "selected_group": 1,
+        "probability": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "joint_bell_projector": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "conditional_fidelity": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      }
+    ],
+    "requires_external_erasure_map": false,
+    "witness_conditions_on_declared_erasure_pattern": true,
+    "even_pair_phases_used": false,
+    "output_data_photons": 6
+  },
+  "weighted_mask_coefficients": [
+    {
+      "branching": [
+        1,
+        1
+      ],
+      "photons": 2,
+      "denominator": 2,
+      "weighted_numerators": [
+        1,
+        0,
+        0
+      ],
+      "basis": "eta^(n-k) * (1-eta)^k"
+    },
+    {
+      "branching": [
+        2,
+        2
+      ],
+      "photons": 6,
+      "denominator": 4,
+      "weighted_numerators": [
+        3,
+        12,
+        12,
+        0,
+        0,
+        0,
+        0
+      ],
+      "basis": "eta^(n-k) * (1-eta)^k"
+    },
+    {
+      "branching": [
+        3,
+        2
+      ],
+      "photons": 9,
+      "denominator": 8,
+      "weighted_numerators": [
+        7,
+        54,
+        162,
+        216,
+        108,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "basis": "eta^(n-k) * (1-eta)^k"
+    },
+    {
+      "branching": [
+        4,
+        3
+      ],
+      "photons": 16,
+      "denominator": 16,
+      "weighted_numerators": [
+        15,
+        224,
+        1488,
+        5728,
+        14112,
+        23424,
+        26496,
+        19968,
+        9216,
+        2048,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "basis": "eta^(n-k) * (1-eta)^k"
+    },
+    {
+      "branching": [
+        8,
+        1
+      ],
+      "photons": 16,
+      "denominator": 256,
+      "weighted_numerators": [
+        255,
+        4064,
+        28224,
+        111104,
+        268800,
+        401408,
+        344064,
+        131072,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "basis": "eta^(n-k) * (1-eta)^k"
+    }
+  ],
+  "encoded_resource_factory": {
+    "status": "EXACT_LOSSLESS_ENCODED_RESOURCE_FACTORY_NO_DEVICE",
+    "branching": [
+      2,
+      2
+    ],
+    "seven_photon_resources_per_attempt": 2,
+    "input_photons": 14,
+    "measured_port_photons": 2,
+    "output_photons": 12,
+    "branches": [
+      {
+        "counts": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "x_correction": 1,
+        "z_correction": 0,
+        "probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1/8",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "target_encoded_phi_plus": true
+      },
+      {
+        "counts": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "x_correction": 1,
+        "z_correction": 1,
+        "probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1/8",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "target_encoded_phi_plus": true
+      },
+      {
+        "counts": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "x_correction": 1,
+        "z_correction": 1,
+        "probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1/8",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "target_encoded_phi_plus": true
+      },
+      {
+        "counts": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "x_correction": 1,
+        "z_correction": 0,
+        "probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1/8",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "target_encoded_phi_plus": true
+      }
+    ],
+    "swap_success_probability": {
+      "exact": "1/2",
+      "decimal": 0.5
+    },
+    "expected_bell_pairs_per_swap_attempt": {
+      "exact": "96",
+      "decimal": 96.0
+    },
+    "expected_bell_pairs_per_delivered_resource": {
+      "exact": "192",
+      "decimal": 192.0
+    },
+    "expected_source_photons_per_delivered_resource": {
+      "exact": "384",
+      "decimal": 384.0
+    },
+    "expected_swap_attempts": {
+      "exact": "2",
+      "decimal": 2.0
+    },
+    "policy": "prepare both resources first; discard both on failed port swap",
+    "storage_switch_source_noise_included": false,
+    "preparation_latency_included": false
+  },
+  "encoded_resource_stabilisers": {
+    "success_probability": {
+      "basis": "1,sqrt(2),i,i*sqrt(2)",
+      "coefficients": [
+        "1/2",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "independent_target_generators": 12,
+    "target_expectations": [
+      {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      }
+    ],
+    "all_target_stabilisers_plus_one": true
+  },
+  "resource_missing_feedback_control": {
+    "success_probability": {
+      "basis": "1,sqrt(2),i,i*sqrt(2)",
+      "coefficients": [
+        "1/2",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "independent_target_generators": 12,
+    "target_expectations": [
+      {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "-1",
+          "0",
+          "0",
+          "0"
+        ]
+      }
+    ],
+    "all_target_stabilisers_plus_one": false
+  },
+  "declared_budget_comparisons": [
+    {
+      "encoded": {
+        "status": "DECLARED_PURE_LOSS_ENCODED_TRANSFER_BUDGET",
+        "branching": [
+          2,
+          2
+        ],
+        "inputs": {
+          "memory": {
+            "exact": "1",
+            "decimal": 1.0
+          },
+          "storage_rounds": 0,
+          "detector_efficiency": {
+            "exact": "1",
+            "decimal": 1.0
+          },
+          "resource_ready": {
+            "exact": "1",
+            "decimal": 1.0
+          },
+          "pre_bell_rounds": 0,
+          "post_bell_rounds": 0
+        },
+        "complete_pair_probability": {
+          "exact": "1",
+          "decimal": 1.0
+        },
+        "herald_probability": {
+          "exact": "3/4",
+          "decimal": 0.75
+        },
+        "fresh_payload_survival": {
+          "exact": "1",
+          "decimal": 1.0
+        },
+        "herald_and_intact_output_probability": {
+          "exact": "3/4",
+          "decimal": 0.75
+        },
+        "payload_loss_can_be_unheralded": false,
+        "supply_model": "full correct encoded resource or no launch; partial-source false heralds excluded",
+        "factory_latency_and_nonzero_loss_cost_included": false,
+        "physical_conditional_fidelity_claimed": false
+      },
+      "previous_fixed_decoder": {
+        "status": "DECLARED_PURE_LOSS_JOINT_BUDGET_NOT_MEASURED_FIDELITY",
+        "branching": [
+          2,
+          2
+        ],
+        "inputs": {
+          "memory": {
+            "exact": "1",
+            "decimal": 1.0
+          },
+          "storage_rounds": 0,
+          "pre_bell_rounds": 0,
+          "post_bell_rounds": 0,
+          "decoder_efficiency": {
+            "exact": "1",
+            "decimal": 1.0
+          },
+          "bell_efficiency": {
+            "exact": "1",
+            "decimal": 1.0
+          },
+          "resource_ready": {
+            "exact": "1",
+            "decimal": 1.0
+          }
+        },
+        "policy": "FIXED_PHYSICAL_MEASUREMENTS",
+        "supply_model": "full correct resource or no launch; partial-source false heralds excluded",
+        "input_usable_probability": {
+          "exact": "1",
+          "decimal": 1.0
+        },
+        "intrinsic_bell_success": {
+          "exact": "1/2",
+          "decimal": 0.5
+        },
+        "required_decoder_detections": 3,
+        "total_required_detections": 5,
+        "herald_probability": {
+          "exact": "1/2",
+          "decimal": 0.5
+        },
+        "fresh_payload_survival": {
+          "exact": "1",
+          "decimal": 1.0
+        },
+        "herald_and_intact_output_probability": {
+          "exact": "1/2",
+          "decimal": 0.5
+        },
+        "payload_loss_can_be_unheralded": false,
+        "elapsed_rounds": 0,
+        "resource_factory_time_included": false,
+        "conditional_fidelity_with_payload_loss_not_claimed": true
+      }
+    },
+    {
+      "encoded": {
+        "status": "DECLARED_PURE_LOSS_ENCODED_TRANSFER_BUDGET",
+        "branching": [
+          2,
+          2
+        ],
+        "inputs": {
+          "memory": {
+            "exact": "1",
+            "decimal": 1.0
+          },
+          "storage_rounds": 0,
+          "detector_efficiency": {
+            "exact": "9/10",
+            "decimal": 0.9
+          },
+          "resource_ready": {
+            "exact": "1",
+            "decimal": 1.0
+          },
+          "pre_bell_rounds": 0,
+          "post_bell_rounds": 0
+        },
+        "complete_pair_probability": {
+          "exact": "81/100",
+          "decimal": 0.81
+        },
+        "herald_probability": {
+          "exact": "1828753848243/4000000000000",
+          "decimal": 0.45718846206075
+        },
+        "fresh_payload_survival": {
+          "exact": "1",
+          "decimal": 1.0
+        },
+        "herald_and_intact_output_probability": {
+          "exact": "1828753848243/4000000000000",
+          "decimal": 0.45718846206075
+        },
+        "payload_loss_can_be_unheralded": false,
+        "supply_model": "full correct encoded resource or no launch; partial-source false heralds excluded",
+        "factory_latency_and_nonzero_loss_cost_included": false,
+        "physical_conditional_fidelity_claimed": false
+      },
+      "previous_fixed_decoder": {
+        "status": "DECLARED_PURE_LOSS_JOINT_BUDGET_NOT_MEASURED_FIDELITY",
+        "branching": [
+          2,
+          2
+        ],
+        "inputs": {
+          "memory": {
+            "exact": "1",
+            "decimal": 1.0
+          },
+          "storage_rounds": 0,
+          "pre_bell_rounds": 0,
+          "post_bell_rounds": 0,
+          "decoder_efficiency": {
+            "exact": "9/10",
+            "decimal": 0.9
+          },
+          "bell_efficiency": {
+            "exact": "9/10",
+            "decimal": 0.9
+          },
+          "resource_ready": {
+            "exact": "1",
+            "decimal": 1.0
+          }
+        },
+        "policy": "FIXED_PHYSICAL_MEASUREMENTS",
+        "supply_model": "full correct resource or no launch; partial-source false heralds excluded",
+        "input_usable_probability": {
+          "exact": "1",
+          "decimal": 1.0
+        },
+        "intrinsic_bell_success": {
+          "exact": "1/2",
+          "decimal": 0.5
+        },
+        "required_decoder_detections": 3,
+        "total_required_detections": 5,
+        "herald_probability": {
+          "exact": "59049/200000",
+          "decimal": 0.295245
+        },
+        "fresh_payload_survival": {
+          "exact": "1",
+          "decimal": 1.0
+        },
+        "herald_and_intact_output_probability": {
+          "exact": "59049/200000",
+          "decimal": 0.295245
+        },
+        "payload_loss_can_be_unheralded": false,
+        "elapsed_rounds": 0,
+        "resource_factory_time_included": false,
+        "conditional_fidelity_with_payload_loss_not_claimed": true
+      }
+    },
+    {
+      "encoded": {
+        "status": "DECLARED_PURE_LOSS_ENCODED_TRANSFER_BUDGET",
+        "branching": [
+          2,
+          2
+        ],
+        "inputs": {
+          "memory": {
+            "exact": "99/100",
+            "decimal": 0.99
+          },
+          "storage_rounds": 10,
+          "detector_efficiency": {
+            "exact": "9/10",
+            "decimal": 0.9
+          },
+          "resource_ready": {
+            "exact": "1",
+            "decimal": 1.0
+          },
+          "pre_bell_rounds": 0,
+          "post_bell_rounds": 0
+        },
+        "complete_pair_probability": {
+          "exact": "7325494807571316369081/10000000000000000000000",
+          "decimal": 0.7325494807571317
+        },
+        "herald_probability": {
+          "exact": "1387813607555550838094652698281055284440295057355460127939790270056512718576880005206867353882457422680767819986867343685933813051443/4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "decimal": 0.34695340188888774
+        },
+        "fresh_payload_survival": {
+          "exact": "1",
+          "decimal": 1.0
+        },
+        "herald_and_intact_output_probability": {
+          "exact": "1387813607555550838094652698281055284440295057355460127939790270056512718576880005206867353882457422680767819986867343685933813051443/4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "decimal": 0.34695340188888774
+        },
+        "payload_loss_can_be_unheralded": false,
+        "supply_model": "full correct encoded resource or no launch; partial-source false heralds excluded",
+        "factory_latency_and_nonzero_loss_cost_included": false,
+        "physical_conditional_fidelity_claimed": false
+      },
+      "previous_fixed_decoder": {
+        "status": "DECLARED_PURE_LOSS_JOINT_BUDGET_NOT_MEASURED_FIDELITY",
+        "branching": [
+          2,
+          2
+        ],
+        "inputs": {
+          "memory": {
+            "exact": "99/100",
+            "decimal": 0.99
+          },
+          "storage_rounds": 10,
+          "pre_bell_rounds": 0,
+          "post_bell_rounds": 0,
+          "decoder_efficiency": {
+            "exact": "9/10",
+            "decimal": 0.9
+          },
+          "bell_efficiency": {
+            "exact": "9/10",
+            "decimal": 0.9
+          },
+          "resource_ready": {
+            "exact": "1",
+            "decimal": 1.0
+          }
+        },
+        "policy": "FIXED_PHYSICAL_MEASUREMENTS",
+        "supply_model": "full correct resource or no launch; partial-source false heralds excluded",
+        "input_usable_probability": {
+          "exact": "66897175856968051393833859880371221146543227691483931958981106325809049127796001/100000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "decimal": 0.6689717585696805
+        },
+        "intrinsic_bell_success": {
+          "exact": "1/2",
+          "decimal": 0.5
+        },
+        "required_decoder_detections": 3,
+        "total_required_detections": 5,
+        "herald_probability": {
+          "exact": "3950211337178106466754495592076040237482231051954434698245875347432698541947226063049/20000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "decimal": 0.19751056685890533
+        },
+        "fresh_payload_survival": {
+          "exact": "1",
+          "decimal": 1.0
+        },
+        "herald_and_intact_output_probability": {
+          "exact": "3950211337178106466754495592076040237482231051954434698245875347432698541947226063049/20000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "decimal": 0.19751056685890533
+        },
+        "payload_loss_can_be_unheralded": false,
+        "elapsed_rounds": 10,
+        "resource_factory_time_included": false,
+        "conditional_fidelity_with_payload_loss_not_claimed": true
+      }
+    },
+    {
+      "encoded": {
+        "status": "DECLARED_PURE_LOSS_ENCODED_TRANSFER_BUDGET",
+        "branching": [
+          2,
+          2
+        ],
+        "inputs": {
+          "memory": {
+            "exact": "99/100",
+            "decimal": 0.99
+          },
+          "storage_rounds": 10,
+          "detector_efficiency": {
+            "exact": "9/10",
+            "decimal": 0.9
+          },
+          "resource_ready": {
+            "exact": "1",
+            "decimal": 1.0
+          },
+          "pre_bell_rounds": 1,
+          "post_bell_rounds": 1
+        },
+        "complete_pair_probability": {
+          "exact": "71797174609006471733362881/100000000000000000000000000",
+          "decimal": 0.7179717460900648
+        },
+        "herald_probability": {
+          "exact": "1310224945784682648498606077056091112247251400802177007800687432245957224412924295073219265860616825839787315134335911251416509348414060474674360523143699843/4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "decimal": 0.32755623644617066
+        },
+        "fresh_payload_survival": {
+          "exact": "886384871716129280658801/1000000000000000000000000",
+          "decimal": 0.8863848717161292
+        },
+        "herald_and_intact_output_probability": {
+          "exact": "1161363570488628371091376615896873944772859683003260172053634236471389723908214763101936158050328547813853379405557195185617073606500727536567909864163760390475539745111295640268243/4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "decimal": 0.29034089262215707
+        },
+        "payload_loss_can_be_unheralded": true,
+        "supply_model": "full correct encoded resource or no launch; partial-source false heralds excluded",
+        "factory_latency_and_nonzero_loss_cost_included": false,
+        "physical_conditional_fidelity_claimed": false
+      },
+      "previous_fixed_decoder": {
+        "status": "DECLARED_PURE_LOSS_JOINT_BUDGET_NOT_MEASURED_FIDELITY",
+        "branching": [
+          2,
+          2
+        ],
+        "inputs": {
+          "memory": {
+            "exact": "99/100",
+            "decimal": 0.99
+          },
+          "storage_rounds": 10,
+          "pre_bell_rounds": 1,
+          "post_bell_rounds": 1,
+          "decoder_efficiency": {
+            "exact": "9/10",
+            "decimal": 0.9
+          },
+          "bell_efficiency": {
+            "exact": "9/10",
+            "decimal": 0.9
+          },
+          "resource_ready": {
+            "exact": "1",
+            "decimal": 1.0
+          }
+        },
+        "policy": "FIXED_PHYSICAL_MEASUREMENTS",
+        "supply_model": "full correct resource or no launch; partial-source false heralds excluded",
+        "input_usable_probability": {
+          "exact": "66897175856968051393833859880371221146543227691483931958981106325809049127796001/100000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "decimal": 0.6689717585696805
+        },
+        "intrinsic_bell_success": {
+          "exact": "1/2",
+          "decimal": 0.5
+        },
+        "required_decoder_detections": 3,
+        "total_required_detections": 5,
+        "herald_probability": {
+          "exact": "38716021315682621480660811297937270367563346540205414477507824280187878409624762643943249/200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "decimal": 0.1935801065784131
+        },
+        "fresh_payload_survival": {
+          "exact": "886384871716129280658801/1000000000000000000000000",
+          "decimal": 0.8863848717161292
+        },
+        "herald_and_intact_output_probability": {
+          "exact": "34317295587260267212847964205328657393933265564749118992796200011998122119213026168381436522703057521823176384449/200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "decimal": 0.17158647793630133
+        },
+        "payload_loss_can_be_unheralded": true,
+        "elapsed_rounds": 12,
+        "resource_factory_time_included": false,
+        "conditional_fidelity_with_payload_loss_not_claimed": true
+      }
+    }
+  ],
+  "declared_shape_scan": [
+    {
+      "complete_pair_survival": {
+        "exact": "1",
+        "decimal": 1.0
+      },
+      "rows": [
+        {
+          "branching": [
+            1,
+            1
+          ],
+          "photons": 2,
+          "success": {
+            "exact": "1/2",
+            "decimal": 0.5
+          }
+        },
+        {
+          "branching": [
+            1,
+            2
+          ],
+          "photons": 3,
+          "success": {
+            "exact": "1/2",
+            "decimal": 0.5
+          }
+        },
+        {
+          "branching": [
+            1,
+            3
+          ],
+          "photons": 4,
+          "success": {
+            "exact": "1/2",
+            "decimal": 0.5
+          }
+        },
+        {
+          "branching": [
+            1,
+            4
+          ],
+          "photons": 5,
+          "success": {
+            "exact": "1/2",
+            "decimal": 0.5
+          }
+        },
+        {
+          "branching": [
+            1,
+            5
+          ],
+          "photons": 6,
+          "success": {
+            "exact": "1/2",
+            "decimal": 0.5
+          }
+        },
+        {
+          "branching": [
+            1,
+            6
+          ],
+          "photons": 7,
+          "success": {
+            "exact": "1/2",
+            "decimal": 0.5
+          }
+        },
+        {
+          "branching": [
+            1,
+            7
+          ],
+          "photons": 8,
+          "success": {
+            "exact": "1/2",
+            "decimal": 0.5
+          }
+        },
+        {
+          "branching": [
+            1,
+            8
+          ],
+          "photons": 9,
+          "success": {
+            "exact": "1/2",
+            "decimal": 0.5
+          }
+        },
+        {
+          "branching": [
+            1,
+            9
+          ],
+          "photons": 10,
+          "success": {
+            "exact": "1/2",
+            "decimal": 0.5
+          }
+        },
+        {
+          "branching": [
+            1,
+            10
+          ],
+          "photons": 11,
+          "success": {
+            "exact": "1/2",
+            "decimal": 0.5
+          }
+        },
+        {
+          "branching": [
+            1,
+            11
+          ],
+          "photons": 12,
+          "success": {
+            "exact": "1/2",
+            "decimal": 0.5
+          }
+        },
+        {
+          "branching": [
+            1,
+            12
+          ],
+          "photons": 13,
+          "success": {
+            "exact": "1/2",
+            "decimal": 0.5
+          }
+        },
+        {
+          "branching": [
+            1,
+            13
+          ],
+          "photons": 14,
+          "success": {
+            "exact": "1/2",
+            "decimal": 0.5
+          }
+        },
+        {
+          "branching": [
+            1,
+            14
+          ],
+          "photons": 15,
+          "success": {
+            "exact": "1/2",
+            "decimal": 0.5
+          }
+        },
+        {
+          "branching": [
+            1,
+            15
+          ],
+          "photons": 16,
+          "success": {
+            "exact": "1/2",
+            "decimal": 0.5
+          }
+        },
+        {
+          "branching": [
+            2,
+            1
+          ],
+          "photons": 4,
+          "success": {
+            "exact": "3/4",
+            "decimal": 0.75
+          }
+        },
+        {
+          "branching": [
+            2,
+            2
+          ],
+          "photons": 6,
+          "success": {
+            "exact": "3/4",
+            "decimal": 0.75
+          }
+        },
+        {
+          "branching": [
+            2,
+            3
+          ],
+          "photons": 8,
+          "success": {
+            "exact": "3/4",
+            "decimal": 0.75
+          }
+        },
+        {
+          "branching": [
+            2,
+            4
+          ],
+          "photons": 10,
+          "success": {
+            "exact": "3/4",
+            "decimal": 0.75
+          }
+        },
+        {
+          "branching": [
+            2,
+            5
+          ],
+          "photons": 12,
+          "success": {
+            "exact": "3/4",
+            "decimal": 0.75
+          }
+        },
+        {
+          "branching": [
+            2,
+            6
+          ],
+          "photons": 14,
+          "success": {
+            "exact": "3/4",
+            "decimal": 0.75
+          }
+        },
+        {
+          "branching": [
+            2,
+            7
+          ],
+          "photons": 16,
+          "success": {
+            "exact": "3/4",
+            "decimal": 0.75
+          }
+        },
+        {
+          "branching": [
+            3,
+            1
+          ],
+          "photons": 6,
+          "success": {
+            "exact": "7/8",
+            "decimal": 0.875
+          }
+        },
+        {
+          "branching": [
+            3,
+            2
+          ],
+          "photons": 9,
+          "success": {
+            "exact": "7/8",
+            "decimal": 0.875
+          }
+        },
+        {
+          "branching": [
+            3,
+            3
+          ],
+          "photons": 12,
+          "success": {
+            "exact": "7/8",
+            "decimal": 0.875
+          }
+        },
+        {
+          "branching": [
+            3,
+            4
+          ],
+          "photons": 15,
+          "success": {
+            "exact": "7/8",
+            "decimal": 0.875
+          }
+        },
+        {
+          "branching": [
+            4,
+            1
+          ],
+          "photons": 8,
+          "success": {
+            "exact": "15/16",
+            "decimal": 0.9375
+          }
+        },
+        {
+          "branching": [
+            4,
+            2
+          ],
+          "photons": 12,
+          "success": {
+            "exact": "15/16",
+            "decimal": 0.9375
+          }
+        },
+        {
+          "branching": [
+            4,
+            3
+          ],
+          "photons": 16,
+          "success": {
+            "exact": "15/16",
+            "decimal": 0.9375
+          }
+        },
+        {
+          "branching": [
+            5,
+            1
+          ],
+          "photons": 10,
+          "success": {
+            "exact": "31/32",
+            "decimal": 0.96875
+          }
+        },
+        {
+          "branching": [
+            5,
+            2
+          ],
+          "photons": 15,
+          "success": {
+            "exact": "31/32",
+            "decimal": 0.96875
+          }
+        },
+        {
+          "branching": [
+            6,
+            1
+          ],
+          "photons": 12,
+          "success": {
+            "exact": "63/64",
+            "decimal": 0.984375
+          }
+        },
+        {
+          "branching": [
+            7,
+            1
+          ],
+          "photons": 14,
+          "success": {
+            "exact": "127/128",
+            "decimal": 0.9921875
+          }
+        },
+        {
+          "branching": [
+            8,
+            1
+          ],
+          "photons": 16,
+          "success": {
+            "exact": "255/256",
+            "decimal": 0.99609375
+          }
+        }
+      ],
+      "best_by_probability_only": {
+        "branching": [
+          8,
+          1
+        ],
+        "photons": 16,
+        "success": {
+          "exact": "255/256",
+          "decimal": 0.99609375
+        }
+      },
+      "source_cost_and_availability_optimised": false
+    },
+    {
+      "complete_pair_survival": {
+        "exact": "99/100",
+        "decimal": 0.99
+      },
+      "rows": [
+        {
+          "branching": [
+            1,
+            1
+          ],
+          "photons": 2,
+          "success": {
+            "exact": "9801/20000",
+            "decimal": 0.49005
+          }
+        },
+        {
+          "branching": [
+            1,
+            2
+          ],
+          "photons": 3,
+          "success": {
+            "exact": "970299/2000000",
+            "decimal": 0.4851495
+          }
+        },
+        {
+          "branching": [
+            1,
+            3
+          ],
+          "photons": 4,
+          "success": {
+            "exact": "96059601/200000000",
+            "decimal": 0.480298005
+          }
+        },
+        {
+          "branching": [
+            1,
+            4
+          ],
+          "photons": 5,
+          "success": {
+            "exact": "9509900499/20000000000",
+            "decimal": 0.47549502495
+          }
+        },
+        {
+          "branching": [
+            1,
+            5
+          ],
+          "photons": 6,
+          "success": {
+            "exact": "941480149401/2000000000000",
+            "decimal": 0.4707400747005
+          }
+        },
+        {
+          "branching": [
+            1,
+            6
+          ],
+          "photons": 7,
+          "success": {
+            "exact": "93206534790699/200000000000000",
+            "decimal": 0.466032673953495
+          }
+        },
+        {
+          "branching": [
+            1,
+            7
+          ],
+          "photons": 8,
+          "success": {
+            "exact": "9227446944279201/20000000000000000",
+            "decimal": 0.46137234721396003
+          }
+        },
+        {
+          "branching": [
+            1,
+            8
+          ],
+          "photons": 9,
+          "success": {
+            "exact": "913517247483640899/2000000000000000000",
+            "decimal": 0.45675862374182047
+          }
+        },
+        {
+          "branching": [
+            1,
+            9
+          ],
+          "photons": 10,
+          "success": {
+            "exact": "90438207500880449001/200000000000000000000",
+            "decimal": 0.45219103750440226
+          }
+        },
+        {
+          "branching": [
+            1,
+            10
+          ],
+          "photons": 11,
+          "success": {
+            "exact": "8953382542587164451099/20000000000000000000000",
+            "decimal": 0.44766912712935825
+          }
+        },
+        {
+          "branching": [
+            1,
+            11
+          ],
+          "photons": 12,
+          "success": {
+            "exact": "886384871716129280658801/2000000000000000000000000",
+            "decimal": 0.4431924358580646
+          }
+        },
+        {
+          "branching": [
+            1,
+            12
+          ],
+          "photons": 13,
+          "success": {
+            "exact": "87752102299896798785221299/200000000000000000000000000",
+            "decimal": 0.438760511499484
+          }
+        },
+        {
+          "branching": [
+            1,
+            13
+          ],
+          "photons": 14,
+          "success": {
+            "exact": "8687458127689783079736908601/20000000000000000000000000000",
+            "decimal": 0.43437290638448917
+          }
+        },
+        {
+          "branching": [
+            1,
+            14
+          ],
+          "photons": 15,
+          "success": {
+            "exact": "860058354641288524893953951499/2000000000000000000000000000000",
+            "decimal": 0.4300291773206443
+          }
+        },
+        {
+          "branching": [
+            1,
+            15
+          ],
+          "photons": 16,
+          "success": {
+            "exact": "85145777109487563964501441198401/200000000000000000000000000000000",
+            "decimal": 0.4257288855474378
+          }
+        },
+        {
+          "branching": [
+            2,
+            1
+          ],
+          "photons": 4,
+          "success": {
+            "exact": "59188239/80000000",
+            "decimal": 0.7398529875
+          }
+        },
+        {
+          "branching": [
+            2,
+            2
+          ],
+          "photons": 6,
+          "success": {
+            "exact": "2939711969403/4000000000000",
+            "decimal": 0.73492799235075
+          }
+        },
+        {
+          "branching": [
+            2,
+            3
+          ],
+          "photons": 8,
+          "success": {
+            "exact": "5839278614296479/8000000000000000",
+            "decimal": 0.7299098267870598
+          }
+        },
+        {
+          "branching": [
+            2,
+            4
+          ],
+          "photons": 10,
+          "success": {
+            "exact": "289957812421079949003/400000000000000000000",
+            "decimal": 0.7248945310526999
+          }
+        },
+        {
+          "branching": [
+            2,
+            5
+          ],
+          "photons": 12,
+          "success": {
+            "exact": "575907145176820959748719/800000000000000000000000",
+            "decimal": 0.7198839314710263
+          }
+        },
+        {
+          "branching": [
+            2,
+            6
+          ],
+          "photons": 14,
+          "success": {
+            "exact": "28595155788589444094123928603/40000000000000000000000000000",
+            "decimal": 0.7148788947147361
+          }
+        },
+        {
+          "branching": [
+            2,
+            7
+          ],
+          "photons": 16,
+          "success": {
+            "exact": "56790420132336087825142156336959/80000000000000000000000000000000",
+            "decimal": 0.7098802516542011
+          }
+        },
+        {
+          "branching": [
+            3,
+            1
+          ],
+          "photons": 6,
+          "success": {
+            "exact": "6937328324619/8000000000000",
+            "decimal": 0.867166040577375
+          }
+        },
+        {
+          "branching": [
+            3,
+            2
+          ],
+          "photons": 9,
+          "success": {
+            "exact": "6908206712794180893/8000000000000000000",
+            "decimal": 0.8635258390992726
+          }
+        },
+        {
+          "branching": [
+            3,
+            3
+          ],
+          "photons": 12,
+          "success": {
+            "exact": "6877068649970249099049219/8000000000000000000000000",
+            "decimal": 0.8596335812462811
+          }
+        },
+        {
+          "branching": [
+            3,
+            4
+          ],
+          "photons": 15,
+          "success": {
+            "exact": "6845646501648714710193355451493/8000000000000000000000000000000",
+            "decimal": 0.8557058127060894
+          }
+        },
+        {
+          "branching": [
+            4,
+            1
+          ],
+          "photons": 8,
+          "success": {
+            "exact": "29824883375660307/32000000000000000",
+            "decimal": 0.9320276054893846
+          }
+        },
+        {
+          "branching": [
+            4,
+            2
+          ],
+          "photons": 12,
+          "success": {
+            "exact": "2975148451360948487915763/3200000000000000000000000",
+            "decimal": 0.9297338910502964
+          }
+        },
+        {
+          "branching": [
+            4,
+            3
+          ],
+          "photons": 16,
+          "success": {
+            "exact": "296656406123971544017421955384627/320000000000000000000000000000000",
+            "decimal": 0.9270512691374111
+          }
+        },
+        {
+          "branching": [
+            5,
+            1
+          ],
+          "photons": 10,
+          "success": {
+            "exact": "3088154508991368269211/3200000000000000000000",
+            "decimal": 0.9650482840598026
+          }
+        },
+        {
+          "branching": [
+            5,
+            2
+          ],
+          "photons": 15,
+          "success": {
+            "exact": "30842258827046735127192745751469/32000000000000000000000000000000",
+            "decimal": 0.9638205883452104
+          }
+        },
+        {
+          "branching": [
+            6,
+            1
+          ],
+          "photons": 12,
+          "success": {
+            "exact": "12567486612838273184486187/12800000000000000000000000",
+            "decimal": 0.9818348916279901
+          }
+        },
+        {
+          "branching": [
+            7,
+            1
+          ],
+          "photons": 14,
+          "success": {
+            "exact": "1267641040632615019169393031459/1280000000000000000000000000000",
+            "decimal": 0.9903445629942305
+          }
+        },
+        {
+          "branching": [
+            8,
+            1
+          ],
+          "photons": 16,
+          "success": {
+            "exact": "5092527325880106891263175951498579/5120000000000000000000000000000000",
+            "decimal": 0.9946342433359584
+          }
+        }
+      ],
+      "best_by_probability_only": {
+        "branching": [
+          8,
+          1
+        ],
+        "photons": 16,
+        "success": {
+          "exact": "5092527325880106891263175951498579/5120000000000000000000000000000000",
+          "decimal": 0.9946342433359584
+        }
+      },
+      "source_cost_and_availability_optimised": false
+    },
+    {
+      "complete_pair_survival": {
+        "exact": "9/10",
+        "decimal": 0.9
+      },
+      "rows": [
+        {
+          "branching": [
+            1,
+            1
+          ],
+          "photons": 2,
+          "success": {
+            "exact": "81/200",
+            "decimal": 0.405
+          }
+        },
+        {
+          "branching": [
+            1,
+            2
+          ],
+          "photons": 3,
+          "success": {
+            "exact": "729/2000",
+            "decimal": 0.3645
+          }
+        },
+        {
+          "branching": [
+            1,
+            3
+          ],
+          "photons": 4,
+          "success": {
+            "exact": "6561/20000",
+            "decimal": 0.32805
+          }
+        },
+        {
+          "branching": [
+            1,
+            4
+          ],
+          "photons": 5,
+          "success": {
+            "exact": "59049/200000",
+            "decimal": 0.295245
+          }
+        },
+        {
+          "branching": [
+            1,
+            5
+          ],
+          "photons": 6,
+          "success": {
+            "exact": "531441/2000000",
+            "decimal": 0.2657205
+          }
+        },
+        {
+          "branching": [
+            1,
+            6
+          ],
+          "photons": 7,
+          "success": {
+            "exact": "4782969/20000000",
+            "decimal": 0.23914845
+          }
+        },
+        {
+          "branching": [
+            1,
+            7
+          ],
+          "photons": 8,
+          "success": {
+            "exact": "43046721/200000000",
+            "decimal": 0.215233605
+          }
+        },
+        {
+          "branching": [
+            1,
+            8
+          ],
+          "photons": 9,
+          "success": {
+            "exact": "387420489/2000000000",
+            "decimal": 0.1937102445
+          }
+        },
+        {
+          "branching": [
+            1,
+            9
+          ],
+          "photons": 10,
+          "success": {
+            "exact": "3486784401/20000000000",
+            "decimal": 0.17433922005
+          }
+        },
+        {
+          "branching": [
+            1,
+            10
+          ],
+          "photons": 11,
+          "success": {
+            "exact": "31381059609/200000000000",
+            "decimal": 0.156905298045
+          }
+        },
+        {
+          "branching": [
+            1,
+            11
+          ],
+          "photons": 12,
+          "success": {
+            "exact": "282429536481/2000000000000",
+            "decimal": 0.1412147682405
+          }
+        },
+        {
+          "branching": [
+            1,
+            12
+          ],
+          "photons": 13,
+          "success": {
+            "exact": "2541865828329/20000000000000",
+            "decimal": 0.12709329141645
+          }
+        },
+        {
+          "branching": [
+            1,
+            13
+          ],
+          "photons": 14,
+          "success": {
+            "exact": "22876792454961/200000000000000",
+            "decimal": 0.114383962274805
+          }
+        },
+        {
+          "branching": [
+            1,
+            14
+          ],
+          "photons": 15,
+          "success": {
+            "exact": "205891132094649/2000000000000000",
+            "decimal": 0.1029455660473245
+          }
+        },
+        {
+          "branching": [
+            1,
+            15
+          ],
+          "photons": 16,
+          "success": {
+            "exact": "1853020188851841/20000000000000000",
+            "decimal": 0.09265100944259205
+          }
+        },
+        {
+          "branching": [
+            2,
+            1
+          ],
+          "photons": 4,
+          "success": {
+            "exact": "5103/8000",
+            "decimal": 0.637875
+          }
+        },
+        {
+          "branching": [
+            2,
+            2
+          ],
+          "photons": 6,
+          "success": {
+            "exact": "2381643/4000000",
+            "decimal": 0.59541075
+          }
+        },
+        {
+          "branching": [
+            2,
+            3
+          ],
+          "photons": 8,
+          "success": {
+            "exact": "43873407/80000000",
+            "decimal": 0.5484175875
+          }
+        },
+        {
+          "branching": [
+            2,
+            4
+          ],
+          "photons": 10,
+          "success": {
+            "exact": "20132579403/40000000000",
+            "decimal": 0.503314485075
+          }
+        },
+        {
+          "branching": [
+            2,
+            5
+          ],
+          "photons": 12,
+          "success": {
+            "exact": "368666467551/800000000000",
+            "decimal": 0.46083308443875
+          }
+        },
+        {
+          "branching": [
+            2,
+            6
+          ],
+          "photons": 14,
+          "success": {
+            "exact": "168441948413163/400000000000000",
+            "decimal": 0.4211048710329075
+          }
+        },
+        {
+          "branching": [
+            2,
+            7
+          ],
+          "photons": 16,
+          "success": {
+            "exact": "614626721558451/1600000000000000",
+            "decimal": 0.3841417009740319
+          }
+        },
+        {
+          "branching": [
+            3,
+            1
+          ],
+          "photons": 6,
+          "success": {
+            "exact": "6160779/8000000",
+            "decimal": 0.770097375
+          }
+        },
+        {
+          "branching": [
+            3,
+            2
+          ],
+          "photons": 9,
+          "success": {
+            "exact": "5932475883/8000000000",
+            "decimal": 0.741559485375
+          }
+        },
+        {
+          "branching": [
+            3,
+            3
+          ],
+          "photons": 12,
+          "success": {
+            "exact": "5571509995539/8000000000000",
+            "decimal": 0.696438749442375
+          }
+        },
+        {
+          "branching": [
+            3,
+            4
+          ],
+          "photons": 15,
+          "success": {
+            "exact": "5199579695309643/8000000000000000",
+            "decimal": 0.6499474619137053
+          }
+        },
+        {
+          "branching": [
+            4,
+            1
+          ],
+          "photons": 8,
+          "success": {
+            "exact": "269912979/320000000",
+            "decimal": 0.843478059375
+          }
+        },
+        {
+          "branching": [
+            4,
+            2
+          ],
+          "photons": 12,
+          "success": {
+            "exact": "2668566677139/3200000000000",
+            "decimal": 0.8339270866059375
+          }
+        },
+        {
+          "branching": [
+            4,
+            3
+          ],
+          "photons": 16,
+          "success": {
+            "exact": "25467326996929011/32000000000000000",
+            "decimal": 0.7958539686540316
+          }
+        },
+        {
+          "branching": [
+            5,
+            1
+          ],
+          "photons": 10,
+          "success": {
+            "exact": "282392335611/320000000000",
+            "decimal": 0.882476048784375
+          }
+        },
+        {
+          "branching": [
+            5,
+            2
+          ],
+          "photons": 15,
+          "success": {
+            "exact": "28549469503802619/32000000000000000",
+            "decimal": 0.8921709219938319
+          }
+        },
+        {
+          "branching": [
+            6,
+            1
+          ],
+          "photons": 12,
+          "success": {
+            "exact": "11537913071979/12800000000000",
+            "decimal": 0.9013994587483594
+          }
+        },
+        {
+          "branching": [
+            7,
+            1
+          ],
+          "photons": 14,
+          "success": {
+            "exact": "11630312241602499/12800000000000000",
+            "decimal": 0.9086181438751952
+          }
+        },
+        {
+          "branching": [
+            8,
+            1
+          ],
+          "photons": 16,
+          "success": {
+            "exact": "465422376995491923/512000000000000000",
+            "decimal": 0.9090280800693201
+          }
+        }
+      ],
+      "best_by_probability_only": {
+        "branching": [
+          8,
+          1
+        ],
+        "photons": 16,
+        "success": {
+          "exact": "465422376995491923/512000000000000000",
+          "decimal": 0.9090280800693201
+        }
+      },
+      "source_cost_and_availability_optimised": false
+    },
+    {
+      "complete_pair_survival": {
+        "exact": "81/100",
+        "decimal": 0.81
+      },
+      "rows": [
+        {
+          "branching": [
+            1,
+            1
+          ],
+          "photons": 2,
+          "success": {
+            "exact": "6561/20000",
+            "decimal": 0.32805
+          }
+        },
+        {
+          "branching": [
+            1,
+            2
+          ],
+          "photons": 3,
+          "success": {
+            "exact": "531441/2000000",
+            "decimal": 0.2657205
+          }
+        },
+        {
+          "branching": [
+            1,
+            3
+          ],
+          "photons": 4,
+          "success": {
+            "exact": "43046721/200000000",
+            "decimal": 0.215233605
+          }
+        },
+        {
+          "branching": [
+            1,
+            4
+          ],
+          "photons": 5,
+          "success": {
+            "exact": "3486784401/20000000000",
+            "decimal": 0.17433922005
+          }
+        },
+        {
+          "branching": [
+            1,
+            5
+          ],
+          "photons": 6,
+          "success": {
+            "exact": "282429536481/2000000000000",
+            "decimal": 0.1412147682405
+          }
+        },
+        {
+          "branching": [
+            1,
+            6
+          ],
+          "photons": 7,
+          "success": {
+            "exact": "22876792454961/200000000000000",
+            "decimal": 0.114383962274805
+          }
+        },
+        {
+          "branching": [
+            1,
+            7
+          ],
+          "photons": 8,
+          "success": {
+            "exact": "1853020188851841/20000000000000000",
+            "decimal": 0.09265100944259205
+          }
+        },
+        {
+          "branching": [
+            1,
+            8
+          ],
+          "photons": 9,
+          "success": {
+            "exact": "150094635296999121/2000000000000000000",
+            "decimal": 0.07504731764849956
+          }
+        },
+        {
+          "branching": [
+            1,
+            9
+          ],
+          "photons": 10,
+          "success": {
+            "exact": "12157665459056928801/200000000000000000000",
+            "decimal": 0.06078832729528465
+          }
+        },
+        {
+          "branching": [
+            1,
+            10
+          ],
+          "photons": 11,
+          "success": {
+            "exact": "984770902183611232881/20000000000000000000000",
+            "decimal": 0.04923854510918056
+          }
+        },
+        {
+          "branching": [
+            1,
+            11
+          ],
+          "photons": 12,
+          "success": {
+            "exact": "79766443076872509863361/2000000000000000000000000",
+            "decimal": 0.03988322153843626
+          }
+        },
+        {
+          "branching": [
+            1,
+            12
+          ],
+          "photons": 13,
+          "success": {
+            "exact": "6461081889226673298932241/200000000000000000000000000",
+            "decimal": 0.03230540944613337
+          }
+        },
+        {
+          "branching": [
+            1,
+            13
+          ],
+          "photons": 14,
+          "success": {
+            "exact": "523347633027360537213511521/20000000000000000000000000000",
+            "decimal": 0.026167381651368025
+          }
+        },
+        {
+          "branching": [
+            1,
+            14
+          ],
+          "photons": 15,
+          "success": {
+            "exact": "42391158275216203514294433201/2000000000000000000000000000000",
+            "decimal": 0.0211955791376081
+          }
+        },
+        {
+          "branching": [
+            1,
+            15
+          ],
+          "photons": 16,
+          "success": {
+            "exact": "3433683820292512484657849089281/200000000000000000000000000000000",
+            "decimal": 0.01716841910146256
+          }
+        },
+        {
+          "branching": [
+            2,
+            1
+          ],
+          "photons": 4,
+          "success": {
+            "exact": "41983839/80000000",
+            "decimal": 0.5247979875
+          }
+        },
+        {
+          "branching": [
+            2,
+            2
+          ],
+          "photons": 6,
+          "success": {
+            "exact": "1828753848243/4000000000000",
+            "decimal": 0.45718846206075
+          }
+        },
+        {
+          "branching": [
+            2,
+            3
+          ],
+          "photons": 8,
+          "success": {
+            "exact": "3068645728847679/8000000000000000",
+            "decimal": 0.3835807161059599
+          }
+        },
+        {
+          "branching": [
+            2,
+            4
+          ],
+          "photons": 10,
+          "success": {
+            "exact": "127279176087468944403/400000000000000000000",
+            "decimal": 0.31819794021867237
+          }
+        },
+        {
+          "branching": [
+            2,
+            5
+          ],
+          "photons": 12,
+          "success": {
+            "exact": "209979710852334161799519/800000000000000000000000",
+            "decimal": 0.2624746385654177
+          }
+        },
+        {
+          "branching": [
+            2,
+            6
+          ],
+          "photons": 14,
+          "success": {
+            "exact": "8627287553284021630513499763/40000000000000000000000000000",
+            "decimal": 0.21568218883210055
+          }
+        },
+        {
+          "branching": [
+            2,
+            7
+          ],
+          "photons": 16,
+          "success": {
+            "exact": "14137399570048070614294804255359/80000000000000000000000000000000",
+            "decimal": 0.17671749462560088
+          }
+        },
+        {
+          "branching": [
+            3,
+            1
+          ],
+          "photons": 6,
+          "success": {
+            "exact": "5107880867139/8000000000000",
+            "decimal": 0.638485108392375
+          }
+        },
+        {
+          "branching": [
+            3,
+            2
+          ],
+          "photons": 9,
+          "success": {
+            "exact": "4757248855219872447/8000000000000000000",
+            "decimal": 0.594656106902484
+          }
+        },
+        {
+          "branching": [
+            3,
+            3
+          ],
+          "photons": 12,
+          "success": {
+            "exact": "4121554807324495416551859/8000000000000000000000000",
+            "decimal": 0.5151943509155619
+          }
+        },
+        {
+          "branching": [
+            3,
+            4
+          ],
+          "photons": 15,
+          "success": {
+            "exact": "3495181320355540170484034143407/8000000000000000000000000000000",
+            "decimal": 0.4368976650444425
+          }
+        },
+        {
+          "branching": [
+            4,
+            1
+          ],
+          "photons": 8,
+          "success": {
+            "exact": "22392641980528947/32000000000000000",
+            "decimal": 0.6997700618915296
+          }
+        },
+        {
+          "branching": [
+            4,
+            2
+          ],
+          "photons": 12,
+          "success": {
+            "exact": "2217136733769244118341923/3200000000000000000000000",
+            "decimal": 0.6928552293028888
+          }
+        },
+        {
+          "branching": [
+            4,
+            3
+          ],
+          "photons": 16,
+          "success": {
+            "exact": "197769287826197642295408345819507/320000000000000000000000000000000",
+            "decimal": 0.6180290244568676
+          }
+        },
+        {
+          "branching": [
+            5,
+            1
+          ],
+          "photons": 10,
+          "success": {
+            "exact": "2330023378039892647011/3200000000000000000000",
+            "decimal": 0.7281323056374664
+          }
+        },
+        {
+          "branching": [
+            5,
+            2
+          ],
+          "photons": 15,
+          "success": {
+            "exact": "24400062516109860226667946684231/32000000000000000000000000000000",
+            "decimal": 0.7625019536284331
+          }
+        },
+        {
+          "branching": [
+            6,
+            1
+          ],
+          "photons": 12,
+          "success": {
+            "exact": "9420076973413471807160667/12800000000000000000000000",
+            "decimal": 0.7359435135479275
+          }
+        },
+        {
+          "branching": [
+            7,
+            1
+          ],
+          "photons": 14,
+          "success": {
+            "exact": "935752182920694909789602039739/1280000000000000000000000000000",
+            "decimal": 0.7310563929067929
+          }
+        },
+        {
+          "branching": [
+            8,
+            1
+          ],
+          "photons": 16,
+          "success": {
+            "exact": "3678467916916333473651959517526419/5120000000000000000000000000000000",
+            "decimal": 0.7184507650227214
+          }
+        }
+      ],
+      "best_by_probability_only": {
+        "branching": [
+          5,
+          2
+        ],
+        "photons": 15,
+        "success": {
+          "exact": "24400062516109860226667946684231/32000000000000000000000000000000",
+          "decimal": 0.7625019536284331
+        }
+      },
+      "source_cost_and_availability_optimised": false
+    },
+    {
+      "complete_pair_survival": {
+        "exact": "1/2",
+        "decimal": 0.5
+      },
+      "rows": [
+        {
+          "branching": [
+            1,
+            1
+          ],
+          "photons": 2,
+          "success": {
+            "exact": "1/8",
+            "decimal": 0.125
+          }
+        },
+        {
+          "branching": [
+            1,
+            2
+          ],
+          "photons": 3,
+          "success": {
+            "exact": "1/16",
+            "decimal": 0.0625
+          }
+        },
+        {
+          "branching": [
+            1,
+            3
+          ],
+          "photons": 4,
+          "success": {
+            "exact": "1/32",
+            "decimal": 0.03125
+          }
+        },
+        {
+          "branching": [
+            1,
+            4
+          ],
+          "photons": 5,
+          "success": {
+            "exact": "1/64",
+            "decimal": 0.015625
+          }
+        },
+        {
+          "branching": [
+            1,
+            5
+          ],
+          "photons": 6,
+          "success": {
+            "exact": "1/128",
+            "decimal": 0.0078125
+          }
+        },
+        {
+          "branching": [
+            1,
+            6
+          ],
+          "photons": 7,
+          "success": {
+            "exact": "1/256",
+            "decimal": 0.00390625
+          }
+        },
+        {
+          "branching": [
+            1,
+            7
+          ],
+          "photons": 8,
+          "success": {
+            "exact": "1/512",
+            "decimal": 0.001953125
+          }
+        },
+        {
+          "branching": [
+            1,
+            8
+          ],
+          "photons": 9,
+          "success": {
+            "exact": "1/1024",
+            "decimal": 0.0009765625
+          }
+        },
+        {
+          "branching": [
+            1,
+            9
+          ],
+          "photons": 10,
+          "success": {
+            "exact": "1/2048",
+            "decimal": 0.00048828125
+          }
+        },
+        {
+          "branching": [
+            1,
+            10
+          ],
+          "photons": 11,
+          "success": {
+            "exact": "1/4096",
+            "decimal": 0.000244140625
+          }
+        },
+        {
+          "branching": [
+            1,
+            11
+          ],
+          "photons": 12,
+          "success": {
+            "exact": "1/8192",
+            "decimal": 0.0001220703125
+          }
+        },
+        {
+          "branching": [
+            1,
+            12
+          ],
+          "photons": 13,
+          "success": {
+            "exact": "1/16384",
+            "decimal": 6.103515625e-05
+          }
+        },
+        {
+          "branching": [
+            1,
+            13
+          ],
+          "photons": 14,
+          "success": {
+            "exact": "1/32768",
+            "decimal": 3.0517578125e-05
+          }
+        },
+        {
+          "branching": [
+            1,
+            14
+          ],
+          "photons": 15,
+          "success": {
+            "exact": "1/65536",
+            "decimal": 1.52587890625e-05
+          }
+        },
+        {
+          "branching": [
+            1,
+            15
+          ],
+          "photons": 16,
+          "success": {
+            "exact": "1/131072",
+            "decimal": 7.62939453125e-06
+          }
+        },
+        {
+          "branching": [
+            2,
+            1
+          ],
+          "photons": 4,
+          "success": {
+            "exact": "11/64",
+            "decimal": 0.171875
+          }
+        },
+        {
+          "branching": [
+            2,
+            2
+          ],
+          "photons": 6,
+          "success": {
+            "exact": "27/256",
+            "decimal": 0.10546875
+          }
+        },
+        {
+          "branching": [
+            2,
+            3
+          ],
+          "photons": 8,
+          "success": {
+            "exact": "59/1024",
+            "decimal": 0.0576171875
+          }
+        },
+        {
+          "branching": [
+            2,
+            4
+          ],
+          "photons": 10,
+          "success": {
+            "exact": "123/4096",
+            "decimal": 0.030029296875
+          }
+        },
+        {
+          "branching": [
+            2,
+            5
+          ],
+          "photons": 12,
+          "success": {
+            "exact": "251/16384",
+            "decimal": 0.01531982421875
+          }
+        },
+        {
+          "branching": [
+            2,
+            6
+          ],
+          "photons": 14,
+          "success": {
+            "exact": "507/65536",
+            "decimal": 0.0077362060546875
+          }
+        },
+        {
+          "branching": [
+            2,
+            7
+          ],
+          "photons": 16,
+          "success": {
+            "exact": "1019/262144",
+            "decimal": 0.003887176513671875
+          }
+        },
+        {
+          "branching": [
+            3,
+            1
+          ],
+          "photons": 6,
+          "success": {
+            "exact": "91/512",
+            "decimal": 0.177734375
+          }
+        },
+        {
+          "branching": [
+            3,
+            2
+          ],
+          "photons": 9,
+          "success": {
+            "exact": "547/4096",
+            "decimal": 0.133544921875
+          }
+        },
+        {
+          "branching": [
+            3,
+            3
+          ],
+          "photons": 12,
+          "success": {
+            "exact": "2611/32768",
+            "decimal": 0.079681396484375
+          }
+        },
+        {
+          "branching": [
+            3,
+            4
+          ],
+          "photons": 15,
+          "success": {
+            "exact": "11347/262144",
+            "decimal": 0.043285369873046875
+          }
+        },
+        {
+          "branching": [
+            4,
+            1
+          ],
+          "photons": 8,
+          "success": {
+            "exact": "671/4096",
+            "decimal": 0.163818359375
+          }
+        },
+        {
+          "branching": [
+            4,
+            2
+          ],
+          "photons": 12,
+          "success": {
+            "exact": "9855/65536",
+            "decimal": 0.1503753662109375
+          }
+        },
+        {
+          "branching": [
+            4,
+            3
+          ],
+          "photons": 16,
+          "success": {
+            "exact": "102719/1048576",
+            "decimal": 0.0979604721069336
+          }
+        },
+        {
+          "branching": [
+            5,
+            1
+          ],
+          "photons": 10,
+          "success": {
+            "exact": "4651/32768",
+            "decimal": 0.141937255859375
+          }
+        },
+        {
+          "branching": [
+            5,
+            2
+          ],
+          "photons": 15,
+          "success": {
+            "exact": "166531/1048576",
+            "decimal": 0.15881633758544922
+          }
+        },
+        {
+          "branching": [
+            6,
+            1
+          ],
+          "photons": 12,
+          "success": {
+            "exact": "31031/262144",
+            "decimal": 0.11837387084960938
+          }
+        },
+        {
+          "branching": [
+            7,
+            1
+          ],
+          "photons": 14,
+          "success": {
+            "exact": "201811/2097152",
+            "decimal": 0.09623098373413086
+          }
+        },
+        {
+          "branching": [
+            8,
+            1
+          ],
+          "photons": 16,
+          "success": {
+            "exact": "1288991/16777216",
+            "decimal": 0.07682985067367554
+          }
+        }
+      ],
+      "best_by_probability_only": {
+        "branching": [
+          3,
+          1
+        ],
+        "photons": 6,
+        "success": {
+          "exact": "91/512",
+          "decimal": 0.177734375
+        }
+      },
+      "source_cost_and_availability_optimised": false
+    }
+  ],
+  "boundaries": [
+    "one logical qubit per encoded block; physical photon counts are not independent logical qubit counts",
+    "all accepted first-odd-group events included; unresolved even phase bits are never used",
+    "loss flags arise from photon counts; no nondestructive erasure oracle; Bell measurement bases are static",
+    "terminal angle-adaptation handoff assumes no intervening gates; no encoded classifier is compiled",
+    "uniform independent loss, ideal indistinguishable interference, resolved counts, no dark or multipair counts",
+    "larger transfer witnesses assume supplied encoded Bell resources; explicit source factory only for [2,2]",
+    "192 expected ideal Bell pairs uses prepare-both-first restart and zero factory storage/switch loss",
+    "supply is full correct resource or no launch; partial-source false heralds are not absorbed into readiness",
+    "fresh-payload loss may be unheralded; physical fidelity, throughput and temperature are unmeasured",
+    "classifier heater and frame-adaptation interfaces are reused; a complete encoded classifier and general fault tolerance remain open"
+  ]
+}

@@ -1,6 +1,18 @@
 # Phase–seam foundation prototype
 
-**New: [building and running the classifier cluster on the route](CLUSTER_BUILD.md).**
+**New: [encoded Bell transfer from detector records](ENCODED_BELL.md).**
+The v0.32 route measures encoded blocks directly, with loss identified by
+counts and no nondestructive loss oracle. Six-photon logical transfer has
+ideal success 3/4 and accepted entanglement fidelity 1; the explicit
+twelve-photon Bell factory costs 192 expected ideal Bell pairs under a
+lossless full-restart policy. A 16-photon-per-block shape reaches ideal
+success 255/256 conditional on a supplied 32-photon Bell resource, whose
+factory is not certified here. The exact loss law and source cost accompany
+the rates. The classifier's heater interface is reused with its coherent
+output phase checked; v0.31's angle-adaptation identity receives the output
+Pauli frame for subsequent terminal readout. [Audit](encoded_bell/qualification.json).
+
+**Previous: [building and running the classifier cluster on the route](CLUSTER_BUILD.md).**
 The v0.31 packet settles what v0.29 left open, exactly: Lemma A turns the
 pattern's Pauli corrections into a heater-trim sign flip and an outcome relabel
 (no rail switch; six feedforward stages), witnessed end to end with a tracked

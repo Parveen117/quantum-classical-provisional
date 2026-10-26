@@ -1,0 +1,1249 @@
+{
+  "six_photon_code": {
+    "schema": "native-encoded-bell-plan-v1",
+    "status": "IDEAL_COMPONENT_PLAN_NOT_FABRICATED",
+    "branching": [
+      2,
+      2
+    ],
+    "groups": [
+      [
+        0,
+        2,
+        3
+      ],
+      [
+        1,
+        4,
+        5
+      ]
+    ],
+    "input": {
+      "old_block_photons": 6,
+      "resource_photons": 12,
+      "total_photons": 18
+    },
+    "output": {
+      "fresh_data_photons": 6,
+      "consumed_measured_photons_if_lossless": 12
+    },
+    "graph_to_parity": {
+      "photon_indices_per_measured_block": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "coherent_unit": {
+        "source": "cluster_compile.heater_setting(0)",
+        "phase_period": 64,
+        "measurement_heaters": {
+          "lower": 16,
+          "upper": 0,
+          "before": 32,
+          "after": 48
+        },
+        "coherent_heaters": {
+          "lower": 16,
+          "upper": 0,
+          "before": 32,
+          "after": 32
+        },
+        "relative_output_phase_removed": 16,
+        "unitary": [
+          [
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "1/2",
+                "0",
+                "-1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "1/2",
+                "0",
+                "-1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ],
+          [
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "1/2",
+                "0",
+                "-1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "-1/2",
+                "0",
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ]
+        ],
+        "global_phase": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "1/2",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "coherent_h_up_to_global_phase": true,
+        "calibrated_voltage_or_temperature_claim": false
+      },
+      "units": 8
+    },
+    "transversal_analysers": 6,
+    "bell_couplers": 12,
+    "basis_converter_couplers": 16,
+    "total_couplers_excluding_factory_and_pauli_routing": 28,
+    "detector_mode_channels": 24,
+    "per_pair_mode_order": [
+      "a0",
+      "a1",
+      "b0",
+      "b1"
+    ],
+    "per_pair_coupler_modes": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "per_pair_input_and_output_phase_steps": {
+      "2": -16,
+      "3": -16
+    },
+    "readout": [
+      {
+        "counts": [
+          2,
+          0,
+          0,
+          0
+        ],
+        "group": "even",
+        "possible": true,
+        "zz": 0,
+        "xx": null
+      },
+      {
+        "counts": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "group": "odd_plus",
+        "possible": true,
+        "zz": 1,
+        "xx": 0
+      },
+      {
+        "counts": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "group": "even",
+        "possible": false,
+        "zz": 0,
+        "xx": null
+      },
+      {
+        "counts": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "group": "odd_minus",
+        "possible": true,
+        "zz": 1,
+        "xx": 1
+      },
+      {
+        "counts": [
+          0,
+          2,
+          0,
+          0
+        ],
+        "group": "even",
+        "possible": true,
+        "zz": 0,
+        "xx": null
+      },
+      {
+        "counts": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "group": "odd_minus",
+        "possible": true,
+        "zz": 1,
+        "xx": 1
+      },
+      {
+        "counts": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "group": "even",
+        "possible": false,
+        "zz": 0,
+        "xx": null
+      },
+      {
+        "counts": [
+          0,
+          0,
+          2,
+          0
+        ],
+        "group": "even",
+        "possible": true,
+        "zz": 0,
+        "xx": null
+      },
+      {
+        "counts": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "group": "odd_plus",
+        "possible": true,
+        "zz": 1,
+        "xx": 0
+      },
+      {
+        "counts": [
+          0,
+          0,
+          0,
+          2
+        ],
+        "group": "even",
+        "possible": true,
+        "zz": 0,
+        "xx": null
+      }
+    ],
+    "classical_decoder": "encoded_bell.decode_counts; first complete odd group",
+    "final_frame_order": [
+      "x",
+      "z"
+    ],
+    "terminal_measurement_frame_handoff": "encoded_bell.measurement_handoff",
+    "adaptation_scope": "Bell bases are static; subsequent terminal readout may use the tracked frame",
+    "logical_x": [
+      0,
+      3
+    ],
+    "logical_z": [
+      1,
+      12
+    ],
+    "nondestructive_erasure_oracle": false,
+    "quantum_adaptive_measurement_bases": false,
+    "fully_encoded_factory_certified_here": true,
+    "physical_latency_or_temperature_measured": false
+  },
+  "sixteen_photon_code_assumed_source": {
+    "schema": "native-encoded-bell-plan-v1",
+    "status": "IDEAL_COMPONENT_PLAN_NOT_FABRICATED",
+    "branching": [
+      8,
+      1
+    ],
+    "groups": [
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        3,
+        11
+      ],
+      [
+        4,
+        12
+      ],
+      [
+        5,
+        13
+      ],
+      [
+        6,
+        14
+      ],
+      [
+        7,
+        15
+      ]
+    ],
+    "input": {
+      "old_block_photons": 16,
+      "resource_photons": 32,
+      "total_photons": 48
+    },
+    "output": {
+      "fresh_data_photons": 16,
+      "consumed_measured_photons_if_lossless": 32
+    },
+    "graph_to_parity": {
+      "photon_indices_per_measured_block": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "coherent_unit": {
+        "source": "cluster_compile.heater_setting(0)",
+        "phase_period": 64,
+        "measurement_heaters": {
+          "lower": 16,
+          "upper": 0,
+          "before": 32,
+          "after": 48
+        },
+        "coherent_heaters": {
+          "lower": 16,
+          "upper": 0,
+          "before": 32,
+          "after": 32
+        },
+        "relative_output_phase_removed": 16,
+        "unitary": [
+          [
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "1/2",
+                "0",
+                "-1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "1/2",
+                "0",
+                "-1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ],
+          [
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "1/2",
+                "0",
+                "-1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "-1/2",
+                "0",
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ]
+        ],
+        "global_phase": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "1/2",
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "coherent_h_up_to_global_phase": true,
+        "calibrated_voltage_or_temperature_claim": false
+      },
+      "units": 16
+    },
+    "transversal_analysers": 16,
+    "bell_couplers": 32,
+    "basis_converter_couplers": 32,
+    "total_couplers_excluding_factory_and_pauli_routing": 64,
+    "detector_mode_channels": 64,
+    "per_pair_mode_order": [
+      "a0",
+      "a1",
+      "b0",
+      "b1"
+    ],
+    "per_pair_coupler_modes": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "per_pair_input_and_output_phase_steps": {
+      "2": -16,
+      "3": -16
+    },
+    "readout": [
+      {
+        "counts": [
+          2,
+          0,
+          0,
+          0
+        ],
+        "group": "even",
+        "possible": true,
+        "zz": 0,
+        "xx": null
+      },
+      {
+        "counts": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "group": "odd_plus",
+        "possible": true,
+        "zz": 1,
+        "xx": 0
+      },
+      {
+        "counts": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "group": "even",
+        "possible": false,
+        "zz": 0,
+        "xx": null
+      },
+      {
+        "counts": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "group": "odd_minus",
+        "possible": true,
+        "zz": 1,
+        "xx": 1
+      },
+      {
+        "counts": [
+          0,
+          2,
+          0,
+          0
+        ],
+        "group": "even",
+        "possible": true,
+        "zz": 0,
+        "xx": null
+      },
+      {
+        "counts": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "group": "odd_minus",
+        "possible": true,
+        "zz": 1,
+        "xx": 1
+      },
+      {
+        "counts": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "group": "even",
+        "possible": false,
+        "zz": 0,
+        "xx": null
+      },
+      {
+        "counts": [
+          0,
+          0,
+          2,
+          0
+        ],
+        "group": "even",
+        "possible": true,
+        "zz": 0,
+        "xx": null
+      },
+      {
+        "counts": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "group": "odd_plus",
+        "possible": true,
+        "zz": 1,
+        "xx": 0
+      },
+      {
+        "counts": [
+          0,
+          0,
+          0,
+          2
+        ],
+        "group": "even",
+        "possible": true,
+        "zz": 0,
+        "xx": null
+      }
+    ],
+    "classical_decoder": "encoded_bell.decode_counts; first complete odd group",
+    "final_frame_order": [
+      "x",
+      "z"
+    ],
+    "terminal_measurement_frame_handoff": "encoded_bell.measurement_handoff",
+    "adaptation_scope": "Bell bases are static; subsequent terminal readout may use the tracked frame",
+    "logical_x": [
+      0,
+      255
+    ],
+    "logical_z": [
+      1,
+      256
+    ],
+    "nondestructive_erasure_oracle": false,
+    "quantum_adaptive_measurement_bases": false,
+    "fully_encoded_factory_certified_here": false,
+    "physical_latency_or_temperature_measured": false
+  },
+  "six_plus_six_resource_factory": {
+    "status": "EXACT_LOSSLESS_ENCODED_RESOURCE_FACTORY_NO_DEVICE",
+    "branching": [
+      2,
+      2
+    ],
+    "seven_photon_resources_per_attempt": 2,
+    "input_photons": 14,
+    "measured_port_photons": 2,
+    "output_photons": 12,
+    "branches": [
+      {
+        "counts": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "x_correction": 1,
+        "z_correction": 0,
+        "probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1/8",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "target_encoded_phi_plus": true
+      },
+      {
+        "counts": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "x_correction": 1,
+        "z_correction": 1,
+        "probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1/8",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "target_encoded_phi_plus": true
+      },
+      {
+        "counts": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "x_correction": 1,
+        "z_correction": 1,
+        "probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1/8",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "target_encoded_phi_plus": true
+      },
+      {
+        "counts": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "x_correction": 1,
+        "z_correction": 0,
+        "probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1/8",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "target_encoded_phi_plus": true
+      }
+    ],
+    "swap_success_probability": {
+      "exact": "1/2",
+      "decimal": 0.5
+    },
+    "expected_bell_pairs_per_swap_attempt": {
+      "exact": "96",
+      "decimal": 96.0
+    },
+    "expected_bell_pairs_per_delivered_resource": {
+      "exact": "192",
+      "decimal": 192.0
+    },
+    "expected_source_photons_per_delivered_resource": {
+      "exact": "384",
+      "decimal": 384.0
+    },
+    "expected_swap_attempts": {
+      "exact": "2",
+      "decimal": 2.0
+    },
+    "policy": "prepare both resources first; discard both on failed port swap",
+    "storage_switch_source_noise_included": false,
+    "preparation_latency_included": false
+  },
+  "collaborator_readout_handoff_example": {
+    "detector_counts": [
+      [
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "decoded_frame": {
+      "accepted": true,
+      "branching": [
+        2,
+        2
+      ],
+      "pair_lost_mask": 0,
+      "selected_group": 1,
+      "logical_xx_bit": 1,
+      "logical_zz_bit": 1,
+      "x_correction": 1,
+      "z_correction": 1,
+      "requires_external_erasure_map": false
+    },
+    "terminal_readout": {
+      "status": "EXACT_TERMINAL_MEASUREMENT_FRAME_HANDOFF",
+      "branching": [
+        2,
+        2
+      ],
+      "source": "cluster_build.adaptation_lemma",
+      "physical_x_mask": 1,
+      "physical_z_mask": 15,
+      "rows": [
+        {
+          "photon": 0,
+          "physical_frame": [
+            1,
+            1
+          ],
+          "nominal_angle": 5,
+          "adapted_angle": 59,
+          "outcome_xor": 1,
+          "heaters": {
+            "lower": 16,
+            "upper": 0,
+            "before": 37,
+            "after": 48
+          }
+        },
+        {
+          "photon": 1,
+          "physical_frame": [
+            0,
+            1
+          ],
+          "nominal_angle": 17,
+          "adapted_angle": 17,
+          "outcome_xor": 1,
+          "heaters": {
+            "lower": 16,
+            "upper": 0,
+            "before": 15,
+            "after": 48
+          }
+        },
+        {
+          "photon": 2,
+          "physical_frame": [
+            0,
+            1
+          ],
+          "nominal_angle": 22,
+          "adapted_angle": 22,
+          "outcome_xor": 1,
+          "heaters": {
+            "lower": 16,
+            "upper": 0,
+            "before": 10,
+            "after": 48
+          }
+        },
+        {
+          "photon": 3,
+          "physical_frame": [
+            0,
+            1
+          ],
+          "nominal_angle": 9,
+          "adapted_angle": 9,
+          "outcome_xor": 1,
+          "heaters": {
+            "lower": 16,
+            "upper": 0,
+            "before": 23,
+            "after": 48
+          }
+        },
+        {
+          "photon": 4,
+          "physical_frame": [
+            0,
+            0
+          ],
+          "nominal_angle": 50,
+          "adapted_angle": 50,
+          "outcome_xor": 0,
+          "heaters": {
+            "lower": 16,
+            "upper": 0,
+            "before": 46,
+            "after": 48
+          }
+        },
+        {
+          "photon": 5,
+          "physical_frame": [
+            0,
+            0
+          ],
+          "nominal_angle": 14,
+          "adapted_angle": 14,
+          "outcome_xor": 0,
+          "heaters": {
+            "lower": 16,
+            "upper": 0,
+            "before": 18,
+            "after": 48
+          }
+        }
+      ],
+      "active_pauli_gates_before_these_measurements": 0,
+      "scope": "subsequent single-photon equatorial measurements; no intervening gates",
+      "encoded_logical_classifier_compiled": false
+    }
+  }
+}
