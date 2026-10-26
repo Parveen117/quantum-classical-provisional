@@ -1,0 +1,74 @@
+{
+  "schema": "native-fusion-network-audit-v1",
+  "author": "Monty",
+  "status": "NETWORK_DECLARED_N1_N2_EXACT",
+  "tests_run": 9,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 24.399,
+  "drifts": {
+    "bell_pairs": "0",
+    "ghz3": "1/2",
+    "boosted_bell": "1/2"
+  },
+  "ghz3_walk_from_3": {
+    "4": {
+      "p_reach_target": "6/7",
+      "expected_attempts": "2"
+    },
+    "5": {
+      "p_reach_target": "5/6",
+      "expected_attempts": "8/3"
+    },
+    "8": {
+      "p_reach_target": "7/9",
+      "expected_attempts": "64/9"
+    },
+    "16": {
+      "p_reach_target": "94/123",
+      "expected_attempts": "2342/123"
+    },
+    "32": {
+      "p_reach_target": "2207/2889",
+      "expected_attempts": "125600/2889"
+    },
+    "64": {
+      "p_reach_target": "0.7639320225",
+      "expected_attempts": "92.367"
+    },
+    "128": {
+      "p_reach_target": "0.7639320225",
+      "expected_attempts": "190.150"
+    },
+    "256": {
+      "p_reach_target": "0.7639320225",
+      "expected_attempts": "385.717"
+    }
+  },
+  "bell_pair_walk_from_2": {
+    "4": "1/2",
+    "8": "1/4",
+    "16": "1/8"
+  },
+  "limit_3_minus_sqrt5": "0.7639320225",
+  "expected_bell_pairs_for_8_sites": "274/9",
+  "best_branches_by_switch_transmission": {
+    "1": 256,
+    "9/10": 256,
+    "4/5": 128,
+    "1/2": 1
+  },
+  "grade": {
+    "grade": "NETWORK_DECLARED",
+    "reasons": [
+      "fusion block needs a LAB_RECORDED heralded <XXX> >= 1/2"
+    ]
+  },
+  "boundaries": [
+    "fusion success 1/2 is proved; boosted 3/4 is a declared literature option with one ancilla Bell pair",
+    "fidelity bound counts false heralds only (L1); dark counts, multi-pair and distinguishability enter through the recorded visibility",
+    "the walk assumes independent attempts and no memory loss; memory loss per attempt lowers every number",
+    "no network, switch or delay line exists; nothing changes the temperature verdict"
+  ],
+  "plan_sha256": "1a2d798388fa155a2b85a6022e60dae9fd2411795fe7c1513d820878ad4dd071"
+}
