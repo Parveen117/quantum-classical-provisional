@@ -1,0 +1,18 @@
+test_every_angle_has_an_exact_heater_setting (test_phase_seam_cluster_compile.CodebookTests.test_every_angle_has_an_exact_heater_setting) ... ok
+test_training_touches_five_trims (test_phase_seam_cluster_compile.CodebookTests.test_training_touches_five_trims) ... ok
+test_fail_closed (test_phase_seam_cluster_compile.GradeTests.test_fail_closed) ... ok
+test_plan_declares_what_is_never_claimed (test_phase_seam_cluster_compile.GradeTests.test_plan_declares_what_is_never_claimed) ... ok
+test_gadget_identity_every_native_angle (test_phase_seam_cluster_compile.LemmaTests.test_gadget_identity_every_native_angle) ... ok
+test_pauli_propagation (test_phase_seam_cluster_compile.LemmaTests.test_pauli_propagation) ... ok
+test_ry_rewrite_every_native_angle (test_phase_seam_cluster_compile.LemmaTests.test_ry_rewrite_every_native_angle) ... ok
+test_angles_follow_the_rewrite (test_phase_seam_cluster_compile.PatternTests.test_angles_follow_the_rewrite) ... ok
+test_tree_shape (test_phase_seam_cluster_compile.PatternTests.test_tree_shape) ... ok
+test_tree_cluster_costs (test_phase_seam_cluster_compile.ResourceTests.test_tree_cluster_costs) ... ok
+test_non_clifford_angles_exact (test_phase_seam_cluster_compile.WitnessTests.test_non_clifford_angles_exact) ... ok
+test_pattern_run_rules (test_phase_seam_cluster_compile.WitnessTests.test_pattern_run_rules) ... ok
+test_xor_checkpoint_exact_on_all_inputs (test_phase_seam_cluster_compile.WitnessTests.test_xor_checkpoint_exact_on_all_inputs) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 29.690s
+
+OK

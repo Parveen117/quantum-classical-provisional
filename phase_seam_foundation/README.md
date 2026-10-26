@@ -1,16 +1,18 @@
 # Phase–seam foundation prototype
 
-**New: [age-aware memory and coherent fresh-node transfer](LOSS_REFRESH.md).**
-The v0.28 circuit recovers and transfers an externally entangled logical input
-for all 13 correctable six-photon erasure patterns, with exact Bell fidelity
-1 and all measurement outcomes retained. Two successive transfers also pass;
-removing feedback gives fidelity 1/4. The memory budget uses `P(1-m^t)` for
-an unchanged block and explicitly prices refresh latency, success and supply.
-The v0.26/v0.27 walk values are corrected to ideal-renewal references, not
-device bounds. The circuit uses ideal gates; optical compilation and physical
-refresh remain open. [Audit](refresh/qualification.json).
+**New: [the trained classifier as a measurement pattern on a fusion-built cluster](CLUSTER_COMPILE.md).**
+The v0.29 packet compiles the self-learning branch's four-qubit, five-angle,
+three-CNOT classifier into the only form the dual-rail route can execute: a
+13-photon tree cluster (12 edges, 7 heralded fusions) read by ten single-photon
+measurements whose five trained angles are heater trims on the native π/32
+grid. Lemmas G1–G3 are exact at all 64 angles; the pattern's readout
+probability equals the circuit's exactly in Q(ζ₆₄) for the XOR checkpoint and
+generic angles, every branch checked, with negative controls. Training stays
+on the PC; no speedup, advantage or on-chip learning is claimed; the optical
+build (1/128 one-shot, ≈ 0.55 with four spare leaves) and storage are open.
+[Audit](cluster/qualification.json).
 
-**Previous:** [building the encoded site, Theorem B1](TREE_BUILD.md) (initial-resource estimates, with v0.28 interpretation correction), [loss-tolerant tree code, exact](TREE_CODE.md) (single-round recovery polynomials over every loss pattern), [memory loss in the chain, Theorem M1, and the joint design point](CHAIN_MEMORY.md) (sequential growth suppressed as m^(3J + J(J−1)); x = 1/40 with number-resolving readout for large registers), [ledger violations, Theorems V1 and V2](LEDGER_VIOLATIONS.md) (multi-pair under threshold readout and the dark-to-efficiency ratio gate the register size; dual-rail sweep verdict), [loss as a retained ledger, Theorem L2](LOSS_LEDGER.md) (false heralds are readout-visible, loss is rate not fidelity, square-sourced channel on the native grid), [fusion network with Theorems N1 and N2](FUSION_NETWORK.md) (Bell pairs are a null walk at success 1/2, 3-site resources grow with drift 1/2, limit 3 − √5), [loss budget with Theorem L1](LOSS_BUDGET_810.md) (false-herald fraction (1-η)/(2-η), engine-checked), [810 nm heralded source spec](SOURCE_SPEC_810.md) (exact pair statistics, g2 = 2x, purity law, fail-closed source grade) and [810 nm re-target of the SiN core](CORE_RETARGET_810.md) (scaled nominal, fail-closed readiness grade).
+**Previous:** [age-aware memory and coherent fresh-node transfer](LOSS_REFRESH.md) (v0.28: ideal-circuit recovery through all 13 correctable six-photon erasures, age-aware memory budget, v0.26/v0.27 walks reinterpreted as ideal-renewal references), [building the encoded site, Theorem B1](TREE_BUILD.md) (initial-resource estimates, with v0.28 interpretation correction), [loss-tolerant tree code, exact](TREE_CODE.md) (single-round recovery polynomials over every loss pattern), [memory loss in the chain, Theorem M1, and the joint design point](CHAIN_MEMORY.md) (sequential growth suppressed as m^(3J + J(J−1)); x = 1/40 with number-resolving readout for large registers), [ledger violations, Theorems V1 and V2](LEDGER_VIOLATIONS.md) (multi-pair under threshold readout and the dark-to-efficiency ratio gate the register size; dual-rail sweep verdict), [loss as a retained ledger, Theorem L2](LOSS_LEDGER.md) (false heralds are readout-visible, loss is rate not fidelity, square-sourced channel on the native grid), [fusion network with Theorems N1 and N2](FUSION_NETWORK.md) (Bell pairs are a null walk at success 1/2, 3-site resources grow with drift 1/2, limit 3 − √5), [loss budget with Theorem L1](LOSS_BUDGET_810.md) (false-herald fraction (1-η)/(2-η), engine-checked), [810 nm heralded source spec](SOURCE_SPEC_810.md) (exact pair statistics, g2 = 2x, purity law, fail-closed source grade) and [810 nm re-target of the SiN core](CORE_RETARGET_810.md) (scaled nominal, fail-closed readiness grade).
 
 **[Dual-rail route for room-temperature operation](DUAL_RAIL.md).**
 The v0.18 module adds an exact few-photon boson engine in the calculator's
