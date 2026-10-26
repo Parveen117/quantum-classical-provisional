@@ -1,0 +1,637 @@
+{
+  "schema": "native-loss-tolerant-code-audit-v1",
+  "author": "Monty",
+  "status": "TREE_CODE_EXACT_NO_ENCODED_SITE_BUILT",
+  "tests_run": 8,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 0.297,
+  "polynomials": {
+    "1": {
+      "photons": 1,
+      "check": {
+        "commute": true,
+        "rank": 0,
+        "expected_rank": 0,
+        "one_logical_qubit": true
+      },
+      "counts": {
+        "z": [
+          1,
+          0
+        ],
+        "x": [
+          1,
+          0
+        ],
+        "both": [
+          1,
+          0
+        ]
+      },
+      "at_eps": {
+        "1/100": {
+          "p_z": "0.99",
+          "p_x": "0.99",
+          "p_both": "0.99",
+          "bare": "0.99"
+        },
+        "1/10": {
+          "p_z": "0.9",
+          "p_x": "0.9",
+          "p_both": "0.9",
+          "bare": "0.9"
+        },
+        "1/5": {
+          "p_z": "0.8",
+          "p_x": "0.8",
+          "p_both": "0.8",
+          "bare": "0.8"
+        },
+        "3/10": {
+          "p_z": "0.7",
+          "p_x": "0.7",
+          "p_both": "0.7",
+          "bare": "0.7"
+        }
+      }
+    },
+    "2": {
+      "photons": 2,
+      "check": {
+        "commute": true,
+        "rank": 1,
+        "expected_rank": 1,
+        "one_logical_qubit": true
+      },
+      "counts": {
+        "z": [
+          1,
+          2,
+          0
+        ],
+        "x": [
+          1,
+          0,
+          0
+        ],
+        "both": [
+          1,
+          0,
+          0
+        ]
+      },
+      "at_eps": {
+        "1/100": {
+          "p_z": "0.9999",
+          "p_x": "0.9801",
+          "p_both": "0.9801",
+          "bare": "0.99"
+        },
+        "1/10": {
+          "p_z": "0.99",
+          "p_x": "0.81",
+          "p_both": "0.81",
+          "bare": "0.9"
+        },
+        "1/5": {
+          "p_z": "0.96",
+          "p_x": "0.64",
+          "p_both": "0.64",
+          "bare": "0.8"
+        },
+        "3/10": {
+          "p_z": "0.91",
+          "p_x": "0.49",
+          "p_both": "0.49",
+          "bare": "0.7"
+        }
+      }
+    },
+    "3": {
+      "photons": 3,
+      "check": {
+        "commute": true,
+        "rank": 2,
+        "expected_rank": 2,
+        "one_logical_qubit": true
+      },
+      "counts": {
+        "z": [
+          1,
+          3,
+          3,
+          0
+        ],
+        "x": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "both": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "at_eps": {
+        "1/100": {
+          "p_z": "1",
+          "p_x": "0.9703",
+          "p_both": "0.9703",
+          "bare": "0.99"
+        },
+        "1/10": {
+          "p_z": "0.999",
+          "p_x": "0.729",
+          "p_both": "0.729",
+          "bare": "0.9"
+        },
+        "1/5": {
+          "p_z": "0.992",
+          "p_x": "0.512",
+          "p_both": "0.512",
+          "bare": "0.8"
+        },
+        "3/10": {
+          "p_z": "0.973",
+          "p_x": "0.343",
+          "p_both": "0.343",
+          "bare": "0.7"
+        }
+      }
+    },
+    "2,2": {
+      "photons": 6,
+      "check": {
+        "commute": true,
+        "rank": 5,
+        "expected_rank": 5,
+        "one_logical_qubit": true
+      },
+      "counts": {
+        "z": [
+          1,
+          6,
+          6,
+          2,
+          0,
+          0,
+          0
+        ],
+        "x": [
+          1,
+          6,
+          15,
+          18,
+          9,
+          0,
+          0
+        ],
+        "both": [
+          1,
+          6,
+          6,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "at_eps": {
+        "1/100": {
+          "p_z": "0.9991",
+          "p_x": "1",
+          "p_both": "0.9991",
+          "bare": "0.99"
+        },
+        "1/10": {
+          "p_z": "0.9266",
+          "p_x": "0.998",
+          "p_both": "0.9251",
+          "bare": "0.9"
+        },
+        "1/5": {
+          "p_z": "0.7619",
+          "p_x": "0.9841",
+          "p_both": "0.7537",
+          "bare": "0.8"
+        },
+        "3/10": {
+          "p_z": "0.5684",
+          "p_x": "0.9467",
+          "p_both": "0.5498",
+          "bare": "0.7"
+        }
+      }
+    },
+    "2,3": {
+      "photons": 8,
+      "check": {
+        "commute": true,
+        "rank": 7,
+        "expected_rank": 7,
+        "one_logical_qubit": true
+      },
+      "counts": {
+        "z": [
+          1,
+          8,
+          12,
+          8,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "x": [
+          1,
+          8,
+          28,
+          56,
+          68,
+          48,
+          16,
+          0,
+          0
+        ],
+        "both": [
+          1,
+          8,
+          12,
+          8,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "at_eps": {
+        "1/100": {
+          "p_z": "0.9984",
+          "p_x": "1",
+          "p_both": "0.9984",
+          "bare": "0.99"
+        },
+        "1/10": {
+          "p_z": "0.8817",
+          "p_x": "0.9998",
+          "p_both": "0.8816",
+          "bare": "0.9"
+        },
+        "1/5": {
+          "p_z": "0.6514",
+          "p_x": "0.9968",
+          "p_both": "0.6501",
+          "bare": "0.8"
+        },
+        "3/10": {
+          "p_z": "0.4226",
+          "p_x": "0.9839",
+          "p_both": "0.4187",
+          "bare": "0.7"
+        }
+      }
+    },
+    "3,2": {
+      "photons": 9,
+      "check": {
+        "commute": true,
+        "rank": 8,
+        "expected_rank": 8,
+        "one_logical_qubit": true
+      },
+      "counts": {
+        "z": [
+          1,
+          9,
+          36,
+          57,
+          45,
+          18,
+          3,
+          0,
+          0,
+          0
+        ],
+        "x": [
+          1,
+          9,
+          36,
+          81,
+          108,
+          81,
+          27,
+          0,
+          0,
+          0
+        ],
+        "both": [
+          1,
+          9,
+          36,
+          54,
+          27,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "at_eps": {
+        "1/100": {
+          "p_z": "1",
+          "p_x": "1",
+          "p_both": "1",
+          "bare": "0.99"
+        },
+        "1/10": {
+          "p_z": "0.9801",
+          "p_x": "0.997",
+          "p_both": "0.9773",
+          "bare": "0.9"
+        },
+        "1/5": {
+          "p_z": "0.8838",
+          "p_x": "0.9762",
+          "p_both": "0.8656",
+          "bare": "0.8"
+        },
+        "3/10": {
+          "p_z": "0.7164",
+          "p_x": "0.9212",
+          "p_both": "0.6711",
+          "bare": "0.7"
+        }
+      }
+    },
+    "3,3": {
+      "photons": 12,
+      "check": {
+        "commute": true,
+        "rank": 11,
+        "expected_rank": 11,
+        "one_logical_qubit": true
+      },
+      "counts": {
+        "z": [
+          1,
+          12,
+          66,
+          156,
+          207,
+          168,
+          84,
+          24,
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        "x": [
+          1,
+          12,
+          66,
+          220,
+          492,
+          768,
+          840,
+          624,
+          288,
+          64,
+          0,
+          0,
+          0
+        ],
+        "both": [
+          1,
+          12,
+          66,
+          156,
+          204,
+          144,
+          48,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "at_eps": {
+        "1/100": {
+          "p_z": "0.9999",
+          "p_x": "1",
+          "p_both": "0.9999",
+          "bare": "0.99"
+        },
+        "1/10": {
+          "p_z": "0.9593",
+          "p_x": "0.9997",
+          "p_both": "0.9591",
+          "bare": "0.9"
+        },
+        "1/5": {
+          "p_z": "0.7942",
+          "p_x": "0.9952",
+          "p_both": "0.7911",
+          "bare": "0.8"
+        },
+        "3/10": {
+          "p_z": "0.5612",
+          "p_x": "0.9759",
+          "p_both": "0.551",
+          "bare": "0.7"
+        }
+      }
+    },
+    "4,3": {
+      "photons": 16,
+      "check": {
+        "commute": true,
+        "rank": 15,
+        "expected_rank": 15,
+        "one_logical_qubit": true
+      },
+      "counts": {
+        "z": [
+          1,
+          16,
+          120,
+          560,
+          1564,
+          2832,
+          3528,
+          3120,
+          1974,
+          880,
+          264,
+          48,
+          4,
+          0,
+          0,
+          0,
+          0
+        ],
+        "x": [
+          1,
+          16,
+          120,
+          560,
+          1816,
+          4320,
+          7744,
+          10560,
+          10896,
+          8320,
+          4480,
+          1536,
+          256,
+          0,
+          0,
+          0,
+          0
+        ],
+        "both": [
+          1,
+          16,
+          120,
+          560,
+          1560,
+          2784,
+          3264,
+          2496,
+          1152,
+          256,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "at_eps": {
+        "1/100": {
+          "p_z": "1",
+          "p_x": "1",
+          "p_both": "1",
+          "bare": "0.99"
+        },
+        "1/10": {
+          "p_z": "0.986",
+          "p_x": "0.9996",
+          "p_both": "0.9856",
+          "bare": "0.9"
+        },
+        "1/5": {
+          "p_z": "0.8785",
+          "p_x": "0.9936",
+          "p_both": "0.8734",
+          "bare": "0.8"
+        },
+        "3/10": {
+          "p_z": "0.6666",
+          "p_x": "0.968",
+          "p_both": "0.6485",
+          "bare": "0.7"
+        }
+      }
+    }
+  },
+  "crossover_eps_where_code_stops_beating_bare": {
+    "1": null,
+    "2": null,
+    "3": null,
+    "2,2": [
+      "0.1458",
+      "0.1458"
+    ],
+    "2,3": [
+      "0.07936",
+      "0.07936"
+    ],
+    "3,2": [
+      "0.2749",
+      "0.2749"
+    ],
+    "3,3": [
+      "0.1923",
+      "0.1923"
+    ],
+    "4,3": [
+      "0.2656",
+      "0.2656"
+    ]
+  },
+  "encoded_walks": {
+    "m=9/10,tree=[3, 3],N=16": {
+      "m_eff": "0.9591",
+      "bare": "4.986e-05",
+      "encoded_lower_bound": "0.00612",
+      "photons_in_register": 192
+    },
+    "m=9/10,tree=[3, 3],N=64": {
+      "m_eff": "0.9591",
+      "bare": "3.589e-55",
+      "encoded_lower_bound": "9.165e-27",
+      "photons_in_register": 768
+    },
+    "m=9/10,tree=[4, 3],N=16": {
+      "m_eff": "0.9856",
+      "bare": "4.986e-05",
+      "encoded_lower_bound": "0.09351",
+      "photons_in_register": 256
+    },
+    "m=9/10,tree=[4, 3],N=64": {
+      "m_eff": "0.9856",
+      "bare": "3.589e-55",
+      "encoded_lower_bound": "7.694e-13",
+      "photons_in_register": 1024
+    },
+    "m=99/100,tree=[3, 3],N=16": {
+      "m_eff": "0.9999",
+      "bare": "0.1626",
+      "encoded_lower_bound": "0.7554",
+      "photons_in_register": 192
+    },
+    "m=99/100,tree=[3, 3],N=64": {
+      "m_eff": "0.9999",
+      "bare": "4.529e-10",
+      "encoded_lower_bound": "0.6042",
+      "photons_in_register": 768
+    },
+    "m=99/100,tree=[4, 3],N=16": {
+      "m_eff": "1",
+      "bare": "0.1626",
+      "encoded_lower_bound": "0.7638",
+      "photons_in_register": 256
+    },
+    "m=99/100,tree=[4, 3],N=64": {
+      "m_eff": "1",
+      "bare": "4.529e-10",
+      "encoded_lower_bound": "0.7556",
+      "photons_in_register": 1024
+    }
+  },
+  "grade": {
+    "grade": "CODE_DECLARED",
+    "reasons": [
+      "encoded_site block needs LAB_RECORDED branching and stabiliser_witnesses"
+    ]
+  },
+  "boundaries": [
+    "recovery is a stabiliser-support statement over every loss pattern; no literature recursion is used",
+    "photon loss epsilon is declared; the encoded site must itself be built by fusions, whose cost is not counted here",
+    "encoded walk results are rigorous lower bounds (m_eff floored to 20 bits)",
+    "nothing here changes the temperature verdict"
+  ]
+}
