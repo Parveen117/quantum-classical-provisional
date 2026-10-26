@@ -1,0 +1,241 @@
+{
+  "schema": "native-tree-build-audit-v1",
+  "author": "Monty",
+  "status": "BUILD_COST_EXACT_NO_SITE_BUILT",
+  "tests_run": 6,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 4.033,
+  "star_growth": {
+    "3": {
+      "p_reach": "1",
+      "bell_pairs": "4"
+    },
+    "4": {
+      "p_reach": "6/7",
+      "bell_pairs": "12"
+    },
+    "5": {
+      "p_reach": "5/6",
+      "bell_pairs": "44/3"
+    },
+    "8": {
+      "p_reach": "7/9",
+      "bell_pairs": "292/9"
+    }
+  },
+  "attachment_p_build": {
+    "blocks=4,spare=0": "1/16",
+    "blocks=4,spare=2": "11/32",
+    "blocks=4,spare=4": "163/256",
+    "blocks=4,spare=8": "3797/4096"
+  },
+  "site_builds": {
+    "m=1,tree=[3, 3],spare=3": {
+      "photons": 12,
+      "p_attach_all": "0.6562",
+      "bell_pairs_lower": "97.08",
+      "storage_survival_lower": "1"
+    },
+    "m=1,tree=[4, 3],spare=4": {
+      "photons": 16,
+      "p_attach_all": "0.6367",
+      "bell_pairs_lower": "136.9",
+      "storage_survival_lower": "1"
+    },
+    "m=999/1000,tree=[3, 3],spare=3": {
+      "photons": 12,
+      "p_attach_all": "0.6562",
+      "bell_pairs_lower": "97.08",
+      "storage_survival_lower": "0.951"
+    },
+    "m=999/1000,tree=[4, 3],spare=4": {
+      "photons": 16,
+      "p_attach_all": "0.6367",
+      "bell_pairs_lower": "136.9",
+      "storage_survival_lower": "0.9102"
+    },
+    "m=99/100,tree=[3, 3],spare=3": {
+      "photons": 12,
+      "p_attach_all": "0.6562",
+      "bell_pairs_lower": "97.08",
+      "storage_survival_lower": "0.608"
+    },
+    "m=99/100,tree=[4, 3],spare=4": {
+      "photons": 16,
+      "p_attach_all": "0.6367",
+      "bell_pairs_lower": "136.9",
+      "storage_survival_lower": "0.3962"
+    },
+    "m=9/10,tree=[3, 3],spare=3": {
+      "photons": 12,
+      "p_attach_all": "0.6562",
+      "bell_pairs_lower": "97.08",
+      "storage_survival_lower": "0.01012"
+    },
+    "m=9/10,tree=[4, 3],spare=4": {
+      "photons": 16,
+      "p_attach_all": "0.6367",
+      "bell_pairs_lower": "136.9",
+      "storage_survival_lower": "0.0002889"
+    }
+  },
+  "net_benefit": {
+    "m=1,tree=[3, 3],N=16": {
+      "bare": "0.7642",
+      "encoded": "0.7642",
+      "one_shot_all_sites": "0.001183",
+      "one_shot_pays": false,
+      "bell_pairs_per_delivered_site": "147.9",
+      "bell_pairs_register": "2367",
+      "multiplexed_pays": false
+    },
+    "m=1,tree=[3, 3],N=64": {
+      "bare": "0.7639",
+      "encoded": "0.7639",
+      "one_shot_all_sites": "1.961e-12",
+      "one_shot_pays": false,
+      "bell_pairs_per_delivered_site": "147.9",
+      "bell_pairs_register": "9467",
+      "multiplexed_pays": false
+    },
+    "m=1,tree=[4, 3],N=16": {
+      "bare": "0.7642",
+      "encoded": "0.7642",
+      "one_shot_all_sites": "0.0007297",
+      "one_shot_pays": false,
+      "bell_pairs_per_delivered_site": "215",
+      "bell_pairs_register": "3440",
+      "multiplexed_pays": false
+    },
+    "m=1,tree=[4, 3],N=64": {
+      "bare": "0.7639",
+      "encoded": "0.7639",
+      "one_shot_all_sites": "2.836e-13",
+      "one_shot_pays": false,
+      "bell_pairs_per_delivered_site": "215",
+      "bell_pairs_register": "1.376e+04",
+      "multiplexed_pays": false
+    },
+    "m=999/1000,tree=[3, 3],N=16": {
+      "bare": "0.6365",
+      "encoded": "0.7641",
+      "one_shot_all_sites": "0.0005297",
+      "one_shot_pays": false,
+      "bell_pairs_per_delivered_site": "155.5",
+      "bell_pairs_register": "2489",
+      "multiplexed_pays": true
+    },
+    "m=999/1000,tree=[3, 3],N=64": {
+      "bare": "0.02693",
+      "encoded": "0.7612",
+      "one_shot_all_sites": "7.874e-14",
+      "one_shot_pays": false,
+      "bell_pairs_per_delivered_site": "155.5",
+      "bell_pairs_register": "9955",
+      "multiplexed_pays": true
+    },
+    "m=999/1000,tree=[4, 3],N=16": {
+      "bare": "0.6365",
+      "encoded": "0.7641",
+      "one_shot_all_sites": "0.000162",
+      "one_shot_pays": false,
+      "bell_pairs_per_delivered_site": "236.2",
+      "bell_pairs_register": "3779",
+      "multiplexed_pays": true
+    },
+    "m=999/1000,tree=[4, 3],N=64": {
+      "bare": "0.02693",
+      "encoded": "0.7612",
+      "one_shot_all_sites": "6.888e-16",
+      "one_shot_pays": false,
+      "bell_pairs_per_delivered_site": "236.2",
+      "bell_pairs_register": "1.512e+04",
+      "multiplexed_pays": true
+    },
+    "m=99/100,tree=[3, 3],N=16": {
+      "bare": "0.1626",
+      "encoded": "0.7554",
+      "one_shot_all_sites": "4.123e-07",
+      "one_shot_pays": false,
+      "bell_pairs_per_delivered_site": "243.3",
+      "bell_pairs_register": "3893",
+      "multiplexed_pays": true
+    },
+    "m=99/100,tree=[3, 3],N=64": {
+      "bare": "4.529e-10",
+      "encoded": "0.6042",
+      "one_shot_all_sites": "2.89e-26",
+      "one_shot_pays": false,
+      "bell_pairs_per_delivered_site": "243.3",
+      "bell_pairs_register": "1.557e+04",
+      "multiplexed_pays": true
+    },
+    "m=99/100,tree=[4, 3],N=16": {
+      "bare": "0.1626",
+      "encoded": "0.7638",
+      "one_shot_all_sites": "2.694e-10",
+      "one_shot_pays": false,
+      "bell_pairs_per_delivered_site": "542.6",
+      "bell_pairs_register": "8682",
+      "multiplexed_pays": true
+    },
+    "m=99/100,tree=[4, 3],N=64": {
+      "bare": "4.529e-10",
+      "encoded": "0.7556",
+      "one_shot_all_sites": "5.267e-39",
+      "one_shot_pays": false,
+      "bell_pairs_per_delivered_site": "542.6",
+      "bell_pairs_register": "3.473e+04",
+      "multiplexed_pays": true
+    },
+    "m=9/10,tree=[3, 3],N=16": {
+      "bare": "4.986e-05",
+      "encoded": "0.00612",
+      "one_shot_all_sites": "1.438e-35",
+      "one_shot_pays": false,
+      "bell_pairs_per_delivered_site": "1.461e+04",
+      "bell_pairs_register": "2.338e+05",
+      "multiplexed_pays": true
+    },
+    "m=9/10,tree=[3, 3],N=64": {
+      "bare": "3.589e-55",
+      "encoded": "9.165e-27",
+      "one_shot_all_sites": "4.276e-140",
+      "one_shot_pays": false,
+      "bell_pairs_per_delivered_site": "1.461e+04",
+      "bell_pairs_register": "9.353e+05",
+      "multiplexed_pays": true
+    },
+    "m=9/10,tree=[4, 3],N=16": {
+      "bare": "4.986e-05",
+      "encoded": "0.09351",
+      "one_shot_all_sites": "1.717e-60",
+      "one_shot_pays": false,
+      "bell_pairs_per_delivered_site": "7.442e+05",
+      "bell_pairs_register": "1.191e+07",
+      "multiplexed_pays": true
+    },
+    "m=9/10,tree=[4, 3],N=64": {
+      "bare": "3.589e-55",
+      "encoded": "7.694e-13",
+      "one_shot_all_sites": "8.694e-240",
+      "one_shot_pays": false,
+      "bell_pairs_per_delivered_site": "7.442e+05",
+      "bell_pairs_register": "4.763e+07",
+      "multiplexed_pays": true
+    }
+  },
+  "grade": {
+    "grade": "BUILD_DECLARED",
+    "reasons": [
+      "block needs LAB_RECORDED size >= 3, ghz_witness and the per-site rule"
+    ]
+  },
+  "boundaries": [
+    "star growth rounds are not charged to storage; the root star is counted whole: a mixed bound, labelled",
+    "spare leaves and block sizes are design choices; m is declared",
+    "site multiplexing needs a buffer and a switch, whose loss is not counted here",
+    "nothing here changes the temperature verdict"
+  ]
+}
