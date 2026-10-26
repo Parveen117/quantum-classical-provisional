@@ -1,0 +1,5687 @@
+{
+  "schema": "native-optical-refresh-audit-v1",
+  "author": "Monty",
+  "status": "IDEAL_OPTICAL_INSTRUMENT_AND_FACTORY_VERIFIED_NO_DEVICE",
+  "generated_at": "2026-10-26T19:45:31.995487+00:00",
+  "checkout_base_commit": "4b17975ab81498404bc3a11dfbe7b1f22d2f4798",
+  "tests_run": 58,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "seconds": 110.333,
+  "source_sha256": {
+    "README.md": "88068e0bd4e47d43297373e69f305edfcd9981b7eb9c197bd471b2267a867980",
+    "benchmarks/optical_refresh_audit.py": "9104408fa1d011faf068131fc56fb37403f6e4a8d8331cc554dd55723cc7fe16",
+    "native_relational_qc/__init__.py": "2df0c6684869d87776756cc78918199a9a09fa86f8c9e6d41d675591698c9350",
+    "native_relational_qc/algebra.py": "3d23b2a3a345b0760bfce1cff9e4eea9635543ee566c9dd6f0078405f211e9ab",
+    "native_relational_qc/calculator.py": "019dfa25703f3766aeed8a53259984927ae64f0b87670e594b0a606fc407c62b",
+    "native_relational_qc/circuit.py": "6215adf52443de8ee1db01f8e641c4c50124810a7674fd3258d826ff08b9e366",
+    "native_relational_qc/compact.py": "1acff6eaa8664b4ba33285c66c9f433ecd0148aa8383a18f79dbd2ccb66e898d",
+    "native_relational_qc/cyclotomic.py": "36a9f93fb9b6362a6141f13f4aef677de9f19642f6ea01ebb761614acab4ea86",
+    "native_relational_qc/cyclotomic32.py": "33e203a7280bbe8341e37cb357f1bb6bfcaba9e695ff5144050e3a087733ab76",
+    "native_relational_qc/cyclotomic64.py": "8fc9c42627feee330b00f1b56559031cc442746e830081eae09f535115d74e52",
+    "native_relational_qc/dynamic.py": "88421139cba72f0d86f3644c5933e03dd44d8afa1fdc79b250b2e8bf5390acd9",
+    "native_relational_qc/dynamic_examples.py": "0d40d9b3dbf098623c7586f13cdb54d9c6f627e4af6f0c398e79f983129d259e",
+    "native_relational_qc/exact.py": "cc0b3be70660ed819b3ad153620ea4338fb6bf57102a4474d4355da2805afdf6",
+    "native_relational_qc/modular_arithmetic.py": "dc59c9b09acf82cfee877d707901022f91fbe9a9284eb00cf6168e844b9368ce",
+    "native_relational_qc/observer.py": "eec5857176d20158e50c5d00a314483f9ce67a17a12fc7cc94416a754bd80833",
+    "native_relational_qc/phase_backend.py": "b47a5cfe04449a5def450aa3170ff11697436705427da83050f4aee08345dd98",
+    "native_relational_qc/state.py": "2ff1413d09f36f6449eb6ae7ca8c53de71ac86b9b0711e080849987ab031093e",
+    "phase_seam_foundation/LOSS_REFRESH.md": "ce69fc10f656f0594ebe4e9722a81a305b865dbe1c1441a8b60bacd636b3439e",
+    "phase_seam_foundation/OPTICAL_REFRESH.md": "19e7cbe1a54b2c090ff7c7c761db5782d038d75ff906ce2676446acae279feef",
+    "phase_seam_foundation/README.md": "ebd81a2643515c40f6e7dac4f711079fd47b0898bf1ee819958fdc1b979a31c2",
+    "phase_seam_foundation/TREE_BUILD.md": "c8a2af788f3d0c0af0df127e2726de9dfc157113e46bf4d74ff97b854cbc2a79",
+    "phase_seam_foundation/TREE_CODE.md": "12a3deac3d12257a9d65d6560c313d704f29647c6bd0310ef970fb6d2dd9cae1",
+    "phase_seam_foundation/__init__.py": "cf70be9ef06c41af5647c2363a63d24dd52dc7bb1445482f3780d2f62cedf1dc",
+    "phase_seam_foundation/chain_memory.py": "74dc2300dc8b16e4c9eefccf1e30c5372529c1bbf3f6a90680570fa0192e9af5",
+    "phase_seam_foundation/cluster_compile.py": "89ce8ae89170fcf99185b15632377b2c4d024ba94ec635c28e331cacc5b4b5e0",
+    "phase_seam_foundation/controller.py": "ba74ab91b6ea9d1234256420225ba3ef5cc50a63ebf4ed0fa5d571af2169285d",
+    "phase_seam_foundation/dual_rail.py": "47062f1c68bad43033f8d22d99dfac759d0edc01a07b16a6cd1295cf5b3650d2",
+    "phase_seam_foundation/fusion_network.py": "5b3e4fb6e49c445c7796e1c474a981c2c35eb8ceb046332986ee75e10b2de10f",
+    "phase_seam_foundation/ledger_violations.py": "e30f01973c95f90cdeee6ff472b8ee33a031ce9061a1aad9d77a52d561e4b72a",
+    "phase_seam_foundation/loss_budget.py": "5313b33097fdd6a820c3b05b9a1ae95b5ea165695681ad8066715176dc22ff58",
+    "phase_seam_foundation/loss_refresh.py": "97126259eb95466263e212baf835e2772dd7d2dcca258e7e54cc7f0b72afe4f7",
+    "phase_seam_foundation/loss_tolerant_code.py": "c3ef9a10dd0a714f0c9e89d59ce6e17f8df9213de57089e36a7c9b098a293d6f",
+    "phase_seam_foundation/model.py": "642984f5be7345683374719dc66193883d0688031e49ff9ebde12c5a36a939b8",
+    "phase_seam_foundation/optical_refresh.py": "d1a50d94862c96bdf765fa865d5c9d6674b2d878ab746633644277f94506eb23",
+    "phase_seam_foundation/photonic_exchange.py": "1414ba5fffd110d35f339941059cccd086fd1b7cc4a3df84c3794095c4d77997",
+    "phase_seam_foundation/photonic_io.py": "6e7554b073e78cbd58ef26fcd2c2327f89f696bdb85d2d375f980914bb57d3bf",
+    "phase_seam_foundation/photonic_layout.py": "c6debe28447121ad7b4522acd91ca60e41cd58d0274905dc12908c5dfbf6d350",
+    "phase_seam_foundation/photonic_response.py": "365409d0ef4fa63c1f315bb86c9113814ca6149e71fa86398c19ec965e50c347",
+    "phase_seam_foundation/register.py": "d29fa6736256368b5a4885744b79a852146bc63d60fa98ec4a3ac18c26fa2b9d",
+    "phase_seam_foundation/sector_control.py": "fe528d000e7465e5ba359c6195172720624d5bebca92f15f1d03f9af6cf5694a",
+    "phase_seam_foundation/source_spec.py": "31623c54b6f5afa708d445dc81d0c89d97985a2e3df7f450d440eed0e7e99c32",
+    "phase_seam_foundation/temperature_sweep.py": "1cf266cebfd235e76208291f6d6dbdcf95c44e56aa534ab3526e9e5f46d85615",
+    "phase_seam_foundation/tree_build.py": "e821489410a0fd4904f383bca2f3dea0e1d1387c4534d23f6eb59eab5da19ff7",
+    "tests/test_phase_seam_cluster_compile.py": "1991236b4197c23451ae4491a8136d4bd55fdafe819774665c53c8ea07c5625a",
+    "tests/test_phase_seam_loss_refresh.py": "c5eebcfd38677299e75df3af6b585d4669f79807aa43dccafe1617caa8cdb54b",
+    "tests/test_phase_seam_optical_refresh.py": "08b9f5ca3a010e707191df48aefc18c071a37c758a73ba1514607918f5b8ddb5"
+  },
+  "netlist_sha256": "92a626c488b679f060c2c29a78759dc24f1aa7b0b69d02dd6966f51e1da8d6e7",
+  "test_log_sha256": "fb8819e85ae6a89909a4e261762b59e8f8b0564195c9bd460fca56f6c82409b0",
+  "bell_instrument": {
+    "status": "EXACT_TWO_PHOTON_PASSIVE_INSTRUMENT",
+    "mode_unitary": [
+      [
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      ],
+      [
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      ],
+      [
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      ],
+      [
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "-1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      ]
+    ],
+    "outcomes": [
+      {
+        "outcome": [
+          2,
+          0,
+          0,
+          0
+        ],
+        "row": [
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "kraus": [
+          [
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ],
+          [
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ]
+        ],
+        "accepted": false
+      },
+      {
+        "outcome": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "row": [
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "kraus": [
+          [
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "1/4",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ],
+          [
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "1/4",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ]
+        ],
+        "accepted": true,
+        "bell_label": "psi_plus",
+        "x_correction": 1,
+        "z_correction": 0,
+        "corrected_identity": true,
+        "probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1/8",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      },
+      {
+        "outcome": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "row": [
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "kraus": [
+          [
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ],
+          [
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ]
+        ],
+        "accepted": false
+      },
+      {
+        "outcome": [
+          1,
+          0,
+          0,
+          1
+        ],
+        "row": [
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "-1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "kraus": [
+          [
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "1/4",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ],
+          [
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "-1/4",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ]
+        ],
+        "accepted": true,
+        "bell_label": "psi_minus",
+        "x_correction": 1,
+        "z_correction": 1,
+        "corrected_identity": true,
+        "probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1/8",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      },
+      {
+        "outcome": [
+          0,
+          2,
+          0,
+          0
+        ],
+        "row": [
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "kraus": [
+          [
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ],
+          [
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ]
+        ],
+        "accepted": false
+      },
+      {
+        "outcome": [
+          0,
+          1,
+          1,
+          0
+        ],
+        "row": [
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "-1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "kraus": [
+          [
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "-1/4",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ],
+          [
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "1/4",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ]
+        ],
+        "accepted": true,
+        "bell_label": "psi_minus",
+        "x_correction": 1,
+        "z_correction": 1,
+        "corrected_identity": true,
+        "probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1/8",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      },
+      {
+        "outcome": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "row": [
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "kraus": [
+          [
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ],
+          [
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ]
+        ],
+        "accepted": false
+      },
+      {
+        "outcome": [
+          0,
+          0,
+          2,
+          0
+        ],
+        "row": [
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "-1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "kraus": [
+          [
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "-1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ],
+          [
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ]
+        ],
+        "accepted": false
+      },
+      {
+        "outcome": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "row": [
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "-1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "-1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "kraus": [
+          [
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "-1/4",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ],
+          [
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "-1/4",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ]
+        ],
+        "accepted": true,
+        "bell_label": "psi_plus",
+        "x_correction": 1,
+        "z_correction": 0,
+        "corrected_identity": true,
+        "probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1/8",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      },
+      {
+        "outcome": [
+          0,
+          0,
+          0,
+          2
+        ],
+        "row": [
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "-1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "kraus": [
+          [
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ],
+          [
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            {
+              "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+              "coefficients": [
+                "-1/2",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ]
+        ],
+        "accepted": false
+      }
+    ],
+    "complete": true,
+    "success_probability": {
+      "exact": "1/2",
+      "decimal": 0.5
+    },
+    "accepted_patterns": 4,
+    "couplers": 2,
+    "phase_shifts": 4,
+    "detector_modes": 4,
+    "maximum_measured_photons": 2,
+    "input_independent_success": true
+  },
+  "factory": {
+    "status": "EXACT_LOSSLESS_FACTORY_NO_MEASURED_SOURCE",
+    "branching": [
+      2,
+      2
+    ],
+    "source_graph_stars": 3,
+    "photons_supplied": 9,
+    "photons_detected": 2,
+    "photons_delivered": 7,
+    "data_photons": 6,
+    "bell_port_photons": 1,
+    "input_stars": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        3,
+        4,
+        5
+      ],
+      [
+        6,
+        7,
+        8
+      ]
+    ],
+    "ghz_to_star_hadamards": [
+      1,
+      2,
+      4,
+      5,
+      7,
+      8
+    ],
+    "fusion_sequence": [
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        6
+      ]
+    ],
+    "merge_mode_order": [
+      "a0",
+      "a1",
+      "b0",
+      "b1"
+    ],
+    "merge_coupler_modes": [
+      1,
+      2
+    ],
+    "merge_detector_modes": [
+      1,
+      2
+    ],
+    "merge_survivor_modes": [
+      0,
+      3
+    ],
+    "merge_rule": "exactly one detected photon",
+    "failure_policy": "prepare all three stars first; discard entire candidate on either failure",
+    "output_graph_labels": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      7,
+      8
+    ],
+    "bell_port_label": 0,
+    "output_graph_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        2,
+        8
+      ]
+    ],
+    "code_photon_labels": [
+      1,
+      2,
+      4,
+      5,
+      7,
+      8
+    ],
+    "branches": [
+      {
+        "clicks": [
+          1,
+          1
+        ],
+        "phase_corrections": [
+          16,
+          16
+        ],
+        "first_click_probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1/4",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1/16",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "target_graph_matches": true
+      },
+      {
+        "clicks": [
+          1,
+          2
+        ],
+        "phase_corrections": [
+          16,
+          48
+        ],
+        "first_click_probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1/4",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1/16",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "target_graph_matches": true
+      },
+      {
+        "clicks": [
+          2,
+          1
+        ],
+        "phase_corrections": [
+          48,
+          16
+        ],
+        "first_click_probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1/4",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1/16",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "target_graph_matches": true
+      },
+      {
+        "clicks": [
+          2,
+          2
+        ],
+        "phase_corrections": [
+          48,
+          48
+        ],
+        "first_click_probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1/4",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1/16",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "target_graph_matches": true
+      }
+    ],
+    "success_probability": {
+      "exact": "1/4",
+      "decimal": 0.25
+    },
+    "rejected_at_first_attachment_probability": {
+      "exact": "1/2",
+      "decimal": 0.5
+    },
+    "rejected_at_second_attachment_probability": {
+      "exact": "1/4",
+      "decimal": 0.25
+    },
+    "expected_bell_pairs_per_factory_attempt": {
+      "exact": "12",
+      "decimal": 12.0
+    },
+    "expected_bell_pairs_per_delivered_resource": {
+      "exact": "48",
+      "decimal": 48.0
+    },
+    "expected_source_photons_per_delivered_resource": {
+      "exact": "96",
+      "decimal": 96.0
+    },
+    "expected_factory_attempts": {
+      "exact": "4",
+      "decimal": 4.0
+    },
+    "attachment_rounds_on_success": 2,
+    "expected_attachment_rounds_per_attempt": {
+      "exact": "3/2",
+      "decimal": 1.5
+    },
+    "expected_attachment_rounds_per_delivered_resource": {
+      "exact": "6",
+      "decimal": 6.0
+    },
+    "star_preparation_time_included": false,
+    "storage_loss_included": false,
+    "fresh_port_is_unmeasured": true
+  },
+  "correctable_known_masks": 13,
+  "known_erasure_transfers": [
+    {
+      "status": "IDEAL_PASSIVE_OPTICS_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "lost_masks": [
+        0
+      ],
+      "known_erasure_map_required": true,
+      "herald_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "herald_condition_reported": true,
+      "decoder_outcomes_postselected": false,
+      "transfers": 1,
+      "simulator_wires": 14
+    },
+    {
+      "status": "IDEAL_PASSIVE_OPTICS_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "lost_masks": [
+        1
+      ],
+      "known_erasure_map_required": true,
+      "herald_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "herald_condition_reported": true,
+      "decoder_outcomes_postselected": false,
+      "transfers": 1,
+      "simulator_wires": 14
+    },
+    {
+      "status": "IDEAL_PASSIVE_OPTICS_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "lost_masks": [
+        2
+      ],
+      "known_erasure_map_required": true,
+      "herald_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "herald_condition_reported": true,
+      "decoder_outcomes_postselected": false,
+      "transfers": 1,
+      "simulator_wires": 14
+    },
+    {
+      "status": "IDEAL_PASSIVE_OPTICS_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "lost_masks": [
+        4
+      ],
+      "known_erasure_map_required": true,
+      "herald_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "herald_condition_reported": true,
+      "decoder_outcomes_postselected": false,
+      "transfers": 1,
+      "simulator_wires": 14
+    },
+    {
+      "status": "IDEAL_PASSIVE_OPTICS_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "lost_masks": [
+        5
+      ],
+      "known_erasure_map_required": true,
+      "herald_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "herald_condition_reported": true,
+      "decoder_outcomes_postselected": false,
+      "transfers": 1,
+      "simulator_wires": 14
+    },
+    {
+      "status": "IDEAL_PASSIVE_OPTICS_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "lost_masks": [
+        8
+      ],
+      "known_erasure_map_required": true,
+      "herald_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "herald_condition_reported": true,
+      "decoder_outcomes_postselected": false,
+      "transfers": 1,
+      "simulator_wires": 14
+    },
+    {
+      "status": "IDEAL_PASSIVE_OPTICS_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "lost_masks": [
+        9
+      ],
+      "known_erasure_map_required": true,
+      "herald_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "herald_condition_reported": true,
+      "decoder_outcomes_postselected": false,
+      "transfers": 1,
+      "simulator_wires": 14
+    },
+    {
+      "status": "IDEAL_PASSIVE_OPTICS_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "lost_masks": [
+        12
+      ],
+      "known_erasure_map_required": true,
+      "herald_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "herald_condition_reported": true,
+      "decoder_outcomes_postselected": false,
+      "transfers": 1,
+      "simulator_wires": 14
+    },
+    {
+      "status": "IDEAL_PASSIVE_OPTICS_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "lost_masks": [
+        16
+      ],
+      "known_erasure_map_required": true,
+      "herald_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "herald_condition_reported": true,
+      "decoder_outcomes_postselected": false,
+      "transfers": 1,
+      "simulator_wires": 14
+    },
+    {
+      "status": "IDEAL_PASSIVE_OPTICS_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "lost_masks": [
+        18
+      ],
+      "known_erasure_map_required": true,
+      "herald_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "herald_condition_reported": true,
+      "decoder_outcomes_postselected": false,
+      "transfers": 1,
+      "simulator_wires": 14
+    },
+    {
+      "status": "IDEAL_PASSIVE_OPTICS_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "lost_masks": [
+        32
+      ],
+      "known_erasure_map_required": true,
+      "herald_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "herald_condition_reported": true,
+      "decoder_outcomes_postselected": false,
+      "transfers": 1,
+      "simulator_wires": 14
+    },
+    {
+      "status": "IDEAL_PASSIVE_OPTICS_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "lost_masks": [
+        34
+      ],
+      "known_erasure_map_required": true,
+      "herald_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "herald_condition_reported": true,
+      "decoder_outcomes_postselected": false,
+      "transfers": 1,
+      "simulator_wires": 14
+    },
+    {
+      "status": "IDEAL_PASSIVE_OPTICS_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "lost_masks": [
+        48
+      ],
+      "known_erasure_map_required": true,
+      "herald_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "herald_condition_reported": true,
+      "decoder_outcomes_postselected": false,
+      "transfers": 1,
+      "simulator_wires": 14
+    }
+  ],
+  "fixed_no_oracle_masks": [
+    0,
+    16,
+    32,
+    48
+  ],
+  "fixed_no_oracle_transfers": [
+    {
+      "status": "IDEAL_PASSIVE_OPTICS_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "lost_masks": [
+        0
+      ],
+      "known_erasure_map_required": false,
+      "herald_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "herald_condition_reported": true,
+      "decoder_outcomes_postselected": false,
+      "transfers": 1,
+      "simulator_wires": 14
+    },
+    {
+      "status": "IDEAL_PASSIVE_OPTICS_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "lost_masks": [
+        16
+      ],
+      "known_erasure_map_required": false,
+      "herald_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "herald_condition_reported": true,
+      "decoder_outcomes_postselected": false,
+      "transfers": 1,
+      "simulator_wires": 14
+    },
+    {
+      "status": "IDEAL_PASSIVE_OPTICS_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "lost_masks": [
+        32
+      ],
+      "known_erasure_map_required": false,
+      "herald_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "herald_condition_reported": true,
+      "decoder_outcomes_postselected": false,
+      "transfers": 1,
+      "simulator_wires": 14
+    },
+    {
+      "status": "IDEAL_PASSIVE_OPTICS_WITH_SUPPLIED_RESOURCE",
+      "branching": [
+        2,
+        2
+      ],
+      "lost_masks": [
+        48
+      ],
+      "known_erasure_map_required": false,
+      "herald_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "rejected_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "joint_bell_projector": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "conditional_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "herald_condition_reported": true,
+      "decoder_outcomes_postselected": false,
+      "transfers": 1,
+      "simulator_wires": 14
+    }
+  ],
+  "two_transfer_witness": {
+    "status": "IDEAL_PASSIVE_OPTICS_WITH_SUPPLIED_RESOURCE",
+    "branching": [
+      2,
+      2
+    ],
+    "lost_masks": [
+      1,
+      16
+    ],
+    "known_erasure_map_required": true,
+    "herald_probability": {
+      "basis": "1,sqrt(2),i,i*sqrt(2)",
+      "coefficients": [
+        "1/4",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "rejected_probability": {
+      "basis": "1,sqrt(2),i,i*sqrt(2)",
+      "coefficients": [
+        "3/4",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "joint_bell_projector": {
+      "basis": "1,sqrt(2),i,i*sqrt(2)",
+      "coefficients": [
+        "1/4",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "conditional_entanglement_fidelity": {
+      "basis": "1,sqrt(2),i,i*sqrt(2)",
+      "coefficients": [
+        "1",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "herald_condition_reported": true,
+    "decoder_outcomes_postselected": false,
+    "transfers": 2,
+    "simulator_wires": 21
+  },
+  "no_feedback_control": {
+    "status": "IDEAL_PASSIVE_OPTICS_WITH_SUPPLIED_RESOURCE",
+    "branching": [
+      2,
+      2
+    ],
+    "lost_masks": [
+      1
+    ],
+    "known_erasure_map_required": true,
+    "herald_probability": {
+      "basis": "1,sqrt(2),i,i*sqrt(2)",
+      "coefficients": [
+        "1/2",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "rejected_probability": {
+      "basis": "1,sqrt(2),i,i*sqrt(2)",
+      "coefficients": [
+        "1/2",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "joint_bell_projector": {
+      "basis": "1,sqrt(2),i,i*sqrt(2)",
+      "coefficients": [
+        "1/8",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "conditional_entanglement_fidelity": {
+      "basis": "1,sqrt(2),i,i*sqrt(2)",
+      "coefficients": [
+        "1/4",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "herald_condition_reported": true,
+    "decoder_outcomes_postselected": false,
+    "transfers": 1,
+    "simulator_wires": 14
+  },
+  "declared_pure_loss_budgets": [
+    {
+      "status": "DECLARED_PURE_LOSS_JOINT_BUDGET_NOT_MEASURED_FIDELITY",
+      "branching": [
+        2,
+        2
+      ],
+      "inputs": {
+        "memory": {
+          "exact": "99/100",
+          "decimal": 0.99
+        },
+        "storage_rounds": 10,
+        "pre_bell_rounds": 0,
+        "post_bell_rounds": 0,
+        "decoder_efficiency": {
+          "exact": "9/10",
+          "decimal": 0.9
+        },
+        "bell_efficiency": {
+          "exact": "9/10",
+          "decimal": 0.9
+        },
+        "resource_ready": {
+          "exact": "1",
+          "decimal": 1.0
+        }
+      },
+      "policy": "FIXED_PHYSICAL_MEASUREMENTS",
+      "supply_model": "full correct resource or no launch; partial-source false heralds excluded",
+      "input_usable_probability": {
+        "exact": "66897175856968051393833859880371221146543227691483931958981106325809049127796001/100000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "decimal": 0.6689717585696805
+      },
+      "intrinsic_bell_success": {
+        "exact": "1/2",
+        "decimal": 0.5
+      },
+      "required_decoder_detections": 3,
+      "total_required_detections": 5,
+      "herald_probability": {
+        "exact": "3950211337178106466754495592076040237482231051954434698245875347432698541947226063049/20000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "decimal": 0.19751056685890533
+      },
+      "fresh_payload_survival": {
+        "exact": "1",
+        "decimal": 1.0
+      },
+      "herald_and_intact_output_probability": {
+        "exact": "3950211337178106466754495592076040237482231051954434698245875347432698541947226063049/20000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "decimal": 0.19751056685890533
+      },
+      "payload_loss_can_be_unheralded": false,
+      "elapsed_rounds": 10,
+      "resource_factory_time_included": false,
+      "conditional_fidelity_with_payload_loss_not_claimed": true
+    },
+    {
+      "status": "DECLARED_PURE_LOSS_JOINT_BUDGET_NOT_MEASURED_FIDELITY",
+      "branching": [
+        2,
+        2
+      ],
+      "inputs": {
+        "memory": {
+          "exact": "99/100",
+          "decimal": 0.99
+        },
+        "storage_rounds": 10,
+        "pre_bell_rounds": 1,
+        "post_bell_rounds": 1,
+        "decoder_efficiency": {
+          "exact": "9/10",
+          "decimal": 0.9
+        },
+        "bell_efficiency": {
+          "exact": "9/10",
+          "decimal": 0.9
+        },
+        "resource_ready": {
+          "exact": "1",
+          "decimal": 1.0
+        }
+      },
+      "policy": "FIXED_PHYSICAL_MEASUREMENTS",
+      "supply_model": "full correct resource or no launch; partial-source false heralds excluded",
+      "input_usable_probability": {
+        "exact": "66897175856968051393833859880371221146543227691483931958981106325809049127796001/100000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "decimal": 0.6689717585696805
+      },
+      "intrinsic_bell_success": {
+        "exact": "1/2",
+        "decimal": 0.5
+      },
+      "required_decoder_detections": 3,
+      "total_required_detections": 5,
+      "herald_probability": {
+        "exact": "38716021315682621480660811297937270367563346540205414477507824280187878409624762643943249/200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "decimal": 0.1935801065784131
+      },
+      "fresh_payload_survival": {
+        "exact": "886384871716129280658801/1000000000000000000000000",
+        "decimal": 0.8863848717161292
+      },
+      "herald_and_intact_output_probability": {
+        "exact": "34317295587260267212847964205328657393933265564749118992796200011998122119213026168381436522703057521823176384449/200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "decimal": 0.17158647793630133
+      },
+      "payload_loss_can_be_unheralded": true,
+      "elapsed_rounds": 12,
+      "resource_factory_time_included": false,
+      "conditional_fidelity_with_payload_loss_not_claimed": true
+    },
+    {
+      "status": "DECLARED_PURE_LOSS_JOINT_BUDGET_NOT_MEASURED_FIDELITY",
+      "branching": [
+        2,
+        2
+      ],
+      "inputs": {
+        "memory": {
+          "exact": "99/100",
+          "decimal": 0.99
+        },
+        "storage_rounds": 10,
+        "pre_bell_rounds": 0,
+        "post_bell_rounds": 0,
+        "decoder_efficiency": {
+          "exact": "9/10",
+          "decimal": 0.9
+        },
+        "bell_efficiency": {
+          "exact": "9/10",
+          "decimal": 0.9
+        },
+        "resource_ready": {
+          "exact": "1",
+          "decimal": 1.0
+        }
+      },
+      "policy": "KNOWN_ERASURE_ORACLE",
+      "supply_model": "full correct resource or no launch; partial-source false heralds excluded",
+      "input_usable_probability": {
+        "exact": "930950790983624657137253155586946230643011257473532214958941231609290627580631122309234628361020160977767293609297694001/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "decimal": 0.9309507909836247
+      },
+      "intrinsic_bell_success": {
+        "exact": "1/2",
+        "decimal": 0.5
+      },
+      "required_decoder_detections": 3,
+      "total_required_detections": 5,
+      "herald_probability": {
+        "exact": "54971713256792052379297661584253587973239171742554603761110520785297002268008687141237995570089879485576180920335419533065049/200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "decimal": 0.27485856628396027
+      },
+      "fresh_payload_survival": {
+        "exact": "1",
+        "decimal": 1.0
+      },
+      "herald_and_intact_output_probability": {
+        "exact": "54971713256792052379297661584253587973239171742554603761110520785297002268008687141237995570089879485576180920335419533065049/200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "decimal": 0.27485856628396027
+      },
+      "payload_loss_can_be_unheralded": false,
+      "elapsed_rounds": 10,
+      "resource_factory_time_included": false,
+      "conditional_fidelity_with_payload_loss_not_claimed": true
+    },
+    {
+      "status": "DECLARED_PURE_LOSS_JOINT_BUDGET_NOT_MEASURED_FIDELITY",
+      "branching": [
+        2,
+        2
+      ],
+      "inputs": {
+        "memory": {
+          "exact": "99/100",
+          "decimal": 0.99
+        },
+        "storage_rounds": 10,
+        "pre_bell_rounds": 1,
+        "post_bell_rounds": 1,
+        "decoder_efficiency": {
+          "exact": "9/10",
+          "decimal": 0.9
+        },
+        "bell_efficiency": {
+          "exact": "9/10",
+          "decimal": 0.9
+        },
+        "resource_ready": {
+          "exact": "1",
+          "decimal": 1.0
+        }
+      },
+      "policy": "KNOWN_ERASURE_ORACLE",
+      "supply_model": "full correct resource or no launch; partial-source false heralds excluded",
+      "input_usable_probability": {
+        "exact": "930950790983624657137253155586946230643011257473532214958941231609290627580631122309234628361020160977767293609297694001/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "decimal": 0.9309507909836247
+      },
+      "intrinsic_bell_success": {
+        "exact": "1/2",
+        "decimal": 0.5
+      },
+      "required_decoder_detections": 3,
+      "total_required_detections": 5,
+      "herald_probability": {
+        "exact": "538777761629818905369496381187269415725717122248777671462644214216695919228753142671273594582450908838132149200207446843570545249/2000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "decimal": 0.26938888081490947
+      },
+      "fresh_payload_survival": {
+        "exact": "886384871716129280658801/1000000000000000000000000",
+        "decimal": 0.8863848717161292
+      },
+      "herald_and_intact_output_probability": {
+        "exact": "477564457125750311060223424545776529998859520059206784816303573736599305172234457443920072182410282810640710315889084688745067713904841265364909500586449/2000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "decimal": 0.23878222856287515
+      },
+      "payload_loss_can_be_unheralded": true,
+      "elapsed_rounds": 12,
+      "resource_factory_time_included": false,
+      "conditional_fidelity_with_payload_loss_not_claimed": true
+    }
+  ],
+  "boundaries": [
+    "ideal passive optics with indistinguishable photons, correct supplied resources and resolved photon counts",
+    "conditional Choi fidelity and herald probability are separate; decoder outcomes are averaged",
+    "known-erasure selection requires an external loss map; the fixed policy accepts only four masks",
+    "the dynamic Bell CNOT is a verification adapter; the physical plan uses two passive couplers",
+    "factory certificate covers only the seven-photon [2,2] encoded Bell resource",
+    "48 expected ideal Bell pairs includes source/factory failures under the full-restart zero-storage-loss policy",
+    "factory star preparation latency and real source/switch/buffer losses are not priced",
+    "budget supply is full-resource or no launch; partly populated/incorrect source false heralds excluded",
+    "fresh payload losses may be unheralded; Bell clicks alone do not certify an intact fresh block",
+    "no measured noise, temperature, fabricated chip or physical repeated-refresh demonstration"
+  ]
+}

@@ -1,6 +1,17 @@
 # Phase–seam foundation prototype
 
-**New: [the trained classifier as a measurement pattern on a fusion-built cluster](CLUSTER_COMPILE.md).**
+**New: [optical fresh-node transfer and encoded Bell factory](OPTICAL_REFRESH.md).**
+The v0.30 decoder uses single-photon measurements and feedback. Its
+two-coupler Bell analyser has exact success 1/2; all detector patterns are
+included. A seven-photon resource is assembled by two type-I fusions, with
+48 expected ideal Bell pairs under an explicit full-restart, zero-loss
+factory policy. Known-loss and fixed measurement policies have separate
+acceptance budgets; fresh-payload loss is not certified by a Bell herald.
+Conditional fidelity 1 is verified in the ideal model, including two
+transfers with joint success 1/4. Physical supply, latency and device
+performance remain unmeasured. [Audit](optical_refresh/qualification.json).
+
+**Previous: [the trained classifier as a measurement pattern on a fusion-built cluster](CLUSTER_COMPILE.md).**
 The v0.29 packet compiles the self-learning branch's four-qubit, five-angle,
 three-CNOT classifier into the only form the dual-rail route can execute: a
 13-photon tree cluster (12 edges, 7 heralded fusions) read by ten single-photon

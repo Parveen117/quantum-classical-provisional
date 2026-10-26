@@ -2,6 +2,14 @@
 
 ## Phase–seam foundation and hardware contract
 
+The [v0.30 optical refresh](phase_seam_foundation/OPTICAL_REFRESH.md) lowers
+coherent loss recovery to single-photon controls and a two-coupler Bell
+analyser with exact success 1/2. A seven-photon encoded Bell resource has an
+explicit fusion factory and a full-restart cost of 48 expected ideal Bell
+pairs with zero storage loss. Detector, supply and latency budgets separate
+a Bell herald from survival of the fresh payload. These are verified ideal
+optical models; physical source and device performance remain unmeasured.
+
 The [v0.16 Hamiltonian bridge](phase_seam_foundation/BUS_HAMILTONIAN.md)
 reuses the collaboration branch's unchanged flat exact field for centered
 bus generators. It derives a conditional interaction/Fourier schedule,
