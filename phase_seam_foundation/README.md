@@ -1,5 +1,14 @@
 # Phase–seam foundation prototype
 
+**New: [temperature-sweep evidence contract](TEMPERATURE_SWEEP.md).**
+The v0.17 module separates room-temperature operation, temperature-independent
+logical transfer and temperature-independent physics. It proves exact
+common-mode invariance of all 24 observables, the kernel-or-correctable
+dichotomy for phase-only drift, a declared thermo-optic scale and the
+two-photon coincidence at one unit, and supplies an unrun sweep protocol with
+a fail-closed verdict. The present SNSPD route grades as cryogenic; no
+temperature claim follows without a recorded log.
+
 **New: [effective Hamiltonian and microscopic error bridge](BUS_HAMILTONIAN.md).**
 The v0.16 design compiles both bus kicks from a conditional level-shift
 interaction and bus Fourier transforms. Centering needs finer exact phases,

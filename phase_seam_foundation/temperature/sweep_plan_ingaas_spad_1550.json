@@ -1,0 +1,364 @@
+{
+  "schema": "native-photonic-temperature-sweep-v1",
+  "author": "Monty",
+  "status": "NOT_RUN",
+  "evidence_class": null,
+  "detector_option": {
+    "option": "ingaas_spad_1550",
+    "signal_band_nm": [
+      1500,
+      1600
+    ],
+    "detector_temperature_c_range": [
+      -70,
+      -30
+    ],
+    "thermal_class_if_recorded": "CRYOGEN_FREE",
+    "design_change": "detector only; same SiN core and SPDC source"
+  },
+  "wavelength_nm": "1550",
+  "reference_temperature_c": "15",
+  "points": [
+    {
+      "chip_temperature_c": "15",
+      "stages": [
+        {
+          "stage": "stabilize",
+          "record": [
+            "chip stage temperature trace",
+            "source crystal temperature",
+            "detector temperature",
+            "ambient temperature",
+            "settling time"
+          ]
+        },
+        {
+          "stage": "bright_light_calibration",
+          "channels": 31,
+          "context": {
+            "wavelength_nm": "1550",
+            "chip_temperature_c": "15"
+          },
+          "output": "RECORDED calibration profile for this temperature; evidence_class LAB_RECORDED"
+        },
+        {
+          "stage": "protocol_calibrated",
+          "settings": 106,
+          "calibration": "this temperature",
+          "compare_to": "exact ideal probabilities from the calculator",
+          "statistic": "total-variation bound with declared confidence"
+        },
+        {
+          "stage": "protocol_uncalibrated_control",
+          "settings": 106,
+          "calibration": "profile recorded at 15 C",
+          "purpose": "measures raw drift the correction must absorb"
+        },
+        {
+          "stage": "miscalibration_control",
+          "settings": 106,
+          "perturbation": "core_0 lower arm +8 steps of pi/32 from the calibrated value",
+          "purpose": "establishes that the statistic has power to see a known phase error"
+        },
+        {
+          "stage": "two_photon_hom",
+          "unit": "exchange_0",
+          "theta_pi_over_32": 16,
+          "ideal": {
+            "indistinguishable": "0",
+            "distinguishable": "1/2"
+          },
+          "record": [
+            "coincidences versus relative delay",
+            "heralded g2(0) of the source at this temperature"
+          ]
+        },
+        {
+          "stage": "temperature_log",
+          "subsystems": [
+            "chip",
+            "source",
+            "detector",
+            "electronics"
+          ]
+        }
+      ]
+    },
+    {
+      "chip_temperature_c": "25",
+      "stages": [
+        {
+          "stage": "stabilize",
+          "record": [
+            "chip stage temperature trace",
+            "source crystal temperature",
+            "detector temperature",
+            "ambient temperature",
+            "settling time"
+          ]
+        },
+        {
+          "stage": "bright_light_calibration",
+          "channels": 31,
+          "context": {
+            "wavelength_nm": "1550",
+            "chip_temperature_c": "25"
+          },
+          "output": "RECORDED calibration profile for this temperature; evidence_class LAB_RECORDED"
+        },
+        {
+          "stage": "protocol_calibrated",
+          "settings": 106,
+          "calibration": "this temperature",
+          "compare_to": "exact ideal probabilities from the calculator",
+          "statistic": "total-variation bound with declared confidence"
+        },
+        {
+          "stage": "protocol_uncalibrated_control",
+          "settings": 106,
+          "calibration": "profile recorded at 15 C",
+          "purpose": "measures raw drift the correction must absorb"
+        },
+        {
+          "stage": "miscalibration_control",
+          "settings": 106,
+          "perturbation": "core_0 lower arm +8 steps of pi/32 from the calibrated value",
+          "purpose": "establishes that the statistic has power to see a known phase error"
+        },
+        {
+          "stage": "two_photon_hom",
+          "unit": "exchange_0",
+          "theta_pi_over_32": 16,
+          "ideal": {
+            "indistinguishable": "0",
+            "distinguishable": "1/2"
+          },
+          "record": [
+            "coincidences versus relative delay",
+            "heralded g2(0) of the source at this temperature"
+          ]
+        },
+        {
+          "stage": "temperature_log",
+          "subsystems": [
+            "chip",
+            "source",
+            "detector",
+            "electronics"
+          ]
+        }
+      ]
+    },
+    {
+      "chip_temperature_c": "35",
+      "stages": [
+        {
+          "stage": "stabilize",
+          "record": [
+            "chip stage temperature trace",
+            "source crystal temperature",
+            "detector temperature",
+            "ambient temperature",
+            "settling time"
+          ]
+        },
+        {
+          "stage": "bright_light_calibration",
+          "channels": 31,
+          "context": {
+            "wavelength_nm": "1550",
+            "chip_temperature_c": "35"
+          },
+          "output": "RECORDED calibration profile for this temperature; evidence_class LAB_RECORDED"
+        },
+        {
+          "stage": "protocol_calibrated",
+          "settings": 106,
+          "calibration": "this temperature",
+          "compare_to": "exact ideal probabilities from the calculator",
+          "statistic": "total-variation bound with declared confidence"
+        },
+        {
+          "stage": "protocol_uncalibrated_control",
+          "settings": 106,
+          "calibration": "profile recorded at 15 C",
+          "purpose": "measures raw drift the correction must absorb"
+        },
+        {
+          "stage": "miscalibration_control",
+          "settings": 106,
+          "perturbation": "core_0 lower arm +8 steps of pi/32 from the calibrated value",
+          "purpose": "establishes that the statistic has power to see a known phase error"
+        },
+        {
+          "stage": "two_photon_hom",
+          "unit": "exchange_0",
+          "theta_pi_over_32": 16,
+          "ideal": {
+            "indistinguishable": "0",
+            "distinguishable": "1/2"
+          },
+          "record": [
+            "coincidences versus relative delay",
+            "heralded g2(0) of the source at this temperature"
+          ]
+        },
+        {
+          "stage": "temperature_log",
+          "subsystems": [
+            "chip",
+            "source",
+            "detector",
+            "electronics"
+          ]
+        }
+      ]
+    },
+    {
+      "chip_temperature_c": "45",
+      "stages": [
+        {
+          "stage": "stabilize",
+          "record": [
+            "chip stage temperature trace",
+            "source crystal temperature",
+            "detector temperature",
+            "ambient temperature",
+            "settling time"
+          ]
+        },
+        {
+          "stage": "bright_light_calibration",
+          "channels": 31,
+          "context": {
+            "wavelength_nm": "1550",
+            "chip_temperature_c": "45"
+          },
+          "output": "RECORDED calibration profile for this temperature; evidence_class LAB_RECORDED"
+        },
+        {
+          "stage": "protocol_calibrated",
+          "settings": 106,
+          "calibration": "this temperature",
+          "compare_to": "exact ideal probabilities from the calculator",
+          "statistic": "total-variation bound with declared confidence"
+        },
+        {
+          "stage": "protocol_uncalibrated_control",
+          "settings": 106,
+          "calibration": "profile recorded at 15 C",
+          "purpose": "measures raw drift the correction must absorb"
+        },
+        {
+          "stage": "miscalibration_control",
+          "settings": 106,
+          "perturbation": "core_0 lower arm +8 steps of pi/32 from the calibrated value",
+          "purpose": "establishes that the statistic has power to see a known phase error"
+        },
+        {
+          "stage": "two_photon_hom",
+          "unit": "exchange_0",
+          "theta_pi_over_32": 16,
+          "ideal": {
+            "indistinguishable": "0",
+            "distinguishable": "1/2"
+          },
+          "record": [
+            "coincidences versus relative delay",
+            "heralded g2(0) of the source at this temperature"
+          ]
+        },
+        {
+          "stage": "temperature_log",
+          "subsystems": [
+            "chip",
+            "source",
+            "detector",
+            "electronics"
+          ]
+        }
+      ]
+    },
+    {
+      "chip_temperature_c": "55",
+      "stages": [
+        {
+          "stage": "stabilize",
+          "record": [
+            "chip stage temperature trace",
+            "source crystal temperature",
+            "detector temperature",
+            "ambient temperature",
+            "settling time"
+          ]
+        },
+        {
+          "stage": "bright_light_calibration",
+          "channels": 31,
+          "context": {
+            "wavelength_nm": "1550",
+            "chip_temperature_c": "55"
+          },
+          "output": "RECORDED calibration profile for this temperature; evidence_class LAB_RECORDED"
+        },
+        {
+          "stage": "protocol_calibrated",
+          "settings": 106,
+          "calibration": "this temperature",
+          "compare_to": "exact ideal probabilities from the calculator",
+          "statistic": "total-variation bound with declared confidence"
+        },
+        {
+          "stage": "protocol_uncalibrated_control",
+          "settings": 106,
+          "calibration": "profile recorded at 15 C",
+          "purpose": "measures raw drift the correction must absorb"
+        },
+        {
+          "stage": "miscalibration_control",
+          "settings": 106,
+          "perturbation": "core_0 lower arm +8 steps of pi/32 from the calibrated value",
+          "purpose": "establishes that the statistic has power to see a known phase error"
+        },
+        {
+          "stage": "two_photon_hom",
+          "unit": "exchange_0",
+          "theta_pi_over_32": 16,
+          "ideal": {
+            "indistinguishable": "0",
+            "distinguishable": "1/2"
+          },
+          "record": [
+            "coincidences versus relative delay",
+            "heralded g2(0) of the source at this temperature"
+          ]
+        },
+        {
+          "stage": "temperature_log",
+          "subsystems": [
+            "chip",
+            "source",
+            "detector",
+            "electronics"
+          ]
+        }
+      ]
+    }
+  ],
+  "point_count": 5,
+  "io_sha256": "e06a8e5211083deacb951833a0128a5bad7b390800a46b5de91bb2b2f5b9b4b3",
+  "layout_spec_sha256": "5bcd481cc6a62ecc8e2638a48b8c5af0f9f60840925a4b4865c31ce431ccd8c2",
+  "layout_gds_sha256": "f6777bc1ecf2c6887363ca59e942b2129fbd3996c93132cb1a9291f3c6f9d3ab",
+  "exact_statements": [
+    "T1 common-mode heating is in the exact kernel of all 24 observables",
+    "T2 every phase-only drift is kernel or first-order visible to the reference family at interior angles",
+    "T3 the verdict never promotes a synthetic or partial log to a temperature claim"
+  ],
+  "not_modelled": [
+    "splitting-ratio and loss changes with temperature",
+    "source spectrum and detector efficiency versus temperature",
+    "thermal gradients inside one unit beyond the five phase coordinates",
+    "dynamics, hysteresis and settling"
+  ],
+  "plan_sha256": "6f858a26a1d1b3736a10008e90dedcf65c596250225cfd4a0b1ad1798d103c83"
+}
