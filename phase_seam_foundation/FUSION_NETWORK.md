@@ -62,7 +62,9 @@ and dies with probability 1 as N grows.
 Resources: a 3-site resource costs two Bell pairs and one heralded fusion
 (expected four Bell pairs); an 8-site chain expects 274/9 ≈ 30 Bell pairs.
 
-## 4. Fidelity bound from L1
+## 4. Fidelity bound from L1 (withdrawn in v0.23, see LOSS_LEDGER.md)
+
+**Correction, v0.23.** Theorem L2 (LOSS_LEDGER.md) shows every false herald leaves the middle site empty, so the readout rule "exactly one click per site" rejects it and the witness after readout is 1 at every η_d. The bound below is the accepted fraction of heralds, a rate, not a fidelity; the sentence "detector-side efficiency gates the register size" is withdrawn. The original text is kept for the audit trail.
 
 Every chain fusion can be a false herald with fraction (1 − η_d)/(2 − η_d).
 With N − 2 chain fusions the bound on all heralds genuine is (1/(2 − η_d))^{N−2}:

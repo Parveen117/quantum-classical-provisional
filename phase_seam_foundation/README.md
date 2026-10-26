@@ -1,6 +1,6 @@
 # Phase–seam foundation prototype
 
-**New: [fusion network with Theorems N1 and N2](FUSION_NETWORK.md)** (Bell pairs are a null walk at success 1/2, 3-site resources grow with drift 1/2, limit 3 − √5), [loss budget with Theorem L1](LOSS_BUDGET_810.md) (false-herald fraction (1-η)/(2-η), engine-checked), [810 nm heralded source spec](SOURCE_SPEC_810.md) (exact pair statistics, g2 = 2x, purity law, fail-closed source grade) and [810 nm re-target of the SiN core](CORE_RETARGET_810.md) (scaled nominal, fail-closed readiness grade).
+**New: [loss as a retained ledger, Theorem L2](LOSS_LEDGER.md)** (false heralds are readout-visible, loss is rate not fidelity, square-sourced channel on the native grid), [fusion network with Theorems N1 and N2](FUSION_NETWORK.md) (Bell pairs are a null walk at success 1/2, 3-site resources grow with drift 1/2, limit 3 − √5), [loss budget with Theorem L1](LOSS_BUDGET_810.md) (false-herald fraction (1-η)/(2-η), engine-checked), [810 nm heralded source spec](SOURCE_SPEC_810.md) (exact pair statistics, g2 = 2x, purity law, fail-closed source grade) and [810 nm re-target of the SiN core](CORE_RETARGET_810.md) (scaled nominal, fail-closed readiness grade).
 
 **[Dual-rail route for room-temperature operation](DUAL_RAIL.md).**
 The v0.18 module adds an exact few-photon boson engine in the calculator's

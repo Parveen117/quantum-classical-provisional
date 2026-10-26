@@ -51,9 +51,8 @@ At the declared η_d = 3/5: one click 21/50, genuine 3/10, genuine fraction
 Consequences, exact: a chain of F independent fusions has all heralds genuine
 with probability (1/(2 − η_d))ᶠ (two fusions at 3/5: 25/49). Loss on the three
 surviving rails is a missing readout click, never a wrong outcome, so it costs
-rate and not fidelity. A false herald is a fidelity error and is suppressed
-only by lower detector-side loss or photon-number resolution; both are design
-inputs for the next note.
+rate and not fidelity. A false herald looked like a fidelity error here; v0.23 (LOSS_LEDGER.md,
+Theorem L2) shows it is ledger-visible at readout and costs rate only.
 
 ## 3. Grade (fail-closed)
 
