@@ -1,6 +1,16 @@
 # Phase–seam foundation prototype
 
-**New: [two noisy purification rounds with the full photon payload](PURIFICATION_CASCADE.md).**
+**New: [the classifier's readout noise channel from the corrected source](CLUSTER_NOISE.md).**
+The v0.36 packet closes the gate v0.34 named, to first order and exactly:
+a wrong Bell pair is never rejected by the type-I merge (success 1/2 for all
+four Bell states) and lands as Z, X or Y on the delivered cluster; every such
+error is a Z pattern; the exact readout response of every single-node error
+is tabulated, and Theorem N bounds the classifier's readout error by the
+v0.34 double-origin fraction w (about 2.8 w on the XOR checkpoint: x = 1/40
+gives ≤ 0.23, a 1 % label error needs x ≲ 1/885 at the v0.21 budget).
+[Audit](noise/qualification.json).
+
+**Previous: [two noisy purification rounds with the full photon payload](PURIFICATION_CASCADE.md).**
 The v0.35 packet carries every accepted first-round photon sector into the
 second round, including vacuum, excess photons and rail coherences. The
 ideal ZX fidelity 841/932 is reproduced; declared 99% input survival and
