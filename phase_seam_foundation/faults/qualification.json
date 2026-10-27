@@ -1,0 +1,191 @@
+{
+ "schema": "native-cluster-faults-audit-v1",
+ "author": "Monty",
+ "status": "DECLARED_FAULT_LEDGER_NO_DEVICE",
+ "tests": {
+  "run": 11,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 15.94
+ },
+ "plan": {
+  "schema": "native-cluster-faults-v1",
+  "author": "Monty",
+  "status": "DECLARED_FAULT_LEDGER_NO_DEVICE",
+  "theorem_p1": {
+   "one_survivor_wrong_in_fused_register": true,
+   "wrong_fraction_first_order": "4x",
+   "design_point_x_1_over_40_fails_on_13_nodes": true
+  },
+  "theorem_s1": {
+   "merge_success_path_survival_m099": "3024044356690218569980300851843256793460282612643081584278162663309351360402138080243207421844985286738488925605742688946114092346539993434609937067106194533238694684196719679639500333079315737739457722644766859420305873170691928648801899/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+   "star5_survival_factor_m099": "28768279484901845394/30725013015576795505"
+  },
+  "withdrawn": "v0.24/v0.25: 'multi-pair one-survivor is accepted and right' holds for a single isolated site only; in a fused register it is accepted and wrong (coherence 0)",
+  "claims": {
+   "exact": [
+    "S1 chain solve",
+    "P1 mixture and fused witness",
+    "switch grid",
+    "V2 ledger"
+   ],
+   "never": [
+    "device",
+    "measured number",
+    "fidelity from loss"
+   ],
+   "open": [
+    "finished-star waiting",
+    "correlated loss",
+    "source rate at 810 nm (time per Bell pair)"
+   ]
+  }
+ },
+ "star_growth_survival_factor": {
+  "size=4,m=999/1000": "0.995488",
+  "size=4,m=99/100": "0.955872",
+  "size=4,m=9/10": "0.639991",
+  "size=5,m=999/1000": "0.993335",
+  "size=5,m=99/100": "0.936315",
+  "size=5,m=9/10": "0.559812",
+  "size=8,m=999/1000": "0.968305",
+  "size=8,m=99/100": "0.735525",
+  "size=8,m=9/10": "0.0885516"
+ },
+ "assembly": {
+  "999/1000": {
+   "merge_path": "0.887755",
+   "candidate": "0.00693559"
+  },
+  "99/100": {
+   "merge_path": "0.302404",
+   "candidate": "0.00236253"
+  },
+  "9/10": {
+   "merge_path": "3.58805e-06",
+   "candidate": "2.80316e-08"
+  }
+ },
+ "switch_buffer_multiplier_lower": {
+  "k_switch=0,k_buffer=0": "1",
+  "k_switch=1,k_buffer=1": "0.778023",
+  "k_switch=1,k_buffer=2": "0.532621",
+  "k_switch=2,k_buffer=4": "0.0770764",
+  "k_switch=4,k_buffer=4": "0.0162929"
+ },
+ "acceptance_with_switches": {
+  "1,2": [
+   "0.115275",
+   "0.115275"
+  ],
+  "4,4": [
+   "0.00352626",
+   "0.00352626"
+  ]
+ },
+ "theorem_p1": {
+  "mixture": {
+   "(0, 0)": "5/12",
+   "(1, 1)": "5/12",
+   "(0, 1)": "1/12",
+   "(1, 0)": "1/12"
+  },
+  "zz_correlation": "2/3",
+  "fused_corrected_xxx": "0.0000000",
+  "positive_control": "1.0000000",
+  "every_success_half": true
+ },
+ "multi_pair": {
+  "243/4000": {
+   "one_survivor_each": "0.0130231",
+   "wrong_fraction_x_1_over_40": "0.0829735"
+  },
+  "1/2": {
+   "one_survivor_each": "0.25",
+   "wrong_fraction_x_1_over_40": "0.025"
+  },
+  "9/10": {
+   "one_survivor_each": "0.0324",
+   "wrong_fraction_x_1_over_40": "0.00102459"
+  }
+ },
+ "number_resolving_herald_x_1_over_40": {
+  "1/2": "0.025",
+  "9/10": "0.00510204",
+  "99/100": "0.000512558",
+  "1": "0"
+ },
+ "allowed_x": {
+  "threshold": [
+   "0.00230077",
+   "0.00230077"
+  ],
+  "nr_herald_0_9": [
+   "0.0113989",
+   "0.0113989"
+  ]
+ },
+ "ledger": [
+  {
+   "x": "1/40",
+   "herald": "threshold",
+   "wrong_fraction": "0.0873428",
+   "witness": "0.30479",
+   "combined": "0.14578",
+   "dominant": "multi-pair"
+  },
+  {
+   "x": "1/40",
+   "herald": "9/10",
+   "wrong_fraction": "0.0226857",
+   "witness": "0.74207",
+   "combined": "0.35493",
+   "dominant": "multi-pair"
+  },
+  {
+   "x": "1/200",
+   "herald": "threshold",
+   "wrong_fraction": "0.0223377",
+   "witness": "0.745513",
+   "combined": "0.356577",
+   "dominant": "multi-pair"
+  },
+  {
+   "x": "1/200",
+   "herald": "9/10",
+   "wrong_fraction": "0.00856758",
+   "witness": "0.894171",
+   "combined": "0.427679",
+   "dominant": "dark counts"
+  },
+  {
+   "x": "1/1000",
+   "herald": "threshold",
+   "wrong_fraction": "0.0085536",
+   "witness": "0.894335",
+   "combined": "0.427758",
+   "dominant": "dark counts"
+  },
+  {
+   "x": "1/1000",
+   "herald": "9/10",
+   "wrong_fraction": "0.00576407",
+   "witness": "0.927605",
+   "combined": "0.44367",
+   "dominant": "dark counts"
+  }
+ ],
+ "grades": {
+  "empty": {
+   "grade": "FAULTS_DECLARED",
+   "reasons": [
+    "source block needs LAB_RECORDED heralded_g2 and herald_readout"
+   ]
+  }
+ },
+ "disclaimers": [
+  "no device; every number is an exact consequence of declared inputs",
+  "withdrawn: the v0.24 single-site 'one survivor is right' statement does not extend to a fused register",
+  "finished-star waiting, correlated loss and the 810 nm source rate are open"
+ ]
+}

@@ -1,18 +1,17 @@
 # Phase–seam foundation prototype
 
-**New: [encoded Bell transfer from detector records](ENCODED_BELL.md).**
-The v0.32 route measures encoded blocks directly, with loss identified by
-counts and no nondestructive loss oracle. Six-photon logical transfer has
-ideal success 3/4 and accepted entanglement fidelity 1; the explicit
-twelve-photon Bell factory costs 192 expected ideal Bell pairs under a
-lossless full-restart policy. A 16-photon-per-block shape reaches ideal
-success 255/256 conditional on a supplied 32-photon Bell resource, whose
-factory is not certified here. The exact loss law and source cost accompany
-the rates. The classifier's heater interface is reused with its coherent
-output phase checked; v0.31's angle-adaptation identity receives the output
-Pauli frame for subsequent terminal readout. [Audit](encoded_bell/qualification.json).
+**New: [faults on the classifier cluster](CLUSTER_FAULTS.md).**
+The v0.33 packet prices the cluster's faults exactly and withdraws one earlier
+statement: a heralded double pair with one survivor per site is a classical
+mixture (Theorem P1) that passes the one-click rule and leaves ⟨XXX⟩ = 0 in a
+fused register, so the per-pair wrong fraction is ≈ 4x whatever the loss and
+the x = 1/40 design point fails on 13 nodes (witness 0.30); a counting herald
+or x ≈ 1/1000 restores it. Theorem S1 solves star growth with storage
+exactly; the seven merges survive m¹¹⁹; switches and buffers on the native
+grid; dark counts and HOM visibility (V⁷) complete the 13-node ledger with a
+fail-closed grader. No device, no measured number. [Audit](faults/qualification.json).
 
-**Previous: [building and running the classifier cluster on the route](CLUSTER_BUILD.md).**
+**Previous:** [encoded optical Bell transfer from detector records](ENCODED_BELL.md) (v0.32: transversal passive Bell measurement of the tree code at 3/4, count-record decoder, 12-photon encoded Bell resource at 192 Bell pairs, heater-frame handoff), uilding and running the classifier cluster on the route](CLUSTER_BUILD.md).**
 The v0.31 packet settles what v0.29 left open, exactly: Lemma A turns the
 pattern's Pauli corrections into a heater-trim sign flip and an outcome relabel
 (no rail switch; six feedforward stages), witnessed end to end with a tracked

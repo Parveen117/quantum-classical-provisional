@@ -1,5 +1,7 @@
 # Memory loss in the chain and the joint source/readout design point — v0.25
 
+**v0.33 correction:** the design point x = 1/40 chosen below credits the multi-pair one-survivor event as right; in a fused register it is wrong (Theorem P1, [CLUSTER_FAULTS.md](CLUSTER_FAULTS.md)). For fused registers the source must run near x ≈ 1/1000 or herald with a counting detector; the memory law M1 and the readout conclusions are unchanged.
+
 **Author: Monty.** FUSION_NETWORK.md built the register by fusing 3-site
 resources onto a chain and assumed the stored chain photons wait for free.
 The route's only photonic memory is fibre delay, so every attempt charges

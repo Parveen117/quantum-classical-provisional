@@ -1,0 +1,16 @@
+test_allowed_x (test_phase_seam_cluster_faults.DoublePairTests.test_allowed_x) ... ok
+test_fused_one_survivor_is_wrong (test_phase_seam_cluster_faults.DoublePairTests.test_fused_one_survivor_is_wrong) ... ok
+test_mixture_is_classical (test_phase_seam_cluster_faults.DoublePairTests.test_mixture_is_classical) ... ok
+test_wrong_fraction_law (test_phase_seam_cluster_faults.DoublePairTests.test_wrong_fraction_law) ... ok
+test_fail_closed (test_phase_seam_cluster_faults.GradeTests.test_fail_closed) ... ok
+test_plan (test_phase_seam_cluster_faults.GradeTests.test_plan) ... ok
+test_design_point_fails_and_recovers (test_phase_seam_cluster_faults.LedgerTests.test_design_point_fails_and_recovers) ... ok
+test_assembly (test_phase_seam_cluster_faults.StorageTests.test_assembly) ... ok
+test_lossless_reproduces_star_walk (test_phase_seam_cluster_faults.StorageTests.test_lossless_reproduces_star_walk) ... ok
+test_storage_monotone_and_exact (test_phase_seam_cluster_faults.StorageTests.test_storage_monotone_and_exact) ... ok
+test_grid_and_composition (test_phase_seam_cluster_faults.SwitchTests.test_grid_and_composition) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 15.937s
+
+OK

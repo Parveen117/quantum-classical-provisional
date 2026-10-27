@@ -1,5 +1,7 @@
 # Ledger violations at readout: multi-pair and dark counts — v0.24
 
+**v0.33 correction:** the multi-pair one-survivor event is 'accepted and right' for a single isolated site only. In a fused register it is accepted by the one-click rule and wrong: the conditioned state is a classical mixture with zero coherence (Theorem P1, [CLUSTER_FAULTS.md](CLUSTER_FAULTS.md)), and the per-pair wrong fraction is about 4x independent of loss. The register budgets below that credit that event as right are superseded for fused registers.
+
 **Author: Monty.** LOSS_LEDGER.md (L2) made loss a rate under the readout rule
 "exactly one click per site". This note treats the two things that rule
 cannot remove, because they violate the photon ledger instead of respecting
