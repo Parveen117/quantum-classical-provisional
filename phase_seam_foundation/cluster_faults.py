@@ -1,22 +1,10 @@
-"""Faults on the classifier cluster: storage during growth, switches, multi-pair, dark counts (v0.33).
+"""Storage and declared fault scores (v0.33), source coherence corrected in v0.34.
 
-Four open items of v0.31, each exact and each a rate or an accepted-wrong
-fraction, never a fidelity from a loss number:
-
-* Theorem S1: the v0.22 star walk with per-round survival m on every stored
-  photon, solved as an absorbing chain; and the success-path storage of the
-  seven cluster merges (m^119).
-* Switch and buffer transmissions on the native grid cos^2(k pi/32),
-  composed into the v0.31 acceptance.
-* Theorem P1 (closes the v0.24 declared case): a heralded double pair with
-  exactly one survivor at each site is NOT a Bell pair but the classical
-  mixture (5|00><00| + 5|11><11| + |01><01| + |10><10|)/12; fused into a
-  register it leaves <XXX> = 0 while passing the one-click rule. The accepted
-  wrong fraction per pair is 4x(1-eta)^2 / ((1-x) + 4x(1-eta)^2), independent
-  of eta to first order: the source x must satisfy x <~ f/4 for a target
-  per-node wrong fraction f, or the herald must count photons.
-* The per-node ledger on the 13 nodes (Theorem V2) with multi-pair, dark
-  counts and visibility, the allowed x, and a fail-closed grader.
+The storage and switch calculations are unchanged. The original P1 claim
+that loss removes every off-diagonal term was incorrect: equal environment
+occupations retain coherence. The source channel now comes from an exact
+partial trace in source_distillation. The old independent zero-response
+score is labelled a toy model, never a certified 13-node witness bound.
 """
 from fractions import Fraction
 
@@ -24,15 +12,15 @@ from native_relational_qc.cyclotomic64 import Cyclotomic64 as F, ZERO, ONE, ZETA
 
 from .cluster_build import online_ledger, star_plan
 from .cluster_compile import NODES
-from .dual_rail import FUSION_MODES, H2, MEASURED, _register_state, _phase_steps, fusion_outcomes, ghz_merge
 from .fusion_network import FUSION_SUCCESS, _solve
-from .ledger_violations import allowed_wrong_fraction, dark_readout_site, witness_law
+from .ledger_violations import allowed_wrong_fraction, dark_readout_site
 from .loss_ledger import native_transmission_grid
 from .model import ResourceLimit, integer, rational
 from .tree_build import star
+from .source_distillation import double_pair_channel, fused_double_pair_channel, source_sector
 
 MERGE_PHOTON_ROUNDS = 119          # 20 + 19 + ... + 14: photons stored during the seven sequential merges
-GRADES = ("FAULTS_DECLARED", "SOURCE_RECORDED", "NODE_FAULTS_RECORDED", "LEDGER_CONSISTENT")
+GRADES = ("FAULTS_DECLARED", "SOURCE_RECORDED", "NODE_FAULTS_RECORDED")
 
 
 def _unit(v, label):
@@ -119,78 +107,41 @@ def acceptance_with_switches(memory, detector_efficiency, k_switch, k_buffer):
 # ------------------------------------------------------------------ Theorem P1: double pair, one survivor each
 
 def double_pair_survivors(eta):
-    """Exact: the two-pair term (|2,0;2,0> + |1,1;1,1> + |0,2;0,2>)/sqrt3 on rails
-    (A'0,A'1;A0,A1), each photon surviving with eta, conditioned on exactly one survivor
-    at A' and one at A. Different lost photons are orthogonal environment states, so the
-    conditioned state is a classical mixture; weights are exact rationals."""
-    e = _unit(eta, "eta")
-    # keep 1 of 2 in a mode: amplitude sqrt(2) sqrt(eta (1-eta)); keep 1 of 1: sqrt(eta); lose 1 of 1: sqrt(1-eta)
-    w = Fraction(1, 3) * e ** 2 * (1 - e) ** 2
-    weights = {(0, 0): 4 * w + w, (1, 1): 4 * w + w, (0, 1): w, (1, 0): w}      # (A' rail, A rail)
-    total = sum(weights.values())
-    return dict(eta=e, p_one_survivor_each=total, mixture={k: v / total for k, v in weights.items()},
-                coherence=Fraction(0), zz_correlation=(weights[(0, 0)] + weights[(1, 1)] - weights[(0, 1)] - weights[(1, 0)]) / total,
-                closed_form_check=total == 4 * e ** 2 * (1 - e) ** 2)
+    """Compatibility entry point for the corrected, environment-resolved channel.
 
-
-def _merge_witness(state):
-    """Corrected <XXX> of the register heralded by each click, for an arbitrary 4-photon input."""
-    res = fusion_outcomes(state)
-    out = {}
-    for click in MEASURED:
-        reg = _register_state(res["success"], click)
-        p = sum((a.norm2() for a in reg.values()), ZERO)
-        a000, a111 = reg.get((0, 0, 0), ZERO), reg.get((1, 1, 1), ZERO)
-        if p == ZERO:
-            out[click] = dict(probability=p, corrected_xxx=None)
-            continue
-        if a000 == ZERO or a111 == ZERO:
-            out[click] = dict(probability=p, corrected_xxx=ZERO)
-            continue
-        k = _phase_steps(a111 / a000)
-        c = a000.conjugate() * a111 * (ZETA ** (-k) if k is not None else ONE)
-        out[click] = dict(probability=p, corrected_xxx=(c + c.conjugate()) / p, phase_steps=k)
-    return dict(success_probability=res["success_probability"], clicks=out)
+    At eta=0 or 1 the selected event has zero probability and its conditional
+    state is None. Diagonal populations alone are not an ensemble decomposition.
+    """
+    c = double_pair_channel(eta)
+    return dict(eta=c["eta"], p_one_survivor_each=c["event_probability"],
+                density=c["conditional_density"], unnormalised_density=c["unnormalised_density"],
+                coherence=c["conditional_xx"], zz_correlation=c["conditional_zz"],
+                bell_fidelity=c["conditional_bell_fidelity"], closed_form_check=True,
+                v033_diagonal_mixture_withdrawn=True)
 
 
 def fused_one_survivor_witness(eta):
-    """Each mixture component (a product state on A'A) with a good Bell pair BB' through the
-    exact type-I fusion: the heralded success probability stays 1/2 but the corrected
-    <XXX> is 0 for every component, so the mixture gives 0. Positive control: the
-    genuine Bell pair gives 1 (Theorem D2)."""
-    mix = double_pair_survivors(eta)
-    rows = {}
-    xxx = ZERO
-    for (ra, rb), weight in mix["mixture"].items():
-        state = {}
-        for y in (0, 1):
-            occ = [0] * FUSION_MODES
-            occ[0 + ra] = 1; occ[2 + rb] = 1          # product state on A' and A
-            occ[4 + y] = 1; occ[6 + y] = 1            # good Bell pair on B, B'
-            state[tuple(occ)] = H2                    # amplitude 1/sqrt2 per Bell branch
-        w = _merge_witness(state)
-        rows[(ra, rb)] = dict(weight=weight, success=w["success_probability"],
-                              corrected_xxx={c: v["corrected_xxx"] for c, v in w["clicks"].items()})
-        for c, v in w["clicks"].items():
-            if v["corrected_xxx"] is not None:
-                xxx = xxx + F.coerce(weight) * v["probability"] * v["corrected_xxx"]
-    good = ghz_merge()
-    control = sum((v["probability"] * v["corrected_xxx"] for v in good["clicks"].values()), ZERO) / good["success_probability"]
-    return dict(eta=mix["eta"], components=rows, mixture_corrected_xxx=xxx, every_success_half=all(r["success"] == H2 * H2 for r in rows.values()),
-                positive_control_bell_pair_xxx=control, one_survivor_is_wrong_in_a_fused_register=xxx == ZERO and control == ONE)
+    """Corrected P1: success 1/2, conditional XXX=2/3 and GHZ fidelity 3/4.
+
+    The fixed detector correction is applied to each coherent loss branch;
+    the one-survivor event still does not produce an ideal Bell resource.
+    """
+    return fused_double_pair_channel(eta)
 
 
 def multi_pair_fused_fraction(x, eta):
-    """Per heralded pair with number-resolving readout at both sites: right = (1-x) eta^2
-    (single pair, both survive); accepted-wrong = x * 4 eta^2 (1-eta)^2 (double pair, one
-    survivor each, Theorem P1); four survivors and other patterns are rejected by the
-    one-click rule. wrong fraction = 4x(1-eta)^2 / ((1-x) + 4x(1-eta)^2)."""
-    xv, e = _unit(x, "x"), _unit(eta, "eta")
-    right = (1 - xv) * e ** 2
-    wrong = xv * double_pair_survivors(e)["p_one_survivor_each"]
-    frac = wrong / (right + wrong) if right + wrong else None
-    return dict(x=xv, eta=e, accept_right=right, accept_wrong=wrong, wrong_fraction=frac,
-                first_order="4x", eta_independent_to_first_order=True)
+    """Fraction of selected events originating from a double pair, NOT infidelity.
+
+    This uses a declared one/double-pair mixture, not the thermal source's
+    brightness x. The overlap of the double-origin output with the target
+    GHZ state is 3/4; its XXX moment is 2/3, rather than zero.
+    """
+    c = source_sector(x, eta)
+    return dict(x=_unit(x, "x"), eta=_unit(eta, "eta"),
+                single_event=c["single_event"], double_event=c["double_event"],
+                double_fraction=c["double_fraction"], conditional_ghz_fidelity=c["conditional_fidelity"],
+                conditional_xxx=c["conditional_xx"], first_order=c["first_order_double_fraction"],
+                eta_independent_to_first_order=False)
 
 
 def number_resolving_herald(x, herald_efficiency):
@@ -204,7 +155,10 @@ def number_resolving_herald(x, herald_efficiency):
 
 
 def allowed_x(target_witness, sites, eta, herald_efficiency=None):
-    """Largest source x whose multi-pair wrong fraction alone keeps the V2 witness >= target
+    """Legacy independent zero-response SCORE threshold, not a cluster witness bound.
+
+    Largest declared double-pair mixture weight whose double-origin fraction
+    keeps that toy score >= target
     on `sites` nodes: x <= f / (f + 4(1-eta)^2 (1-f)) with f the allowed wrong fraction;
     with a number-resolving herald the effective x is 2x(1-eta_h)/(...) and the bound loosens."""
     f_lo, f_hi = allowed_wrong_fraction(target_witness, sites)["max_wrong_fraction_bounds"]
@@ -224,25 +178,36 @@ def allowed_x(target_witness, sites, eta, herald_efficiency=None):
 # ------------------------------------------------------------------ the ledger on 13 nodes
 
 def cluster_fault_ledger(*, x="1/40", eta="243/4000", dark_per_mode="1/100000", visibility="9/10", herald_efficiency=None, sites=NODES):
-    """Per-node accepted-right / accepted-wrong from multi-pair (Theorem P1), dark counts
-    (dark_readout_site) and the V2 law on the 13 nodes; visibility enters the seven merges
-    through the mixture law (witness V per merge). All inputs declared."""
+    """Legacy independent zero-response model, retained for numerical comparison.
+
+    Double-origin events are not orthogonal failures. Assigning every such
+    event response zero and multiplying over 13 sites is not derived for the
+    classifier circuit; nor is combining its pairwise loss with a single-site
+    dark-count model. These scores are NOT physical witness bounds.
+    """
     xv = _unit(x, "x")
     if herald_efficiency is not None:
         xv = number_resolving_herald(xv, herald_efficiency)["double_pair_fraction_given_one_click"]
+        if xv is None:
+            return dict(status="NO_HERALDS", toy_score=None, is_physical_witness_bound=False)
     mp = multi_pair_fused_fraction(xv, eta)
     dk = dark_readout_site(eta, dark_per_mode)
-    right = mp["accept_right"] * (1 - dk["dark"])
-    wrong = mp["accept_wrong"] * (1 - dk["dark"]) + dk["accept_wrong"]
-    v2 = witness_law(right, wrong, sites)
+    clean = mp["single_event"]*(1-dk["dark"])
+    fault = mp["double_event"]*(1-dk["dark"])+dk["accept_wrong"]
     vis = _unit(visibility, "visibility")
     merges = star_plan()["fusions"]
-    return dict(sites=sites, inputs=dict(x=str(Fraction(str(x))), effective_x=xv, eta=mp["eta"], dark=dk["dark"], visibility=vis, herald_efficiency=herald_efficiency),
-                per_node=dict(accept_right=right, accept_wrong=wrong, wrong_fraction=wrong / (right + wrong), multi_pair_share=mp["accept_wrong"] * (1 - dk["dark"]) / wrong if wrong else None),
-                witness_multi_pair_and_dark=v2["witness"], accepted_probability=v2["accepted_probability"],
-                visibility_witness_bound=vis ** merges, merges=merges,
-                combined_witness_bound=v2["witness"] * vis ** merges,
-                dominant="multi-pair" if mp["accept_wrong"] * (1 - dk["dark"]) > dk["accept_wrong"] else "dark counts")
+    n = integer(sites, "sites")
+    if not 1 <= n <= 4096:
+        raise ValueError("sites must be in [1,4096]")
+    score = (clean/(clean+fault))**n if clean+fault else None
+    return dict(status="UNVALIDATED_INDEPENDENT_ZERO_RESPONSE_MODEL", sites=n,
+                inputs=dict(x=_unit(x, "x"), effective_x=xv, eta=mp["eta"], dark=dk["dark"], visibility=vis, herald_efficiency=herald_efficiency),
+                per_node=dict(clean_weight=clean, fault_weight=fault,
+                              assigned_fault_fraction=fault/(clean+fault) if clean+fault else None),
+                toy_score_before_visibility=score, toy_visibility_factor=vis**merges,
+                toy_score=score*vis**merges if score is not None else None,
+                is_physical_witness_bound=False,
+                dominant="multi-pair" if mp["double_event"]*(1-dk["dark"]) > dk["accept_wrong"] else "dark counts")
 
 
 def ledger_table():
@@ -250,54 +215,52 @@ def ledger_table():
     for x in ("1/40", "1/200", "1/1000"):
         for eh in (None, "9/10"):
             l = cluster_fault_ledger(x=x, herald_efficiency=eh)
-            rows.append(dict(x=x, herald=eh or "threshold", wrong_fraction=l["per_node"]["wrong_fraction"], witness=l["witness_multi_pair_and_dark"],
-                             combined=l["combined_witness_bound"], dominant=l["dominant"]))
+            rows.append(dict(x=x, herald=eh or "threshold", assigned_fault_fraction=l["per_node"]["assigned_fault_fraction"], score_before_visibility=l["toy_score_before_visibility"],
+                             score=l["toy_score"], dominant=l["dominant"]))
     return rows
 
 
 # ------------------------------------------------------------------ grader
 
 def fault_grade(record, target_witness="9/10"):
-    """Fail-closed: FAULTS_DECLARED -> SOURCE_RECORDED (LAB_RECORDED heralded_g2 < 1/2 and
-    herald readout with efficiency) -> NODE_FAULTS_RECORDED (LAB_RECORDED dark_count_bound,
-    site efficiency, HOM visibility) -> LEDGER_CONSISTENT (the computed combined witness
-    bound from the recorded inputs reaches the target on the 13 nodes)."""
+    """Record presence/validity only: full circuit noise propagation is still open.
+
+    Never infer double-pair mixture weight from g2/2 without the matching
+    source/conditioning model. Never promote the toy product to a qualified
+    physical witness. Synthetic example dictionaries are not lab evidence.
+    """
     if type(record) is not dict:
         raise ValueError("record must be a dict")
-    reasons = []
+    _unit(target_witness, "target")
     s = record.get("source")
     if not (type(s) is dict and s.get("evidence_class") == "LAB_RECORDED" and s.get("heralded_g2") is not None
             and s.get("herald_readout") in ("threshold", "number_resolving")):
-        reasons.append("source block needs LAB_RECORDED heralded_g2 and herald_readout")
-        return dict(grade="FAULTS_DECLARED", reasons=reasons)
-    g2 = _unit(s["heralded_g2"], "g2") if Fraction(str(s["heralded_g2"])) <= 1 else Fraction(str(s["heralded_g2"]))
-    if g2 >= Fraction(1, 2):
-        return dict(grade="FAULTS_DECLARED", reasons=["heralded g2 must be below 1/2"])
-    if s["herald_readout"] == "number_resolving" and s.get("herald_efficiency") is None:
-        return dict(grade="FAULTS_DECLARED", reasons=["number-resolving herald needs herald_efficiency"])
+        return dict(grade="FAULTS_DECLARED", reasons=["source needs recorded g2 and herald readout"])
+    g2 = rational(Fraction(s["heralded_g2"]) if type(s["heralded_g2"]) is str else s["heralded_g2"], "g2", 256)
+    if not 0 <= g2 < Fraction(1, 2):
+        return dict(grade="FAULTS_DECLARED", reasons=["heralded g2 must be in [0,1/2)"])
+    if s["herald_readout"] == "number_resolving":
+        if s.get("herald_efficiency") is None or _unit(s["herald_efficiency"], "herald efficiency") == 0:
+            return dict(grade="FAULTS_DECLARED", reasons=["counting herald needs positive efficiency"])
     n = record.get("nodes")
-    if not (type(n) is dict and n.get("evidence_class") == "LAB_RECORDED" and n.get("dark_count_bound") is not None
-            and n.get("site_efficiency") is not None and n.get("hom_visibility") is not None):
-        reasons.append("nodes block needs LAB_RECORDED dark_count_bound, site_efficiency, hom_visibility")
-        return dict(grade="SOURCE_RECORDED", reasons=reasons)
-    x = g2 / 2                                             # g2 = 2x for the heralded source (SOURCE_SPEC_810.md)
-    led = cluster_fault_ledger(x=x, eta=n["site_efficiency"], dark_per_mode=n["dark_count_bound"], visibility=n["hom_visibility"],
-                               herald_efficiency=s.get("herald_efficiency") if s["herald_readout"] == "number_resolving" else None)
-    target = _unit(target_witness, "target")
-    if led["combined_witness_bound"] < target:
-        reasons.append(f"combined witness bound {float(led['combined_witness_bound']):.4f} below target {float(target):.4f}; dominant: {led['dominant']}")
-        return dict(grade="NODE_FAULTS_RECORDED", reasons=reasons, ledger=led)
-    return dict(grade="LEDGER_CONSISTENT", reasons=reasons, ledger=led)
+    fields = ("dark_count_bound", "site_efficiency", "hom_visibility")
+    if not (type(n) is dict and n.get("evidence_class") == "LAB_RECORDED" and all(n.get(k) is not None for k in fields)):
+        return dict(grade="SOURCE_RECORDED", reasons=["nodes need recorded dark counts, efficiency and visibility"])
+    for k in fields:
+        _unit(n[k], k)
+    return dict(grade="NODE_FAULTS_RECORDED", reasons=[
+        "source-conditioning map and circuit-level accepted-output channel required; the v0.33 product is not a witness bound"],
+        witness_qualified=False)
 
 
 def fault_plan():
     p1 = fused_one_survivor_witness("243/4000")
     s1 = assembly_storage("99/100")
-    return dict(schema="native-cluster-faults-v1", author="Monty", status="DECLARED_FAULT_LEDGER_NO_DEVICE",
-                theorem_p1=dict(one_survivor_wrong_in_fused_register=p1["one_survivor_is_wrong_in_a_fused_register"],
-                                wrong_fraction_first_order="4x", design_point_x_1_over_40_fails_on_13_nodes=cluster_fault_ledger()["witness_multi_pair_and_dark"] < Fraction(9, 10)),
+    return dict(schema="native-cluster-faults-v2", author="Monty", status="SOURCE_CHANNEL_CORRECTED_CIRCUIT_NOISE_OPEN",
+                corrected_p1=p1,
                 theorem_s1=dict(merge_success_path_survival_m099=str(s1["merge_success_path_survival"]),
                                 star5_survival_factor_m099=str(s1["stars_with_storage"]["6"]["survival_factor"])),
-                withdrawn="v0.24/v0.25: 'multi-pair one-survivor is accepted and right' holds for a single isolated site only; in a fused register it is accepted and wrong (coherence 0)",
-                claims=dict(exact=["S1 chain solve", "P1 mixture and fused witness", "switch grid", "V2 ledger"], never=["device", "measured number", "fidelity from loss"],
-                            open=["finished-star waiting", "correlated loss", "source rate at 810 nm (time per Bell pair)"]))
+                withdrawn=["P1 diagonal mixture and zero XXX", "eta-independent first-order 4x at arbitrary eta",
+                           "13-node product as a physical witness bound", "g2/2 as a general double-pair mixture weight"],
+                claims=dict(exact=["S1 chain solve under its stated start policy", "source environment trace", "switch grid"],
+                            open=["classifier circuit noise channel", "finished-star waiting", "correlated loss", "source rate at 810 nm"]))

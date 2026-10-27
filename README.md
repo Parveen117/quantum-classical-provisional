@@ -2,6 +2,16 @@
 
 ## Phase–seam foundation and hardware contract
 
+The [v0.34 source and purification channel](phase_seam_foundation/SOURCE_DISTILLATION.md)
+corrects a missing-coherence term in the v0.33 source model and derives a
+Bell-pair purification device from two existing optical fusion units.
+Ideal alternating rounds improve a declared 75%-fidelity input to 90.24%
+(two rounds) or 98.56% (four), with failed-attempt costs stated. An exact
+one-round channel separates true output quality from misleading detector
+heralds under input loss, detector inefficiency and dark counts. Supplied
+pairs and ideal multi-round storage are explicit assumptions; this is not
+a fabricated device or a certified raw-source/encoded-factory pipeline.
+
 The [v0.32 encoded Bell transfer](phase_seam_foundation/ENCODED_BELL.md)
 operates directly on encoded blocks and infers loss from detector records.
 For the six-photon code it raises ideal transfer success from 1/2 to 3/4

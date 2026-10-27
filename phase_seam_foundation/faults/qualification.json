@@ -1,43 +1,59 @@
 {
- "schema": "native-cluster-faults-audit-v1",
+ "schema": "native-cluster-faults-audit-v2",
  "author": "Monty",
- "status": "DECLARED_FAULT_LEDGER_NO_DEVICE",
+ "status": "SOURCE_CHANNEL_CORRECTED_CIRCUIT_NOISE_OPEN",
  "tests": {
-  "run": 11,
+  "run": 12,
   "failures": 0,
   "errors": 0,
-  "seconds": 15.94
+  "seconds": 1.53
  },
  "plan": {
-  "schema": "native-cluster-faults-v1",
+  "schema": "native-cluster-faults-v2",
   "author": "Monty",
-  "status": "DECLARED_FAULT_LEDGER_NO_DEVICE",
-  "theorem_p1": {
-   "one_survivor_wrong_in_fused_register": true,
-   "wrong_fraction_first_order": "4x",
-   "design_point_x_1_over_40_fails_on_13_nodes": true
+  "status": "SOURCE_CHANNEL_CORRECTED_CIRCUIT_NOISE_OPEN",
+  "corrected_p1": {
+   "source_event_probability": "833479528401/64000000000000",
+   "fusion_success": "1/2",
+   "joint_event_probability": "833479528401/128000000000000",
+   "conditional_xxx": "2/3",
+   "conditional_ghz_fidelity": "3/4",
+   "clicks": [
+    {
+     "click": 1,
+     "probability": "1/4",
+     "conditional_xxx": "2/3",
+     "conditional_ghz_fidelity": "3/4"
+    },
+    {
+     "click": 2,
+     "probability": "1/4",
+     "conditional_xxx": "2/3",
+     "conditional_ghz_fidelity": "3/4"
+    }
+   ]
   },
   "theorem_s1": {
    "merge_success_path_survival_m099": "3024044356690218569980300851843256793460282612643081584278162663309351360402138080243207421844985286738488925605742688946114092346539993434609937067106194533238694684196719679639500333079315737739457722644766859420305873170691928648801899/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
    "star5_survival_factor_m099": "28768279484901845394/30725013015576795505"
   },
-  "withdrawn": "v0.24/v0.25: 'multi-pair one-survivor is accepted and right' holds for a single isolated site only; in a fused register it is accepted and wrong (coherence 0)",
+  "withdrawn": [
+   "P1 diagonal mixture and zero XXX",
+   "eta-independent first-order 4x at arbitrary eta",
+   "13-node product as a physical witness bound",
+   "g2/2 as a general double-pair mixture weight"
+  ],
   "claims": {
    "exact": [
-    "S1 chain solve",
-    "P1 mixture and fused witness",
-    "switch grid",
-    "V2 ledger"
-   ],
-   "never": [
-    "device",
-    "measured number",
-    "fidelity from loss"
+    "S1 chain solve under its stated start policy",
+    "source environment trace",
+    "switch grid"
    ],
    "open": [
+    "classifier circuit noise channel",
     "finished-star waiting",
     "correlated loss",
-    "source rate at 810 nm (time per Bell pair)"
+    "source rate at 810 nm"
    ]
   }
  },
@@ -83,30 +99,50 @@
    "0.00352626"
   ]
  },
- "theorem_p1": {
-  "mixture": {
-   "(0, 0)": "5/12",
-   "(1, 1)": "5/12",
-   "(0, 1)": "1/12",
-   "(1, 0)": "1/12"
-  },
+ "corrected_p1": {
+  "density": [
+   [
+    "5/12",
+    "0",
+    "0",
+    "1/3"
+   ],
+   [
+    "0",
+    "1/12",
+    "0",
+    "0"
+   ],
+   [
+    "0",
+    "0",
+    "1/12",
+    "0"
+   ],
+   [
+    "1/3",
+    "0",
+    "0",
+    "5/12"
+   ]
+  ],
   "zz_correlation": "2/3",
-  "fused_corrected_xxx": "0.0000000",
-  "positive_control": "1.0000000",
-  "every_success_half": true
+  "fused_corrected_xxx": "2/3",
+  "ghz_fidelity": "3/4",
+  "fusion_success": "1/2"
  },
  "multi_pair": {
   "243/4000": {
    "one_survivor_each": "0.0130231",
-   "wrong_fraction_x_1_over_40": "0.0829735"
+   "double_origin_fraction_x_1_over_40": "0.0829735"
   },
   "1/2": {
    "one_survivor_each": "0.25",
-   "wrong_fraction_x_1_over_40": "0.025"
+   "double_origin_fraction_x_1_over_40": "0.025"
   },
   "9/10": {
    "one_survivor_each": "0.0324",
-   "wrong_fraction_x_1_over_40": "0.00102459"
+   "double_origin_fraction_x_1_over_40": "0.00102459"
   }
  },
  "number_resolving_herald_x_1_over_40": {
@@ -129,49 +165,49 @@
   {
    "x": "1/40",
    "herald": "threshold",
-   "wrong_fraction": "0.0873428",
-   "witness": "0.30479",
-   "combined": "0.14578",
+   "assigned_fault_fraction": "0.0873428",
+   "score_before_visibility": "0.30479",
+   "score": "0.14578",
    "dominant": "multi-pair"
   },
   {
    "x": "1/40",
    "herald": "9/10",
-   "wrong_fraction": "0.0226857",
-   "witness": "0.74207",
-   "combined": "0.35493",
+   "assigned_fault_fraction": "0.0226857",
+   "score_before_visibility": "0.74207",
+   "score": "0.35493",
    "dominant": "multi-pair"
   },
   {
    "x": "1/200",
    "herald": "threshold",
-   "wrong_fraction": "0.0223377",
-   "witness": "0.745513",
-   "combined": "0.356577",
+   "assigned_fault_fraction": "0.0223377",
+   "score_before_visibility": "0.745513",
+   "score": "0.356577",
    "dominant": "multi-pair"
   },
   {
    "x": "1/200",
    "herald": "9/10",
-   "wrong_fraction": "0.00856758",
-   "witness": "0.894171",
-   "combined": "0.427679",
+   "assigned_fault_fraction": "0.00856758",
+   "score_before_visibility": "0.894171",
+   "score": "0.427679",
    "dominant": "dark counts"
   },
   {
    "x": "1/1000",
    "herald": "threshold",
-   "wrong_fraction": "0.0085536",
-   "witness": "0.894335",
-   "combined": "0.427758",
+   "assigned_fault_fraction": "0.0085536",
+   "score_before_visibility": "0.894335",
+   "score": "0.427758",
    "dominant": "dark counts"
   },
   {
    "x": "1/1000",
    "herald": "9/10",
-   "wrong_fraction": "0.00576407",
-   "witness": "0.927605",
-   "combined": "0.44367",
+   "assigned_fault_fraction": "0.00576407",
+   "score_before_visibility": "0.927605",
+   "score": "0.44367",
    "dominant": "dark counts"
   }
  ],
@@ -179,13 +215,14 @@
   "empty": {
    "grade": "FAULTS_DECLARED",
    "reasons": [
-    "source block needs LAB_RECORDED heralded_g2 and herald_readout"
+    "source needs recorded g2 and herald readout"
    ]
   }
  },
  "disclaimers": [
   "no device; every number is an exact consequence of declared inputs",
-  "withdrawn: the v0.24 single-site 'one survivor is right' statement does not extend to a fused register",
+  "v0.34 corrects the v0.33 zero-coherence claim: fused XXX=2/3 and fidelity=3/4",
+  "ledger entries are toy scores, not circuit-level witness bounds",
   "finished-star waiting, correlated loss and the 810 nm source rate are open"
  ]
 }

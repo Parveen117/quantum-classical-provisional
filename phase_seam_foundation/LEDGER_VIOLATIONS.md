@@ -1,6 +1,6 @@
 # Ledger violations at readout: multi-pair and dark counts — v0.24
 
-**v0.33 correction:** the multi-pair one-survivor event is 'accepted and right' for a single isolated site only. In a fused register it is accepted by the one-click rule and wrong: the conditioned state is a classical mixture with zero coherence (Theorem P1, [CLUSTER_FAULTS.md](CLUSTER_FAULTS.md)), and the per-pair wrong fraction is about 4x independent of loss. The register budgets below that credit that event as right are superseded for fused registers.
+**v0.34 correction (supersedes v0.33 P1):** a double-pair event with one surviving photon per site is not an ideal Bell pair, but pure loss retains coherence. Its Bell fidelity is 3/4; after fusion the corrected XXX is 2/3. The zero-coherence argument and resulting universal source thresholds are withdrawn. See [SOURCE_DISTILLATION.md](SOURCE_DISTILLATION.md). The older budgets cannot be used as a certified fused-register fidelity bound.
 
 **Author: Monty.** LOSS_LEDGER.md (L2) made loss a rate under the readout rule
 "exactly one click per site". This note treats the two things that rule

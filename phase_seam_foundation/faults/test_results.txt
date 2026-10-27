@@ -1,8 +1,9 @@
 test_allowed_x (test_phase_seam_cluster_faults.DoublePairTests.test_allowed_x) ... ok
 test_fused_one_survivor_is_wrong (test_phase_seam_cluster_faults.DoublePairTests.test_fused_one_survivor_is_wrong) ... ok
-test_mixture_is_classical (test_phase_seam_cluster_faults.DoublePairTests.test_mixture_is_classical) ... ok
+test_loss_trace_retains_coherence (test_phase_seam_cluster_faults.DoublePairTests.test_loss_trace_retains_coherence) ... ok
 test_wrong_fraction_law (test_phase_seam_cluster_faults.DoublePairTests.test_wrong_fraction_law) ... ok
 test_fail_closed (test_phase_seam_cluster_faults.GradeTests.test_fail_closed) ... ok
+test_perfect_record_still_requires_a_circuit_channel (test_phase_seam_cluster_faults.GradeTests.test_perfect_record_still_requires_a_circuit_channel) ... ok
 test_plan (test_phase_seam_cluster_faults.GradeTests.test_plan) ... ok
 test_design_point_fails_and_recovers (test_phase_seam_cluster_faults.LedgerTests.test_design_point_fails_and_recovers) ... ok
 test_assembly (test_phase_seam_cluster_faults.StorageTests.test_assembly) ... ok
@@ -11,6 +12,6 @@ test_storage_monotone_and_exact (test_phase_seam_cluster_faults.StorageTests.tes
 test_grid_and_composition (test_phase_seam_cluster_faults.SwitchTests.test_grid_and_composition) ... ok
 
 ----------------------------------------------------------------------
-Ran 11 tests in 15.937s
+Ran 12 tests in 1.527s
 
 OK

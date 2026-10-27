@@ -1,17 +1,26 @@
 # Phase–seam foundation prototype
 
-**New: [faults on the classifier cluster](CLUSTER_FAULTS.md).**
-The v0.33 packet prices the cluster's faults exactly and withdraws one earlier
-statement: a heralded double pair with one survivor per site is a classical
-mixture (Theorem P1) that passes the one-click rule and leaves ⟨XXX⟩ = 0 in a
-fused register, so the per-pair wrong fraction is ≈ 4x whatever the loss and
-the x = 1/40 design point fails on 13 nodes (witness 0.30); a counting herald
-or x ≈ 1/1000 restores it. Theorem S1 solves star growth with storage
-exactly; the seven merges survive m¹¹⁹; switches and buffers on the native
-grid; dark counts and HOM visibility (V⁷) complete the 13-node ledger with a
-fail-closed grader. No device, no measured number. [Audit](faults/qualification.json).
+**New: [source channels and optical Bell-pair purification](SOURCE_DISTILLATION.md).**
+The v0.34 packet reviews `90bc68d` and corrects its source partial trace:
+shared loss environments retain off-diagonal terms, giving Bell fidelity
+3/4 and fused XXX = 2/3. Two native type-I fusion units now implement an
+exact purification round. For supplied pairs with Bell weights
+`(3/4,1/12,1/12,1/12)`, ideal Z/X rounds give fidelity 841/932 (90.24%);
+four alternating rounds give 98.56%, with explicit failed-attempt costs.
+A separate one-round channel enumerates input loss, inefficient photon
+counts and dark counts, including accepted heralds with invalid payloads.
+The raw source's selected sector is not a certified reusable supply, and
+noisy rounds are not silently composed. [Audit](distillation/qualification.json).
 
-**Previous:** [encoded optical Bell transfer from detector records](ENCODED_BELL.md) (v0.32: transversal passive Bell measurement of the tree code at 3/4, count-record decoder, 12-photon encoded Bell resource at 192 Bell pairs, heater-frame handoff), uilding and running the classifier cluster on the route](CLUSTER_BUILD.md).**
+**Previous: [cluster storage and fault scores](CLUSTER_FAULTS.md)** (v0.33,
+source correction in v0.34). Storage and switch models are retained; the
+zero-coherence source claim and 13-node physical witness interpretation
+are withdrawn. The grader stops at recorded node inputs pending the actual
+source-to-cluster noise channel.
+
+**Previous:** [encoded optical Bell transfer from detector records](ENCODED_BELL.md) (v0.32: transversal passive Bell measurement of the tree code at 3/4, count-record decoder, 12-photon encoded Bell resource at 192 Bell pairs, heater-frame handoff).
+
+**[Building and running the classifier cluster on the route](CLUSTER_BUILD.md).**
 The v0.31 packet settles what v0.29 left open, exactly: Lemma A turns the
 pattern's Pauli corrections into a heater-trim sign flip and an outcome relabel
 (no rail switch; six feedforward stages), witnessed end to end with a tracked
@@ -21,7 +30,9 @@ build costs ≈ 3533 Bell pairs under v0.30's full-restart policy or ≈ 202
 conditional with spare leaves; the online ledger counts every required click
 (η¹³ dominates). No device, no measured number. [Audit](cluster_build/qualification.json).
 
-**Previous:** [optical fresh-node transfer and encoded Bell factory](OPTICAL_REFRESH.md) (v0.30: single-photon decoder, two-coupler Bell analyser at exactly 1/2, seven-photon encoded Bell resource at 48 Bell pairs under full restart), he trained classifier as a measurement pattern on a fusion-built cluster](CLUSTER_COMPILE.md).**
+**Previous:** [optical fresh-node transfer and encoded Bell factory](OPTICAL_REFRESH.md) (v0.30: single-photon decoder, two-coupler Bell analyser at exactly 1/2, seven-photon encoded Bell resource at 48 Bell pairs under full restart).
+
+**[The trained classifier as a measurement pattern on a fusion-built cluster](CLUSTER_COMPILE.md).**
 The v0.29 packet compiles the self-learning branch's four-qubit, five-angle,
 three-CNOT classifier into the only form the dual-rail route can execute: a
 13-photon tree cluster (12 edges, 7 heralded fusions) read by ten single-photon

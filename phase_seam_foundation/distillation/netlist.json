@@ -1,0 +1,64 @@
+{
+  "schema": "native-source-distillation-plan-v1",
+  "author": "Monty",
+  "status": "EXACT_CONDITIONAL_MODEL_NO_DEVICE",
+  "input": "two independent supplied Bell-diagonal pairs; one photon per site before loss",
+  "local_site_order": [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+  ],
+  "modes": 8,
+  "photons_in": 4,
+  "local_fusion_couplers": 2,
+  "detector_modes": [
+    1,
+    2,
+    5,
+    6
+  ],
+  "output_rails": [
+    [
+      0,
+      3
+    ],
+    [
+      4,
+      7
+    ]
+  ],
+  "accepted_record": "one registered photon per local detector pair",
+  "phase_corrections": [
+    {
+      "click": 1,
+      "steps": 16
+    },
+    {
+      "click": 2,
+      "steps": 48
+    }
+  ],
+  "x_basis_extra_hadamards": 6,
+  "coherent_h_interface": "encoded_bell.basis_bridge_certificate",
+  "coherent_h_heaters": {
+    "lower": 16,
+    "upper": 0,
+    "before": 32,
+    "after": 32
+  },
+  "coherent_h_verified": true,
+  "couplers_by_basis": {
+    "Z": 2,
+    "X": 14
+  },
+  "retry": "offline resource preparation only; recursive ideal-supply cost includes failed nodes",
+  "open": [
+    "certified source sector without destructive counting",
+    "higher source-pair numbers",
+    "faulty multi-round supply and storage scheduling",
+    "imperfect mode overlap and phase control",
+    "propagation through the 12-photon encoded resource factory",
+    "measured component parameters"
+  ]
+}
