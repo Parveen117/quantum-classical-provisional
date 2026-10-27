@@ -2,6 +2,15 @@
 
 ## Phase–seam foundation and hardware contract
 
+The [v0.35 full-payload purification cascade](phase_seam_foundation/PURIFICATION_CASCADE.md)
+connects two noisy optical rounds without discarding vacuum or excess-photon
+outputs between them. With declared 99% input transmission and detector
+efficiency at each level, a 75%-fidelity supplied source reaches 82.27%
+full output fidelity (90.24% in the ideal model). The exact state includes
+all sectors through eight output photons, and costs include false heralds.
+Fixed unequal waiting losses are explicit; random preparation times,
+certified sources and longer noisy cascades remain open.
+
 The [v0.34 source and purification channel](phase_seam_foundation/SOURCE_DISTILLATION.md)
 corrects a missing-coherence term in the v0.33 source model and derives a
 Bell-pair purification device from two existing optical fusion units.

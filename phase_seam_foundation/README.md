@@ -1,6 +1,18 @@
 # Phase–seam foundation prototype
 
-**New: [source channels and optical Bell-pair purification](SOURCE_DISTILLATION.md).**
+**New: [two noisy purification rounds with the full photon payload](PURIFICATION_CASCADE.md).**
+The v0.35 packet carries every accepted first-round photon sector into the
+second round, including vacuum, excess photons and rail coherences. The
+ideal ZX fidelity 841/932 is reproduced; declared 99% input survival and
+99% detector efficiency at each level give 82.27% full output fidelity.
+An explicit negative control shows how an extra inter-round sector flag
+can overstate fidelity. Exact local Fock checks include four-photon
+bunching; the complete retained payload can contain eight photons.
+Retry costs and fixed unequal memory waits are included. No noisy
+four-round, stochastic scheduler or hardware result is claimed.
+[Audit](cascade/qualification.json).
+
+**Previous: [source channels and optical Bell-pair purification](SOURCE_DISTILLATION.md).**
 The v0.34 packet reviews `90bc68d` and corrects its source partial trace:
 shared loss environments retain off-diagonal terms, giving Bell fidelity
 3/4 and fused XXX = 2/3. Two native type-I fusion units now implement an

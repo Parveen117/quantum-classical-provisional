@@ -10,6 +10,10 @@ adds a purification device with an explicit accepted-output noise channel.
 [Results](distillation/qualification.json) · [Optical plan](distillation/netlist.json) ·
 [Test log](distillation/test_results.txt).
 
+**Continuation:** [v0.35](PURIFICATION_CASCADE.md) now composes two noisy
+rounds while retaining the entire photon payload. The ideal four-round
+numbers below remain ideal; they are not noisy four-round predictions.
+
 ## 1. Result and scope
 
 Two existing type-I fusion units implement a two-copy Bell-pair purification
