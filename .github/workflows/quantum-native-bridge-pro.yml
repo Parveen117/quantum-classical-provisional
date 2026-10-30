@@ -7,7 +7,18 @@ on:
 
 jobs:
   test:
+    name: tests (python ${{ matrix.python-version }}, ${{ matrix.extras }})
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - python-version: '3.11'
+            extras: 'test'
+          - python-version: '3.12'
+            extras: 'test'
+          - python-version: '3.12'
+            extras: 'test,qiskit'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -15,10 +26,17 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: ${{ matrix.python-version }}
 
-      - name: Install test dependency
-        run: python -m pip install --upgrade pip pytest numpy scipy
+      - name: Install the calculator package and test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[${{ matrix.extras }}]"
+
+      - name: Calculator smoke test through the installed command
+        run: |
+          nrqc check native_relational_qc/calculator_examples/bell.json > /dev/null
+          nrqc calculate native_relational_qc/calculator_examples/bell.json > /dev/null
 
       - name: Run unit tests
         run: python -m pytest -q

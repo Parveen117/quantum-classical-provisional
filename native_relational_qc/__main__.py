@@ -12,8 +12,12 @@ def main(argv=None):
     if argv and argv[0] == 'calculate':
         from .calculator import main as calculator_main
         return calculator_main(argv[1:])
-    parser = argparse.ArgumentParser(description=__doc__, epilog=
-        'Custom exact circuits: python -m native_relational_qc calculate INPUT.json --out RESULT.json')
+    if argv and argv[0] == 'check':
+        from .check import main as check_main
+        return check_main(argv[1:])
+    parser = argparse.ArgumentParser(prog='nrqc', description=__doc__, epilog=
+        'Custom exact circuits: nrqc calculate INPUT.json --out RESULT.json; '
+        'backend acceptance report: nrqc check INPUT.json (or nrqc check --table)')
     parser.add_argument("program", choices=["bell", "ghz", "bv", "grover", "order-memory"])
     parser.add_argument("--compare-qiskit", action="store_true")
     parser.add_argument("--out", type=Path)

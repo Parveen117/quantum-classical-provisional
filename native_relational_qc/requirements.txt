@@ -1,3 +1,5 @@
-# Python 3.12. Native evaluator uses only NumPy; Qiskit is optional for adapters.
+# Python 3.12 recommended (3.11 supported). The native evaluator needs only NumPy.
+# Qiskit is an optional adapter: install it with `pip install -e ".[qiskit]"` from
+# the repository root, or uncomment the line below.
 numpy>=1.26,<3
-qiskit>=2.5,<3
+# qiskit>=2.5,<3

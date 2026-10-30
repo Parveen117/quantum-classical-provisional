@@ -171,6 +171,14 @@ separate: no thermal/Maxwell prediction or physical performance is inferred.
 
 ## Native relational calculation engine
 
+Install and run the exact calculator from the repository root with
+`python -m pip install -e ".[test]"` (NumPy-only core; add `qiskit` to the extras
+for the optional adapters), then `nrqc check INPUT.json` to see which backends
+accept a request and `nrqc calculate INPUT.json` for exact answers. The package
+[README](native_relational_qc/README.md) has the install steps and a capability
+table of all eleven backends; CI runs the suite on Python 3.11 and 3.12, with and
+without Qiskit.
+
 The [linear-recognition upgrade](native_relational_qc/LINEAR_RECOGNITION.md)
 constructs the minimum exact linear future-observation space for a declared
 Pauli seed and gate alphabet, with explicit resource limits. A checkable
