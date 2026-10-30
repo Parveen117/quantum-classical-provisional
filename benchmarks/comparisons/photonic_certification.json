@@ -8,10 +8,11 @@
   "claim_checks": {
     "fusion_success": true,
     "purification_fidelity": true,
+    "readout_bound_at_declared_point": true,
     "source_bell_weights": true
   },
   "evidence_class": "LOCAL_IDEAL_MODEL_DERIVATION",
-  "execution_seconds": 6.43455254699802,
+  "execution_seconds": 4.051568233997386,
   "expected_claims": {
     "fusion_success": "1/2",
     "purification_fidelity": "841/932",
@@ -320,6 +321,7 @@
       "expression": "rational coefficients in the declared zeta_64 power basis",
       "rational": "90443464930128374747814924023404765186696661929565053832110773039051252627298109955527/32323107088714221377046463394001052277630406449726262219880233646687090863590166495232"
     },
+    "declared_coefficient": "14/5",
     "double_fraction": {
       "decimal": "0.0829735469205",
       "decimal_enclosure": {
@@ -376,6 +378,24 @@
       "rational": "5/2"
     },
     "formula": "A*w + 1-(1-w/4)^12-12*(w/4)*(1-w/4)^11; A derived from circuit response",
+    "margin_below_declared_bound": {
+      "decimal": "0.0001571902835",
+      "decimal_enclosure": {
+        "lower": "0.000157190283",
+        "maximum_absolute_display_error": "1/2000000000000",
+        "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+        "upper": "0.000157190284"
+      },
+      "exact": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2114864210088025814058887152133536659331022383494268897739144123437547365356574418944057671680",
+        "real_numerators": [
+          332436104581708845781908273404552929678416663692674757462241107052379320763648140673393849
+        ]
+      },
+      "expression": "rational coefficients in the declared zeta_64 power basis",
+      "rational": "332436104581708845781908273404552929678416663692674757462241107052379320763648140673393849/2114864210088025814058887152133536659331022383494268897739144123437547365356574418944057671680"
+    },
     "negative_control_expression": {
       "decimal": "0.6183598569715",
       "decimal_enclosure": {
@@ -516,7 +536,7 @@
   "source_sha256": {
     "native_relational_qc/certify.py": "9e7287e24f4983420ec20decf87e046394693bb9aff0197a8a6db2ea9d06270b",
     "native_relational_qc/cyclotomic_pow2.py": "7eadad87b6d9e5cf189c354fc3bee58298dccdb0ded28c8fb945771f2fa2e990",
-    "native_relational_qc/ledger_certify.py": "738836c531bbb3ddaaeed8fe8a41277d3ec278dcd24f4a7dd7c52b0616573cc0",
+    "native_relational_qc/ledger_certify.py": "c42cb8e62646cf2a02ec63ba9e2505900da1d9ecb26ca33e4d5c989751e131e9",
     "phase_seam_foundation/cluster_compile.py": "e406aec0cde23513594dcd89a71ace6628c6c9257cdbcac6e55187711f369501",
     "phase_seam_foundation/cluster_noise.py": "1e59033faab637382255660a032d6a070ac254e7aa9d5ce1af28e7c730d2ec29",
     "phase_seam_foundation/dual_rail.py": "b20068fd8b67bf4e85d36cb8252872c321209894789d4cf3ef2e436800a1015b",

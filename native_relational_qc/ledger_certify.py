@@ -74,6 +74,10 @@ def certify(*, claims=None, decimal_places=12):
     values={'fusion_success':str(success),'purification_fidelity':str(fidelity),
             'source_bell_weights':[str(v) for v in weights]}
     matches={key: (tuple(map(Q,values[key]))==tuple(map(Q,expected[key])) if key=='source_bell_weights' else Q(values[key])==Q(expected[key])) for key in EXPECTED}
+    # The fourth target is an inequality at this declared operating point.
+    # Reporting its coefficient alone must not certify a violated bound.
+    bound_margin=Q(14,5)*w-upper
+    matches['readout_bound_at_declared_point']=w>0 and bound_margin>=0
     files=['native_relational_qc/cyclotomic_pow2.py','native_relational_qc/certify.py','native_relational_qc/ledger_certify.py',
            'phase_seam_foundation/dual_rail.py','phase_seam_foundation/source_distillation.py',
            'phase_seam_foundation/cluster_noise.py','phase_seam_foundation/cluster_compile.py']
@@ -89,6 +93,7 @@ def certify(*, claims=None, decimal_places=12):
         readout_bound=dict(x='1/40',eta='243/4000',double_fraction=_shown(w,decimal_places),
             first_order=_shown(first,decimal_places),remainder=_shown(remainder,decimal_places),
             total_upper_bound=_shown(upper,decimal_places),coefficient_at_declared_point=_shown(ratio,decimal_places),
+            declared_coefficient='14/5',margin_below_declared_bound=_shown(bound_margin,decimal_places),
             first_order_coefficient=_shown(first/w,decimal_places),
             formula='A*w + 1-(1-w/4)^12-12*(w/4)*(1-w/4)^11; A derived from circuit response',
             rounded_2_8_is_universal=False,

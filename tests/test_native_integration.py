@@ -115,6 +115,10 @@ class LedgerCertificationTests(unittest.TestCase):
         self.assertEqual(r['status'],'certified');self.assertTrue(all(r['negative_controls'].values()))
         self.assertEqual(r['purification']['fidelity']['rational'],'841/932')
         self.assertEqual(r['readout_bound']['first_order_coefficient']['rational'],'5/2')
+        self.assertTrue(r['claim_checks']['readout_bound_at_declared_point'])
+        bound=r['readout_bound']
+        self.assertGreaterEqual(Q(bound['margin_below_declared_bound']['rational']),0)
+        self.assertLessEqual(Q(bound['coefficient_at_declared_point']['rational']),Q(14,5))
         for row in [r['fusion']['success'],r['purification']['fidelity'],*r['source']['weights'],r['readout_bound']['total_upper_bound']]:
             bounds=row['decimal_enclosure'];exact=Q(row['rational'])
             self.assertLessEqual(Q(bounds['lower']),exact);self.assertGreaterEqual(Q(bounds['upper']),exact)
@@ -123,3 +127,16 @@ class LedgerCertificationTests(unittest.TestCase):
         from native_relational_qc.certify import certify,EXPECTED
         report=certify(claims=dict(EXPECTED,purification_fidelity='9/10'))
         self.assertEqual(report['status'],'failed');self.assertFalse(report['claim_checks']['purification_fidelity'])
+
+    def test_violated_readout_bound_is_not_certified(self):
+        from unittest.mock import patch
+        from native_relational_qc.certify import certify
+        from phase_seam_foundation.cluster_noise import first_order_error
+        def excessive_error(*args,**kwargs):
+            result=dict(first_order_error(*args,**kwargs))
+            result['first_order']=3*result['double_fraction']
+            return result
+        with patch('phase_seam_foundation.cluster_noise.first_order_error',side_effect=excessive_error):
+            report=certify()
+        self.assertEqual(report['status'],'failed')
+        self.assertFalse(report['claim_checks']['readout_bound_at_declared_point'])
