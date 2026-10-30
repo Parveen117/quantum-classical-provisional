@@ -427,7 +427,7 @@ class WitnessPinTests(unittest.TestCase):
         import hashlib,json
         from pathlib import Path
         root=Path(__file__).resolve().parents[1]
-        evidence=root/'native_relational_qc'/'jet_readings'/'integration_20261030'
+        evidence=root/'native_relational_qc'/'jet_readings'/'performance_20261031'
         record=json.loads((evidence/'qualification2.json').read_text())
         for path,pinned in record['source_blob_sha1'].items():
             data=(root/path).read_bytes();blob=hashlib.sha1(b'blob %d\0'%len(data)+data).hexdigest()

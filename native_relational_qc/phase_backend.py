@@ -223,7 +223,8 @@ def execute(circuit,state,b):
     """
     field=getattr(circuit,'field',Cyclotomic)
     phase_gates=getattr(circuit,'phase_gates',PhaseCircuit.phase_gates)
-    vectorize=isinstance(circuit,PowerPhaseCircuit) and circuit.n_qubits<=62
+    flat=isinstance(circuit,PowerPhaseCircuit)
+    vectorize=flat and circuit.n_qubits<=62
     operations=circuit.operations;index=0
     while index<len(operations):
         name,qs=operations[index]
@@ -247,10 +248,21 @@ def execute(circuit,state,b):
             # Revalidate even if called directly with another circuit implementation.
             if isinstance(circuit,PowerPhaseCircuit):circuit.revalidate(name,qs)
             else:(Phase64Circuit if field is Phase64Circuit.field else Phase32Circuit if field is Phase32Circuit.field else PhaseCircuit)(circuit.n_qubits).add(name,*qs)
+            root_power=None
+            if isinstance(circuit,PowerPhaseCircuit) and phase.den==1:
+                terms=phase.terms
+                if len(terms)==1 and abs(terms[0][1])==1:
+                    root_power=terms[0][0]+(field.N if terms[0][1]<0 else 0)
             out={}
             for ket,value in state.items():
                 b.tick('gate_visits')
-                b.put(out,ket,b.mul(value,phase) if all(ket&(1<<q) for q in qs) else value)
+                if all(ket&(1<<q) for q in qs):
+                    if root_power is None or getattr(value,'ORDER',None)!=field.ORDER:value=b.mul(value,phase)
+                    else:
+                        b.tick('field_products');value=value.times_root(root_power)
+                        # put checks the identical coefficient bound immediately
+                        # after the product, including externally supplied states.
+                b.put(out,ket,value)
             state=out
         else:
             for basic,target,controls in operation_plan(circuit.n_qubits,name,qs):
@@ -259,6 +271,15 @@ def execute(circuit,state,b):
                     b.tick('gate_visits')
                     if not all(ket&(1<<q) for q in controls):b.put(out,ket,value);continue
                     bit=(ket>>target)&1;base=ket&~(1<<target)
+                    if flat and basic=='h':
+                        # Retain the two logical matrix products and the original
+                        # put order for work, bit and transient-support budgets.
+                        # Their magnitudes agree, so compute the common value once.
+                        b.tick('field_products');half=field.coerce(value).times_inv_sqrt2()
+                        b.put(out,base,half)
+                        b.tick('field_products')
+                        b.put(out,base|(1<<target),half.times_root(field.N) if bit else half)
+                        continue
                     for reading in (0,1):
                         if matrix[reading][bit]:b.put(out,base|(reading<<target),b.mul(matrix[reading][bit],value))
                 state=out

@@ -58,6 +58,9 @@ resource failure discards that whole batch; no truncated approximation is return
 The flat backend's `max_branches` can be explicitly raised to 1,048,576. This
 allows larger full-register 12-bit phase-estimation paths; support, work, wall
 time and memory still bound feasible inputs. Defaults remain conservative.
+The N=141, base 2, 12-bit full-register workload is
+[qualified in two local runs](BENCHMARKS.md#full-register-12-bit-runtime-qualification)
+at 160.1 s and 190.2 s under a 300 s deadline, with all 4,096 exact bins checked.
 `readout_workers: 2` through `8` evaluates independent queries concurrently,
 sharing immutable amplitudes and a synchronized batch work budget. Output order
 is preserved. Threads may cost more than they save on small or Python-heavy

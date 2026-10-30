@@ -1,0 +1,61 @@
+{
+  "author": "Monty",
+  "evidence_class": "LOCAL_IDEAL_CALCULATION",
+  "exact_bins_checked": 4096,
+  "exact_distribution_sha256": "1949ebc4d2f32f416f5b99950282a5a3c9378f3a77af8b898ebacf1cd14e0d37",
+  "exact_fourier_law_agrees": true,
+  "hardware_job_id": null,
+  "input": {
+    "file": "full_register_12_20261031_input.json.gz",
+    "request_sha256": "45b5de0c0688b570cf8059cf890129508df69d83d861bae655662d26fdad6be5",
+    "sha256": "2826fee890aafa717541924483305b8288c0813f1f01874dfcc3e0f6009f7568"
+  },
+  "negative_controls": {
+    "changed_probability": {
+      "reason": "calculator disagrees with exact Fourier law",
+      "rejected": true
+    },
+    "missing_bin": {
+      "reason": "assessment requires the complete phase distribution",
+      "rejected": true
+    }
+  },
+  "qualification_boundary": "Two local trials under 300 seconds; no hardware-independent runtime guarantee",
+  "result": {
+    "file": "full_register_12_20261031_result.json.gz",
+    "sha256": "57ee5782eee30182dd497251863848e374d97e6a3e00a700eefa499fc69ef683"
+  },
+  "schema": "nrqc-full-register-runtime-qualification-v1",
+  "scope": "N=141, base 2, 12 phase bits, full-register arithmetic oracle with Panini rewrite",
+  "statistics": {
+    "backend": "cyclotomic_pow2",
+    "budget_scope": "whole batch including preparation and all readouts",
+    "dense_statevector_constructed": false,
+    "field_products": 3182929,
+    "field_sums": 978616,
+    "gate_visits": 6496103,
+    "max_coefficient_bits": 25,
+    "peak_branches": 188412,
+    "permutation_visits": 184492032,
+    "preparation_count": 1,
+    "readout_visits": 188412,
+    "representation": "sparse computational-basis amplitudes in flat Q(zeta_4096)",
+    "truncated_amplitudes": 0,
+    "work_definition": "one unit per gate, amplitude/readout visit, field product or field sum",
+    "work_used": 195338092
+  },
+  "status": "qualified",
+  "trials": [
+    {
+      "file": "full_register_12_optimized_20261031_run1.json",
+      "sha256": "93c5687ae69c72398c07f5551315d3ce1b8430a920c734fa11f2f31a560fbb11",
+      "wall_seconds": 160.10168964900367
+    },
+    {
+      "file": "full_register_12_optimized_20261031_run2.json",
+      "sha256": "b22a0d90aa460169baf7c11e5eae2455f0af2d8c5c6a48b3c96c0166e0505f59",
+      "wall_seconds": 190.22779569499835
+    }
+  ],
+  "verifier_sha256": "b61f06b2bce7ddd74546b0045de31d8db788bbe4fe4edb26899a22ff43b6a9be"
+}

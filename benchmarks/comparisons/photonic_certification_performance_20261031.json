@@ -1,0 +1,546 @@
+{
+  "assumptions": [
+    "ideal type-I fusion",
+    "fully supplied independent Bell pairs for purification",
+    "independent pair errors; worst-pattern bounds on the two larger stars",
+    "no dark counts, distinguishability, correlated loss or physical calibration"
+  ],
+  "claim_checks": {
+    "fusion_success": true,
+    "purification_fidelity": true,
+    "readout_bound_at_declared_point": true,
+    "source_bell_weights": true
+  },
+  "evidence_class": "LOCAL_IDEAL_MODEL_DERIVATION",
+  "execution_seconds": 7.005742570996517,
+  "expected_claims": {
+    "fusion_success": "1/2",
+    "purification_fidelity": "841/932",
+    "source_bell_weights": [
+      "3/4",
+      "1/12",
+      "1/12",
+      "1/12"
+    ]
+  },
+  "field": "cyclotomic_pow2:64",
+  "fusion": {
+    "method": "permanent-derived Fock amplitudes and factorial norm",
+    "normalization": {
+      "decimal": "1.0000000000000",
+      "decimal_enclosure": {
+        "lower": "1.000000000000",
+        "maximum_absolute_display_error": "0",
+        "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+        "upper": "1.000000000000"
+      },
+      "exact": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "1",
+        "real_numerators": [
+          1
+        ]
+      },
+      "expression": "rational coefficients in the declared zeta_64 power basis",
+      "rational": "1"
+    },
+    "single_click": {
+      "decimal": "0.2500000000000",
+      "decimal_enclosure": {
+        "lower": "0.250000000000",
+        "maximum_absolute_display_error": "0",
+        "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+        "upper": "0.250000000000"
+      },
+      "exact": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "4",
+        "real_numerators": [
+          1
+        ]
+      },
+      "expression": "rational coefficients in the declared zeta_64 power basis",
+      "rational": "1/4"
+    },
+    "success": {
+      "decimal": "0.5000000000000",
+      "decimal_enclosure": {
+        "lower": "0.500000000000",
+        "maximum_absolute_display_error": "0",
+        "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+        "upper": "0.500000000000"
+      },
+      "exact": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "expression": "rational coefficients in the declared zeta_64 power basis",
+      "rational": "1/2"
+    }
+  },
+  "hardware_job_id": null,
+  "negative_controls": {
+    "discarding_source_coherence_changes_fidelity": true,
+    "repeating_Z_is_not_ZX": true,
+    "rounded_2_8w_does_not_bound_the_full_expression": true,
+    "single_click_is_not_total_success": true
+  },
+  "purification": {
+    "fidelity": {
+      "decimal": "0.9023605150215",
+      "decimal_enclosure": {
+        "lower": "0.902360515021",
+        "maximum_absolute_display_error": "1/2000000000000",
+        "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+        "upper": "0.902360515022"
+      },
+      "exact": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "932",
+        "real_numerators": [
+          841
+        ]
+      },
+      "expression": "rational coefficients in the declared zeta_64 power basis",
+      "rational": "841/932"
+    },
+    "method": "two ideal optical density contractions, Z then X",
+    "rounds": [
+      {
+        "basis": "Z",
+        "success": {
+          "decimal": "0.3611111111115",
+          "decimal_enclosure": {
+            "lower": "0.361111111111",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.361111111112"
+          },
+          "exact": {
+            "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+            "denominator": "36",
+            "real_numerators": [
+              13
+            ]
+          },
+          "expression": "rational coefficients in the declared zeta_64 power basis",
+          "rational": "13/36"
+        },
+        "weights": [
+          {
+            "decimal": "0.7884615384615",
+            "decimal_enclosure": {
+              "lower": "0.788461538461",
+              "maximum_absolute_display_error": "1/2000000000000",
+              "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+              "upper": "0.788461538462"
+            },
+            "exact": {
+              "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+              "denominator": "52",
+              "real_numerators": [
+                41
+              ]
+            },
+            "expression": "rational coefficients in the declared zeta_64 power basis",
+            "rational": "41/52"
+          },
+          {
+            "decimal": "0.1730769230765",
+            "decimal_enclosure": {
+              "lower": "0.173076923076",
+              "maximum_absolute_display_error": "1/2000000000000",
+              "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+              "upper": "0.173076923077"
+            },
+            "exact": {
+              "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+              "denominator": "52",
+              "real_numerators": [
+                9
+              ]
+            },
+            "expression": "rational coefficients in the declared zeta_64 power basis",
+            "rational": "9/52"
+          },
+          {
+            "decimal": "0.0192307692305",
+            "decimal_enclosure": {
+              "lower": "0.019230769230",
+              "maximum_absolute_display_error": "1/2000000000000",
+              "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+              "upper": "0.019230769231"
+            },
+            "exact": {
+              "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+              "denominator": "52",
+              "real_numerators": [
+                1
+              ]
+            },
+            "expression": "rational coefficients in the declared zeta_64 power basis",
+            "rational": "1/52"
+          },
+          {
+            "decimal": "0.0192307692305",
+            "decimal_enclosure": {
+              "lower": "0.019230769230",
+              "maximum_absolute_display_error": "1/2000000000000",
+              "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+              "upper": "0.019230769231"
+            },
+            "exact": {
+              "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+              "denominator": "52",
+              "real_numerators": [
+                1
+              ]
+            },
+            "expression": "rational coefficients in the declared zeta_64 power basis",
+            "rational": "1/52"
+          }
+        ]
+      },
+      {
+        "basis": "X",
+        "success": {
+          "decimal": "0.3446745562135",
+          "decimal_enclosure": {
+            "lower": "0.344674556213",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.344674556214"
+          },
+          "exact": {
+            "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+            "denominator": "676",
+            "real_numerators": [
+              233
+            ]
+          },
+          "expression": "rational coefficients in the declared zeta_64 power basis",
+          "rational": "233/676"
+        },
+        "weights": [
+          {
+            "decimal": "0.9023605150215",
+            "decimal_enclosure": {
+              "lower": "0.902360515021",
+              "maximum_absolute_display_error": "1/2000000000000",
+              "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+              "upper": "0.902360515022"
+            },
+            "exact": {
+              "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+              "denominator": "932",
+              "real_numerators": [
+                841
+              ]
+            },
+            "expression": "rational coefficients in the declared zeta_64 power basis",
+            "rational": "841/932"
+          },
+          {
+            "decimal": "0.0439914163095",
+            "decimal_enclosure": {
+              "lower": "0.043991416309",
+              "maximum_absolute_display_error": "1/2000000000000",
+              "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+              "upper": "0.043991416310"
+            },
+            "exact": {
+              "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+              "denominator": "932",
+              "real_numerators": [
+                41
+              ]
+            },
+            "expression": "rational coefficients in the declared zeta_64 power basis",
+            "rational": "41/932"
+          },
+          {
+            "decimal": "0.0439914163095",
+            "decimal_enclosure": {
+              "lower": "0.043991416309",
+              "maximum_absolute_display_error": "1/2000000000000",
+              "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+              "upper": "0.043991416310"
+            },
+            "exact": {
+              "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+              "denominator": "932",
+              "real_numerators": [
+                41
+              ]
+            },
+            "expression": "rational coefficients in the declared zeta_64 power basis",
+            "rational": "41/932"
+          },
+          {
+            "decimal": "0.0096566523605",
+            "decimal_enclosure": {
+              "lower": "0.009656652360",
+              "maximum_absolute_display_error": "1/2000000000000",
+              "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+              "upper": "0.009656652361"
+            },
+            "exact": {
+              "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+              "denominator": "932",
+              "real_numerators": [
+                9
+              ]
+            },
+            "expression": "rational coefficients in the declared zeta_64 power basis",
+            "rational": "9/932"
+          }
+        ]
+      }
+    ]
+  },
+  "readout_bound": {
+    "bell_pairs": 12,
+    "coefficient_at_declared_point": {
+      "decimal": "2.7981055373755",
+      "decimal_enclosure": {
+        "lower": "2.798105537375",
+        "maximum_absolute_display_error": "1/2000000000000",
+        "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+        "upper": "2.798105537376"
+      },
+      "exact": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "32323107088714221377046463394001052277630406449726262219880233646687090863590166495232",
+        "real_numerators": [
+          90443464930128374747814924023404765186696661929565053832110773039051252627298109955527
+        ]
+      },
+      "expression": "rational coefficients in the declared zeta_64 power basis",
+      "rational": "90443464930128374747814924023404765186696661929565053832110773039051252627298109955527/32323107088714221377046463394001052277630406449726262219880233646687090863590166495232"
+    },
+    "declared_coefficient": "14/5",
+    "double_fraction": {
+      "decimal": "0.0829735469205",
+      "decimal_enclosure": {
+        "lower": "0.082973546920",
+        "maximum_absolute_display_error": "1/2000000000000",
+        "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+        "upper": "0.082973546921"
+      },
+      "exact": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "13085773",
+        "real_numerators": [
+          1085773
+        ]
+      },
+      "expression": "rational coefficients in the declared zeta_64 power basis",
+      "rational": "1085773/13085773"
+    },
+    "eta": "243/4000",
+    "first_order": {
+      "decimal": "0.2074338673005",
+      "decimal_enclosure": {
+        "lower": "0.207433867300",
+        "maximum_absolute_display_error": "1/2000000000000",
+        "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+        "upper": "0.207433867301"
+      },
+      "exact": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "26171546",
+        "real_numerators": [
+          5428865
+        ]
+      },
+      "expression": "rational coefficients in the declared zeta_64 power basis",
+      "rational": "5428865/26171546"
+    },
+    "first_order_coefficient": {
+      "decimal": "2.5000000000000",
+      "decimal_enclosure": {
+        "lower": "2.500000000000",
+        "maximum_absolute_display_error": "0",
+        "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+        "upper": "2.500000000000"
+      },
+      "exact": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          5
+        ]
+      },
+      "expression": "rational coefficients in the declared zeta_64 power basis",
+      "rational": "5/2"
+    },
+    "formula": "A*w + 1-(1-w/4)^12-12*(w/4)*(1-w/4)^11; A derived from circuit response",
+    "margin_below_declared_bound": {
+      "decimal": "0.0001571902835",
+      "decimal_enclosure": {
+        "lower": "0.000157190283",
+        "maximum_absolute_display_error": "1/2000000000000",
+        "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+        "upper": "0.000157190284"
+      },
+      "exact": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2114864210088025814058887152133536659331022383494268897739144123437547365356574418944057671680",
+        "real_numerators": [
+          332436104581708845781908273404552929678416663692674757462241107052379320763648140673393849
+        ]
+      },
+      "expression": "rational coefficients in the declared zeta_64 power basis",
+      "rational": "332436104581708845781908273404552929678416663692674757462241107052379320763648140673393849/2114864210088025814058887152133536659331022383494268897739144123437547365356574418944057671680"
+    },
+    "negative_control_expression": {
+      "decimal": "0.6183598569715",
+      "decimal_enclosure": {
+        "lower": "0.618359856971",
+        "maximum_absolute_display_error": "1/2000000000000",
+        "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+        "upper": "0.618359856972"
+      },
+      "exact": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "4096000000000000",
+        "real_numerators": [
+          2532801974155211
+        ]
+      },
+      "expression": "rational coefficients in the declared zeta_64 power basis",
+      "rational": "2532801974155211/4096000000000000"
+    },
+    "negative_control_scope": "counterexample to bounding this expression by 2.8w; not a measured readout error",
+    "negative_control_w": "1/5",
+    "remainder": {
+      "decimal": "0.0247348737925",
+      "decimal_enclosure": {
+        "lower": "0.024734873792",
+        "maximum_absolute_display_error": "1/2000000000000",
+        "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+        "upper": "0.024734873793"
+      },
+      "exact": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "422972842017605162811777430426707331866204476698853779547828824687509473071314883788811534336",
+        "real_numerators": [
+          10462179864994010117009579254927500774456196457903054921287358056768838948317136125673581531
+        ]
+      },
+      "expression": "rational coefficients in the declared zeta_64 power basis",
+      "rational": "10462179864994010117009579254927500774456196457903054921287358056768838948317136125673581531/422972842017605162811777430426707331866204476698853779547828824687509473071314883788811534336"
+    },
+    "rounded_2_8_is_universal": false,
+    "total_upper_bound": {
+      "decimal": "0.2321687410925",
+      "decimal_enclosure": {
+        "lower": "0.232168741092",
+        "maximum_absolute_display_error": "1/2000000000000",
+        "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+        "upper": "0.232168741093"
+      },
+      "exact": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "422972842017605162811777430426707331866204476698853779547828824687509473071314883788811534336",
+        "real_numerators": [
+          98201072247580275835059253501664262111055194713249637194452410374929795718899350740742417371
+        ]
+      },
+      "expression": "rational coefficients in the declared zeta_64 power basis",
+      "rational": "98201072247580275835059253501664262111055194713249637194452410374929795718899350740742417371/422972842017605162811777430426707331866204476698853779547828824687509473071314883788811534336"
+    },
+    "x": "1/40"
+  },
+  "schema": "nrqc-ledger-certification-v1",
+  "source": {
+    "method": "eight-mode four-photon dilation, environment trace, Bell projections",
+    "weights": [
+      {
+        "decimal": "0.7500000000000",
+        "decimal_enclosure": {
+          "lower": "0.750000000000",
+          "maximum_absolute_display_error": "0",
+          "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+          "upper": "0.750000000000"
+        },
+        "exact": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "4",
+          "real_numerators": [
+            3
+          ]
+        },
+        "expression": "rational coefficients in the declared zeta_64 power basis",
+        "rational": "3/4"
+      },
+      {
+        "decimal": "0.0833333333335",
+        "decimal_enclosure": {
+          "lower": "0.083333333333",
+          "maximum_absolute_display_error": "1/2000000000000",
+          "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+          "upper": "0.083333333334"
+        },
+        "exact": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "12",
+          "real_numerators": [
+            1
+          ]
+        },
+        "expression": "rational coefficients in the declared zeta_64 power basis",
+        "rational": "1/12"
+      },
+      {
+        "decimal": "0.0833333333335",
+        "decimal_enclosure": {
+          "lower": "0.083333333333",
+          "maximum_absolute_display_error": "1/2000000000000",
+          "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+          "upper": "0.083333333334"
+        },
+        "exact": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "12",
+          "real_numerators": [
+            1
+          ]
+        },
+        "expression": "rational coefficients in the declared zeta_64 power basis",
+        "rational": "1/12"
+      },
+      {
+        "decimal": "0.0833333333335",
+        "decimal_enclosure": {
+          "lower": "0.083333333333",
+          "maximum_absolute_display_error": "1/2000000000000",
+          "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+          "upper": "0.083333333334"
+        },
+        "exact": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "12",
+          "real_numerators": [
+            1
+          ]
+        },
+        "expression": "rational coefficients in the declared zeta_64 power basis",
+        "rational": "1/12"
+      }
+    ]
+  },
+  "source_sha256": {
+    "native_relational_qc/certify.py": "9e7287e24f4983420ec20decf87e046394693bb9aff0197a8a6db2ea9d06270b",
+    "native_relational_qc/cyclotomic_pow2.py": "61fb228363e05691b7d673711c8168c677346a4a1095416a7a37a450a9fddcc8",
+    "native_relational_qc/ledger_certify.py": "c42cb8e62646cf2a02ec63ba9e2505900da1d9ecb26ca33e4d5c989751e131e9",
+    "phase_seam_foundation/cluster_compile.py": "e406aec0cde23513594dcd89a71ace6628c6c9257cdbcac6e55187711f369501",
+    "phase_seam_foundation/cluster_noise.py": "1e59033faab637382255660a032d6a070ac254e7aa9d5ce1af28e7c730d2ec29",
+    "phase_seam_foundation/dual_rail.py": "b20068fd8b67bf4e85d36cb8252872c321209894789d4cf3ef2e436800a1015b",
+    "phase_seam_foundation/source_distillation.py": "d7f57cca7ecf309a4fbd50be04aece1dc9f5208ba65e177d84dbe69fbef29e82"
+  },
+  "status": "certified"
+}

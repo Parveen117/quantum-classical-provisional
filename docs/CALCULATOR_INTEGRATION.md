@@ -26,7 +26,7 @@ CODEOWNERS and the prior file removals. No force push is needed.
 | Exact phase transport | PhaseGate export/import under an explicit canonical-float convention; symbolic OpenQASM 2 round trip; RZ scalar phase retained and non-dyadic angles rejected. |
 | Retired arithmetic engines | Three thin compatibility modules use the shared flat field. Old JSON bases, constructors and legacy coefficient-budget semantics remain. |
 | Retained comparisons | Six identical JSON workloads, three trials each; all supported answers agree, with losses to Aer/Stim and the first adapter error retained. |
-| Performance | Flat branch ceiling 1,048,576; opt-in shared-state parallel query readout; exact sparse/dense products. Actual 131,072-branch regression passes. Full-register N=141 at 12 bits still times out at 300 seconds. |
+| Performance | Flat branch ceiling 1,048,576; opt-in shared-state parallel query readout; exact sparse/dense products. Actual 131,072-branch regression passes. The original full-register N=141 timeout is resolved by the 2026-10-31 follow-up: 160.1 s and 190.2 s under the unchanged 300 s limit, with all 4,096 exact bins verified. See [runtime qualification](../native_relational_qc/BENCHMARKS.md#full-register-12-bit-runtime-qualification). |
 
 ## Numerical interpretation
 
