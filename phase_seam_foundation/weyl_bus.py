@@ -7,6 +7,7 @@ See WEYL_BUS.md for local-PH2 obstruction, fault boundaries and prior art.
 from dataclasses import dataclass
 
 from native_relational_qc.cyclotomic_pow2 import field_of_order
+from native_relational_qc.legacy_cyclotomic import legacy_field_of_order
 ZETA = field_of_order(64).root()
 from .model import ResourceLimit
 
@@ -126,7 +127,9 @@ def certificate(word, *, dimension=64):
                 local_output_flip_mask=next(iter(flip)),
                 nonlocal_phase_steps=nonlocal_phase,
                 entangling=(nonlocal_phase != 0) if common else None,
-                plus_input_concurrence_squared=concurrence2.to_dict() if common else None,
+                # Keep the published v1 coefficient encoding at the boundary;
+                # the calculation above still uses the shared flat field.
+                plus_input_concurrence_squared=legacy_field_of_order(64)(concurrence2).to_dict() if common else None,
                 physical_interactions_assumed=True, physical_device_built=False,
                 universal_simulation_claim=False)
 

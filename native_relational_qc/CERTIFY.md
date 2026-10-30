@@ -11,9 +11,8 @@ engine over Q(zeta_64) in `phase_seam_foundation/cluster_compile.py`, because
 the calculator had no mid-circuit measurement with pi/32 phases. The audit
 note of phase seam v0.29 recorded that gap. `nrqc certify cluster` closes it:
 the same claim is re-derived on the calculator's flat `cyclotomic_pow2`
-backend, an independent implementation (dense power-basis integer arithmetic
-instead of the sparse quadratic tower, static circuits instead of a
-measurement engine), and the two engines must agree exactly.
+backend through a static-circuit construction separate from the measurement
+pattern engine. In this integration both use the same flat arithmetic kernel.
 
 ## Claim certified
 
