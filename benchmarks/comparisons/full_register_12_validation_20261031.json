@@ -1,0 +1,72 @@
+{
+  "artifact_sha256": {
+    "full_register_12_20261031_logs/ci-python311-core.log": "d3f679a9e8950c8b5f970578eb2bac3cb5ea6670c256064aa5ce9918a82d27fb",
+    "full_register_12_20261031_logs/ci-python312-core.log": "c5d9f1cd733caf5071d630aebefe1eaf3b94f8654837f4ffe76027554a137b94",
+    "full_register_12_20261031_logs/ci-python312-qiskit.log": "134518e45ec314be7ac3b7e9f426307ac44faa781a941be054a442e1cb8d499c",
+    "full_register_12_20261031_logs/field-products.log": "5393bb4e759171652544241db3c061f4eb83fb87a4560492b36b8490ad2ca255",
+    "full_register_12_20261031_logs/jet-audit.log": "22c14a41c416ac6f2bf171032210571268a00960341d4a1b74d33dae48dfd93a",
+    "full_register_12_20261031_logs/local-python312-qiskit.log": "16246d9e6fe05d5247dced10e07842a986d66396e731c320cb597bb18558ad53",
+    "full_register_12_20261031_logs/targeted-regressions.log": "25212c585ea904c86f8909a6b9d02ba8037944a6af5fe2c00eba59b29bfefefe",
+    "full_register_12_qualification_20261031.json": "2c1e453bf1d75d12be2f13933810cbb3bf6a9c94060e7d166047de30661a876d",
+    "photonic_certification_performance_20261031.json": "f589e95051cb7a3f8be306bb5f14998011e8c1681c70fc0a6f4dd1fc9aba2aa9"
+  },
+  "author": "Monty",
+  "ci_merge_commit": "2a68e19c26c9e005ddbbe2cb0a61aebeb2c289d5",
+  "ci_run": 41120513584,
+  "ci_run_url": "https://github.com/Parveen117/quantum-classical-provisional/actions/runs/41120513584",
+  "field_regression_tests_passed": 27,
+  "full_suites": [
+    {
+      "job_id": 124285700425,
+      "job_url": "https://github.com/Parveen117/quantum-classical-provisional/actions/runs/41120513584/job/124285700425",
+      "log": "full_register_12_20261031_logs/ci-python311-core.log",
+      "passed": 1046,
+      "python": "3.11.17",
+      "seconds": 780.77,
+      "sha256": "d3f679a9e8950c8b5f970578eb2bac3cb5ea6670c256064aa5ce9918a82d27fb",
+      "skipped": 51,
+      "subtests_passed": 272
+    },
+    {
+      "job_id": 124285700618,
+      "job_url": "https://github.com/Parveen117/quantum-classical-provisional/actions/runs/41120513584/job/124285700618",
+      "log": "full_register_12_20261031_logs/ci-python312-core.log",
+      "passed": 1046,
+      "python": "3.12.15",
+      "seconds": 543.49,
+      "sha256": "c5d9f1cd733caf5071d630aebefe1eaf3b94f8654837f4ffe76027554a137b94",
+      "skipped": 51,
+      "subtests_passed": 272
+    },
+    {
+      "job_id": 124285700758,
+      "job_url": "https://github.com/Parveen117/quantum-classical-provisional/actions/runs/41120513584/job/124285700758",
+      "log": "full_register_12_20261031_logs/ci-python312-qiskit.log",
+      "passed": 1088,
+      "python": "3.12.15",
+      "seconds": 784.69,
+      "sha256": "134518e45ec314be7ac3b7e9f426307ac44faa781a941be054a442e1cb8d499c",
+      "skipped": 9,
+      "subtests_passed": 272
+    },
+    {
+      "log": "full_register_12_20261031_logs/local-python312-qiskit.log",
+      "passed": 1088,
+      "python": "3.12.14",
+      "seconds": 773.46,
+      "sha256": "16246d9e6fe05d5247dced10e07842a986d66396e731c320cb597bb18558ad53",
+      "skipped": 9,
+      "subtests_passed": 272
+    }
+  ],
+  "jet_exact_checks": 61220,
+  "jet_negative_controls": 3337,
+  "photonic_certificate": "photonic_certification_performance_20261031.json",
+  "photonic_claim_checks": 4,
+  "qualification_scope": "Two local full-register N=141, base 2, 12-bit trials under a 300-second deadline; no hardware-independent runtime claim",
+  "runtime_qualification": "full_register_12_qualification_20261031.json",
+  "schema": "nrqc-full-register-validation-v1",
+  "targeted_tests_passed": 23,
+  "tested_commit": "b1a126deea34845a02d62825dc5456f7b0951b86",
+  "tested_tree": "0f481ccc75fb839ca19ddbab2bbbc2dd17bbc08c"
+}

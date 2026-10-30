@@ -148,8 +148,11 @@ class CyclotomicPow2:
     def _list(self):return self._vec().tolist() if self.item else list(self.data)
 
     def _maxabs(self):
-        v=self._vec()
-        return int(np.abs(v).max()) if self.item else max(map(abs,v))
+        if self.item:
+            # The canonical packed range is symmetric, so abs cannot overflow.
+            # A magnitude check does not need an int64 copy of the whole field.
+            return int(np.abs(np.frombuffer(self.data,dtype=_DTYPES[self.item])).max())
+        return max(map(abs,self.data))
 
     @property
     def coefficients(self):return tuple(Fraction(c,self.den) for c in self._list())
@@ -192,6 +195,57 @@ class CyclotomicPow2:
     def __sub__(self,other):return self+-self.coerce(other)
     def __rsub__(self,other):return self.coerce(other)+-self
 
+    def times_root(self,power):
+        """Multiply by zeta**power by an exact signed coefficient permutation.
+
+        A root rotation preserves the denominator, coefficient magnitudes and
+        their gcd. The canonical representation therefore needs no convolution
+        or renormalization. Packed coefficients stay in their original width;
+        the storage convention leaves room to negate every stored coefficient.
+        """
+        if type(power) is not int:raise TypeError('integer root exponent required')
+        power%=self.ORDER
+        if not power or not self:return self
+        e=power%self.N;sign=-1 if power>=self.N else 1
+        out=object.__new__(type(self));out.item,out.den=self.item,self.den
+        if self.item:
+            values=np.frombuffer(self.data,dtype=_DTYPES[self.item])
+            rotated=np.empty_like(values)
+            rotated[e:]=values[:self.N-e]*sign
+            if e:rotated[:e]=values[self.N-e:]*(-sign)
+            out.data=rotated.tobytes()
+        else:
+            out.data=tuple(-sign*c for c in self.data[self.N-e:])+tuple(sign*c for c in self.data[:self.N-e])
+        return out
+
+    def times_inv_sqrt2(self):
+        """Exact multiplication by (zeta**(M/8)+zeta**(-M/8))/2.
+
+        With four equal coefficient blocks (a,b,c,d), the numerator becomes
+        (b-d,a+c,b+d,c-a). Its common divisor with 2*den is only 1 or 2:
+        applying this integer transform twice gives twice the input, whose
+        coefficients and denominator were already coprime. Thus a parity test
+        replaces a full gcd reduction without changing the canonical result.
+        """
+        if not self:return self
+        q=self.N//4
+        if not self.item or (self.item==8 and self._maxabs()>=_LIMIT):
+            v=self._list();a,b,c,d=(v[i*q:(i+1)*q] for i in range(4))
+            return self._build([y-z for y,z in zip(b,d)]+[x+z for x,z in zip(a,c)]+
+                               [y+z for y,z in zip(b,d)]+[z-x for x,z in zip(a,c)],2*self.den)
+        dtype=_DTYPES[min(8,2*self.item)]
+        a,b,c,d=np.frombuffer(self.data,dtype=_DTYPES[self.item]).astype(dtype).reshape(4,q)
+        v=np.empty(self.N,dtype=dtype)
+        v[:q]=b-d;v[q:2*q]=a+c;v[2*q:3*q]=b+d;v[3*q:]=c-a
+        den=2*self.den
+        if not int(np.bitwise_or.reduce(v))&1:v//=2;den//=2
+        magnitude=int(np.abs(v).max())
+        if magnitude>=_LIMIT:return self._build(v.tolist(),den)
+        item=_item_for(magnitude)
+        out=object.__new__(type(self));out.data=v.astype(_DTYPES[item]).tobytes()
+        out.item,out.den=item,den
+        return out
+
     def __mul__(self,other):
         other=self.coerce(other)
         if not self or not other:return type(self)()
@@ -201,6 +255,20 @@ class CyclotomicPow2:
             na,nb=int(np.count_nonzero(a)),int(np.count_nonzero(b))
             if nb>na:a,b,na,nb=b,a,nb,na
             ma=int(np.abs(a).max())
+            if self.N>=128 and nb>=8 and na<=self.N//4 and na*nb<=8*self.N:
+                mb=int(np.abs(b).max())
+                if nb*ma*mb<_LIMIT:
+                    # For each output coefficient there is at most one matching
+                    # a-index per b-index, including the negacyclic wrap. Thus
+                    # every intermediate scatter sum is bounded by nb*ma*mb.
+                    # This bounded pair grid avoids visiting N zeros per term.
+                    ia,ib=np.flatnonzero(a),np.flatnonzero(b)
+                    exponents=ia[:,None]+ib[None,:]
+                    products=a[ia,None]*b[ib]
+                    products[exponents>=self.N]*=-1
+                    out=np.zeros(self.N,dtype=np.int64)
+                    np.add.at(out,(exponents&(self.N-1)).ravel(),products.ravel())
+                    return self._build(out,den)
             # Sparse-by-dense rotation costs O(nb*N); convolution costs O(N^2).
             # Keep the rotation path while the smaller support is below N/16.
             if nb<=max(_FEW,self.N//16):
