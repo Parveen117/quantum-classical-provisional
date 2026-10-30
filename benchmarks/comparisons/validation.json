@@ -1,0 +1,101 @@
+{
+  "ci_jobs": [
+    {
+      "collected": 1090,
+      "conclusion": "success",
+      "extras": "test,qiskit,benchmark",
+      "job_id": 124252939245,
+      "log": "ci-python312-qiskit.log",
+      "log_sha256": "6445b6b9e10bfdd5676e9fec83872877340729c3bbf2d77248e10a331a3d1c53",
+      "passed": 1081,
+      "python": "3.12.15",
+      "seconds": 647.11,
+      "skipped": 9,
+      "subtests_passed": 272,
+      "url": "https://github.com/Parveen117/quantum-classical-provisional/actions/runs/41110957063/job/124252939245"
+    },
+    {
+      "collected": 1090,
+      "conclusion": "success",
+      "extras": "test",
+      "job_id": 124252939553,
+      "log": "ci-python312-core.log",
+      "log_sha256": "8cdeb8a4696fd0e2b9055abde42ced9d290c767ffa16a9c739fb827158f776cf",
+      "passed": 1039,
+      "python": "3.12.15",
+      "seconds": 780.15,
+      "skipped": 51,
+      "subtests_passed": 272,
+      "url": "https://github.com/Parveen117/quantum-classical-provisional/actions/runs/41110957063/job/124252939553"
+    },
+    {
+      "collected": 1090,
+      "conclusion": "success",
+      "extras": "test",
+      "job_id": 124252939550,
+      "log": "ci-python311-core.log",
+      "log_sha256": "94914648d7b5a46b29c505e4ade4de6610fb8d097bf22c6e064be275c28a00b9",
+      "passed": 1039,
+      "python": "3.11.17",
+      "seconds": 600.04,
+      "skipped": 51,
+      "subtests_passed": 272,
+      "url": "https://github.com/Parveen117/quantum-classical-provisional/actions/runs/41110957063/job/124252939550"
+    }
+  ],
+  "ci_status": "success",
+  "full_register_12": {
+    "qualified_completed": false,
+    "record": "benchmarks/comparisons/full_register_12.json",
+    "status": "time_limit",
+    "wall_budget_seconds": 300
+  },
+  "github_run_id": 41110957063,
+  "github_run_url": "https://github.com/Parveen117/quantum-classical-provisional/actions/runs/41110957063",
+  "jet_audit": {
+    "exact_checks": 61220,
+    "negative_controls": 3337,
+    "record": "native_relational_qc/jet_readings/integration_20261030/qualification2.json"
+  },
+  "log_normalization": "Decoded UTF-8 job logs; trailing whitespace removed.",
+  "photonic_source_hashes_match": true,
+  "resolved_regressions": [
+    "Legacy coefficient budgets retain historical coordinates.",
+    "Jet source pins point to a separately regenerated integration record.",
+    "Weyl v1 certificates retain their published coefficient encoding.",
+    "Photonic certification explicitly fails when the declared 14/5*w inequality is violated."
+  ],
+  "schema": "nrqc-integration-validation-v1",
+  "scope": "Declared ideal models; not hardware qualification. The 14/5*w check is at x=1/40, eta=243/4000; it is not a universal bound.",
+  "targeted_checks": {
+    "log": "targeted-final.log",
+    "passed": 25,
+    "python": "3.12.14",
+    "scope": [
+      "exact phase round trips",
+      "shared batch budget",
+      "131072 actual branches",
+      "independent integer-product reference",
+      "four photonic targets and rejection of a violated readout bound",
+      "Weyl v1 JSON compatibility"
+    ],
+    "seconds": 40.97
+  },
+  "tested_commit": "c1bb8e4355ebac90d3246b86117973bbce0afb3a",
+  "tested_tree": "7b637666e30f17bc250dd26da7a9c8f1c65c4573",
+  "wheel_smoke": {
+    "calculate": "completed",
+    "certification_checks": {
+      "fusion_success": true,
+      "purification_fidelity": true,
+      "readout_bound_at_declared_point": true,
+      "source_bell_weights": true
+    },
+    "certify": "certified",
+    "check": "accepted",
+    "installed_module": "<wheel-test-environment>/lib/python3.12/site-packages/native_relational_qc/__init__.py",
+    "openqasm_roundtrip": true,
+    "qiskit_present": false,
+    "weyl_v1_compatible": true
+  }
+}

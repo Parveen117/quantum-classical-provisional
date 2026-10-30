@@ -52,5 +52,5 @@ qualification and checksum remain unchanged.
 Final full-suite logs, source-bound certification and summaries are retained
 under `benchmarks/comparisons/`. See [benchmarks](../native_relational_qc/BENCHMARKS.md)
 and [phase transport](../native_relational_qc/PHASE_INTEROP.md) for reproducible
-commands and boundaries. The final validation summary records exact pass/skip
-counts and the tested revision.
+commands and boundaries. The [final validation summary](../benchmarks/comparisons/VALIDATION.md) records
+exact pass/skip counts, all three successful CI jobs and the tested revision.
