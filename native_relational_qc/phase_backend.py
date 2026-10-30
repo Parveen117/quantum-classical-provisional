@@ -6,6 +6,8 @@ Clifford-frame compression, prime oracle, or universal speedup is claimed.
 """
 from time import perf_counter
 
+import numpy as np
+
 from .compact import CompactCircuit,ResourceLimit,_integer,operation_plan
 from .exact import exact_gate,IMAG
 from .cyclotomic import Cyclotomic,ZERO,ONE,ZETA
@@ -45,6 +47,42 @@ class Phase64Circuit(Phase32Circuit):
         phase_gates[name]=(width,root**power)
 
 
+class PowerPhaseCircuit(PhaseCircuit):
+    """Sparse exact execution in flat Q(zeta_M), M=2**k, 8<=M<=4096.
+
+    Phase gates pK/pKdg/cpK/cpKdg mean diag(1,exp(+-2*pi*i/K)) for every power
+    of two 2<=K<=M; p16/p32/p64 keep their earlier meanings.
+    """
+    backend='cyclotomic_pow2'
+    max_gates=1_000_000   # declared-operation cap for this backend; others keep 100000
+
+    def __init__(self,n_qubits,order=64):
+        from .cyclotomic_pow2 import field_of_order
+        super().__init__(n_qubits)
+        self.field=field_of_order(order);self.order=order
+        self.phase_gates={}
+        K=2
+        while K<=order:
+            for name,width,power in ((f'p{K}',1,1),(f'p{K}dg',1,-1),(f'cp{K}',2,1),(f'cp{K}dg',2,-1)):
+                self.phase_gates[name]=(width,self.field.root(power*(order//K)))
+            K*=2
+
+    def revalidate(self,name,qs):PowerPhaseCircuit(self.n_qubits,self.order).add(name,*qs)
+
+
+def required_order(operations):
+    """Smallest supported power-of-two order containing every declared phase gate."""
+    import re
+    order=8
+    for name,_ in operations:
+        match=re.fullmatch(r'c?p([1-9][0-9]*)(dg)?',name)
+        if match:
+            K=int(match.group(1))
+            if K&(K-1) or K<2:raise ValueError('phase gate order must be a power of two')
+            order=max(order,K)
+    return order
+
+
 class Budget:
     def __init__(self,max_work=10_000_000,max_coefficient_bits=4096,max_branches=4096):
         self.max_work=_integer(max_work,'max_work',1,1_000_000_000)
@@ -60,6 +98,14 @@ class Budget:
     def tick(self,kind):
         self.stats[kind]+=1;self.stats['work_used']+=1
         if self.stats['work_used']>self.max_work:self.fail('cyclotomic batch work budget exceeded')
+
+    def tick_many(self,kind,count):
+        """Account count unit visits at once; fails at exactly the same unit as tick."""
+        used=self.stats['work_used']
+        if used+count>self.max_work:
+            self.stats[kind]+=self.max_work+1-used;self.stats['work_used']=self.max_work+1
+            self.fail('cyclotomic batch work budget exceeded')
+        self.stats[kind]+=count;self.stats['work_used']=used+count
 
     def fail(self,message):
         error=ResourceLimit(message);error.statistics=dict(self.stats)
@@ -83,9 +129,15 @@ class Budget:
 
 
 class Prepared:
-    def __init__(self,circuit,budget,amplitudes):
+    def __init__(self,circuit,budget,amplitudes,norms=None):
         self.n_qubits=circuit.n_qubits;self.budget=budget;self.amplitudes=amplitudes
-        self.field=getattr(circuit,'field',Cyclotomic)
+        self.field=getattr(circuit,'field',Cyclotomic);self.order=getattr(circuit,'order',None)
+        # Flat backend: |amplitude|^2 computed once for the normalization check
+        # is reused by probability readouts instead of being recomputed.
+        self.norms=norms
+
+    def _norm(self,ket,value):
+        return self.norms[ket] if self.norms is not None else self.budget.mul(value.conjugate(),value)
 
     def probability(self,outcomes):
         from .calculator import _site_map
@@ -94,17 +146,17 @@ class Prepared:
         for ket,value in self.amplitudes.items():
             b.tick('readout_visits')
             if all((ket>>q)&1==v for q,v in outcomes.items()):
-                total=b.add(total,b.mul(value.conjugate(),value))
+                total=b.add(total,self._norm(ket,value))
         return total
 
     def distribution(self,sites):
-        sites=tuple(sites)
-        if not 1<=len(sites)<=8 or len(set(sites))!=len(sites):raise ValueError('distribution needs 1..8 distinct wires')
+        sites=tuple(sites);width=12 if getattr(self,'order',None) else 8
+        if not 1<=len(sites)<=width or len(set(sites))!=len(sites):raise ValueError(f'distribution needs 1..{width} distinct wires')
         for q in sites:_integer(q,'qubit',0,self.n_qubits-1)
         out={format(y,f'0{len(sites)}b'):self.field() for y in range(1<<len(sites))};b=self.budget
         for ket,value in self.amplitudes.items():
             b.tick('readout_visits');label=''.join(str((ket>>q)&1) for q in sites)
-            out[label]=b.add(out[label],b.mul(value.conjugate(),value))
+            out[label]=b.add(out[label],self._norm(ket,value))
         total=self.field()
         for value in out.values():total=b.add(total,value)
         if total!=self.field(1):raise ArithmeticError('phase distribution not normalized')
@@ -127,18 +179,48 @@ class Prepared:
         return out
 
 
-def prepare(circuit,**limits):
-    if not isinstance(circuit,CompactCircuit):raise TypeError('phase backend requires a declared circuit')
-    _integer(circuit.n_qubits,'phase backend qubits',1,256)
-    field=getattr(circuit,'field',Cyclotomic);zero,one=field(),field(1)
+PERMUTATIONS=('id','x','rk','cx','ccx','swap')
+
+
+def _permute_run(circuit,operations,index,state,b):
+    """Apply a maximal run of permutation gates to all kets at once (flat backend).
+
+    Amplitudes are untouched; only the basis labels move, as NumPy int64 bit
+    operations. Work accounting is identical to the per-ket loop: one gate
+    visit per gate and one permutation visit per ket per gate.
+    """
+    kets=np.fromiter(state.keys(),dtype=np.int64,count=len(state));values=list(state.values())
+    count=len(kets)
+    while index<len(operations) and operations[index][0] in PERMUTATIONS:
+        name,qs=operations[index];b.tick('gate_visits')
+        operation_plan(circuit.n_qubits,name,qs)
+        b.tick_many('permutation_visits',count)
+        if name in ('x','rk'):kets^=np.int64(1<<qs[0])
+        elif name=='cx':kets^=((kets>>np.int64(qs[0]))&np.int64(1))<<np.int64(qs[1])
+        elif name=='ccx':kets^=((kets>>np.int64(qs[0]))&(kets>>np.int64(qs[1]))&np.int64(1))<<np.int64(qs[2])
+        elif name=='swap':
+            differ=((kets>>np.int64(qs[0]))^(kets>>np.int64(qs[1])))&np.int64(1)
+            kets^=(differ<<np.int64(qs[0]))|(differ<<np.int64(qs[1]))
+        index+=1
+    return dict(zip(kets.tolist(),values)),index
+
+
+def execute(circuit,state,b):
+    """Apply circuit.operations to a sparse basis-label -> amplitude state.
+
+    Shared by prepare (from the all-zero label) and by executors that start
+    from another exact state, such as the record-conditioned phase estimation.
+    """
+    field=getattr(circuit,'field',Cyclotomic)
     phase_gates=getattr(circuit,'phase_gates',PhaseCircuit.phase_gates)
-    b=Budget(**limits);b.stats['preparation_count']=1;state={0:one}
-    b.stats.update(backend=getattr(circuit,'backend','cyclotomic'),
-        representation='sparse computational-basis amplitudes in '+('Q(zeta_64)' if field is Phase64Circuit.field else 'Q(zeta_32)' if field is Phase32Circuit.field else 'Q(zeta_16)'),
-        permutation_visits=0)
-    for name,qs in circuit.operations:
-        b.tick('gate_visits')
-        if name in ('id','x','rk','cx','ccx','swap'):
+    vectorize=isinstance(circuit,PowerPhaseCircuit) and circuit.n_qubits<=62
+    operations=circuit.operations;index=0
+    while index<len(operations):
+        name,qs=operations[index]
+        if vectorize and name in PERMUTATIONS:
+            state,index=_permute_run(circuit,operations,index,state,b);continue
+        index+=1;b.tick('gate_visits')
+        if name in PERMUTATIONS:
             # These declared gates are phase-free permutations. Copy the exact
             # amplitudes unchanged; no multiplication by one is necessary.
             operation_plan(circuit.n_qubits,name,qs)
@@ -153,7 +235,8 @@ def prepare(circuit,**limits):
         elif name in phase_gates:
             width,phase=phase_gates[name];phase=field.coerce(phase)
             # Revalidate even if called directly with another circuit implementation.
-            (Phase64Circuit if field is Phase64Circuit.field else Phase32Circuit if field is Phase32Circuit.field else PhaseCircuit)(circuit.n_qubits).add(name,*qs)
+            if isinstance(circuit,PowerPhaseCircuit):circuit.revalidate(name,qs)
+            else:(Phase64Circuit if field is Phase64Circuit.field else Phase32Circuit if field is Phase32Circuit.field else PhaseCircuit)(circuit.n_qubits).add(name,*qs)
             out={}
             for ket,value in state.items():
                 b.tick('gate_visits')
@@ -169,10 +252,25 @@ def prepare(circuit,**limits):
                     for reading in (0,1):
                         if matrix[reading][bit]:b.put(out,base|(reading<<target),b.mul(matrix[reading][bit],value))
                 state=out
-    norm=zero
-    for value in state.values():norm=b.add(norm,b.mul(value.conjugate(),value))
+    return state
+
+
+def prepare(circuit,**limits):
+    if not isinstance(circuit,CompactCircuit):raise TypeError('phase backend requires a declared circuit')
+    _integer(circuit.n_qubits,'phase backend qubits',1,256)
+    field=getattr(circuit,'field',Cyclotomic);zero,one=field(),field(1)
+    flat=isinstance(circuit,PowerPhaseCircuit)
+    b=Budget(**limits);b.stats['preparation_count']=1;state={0:one}
+    b.stats.update(backend=getattr(circuit,'backend','cyclotomic'),
+        representation='sparse computational-basis amplitudes in '+(f'flat Q(zeta_{circuit.order})' if isinstance(circuit,PowerPhaseCircuit) else 'Q(zeta_64)' if field is Phase64Circuit.field else 'Q(zeta_32)' if field is Phase32Circuit.field else 'Q(zeta_16)'),
+        permutation_visits=0)
+    state=execute(circuit,state,b)
+    norm=zero;norms={} if flat else None
+    for ket,value in state.items():
+        squared=b.mul(value.conjugate(),value);norm=b.add(norm,squared)
+        if flat:norms[ket]=squared
     if norm!=one:raise ArithmeticError('phase state not exactly normalized')
-    return Prepared(circuit,b,state)
+    return Prepared(circuit,b,state,norms)
 
 
 def calculate_request(circuit,request):

@@ -191,6 +191,8 @@ submission is performed by this package.
 | IBM compilation | Offline compilation against a supplied Qiskit Target, preserving returned layout |
 | Existing evidence bridge | Circuit-derived ExpectedModel with a declared TVD tolerance and circuit hash |
 | Software verification | Analytic answers, independent Qiskit comparisons, phase/order negative controls |
+| Readings to jets | Exact jets of a declared Hessian field learned from point readings, affine-chart transport with invariant curvature, one-query linear-layer reading; [JET_READINGS.md](JET_READINGS.md) |
+| Readings to jets, part 2 | Selected curvature is the Gaussian curvature of the Hessian metric; nonlinear observer change needs the gradient and the chart to degree d+2; enclosure readings with exact width factors, exact reading-corner sign certificates and the exact certification threshold (1/13 on the test grid); quadratic phase layer read in 2n+1 counted oracle uses against the exact classical complexity n(n+3)/2; [JET_READINGS_2.md](JET_READINGS_2.md) |
 
 The mathematical bridge and its explicit hypotheses are in [THEOREM.md](THEOREM.md).
 Evidence from this package is labeled LOCAL_IDEAL or MODEL_PREDICTION. It does

@@ -103,6 +103,6 @@ def multiplier_operations(control,work,scratch,multiplier,modulus):
 
 def append_multiplier(circuit,control,work,scratch,multiplier,modulus):
     operations=multiplier_operations(control,work,scratch,multiplier,modulus)
-    if len(circuit.operations)+len(operations)>MAX_GATES:
+    if len(circuit.operations)+len(operations)>getattr(circuit,'max_gates',MAX_GATES):
         raise ResourceLimit('modular synthesis circuit budget exceeded')
     for name,qs in operations:circuit.add(name,*qs)
