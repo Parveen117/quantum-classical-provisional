@@ -1,0 +1,33 @@
+{
+  "schema": "native-active-observer-policy-v1",
+  "feature_names": [
+    "relative_ds_norm",
+    "relative_ds_00",
+    "relative_dv_11",
+    "relative_ds_mixed",
+    "relative_dv_mixed",
+    "H01_over_H00",
+    "H01_over_H11",
+    "H_anisotropy"
+  ],
+  "tree": {
+    "feature": 0,
+    "threshold": "6538224856709504000/33970263341413906009",
+    "left": {
+      "action": 0,
+      "examples": 53,
+      "cost": "363"
+    },
+    "right": {
+      "action": 1,
+      "examples": 75,
+      "cost": "507"
+    }
+  },
+  "depth_limit": 2,
+  "min_leaf": 8,
+  "training_sha256": "1dd0882c913019615e636e5d1944d0f9e854555dae63894edbaeb052ed38fee7",
+  "execution": "CLASSICAL_ACQUISITION_POLICY",
+  "training_examples": 128,
+  "fingerprint": "7ed1c105976c99e890c78ee36a8195c268b7f35b6bad192901dd72731095f810"
+}

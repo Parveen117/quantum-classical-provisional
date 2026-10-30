@@ -1,5 +1,18 @@
 # Quantum-Classical Recognition Validation
 
+This experimental branch adds [four-qubit self-learning](native_relational_qc/SELF_LEARNING.md):
+bounded phase training, saved checkpoints, XOR sanity checking and a native
+TVSP/EMK curvature task with disjoint training/test magnitudes. Exact source
+labels, a point-only blindness control and classical baselines distinguish
+learning success from quantum advantage. It uses PC simulation and submits
+no photonic controls or hardware jobs.
+
+The recorded run passes **33 tests**. XOR is correct on all four training
+cases; the curvature model is correct on **64/64 held-out synthetic cases**.
+The point-only control scores **32/64**, and the classical product baseline
+also scores **64/64**. See the [run report](native_relational_qc/learning/qualification.json)
+and [trained checkpoint](native_relational_qc/learning/first_layer_model.json).
+
 ## Phase–seam foundation and hardware contract
 
 The [v0.35 full-payload purification cascade](phase_seam_foundation/PURIFICATION_CASCADE.md)
