@@ -191,7 +191,7 @@ class CompactQiskitTests(unittest.TestCase):
         from qiskit import QuantumCircuit
         from qiskit.circuit.library import UnitaryGate, XGate
         bad=[]
-        qc=QuantumCircuit(1); qc.rz(np.pi/4,0); bad.append(qc)
+        qc=QuantumCircuit(1); qc.rz(np.pi/3,0); bad.append(qc)
         qc=QuantumCircuit(1); qc.global_phase=0.1; bad.append(qc)
         qc=QuantumCircuit(1,1); qc.measure(0,0); bad.append(qc)
         qc=QuantumCircuit(1); qc.append(UnitaryGate(np.eye(2),label="h"),[0]); bad.append(qc)

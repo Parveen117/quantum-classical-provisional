@@ -435,7 +435,8 @@ def main():
 
     report.update(exact_checks=t.checks,negative_controls=t.controls,sections=t.sections,seconds=round(time.perf_counter()-start,3),
                   statements_proved_here=False,proof_location='native_relational_qc/JET_READINGS_2.md')
-    out=ROOT/'native_relational_qc'/'jet_readings';out.mkdir(exist_ok=True)
+    # New source-bound evidence; preserve the earlier collaborator snapshot.
+    out=ROOT/'native_relational_qc'/'jet_readings'/'integration_20261030';out.mkdir(parents=True,exist_ok=True)
     text=json.dumps(report,indent=1,sort_keys=True);(out/'qualification2.json').write_text(text+'\n')
     stable=json.loads(text);stable.pop('seconds')
     for row in stable['quadratic_layer']:row.pop('seconds')

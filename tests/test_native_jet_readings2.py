@@ -426,14 +426,16 @@ class WitnessPinTests(unittest.TestCase):
         # A stale qualification2.json (regenerated before the last source edit) must fail loudly.
         import hashlib,json
         from pathlib import Path
-        root=Path(__file__).resolve().parents[1];record=json.loads((root/'native_relational_qc'/'jet_readings'/'qualification2.json').read_text())
+        root=Path(__file__).resolve().parents[1]
+        evidence=root/'native_relational_qc'/'jet_readings'/'integration_20261030'
+        record=json.loads((evidence/'qualification2.json').read_text())
         for path,pinned in record['source_blob_sha1'].items():
             data=(root/path).read_bytes();blob=hashlib.sha1(b'blob %d\0'%len(data)+data).hexdigest()
             self.assertEqual(blob,pinned,f'{path} changed after the witness was written; rerun benchmarks/jet_readings2_audit.py')
         stable=dict(record);stable.pop('seconds')
         for row in stable['quadratic_layer']:row.pop('seconds')
         digest=hashlib.sha256(json.dumps(stable,sort_keys=True).encode()).hexdigest()
-        self.assertEqual((root/'native_relational_qc'/'jet_readings'/'EXPECTED2.sha256').read_text().split()[0],digest)
+        self.assertEqual((evidence/'EXPECTED2.sha256').read_text().split()[0],digest)
 
 
 class LayerQueryTests(unittest.TestCase):

@@ -8,7 +8,11 @@ score is labelled a toy model, never a certified 13-node witness bound.
 """
 from fractions import Fraction
 
-from native_relational_qc.cyclotomic64 import Cyclotomic64 as F, ZERO, ONE, ZETA
+from native_relational_qc.cyclotomic_pow2 import field_of_order
+F = field_of_order(64)
+ZERO = field_of_order(64)()
+ONE = field_of_order(64)(1)
+ZETA = field_of_order(64).root()
 
 from .cluster_build import online_ledger, star_plan
 from .cluster_compile import NODES

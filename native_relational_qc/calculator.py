@@ -17,7 +17,7 @@ from .exact import Exact, ONE, ZERO
 
 INPUT_SCHEMA = 'nrqc-calculator-v1'
 OUTPUT_SCHEMA = 'nrqc-calculator-result-v1'
-MAX_INPUT_BYTES = 2 * 1024 * 1024
+MAX_INPUT_BYTES = 64 * 1024 * 1024
 DEFAULT_LIMITS = dict(max_work=10_000_000, max_coefficient_bits=4096,
                       max_bond=256, max_coefficients=1_000_000, max_terms=100_000,
                       max_generators=2056,max_branches=4096,max_pairs=1_000_000)
@@ -53,7 +53,7 @@ def _pairs(pairs):
 def loads(text):
     """Reject duplicate keys and non-JSON numeric constants instead of guessing."""
     if len(text.encode('utf-8')) > MAX_INPUT_BYTES:
-        raise ValueError('calculator input exceeds 2 MiB')
+        raise ValueError('calculator input exceeds 64 MiB')
     def reject(value):
         raise ValueError('invalid JSON numeric constant: ' + value)
     return json.loads(text, object_pairs_hook=_pairs, parse_constant=reject)
@@ -89,7 +89,7 @@ def _geometry_generators(value, n):
 
 def validate(document):
     _object(document, ('schema','n_qubits','operations','queries'),
-            ('backend','decimal_places','limits','simplify','contraction'))
+            ('backend','decimal_places','limits','simplify','contraction','readout_workers'))
     if document['schema'] != INPUT_SCHEMA:
         raise ValueError('unsupported calculator input schema')
     backend = document.get('backend','factored')
@@ -147,7 +147,11 @@ def validate(document):
     limits = {k:DEFAULT_LIMITS[k] for k in applicable}
     if backend=='observer32':limits['max_terms']=4096
     for k,v in supplied.items():
-        limits[k] = _integer(v,k,*LIMIT_RANGES[k])
+        bounds=(1,1_048_576) if k=='max_branches' and backend=='cyclotomic_pow2' else LIMIT_RANGES[k]
+        limits[k] = _integer(v,k,*bounds)
+    workers=_integer(document.get('readout_workers',1),'readout_workers',1,8)
+    if workers!=1 and backend!='cyclotomic_pow2':
+        raise ValueError('parallel readout requires the cyclotomic_pow2 backend')
     queries = document['queries']
     if not isinstance(queries,list) or not 1<=len(queries)<=32:
         raise ValueError('queries must contain 1..32 entries')
@@ -194,6 +198,7 @@ def validate(document):
         canonical['simplify'] = simplify
     if contraction != 'integer':
         canonical['contraction'] = contraction
+    if workers!=1:canonical['readout_workers']=workers
     return circuit, canonical
 
 
@@ -366,7 +371,7 @@ def run_calculation(document, *, timeout_seconds=20):
         raise ValueError('timeout_seconds must be finite, greater than zero, and at most 300')
     _,canonical=validate(document)
     data=_json(canonical)
-    if len(data.encode())>MAX_INPUT_BYTES:raise ValueError('calculator input exceeds 2 MiB')
+    if len(data.encode())>MAX_INPUT_BYTES:raise ValueError('calculator input exceeds 64 MiB')
     env={**os.environ,'OPENBLAS_NUM_THREADS':'1','OMP_NUM_THREADS':'1','MKL_NUM_THREADS':'1'}
     started=time.perf_counter()
     try:
@@ -403,7 +408,7 @@ def main(argv=None):
             raw=sys.stdin.buffer.read(MAX_INPUT_BYTES+1)
         else:
             with Path(args.input).open('rb') as stream:raw=stream.read(MAX_INPUT_BYTES+1)
-        if len(raw)>MAX_INPUT_BYTES:raise ValueError('calculator input exceeds 2 MiB')
+        if len(raw)>MAX_INPUT_BYTES:raise ValueError('calculator input exceeds 64 MiB')
         document=loads(raw.decode('utf-8'))
         result=calculate(document) if worker else run_calculation(document,timeout_seconds=args.timeout)
         if worker:

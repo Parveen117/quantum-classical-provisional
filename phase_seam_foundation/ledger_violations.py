@@ -16,7 +16,10 @@ fails closed unless the ledger fields are recorded.
 """
 from fractions import Fraction
 
-from native_relational_qc.cyclotomic64 import Cyclotomic64 as F, ZERO, ONE
+from native_relational_qc.cyclotomic_pow2 import field_of_order
+F = field_of_order(64)
+ZERO = field_of_order(64)()
+ONE = field_of_order(64)(1)
 from .model import ResourceLimit, integer, rational
 from .dual_rail import fock_amplitude, unit_matrix
 from .temperature_sweep import temperature_claim_verdict

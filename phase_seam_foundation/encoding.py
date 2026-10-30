@@ -7,7 +7,11 @@ from dataclasses import dataclass
 from fractions import Fraction as F
 
 from native_relational_qc.exact import Exact, IMAG
-from native_relational_qc.cyclotomic64 import Cyclotomic64 as C, ZERO, ONE, ZETA
+from native_relational_qc.cyclotomic_pow2 import field_of_order
+C = field_of_order(64)
+ZERO = field_of_order(64)()
+ONE = field_of_order(64)(1)
+ZETA = field_of_order(64).root()
 from .model import Cell, Config, Operation, ResourceLimit, verify_history
 from .joint import Element, basis_product, dagger_sign
 

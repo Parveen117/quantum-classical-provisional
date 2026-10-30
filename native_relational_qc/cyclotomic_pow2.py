@@ -72,7 +72,11 @@ class CyclotomicPow2:
 
     def __init__(self,value=0):
         if isinstance(value,CyclotomicPow2):
-            if value.ORDER!=self.ORDER:raise ValueError('cyclotomic orders differ; no implicit embedding')
+            if value.ORDER>self.ORDER:raise ValueError('cannot embed a larger cyclotomic order')
+            if value.ORDER<self.ORDER:
+                stride=self.ORDER//value.ORDER
+                out=self._from_sparse({e*stride:c for e,c in value.terms},value.den)
+                self.data,self.item,self.den=out.data,out.item,out.den;return
             self.data,self.item,self.den=value.data,value.item,value.den;return
         from .exact import Exact
         if isinstance(value,bool):raise TypeError('boolean is not an exact coefficient')
@@ -197,7 +201,9 @@ class CyclotomicPow2:
             na,nb=int(np.count_nonzero(a)),int(np.count_nonzero(b))
             if nb>na:a,b,na,nb=b,a,nb,na
             ma=int(np.abs(a).max())
-            if nb<=_FEW:
+            # Sparse-by-dense rotation costs O(nb*N); convolution costs O(N^2).
+            # Keep the rotation path while the smaller support is below N/16.
+            if nb<=max(_FEW,self.N//16):
                 index=np.flatnonzero(b);cs=b[index].tolist()
                 if ma*sum(map(abs,cs))<_LIMIT:
                     out=np.zeros(self.N,dtype=np.int64)
@@ -207,11 +213,28 @@ class CyclotomicPow2:
                 # Every product coefficient is a sum of at most nb terms below ma*mb,
                 # so the int64 convolution and the negacyclic fold are exact.
                 return self._build(_negacyclic(np.convolve(a,b),self.N),den)
-        return self._build(_mul_wide(self._list(),other._list(),self.N),den)
+        a,b=self._list(),other._list()
+        sa=[(e,c) for e,c in enumerate(a) if c]
+        sb=[(e,c) for e,c in enumerate(b) if c]
+        if len(sa)*len(sb)<=self.N*2:
+            # Sparse Python-integer product avoids packing thousands of zeroes.
+            out=[0]*self.N
+            for i,x in sa:
+                for j,y in sb:
+                    k=i+j
+                    out[k%self.N]+=x*y if k<self.N else -x*y
+            return self._build(out,den)
+        return self._build(_mul_wide(a,b,self.N),den)
     __rmul__=__mul__
 
     def __truediv__(self,other):
-        """Division by a nonzero rational only; general inversion is not needed here."""
+        """Exact rational division, or field division through the algebraic inverse."""
+        if isinstance(other,CyclotomicPow2):
+            other=self.coerce(other)
+            terms=other.terms
+            if len(terms)==1 and terms[0][0]==0:
+                other=Fraction(terms[0][1],other.den)
+            else:return self*other.inverse()
         if isinstance(other,bool) or not isinstance(other,(int,Fraction)):
             raise TypeError('only rational divisors are supported')
         other=Fraction(other)
@@ -221,6 +244,33 @@ class CyclotomicPow2:
             return self._build(v*other.denominator,self.den*other.numerator)
         v=v.tolist() if self.item else v
         return self._build([c*other.denominator for c in v],self.den*other.numerator)
+
+    def __rtruediv__(self,other):return self.coerce(other)*self.inverse()
+
+    def __pow__(self,n):
+        if type(n) is not int:raise TypeError('integer exponent required')
+        base=self if n>=0 else self.inverse();n=abs(n);out=type(self)(1)
+        while n:
+            if n&1:out=out*base
+            n//=2
+            if n:base=base*base
+        return out
+
+    def inverse(self):
+        """Quadratic norm descent, using only this flat arithmetic at each order."""
+        if not self:raise ZeroDivisionError('zero cyclotomic value has no inverse')
+        terms=self.terms
+        if len(terms)==1:
+            e,c=terms[0]
+            return type(self).root(-e)*Fraction(self.den,c)
+        if self.ORDER==8:
+            from .exact import Exact
+            a,b,c,d=(Fraction(x,self.den) for x in self._list())
+            return type(self)(Exact(a,(b-d)/2,c,(b+d)/2).inverse())
+        lower=field_of_order(self.ORDER//2)
+        v=self._list();a=lower._build(v[::2],self.den);b=lower._build(v[1::2],self.den)
+        inv=(a*a-lower.root()*b*b).inverse()
+        return type(self)(a*inv)-type(self).root()*type(self)(b*inv)
 
     def conjugate(self):
         v=self._vec()

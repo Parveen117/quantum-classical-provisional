@@ -28,7 +28,10 @@ Theorem N (first order). With q = w/4 the per-pair error probability and
 from fractions import Fraction
 from itertools import combinations
 
-from native_relational_qc.cyclotomic64 import ONE, ZERO, ZETA
+from native_relational_qc.cyclotomic_pow2 import field_of_order
+ONE = field_of_order(64)(1)
+ZERO = field_of_order(64)()
+ZETA = field_of_order(64).root()
 
 from .cluster_build import _equal_up_to_phase, star_plan
 from .cluster_compile import (DISCARDED, H2, NODES, ORDER, READOUT, SQRT2, XOR_CHECKPOINT, XOR_EXAMPLES, _State, _correct, _touch,
@@ -280,7 +283,7 @@ def first_order_error(features, parameters, x, eta, *, cache=None):
         worst = ZERO
         for p in b["patterns"]:
             d = change(p)
-            if _lower(d) > _lower(worst):
+            if (d-worst).real_sign() > 0:
                 worst = d
         detail[f"star_{centre}_worst"] = worst
         bound_sum = bound_sum + worst * (3 * b["bell_pairs"])

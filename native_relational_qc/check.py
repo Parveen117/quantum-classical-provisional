@@ -14,7 +14,7 @@ import json
 import sys
 from pathlib import Path
 
-from .calculator import INPUT_SCHEMA, MAX_INPUT_BYTES, loads, validate
+from .calculator import INPUT_SCHEMA, MAX_INPUT_BYTES, LIMIT_RANGES, loads, validate
 
 CHECK_SCHEMA = 'nrqc-check-v1'
 
@@ -95,9 +95,9 @@ CAPABILITIES = {
     'cyclotomic_pow2': dict(
         width='1..256', gates=f'{_SINGLE}; {_CONTROLLED}; pK pKdg cpK cpKdg for every power of two 2<=K<=4096',
         queries='probability expectation distribution (1..12 wires, up to 4096 scalar evaluations)',
-        options='none',
-        limits='max_branches 4096 (ceiling 65536), 1e6 declared gates',
-        representation='dense flat Q(zeta_M), M = largest K used, int64 arithmetic with exact fallback',
+        options='readout_workers 1..8',
+        limits='max_branches 4096 (ceiling 1048576), 1e6 declared gates',
+        representation='flat Q(zeta_M), sparse/dense exact product, M = largest K used',
         notes='supersedes cyclotomic, cyclotomic32, cyclotomic64; geometry not implemented'),
     'observer32': dict(
         width='1..256', gates=f'{_SINGLE}; {_CONTROLLED}; p16 p32 and dg/cp forms',
@@ -137,7 +137,32 @@ def check(document):
         if backend != 'factored' and 'contraction' in probe:
             probe.pop('contraction')
             dropped.append('contraction')
-        row = dict(backend=backend, requested=backend == requested)
+        alphabet=set((_CLIFFORD if backend=='stabilizer' else
+                      _CLIFFORD+' t tdg' if backend in ('clifford_t','clifford_frame','jya_frame') else
+                      _SINGLE+' '+_CONTROLLED).split())
+        if backend=='factored':alphabet.discard('ccx')
+        order={'cyclotomic':16,'cyclotomic32':32,'observer32':32,'cyclotomic64':64,'cyclotomic_pow2':4096}.get(backend,0)
+        for bits in range(1,13):
+            k=1<<bits
+            if k<=order and (backend=='cyclotomic_pow2' or k>=16):
+                alphabet.update((f'p{k}',f'p{k}dg',f'cp{k}',f'cp{k}dg'))
+        ops=document.get('operations',[])
+        names={o[0] for o in ops if isinstance(o,list) and len(o)==2 and isinstance(o[0],str)} if isinstance(ops,list) else set()
+        ranges=dict(LIMIT_RANGES)
+        if backend=='cyclotomic_pow2':ranges['max_branches']=(1,1_048_576)
+        applicable={'max_work','max_coefficient_bits'} | {
+            'factored':{'max_bond','max_coefficients'},'observer':{'max_terms'},
+            'stabilizer':{'max_generators'},'clifford_t':{'max_terms'},
+            'clifford_frame':{'max_generators','max_branches','max_pairs'},
+            'jya_frame':{'max_generators','max_branches','max_pairs'},
+            'observer32':{'max_terms'},'cyclotomic':{'max_branches'},
+            'cyclotomic32':{'max_branches'},'cyclotomic64':{'max_branches'},
+            'cyclotomic_pow2':{'max_branches'}}[backend]
+        row = dict(backend=backend, requested=backend == requested,
+                   unsupported_gates=sorted(names-alphabet),resource_caps={k:ranges[k] for k in sorted(applicable)},
+                   input_bytes_cap=MAX_INPUT_BYTES,
+                   query_caps=dict(entries=32,scalar_evaluations=4096 if backend=='cyclotomic_pow2' else 256,
+                                   distribution_width=12 if backend=='cyclotomic_pow2' else 8))
         try:
             circuit, canonical = validate(probe)
         except (ValueError, TypeError) as error:
@@ -193,7 +218,7 @@ def main(argv=None):
             with Path(args.input).open('rb') as stream:
                 raw = stream.read(MAX_INPUT_BYTES + 1)
         if len(raw) > MAX_INPUT_BYTES:
-            raise ValueError('calculator input exceeds 2 MiB')
+            raise ValueError('calculator input exceeds 64 MiB')
         result = check(loads(raw.decode('utf-8')))
     except (ValueError, TypeError, OSError, UnicodeDecodeError) as error:
         result = dict(schema=CHECK_SCHEMA, requested_status='invalid_request', error=str(error),

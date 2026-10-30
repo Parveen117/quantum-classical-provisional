@@ -5,6 +5,9 @@ interference term is retained. Support can grow exponentially; no dense array,
 Clifford-frame compression, prime oracle, or universal speedup is claimed.
 """
 from time import perf_counter
+from contextlib import nullcontext
+from concurrent.futures import ThreadPoolExecutor
+from threading import RLock
 
 import numpy as np
 
@@ -87,7 +90,9 @@ class Budget:
     def __init__(self,max_work=10_000_000,max_coefficient_bits=4096,max_branches=4096):
         self.max_work=_integer(max_work,'max_work',1,1_000_000_000)
         self.max_bits=_integer(max_coefficient_bits,'max_coefficient_bits',2,8192)
-        self.max_branches=_integer(max_branches,'max_branches',1,65_536)
+        self.max_branches=_integer(max_branches,'max_branches',1,1_048_576)
+        self.lock=nullcontext()
+        self.failure=None
         self.stats=dict(backend='cyclotomic',work_used=0,peak_branches=1,max_coefficient_bits=1,
             preparation_count=0,gate_visits=0,readout_visits=0,field_products=0,field_sums=0,
             budget_scope='whole batch including preparation and all readouts',
@@ -96,24 +101,29 @@ class Budget:
             dense_statevector_constructed=False,truncated_amplitudes=0)
 
     def tick(self,kind):
-        self.stats[kind]+=1;self.stats['work_used']+=1
-        if self.stats['work_used']>self.max_work:self.fail('cyclotomic batch work budget exceeded')
+        self.tick_many(kind,1)
 
     def tick_many(self,kind,count):
         """Account count unit visits at once; fails at exactly the same unit as tick."""
-        used=self.stats['work_used']
-        if used+count>self.max_work:
-            self.stats[kind]+=self.max_work+1-used;self.stats['work_used']=self.max_work+1
-            self.fail('cyclotomic batch work budget exceeded')
-        self.stats[kind]+=count;self.stats['work_used']=used+count
+        with self.lock:
+            if self.failure:self.fail(self.failure)
+            used=self.stats['work_used']
+            if used+count>self.max_work:
+                self.stats[kind]+=self.max_work+1-used;self.stats['work_used']=self.max_work+1
+                self.fail('cyclotomic batch work budget exceeded')
+            self.stats[kind]+=count;self.stats['work_used']=used+count
 
     def fail(self,message):
+        self.failure=message
         error=ResourceLimit(message);error.statistics=dict(self.stats)
         raise error
 
     def inspect(self,value):
-        self.stats['max_coefficient_bits']=max(self.stats['max_coefficient_bits'],value.max_bits)
-        if value.max_bits>self.max_bits:self.fail('cyclotomic coefficient bit budget exceeded')
+        bits=value.max_bits
+        with self.lock:
+            if self.failure:self.fail(self.failure)
+            self.stats['max_coefficient_bits']=max(self.stats['max_coefficient_bits'],bits)
+            if bits>self.max_bits:self.fail('cyclotomic coefficient bit budget exceeded')
         return value
 
     def mul(self,a,b):self.tick('field_products');return self.inspect(a*b)
@@ -260,6 +270,8 @@ def prepare(circuit,**limits):
     _integer(circuit.n_qubits,'phase backend qubits',1,256)
     field=getattr(circuit,'field',Cyclotomic);zero,one=field(),field(1)
     flat=isinstance(circuit,PowerPhaseCircuit)
+    if not flat and limits.get('max_branches',4096)>65_536:
+        raise ValueError('legacy phase backend max_branches must be <=65536')
     b=Budget(**limits);b.stats['preparation_count']=1;state={0:one}
     b.stats.update(backend=getattr(circuit,'backend','cyclotomic'),
         representation='sparse computational-basis amplitudes in '+(f'flat Q(zeta_{circuit.order})' if isinstance(circuit,PowerPhaseCircuit) else 'Q(zeta_64)' if field is Phase64Circuit.field else 'Q(zeta_32)' if field is Phase32Circuit.field else 'Q(zeta_16)'),
@@ -285,7 +297,7 @@ def calculate_request(circuit,request):
     prepared=None
     try:
         prepared=prepare(circuit,**request['limits']);report['preparation_seconds']=perf_counter()-start
-        for query in request['queries']:
+        def read(query):
             qstart=perf_counter();row=dict(id=query['id'],kind=query['kind'],status='completed',algebraically_exact=True)
             if query['kind']=='distribution':
                 values=prepared.distribution(query['qubits'])
@@ -300,7 +312,19 @@ def calculate_request(circuit,request):
                 if real_sign(value-(-one if expectation else zero))<0 or real_sign(one-value)<0:
                     raise ArithmeticError('observation outside range')
                 row['value']=display(value,request['decimal_places'])
-            row['execution_seconds']=perf_counter()-qstart;report['answers'].append(row)
+            row['execution_seconds']=perf_counter()-qstart
+            return row
+        workers=request.get('readout_workers',1)
+        if workers>1:
+            prepared.budget.lock=RLock()
+            # The immutable amplitude/norm dictionaries are shared. Only work
+            # accounting is mutable and is protected by one batch-wide lock.
+            # map retains input order; a failure discards the entire batch.
+            with ThreadPoolExecutor(max_workers=workers) as pool:
+                report['answers']=list(pool.map(read,request['queries']))
+        else:
+            report['answers']=[read(query) for query in request['queries']]
+        report['readout_workers']=workers
         report['statistics']=dict(prepared.budget.stats)
     except ResourceLimit as error:
         report.update(status='incomplete',answers=[],algebraically_exact=False,error=str(error),

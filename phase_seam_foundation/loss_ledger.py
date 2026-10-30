@@ -18,7 +18,11 @@ positivity); transmissions live on the native grid cos^2(k pi/32).
 """
 from fractions import Fraction
 
-from native_relational_qc.cyclotomic64 import Cyclotomic64 as F, ZERO, ONE, ZETA
+from native_relational_qc.cyclotomic_pow2 import field_of_order
+F = field_of_order(64)
+ZERO = field_of_order(64)()
+ONE = field_of_order(64)(1)
+ZETA = field_of_order(64).root()
 from .model import ResourceLimit, integer, rational
 from .dual_rail import (
     FUSION_MODES, MEASURED, bell_pairs_state, compose, embed, evolve, fusion_matrix, identity, total_probability,

@@ -14,7 +14,11 @@ temperature verdict of v0.17 can grade a recorded run as room temperature.
 from fractions import Fraction
 from itertools import combinations_with_replacement, permutations
 
-from native_relational_qc.cyclotomic64 import Cyclotomic64 as F, ZERO, ONE, ZETA
+from native_relational_qc.cyclotomic_pow2 import field_of_order
+F = field_of_order(64)
+ZERO = field_of_order(64)()
+ONE = field_of_order(64)(1)
+ZETA = field_of_order(64).root()
 from native_relational_qc.exact import IMAG, INV_SQRT2
 from .model import ResourceLimit, integer
 from .photonic_response import D as COUPLER, unit_jet, _multiply as _mm

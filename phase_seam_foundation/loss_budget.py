@@ -12,7 +12,11 @@ may claim.
 from fractions import Fraction
 import math
 
-from native_relational_qc.cyclotomic64 import Cyclotomic64 as F, ZERO, ONE, ZETA
+from native_relational_qc.cyclotomic_pow2 import field_of_order
+F = field_of_order(64)
+ZERO = field_of_order(64)()
+ONE = field_of_order(64)(1)
+ZETA = field_of_order(64).root()
 from native_relational_qc.exact import IMAG
 from .model import ResourceLimit, rational
 from .dual_rail import (

@@ -1,0 +1,1337 @@
+{
+  "aer_options": {
+    "matrix_product_state_truncation_threshold": 0,
+    "max_parallel_threads": 1,
+    "method": "matrix_product_state"
+  },
+  "cases": [
+    {
+      "engines": {
+        "aer_mps": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 1.1102230246251565e-16,
+          "median_seconds": 0.11709232599969255,
+          "samples": [
+            {
+              "answers": {
+                "marginal:00": 0.4999999999999999,
+                "marginal:01": 0.0,
+                "marginal:10": 0.0,
+                "marginal:11": 0.4999999999999999,
+                "p0": 0.4999999999999999,
+                "zlast": 0.0
+              },
+              "execution_seconds": 0.11709232599969255,
+              "peak_rss_bytes": 105959424,
+              "status": "completed",
+              "wall_seconds": 1.1947103589991457
+            },
+            {
+              "answers": {
+                "marginal:00": 0.4999999999999999,
+                "marginal:01": 0.0,
+                "marginal:10": 0.0,
+                "marginal:11": 0.4999999999999999,
+                "p0": 0.4999999999999999,
+                "zlast": 0.0
+              },
+              "execution_seconds": 0.11084396799560636,
+              "peak_rss_bytes": 105811968,
+              "status": "completed",
+              "wall_seconds": 2.344744770998659
+            },
+            {
+              "answers": {
+                "marginal:00": 0.4999999999999999,
+                "marginal:01": 0.0,
+                "marginal:10": 0.0,
+                "marginal:11": 0.4999999999999999,
+                "p0": 0.4999999999999999,
+                "zlast": 0.0
+              },
+              "execution_seconds": 0.1307881910033757,
+              "peak_rss_bytes": 106532864,
+              "status": "completed",
+              "wall_seconds": 1.6139740849976079
+            }
+          ]
+        },
+        "nrqc": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 0.0,
+          "median_seconds": 0.018243514001369476,
+          "samples": [
+            {
+              "answers": {
+                "marginal:00": 0.5,
+                "marginal:01": 0.0,
+                "marginal:10": 0.0,
+                "marginal:11": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.018243514001369476,
+              "peak_rss_bytes": 35663872,
+              "statistics": {},
+              "status": "completed",
+              "wall_seconds": 0.8510485269944184
+            },
+            {
+              "answers": {
+                "marginal:00": 0.5,
+                "marginal:01": 0.0,
+                "marginal:10": 0.0,
+                "marginal:11": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.02270832300564507,
+              "peak_rss_bytes": 35856384,
+              "statistics": {},
+              "status": "completed",
+              "wall_seconds": 1.8822061030004988
+            },
+            {
+              "answers": {
+                "marginal:00": 0.5,
+                "marginal:01": 0.0,
+                "marginal:10": 0.0,
+                "marginal:11": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.004106120999495033,
+              "peak_rss_bytes": 36950016,
+              "statistics": {},
+              "status": "completed",
+              "wall_seconds": 0.20604507800453575
+            }
+          ]
+        },
+        "stim": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 0.0,
+          "median_seconds": 0.00035555799695430323,
+          "samples": [
+            {
+              "answers": {
+                "marginal:00": 0.5,
+                "marginal:01": 0.0,
+                "marginal:10": 0.0,
+                "marginal:11": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "execution_seconds": 0.00035555799695430323,
+              "peak_rss_bytes": 40390656,
+              "status": "completed",
+              "unsupported_gates": [],
+              "wall_seconds": 0.16930070299713407
+            },
+            {
+              "answers": {
+                "marginal:00": 0.5,
+                "marginal:01": 0.0,
+                "marginal:10": 0.0,
+                "marginal:11": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "execution_seconds": 0.000761338000302203,
+              "peak_rss_bytes": 40316928,
+              "status": "completed",
+              "unsupported_gates": [],
+              "wall_seconds": 0.4188493080000626
+            },
+            {
+              "answers": {
+                "marginal:00": 0.5,
+                "marginal:01": 0.0,
+                "marginal:10": 0.0,
+                "marginal:11": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "execution_seconds": 0.0002681679980014451,
+              "peak_rss_bytes": 40439808,
+              "status": "completed",
+              "unsupported_gates": [],
+              "wall_seconds": 0.16266753899981268
+            }
+          ]
+        }
+      },
+      "input": "benchmarks/comparisons/inputs/bell_2.json",
+      "sha256": "d9dce1c136d48ff04fa09aa891c54cdbe39412cc1d61ffa7873a470956722422"
+    },
+    {
+      "engines": {
+        "aer_mps": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 1.4815718096805597e-12,
+          "median_seconds": 0.4811861600028351,
+          "samples": [
+            {
+              "answers": {
+                "marginal:0000": 0.06250000000101211,
+                "marginal:0001": 0.06249999999851843,
+                "marginal:0010": 0.06250000000024158,
+                "marginal:0011": 0.06249999999996134,
+                "marginal:0100": 0.06250000000091652,
+                "marginal:0101": 0.0624999999992825,
+                "marginal:0110": 0.0625000000002529,
+                "marginal:0111": 0.06249999999960837,
+                "marginal:1000": 0.06250000000106645,
+                "marginal:1001": 0.0624999999985727,
+                "marginal:1010": 0.06250000000029587,
+                "marginal:1011": 0.06250000000001563,
+                "marginal:1100": 0.06250000000097092,
+                "marginal:1101": 0.06249999999933683,
+                "marginal:1110": 0.06250000000030732,
+                "marginal:1111": 0.06249999999966262,
+                "p0": 0.5000000000000109,
+                "zlast": 1.0690233419618024e-16
+              },
+              "execution_seconds": 0.8531463450053707,
+              "peak_rss_bytes": 112582656,
+              "status": "completed",
+              "wall_seconds": 1.5318982540047728
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.06250000000101211,
+                "marginal:0001": 0.06249999999851843,
+                "marginal:0010": 0.06250000000024158,
+                "marginal:0011": 0.06249999999996134,
+                "marginal:0100": 0.06250000000091652,
+                "marginal:0101": 0.0624999999992825,
+                "marginal:0110": 0.0625000000002529,
+                "marginal:0111": 0.06249999999960837,
+                "marginal:1000": 0.06250000000106645,
+                "marginal:1001": 0.0624999999985727,
+                "marginal:1010": 0.06250000000029587,
+                "marginal:1011": 0.06250000000001563,
+                "marginal:1100": 0.06250000000097092,
+                "marginal:1101": 0.06249999999933683,
+                "marginal:1110": 0.06250000000030732,
+                "marginal:1111": 0.06249999999966262,
+                "p0": 0.5000000000000109,
+                "zlast": 1.0690233419618024e-16
+              },
+              "execution_seconds": 0.4811861600028351,
+              "peak_rss_bytes": 115884032,
+              "status": "completed",
+              "wall_seconds": 1.7216417620002176
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.06250000000101211,
+                "marginal:0001": 0.06249999999851843,
+                "marginal:0010": 0.06250000000024158,
+                "marginal:0011": 0.06249999999996134,
+                "marginal:0100": 0.06250000000091652,
+                "marginal:0101": 0.0624999999992825,
+                "marginal:0110": 0.0625000000002529,
+                "marginal:0111": 0.06249999999960837,
+                "marginal:1000": 0.06250000000106645,
+                "marginal:1001": 0.0624999999985727,
+                "marginal:1010": 0.06250000000029587,
+                "marginal:1011": 0.06250000000001563,
+                "marginal:1100": 0.06250000000097092,
+                "marginal:1101": 0.06249999999933683,
+                "marginal:1110": 0.06250000000030732,
+                "marginal:1111": 0.06249999999966262,
+                "p0": 0.5000000000000109,
+                "zlast": 1.0690233419618024e-16
+              },
+              "execution_seconds": 0.37167061600484885,
+              "peak_rss_bytes": 112996352,
+              "status": "completed",
+              "wall_seconds": 1.0026853589952225
+            }
+          ]
+        },
+        "nrqc": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 0.0,
+          "median_seconds": 0.09327283700258704,
+          "samples": [
+            {
+              "answers": {
+                "marginal:0000": 0.0625,
+                "marginal:0001": 0.0625,
+                "marginal:0010": 0.0625,
+                "marginal:0011": 0.0625,
+                "marginal:0100": 0.0625,
+                "marginal:0101": 0.0625,
+                "marginal:0110": 0.0625,
+                "marginal:0111": 0.0625,
+                "marginal:1000": 0.0625,
+                "marginal:1001": 0.0625,
+                "marginal:1010": 0.0625,
+                "marginal:1011": 0.0625,
+                "marginal:1100": 0.0625,
+                "marginal:1101": 0.0625,
+                "marginal:1110": 0.0625,
+                "marginal:1111": 0.0625,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.10155151000071783,
+              "peak_rss_bytes": 37302272,
+              "statistics": {},
+              "status": "completed",
+              "wall_seconds": 0.4491101940002409
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.0625,
+                "marginal:0001": 0.0625,
+                "marginal:0010": 0.0625,
+                "marginal:0011": 0.0625,
+                "marginal:0100": 0.0625,
+                "marginal:0101": 0.0625,
+                "marginal:0110": 0.0625,
+                "marginal:0111": 0.0625,
+                "marginal:1000": 0.0625,
+                "marginal:1001": 0.0625,
+                "marginal:1010": 0.0625,
+                "marginal:1011": 0.0625,
+                "marginal:1100": 0.0625,
+                "marginal:1101": 0.0625,
+                "marginal:1110": 0.0625,
+                "marginal:1111": 0.0625,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.042692810005974025,
+              "peak_rss_bytes": 36716544,
+              "statistics": {},
+              "status": "completed",
+              "wall_seconds": 0.22473021800396964
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.0625,
+                "marginal:0001": 0.0625,
+                "marginal:0010": 0.0625,
+                "marginal:0011": 0.0625,
+                "marginal:0100": 0.0625,
+                "marginal:0101": 0.0625,
+                "marginal:0110": 0.0625,
+                "marginal:0111": 0.0625,
+                "marginal:1000": 0.0625,
+                "marginal:1001": 0.0625,
+                "marginal:1010": 0.0625,
+                "marginal:1011": 0.0625,
+                "marginal:1100": 0.0625,
+                "marginal:1101": 0.0625,
+                "marginal:1110": 0.0625,
+                "marginal:1111": 0.0625,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.09327283700258704,
+              "peak_rss_bytes": 37240832,
+              "statistics": {},
+              "status": "completed",
+              "wall_seconds": 0.4692608490004204
+            }
+          ]
+        },
+        "stim": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 0.0,
+          "median_seconds": 0.0022751919968868606,
+          "samples": [
+            {
+              "answers": {
+                "marginal:0000": 0.0625,
+                "marginal:0001": 0.0625,
+                "marginal:0010": 0.0625,
+                "marginal:0011": 0.0625,
+                "marginal:0100": 0.0625,
+                "marginal:0101": 0.0625,
+                "marginal:0110": 0.0625,
+                "marginal:0111": 0.0625,
+                "marginal:1000": 0.0625,
+                "marginal:1001": 0.0625,
+                "marginal:1010": 0.0625,
+                "marginal:1011": 0.0625,
+                "marginal:1100": 0.0625,
+                "marginal:1101": 0.0625,
+                "marginal:1110": 0.0625,
+                "marginal:1111": 0.0625,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "execution_seconds": 0.0016541920049348846,
+              "peak_rss_bytes": 41390080,
+              "status": "completed",
+              "unsupported_gates": [],
+              "wall_seconds": 0.5511534379984369
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.0625,
+                "marginal:0001": 0.0625,
+                "marginal:0010": 0.0625,
+                "marginal:0011": 0.0625,
+                "marginal:0100": 0.0625,
+                "marginal:0101": 0.0625,
+                "marginal:0110": 0.0625,
+                "marginal:0111": 0.0625,
+                "marginal:1000": 0.0625,
+                "marginal:1001": 0.0625,
+                "marginal:1010": 0.0625,
+                "marginal:1011": 0.0625,
+                "marginal:1100": 0.0625,
+                "marginal:1101": 0.0625,
+                "marginal:1110": 0.0625,
+                "marginal:1111": 0.0625,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "execution_seconds": 0.006886292001581751,
+              "peak_rss_bytes": 40513536,
+              "status": "completed",
+              "unsupported_gates": [],
+              "wall_seconds": 0.5264668529998744
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.0625,
+                "marginal:0001": 0.0625,
+                "marginal:0010": 0.0625,
+                "marginal:0011": 0.0625,
+                "marginal:0100": 0.0625,
+                "marginal:0101": 0.0625,
+                "marginal:0110": 0.0625,
+                "marginal:0111": 0.0625,
+                "marginal:1000": 0.0625,
+                "marginal:1001": 0.0625,
+                "marginal:1010": 0.0625,
+                "marginal:1011": 0.0625,
+                "marginal:1100": 0.0625,
+                "marginal:1101": 0.0625,
+                "marginal:1110": 0.0625,
+                "marginal:1111": 0.0625,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "execution_seconds": 0.0022751919968868606,
+              "peak_rss_bytes": 40112128,
+              "status": "completed",
+              "unsupported_gates": [],
+              "wall_seconds": 0.5095255920023192
+            }
+          ]
+        }
+      },
+      "input": "benchmarks/comparisons/inputs/clifford_24.json",
+      "sha256": "7aeeff95e05ef6f94306a6d2e852517dc02d44d6242d46946c773128b756214f"
+    },
+    {
+      "engines": {
+        "aer_mps": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 1.4405272114048628e-11,
+          "median_seconds": 0.3531182680017082,
+          "samples": [
+            {
+              "answers": {
+                "marginal:0000": 0.08451181056388009,
+                "marginal:0001": 0.07482441712681773,
+                "marginal:0010": 0.07173709180411093,
+                "marginal:0011": 0.06223732204722755,
+                "marginal:0100": 0.07898277072363645,
+                "marginal:0101": 0.05758114550116474,
+                "marginal:0110": 0.062092697130378946,
+                "marginal:0111": 0.08127493259758402,
+                "marginal:1000": 0.040768083624707005,
+                "marginal:1001": 0.050830363271896745,
+                "marginal:1010": 0.053917688596632714,
+                "marginal:1011": 0.06186375692861173,
+                "marginal:1100": 0.04667200967438109,
+                "marginal:1101": 0.0665199334758907,
+                "marginal:1110": 0.0620083818469845,
+                "marginal:1111": 0.04417759508608682,
+                "p0": 0.5732421874948005,
+                "zlast": 0.012429611402905272
+              },
+              "execution_seconds": 0.8653816799997003,
+              "peak_rss_bytes": 105377792,
+              "status": "completed",
+              "wall_seconds": 3.5731185160038876
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.08451181056388009,
+                "marginal:0001": 0.07482441712681773,
+                "marginal:0010": 0.07173709180411093,
+                "marginal:0011": 0.06223732204722755,
+                "marginal:0100": 0.07898277072363645,
+                "marginal:0101": 0.05758114550116474,
+                "marginal:0110": 0.062092697130378946,
+                "marginal:0111": 0.08127493259758402,
+                "marginal:1000": 0.040768083624707005,
+                "marginal:1001": 0.050830363271896745,
+                "marginal:1010": 0.053917688596632714,
+                "marginal:1011": 0.06186375692861173,
+                "marginal:1100": 0.04667200967438109,
+                "marginal:1101": 0.0665199334758907,
+                "marginal:1110": 0.0620083818469845,
+                "marginal:1111": 0.04417759508608682,
+                "p0": 0.5732421874948005,
+                "zlast": 0.012429611402905272
+              },
+              "execution_seconds": 0.13924860500264913,
+              "peak_rss_bytes": 107487232,
+              "status": "completed",
+              "wall_seconds": 1.5640552289987681
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.08451181056388009,
+                "marginal:0001": 0.07482441712681773,
+                "marginal:0010": 0.07173709180411093,
+                "marginal:0011": 0.06223732204722755,
+                "marginal:0100": 0.07898277072363645,
+                "marginal:0101": 0.05758114550116474,
+                "marginal:0110": 0.062092697130378946,
+                "marginal:0111": 0.08127493259758402,
+                "marginal:1000": 0.040768083624707005,
+                "marginal:1001": 0.050830363271896745,
+                "marginal:1010": 0.053917688596632714,
+                "marginal:1011": 0.06186375692861173,
+                "marginal:1100": 0.04667200967438109,
+                "marginal:1101": 0.0665199334758907,
+                "marginal:1110": 0.0620083818469845,
+                "marginal:1111": 0.04417759508608682,
+                "p0": 0.5732421874948005,
+                "zlast": 0.012429611402905272
+              },
+              "execution_seconds": 0.3531182680017082,
+              "peak_rss_bytes": 107405312,
+              "status": "completed",
+              "wall_seconds": 2.941870241003926
+            }
+          ]
+        },
+        "nrqc": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 0.0,
+          "median_seconds": 5.717019080999307,
+          "samples": [
+            {
+              "answers": {
+                "marginal:0000": 0.0845118105645,
+                "marginal:0001": 0.0748244171275,
+                "marginal:0010": 0.0717370918035,
+                "marginal:0011": 0.0622373220485,
+                "marginal:0100": 0.0789827707245,
+                "marginal:0101": 0.0575811455005,
+                "marginal:0110": 0.0620926971295,
+                "marginal:0111": 0.0812749325995,
+                "marginal:1000": 0.0407680836265,
+                "marginal:1001": 0.0508303632715,
+                "marginal:1010": 0.0539176885955,
+                "marginal:1011": 0.0618637569265,
+                "marginal:1100": 0.0466720096745,
+                "marginal:1101": 0.0665199334745,
+                "marginal:1110": 0.0620083818455,
+                "marginal:1111": 0.0441775950845,
+                "p0": 0.5732421875,
+                "zlast": 0.0124296113885
+              },
+              "error": null,
+              "execution_seconds": 5.717019080999307,
+              "peak_rss_bytes": 37449728,
+              "statistics": {
+                "backend": "cyclotomic_pow2",
+                "budget_scope": "whole batch including preparation and all readouts",
+                "dense_statevector_constructed": false,
+                "field_products": 97278,
+                "field_sums": 34320,
+                "gate_visits": 62563,
+                "max_coefficient_bits": 26,
+                "peak_branches": 1024,
+                "permutation_visits": 30720,
+                "preparation_count": 1,
+                "readout_visits": 3072,
+                "representation": "sparse computational-basis amplitudes in flat Q(zeta_8)",
+                "truncated_amplitudes": 0,
+                "work_definition": "one unit per gate, amplitude/readout visit, field product or field sum",
+                "work_used": 227953
+              },
+              "status": "completed",
+              "wall_seconds": 5.961860022995097
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.0845118105645,
+                "marginal:0001": 0.0748244171275,
+                "marginal:0010": 0.0717370918035,
+                "marginal:0011": 0.0622373220485,
+                "marginal:0100": 0.0789827707245,
+                "marginal:0101": 0.0575811455005,
+                "marginal:0110": 0.0620926971295,
+                "marginal:0111": 0.0812749325995,
+                "marginal:1000": 0.0407680836265,
+                "marginal:1001": 0.0508303632715,
+                "marginal:1010": 0.0539176885955,
+                "marginal:1011": 0.0618637569265,
+                "marginal:1100": 0.0466720096745,
+                "marginal:1101": 0.0665199334745,
+                "marginal:1110": 0.0620083818455,
+                "marginal:1111": 0.0441775950845,
+                "p0": 0.5732421875,
+                "zlast": 0.0124296113885
+              },
+              "error": null,
+              "execution_seconds": 3.37949953199859,
+              "peak_rss_bytes": 38531072,
+              "statistics": {
+                "backend": "cyclotomic_pow2",
+                "budget_scope": "whole batch including preparation and all readouts",
+                "dense_statevector_constructed": false,
+                "field_products": 97278,
+                "field_sums": 34320,
+                "gate_visits": 62563,
+                "max_coefficient_bits": 26,
+                "peak_branches": 1024,
+                "permutation_visits": 30720,
+                "preparation_count": 1,
+                "readout_visits": 3072,
+                "representation": "sparse computational-basis amplitudes in flat Q(zeta_8)",
+                "truncated_amplitudes": 0,
+                "work_definition": "one unit per gate, amplitude/readout visit, field product or field sum",
+                "work_used": 227953
+              },
+              "status": "completed",
+              "wall_seconds": 3.560489082999993
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.0845118105645,
+                "marginal:0001": 0.0748244171275,
+                "marginal:0010": 0.0717370918035,
+                "marginal:0011": 0.0622373220485,
+                "marginal:0100": 0.0789827707245,
+                "marginal:0101": 0.0575811455005,
+                "marginal:0110": 0.0620926971295,
+                "marginal:0111": 0.0812749325995,
+                "marginal:1000": 0.0407680836265,
+                "marginal:1001": 0.0508303632715,
+                "marginal:1010": 0.0539176885955,
+                "marginal:1011": 0.0618637569265,
+                "marginal:1100": 0.0466720096745,
+                "marginal:1101": 0.0665199334745,
+                "marginal:1110": 0.0620083818455,
+                "marginal:1111": 0.0441775950845,
+                "p0": 0.5732421875,
+                "zlast": 0.0124296113885
+              },
+              "error": null,
+              "execution_seconds": 6.949788228004763,
+              "peak_rss_bytes": 38559744,
+              "statistics": {
+                "backend": "cyclotomic_pow2",
+                "budget_scope": "whole batch including preparation and all readouts",
+                "dense_statevector_constructed": false,
+                "field_products": 97278,
+                "field_sums": 34320,
+                "gate_visits": 62563,
+                "max_coefficient_bits": 26,
+                "peak_branches": 1024,
+                "permutation_visits": 30720,
+                "preparation_count": 1,
+                "readout_visits": 3072,
+                "representation": "sparse computational-basis amplitudes in flat Q(zeta_8)",
+                "truncated_amplitudes": 0,
+                "work_definition": "one unit per gate, amplitude/readout visit, field product or field sum",
+                "work_used": 227953
+              },
+              "status": "completed",
+              "wall_seconds": 7.212760227004765
+            }
+          ]
+        },
+        "stim": {
+          "median_seconds": null,
+          "samples": [
+            {
+              "answers": null,
+              "execution_seconds": 1.946300471900031e-05,
+              "peak_rss_bytes": 40820736,
+              "status": "unsupported",
+              "unsupported_gates": [
+                "t"
+              ],
+              "wall_seconds": 0.5408997539998381
+            }
+          ]
+        }
+      },
+      "input": "benchmarks/comparisons/inputs/dense_clifford_t_10.json",
+      "sha256": "5e2a4e093059ea090aced5b60444afa88c7e1999f7e799c222d510a78b86803a"
+    },
+    {
+      "engines": {
+        "aer_mps": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 6.974099076018092e-11,
+          "median_seconds": 0.0845220330011216,
+          "samples": [
+            {
+              "answers": {
+                "marginal:0000": 0.48401931030800893,
+                "marginal:0001": 0.4840193103080088,
+                "marginal:0010": 0.012668983885326605,
+                "marginal:0011": 0.012668983885326602,
+                "marginal:0100": 0.0006111390463178494,
+                "marginal:0101": 0.0006111390463178505,
+                "marginal:0110": 0.0011862507555524104,
+                "marginal:0111": 0.00118625075555241,
+                "marginal:1000": 0.0011842843904900282,
+                "marginal:1001": 0.0011842843904900284,
+                "marginal:1010": 0.0003245922752854378,
+                "marginal:1011": 0.0003245922752854381,
+                "marginal:1100": 2.195198685046867e-06,
+                "marginal:1101": 2.1951986850468765e-06,
+                "marginal:1110": 3.2441403320296053e-06,
+                "marginal:1111": 3.244140332029625e-06,
+                "p0": 0.9969713679920584,
+                "zlast": 6.974099076018092e-11
+              },
+              "execution_seconds": 0.09142440399591578,
+              "peak_rss_bytes": 107421696,
+              "status": "completed",
+              "wall_seconds": 1.2723893930015038
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.48401931030800893,
+                "marginal:0001": 0.4840193103080088,
+                "marginal:0010": 0.012668983885326605,
+                "marginal:0011": 0.012668983885326602,
+                "marginal:0100": 0.0006111390463178494,
+                "marginal:0101": 0.0006111390463178505,
+                "marginal:0110": 0.0011862507555524104,
+                "marginal:0111": 0.00118625075555241,
+                "marginal:1000": 0.0011842843904900282,
+                "marginal:1001": 0.0011842843904900284,
+                "marginal:1010": 0.0003245922752854378,
+                "marginal:1011": 0.0003245922752854381,
+                "marginal:1100": 2.195198685046867e-06,
+                "marginal:1101": 2.1951986850468765e-06,
+                "marginal:1110": 3.2441403320296053e-06,
+                "marginal:1111": 3.244140332029625e-06,
+                "p0": 0.9969713679920584,
+                "zlast": 6.974099076018092e-11
+              },
+              "execution_seconds": 0.0845220330011216,
+              "peak_rss_bytes": 107302912,
+              "status": "completed",
+              "wall_seconds": 2.3270903260054183
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.48401931030800893,
+                "marginal:0001": 0.4840193103080088,
+                "marginal:0010": 0.012668983885326605,
+                "marginal:0011": 0.012668983885326602,
+                "marginal:0100": 0.0006111390463178494,
+                "marginal:0101": 0.0006111390463178505,
+                "marginal:0110": 0.0011862507555524104,
+                "marginal:0111": 0.00118625075555241,
+                "marginal:1000": 0.0011842843904900282,
+                "marginal:1001": 0.0011842843904900284,
+                "marginal:1010": 0.0003245922752854378,
+                "marginal:1011": 0.0003245922752854381,
+                "marginal:1100": 2.195198685046867e-06,
+                "marginal:1101": 2.1951986850468765e-06,
+                "marginal:1110": 3.2441403320296053e-06,
+                "marginal:1111": 3.244140332029625e-06,
+                "p0": 0.9969713679920584,
+                "zlast": 6.974099076018092e-11
+              },
+              "execution_seconds": 0.07568703599827131,
+              "peak_rss_bytes": 107261952,
+              "status": "completed",
+              "wall_seconds": 1.1079803230022662
+            }
+          ]
+        },
+        "nrqc": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 0.0,
+          "median_seconds": 0.665001087996643,
+          "samples": [
+            {
+              "answers": {
+                "marginal:0000": 0.4840193103085,
+                "marginal:0001": 0.4840193103085,
+                "marginal:0010": 0.0126689838855,
+                "marginal:0011": 0.0126689838855,
+                "marginal:0100": 0.0006111390465,
+                "marginal:0101": 0.0006111390465,
+                "marginal:0110": 0.0011862507555,
+                "marginal:0111": 0.0011862507555,
+                "marginal:1000": 0.0011842843895,
+                "marginal:1001": 0.0011842843895,
+                "marginal:1010": 0.0003245922755,
+                "marginal:1011": 0.0003245922755,
+                "marginal:1100": 2.1951985e-06,
+                "marginal:1101": 2.1951985e-06,
+                "marginal:1110": 3.2441405e-06,
+                "marginal:1111": 3.2441405e-06,
+                "p0": 0.9969713679925,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.665001087996643,
+              "peak_rss_bytes": 37851136,
+              "statistics": {
+                "backend": "cyclotomic_pow2",
+                "budget_scope": "whole batch including preparation and all readouts",
+                "dense_statevector_constructed": false,
+                "field_products": 4778,
+                "field_sums": 1584,
+                "gate_visits": 5239,
+                "max_coefficient_bits": 13,
+                "peak_branches": 256,
+                "permutation_visits": 1776,
+                "preparation_count": 1,
+                "readout_visits": 384,
+                "representation": "sparse computational-basis amplitudes in flat Q(zeta_128)",
+                "truncated_amplitudes": 0,
+                "work_definition": "one unit per gate, amplitude/readout visit, field product or field sum",
+                "work_used": 13761
+              },
+              "status": "completed",
+              "wall_seconds": 1.0322413870017044
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.4840193103085,
+                "marginal:0001": 0.4840193103085,
+                "marginal:0010": 0.0126689838855,
+                "marginal:0011": 0.0126689838855,
+                "marginal:0100": 0.0006111390465,
+                "marginal:0101": 0.0006111390465,
+                "marginal:0110": 0.0011862507555,
+                "marginal:0111": 0.0011862507555,
+                "marginal:1000": 0.0011842843895,
+                "marginal:1001": 0.0011842843895,
+                "marginal:1010": 0.0003245922755,
+                "marginal:1011": 0.0003245922755,
+                "marginal:1100": 2.1951985e-06,
+                "marginal:1101": 2.1951985e-06,
+                "marginal:1110": 3.2441405e-06,
+                "marginal:1111": 3.2441405e-06,
+                "p0": 0.9969713679925,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.23514461500599282,
+              "peak_rss_bytes": 36540416,
+              "statistics": {
+                "backend": "cyclotomic_pow2",
+                "budget_scope": "whole batch including preparation and all readouts",
+                "dense_statevector_constructed": false,
+                "field_products": 4778,
+                "field_sums": 1584,
+                "gate_visits": 5239,
+                "max_coefficient_bits": 13,
+                "peak_branches": 256,
+                "permutation_visits": 1776,
+                "preparation_count": 1,
+                "readout_visits": 384,
+                "representation": "sparse computational-basis amplitudes in flat Q(zeta_128)",
+                "truncated_amplitudes": 0,
+                "work_definition": "one unit per gate, amplitude/readout visit, field product or field sum",
+                "work_used": 13761
+              },
+              "status": "completed",
+              "wall_seconds": 0.4387571199986269
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.4840193103085,
+                "marginal:0001": 0.4840193103085,
+                "marginal:0010": 0.0126689838855,
+                "marginal:0011": 0.0126689838855,
+                "marginal:0100": 0.0006111390465,
+                "marginal:0101": 0.0006111390465,
+                "marginal:0110": 0.0011862507555,
+                "marginal:0111": 0.0011862507555,
+                "marginal:1000": 0.0011842843895,
+                "marginal:1001": 0.0011842843895,
+                "marginal:1010": 0.0003245922755,
+                "marginal:1011": 0.0003245922755,
+                "marginal:1100": 2.1951985e-06,
+                "marginal:1101": 2.1951985e-06,
+                "marginal:1110": 3.2441405e-06,
+                "marginal:1111": 3.2441405e-06,
+                "p0": 0.9969713679925,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 1.117558954996639,
+              "peak_rss_bytes": 37208064,
+              "statistics": {
+                "backend": "cyclotomic_pow2",
+                "budget_scope": "whole batch including preparation and all readouts",
+                "dense_statevector_constructed": false,
+                "field_products": 4778,
+                "field_sums": 1584,
+                "gate_visits": 5239,
+                "max_coefficient_bits": 13,
+                "peak_branches": 256,
+                "permutation_visits": 1776,
+                "preparation_count": 1,
+                "readout_visits": 384,
+                "representation": "sparse computational-basis amplitudes in flat Q(zeta_128)",
+                "truncated_amplitudes": 0,
+                "work_definition": "one unit per gate, amplitude/readout visit, field product or field sum",
+                "work_used": 13761
+              },
+              "status": "completed",
+              "wall_seconds": 1.490796105004847
+            }
+          ]
+        },
+        "stim": {
+          "median_seconds": null,
+          "samples": [
+            {
+              "answers": null,
+              "execution_seconds": 2.3554996005259454e-05,
+              "peak_rss_bytes": 40288256,
+              "status": "unsupported",
+              "unsupported_gates": [
+                "cp64",
+                "p128"
+              ],
+              "wall_seconds": 0.2735665420041187
+            }
+          ]
+        }
+      },
+      "input": "benchmarks/comparisons/inputs/dyadic_phase_8.json",
+      "sha256": "afc85acaa2ac0916620f03fb42106a97453b039c5ecf33003a5aad70002cde65"
+    },
+    {
+      "engines": {
+        "aer_mps": {
+          "median_seconds": null,
+          "samples": [
+            {
+              "error": "CircuitTooWideForTarget: 'Number of qubits (256) in circuit-46 is greater than maximum (63) in the coupling_map'",
+              "status": "error",
+              "wall_seconds": 0.8757847819942981
+            }
+          ]
+        },
+        "nrqc": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 0.0,
+          "median_seconds": 0.018772097006149124,
+          "samples": [
+            {
+              "answers": {
+                "marginal:0000": 0.5,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.014886409000610001,
+              "peak_rss_bytes": 36532224,
+              "statistics": {},
+              "status": "completed",
+              "wall_seconds": 0.31332726999971783
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.5,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.019720091004273854,
+              "peak_rss_bytes": 37195776,
+              "statistics": {},
+              "status": "completed",
+              "wall_seconds": 0.24650377799844136
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.5,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.018772097006149124,
+              "peak_rss_bytes": 37240832,
+              "statistics": {},
+              "status": "completed",
+              "wall_seconds": 0.2845391849987209
+            }
+          ]
+        },
+        "stim": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 0.0,
+          "median_seconds": 0.007313422000152059,
+          "samples": [
+            {
+              "answers": {
+                "marginal:0000": 0.5,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "execution_seconds": 0.007313422000152059,
+              "peak_rss_bytes": 40300544,
+              "status": "completed",
+              "unsupported_gates": [],
+              "wall_seconds": 0.7823893929962651
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.5,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "execution_seconds": 0.011353371999575756,
+              "peak_rss_bytes": 40714240,
+              "status": "completed",
+              "unsupported_gates": [],
+              "wall_seconds": 0.29535512699658284
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.5,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "execution_seconds": 0.0032071669993456453,
+              "peak_rss_bytes": 40706048,
+              "status": "completed",
+              "unsupported_gates": [],
+              "wall_seconds": 0.40779647499584826
+            }
+          ]
+        }
+      },
+      "input": "benchmarks/comparisons/inputs/ghz_256.json",
+      "sha256": "70f81413b11eb2a0369d46fa266d1fb2d2c23333de5e783d0aa4bb734ffa729a"
+    },
+    {
+      "engines": {
+        "aer_mps": {
+          "median_seconds": null,
+          "samples": [
+            {
+              "error": "CircuitTooWideForTarget: 'Number of qubits (64) in circuit-46 is greater than maximum (63) in the coupling_map'",
+              "status": "error",
+              "wall_seconds": 0.9547060040058568
+            }
+          ]
+        },
+        "nrqc": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 0.0,
+          "median_seconds": 0.008266195000032894,
+          "samples": [
+            {
+              "answers": {
+                "marginal:0000": 0.5,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.007691760998568498,
+              "peak_rss_bytes": 37113856,
+              "statistics": {},
+              "status": "completed",
+              "wall_seconds": 0.25323897800262785
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.5,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.008266195000032894,
+              "peak_rss_bytes": 37175296,
+              "statistics": {},
+              "status": "completed",
+              "wall_seconds": 0.3588010800012853
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.5,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.010368823001044802,
+              "peak_rss_bytes": 36417536,
+              "statistics": {},
+              "status": "completed",
+              "wall_seconds": 0.4253497839963529
+            }
+          ]
+        },
+        "stim": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 0.0,
+          "median_seconds": 0.0016024270007619634,
+          "samples": [
+            {
+              "answers": {
+                "marginal:0000": 0.5,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "execution_seconds": 0.0011130760030937381,
+              "peak_rss_bytes": 40697856,
+              "status": "completed",
+              "unsupported_gates": [],
+              "wall_seconds": 0.2986193610049668
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.5,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "execution_seconds": 0.0016024270007619634,
+              "peak_rss_bytes": 41750528,
+              "status": "completed",
+              "unsupported_gates": [],
+              "wall_seconds": 0.301785645999189
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.5,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "execution_seconds": 0.003571711997210514,
+              "peak_rss_bytes": 41410560,
+              "status": "completed",
+              "unsupported_gates": [],
+              "wall_seconds": 0.27312937199894805
+            }
+          ]
+        }
+      },
+      "input": "benchmarks/comparisons/inputs/ghz_64.json",
+      "sha256": "dbc9f4fe5f39095b317c8aab1d90f8997250e5d21bd90e797a0c869411b3e185"
+    }
+  ],
+  "environment": {
+    "cpu": "x86_64",
+    "cpu_count": 9,
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+    "python": "3.12.14",
+    "versions": {
+      "numpy": "2.5.4",
+      "qiskit": "2.6.1",
+      "qiskit-aer": "0.18.2",
+      "stim": "1.16.0"
+    }
+  },
+  "repeats": 3,
+  "schema": "nrqc-retained-comparison-v1",
+  "timing_scope": "fresh process; execution includes conversion, queries and output formatting, excludes imports; wall includes startup"
+}

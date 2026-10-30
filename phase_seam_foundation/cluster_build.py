@@ -19,7 +19,10 @@ reject the run (Theorem L2), never as a fidelity.
 """
 from fractions import Fraction
 
-from native_relational_qc.cyclotomic64 import ZERO, ONE, ZETA
+from native_relational_qc.cyclotomic_pow2 import field_of_order
+ZERO = field_of_order(64)()
+ONE = field_of_order(64)(1)
+ZETA = field_of_order(64).root()
 
 from .cluster_compile import (
     DISCARDED, EDGES, FLOW, H2, NODES, ORDER, READOUT, SQRT2, XOR_CHECKPOINT, _State, _correct, _mm, _touch,

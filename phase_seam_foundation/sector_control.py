@@ -7,7 +7,9 @@ See SECTOR_CONTROL.md for the algebra, added control assumption and limits.
 """
 from dataclasses import dataclass
 
-from native_relational_qc.cyclotomic64 import ZETA, ONE
+from native_relational_qc.cyclotomic_pow2 import field_of_order
+ZETA = field_of_order(64).root()
+ONE = field_of_order(64)(1)
 from native_relational_qc.modular_arithmetic import _add, _mcx
 from native_relational_qc.phase_backend import Phase64Circuit
 from .model import Config, Operation, ResourceLimit, integer, index

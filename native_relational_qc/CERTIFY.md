@@ -1,3 +1,9 @@
+> Integration update: the photonic route and calculator now share the canonical
+> flat arithmetic. These checks compare independent circuit/readout constructions,
+> not independent arithmetic engines. The committed cluster record from 28e8650
+> is retained as historical evidence; current regression tests exercise the
+> migrated route. `nrqc certify` also supports the [four-number ledger command](README.md#ledger-certification).
+
 # Ledger certification through the calculator (`nrqc certify`)
 
 The phase-seam programme proves its cluster-state claims with a small private
@@ -48,7 +54,7 @@ which P(path) and P(path, readout = 1) are read exactly.
 
 Calculator values are elements of Q(zeta_64) in the flat power basis
 (values computed in a smaller order are lifted by zeta_M = zeta_64^(64/M)).
-The pattern engine's values are embedded from the nested tower by
+Historical pattern values can be embedded from the nested tower by
 Cyclotomic64 = lo + hi u, Cyclotomic32 = lo + hi w, Cyclotomic = lo + hi z,
 with u = zeta_64, w = zeta_64^2, z = zeta_64^4, and the EMK field
 Q(sqrt(2), i) constructed directly in the flat field. Equality is equality of
@@ -97,7 +103,7 @@ control, and checks the committed record's grade and completeness.
 
 ## What this does and does not add
 
-It adds a second, independent exact derivation of the v0.29 witness inside
+It adds a separate circuit/readout derivation of the v0.29 witness inside
 the calculator's audited engine, and a reusable reduction (adaptive pattern to
 static circuits with a distribution query) for later cluster claims. It does
 not model loss or source noise (those are v0.33 to v0.36), does not touch the

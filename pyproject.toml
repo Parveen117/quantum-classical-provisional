@@ -9,11 +9,12 @@ description = "Exact cyclotomic-field quantum-circuit calculator with certified 
 readme = "native_relational_qc/README.md"
 requires-python = ">=3.11"
 license = { text = "See repository LICENSE and notices" }
-authors = [{ name = "Monty Dabas" }]
+authors = [{ name = "Monty" }]
 dependencies = ["numpy>=1.26,<3"]
 
 [project.optional-dependencies]
 qiskit = ["qiskit>=2.5,<3"]
+benchmark = ["qiskit>=2.5,<3", "qiskit-aer>=0.17,<1", "stim>=1.15,<2"]
 cad = ["gdstk", "klayout"]
 test = ["pytest>=8", "scipy"]
 

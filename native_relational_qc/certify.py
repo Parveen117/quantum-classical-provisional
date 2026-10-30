@@ -4,8 +4,9 @@ The phase-seam programme (phase_seam_foundation) proves its cluster-state
 claims with a small private engine over Q(zeta_64), because the calculator had
 no mid-circuit measurement with pi/32 phases. This module re-derives the
 v0.29 cluster witness on the calculator's flat `cyclotomic_pow2` backend,
-which is an independent implementation: dense power-basis arithmetic instead
-of the sparse tower, static circuits instead of a measurement engine. A
+using static circuits instead of the separate measurement-pattern engine.
+The integrated route shares flat arithmetic; the circuit/readout constructions
+are independent, not the arithmetic implementations. A
 certificate is granted only when every exact value agrees and every negative
 control fails as it must; otherwise the grade is MISMATCH or INCOMPLETE and
 the record says where.
@@ -31,6 +32,7 @@ from fractions import Fraction
 from pathlib import Path
 
 from .calculator import calculate
+from .ledger_certify import certify, EXPECTED
 
 CERTIFY_SCHEMA = 'nrqc-certificate-v1'
 GRADES = ('CERTIFIED', 'MISMATCH', 'INCOMPLETE')
@@ -93,6 +95,9 @@ def embed_tower(value):
     from .cyclotomic32 import Cyclotomic32
     from .cyclotomic64 import Cyclotomic64
     F = flat_field()
+    from .cyclotomic_pow2 import CyclotomicPow2
+    if isinstance(value, CyclotomicPow2):
+        return F(value)
     if isinstance(value, Exact):
         return F(value)
     step = {Cyclotomic64: 1, Cyclotomic32: 2, Cyclotomic: 4}[type(value)]
@@ -347,7 +352,8 @@ def default_cases():
 
 def certify_cluster(cases=None, assignments='all', *, workers=1, identity=True):
     from phase_seam_foundation import cluster_compile as cc
-    cases = cases or default_cases()
+    cases = default_cases() if cases is None else cases
+    if not cases:raise ValueError('at least one declared case is required')
     identity_record = measurement_identity() if identity else dict(holds=None, checks=0, skipped=True)
     results = []
     for case in cases:
@@ -365,7 +371,7 @@ def certify_cluster(cases=None, assignments='all', *, workers=1, identity=True):
                 claim='phase seam v0.29 cluster witness: on every corrected outcome path the readout probability equals the circuit probability, and every path has weight 2^-9',
                 measurement_identity=identity_record, cases=results,
                 claim_boundary=['ideal lossless cluster; loss, multi-pair emission and detector noise are outside this certificate',
-                                'agreement of two exact engines on the same mathematical object; no hardware observation',
+                                'agreement of two circuit/readout constructions with shared exact arithmetic; no hardware observation',
                                 'CERTIFIED requires the identity check and all 64 sign assignments (512 paths) of every case; '
                                 'MISMATCH records any exact disagreement or a failed control'],
                 never_granted=list(cc.NEVER_GRANTED))
@@ -373,6 +379,9 @@ def certify_cluster(cases=None, assignments='all', *, workers=1, identity=True):
 
 def main(argv=None):
     argv = sys.argv[1:] if argv is None else argv
+    if not argv or argv[0] != 'cluster':
+        from .ledger_certify import main as ledger_main
+        return ledger_main(argv[1:] if argv and argv[0]=='ledger' else argv)
     parser = argparse.ArgumentParser(prog='nrqc certify', description=__doc__)
     parser.add_argument('claim', choices=['cluster'])
     parser.add_argument('--assignments', default='all', help="'all' (64 per case) or an integer count of leading assignments")
@@ -383,12 +392,15 @@ def main(argv=None):
     assignments = 'all'
     if args.assignments != 'all':
         count = int(args.assignments)
+        if not 1 <= count <= 64:parser.error('--assignments must be 1..64 or all')
         assignments = [tuple((k >> i) & 1 for i in range(6)) for k in range(count)]
     cases = default_cases()
     if args.cases != 'all':
         wanted = set(args.cases.split(','))
+        if not wanted <= {c['label'] for c in cases}:parser.error('unknown cluster case')
         cases = [c for c in cases if c['label'] in wanted]
-    result = certify_cluster(cases, assignments, workers=max(1, args.workers))
+    if not 1 <= args.workers <= 8:parser.error('--workers must be 1..8')
+    result = certify_cluster(cases, assignments, workers=args.workers)
     rendered = json.dumps(result, sort_keys=True, indent=2, allow_nan=False) + '\n'
     if args.out:
         args.out.write_text(rendered, encoding='utf-8')

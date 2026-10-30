@@ -20,7 +20,11 @@ frozen heater settings.
 """
 from fractions import Fraction
 
-from native_relational_qc.cyclotomic64 import Cyclotomic64 as F, ZERO, ONE, ZETA
+from native_relational_qc.cyclotomic_pow2 import field_of_order
+F = field_of_order(64)
+ZERO = field_of_order(64)()
+ONE = field_of_order(64)(1)
+ZETA = field_of_order(64).root()
 from native_relational_qc.exact import INV_SQRT2
 from native_relational_qc.phase_backend import Phase64Circuit, prepare
 

@@ -10,7 +10,11 @@ converts it exactly and refuses to grade claims without recorded evidence.
 """
 from fractions import Fraction
 
-from native_relational_qc.cyclotomic64 import Cyclotomic64 as F, ZERO, ONE, ZETA
+from native_relational_qc.cyclotomic_pow2 import field_of_order
+F = field_of_order(64)
+ZERO = field_of_order(64)()
+ONE = field_of_order(64)(1)
+ZETA = field_of_order(64).root()
 from .model import ResourceLimit, integer, rational
 from .photonic_response import PHASE_ORDER, optical_response, exact_rank, unit_jet
 from .photonic_io import calibration_template, fingerprint

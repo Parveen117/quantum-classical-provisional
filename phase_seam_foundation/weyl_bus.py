@@ -6,7 +6,8 @@ See WEYL_BUS.md for local-PH2 obstruction, fault boundaries and prior art.
 """
 from dataclasses import dataclass
 
-from native_relational_qc.cyclotomic64 import ZETA
+from native_relational_qc.cyclotomic_pow2 import field_of_order
+ZETA = field_of_order(64).root()
 from .model import ResourceLimit
 
 DIMENSIONS = (2, 4, 8, 16, 32, 64)
