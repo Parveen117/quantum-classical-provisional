@@ -151,6 +151,11 @@ class CyclotomicPow2:
     def coefficients(self):return tuple(Fraction(c,self.den) for c in self._list())
 
     @property
+    def terms(self):
+        """Sparse view ((exponent, integer numerator), ...) over den, as the first flat engine exposed it."""
+        return tuple((e,c) for e,c in enumerate(self._list()) if c)
+
+    @property
     def max_bits(self):return max(self.den.bit_length(),self._maxabs().bit_length())
 
     def __bool__(self):return self.item!=1 or self.data!=self._ZERO

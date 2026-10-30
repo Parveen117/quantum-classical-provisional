@@ -4,11 +4,15 @@ from tempfile import TemporaryDirectory
 from unittest.mock import patch
 import unittest
 
-import gdstk
-import klayout.db as k
+try:
+    import gdstk
+    import klayout.db as k
+except ImportError:  # CAD toolchain is optional; the calculator suite does not need it.
+    gdstk = k = None
 from phase_seam_foundation import photonic_layout as m
 
 
+@unittest.skipUnless(gdstk is not None and k is not None, "optional CAD toolchain (gdstk, klayout) not installed")
 class GeometryTests(unittest.TestCase):
     def setUp(self):
         self.tmp=TemporaryDirectory();self.addCleanup(self.tmp.cleanup)

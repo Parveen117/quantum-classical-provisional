@@ -181,7 +181,10 @@ class EMKTensorTests(unittest.TestCase):
         self.assertEqual(result['answers'],[])
 
     def test_independent_qiskit_covariance_and_positive_metric(self):
-        from qiskit.quantum_info import Statevector,Pauli
+        try:
+            from qiskit.quantum_info import Statevector,Pauli
+        except ImportError:
+            self.skipTest('optional Qiskit SDK not installed')
         from native_relational_qc.compact_qiskit import to_qiskit
         from native_relational_qc.stress_benchmark import brickwork
         for seed in (117,20261023):
