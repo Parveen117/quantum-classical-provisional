@@ -12,6 +12,7 @@ python3.12 -m venv .venv-native
 nrqc check     native_relational_qc/calculator_examples/bell.json   # which backends accept this request, and why not
 nrqc calculate native_relational_qc/calculator_examples/bell.json   # exact answers with certified decimal enclosures
 nrqc check --table                                                  # the capability table below, as Markdown
+nrqc certify cluster --workers 4                                    # phase-seam cluster witness re-derived on the flat backend
 .venv-native/bin/python -m pytest -q tests/test_native*.py           # the calculator suite
 ```
 
@@ -248,6 +249,7 @@ submission is performed by this package.
 | Existing evidence bridge | Circuit-derived ExpectedModel with a declared TVD tolerance and circuit hash |
 | Software verification | Analytic answers, independent Qiskit comparisons, phase/order negative controls |
 | Readings to jets | Exact jets of a declared Hessian field learned from point readings, affine-chart transport with invariant curvature, one-query linear-layer reading; [JET_READINGS.md](JET_READINGS.md) |
+| Ledger certification | `nrqc certify cluster` re-derives the phase seam v0.29 cluster witness on the flat `cyclotomic_pow2` backend: 512 corrected paths per case as 64 static circuits, exact agreement with the pattern engine, byproduct identity checked through the calculator; [CERTIFY.md](CERTIFY.md) |
 | Readings to jets, part 2 | Selected curvature is the Gaussian curvature of the Hessian metric; nonlinear observer change needs the gradient and the chart to degree d+2; enclosure readings with exact width factors, exact reading-corner sign certificates and the exact certification threshold (1/13 on the test grid); quadratic phase layer read in 2n+1 counted oracle uses against the exact classical complexity n(n+3)/2; [JET_READINGS_2.md](JET_READINGS_2.md) |
 
 The mathematical bridge and its explicit hypotheses are in [THEOREM.md](THEOREM.md).

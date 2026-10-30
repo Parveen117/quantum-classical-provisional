@@ -177,7 +177,9 @@ for the optional adapters), then `nrqc check INPUT.json` to see which backends
 accept a request and `nrqc calculate INPUT.json` for exact answers. The package
 [README](native_relational_qc/README.md) has the install steps and a capability
 table of all eleven backends; CI runs the suite on Python 3.11 and 3.12, with and
-without Qiskit.
+without Qiskit. `nrqc certify cluster` re-derives the phase-seam v0.29 cluster
+witness on the calculator's flat backend as an independent second exact engine
+([CERTIFY.md](native_relational_qc/CERTIFY.md)).
 
 The [linear-recognition upgrade](native_relational_qc/LINEAR_RECOGNITION.md)
 constructs the minimum exact linear future-observation space for a declared

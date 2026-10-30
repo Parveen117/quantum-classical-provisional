@@ -15,9 +15,13 @@ def main(argv=None):
     if argv and argv[0] == 'check':
         from .check import main as check_main
         return check_main(argv[1:])
+    if argv and argv[0] == 'certify':
+        from .certify import main as certify_main
+        return certify_main(argv[1:])
     parser = argparse.ArgumentParser(prog='nrqc', description=__doc__, epilog=
         'Custom exact circuits: nrqc calculate INPUT.json --out RESULT.json; '
-        'backend acceptance report: nrqc check INPUT.json (or nrqc check --table)')
+        'backend acceptance report: nrqc check INPUT.json (or nrqc check --table); '
+        'ledger certification: nrqc certify cluster')
     parser.add_argument("program", choices=["bell", "ghz", "bv", "grover", "order-memory"])
     parser.add_argument("--compare-qiskit", action="store_true")
     parser.add_argument("--out", type=Path)
