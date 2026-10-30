@@ -534,7 +534,7 @@
    "quantum_fewer_than_classical_bound": false,
    "quantum_fewer_than_classical_complexity": false,
    "registers": 1,
-   "seconds": 0.328
+   "seconds": 0.381
   },
   {
    "bits": 3,
@@ -546,7 +546,7 @@
    "quantum_fewer_than_classical_bound": false,
    "quantum_fewer_than_classical_complexity": false,
    "registers": 1,
-   "seconds": 2.61
+   "seconds": 3.009
   },
   {
    "bits": 2,
@@ -558,7 +558,7 @@
    "quantum_fewer_than_classical_bound": false,
    "quantum_fewer_than_classical_complexity": false,
    "registers": 2,
-   "seconds": 1.815
+   "seconds": 2.665
   },
   {
    "bits": 3,
@@ -570,7 +570,7 @@
    "quantum_fewer_than_classical_bound": false,
    "quantum_fewer_than_classical_complexity": false,
    "registers": 2,
-   "seconds": 4.613
+   "seconds": 7.417
   },
   {
    "bits": 2,
@@ -582,7 +582,7 @@
    "quantum_fewer_than_classical_bound": false,
    "quantum_fewer_than_classical_complexity": true,
    "registers": 3,
-   "seconds": 3.208
+   "seconds": 3.766
   },
   {
    "bits": 3,
@@ -594,7 +594,7 @@
    "quantum_fewer_than_classical_bound": false,
    "quantum_fewer_than_classical_complexity": true,
    "registers": 3,
-   "seconds": 16.937
+   "seconds": 25.167
   },
   {
    "bits": 3,
@@ -606,11 +606,11 @@
    "quantum_fewer_than_classical_bound": true,
    "quantum_fewer_than_classical_complexity": true,
    "registers": 4,
-   "seconds": 75.853
+   "seconds": 107.081
   }
  ],
  "schema": "nrqc-jet-readings-v2-audit",
- "seconds": 293.518,
+ "seconds": 374.417,
  "sections": {
   "classical_complexity": {
    "checks": 39476,
@@ -654,7 +654,7 @@
   }
  },
  "source_blob_sha1": {
-  "native_relational_qc/cyclotomic_pow2.py": "d6ea8738d33ab5ea7317424a36969fa8adf0c1a4",
+  "native_relational_qc/cyclotomic_pow2.py": "74a6f4138f9fb6f776efaa9f6d080e38fbdce639",
   "native_relational_qc/enclosure_learner.py": "37a8d2862502d0ec125e7259c88391e4a58c411c",
   "native_relational_qc/hessian_metric.py": "2b52466e64ee2aabf3fdc231aeb0944c5a05f6d0",
   "native_relational_qc/jet_readings.py": "7d375a348afff89443b4ec151b81dc723d5155c9",

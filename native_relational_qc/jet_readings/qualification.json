@@ -21,7 +21,7 @@
    "quantum_queries": 1,
    "qubits": 3,
    "registers": 1,
-   "seconds": 0.105
+   "seconds": 0.193
   },
   {
    "bits": 3,
@@ -32,7 +32,7 @@
    "quantum_queries": 1,
    "qubits": 6,
    "registers": 2,
-   "seconds": 3.068
+   "seconds": 4.122
   },
   {
    "bits": 2,
@@ -43,7 +43,7 @@
    "quantum_queries": 1,
    "qubits": 6,
    "registers": 3,
-   "seconds": 2.816
+   "seconds": 4.298
   },
   {
    "bits": 4,
@@ -54,7 +54,7 @@
    "quantum_queries": 1,
    "qubits": 4,
    "registers": 1,
-   "seconds": 0.331
+   "seconds": 0.445
   },
   {
    "bits": 2,
@@ -65,7 +65,7 @@
    "quantum_queries": 1,
    "qubits": 8,
    "registers": 4,
-   "seconds": 33.478
+   "seconds": 50.612
   },
   {
    "bits": 3,
@@ -76,7 +76,7 @@
    "quantum_queries": 1,
    "qubits": 9,
    "registers": 3,
-   "seconds": 140.44
+   "seconds": 223.547
   }
  ],
  "negative_controls": 449,
@@ -713,7 +713,7 @@
   }
  ],
  "schema": "nrqc-jet-readings-v1-audit",
- "seconds": 289.739,
+ "seconds": 451.351,
  "sections": {
   "chart_invariance": {
    "checks": 80,
@@ -771,7 +771,7 @@
  },
  "source_blob_sha1": {
   "native_relational_qc/compact.py": "364d7f8d925b660435cc753e8d93b6b738d9198b",
-  "native_relational_qc/cyclotomic_pow2.py": "d6ea8738d33ab5ea7317424a36969fa8adf0c1a4",
+  "native_relational_qc/cyclotomic_pow2.py": "74a6f4138f9fb6f776efaa9f6d080e38fbdce639",
   "native_relational_qc/jet_readings.py": "7d375a348afff89443b4ec151b81dc723d5155c9",
   "native_relational_qc/phase_backend.py": "3593694554fcd7e415a9b3f4a2a006036156a2e3",
   "native_relational_qc/shor.py": "07ff038e70ba347f25d8593b35b3ff1b589e4fd8",
