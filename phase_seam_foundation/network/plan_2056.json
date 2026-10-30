@@ -1,0 +1,52 @@
+{
+  "schema": "native-fusion-network-v1",
+  "author": "Monty",
+  "status": "NETWORK_DECLARED",
+  "sites": 2056,
+  "inputs": {
+    "p_herald": "1/79",
+    "switch_transmission": "9/10",
+    "eta_d": "3/5",
+    "fusion_success": "1/2",
+    "boosted_success_declared": "3/4"
+  },
+  "multiplexing": {
+    "best_branches_up_to_256": 256,
+    "best_delivered_approx": 0.4139619262866408,
+    "gain_over_bare_approx": 32.70299217664462,
+    "exact": "multiplex(p, M, t) returns the rational"
+  },
+  "theorem_N1": {
+    "bell_pair_drift": "0",
+    "ghz3_drift": "1/2",
+    "bell_pairs_grow": false,
+    "ghz3_grows": true
+  },
+  "chain_walk": {
+    "target": 256,
+    "p_reach_target": "1125765532249223239027447294/1473646213395791149646646123",
+    "p_reach_target_approx": 0.7639320225002103,
+    "expected_attempts": "568410083571139726319751237062/1473646213395791149646646123",
+    "expected_attempts_approx": 385.71678765510893,
+    "exact_up_to_sites": 256,
+    "limit": "p_reach -> 3 - sqrt(5) as target -> infinity (Theorem N2)"
+  },
+  "fidelity": {
+    "minimum_fusions": 2054,
+    "all_heralds_genuine_bound": "(1/(2-eta_d))^2054"
+  },
+  "architecture": [
+    "N multiplexed heralded sources (SOURCE_SPEC_810.md), each a switch tree of the best depth above",
+    "Bell pairs from pairs of heralded photons on a coupler, or directly from type-II SPDC with heralding",
+    "3-site GHZ resources by one heralded fusion of two Bell pairs (D2)",
+    "chain growth by fusing 3-site resources onto the chain end; failure shortens the chain by one",
+    "feed-forward: heralded phase zeta^48 or zeta^16 per fusion (D2) applied as a Z step on the heater",
+    "fibre delay as the only photonic memory; its transmission per attempt is a further declared loss"
+  ],
+  "boundaries": [
+    "fusion success 1/2 is proved; boosted 3/4 is a declared literature option with one ancilla Bell pair",
+    "fidelity bound counts false heralds only (L1); dark counts, multi-pair and distinguishability enter through the recorded visibility",
+    "the walk assumes independent attempts and no memory loss; memory loss per attempt lowers every number",
+    "no network, switch or delay line exists; nothing changes the temperature verdict"
+  ]
+}

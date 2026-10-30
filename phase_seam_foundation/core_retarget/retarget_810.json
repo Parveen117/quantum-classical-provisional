@@ -1,0 +1,155 @@
+{
+  "schema": "native-core-retarget-v1",
+  "author": "Monty",
+  "status": "SCALED_NOMINAL",
+  "source_wavelength_nm": 1550,
+  "target_wavelength_nm": 810,
+  "ratio": "81/155",
+  "scaling": {
+    "ratio": "81/155",
+    "exact_under": [
+      "wavelength-independent refractive indices",
+      "every dimension scaled, thickness included"
+    ],
+    "broken_by": [
+      "film thickness fixed at 300 nm",
+      "material dispersion of SiN and SiO2",
+      "metal heater geometry set by electrical, not optical, rules"
+    ],
+    "status": "SCALED_NOMINAL"
+  },
+  "geometry": [
+    {
+      "dimension": "strip_width",
+      "source_um": "6/5",
+      "scaled_um": "486/775",
+      "scaled_nm": "19440/31",
+      "passes_local_minimum": true,
+      "status": "scaled nominal; mode solver required"
+    },
+    {
+      "dimension": "bend_radius",
+      "source_um": "30",
+      "scaled_um": "486/31",
+      "scaled_nm": "486000/31",
+      "passes_local_minimum": null,
+      "status": "scaled nominal; mode solver required"
+    },
+    {
+      "dimension": "mmi2x2_body_length",
+      "source_um": "232",
+      "scaled_um": "18792/155",
+      "scaled_nm": "3758400/31",
+      "passes_local_minimum": null,
+      "status": "scaled nominal; mode solver required"
+    },
+    {
+      "dimension": "mmi2x2_body_width",
+      "source_um": "18",
+      "scaled_um": "1458/155",
+      "scaled_nm": "291600/31",
+      "passes_local_minimum": null,
+      "status": "scaled nominal; mode solver required"
+    },
+    {
+      "dimension": "mmi2x2_taper_length",
+      "source_um": "50",
+      "scaled_um": "810/31",
+      "scaled_nm": "810000/31",
+      "passes_local_minimum": null,
+      "status": "scaled nominal; mode solver required"
+    },
+    {
+      "dimension": "mmi2x2_taper_width",
+      "source_um": "9/2",
+      "scaled_um": "729/310",
+      "scaled_nm": "72900/31",
+      "passes_local_minimum": null,
+      "status": "scaled nominal; mode solver required"
+    },
+    {
+      "dimension": "mmi2x2_gap",
+      "source_um": "8/5",
+      "scaled_um": "648/775",
+      "scaled_nm": "25920/31",
+      "passes_local_minimum": true,
+      "status": "scaled nominal; mode solver required"
+    },
+    {
+      "dimension": "nitride_thickness_nm",
+      "source_um": "3/10",
+      "scaled_um": "3/10",
+      "scaled_nm": "300",
+      "passes_local_minimum": null,
+      "status": "fixed by platform; breaks exact scaling"
+    },
+    {
+      "dimension": "buried_oxide_thickness_nm",
+      "source_um": "3",
+      "scaled_um": "3",
+      "scaled_nm": "3000",
+      "passes_local_minimum": null,
+      "status": "fixed by platform; breaks exact scaling"
+    }
+  ],
+  "thickness_ratio": {
+    "source": "6/31",
+    "target": "10/27",
+    "increase": "155/81"
+  },
+  "heater": {
+    "phase_per_power_gain": "155/81",
+    "power_for_pi_fraction": "81/155",
+    "length_for_pi_fraction": "81/155"
+  },
+  "drift": {
+    "steps_1550": "784/775",
+    "steps_810": "784/405",
+    "ratio": "155/81",
+    "allowed_excursion_fraction": "81/155",
+    "note": "to keep the same phase error between calibrations the temperature excursion allowed at 810 nm is 81/155 of the 1550 nm one; T1/T2 and the cut-and-correct rule are unchanged"
+  },
+  "phase_layer": {
+    "unchanged": [
+      "common-mode invariance T1",
+      "drift dichotomy T2",
+      "single-site Euler D1",
+      "fusion D2",
+      "106-setting protocol and codebook",
+      "31-channel calibration contract (context wavelength_nm becomes 810)"
+    ],
+    "changed": [
+      "volts and kelvin to phase map",
+      "MMI/coupler design",
+      "waveguide width and bend radius",
+      "source, filters and detectors",
+      "every measured number"
+    ]
+  },
+  "vendor_cells": "mmi2x2.gds and heater.gds are pinned 1550 nm cells; the MMI cannot be reused at 810 nm and must be redesigned (or replaced by a directional coupler); the heater polygon may be reused subject to electrical rules",
+  "platform": "CORNERSTONE 300 nm SiN is the pinned 1550 nm candidate; its support for 810 nm operation is not established here and must be confirmed, or a visible/NIR SiN platform selected",
+  "detector": {
+    "option": "si_spad_810",
+    "signal_band_nm": [
+      700,
+      900
+    ],
+    "detector_temperature_c_range": [
+      15,
+      35
+    ],
+    "thermal_class_if_recorded": "ROOM_TEMPERATURE",
+    "design_change": "signal wavelength near 810 nm: new SPDC crystal/pump, re-targeted SiN cross-section and MMI, new calibration"
+  },
+  "logical_netlist": "unchanged: 16 code paths, 6 exchange units, 4 bypasses, 1 guard; dual-rail route adds one coupler per fusion step",
+  "next_evidence": [
+    "mode solver: single-mode TE at 810 nm with width margin, effective and group index, bend loss at the scaled radius",
+    "MMI or coupler design at 810 nm with splitting ratio tolerance",
+    "foundry rule check on the re-targeted GDS",
+    "fabricated core and bright-light transfer matrix"
+  ],
+  "measured_parameters": null,
+  "solver_run": false,
+  "drc_run": false,
+  "fabricated": false
+}

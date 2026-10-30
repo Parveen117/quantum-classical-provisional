@@ -1,0 +1,44 @@
+{
+  "schema": "nrqc-calculator-v1",
+  "backend": "stabilizer",
+  "n_qubits": 2,
+  "operations": [
+    [
+      "h",
+      [
+        0
+      ]
+    ],
+    [
+      "cx",
+      [
+        0,
+        1
+      ]
+    ]
+  ],
+  "queries": [
+    {
+      "id": "p0",
+      "kind": "probability",
+      "outcomes": {
+        "0": 0
+      }
+    },
+    {
+      "id": "zlast",
+      "kind": "expectation",
+      "paulis": {
+        "1": "Z"
+      }
+    },
+    {
+      "id": "marginal",
+      "kind": "distribution",
+      "qubits": [
+        0,
+        1
+      ]
+    }
+  ]
+}

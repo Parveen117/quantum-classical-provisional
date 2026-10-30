@@ -1,0 +1,91 @@
+{
+  "schema": "native-loss-budget-audit-v1",
+  "author": "Monty",
+  "status": "BUDGET_DECLARED_L1_EXACT",
+  "tests_run": 9,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 14.969,
+  "eta_per_site": "243/4000",
+  "loss_db_approx": 12.165,
+  "fusion": {
+    "detector_side_efficiency": "3/5",
+    "p_one_click": "21/50",
+    "p_genuine": "3/10",
+    "genuine_fraction": "5/7",
+    "false_herald_fraction": "2/7",
+    "lossless_success": "1/2"
+  },
+  "engine_check_L1": {
+    "0": {
+      "eta_approx": "1",
+      "p_one_click": "1/2",
+      "p_genuine": "1/2",
+      "genuine_fraction": "1",
+      "matches_closed_form": true,
+      "classes": {
+        "clicks=1,lost=0": "1/2",
+        "clicks=0,lost=0": "1/4",
+        "clicks=2,lost=0": "1/4"
+      }
+    },
+    "8": {
+      "eta_approx": "1/2",
+      "p_one_click": "3/8",
+      "p_genuine": "1/4",
+      "genuine_fraction": "2/3",
+      "matches_closed_form": true,
+      "classes": {
+        "clicks=1,lost=0": "1/4",
+        "clicks=0,lost=0": "1/4",
+        "clicks=0,lost=1": "1/4",
+        "clicks=2,lost=0": "1/16",
+        "clicks=1,lost=1": "1/8",
+        "clicks=0,lost=2": "1/16"
+      }
+    },
+    "4": {
+      "eta_approx": "85355339/100000000",
+      "p_one_click": "97855339/200000000",
+      "p_genuine": "85355339/200000000",
+      "genuine_fraction": "185355339/212500000",
+      "matches_closed_form": true,
+      "classes": {
+        "clicks=1,lost=0": "85355339/200000000",
+        "clicks=0,lost=0": "1/4",
+        "clicks=0,lost=1": "58578643/800000000",
+        "clicks=2,lost=0": "72855339/400000000",
+        "clicks=1,lost=1": "1/16",
+        "clicks=0,lost=2": "8578643/1600000000"
+      }
+    },
+    "12": {
+      "eta_approx": "58578643/400000000",
+      "p_one_click": "108578643/800000000",
+      "p_genuine": "58578643/800000000",
+      "genuine_fraction": "458578643/850000000",
+      "matches_closed_form": true,
+      "classes": {
+        "clicks=1,lost=0": "58578643/800000000",
+        "clicks=0,lost=0": "1/4",
+        "clicks=0,lost=1": "85355339/200000000",
+        "clicks=2,lost=0": "8578643/1600000000",
+        "clicks=1,lost=1": "1/16",
+        "clicks=0,lost=2": "72855339/400000000"
+      }
+    }
+  },
+  "grade": {
+    "grade": "BUDGET_DECLARED",
+    "reasons": [
+      "every declared stage needs a LAB_RECORDED transmission"
+    ]
+  },
+  "boundaries": [
+    "every transmission is declared; none measured",
+    "detector dark counts and afterpulsing not modelled",
+    "false heralds need photon-number resolution or lower loss to suppress; multiplexing note handles rates",
+    "nothing here changes the temperature verdict"
+  ],
+  "plan_sha256": "d7c7aa81f359153b4da773c8e68caa2ed1870cf98ae421aadf4b3fc3cf0a607c"
+}

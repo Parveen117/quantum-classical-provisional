@@ -1,0 +1,44 @@
+{
+  "schema": "native-core-retarget-audit-v1",
+  "author": "Monty",
+  "status": "SCALED_NOMINAL_NO_SOLVER_NO_DRC_NO_FABRICATION",
+  "tests_run": 14,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 0.002,
+  "ratio": "81/155",
+  "strip_width_nm_810": "19440/31",
+  "heater": {
+    "phase_per_power_gain": "155/81",
+    "power_for_pi_fraction": "81/155",
+    "length_for_pi_fraction": "81/155"
+  },
+  "drift": {
+    "steps_1550": "784/775",
+    "steps_810": "784/405",
+    "ratio": "155/81",
+    "allowed_excursion_fraction": "81/155",
+    "note": "to keep the same phase error between calibrations the temperature excursion allowed at 810 nm is 81/155 of the 1550 nm one; T1/T2 and the cut-and-correct rule are unchanged"
+  },
+  "readiness": {
+    "grade": "SCALED_NOMINAL",
+    "reasons": [
+      "solver block incomplete: tool, single_mode_te_810, width_margin_nm, mmi_split_tolerance, bend_loss_db_per_90deg"
+    ],
+    "allowed": [
+      "scaled nominal geometry only"
+    ]
+  },
+  "negative_controls": {
+    "multimode": "SCALED_NOMINAL",
+    "synthetic_measurement": "FABRICATED"
+  },
+  "boundaries": [
+    "no mode solver has been run; scaled numbers are the solver input, not a design",
+    "film thickness 300 nm and material dispersion break exact scaling",
+    "vendor 1550 nm MMI and heater cells are not reused; MMI must be redesigned at 810 nm",
+    "foundry support for 810 nm not established; platform selection open",
+    "nothing here changes the temperature verdict, which grades recorded logs only"
+  ],
+  "spec_sha256": "f0c65773de23f772dc225c771a0983033a602e49814f6c4eea1b0a476c28c5fb"
+}

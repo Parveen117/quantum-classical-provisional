@@ -1,0 +1,337 @@
+{
+  "baseline_commit": "19ee882fc839835802e37d3092601ef9385ea67c",
+  "budget": {
+    "execution_seconds": 20,
+    "max_bond": 256,
+    "max_coefficient_bits": 4096,
+    "max_coefficients": 1000000,
+    "max_terms": 262144,
+    "max_work": 100000000,
+    "rss_bytes": 1342177280,
+    "startup_seconds": 15
+  },
+  "cases": [
+    {
+      "cohort": "small_reference",
+      "factored_options": {
+        "contraction": "integer"
+      },
+      "method": "factored",
+      "n": 6,
+      "query": "local00",
+      "rounds": 4,
+      "seed": 20261018
+    },
+    {
+      "cohort": "small_reference",
+      "factored_options": {
+        "contraction": "streaming"
+      },
+      "method": "factored",
+      "n": 6,
+      "query": "local00",
+      "rounds": 4,
+      "seed": 20261018
+    },
+    {
+      "cohort": "small_reference",
+      "method": "observer",
+      "n": 6,
+      "query": "local00",
+      "rounds": 4,
+      "seed": 20261018
+    },
+    {
+      "cohort": "small_reference",
+      "method": "statevector",
+      "n": 6,
+      "query": "local00",
+      "rounds": 4,
+      "seed": 20261018
+    },
+    {
+      "cohort": "primary_12r_repeated",
+      "factored_options": {
+        "contraction": "integer"
+      },
+      "method": "factored",
+      "n": 50,
+      "query": "parity",
+      "repeat": 1,
+      "rounds": 12,
+      "seed": 20261018
+    },
+    {
+      "cohort": "primary_12r_repeated",
+      "factored_options": {
+        "contraction": "streaming"
+      },
+      "method": "factored",
+      "n": 50,
+      "query": "parity",
+      "repeat": 1,
+      "rounds": 12,
+      "seed": 20261018
+    },
+    {
+      "cohort": "primary_12r_repeated",
+      "factored_options": {
+        "contraction": "integer"
+      },
+      "method": "factored",
+      "n": 50,
+      "query": "parity",
+      "repeat": 2,
+      "rounds": 12,
+      "seed": 20261018
+    },
+    {
+      "cohort": "primary_12r_repeated",
+      "factored_options": {
+        "contraction": "streaming"
+      },
+      "method": "factored",
+      "n": 50,
+      "query": "parity",
+      "repeat": 2,
+      "rounds": 12,
+      "seed": 20261018
+    },
+    {
+      "cohort": "primary_12r_repeated",
+      "factored_options": {
+        "contraction": "integer"
+      },
+      "method": "factored",
+      "n": 50,
+      "query": "parity",
+      "repeat": 3,
+      "rounds": 12,
+      "seed": 20261018
+    },
+    {
+      "cohort": "primary_12r_repeated",
+      "factored_options": {
+        "contraction": "streaming"
+      },
+      "method": "factored",
+      "n": 50,
+      "query": "parity",
+      "repeat": 3,
+      "rounds": 12,
+      "seed": 20261018
+    },
+    {
+      "cohort": "12r_regression",
+      "factored_options": {
+        "contraction": "integer"
+      },
+      "method": "factored",
+      "n": 50,
+      "query": "local00",
+      "rounds": 12,
+      "seed": 20261018
+    },
+    {
+      "cohort": "12r_regression",
+      "factored_options": {
+        "contraction": "streaming"
+      },
+      "method": "factored",
+      "n": 50,
+      "query": "local00",
+      "rounds": 12,
+      "seed": 20261018
+    },
+    {
+      "cohort": "original_budget_boundary",
+      "factored_options": {
+        "contraction": "integer"
+      },
+      "method": "factored",
+      "n": 50,
+      "query": "local00",
+      "rounds": 16,
+      "seed": 20261018
+    },
+    {
+      "cohort": "original_budget_boundary",
+      "factored_options": {
+        "contraction": "streaming"
+      },
+      "method": "factored",
+      "n": 50,
+      "query": "local00",
+      "rounds": 16,
+      "seed": 20261018
+    },
+    {
+      "budget_override": {
+        "execution_seconds": 60,
+        "max_work": 300000000
+      },
+      "cohort": "extended_same_budget_comparison",
+      "factored_options": {
+        "contraction": "integer"
+      },
+      "method": "factored",
+      "n": 50,
+      "query": "local00",
+      "rounds": 16,
+      "seed": 20261018
+    },
+    {
+      "budget_override": {
+        "execution_seconds": 60,
+        "max_work": 300000000
+      },
+      "cohort": "extended_same_budget_comparison",
+      "factored_options": {
+        "contraction": "streaming"
+      },
+      "method": "factored",
+      "n": 50,
+      "query": "local00",
+      "repeat": 1,
+      "rounds": 16,
+      "seed": 20261018
+    },
+    {
+      "budget_override": {
+        "execution_seconds": 60,
+        "max_work": 300000000
+      },
+      "cohort": "extended_same_budget_comparison",
+      "factored_options": {
+        "contraction": "streaming"
+      },
+      "method": "factored",
+      "n": 50,
+      "query": "local00",
+      "repeat": 2,
+      "rounds": 16,
+      "seed": 20261018
+    },
+    {
+      "budget_override": {
+        "execution_seconds": 60,
+        "max_work": 300000000
+      },
+      "cohort": "extended_same_budget_comparison",
+      "factored_options": {
+        "contraction": "streaming"
+      },
+      "method": "factored",
+      "n": 50,
+      "query": "local00",
+      "repeat": 3,
+      "rounds": 16,
+      "seed": 20261018
+    },
+    {
+      "budget_override": {
+        "execution_seconds": 60,
+        "max_work": 400000000
+      },
+      "cohort": "larger_budget_exact_reference",
+      "factored_options": {
+        "contraction": "integer"
+      },
+      "method": "factored",
+      "n": 50,
+      "query": "local00",
+      "rounds": 16,
+      "seed": 20261018
+    },
+    {
+      "budget_override": {
+        "execution_seconds": 60,
+        "max_work": 300000000
+      },
+      "cohort": "independent_16r_reference",
+      "method": "mps",
+      "n": 50,
+      "query": "local00",
+      "rounds": 16,
+      "seed": 20261018
+    },
+    {
+      "budget_override": {
+        "execution_seconds": 60,
+        "max_work": 300000000
+      },
+      "cohort": "second_seed",
+      "factored_options": {
+        "contraction": "streaming"
+      },
+      "method": "factored",
+      "n": 50,
+      "query": "local00",
+      "rounds": 16,
+      "seed": 20261019
+    },
+    {
+      "budget_override": {
+        "execution_seconds": 60,
+        "max_work": 300000000
+      },
+      "cohort": "second_seed_reference",
+      "method": "mps",
+      "n": 50,
+      "query": "local00",
+      "rounds": 16,
+      "seed": 20261019
+    },
+    {
+      "budget_override": {
+        "execution_seconds": 60,
+        "max_work": 300000000
+      },
+      "cohort": "global_failure_boundary",
+      "factored_options": {
+        "contraction": "integer"
+      },
+      "method": "factored",
+      "n": 50,
+      "query": "parity",
+      "rounds": 16,
+      "seed": 20261018
+    },
+    {
+      "budget_override": {
+        "execution_seconds": 60,
+        "max_work": 300000000
+      },
+      "cohort": "global_failure_boundary",
+      "factored_options": {
+        "contraction": "streaming"
+      },
+      "method": "factored",
+      "n": 50,
+      "query": "parity",
+      "rounds": 16,
+      "seed": 20261018
+    }
+  ],
+  "description": "Declared engineering comparison after adaptive pilots; exact streaming vs unchanged packed-integer kernel. All outcomes retained.",
+  "frozen_before_target_runs": true,
+  "interpretation": "Original 100M work / 20 s boundary is retained separately. Extended 16r comparison gives both kernels 300M work / 60 s; 400M original-kernel row is an exact-value reference only. No performance superiority over Aer is assumed.",
+  "queries": {
+    "local00": "P(q[n//2-1]=0,q[n//2]=0)",
+    "parity": "expectation of Z on every site"
+  },
+  "source_sha256": {
+    "calculator.py": "6c59bc07e5ffdacb63e03d844a6910c1fc827a00e784d946a3b3b5c797f6c972",
+    "compact.py": "1acff6eaa8664b4ba33285c66c9f433ecd0148aa8383a18f79dbd2ccb66e898d",
+    "dyadic.py": "f57de994e59041fa203cffdda5f73e30b65552715286483b29b683b79d849832",
+    "exact.py": "cc0b3be70660ed819b3ad153620ea4338fb6bf57102a4474d4355da2805afdf6",
+    "factored.py": "0a41e4e768e487871057693a2f54a1652349359a107d99ebf7647b7d32f588f9",
+    "integer_matrix.py": "9301ec91dad88fa8b53b83083f0b62454eb44203c5c7bfc77f4b06015fe14e40",
+    "observer.py": "132e4de5e9df0c051825e6bc5babcd124cfb52c7f128b72a9a5c08992b09fbf0",
+    "reused_product.py": "8cf910b93ca7177afd373ee8c15ad801b9d493be872604a09baaaca2adc51a73",
+    "streaming.py": "d5f77ae1b7192de1e5ad0e488b791be2db537cac1cb535f5dd5fefc452c63e02",
+    "stress_benchmark.py": "c86ba3814939ee99bd61cba5646327c52c631db1b21f3070891bcefdf232303b"
+  },
+  "timing": "Sequential fresh single-thread worker per row; execution includes native contraction imports and excludes circuit/setup imports as in stress_benchmark. RSS includes setup. Three repeats for primary 12r parity and extended 16r local; other rows one run.",
+  "version": 1
+}

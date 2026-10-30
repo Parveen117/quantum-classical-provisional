@@ -1,0 +1,63 @@
+{
+  "schema": "native-source-spec-v1",
+  "author": "Monty",
+  "status": "SPEC_DECLARED",
+  "pump": {
+    "wavelength_nm": 405,
+    "mode": "continuous wave, single longitudinal mode",
+    "linewidth": "declared at bench",
+    "power_mW": "declared at bench; pair rate per mW is a measured brightness, not derived here"
+  },
+  "crystal": {
+    "material": "ppKTP",
+    "process": "type-II, collinear, degenerate",
+    "poling_period_um": "declared by vendor for 405 -> 810 + 810",
+    "oven_c": "heated above room ambient, typically 25 to 60; heating is recorded, never cooling",
+    "length_mm": "declared; sets phase-matching width b"
+  },
+  "pairs": {
+    "signal_nm": 810,
+    "idler_nm": 810,
+    "energy_conservation_exact": true,
+    "degenerate": true,
+    "polarization": "orthogonal (type-II); polarizing splitter separates herald and signal"
+  },
+  "filtering": "bandpass at 810 nm on both arms, width chosen to bring b toward a (purity law); single-mode fibre on both arms",
+  "detector": {
+    "option": "si_spad_810",
+    "signal_band_nm": [
+      700,
+      900
+    ],
+    "detector_temperature_c_range": [
+      15,
+      35
+    ],
+    "thermal_class_if_recorded": "ROOM_TEMPERATURE",
+    "design_change": "signal wavelength near 810 nm: new SPDC crystal/pump, re-targeted SiN cross-section and MMI, new calibration"
+  },
+  "herald": "idler click within a declared window heralds one signal photon; threshold detector",
+  "operating_point": {
+    "x_target": "1/40",
+    "g2_target": "1/20",
+    "visibility_target": "9/10",
+    "rationale": "g2 = 2x lossless; x = 1/40 gives g2 = 1/20 with 1/40 conditional multi-pair"
+  },
+  "exact_laws": [
+    "p(n) = (1-x) x^n",
+    "heralded g2 = 2x (lossless herald), closed form for any herald efficiency",
+    "P(n >= 2 | click) = x (lossless)",
+    "Klyshko ratio C/S_i -> eta_s, exact multi-pair correction",
+    "purity = 2ab / (a^2 + b^2)",
+    "all-herald probability p^N"
+  ],
+  "temperature": "pump diode, crystal oven, detectors all at or above the room band floor; crystal oven temperature is itself a sweep variable",
+  "measured_parameters": null,
+  "built": false,
+  "boundaries": [
+    "pair rate, brightness, efficiencies and bandwidths are declared, not derived",
+    "HOM visibility is bounded above by purity; its value is measured, not predicted",
+    "N heralded sources succeed together with probability p^N: the fusion network note handles multiplexing",
+    "nothing here changes the temperature verdict, which grades recorded logs only"
+  ]
+}

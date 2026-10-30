@@ -1,0 +1,4 @@
+# Reproduce the stress-test reference environment with Python 3.12.
+numpy==2.5.4
+qiskit==2.6.0
+qiskit-aer==0.17.2

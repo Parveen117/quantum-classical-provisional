@@ -1,0 +1,3626 @@
+{
+  "schema": "phase-seam-register-v0.11",
+  "author": "Monty",
+  "status": "wrapped-phase permutation compiler reusing existing native arithmetic",
+  "assumptions": [
+    "orthogonal labels",
+    "clean workspace",
+    "standard coherent gate semantics if used as quantum circuit"
+  ],
+  "program": {
+    "source_operations": [
+      {
+        "kind": "pair_cut",
+        "args": [
+          0,
+          2,
+          7
+        ]
+      },
+      {
+        "kind": "pair_shift",
+        "args": [
+          1,
+          3,
+          -5
+        ]
+      },
+      {
+        "kind": "swap",
+        "args": [
+          0,
+          1
+        ]
+      }
+    ],
+    "affine_matrix": [
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        63,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "affine_offset": [
+      59,
+      7,
+      57,
+      5
+    ],
+    "source_gate_binding_verified": true,
+    "elementary_operations": [
+      [
+        "ccx",
+        [
+          0,
+          13,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          14,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          15,
+          26
+        ]
+      ],
+      [
+        "ccx",
+        [
+          26,
+          16,
+          17
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          15,
+          26
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          14,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          13,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          13,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          14,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          15,
+          16
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          14,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          13,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          13,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          14,
+          15
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          13,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          13,
+          14
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          13
+        ]
+      ],
+      [
+        "ccx",
+        [
+          1,
+          14,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          15,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          16,
+          17
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          15,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          1,
+          14,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          1,
+          14,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          15,
+          16
+        ]
+      ],
+      [
+        "ccx",
+        [
+          1,
+          14,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          1,
+          14,
+          15
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          14
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          15,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          16,
+          17
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          15,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          2,
+          15,
+          16
+        ]
+      ],
+      [
+        "cx",
+        [
+          2,
+          15
+        ]
+      ],
+      [
+        "ccx",
+        [
+          3,
+          16,
+          17
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          16
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          17
+        ]
+      ],
+      [
+        "ccx",
+        [
+          12,
+          13,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          14,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          15,
+          26
+        ]
+      ],
+      [
+        "ccx",
+        [
+          26,
+          16,
+          17
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          15,
+          26
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          14,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          12,
+          13,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          12,
+          13,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          14,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          15,
+          16
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          14,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          12,
+          13,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          12,
+          13,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          14,
+          15
+        ]
+      ],
+      [
+        "ccx",
+        [
+          12,
+          13,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          12,
+          13,
+          14
+        ]
+      ],
+      [
+        "cx",
+        [
+          12,
+          13
+        ]
+      ],
+      [
+        "x",
+        [
+          12
+        ]
+      ],
+      [
+        "ccx",
+        [
+          15,
+          16,
+          17
+        ]
+      ],
+      [
+        "cx",
+        [
+          15,
+          16
+        ]
+      ],
+      [
+        "x",
+        [
+          15
+        ]
+      ],
+      [
+        "cx",
+        [
+          16,
+          17
+        ]
+      ],
+      [
+        "x",
+        [
+          16
+        ]
+      ],
+      [
+        "x",
+        [
+          17
+        ]
+      ],
+      [
+        "x",
+        [
+          0
+        ]
+      ],
+      [
+        "x",
+        [
+          1
+        ]
+      ],
+      [
+        "x",
+        [
+          2
+        ]
+      ],
+      [
+        "x",
+        [
+          3
+        ]
+      ],
+      [
+        "x",
+        [
+          4
+        ]
+      ],
+      [
+        "x",
+        [
+          5
+        ]
+      ],
+      [
+        "ccx",
+        [
+          3,
+          4,
+          5
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        "x",
+        [
+          3
+        ]
+      ],
+      [
+        "ccx",
+        [
+          6,
+          7,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          8,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          9,
+          26
+        ]
+      ],
+      [
+        "ccx",
+        [
+          26,
+          10,
+          11
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          9,
+          26
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          8,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          6,
+          7,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          6,
+          7,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          8,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          9,
+          10
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          8,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          6,
+          7,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          6,
+          7,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          8,
+          9
+        ]
+      ],
+      [
+        "ccx",
+        [
+          6,
+          7,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      [
+        "cx",
+        [
+          6,
+          7
+        ]
+      ],
+      [
+        "x",
+        [
+          6
+        ]
+      ],
+      [
+        "ccx",
+        [
+          7,
+          8,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          9,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          10,
+          11
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          9,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          7,
+          8,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          7,
+          8,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          9,
+          10
+        ]
+      ],
+      [
+        "ccx",
+        [
+          7,
+          8,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          7,
+          8,
+          9
+        ]
+      ],
+      [
+        "cx",
+        [
+          7,
+          8
+        ]
+      ],
+      [
+        "x",
+        [
+          7
+        ]
+      ],
+      [
+        "ccx",
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      [
+        "cx",
+        [
+          9,
+          10
+        ]
+      ],
+      [
+        "x",
+        [
+          9
+        ]
+      ],
+      [
+        "cx",
+        [
+          10,
+          11
+        ]
+      ],
+      [
+        "x",
+        [
+          10
+        ]
+      ],
+      [
+        "x",
+        [
+          11
+        ]
+      ],
+      [
+        "ccx",
+        [
+          18,
+          19,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          20,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          21,
+          26
+        ]
+      ],
+      [
+        "ccx",
+        [
+          26,
+          22,
+          23
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          21,
+          26
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          20,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          18,
+          19,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          18,
+          19,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          20,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          25,
+          21,
+          22
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          20,
+          25
+        ]
+      ],
+      [
+        "ccx",
+        [
+          18,
+          19,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          18,
+          19,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          20,
+          21
+        ]
+      ],
+      [
+        "ccx",
+        [
+          18,
+          19,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          18,
+          19,
+          20
+        ]
+      ],
+      [
+        "cx",
+        [
+          18,
+          19
+        ]
+      ],
+      [
+        "x",
+        [
+          18
+        ]
+      ],
+      [
+        "ccx",
+        [
+          20,
+          21,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          24,
+          22,
+          23
+        ]
+      ],
+      [
+        "ccx",
+        [
+          20,
+          21,
+          24
+        ]
+      ],
+      [
+        "ccx",
+        [
+          20,
+          21,
+          22
+        ]
+      ],
+      [
+        "cx",
+        [
+          20,
+          21
+        ]
+      ],
+      [
+        "x",
+        [
+          20
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          6,
+          0
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          6
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          7,
+          1
+        ]
+      ],
+      [
+        "cx",
+        [
+          1,
+          7
+        ]
+      ],
+      [
+        "cx",
+        [
+          2,
+          8
+        ]
+      ],
+      [
+        "cx",
+        [
+          8,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          2,
+          8
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          9
+        ]
+      ],
+      [
+        "cx",
+        [
+          9,
+          3
+        ]
+      ],
+      [
+        "cx",
+        [
+          3,
+          9
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          10
+        ]
+      ],
+      [
+        "cx",
+        [
+          10,
+          4
+        ]
+      ],
+      [
+        "cx",
+        [
+          4,
+          10
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          11
+        ]
+      ],
+      [
+        "cx",
+        [
+          11,
+          5
+        ]
+      ],
+      [
+        "cx",
+        [
+          5,
+          11
+        ]
+      ]
+    ]
+  },
+  "known_cell": {
+    "initial_lifts": [
+      1,
+      8,
+      19,
+      -28
+    ],
+    "final_lifts": [
+      3,
+      6,
+      14,
+      -23
+    ],
+    "initial_phases": [
+      1,
+      8,
+      19,
+      36
+    ],
+    "final_phases": [
+      3,
+      6,
+      14,
+      41
+    ],
+    "gamma": "2/3",
+    "cost": "1",
+    "events_retained": 4,
+    "verified": true
+  },
+  "coherent_control": {
+    "input": "(|0,0,0,0> + i |1,0,63,0>)/sqrt(2)",
+    "balanced_cut_output": [
+      {
+        "phase_labels": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "amplitude": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      },
+      {
+        "phase_labels": [
+          63,
+          0,
+          1,
+          0
+        ],
+        "amplitude": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      }
+    ],
+    "inverse_and_preparation_inverse_yield_zero": true,
+    "evidence_class": "LOCAL_IDEAL_CALCULATION",
+    "hardware_job_id": null
+  },
+  "prior_obstruction_pair": {
+    "inputs": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        16,
+        48,
+        0,
+        0
+      ]
+    ],
+    "outputs": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        48,
+        48,
+        32,
+        0
+      ]
+    ],
+    "input_trace_distance": 1,
+    "output_trace_distance": 1,
+    "reason": "distinct orthogonal labels; a different encoding, not a channel conversion of the old code",
+    "previous_two_site_obstruction_still_valid": true
+  },
+  "resources": {
+    "cut_axis_zero": {
+      "grid": 64,
+      "bits_per_mode": 6,
+      "phase_bits": 24,
+      "clean_scratch_bits": 4,
+      "total_logical_wires": 28,
+      "source_operations": 1,
+      "elementary_gates": 24,
+      "gate_counts": {
+        "x": 7,
+        "ccx": 16,
+        "cx": 1
+      },
+      "full_phase_dimension": 16777216,
+      "encoded_phase_labels": 16777216,
+      "omitted_mode": null,
+      "fixed_sector_information_bits": 18,
+      "compressed_sector_layout_implemented": false,
+      "gamma_lifts_history": "external original Cell; not included in wire count",
+      "physical_qubits_built": 0
+    },
+    "balanced_cut_axis_zero": {
+      "grid": 64,
+      "bits_per_mode": 6,
+      "phase_bits": 24,
+      "clean_scratch_bits": 4,
+      "total_logical_wires": 28,
+      "source_operations": 1,
+      "elementary_gates": 59,
+      "gate_counts": {
+        "ccx": 46,
+        "cx": 6,
+        "x": 7
+      },
+      "full_phase_dimension": 16777216,
+      "encoded_phase_labels": 16777216,
+      "omitted_mode": null,
+      "fixed_sector_information_bits": 18,
+      "compressed_sector_layout_implemented": false,
+      "gamma_lifts_history": "external original Cell; not included in wire count",
+      "physical_qubits_built": 0
+    },
+    "shear_minus3_reference5": {
+      "grid": 64,
+      "bits_per_mode": 6,
+      "phase_bits": 24,
+      "clean_scratch_bits": 4,
+      "total_logical_wires": 28,
+      "source_operations": 1,
+      "elementary_gates": 129,
+      "gate_counts": {
+        "ccx": 105,
+        "cx": 20,
+        "x": 4
+      },
+      "full_phase_dimension": 16777216,
+      "encoded_phase_labels": 16777216,
+      "omitted_mode": null,
+      "fixed_sector_information_bits": 18,
+      "compressed_sector_layout_implemented": false,
+      "gamma_lifts_history": "external original Cell; not included in wire count",
+      "physical_qubits_built": 0
+    },
+    "three_operation_closed_word": {
+      "grid": 64,
+      "bits_per_mode": 6,
+      "phase_bits": 24,
+      "clean_scratch_bits": 4,
+      "total_logical_wires": 28,
+      "source_operations": 3,
+      "elementary_gates": 145,
+      "gate_counts": {
+        "ccx": 94,
+        "cx": 33,
+        "x": 18
+      },
+      "full_phase_dimension": 16777216,
+      "encoded_phase_labels": 16777216,
+      "omitted_mode": null,
+      "fixed_sector_information_bits": 18,
+      "compressed_sector_layout_implemented": false,
+      "gamma_lifts_history": "external original Cell; not included in wire count",
+      "physical_qubits_built": 0
+    }
+  },
+  "sector_compression": {
+    "status": "fixed-closure exact coordinate elimination inside the existing register compiler",
+    "closure": {
+      "sign": 1,
+      "twist": 0,
+      "sum_residue": 0,
+      "omitted_mode": 2,
+      "identity": "x2 = -(x0+x1+x3) mod 64"
+    },
+    "full_resources": {
+      "grid": 64,
+      "bits_per_mode": 6,
+      "phase_bits": 24,
+      "clean_scratch_bits": 4,
+      "total_logical_wires": 28,
+      "source_operations": 1,
+      "elementary_gates": 59,
+      "gate_counts": {
+        "ccx": 46,
+        "cx": 6,
+        "x": 7
+      },
+      "full_phase_dimension": 16777216,
+      "encoded_phase_labels": 16777216,
+      "omitted_mode": null,
+      "fixed_sector_information_bits": 18,
+      "compressed_sector_layout_implemented": false,
+      "gamma_lifts_history": "external original Cell; not included in wire count",
+      "physical_qubits_built": 0
+    },
+    "compressed_resources": {
+      "grid": 64,
+      "bits_per_mode": 6,
+      "phase_bits": 18,
+      "clean_scratch_bits": 4,
+      "total_logical_wires": 22,
+      "source_operations": 1,
+      "elementary_gates": 24,
+      "gate_counts": {
+        "x": 7,
+        "ccx": 16,
+        "cx": 1
+      },
+      "full_phase_dimension": 16777216,
+      "encoded_phase_labels": 262144,
+      "omitted_mode": 2,
+      "fixed_sector_information_bits": 18,
+      "compressed_sector_layout_implemented": true,
+      "gamma_lifts_history": "external original Cell; not included in wire count",
+      "physical_qubits_built": 0
+    },
+    "stored_affine_matrix": [
+      [
+        63,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "stored_affine_offset": [
+      0,
+      0,
+      0
+    ],
+    "elementary_operations": [
+      [
+        "x",
+        [
+          0
+        ]
+      ],
+      [
+        "x",
+        [
+          1
+        ]
+      ],
+      [
+        "x",
+        [
+          2
+        ]
+      ],
+      [
+        "x",
+        [
+          3
+        ]
+      ],
+      [
+        "x",
+        [
+          4
+        ]
+      ],
+      [
+        "x",
+        [
+          5
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          1,
+          18
+        ]
+      ],
+      [
+        "ccx",
+        [
+          18,
+          2,
+          19
+        ]
+      ],
+      [
+        "ccx",
+        [
+          19,
+          3,
+          20
+        ]
+      ],
+      [
+        "ccx",
+        [
+          20,
+          4,
+          5
+        ]
+      ],
+      [
+        "ccx",
+        [
+          19,
+          3,
+          20
+        ]
+      ],
+      [
+        "ccx",
+        [
+          18,
+          2,
+          19
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          1,
+          18
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          1,
+          18
+        ]
+      ],
+      [
+        "ccx",
+        [
+          18,
+          2,
+          19
+        ]
+      ],
+      [
+        "ccx",
+        [
+          19,
+          3,
+          4
+        ]
+      ],
+      [
+        "ccx",
+        [
+          18,
+          2,
+          19
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          1,
+          18
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          1,
+          18
+        ]
+      ],
+      [
+        "ccx",
+        [
+          18,
+          2,
+          3
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          1,
+          18
+        ]
+      ],
+      [
+        "ccx",
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      [
+        "cx",
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        "x",
+        [
+          0
+        ]
+      ]
+    ],
+    "source_gate_binding_verified": true,
+    "coherent_control": {
+      "actual_amplitudes": [
+        {
+          "labels": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "amplitude": {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        },
+        {
+          "labels": [
+            63,
+            0,
+            1,
+            0
+          ],
+          "amplitude": {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        }
+      ],
+      "exact_amplitude_match": true,
+      "inverse_interference_restores_zero": true,
+      "execution_logical_wires": 22,
+      "evidence_class": "LOCAL_IDEAL_CALCULATION"
+    },
+    "codec": {
+      "peak_logical_wires": 28,
+      "compression_gates": 183,
+      "expansion_gates": 183,
+      "on_sector": "omitted register and workspace end zero",
+      "off_sector": "omitted register retains sum(x)-s, not discarded",
+      "full_compress_apply_expand_gates": 390,
+      "comparison": "conversion costs counted separately; direct compressed preparation uses 22 wires"
+    },
+    "gate_tradeoffs": {
+      "balanced_cut_axis_zero": {
+        "full_gates": 59,
+        "gates_by_omitted_mode": {
+          "0": 154,
+          "1": 59,
+          "2": 24,
+          "3": 59
+        }
+      },
+      "paired_shift": {
+        "full_gates": 59,
+        "gates_by_omitted_mode": {
+          "0": 41,
+          "1": 59,
+          "2": 18,
+          "3": 59
+        }
+      },
+      "mode_swap": {
+        "full_gates": 18,
+        "gates_by_omitted_mode": {
+          "0": 276,
+          "1": 18,
+          "2": 276,
+          "3": 18
+        }
+      },
+      "three_operation_closed_word": {
+        "full_gates": 145,
+        "gates_by_omitted_mode": {
+          "0": 488,
+          "1": 368,
+          "2": 86,
+          "3": 121
+        }
+      }
+    },
+    "no_new_physical_postulate": true,
+    "restrictions": [
+      "fixed sign and twist are known",
+      "only operations preserving the whole sector at every source boundary",
+      "no cross-sector superposition compression",
+      "Gamma, winding, event/cost data remain external",
+      "no new physical preparation or measurement law",
+      "reconstructed omitted label is derived, not an independent closure measurement"
+    ]
+  },
+  "controller": {
+    "status": "coherent native read/reset records with existing dynamic measurement export",
+    "equations": {
+      "read_clean_record": "|x,0> -> |x,x_j-a mod L>",
+      "read_retained_mode_dirty_record": "|x,y> -> |x,(y XOR x_j)-a mod L>",
+      "read_omitted_mode_dirty_record": "|x,y> -> |x,y+x_j-a mod L>",
+      "reset": "|x_j,y> -> |a+y,x_j-a mod L>"
+    },
+    "record_precondition": "fresh zero product registers, separate from temporary clean workspace",
+    "known_cell": {
+      "input_lifts": [
+        65,
+        0,
+        0,
+        0
+      ],
+      "output_lifts": [
+        2,
+        0,
+        0,
+        0
+      ],
+      "outcomes": [
+        0,
+        63
+      ],
+      "gamma": "3/7",
+      "verified": true
+    },
+    "coherent_reset": {
+      "input": "entangled data/reference with relative zeta_64 phase",
+      "output": [
+        {
+          "data_and_record": [
+            [
+              5,
+              0,
+              0,
+              0
+            ],
+            [
+              59
+            ]
+          ],
+          "reference": 0,
+          "amplitude": {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        },
+        {
+          "data_and_record": [
+            [
+              5,
+              0,
+              0,
+              0
+            ],
+            [
+              60
+            ]
+          ],
+          "reference": 1,
+          "amplitude": {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        }
+      ],
+      "exact_amplitude_transfer": true,
+      "inverse_restores_input": true,
+      "reset_data_probability": {
+        "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "scope": "coherent retained record; inverse does not undo discarded or measured coherence"
+    },
+    "existing_dynamic_engine": {
+      "reset_zero_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "two_records_both_one_probability": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "implementation": "native_relational_qc.dynamic, unchanged"
+    },
+    "resources": {
+      "full_read_reference0": {
+        "phase_bits": 24,
+        "clean_workspace_bits": 4,
+        "retained_record_bits": 6,
+        "retained_records": 1,
+        "total_logical_wires": 34,
+        "source_operations": 1,
+        "elementary_gates": 6,
+        "gate_counts": {
+          "cx": 6
+        },
+        "classical_output_bits_if_measured": 6,
+        "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
+        "record_storage_minimality_claim": false,
+        "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+        "physical_qubits_built": 0
+      },
+      "full_reset_reference0": {
+        "phase_bits": 24,
+        "clean_workspace_bits": 4,
+        "retained_record_bits": 6,
+        "retained_records": 1,
+        "total_logical_wires": 34,
+        "source_operations": 1,
+        "elementary_gates": 18,
+        "gate_counts": {
+          "cx": 18
+        },
+        "classical_output_bits_if_measured": 6,
+        "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
+        "record_storage_minimality_claim": false,
+        "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+        "physical_qubits_built": 0
+      },
+      "read_reference1_then_reset_reference2": {
+        "phase_bits": 24,
+        "clean_workspace_bits": 4,
+        "retained_record_bits": 12,
+        "retained_records": 2,
+        "total_logical_wires": 40,
+        "source_operations": 2,
+        "elementary_gates": 99,
+        "gate_counts": {
+          "cx": 34,
+          "ccx": 53,
+          "x": 12
+        },
+        "classical_output_bits_if_measured": 12,
+        "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
+        "record_storage_minimality_claim": false,
+        "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+        "physical_qubits_built": 0
+      },
+      "compressed_omitted_read": {
+        "phase_bits": 18,
+        "clean_workspace_bits": 4,
+        "retained_record_bits": 6,
+        "retained_records": 1,
+        "total_logical_wires": 28,
+        "source_operations": 1,
+        "elementary_gates": 378,
+        "gate_counts": {
+          "ccx": 315,
+          "cx": 63
+        },
+        "classical_output_bits_if_measured": 6,
+        "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
+        "record_storage_minimality_claim": false,
+        "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+        "physical_qubits_built": 0
+      }
+    },
+    "limits": {
+      "default_max_records": 16,
+      "max_records_option": 64,
+      "max_total_wires": 256,
+      "max_gates": 100000,
+      "reset": "only unrestricted full layout; a single-mode reset is not whole-sector preserving"
+    },
+    "open": [
+      "physical initialization, pointer measurement and noise",
+      "record recycling and environment/energy accounting",
+      "coherent unwrapped winding and path-cost storage"
+    ]
+  },
+  "balanced_reset": {
+    "status": "explicit pair_reset source law, compiled through existing retained-record controller",
+    "source": {
+      "operation": "pair_reset(j,reservoir,a)",
+      "lift_update": "ell_j'=a; ell_s'=ell_s+ell_j-a",
+      "record": "(ell_j-a) mod L",
+      "integer_sum_preserved": true,
+      "added_choice": "compensating reservoir transfer, not derived from the supplied manuscripts",
+      "cost": "does not charge the existing cut counter; physical energy unspecified"
+    },
+    "clean_isometry": "|x_j,x_s,0> -> |a,x_s+x_j-a,x_j-a> modulo L",
+    "lowering": "existing read into fresh record r, then controlled shifts (-r,+r) on stored data modes",
+    "known_cell": {
+      "input_lifts": [
+        65,
+        0,
+        -1,
+        0
+      ],
+      "output_lifts": [
+        0,
+        0,
+        64,
+        0
+      ],
+      "input_sum": 64,
+      "output_sum": 64,
+      "outcomes": [
+        1
+      ],
+      "gamma": "3/7",
+      "history_verified": true
+    },
+    "coherent_sector_example": {
+      "input": "(|0,0,0,0> + zeta_64 |1,0,63,0>)/sqrt(2)",
+      "omitted_reservoir": 2,
+      "output": [
+        {
+          "phases": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "records": [
+            0
+          ],
+          "amplitude": {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        },
+        {
+          "phases": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "records": [
+            1
+          ],
+          "amplitude": {
+            "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "1/2",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        }
+      ],
+      "exact_amplitudes": true,
+      "coherent_inverse_restores_input": true,
+      "evidence_class": "LOCAL_IDEAL_CALCULATION"
+    },
+    "resources_by_reference_and_omitted_mode": {
+      "0": {
+        "None": {
+          "phase_bits": 24,
+          "clean_workspace_bits": 4,
+          "retained_record_bits": 6,
+          "retained_records": 1,
+          "total_logical_wires": 34,
+          "source_operations": 1,
+          "elementary_gates": 193,
+          "gate_counts": {
+            "cx": 33,
+            "ccx": 160
+          },
+          "classical_output_bits_if_measured": 6,
+          "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
+          "record_storage_minimality_claim": false,
+          "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+          "physical_qubits_built": 0
+        },
+        "0": {
+          "phase_bits": 18,
+          "clean_workspace_bits": 4,
+          "retained_record_bits": 6,
+          "retained_records": 1,
+          "total_logical_wires": 28,
+          "source_operations": 1,
+          "elementary_gates": 439,
+          "gate_counts": {
+            "ccx": 370,
+            "cx": 69
+          },
+          "classical_output_bits_if_measured": 6,
+          "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
+          "record_storage_minimality_claim": false,
+          "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+          "physical_qubits_built": 0
+        },
+        "1": {
+          "phase_bits": 18,
+          "clean_workspace_bits": 4,
+          "retained_record_bits": 6,
+          "retained_records": 1,
+          "total_logical_wires": 28,
+          "source_operations": 1,
+          "elementary_gates": 193,
+          "gate_counts": {
+            "cx": 33,
+            "ccx": 160
+          },
+          "classical_output_bits_if_measured": 6,
+          "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
+          "record_storage_minimality_claim": false,
+          "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+          "physical_qubits_built": 0
+        },
+        "2": {
+          "phase_bits": 18,
+          "clean_workspace_bits": 4,
+          "retained_record_bits": 6,
+          "retained_records": 1,
+          "total_logical_wires": 28,
+          "source_operations": 1,
+          "elementary_gates": 132,
+          "gate_counts": {
+            "cx": 27,
+            "ccx": 105
+          },
+          "classical_output_bits_if_measured": 6,
+          "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
+          "record_storage_minimality_claim": false,
+          "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+          "physical_qubits_built": 0
+        },
+        "3": {
+          "phase_bits": 18,
+          "clean_workspace_bits": 4,
+          "retained_record_bits": 6,
+          "retained_records": 1,
+          "total_logical_wires": 28,
+          "source_operations": 1,
+          "elementary_gates": 193,
+          "gate_counts": {
+            "cx": 33,
+            "ccx": 160
+          },
+          "classical_output_bits_if_measured": 6,
+          "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
+          "record_storage_minimality_claim": false,
+          "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+          "physical_qubits_built": 0
+        }
+      },
+      "7": {
+        "None": {
+          "phase_bits": 24,
+          "clean_workspace_bits": 4,
+          "retained_record_bits": 6,
+          "retained_records": 1,
+          "total_logical_wires": 34,
+          "source_operations": 1,
+          "elementary_gates": 217,
+          "gate_counts": {
+            "cx": 36,
+            "ccx": 177,
+            "x": 4
+          },
+          "classical_output_bits_if_measured": 6,
+          "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
+          "record_storage_minimality_claim": false,
+          "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+          "physical_qubits_built": 0
+        },
+        "0": {
+          "phase_bits": 18,
+          "clean_workspace_bits": 4,
+          "retained_record_bits": 6,
+          "retained_records": 1,
+          "total_logical_wires": 28,
+          "source_operations": 1,
+          "elementary_gates": 463,
+          "gate_counts": {
+            "ccx": 387,
+            "cx": 72,
+            "x": 4
+          },
+          "classical_output_bits_if_measured": 6,
+          "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
+          "record_storage_minimality_claim": false,
+          "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+          "physical_qubits_built": 0
+        },
+        "1": {
+          "phase_bits": 18,
+          "clean_workspace_bits": 4,
+          "retained_record_bits": 6,
+          "retained_records": 1,
+          "total_logical_wires": 28,
+          "source_operations": 1,
+          "elementary_gates": 217,
+          "gate_counts": {
+            "cx": 36,
+            "ccx": 177,
+            "x": 4
+          },
+          "classical_output_bits_if_measured": 6,
+          "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
+          "record_storage_minimality_claim": false,
+          "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+          "physical_qubits_built": 0
+        },
+        "2": {
+          "phase_bits": 18,
+          "clean_workspace_bits": 4,
+          "retained_record_bits": 6,
+          "retained_records": 1,
+          "total_logical_wires": 28,
+          "source_operations": 1,
+          "elementary_gates": 156,
+          "gate_counts": {
+            "cx": 30,
+            "ccx": 122,
+            "x": 4
+          },
+          "classical_output_bits_if_measured": 6,
+          "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
+          "record_storage_minimality_claim": false,
+          "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+          "physical_qubits_built": 0
+        },
+        "3": {
+          "phase_bits": 18,
+          "clean_workspace_bits": 4,
+          "retained_record_bits": 6,
+          "retained_records": 1,
+          "total_logical_wires": 28,
+          "source_operations": 1,
+          "elementary_gates": 217,
+          "gate_counts": {
+            "cx": 36,
+            "ccx": 177,
+            "x": 4
+          },
+          "classical_output_bits_if_measured": 6,
+          "record_policy": "one fresh width-bit register per read/reset/pair_reset; no overwrite or recycling",
+          "record_storage_minimality_claim": false,
+          "external": "Gamma, unwrapped lifts, operation tape, charged-cut cost",
+          "physical_qubits_built": 0
+        }
+      }
+    },
+    "boundaries": [
+      "single-mode reset remains rejected in fixed sectors",
+      "reservoir is another native phase mode, not a thermal bath or free memory",
+      "only untouched modes/reference have guaranteed unchanged unconditioned marginals",
+      "sum preserved at source boundaries; elementary gates may leave the sector",
+      "fresh zero records and clean workspace required for reset semantics",
+      "record coherence and availability required for inverse recovery",
+      "Gamma, unwrapped lift transfer and cost/history remain classical",
+      "logical gate counts are construction costs, not optimality or physical performance"
+    ]
+  },
+  "sector_control": {
+    "status": "conditional continuous control theorem plus existing-engine exact samples",
+    "algebra": {
+      "exchange": "P: (x_j,x_b,m) -> (a+m,x_b+x_j-a-m,x_j-a) mod L",
+      "involution": "P^2=I, P*=P",
+      "closure": "[P,Q_s]=0 for every modular-sum sector",
+      "interpolation": "U(theta)=(I+P)/2+exp(-i*theta)*(I-P)/2",
+      "generator": "H(t)=hbar*g(t)*(I-P)/2; theta=integral g(t) dt",
+      "all_real_angle_theorem": "[U(theta),Q_s]=0; U(0)=I; U(pi)=P",
+      "clock": "laboratory pulse area, not a derivation of native time"
+    },
+    "source_consistency": true,
+    "exact_samples": [
+      {
+        "angle_pi_over_32_steps": 0,
+        "exact_amplitude_match": true,
+        "closure_leakage_probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "reset_probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "flags_zero_probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "verification_gates": 0
+      },
+      {
+        "angle_pi_over_32_steps": 1,
+        "exact_amplitude_match": true,
+        "closure_leakage_probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "reset_probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/4",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "-1/8",
+            "0",
+            "1/8"
+          ]
+        },
+        "flags_zero_probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "verification_gates": 41
+      },
+      {
+        "angle_pi_over_32_steps": 8,
+        "exact_amplitude_match": true,
+        "closure_leakage_probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "reset_probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1/2",
+            "-1/4",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "flags_zero_probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "verification_gates": 48
+      },
+      {
+        "angle_pi_over_32_steps": 16,
+        "exact_amplitude_match": true,
+        "closure_leakage_probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "reset_probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "flags_zero_probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "verification_gates": 56
+      },
+      {
+        "angle_pi_over_32_steps": 24,
+        "exact_amplitude_match": true,
+        "closure_leakage_probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "reset_probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1/2",
+            "1/4",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "flags_zero_probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "verification_gates": 64
+      },
+      {
+        "angle_pi_over_32_steps": 32,
+        "exact_amplitude_match": true,
+        "closure_leakage_probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "reset_probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "flags_zero_probability": {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "verification_gates": 72
+      }
+    ],
+    "negative_control": {
+      "generator": "single data-bit X, not a balanced exchange",
+      "angle": "pi/2",
+      "outside_sum_zero_probability": {
+        "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      }
+    },
+    "resources": {
+      "None": {
+        "native_involution_pulses": 1,
+        "phase_bits": 24,
+        "retained_record_bits": 6,
+        "inherited_arithmetic_workspace_bits": 4,
+        "allocated_endpoint_wires": 34,
+        "endpoint_verification_gates": 140,
+        "previous_controller_gates": 193,
+        "fractional_verification_extra_clean_wires": 2,
+        "fractional_verification_wires": 36,
+        "native_drive": "H(t)=hbar*g(t)*(I-P)/2; integrated area pi for each endpoint",
+        "physical_pulse_count_claim": false,
+        "physical_qubits_built": 0,
+        "limits": "native pulses are high-dimensional operator targets, not calibrated one/two-qubit gates",
+        "half_angle_verification_gates": 740
+      },
+      "0": {
+        "native_involution_pulses": 1,
+        "phase_bits": 18,
+        "retained_record_bits": 6,
+        "inherited_arithmetic_workspace_bits": 4,
+        "allocated_endpoint_wires": 28,
+        "endpoint_verification_gates": 570,
+        "previous_controller_gates": 439,
+        "fractional_verification_extra_clean_wires": 2,
+        "fractional_verification_wires": 30,
+        "native_drive": "H(t)=hbar*g(t)*(I-P)/2; integrated area pi for each endpoint",
+        "physical_pulse_count_claim": false,
+        "physical_qubits_built": 0,
+        "limits": "native pulses are high-dimensional operator targets, not calibrated one/two-qubit gates",
+        "half_angle_verification_gates": 2968
+      },
+      "1": {
+        "native_involution_pulses": 1,
+        "phase_bits": 18,
+        "retained_record_bits": 6,
+        "inherited_arithmetic_workspace_bits": 4,
+        "allocated_endpoint_wires": 28,
+        "endpoint_verification_gates": 140,
+        "previous_controller_gates": 193,
+        "fractional_verification_extra_clean_wires": 2,
+        "fractional_verification_wires": 30,
+        "native_drive": "H(t)=hbar*g(t)*(I-P)/2; integrated area pi for each endpoint",
+        "physical_pulse_count_claim": false,
+        "physical_qubits_built": 0,
+        "limits": "native pulses are high-dimensional operator targets, not calibrated one/two-qubit gates",
+        "half_angle_verification_gates": 740
+      },
+      "2": {
+        "native_involution_pulses": 1,
+        "phase_bits": 18,
+        "retained_record_bits": 6,
+        "inherited_arithmetic_workspace_bits": 4,
+        "allocated_endpoint_wires": 28,
+        "endpoint_verification_gates": 18,
+        "previous_controller_gates": 132,
+        "fractional_verification_extra_clean_wires": 2,
+        "fractional_verification_wires": 30,
+        "native_drive": "H(t)=hbar*g(t)*(I-P)/2; integrated area pi for each endpoint",
+        "physical_pulse_count_claim": false,
+        "physical_qubits_built": 0,
+        "limits": "native pulses are high-dimensional operator targets, not calibrated one/two-qubit gates",
+        "half_angle_verification_gates": 56
+      },
+      "3": {
+        "native_involution_pulses": 1,
+        "phase_bits": 18,
+        "retained_record_bits": 6,
+        "inherited_arithmetic_workspace_bits": 4,
+        "allocated_endpoint_wires": 28,
+        "endpoint_verification_gates": 140,
+        "previous_controller_gates": 193,
+        "fractional_verification_extra_clean_wires": 2,
+        "fractional_verification_wires": 30,
+        "native_drive": "H(t)=hbar*g(t)*(I-P)/2; integrated area pi for each endpoint",
+        "physical_pulse_count_claim": false,
+        "physical_qubits_built": 0,
+        "limits": "native pulses are high-dimensional operator targets, not calibrated one/two-qubit gates",
+        "half_angle_verification_gates": 740
+      }
+    },
+    "choice": "new involutive dirty-record extension; agrees with v0.7 clean-record endpoints",
+    "verification_boundary": "binary gadget is a mathematical verification circuit, not a sector-confined physical gate path",
+    "error_budget": "for initial sector Q and H=H0+V with [H0,Q]=0, leakage <= min(1,(integral ||(I-Q)VQ||/hbar dt)^2)",
+    "new_assumption": "device can realize the declared high-dimensional symmetric generator and initialized records",
+    "unresolved": [
+      "material carrier, locality and native coupling synthesis",
+      "calibrated pulse strengths, time and energy",
+      "noise coupling to forbidden sectors and protected continuous implementation",
+      "record recycling and coherent unwrapped lift/cost storage"
+    ],
+    "evidence_class": "LOCAL_IDEAL_CALCULATION",
+    "hardware_job_id": null
+  },
+  "photonic_exchange": {
+    "status": "DESIGN_ONLY",
+    "evidence_class": "LOCAL_IDEAL_CALCULATION",
+    "hardware_job_id": null,
+    "candidate": {
+      "carrier": "single photon in Si3N4 waveguide paths",
+      "nominal_wavelength_nm": 1550,
+      "source": "external heralded SPDC photon-pair source",
+      "readout": "SNSPDs and time tagging",
+      "guard_test": "physically bypassed or removed in normal operation"
+    },
+    "resources": {
+      "grid": 4,
+      "signal_photons_in_code": 1,
+      "independent_data_label_bits": 2,
+      "retained_pointer_label_bits": 2,
+      "core_optical_paths": 16,
+      "monitored_guard_paths": 1,
+      "total_layout_paths": 17,
+      "exchange_interferometers": 6,
+      "balanced_couplers_in_exchange_core": 12,
+      "variable_differential_phases": 6,
+      "fixed_bypass_paths": 4,
+      "independent_physical_qubits_claim": false,
+      "physical_device_built": false,
+      "excluded_from_core_count": [
+        "photon source and herald channel",
+        "input routing and coherent preparation",
+        "phase trims and stabilization",
+        "output analysis, detectors and time tagging",
+        "guard-injection test coupler",
+        "second pass or second bank for recovery tests"
+      ],
+      "scaling": "L**2 paths for this restricted pair plus one pointer; full fixed four-mode sector plus one pointer needs L**4"
+    },
+    "native_domain": "fixed pair sum q=0, reference a=0, two spectator modes fixed zero, one retained pointer",
+    "route_pairs": [
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        12
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        7,
+        13
+      ],
+      [
+        11,
+        14
+      ]
+    ],
+    "fixed_ports": [
+      0,
+      5,
+      10,
+      15
+    ],
+    "guard": 16,
+    "canonical_layout_verified": true,
+    "transfer": "each two-cycle uses H diag(1,exp(-i*theta)) H; fixed paths are identity",
+    "artifacts": {
+      "netlist": "photonic_exchange_netlist.json",
+      "netlist_sha256": "af60e2cce5cd60965431b4e86d3f1c6ebda8fc8cee83561c79410d1286d5fb58",
+      "protocol": "photonic_exchange_protocol.json",
+      "protocol_sha256": "d909f38168989b964256c77c90b4a8eaddb8316bfad2dec7c14f3f45eaa974c2"
+    },
+    "proposed_settings": {
+      "total": 106,
+      "basis": 80,
+      "cross_block_coherence": 24,
+      "guard_controls": 2,
+      "herald_windows_per_setting": null,
+      "measurements": null
+    },
+    "scale_comparison": {
+      "4": {
+        "grid": 4,
+        "signal_photons_in_code": 1,
+        "independent_data_label_bits": 2,
+        "retained_pointer_label_bits": 2,
+        "core_optical_paths": 16,
+        "monitored_guard_paths": 1,
+        "total_layout_paths": 17,
+        "exchange_interferometers": 6,
+        "balanced_couplers_in_exchange_core": 12,
+        "variable_differential_phases": 6,
+        "fixed_bypass_paths": 4,
+        "independent_physical_qubits_claim": false,
+        "physical_device_built": false,
+        "excluded_from_core_count": [
+          "photon source and herald channel",
+          "input routing and coherent preparation",
+          "phase trims and stabilization",
+          "output analysis, detectors and time tagging",
+          "guard-injection test coupler",
+          "second pass or second bank for recovery tests"
+        ],
+        "scaling": "L**2 paths for this restricted pair plus one pointer; full fixed four-mode sector plus one pointer needs L**4"
+      },
+      "8": {
+        "grid": 8,
+        "signal_photons_in_code": 1,
+        "independent_data_label_bits": 3,
+        "retained_pointer_label_bits": 3,
+        "core_optical_paths": 64,
+        "monitored_guard_paths": 1,
+        "total_layout_paths": 65,
+        "exchange_interferometers": 28,
+        "balanced_couplers_in_exchange_core": 56,
+        "variable_differential_phases": 28,
+        "fixed_bypass_paths": 8,
+        "independent_physical_qubits_claim": false,
+        "physical_device_built": false,
+        "excluded_from_core_count": [
+          "photon source and herald channel",
+          "input routing and coherent preparation",
+          "phase trims and stabilization",
+          "output analysis, detectors and time tagging",
+          "guard-injection test coupler",
+          "second pass or second bank for recovery tests"
+        ],
+        "scaling": "L**2 paths for this restricted pair plus one pointer; full fixed four-mode sector plus one pointer needs L**4"
+      },
+      "64": {
+        "grid": 64,
+        "signal_photons_in_code": 1,
+        "independent_data_label_bits": 6,
+        "retained_pointer_label_bits": 6,
+        "core_optical_paths": 4096,
+        "monitored_guard_paths": 1,
+        "total_layout_paths": 4097,
+        "exchange_interferometers": 2016,
+        "balanced_couplers_in_exchange_core": 4032,
+        "variable_differential_phases": 2016,
+        "fixed_bypass_paths": 64,
+        "independent_physical_qubits_claim": false,
+        "physical_device_built": false,
+        "excluded_from_core_count": [
+          "photon source and herald channel",
+          "input routing and coherent preparation",
+          "phase trims and stabilization",
+          "output analysis, detectors and time tagging",
+          "guard-injection test coupler",
+          "second pass or second bank for recovery tests"
+        ],
+        "scaling": "L**2 paths for this restricted pair plus one pointer; full fixed four-mode sector plus one pointer needs L**4"
+      }
+    },
+    "boundaries": [
+      "one photon across many paths is not many independent qubits",
+      "four independent physical phase channels are not built or measured",
+      "guard tests optical code leakage, not an independent native closure charge",
+      "ordinary photon detection destroys the joint data/pointer carrier",
+      "bright-light calibration is not quantum-carrier qualification",
+      "all losses and herald-window categories must be retained",
+      "generic mesh endpoint equivalence does not prove its internal path stays in the code",
+      "fabrication geometry, phase-voltage maps, errors, rates and budget remain unmeasured"
+    ]
+  },
+  "photonic_io": {
+    "status": "DESIGN_AND_OFFLINE_INTERFACE",
+    "evidence_class": "LOCAL_IDEAL_CALCULATION",
+    "settings": 106,
+    "resources": {
+      "core_balanced_couplers": 12,
+      "preparation_balanced_couplers": 1,
+      "analysis_balanced_couplers": 1,
+      "guard_test_balanced_couplers": 2,
+      "installed_balanced_couplers": 16,
+      "logical_variable_phases": 9,
+      "signal_and_guard_detectors": 17,
+      "herald_detectors": 1,
+      "extra_port_trims_and_stabilization_actuators": null
+    },
+    "verification": {
+      "backend": "existing Phase64Circuit",
+      "label_bits": 5,
+      "clean_workspace_bits": 3,
+      "min_gates": 164,
+      "max_gates": 449,
+      "gate_cap": 10000,
+      "boundary": "binary verification wires, not optical qubits or physical propagation"
+    },
+    "artifacts": {
+      "io": "photonic_io_design.json",
+      "io_sha256": "162823f8bd641cf9545cdfebe72681847beb55f5f3863dcdf327b2c7d6930396",
+      "calibration_template": "photonic_calibration_template.json",
+      "calibration_template_sha256": "31e0b642e29db7de6ec168902655a62645d3f8576f1fe22440c8e5c356a1a686",
+      "process_binding": "photonic_process_binding.json",
+      "process_binding_sha256": "28e718a5a2af0224e36443ae16f789f1ca1c4474b58a53063c1610dca2d25718"
+    },
+    "process_candidate": "CORNERSTONE 300 nm SiN, TE, nominal 1550 nm",
+    "process_software_commit": "3323b17b4d75c852ed2372d7d13239408cca0eb1",
+    "pdk_mismatch": "mzi_nc defaults to mmi1x2_nc at its input; explicitly replace it with mmi2x2_nc for the two-input exchange",
+    "calibration": {
+      "status": "UNMEASURED_TEMPLATE",
+      "recorded_settings": 0,
+      "voltage_model": "joint configuration lookup only",
+      "physical_acceptance": "NOT_ASSESSED",
+      "hardware_submitted": false
+    },
+    "open": [
+      "complete packaged optical layout and foundry design-rule review",
+      "calibration acquisition and inverse fitting",
+      "measured source/detector/loss/coherence and physical acceptance"
+    ]
+  },
+  "photonic_layout": {
+    "status": "CORE_GDS_SUBASSEMBLY",
+    "qualification": "layout/layout_qualification.json",
+    "qualification_sha256": "fef8ab143ffc77c0ccb0764b7f2caf7801e75d1d735f1aa0860266a935177d80",
+    "local_geometry_passed": true,
+    "cad_tests": {
+      "count": 9,
+      "passed": true,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 1.686017242998787
+    },
+    "artifacts_sha256": {
+      "exchange_core.gds": "f6777bc1ecf2c6887363ca59e942b2129fbd3996c93132cb1a9291f3c6f9d3ab",
+      "exchange_core_ports.json": "a4a450b2eca35238ccffe7280257abc91d9046424ad34cd3a74c38247ad5b866",
+      "exchange_core.png": "b38f30668e4fe68e5caeb598f82f76fe39872f4eb65657bc0a28859b2838a872",
+      "exchange_unit.png": "72cc696c619c8cfa87e40abece0ebb13a4d861ccea07eb76bea38f2148371807",
+      "physical_calibration_template.json": "3a724e8699f2b69533fcd9cadf50f6e742fdc1b2de017ecbea6a578d5e102e44"
+    },
+    "physical_calibration_channels": 31,
+    "physical_profile_schema": "native-photonic-calibration-v2",
+    "layout_gds_sha256": "f6777bc1ecf2c6887363ca59e942b2129fbd3996c93132cb1a9291f3c6f9d3ab",
+    "foundry_drc_run": false,
+    "foundry_approved": false,
+    "physical_measurements": null,
+    "open": [
+      "fiber coupling and packaging",
+      "full foundry DRC and rule review",
+      "optical and thermal calibration"
+    ]
+  },
+  "limits": {
+    "power_of_two_grids": [
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256,
+      512,
+      1024,
+      2048,
+      4096
+    ],
+    "max_gates": 100000,
+    "source_guards": "Config parameter/event limits; bound Cell replay also checks lift and rational-cost limits",
+    "closure": "whole fixed sector preserved after each source operation; elementary gates may leave it",
+    "excluded": [
+      "single-mode reset in a fixed closure sector",
+      "Gamma quantum storage",
+      "quantum winding/history/cost register",
+      "unknown-sector compression"
+    ]
+  },
+  "open": [
+    "native physical preparation of coherent phase-label superpositions",
+    "physical gate/readout/control calibration and noise",
+    "physical controller/environment and record recycling; coherent unwrapped path records",
+    "native probability and time/energy laws independent of circuit assumptions"
+  ],
+  "validation": {
+    "tests": 199,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "seconds": 123.80132497199884,
+    "scope": "layout phase controls and physical calibration binding, photonic I/O, photonic design, continuous sector control, balanced reset, controller, compressed/full register, v0.3, v0.2, v0.1, calculator smoke and seven existing dynamic checks; CAD geometry suite separate; full native/Shor suite not rerun",
+    "selected_dynamic_tests": [
+      "test_initial_classical_memory_and_empty_query",
+      "test_measurement_retains_quantum_classical_correlation",
+      "test_measurement_overwrites_old_memory",
+      "test_reset_preserves_remote_mixed_state_and_old_record",
+      "test_repeated_measurement_and_later_basis_change",
+      "test_feedforward_uses_current_memory_and_zero_condition",
+      "test_budgets_fail_without_modifying_program"
+    ]
+  },
+  "checked_sources_sha256": {
+    "phase_seam_foundation/register.py": "d29fa6736256368b5a4885744b79a852146bc63d60fa98ec4a3ac18c26fa2b9d",
+    "phase_seam_foundation/register_qualification.py": "934dc2bc53a292b0551eb58fe6e807a84f969c16d0ddc549eb29e7c6a5738ab3",
+    "phase_seam_foundation/register_source_manifest.json": "fd14c8445e48580e0372a153f3189601b44e57d1b5cd5c4472352f06f0c60516",
+    "phase_seam_foundation/model.py": "642984f5be7345683374719dc66193883d0688031e49ff9ebde12c5a36a939b8",
+    "phase_seam_foundation/encoding.py": "93cd7ebca26e252756bdbaa9c8686a866826f7c9c8288e9881af0fa7ea8488c7",
+    "phase_seam_foundation/joint.py": "53548114a84dfb24022acee866c10b67f0bd71ec9b9b203c014cf76af8ccbb36",
+    "native_relational_qc/modular_arithmetic.py": "dc59c9b09acf82cfee877d707901022f91fbe9a9284eb00cf6168e844b9368ce",
+    "native_relational_qc/compact.py": "1acff6eaa8664b4ba33285c66c9f433ecd0148aa8383a18f79dbd2ccb66e898d",
+    "native_relational_qc/phase_backend.py": "b47a5cfe04449a5def450aa3170ff11697436705427da83050f4aee08345dd98",
+    "native_relational_qc/exact.py": "cc0b3be70660ed819b3ad153620ea4338fb6bf57102a4474d4355da2805afdf6",
+    "native_relational_qc/cyclotomic.py": "36a9f93fb9b6362a6141f13f4aef677de9f19642f6ea01ebb761614acab4ea86",
+    "native_relational_qc/cyclotomic32.py": "33e203a7280bbe8341e37cb357f1bb6bfcaba9e695ff5144050e3a087733ab76",
+    "native_relational_qc/cyclotomic64.py": "8fc9c42627feee330b00f1b56559031cc442746e830081eae09f535115d74e52",
+    "benchmarks/phase_seam_register_audit.py": "5dc5c2eb09c91e4fe13b31a4dad8c7800ffeb838476e7d8666005c04d7a8ff93",
+    "phase_seam_foundation/controller.py": "ba74ab91b6ea9d1234256420225ba3ef5cc50a63ebf4ed0fa5d571af2169285d",
+    "phase_seam_foundation/sector_control.py": "fe528d000e7465e5ba359c6195172720624d5bebca92f15f1d03f9af6cf5694a",
+    "native_relational_qc/dynamic.py": "88421139cba72f0d86f3644c5933e03dd44d8afa1fdc79b250b2e8bf5390acd9",
+    "tests/test_native_dynamic.py": "41f94d9520e98c80ed7f58fdacf0b60ba31455c63bbf5a313975f4d4ae6a0b27",
+    "phase_seam_foundation/photonic_exchange.py": "1414ba5fffd110d35f339941059cccd086fd1b7cc4a3df84c3794095c4d77997",
+    "phase_seam_foundation/photonic_io.py": "6e7554b073e78cbd58ef26fcd2c2327f89f696bdb85d2d375f980914bb57d3bf",
+    "phase_seam_foundation/photonic_process_binding.json": "28e718a5a2af0224e36443ae16f789f1ca1c4474b58a53063c1610dca2d25718",
+    "phase_seam_foundation/photonic_layout.py": "c6debe28447121ad7b4522acd91ca60e41cd58d0274905dc12908c5dfbf6d350",
+    "phase_seam_foundation/layout/exchange_core.gds": "f6777bc1ecf2c6887363ca59e942b2129fbd3996c93132cb1a9291f3c6f9d3ab",
+    "phase_seam_foundation/layout/layout_qualification.json": "fef8ab143ffc77c0ccb0764b7f2caf7801e75d1d735f1aa0860266a935177d80",
+    "phase_seam_foundation/layout/exchange_core_ports.json": "a4a450b2eca35238ccffe7280257abc91d9046424ad34cd3a74c38247ad5b866",
+    "phase_seam_foundation/layout/physical_calibration_template.json": "3a724e8699f2b69533fcd9cadf50f6e742fdc1b2de017ecbea6a578d5e102e44",
+    "tests/test_phase_seam_layout_controls.py": "a3c55e25820eeb7ef85fe16cd149d8e31bd19c7772645409fcbeb7966c459b9c",
+    "tests/test_phase_seam_photonic_io.py": "696d402e7884b6b93ba9733c28b3bc43544dd53799eb7215a5ee89f6e4f3994f",
+    "tests/test_phase_seam_photonic_exchange.py": "532cdb11b8b63410f4849a3ee727dbec80c09ef42ff06915bda7ff7bdff79fc5",
+    "tests/test_phase_seam_sector_control.py": "3f69a2492214a8fdd97019a4d36e6d415251303e66abc1867108d038ab84643c",
+    "tests/test_phase_seam_balanced_reset.py": "a43b73a7e762955284ae2d9195fe1f0cbde160f20ad90859b285000ab36b9bf0",
+    "tests/test_phase_seam_controller.py": "77e39bdbc8a46cd93cb654389e9e19761d5dc44805867f519d6f45c1d72a78d3",
+    "tests/test_phase_seam_sector.py": "b1f536d0691da6e9d18a8e9607403d261c5933bf330abcbeb9bf080794df6a8f",
+    "tests/test_phase_seam_register.py": "06be45bb6597e18dad072cb11789baa2c300a44179c70dae054a10adfef5971c",
+    "tests/test_phase_seam_encoding.py": "f933c3cbafa2238d29a0db29bb2e93ce7b2cfb621529b439a4653aa881ba1019",
+    "tests/test_phase_seam_joint.py": "e0ff847109cfa78a91b0b7766171830a1dc52e12c90a1e90c6a5bcb0235ae409",
+    "tests/test_phase_seam_foundation.py": "b2307143b9cbae80e7ffb63146be68cab105c15c5fdadf8a67048b4994f798c7",
+    "tests/test_native_calculator.py": "1730a1648fec31bcb7023c07e1a8913652ea51782ba554120323f75acaab1024"
+  }
+}

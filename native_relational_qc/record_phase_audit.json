@@ -1,0 +1,207 @@
+{
+  "machine": "x86_64",
+  "process_peak_rss_kib": 196268,
+  "python": "3.12.3",
+  "rows": [
+    {
+      "base": 2,
+      "exact_fourier_law_agrees": true,
+      "full_gates": 28896,
+      "full_peak_branches": 11724,
+      "full_seconds": 7.872,
+      "full_status": "completed",
+      "full_wires": 36,
+      "leaves": 256,
+      "modulus": 141,
+      "multiplier_gates": 76847,
+      "nodes": 255,
+      "peak_support": 46,
+      "precision_bits": 8,
+      "pruned_records": 0,
+      "record_equals_full_register": true,
+      "record_seconds": 11.637,
+      "record_wires": 29,
+      "success_probability": {
+        "convergents_and_doubles": "0.31557217175",
+        "convergents_only": "0.04354965345"
+      },
+      "work_used": 1794504
+    },
+    {
+      "base": 2,
+      "exact_fourier_law_agrees": true,
+      "full_gates": 31065,
+      "full_peak_branches": 14832,
+      "full_seconds": 7.741,
+      "full_status": "completed",
+      "full_wires": 36,
+      "leaves": 256,
+      "modulus": 143,
+      "multiplier_gates": 80744,
+      "nodes": 255,
+      "peak_support": 60,
+      "precision_bits": 8,
+      "pruned_records": 0,
+      "record_equals_full_register": true,
+      "record_seconds": 10.163,
+      "record_wires": 29,
+      "success_probability": {
+        "convergents_and_doubles": "0.06496212605",
+        "convergents_only": "0.00000000000"
+      },
+      "work_used": 1758880
+    },
+    {
+      "base": 2,
+      "exact_fourier_law_agrees": true,
+      "full_gates": 35152,
+      "full_peak_branches": 10048,
+      "full_seconds": 6.764,
+      "full_status": "completed",
+      "full_wires": 36,
+      "leaves": 256,
+      "modulus": 187,
+      "multiplier_gates": 90185,
+      "nodes": 255,
+      "peak_support": 40,
+      "precision_bits": 8,
+      "pruned_records": 0,
+      "record_equals_full_register": true,
+      "record_seconds": 7.42,
+      "record_wires": 29,
+      "success_probability": {
+        "convergents_and_doubles": "0.11673636155",
+        "convergents_only": "0.00000000000"
+      },
+      "work_used": 1065642
+    },
+    {
+      "base": 2,
+      "exact_fourier_law_agrees": true,
+      "full_gates": 36799,
+      "full_peak_branches": 47036,
+      "full_seconds": 43.835,
+      "full_status": "completed",
+      "full_wires": 38,
+      "leaves": 1024,
+      "modulus": 141,
+      "multiplier_gates": 98440,
+      "nodes": 1023,
+      "peak_support": 46,
+      "precision_bits": 10,
+      "pruned_records": 0,
+      "record_equals_full_register": true,
+      "record_seconds": 28.478,
+      "record_wires": 29,
+      "success_probability": {
+        "convergents_and_doubles": "0.67659302105",
+        "convergents_only": "0.23800262265"
+      },
+      "work_used": 2998760
+    },
+    {
+      "base": 2,
+      "exact_fourier_law_agrees": true,
+      "full_gates": 39544,
+      "full_peak_branches": 61424,
+      "full_seconds": 40.462,
+      "full_status": "completed",
+      "full_wires": 38,
+      "leaves": 1024,
+      "modulus": 143,
+      "multiplier_gates": 102967,
+      "nodes": 1023,
+      "peak_support": 60,
+      "precision_bits": 10,
+      "pruned_records": 0,
+      "record_equals_full_register": true,
+      "record_seconds": 29.688,
+      "record_wires": 29,
+      "success_probability": {
+        "convergents_and_doubles": "0.24977348185",
+        "convergents_only": "0.12859349195"
+      },
+      "work_used": 2650138
+    },
+    {
+      "base": 2,
+      "exact_fourier_law_agrees": true,
+      "full_gates": 44847,
+      "full_peak_branches": 40768,
+      "full_seconds": 24.915,
+      "full_status": "completed",
+      "full_wires": 38,
+      "leaves": 1024,
+      "modulus": 187,
+      "multiplier_gates": 115780,
+      "nodes": 1023,
+      "peak_support": 40,
+      "precision_bits": 10,
+      "pruned_records": 0,
+      "record_equals_full_register": true,
+      "record_seconds": 18.737,
+      "record_wires": 29,
+      "success_probability": {
+        "convergents_and_doubles": "0.43054765325",
+        "convergents_only": "0.24511793055"
+      },
+      "work_used": 1477844
+    },
+    {
+      "base": 2,
+      "exact_fourier_law_agrees": true,
+      "leaves": 4096,
+      "modulus": 141,
+      "multiplier_gates": 121107,
+      "nodes": 4095,
+      "peak_support": 46,
+      "precision_bits": 12,
+      "pruned_records": 0,
+      "record_seconds": 448.932,
+      "record_wires": 29,
+      "success_probability": {
+        "convergents_and_doubles": "0.90534533265",
+        "convergents_only": "0.43696377625"
+      },
+      "work_used": 4844914
+    },
+    {
+      "base": 2,
+      "exact_fourier_law_agrees": true,
+      "leaves": 4096,
+      "modulus": 143,
+      "multiplier_gates": 124302,
+      "nodes": 4095,
+      "peak_support": 60,
+      "precision_bits": 12,
+      "pruned_records": 0,
+      "record_seconds": 542.334,
+      "record_wires": 29,
+      "success_probability": {
+        "convergents_and_doubles": "0.36873637265",
+        "convergents_only": "0.23957496495"
+      },
+      "work_used": 4278484
+    },
+    {
+      "base": 2,
+      "exact_fourier_law_agrees": true,
+      "leaves": 4096,
+      "modulus": 187,
+      "multiplier_gates": 141375,
+      "nodes": 4095,
+      "peak_support": 40,
+      "precision_bits": 12,
+      "pruned_records": 0,
+      "record_seconds": 377.123,
+      "record_wires": 29,
+      "success_probability": {
+        "convergents_and_doubles": "0.56758992135",
+        "convergents_only": "0.37114456825"
+      },
+      "work_used": 2358910
+    }
+  ],
+  "schema": "nrqc-record-phase-audit-v1",
+  "scope": "ideal local exact calculation of fixed bases; success is single-record probability, not shots or hardware"
+}

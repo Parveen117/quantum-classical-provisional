@@ -1,0 +1,306 @@
+{
+  "schema": "nrqc-register-family-audit-v1",
+  "author": "Monty",
+  "status": "PARAMETRIC_FAMILY_WITH_WIDER_EXACT_RUNS",
+  "evidence_class": "EXACT_SIMULATION",
+  "tests": {
+    "count": 11,
+    "passed": true,
+    "seconds": 0.5781135630000449,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "design_point": {
+    "banks": 64,
+    "width": 32,
+    "workspace": 8
+  },
+  "plans": [
+    {
+      "banks": 64,
+      "width": 32,
+      "workspace": 8,
+      "data_sites": 2048,
+      "sites": 2056,
+      "chain_edges": 2055,
+      "edges_within_banks": 1984,
+      "edges_between_banks": 63,
+      "edges_within_workspace": 7,
+      "edges_data_to_workspace": 1,
+      "hilbert_dimension_log2": 2056
+    },
+    {
+      "banks": 128,
+      "width": 32,
+      "workspace": 8,
+      "data_sites": 4096,
+      "sites": 4104,
+      "chain_edges": 4103,
+      "edges_within_banks": 3968,
+      "edges_between_banks": 127,
+      "edges_within_workspace": 7,
+      "edges_data_to_workspace": 1,
+      "hilbert_dimension_log2": 4104
+    },
+    {
+      "banks": 256,
+      "width": 32,
+      "workspace": 8,
+      "data_sites": 8192,
+      "sites": 8200,
+      "chain_edges": 8199,
+      "edges_within_banks": 7936,
+      "edges_between_banks": 255,
+      "edges_within_workspace": 7,
+      "edges_data_to_workspace": 1,
+      "hilbert_dimension_log2": 8200
+    },
+    {
+      "banks": 512,
+      "width": 32,
+      "workspace": 8,
+      "data_sites": 16384,
+      "sites": 16392,
+      "chain_edges": 16391,
+      "edges_within_banks": 15872,
+      "edges_between_banks": 511,
+      "edges_within_workspace": 7,
+      "edges_data_to_workspace": 1,
+      "hilbert_dimension_log2": 16392
+    },
+    {
+      "banks": 1024,
+      "width": 32,
+      "workspace": 8,
+      "data_sites": 32768,
+      "sites": 32776,
+      "chain_edges": 32775,
+      "edges_within_banks": 31744,
+      "edges_between_banks": 1023,
+      "edges_within_workspace": 7,
+      "edges_data_to_workspace": 1,
+      "hilbert_dimension_log2": 32776
+    }
+  ],
+  "cost_laws_chi64": [
+    {
+      "sites": 256,
+      "tableau_bits": 262656,
+      "tableau_mib": "513/16384",
+      "ghz_gates": 256,
+      "ghz_schmidt_rank_every_cut": 2,
+      "mps_coefficient_bound": 2097152
+    },
+    {
+      "sites": 2056,
+      "tableau_bits": 16912656,
+      "tableau_mib": "1057041/524288",
+      "ghz_gates": 2056,
+      "ghz_schmidt_rank_every_cut": 2,
+      "mps_coefficient_bound": 16842752
+    },
+    {
+      "sites": 4112,
+      "tableau_bits": 67642400,
+      "tableau_mib": "2113825/262144",
+      "ghz_gates": 4112,
+      "ghz_schmidt_rank_every_cut": 2,
+      "mps_coefficient_bound": 33685504
+    },
+    {
+      "sites": 8224,
+      "tableau_bits": 270553152,
+      "tableau_mib": "4227393/131072",
+      "ghz_gates": 8224,
+      "ghz_schmidt_rank_every_cut": 2,
+      "mps_coefficient_bound": 67371008
+    },
+    {
+      "sites": 16448,
+      "tableau_bits": 1082179712,
+      "tableau_mib": "8454529/65536",
+      "ghz_gates": 16448,
+      "ghz_schmidt_rank_every_cut": 2,
+      "mps_coefficient_bound": 134742016
+    },
+    {
+      "sites": 32896,
+      "tableau_bits": 4328653056,
+      "tableau_mib": "16908801/32768",
+      "ghz_gates": 32896,
+      "ghz_schmidt_rank_every_cut": 2,
+      "mps_coefficient_bound": 269484032
+    }
+  ],
+  "carrier_scaling": {
+    "4": [
+      {
+        "encoding": "single_photon_path",
+        "sites": 4,
+        "photons": 1,
+        "paths_log2": 4,
+        "paths": 16,
+        "scalable": false
+      },
+      {
+        "encoding": "dual_rail",
+        "sites": 4,
+        "photons": 4,
+        "modes": 8,
+        "scalable": true,
+        "two_site_gate": "needs photon-photon interference (HOM-class), not a single-photon MZI"
+      },
+      {
+        "encoding": "banked_path",
+        "sites": 4,
+        "bank_width": 4,
+        "photons": 1,
+        "paths_per_bank": 16,
+        "paths": 16,
+        "scalable": true
+      }
+    ],
+    "32": [
+      {
+        "encoding": "single_photon_path",
+        "sites": 32,
+        "photons": 1,
+        "paths_log2": 32,
+        "paths": 4294967296,
+        "scalable": false
+      },
+      {
+        "encoding": "dual_rail",
+        "sites": 32,
+        "photons": 32,
+        "modes": 64,
+        "scalable": true,
+        "two_site_gate": "needs photon-photon interference (HOM-class), not a single-photon MZI"
+      },
+      {
+        "encoding": "banked_path",
+        "sites": 32,
+        "bank_width": 4,
+        "photons": 8,
+        "paths_per_bank": 16,
+        "paths": 128,
+        "scalable": true
+      }
+    ],
+    "2056": [
+      {
+        "encoding": "single_photon_path",
+        "sites": 2056,
+        "photons": 1,
+        "paths_log2": 2056,
+        "paths": null,
+        "scalable": false
+      },
+      {
+        "encoding": "dual_rail",
+        "sites": 2056,
+        "photons": 2056,
+        "modes": 4112,
+        "scalable": true,
+        "two_site_gate": "needs photon-photon interference (HOM-class), not a single-photon MZI"
+      },
+      {
+        "encoding": "banked_path",
+        "sites": 2056,
+        "bank_width": 4,
+        "photons": 514,
+        "paths_per_bank": 16,
+        "paths": 8224,
+        "scalable": true
+      }
+    ],
+    "32896": [
+      {
+        "encoding": "single_photon_path",
+        "sites": 32896,
+        "photons": 1,
+        "paths_log2": 32896,
+        "paths": null,
+        "scalable": false
+      },
+      {
+        "encoding": "dual_rail",
+        "sites": 32896,
+        "photons": 32896,
+        "modes": 65792,
+        "scalable": true,
+        "two_site_gate": "needs photon-photon interference (HOM-class), not a single-photon MZI"
+      },
+      {
+        "encoding": "banked_path",
+        "sites": 32896,
+        "bank_width": 4,
+        "photons": 8224,
+        "paths_per_bank": 16,
+        "paths": 131584,
+        "scalable": true
+      }
+    ]
+  },
+  "ghz_family_runs": [
+    {
+      "sites": 2056,
+      "family_a_passed": true,
+      "family_a_seconds": 0.015,
+      "bound_used": 2056,
+      "family_b_passed": true,
+      "family_b_seconds": 0.232
+    },
+    {
+      "sites": 4112,
+      "family_a_passed": true,
+      "family_a_seconds": 0.022,
+      "bound_used": 4112,
+      "family_b_passed": true,
+      "family_b_seconds": 0.386
+    },
+    {
+      "sites": 8224,
+      "family_a_passed": true,
+      "family_a_seconds": 0.052,
+      "bound_used": 8224,
+      "family_b_passed": true,
+      "family_b_seconds": 0.706
+    },
+    {
+      "sites": 16448,
+      "family_a_passed": true,
+      "family_a_seconds": 0.219,
+      "bound_used": 16448,
+      "family_b_passed": true,
+      "family_b_seconds": 1.522
+    },
+    {
+      "sites": 32896,
+      "family_a_passed": true,
+      "family_a_seconds": 0.899,
+      "bound_used": 32896,
+      "family_b_passed": true,
+      "family_b_seconds": 3.522
+    }
+  ],
+  "all_runs_passed": true,
+  "default_bound_after_audit": 2056,
+  "boundary": [
+    "2056 is a default declared bound; engines are polynomial in N for the admitted families",
+    "no claim of efficient simulation of arbitrary circuits at any N",
+    "carrier counts are identities, not device budgets; dual-rail needs photon-photon gates"
+  ],
+  "checked_sources_sha256": {
+    "native_relational_qc/register_family.py": "1c7dee12524f0539ef29cf28abcabd45692ed7eb2daf6253ee4e0b3a8682bd54",
+    "native_relational_qc/large_register.py": "c4f542f299be2d010ee063e2b491f58b336961032e31bd826078ba41cbf0274a",
+    "native_relational_qc/pauli_engine.py": "0730c3d138b2feb0261e9c0c5514ddb8d8afbe959efbcbb0b69ffe1923205d67",
+    "native_relational_qc/clifford_frame.py": "1a3ced0002a5571e7cdbbc0abbb219097898e1c8d7cee4680279416240305c08",
+    "native_relational_qc/stabilizer.py": "a21e5bd21f810515c7864198c6f6a2f597448647ecde85ac08ef3b38966df004",
+    "native_relational_qc/clifford_t.py": "0942a9ad3c7cfd2299b261bb3b2f0e2106d99ab1224218289dd63ecd944b2e9a",
+    "tests/test_native_register_family.py": "05e82187bcfbd1fa0454f015476b1b8f88248a0e8d746bc18f702114b482579a",
+    "benchmarks/register_family_audit.py": "f04c53a3e50cafd54eb10092dd6b74bf3a4c70f3831aeba8a6ad18088f921136",
+    "native_relational_qc/REGISTER_FAMILY.md": "6a306d3566fa43772326b3c081f83c2683b1d7ea78e2528febd2d028a3afe049"
+  }
+}

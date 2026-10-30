@@ -1,0 +1,19 @@
+test_bunching_normalisation (test_phase_seam_dual_rail.BosonEngineTests.test_bunching_normalisation) ... ok
+test_encode (test_phase_seam_dual_rail.BosonEngineTests.test_encode) ... ok
+test_guards (test_phase_seam_dual_rail.BosonEngineTests.test_guards) ... ok
+test_single_photon_amplitudes_are_matrix_entries (test_phase_seam_dual_rail.BosonEngineTests.test_single_photon_amplitudes_are_matrix_entries) ... ok
+test_unitarity_preserves_total_probability (test_phase_seam_dual_rail.BosonEngineTests.test_unitarity_preserves_total_probability) ... ok
+test_bell_pairs_are_normalised_four_photon_states (test_phase_seam_dual_rail.FusionTests.test_bell_pairs_are_normalised_four_photon_states) ... ok
+test_distinguishable_photons_keep_success_but_lose_coherence (test_phase_seam_dual_rail.FusionTests.test_distinguishable_photons_keep_success_but_lose_coherence) ... ok
+test_each_click_heralds_ghz_with_known_phase (test_phase_seam_dual_rail.FusionTests.test_each_click_heralds_ghz_with_known_phase) ... ok
+test_success_and_failure_split_one_half (test_phase_seam_dual_rail.FusionTests.test_success_and_failure_split_one_half) ... ok
+test_witness_equals_visibility (test_phase_seam_dual_rail.FusionTests.test_witness_equals_visibility) ... ok
+test_plan_counts_and_route (test_phase_seam_dual_rail.PlanTests.test_plan_counts_and_route) ... ok
+test_unit_matrix_embeds (test_phase_seam_dual_rail.PlanTests.test_unit_matrix_embeds) ... ok
+test_euler_identity_on_the_grid (test_phase_seam_dual_rail.SingleSiteTests.test_euler_identity_on_the_grid) ... ok
+test_hom_from_engine_matches_closed_form (test_phase_seam_dual_rail.SingleSiteTests.test_hom_from_engine_matches_closed_form) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 40.949s
+
+OK

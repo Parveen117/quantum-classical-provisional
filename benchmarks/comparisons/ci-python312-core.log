@@ -1,0 +1,351 @@
+﻿2026-10-30T18:55:16.6005643Z Current runner version: '2.338.0'
+2026-10-30T18:55:16.6042888Z ##[group]Runner Image Provisioner
+2026-10-30T18:55:16.6044551Z Hosted Compute Agent
+2026-10-30T18:55:16.6045638Z Version: 20261021.618
+2026-10-30T18:55:16.6047106Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-30T18:55:16.6048584Z Build Date: 2026-10-21T00:45:21Z
+2026-10-30T18:55:16.6049827Z Worker ID: {fcb47b73-1d92-45af-82ef-a30f6b0fa40e}
+2026-10-30T18:55:16.6051405Z Region: northcentralus
+2026-10-30T18:55:16.6052585Z Cloud: Azure
+2026-10-30T18:55:16.6053549Z ##[endgroup]
+2026-10-30T18:55:16.6056144Z ##[group]Operating System
+2026-10-30T18:55:16.6057632Z Ubuntu
+2026-10-30T18:55:16.6058753Z 26.04.1
+2026-10-30T18:55:16.6059754Z LTS
+2026-10-30T18:55:16.6060777Z ##[endgroup]
+2026-10-30T18:55:16.6061936Z ##[group]Runner Image
+2026-10-30T18:55:16.6063011Z Image: ubuntu-26.04
+2026-10-30T18:55:16.6064132Z Version: 20261025.179.1
+2026-10-30T18:55:16.6066216Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261025.179/images/ubuntu/Ubuntu2604-Readme.md
+2026-10-30T18:55:16.6069339Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261025.179
+2026-10-30T18:55:16.6071312Z ##[endgroup]
+2026-10-30T18:55:16.6073619Z ##[group]GITHUB_TOKEN Permissions
+2026-10-30T18:55:16.6077106Z Contents: read
+2026-10-30T18:55:16.6078211Z Metadata: read
+2026-10-30T18:55:16.6079190Z Packages: read
+2026-10-30T18:55:16.6080208Z ##[endgroup]
+2026-10-30T18:55:16.6083455Z Secret source: Actions
+2026-10-30T18:55:16.6085061Z Cache mode: write
+2026-10-30T18:55:16.6087166Z Prepare workflow directory
+2026-10-30T18:55:16.6589469Z Prepare all required actions
+2026-10-30T18:55:16.6665035Z Getting action download info
+2026-10-30T18:55:16.8843771Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-30T18:55:17.0116136Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-10-30T18:55:17.1901044Z Complete job name: tests (python 3.12, test)
+2026-10-30T18:55:17.2845232Z ##[group]Run actions/checkout@v4
+2026-10-30T18:55:17.2846151Z with:
+2026-10-30T18:55:17.2846919Z   repository: Parveen117/quantum-classical-provisional
+2026-10-30T18:55:17.2850828Z   token: ***
+2026-10-30T18:55:17.2851284Z   ssh-strict: true
+2026-10-30T18:55:17.2851744Z   ssh-user: git
+2026-10-30T18:55:17.2852199Z   persist-credentials: true
+2026-10-30T18:55:17.2852699Z   clean: true
+2026-10-30T18:55:17.2853159Z   sparse-checkout-cone-mode: true
+2026-10-30T18:55:17.2853692Z   fetch-depth: 1
+2026-10-30T18:55:17.2854131Z   fetch-tags: false
+2026-10-30T18:55:17.2854578Z   show-progress: true
+2026-10-30T18:55:17.2855026Z   lfs: false
+2026-10-30T18:55:17.2855442Z   submodules: false
+2026-10-30T18:55:17.2855896Z   set-safe-directory: true
+2026-10-30T18:55:17.2856415Z   allow-unsafe-pr-checkout: false
+2026-10-30T18:55:17.2857345Z ##[endgroup]
+2026-10-30T18:55:17.7657952Z Syncing repository: Parveen117/quantum-classical-provisional
+2026-10-30T18:55:17.7660603Z ##[group]Getting Git version info
+2026-10-30T18:55:17.7662217Z Working directory is '/home/runner/work/quantum-classical-provisional/quantum-classical-provisional'
+2026-10-30T18:55:17.7663746Z [command]/usr/bin/git version
+2026-10-30T18:55:17.7688748Z git version 2.56.0
+2026-10-30T18:55:17.7712548Z ##[endgroup]
+2026-10-30T18:55:17.7730043Z Temporarily overriding HOME='/home/runner/work/_temp/e8d5dd5b-a40f-46c9-9e56-07675d074118' before making global git config changes
+2026-10-30T18:55:17.7739454Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-30T18:55:17.7742708Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/quantum-classical-provisional/quantum-classical-provisional
+2026-10-30T18:55:17.8016122Z Deleting the contents of '/home/runner/work/quantum-classical-provisional/quantum-classical-provisional'
+2026-10-30T18:55:17.8023148Z ##[group]Initializing the repository
+2026-10-30T18:55:17.8029497Z [command]/usr/bin/git init /home/runner/work/quantum-classical-provisional/quantum-classical-provisional
+2026-10-30T18:55:17.8176103Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-30T18:55:17.8178454Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-30T18:55:17.8180284Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-30T18:55:17.8181725Z hint: call:
+2026-10-30T18:55:17.8182511Z hint:
+2026-10-30T18:55:17.8183458Z hint: 	git config --global init.defaultBranch <name>
+2026-10-30T18:55:17.8184695Z hint:
+2026-10-30T18:55:17.8185799Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-30T18:55:17.8187796Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-30T18:55:17.8189267Z hint:
+2026-10-30T18:55:17.8190090Z hint: 	git branch -m <name>
+2026-10-30T18:55:17.8191104Z hint:
+2026-10-30T18:55:17.8192287Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-30T18:55:17.8194798Z Initialized empty Git repository in /home/runner/work/quantum-classical-provisional/quantum-classical-provisional/.git/
+2026-10-30T18:55:17.8206958Z [command]/usr/bin/git remote add origin https://github.com/Parveen117/quantum-classical-provisional
+2026-10-30T18:55:17.8281796Z ##[endgroup]
+2026-10-30T18:55:17.8283710Z ##[group]Disabling automatic garbage collection
+2026-10-30T18:55:17.8285287Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-30T18:55:17.8470997Z ##[endgroup]
+2026-10-30T18:55:17.8472628Z ##[group]Setting up auth
+2026-10-30T18:55:17.8474138Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-30T18:55:17.8512440Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-30T18:55:17.9077676Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-30T18:55:17.9113090Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-30T18:55:17.9389940Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-30T18:55:17.9426274Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-30T18:55:17.9721501Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-30T18:55:17.9876338Z ##[endgroup]
+2026-10-30T18:55:17.9878591Z ##[group]Fetching the repository
+2026-10-30T18:55:17.9889922Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +c1049e75fa432c02186987ea26f1e3dae6580ee3:refs/remotes/pull/7/merge
+2026-10-30T18:55:18.8519497Z From https://github.com/Parveen117/quantum-classical-provisional
+2026-10-30T18:55:18.8521328Z  * [new ref]         c1049e75fa432c02186987ea26f1e3dae6580ee3 -> pull/7/merge
+2026-10-30T18:55:18.8530684Z ##[endgroup]
+2026-10-30T18:55:18.8532726Z ##[group]Determining the checkout info
+2026-10-30T18:55:18.8534868Z ##[endgroup]
+2026-10-30T18:55:18.8539411Z [command]/usr/bin/git sparse-checkout disable
+2026-10-30T18:55:18.8598025Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-30T18:55:18.8627763Z ##[group]Checking out the ref
+2026-10-30T18:55:18.8630019Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/7/merge
+2026-10-30T18:55:18.9451520Z Note: switching to 'refs/remotes/pull/7/merge'.
+2026-10-30T18:55:18.9452513Z
+2026-10-30T18:55:18.9453272Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-30T18:55:18.9454925Z changes and commit them, and you can discard any commits you make in this
+2026-10-30T18:55:18.9456939Z state without impacting any branches by switching back to a branch.
+2026-10-30T18:55:18.9458337Z
+2026-10-30T18:55:18.9459156Z If you want to create a new branch to retain commits you create, you may
+2026-10-30T18:55:18.9460743Z do so (now or later) by using -c with the switch command. Example:
+2026-10-30T18:55:18.9461629Z
+2026-10-30T18:55:18.9462290Z   git switch -c <new-branch-name>
+2026-10-30T18:55:18.9463168Z
+2026-10-30T18:55:18.9463885Z Or undo this operation with:
+2026-10-30T18:55:18.9464720Z
+2026-10-30T18:55:18.9465398Z   git switch -
+2026-10-30T18:55:18.9466175Z
+2026-10-30T18:55:18.9467404Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-30T18:55:18.9468550Z
+2026-10-30T18:55:18.9469529Z HEAD is now at c1049e7 Merge c1bb8e4355ebac90d3246b86117973bbce0afb3a into 1881e8fdaeefffaa64e55ffe700d8fb67370ad60
+2026-10-30T18:55:18.9475523Z ##[endgroup]
+2026-10-30T18:55:18.9520207Z [command]/usr/bin/git log -1 --format=%H
+2026-10-30T18:55:18.9545901Z c1049e75fa432c02186987ea26f1e3dae6580ee3
+2026-10-30T18:55:18.9972907Z ##[group]Run actions/setup-python@v5
+2026-10-30T18:55:18.9974353Z with:
+2026-10-30T18:55:18.9975608Z   python-version: 3.12
+2026-10-30T18:55:18.9977112Z   check-latest: false
+2026-10-30T18:55:18.9983103Z   token: ***
+2026-10-30T18:55:18.9984394Z   update-environment: true
+2026-10-30T18:55:18.9985797Z   allow-prereleases: false
+2026-10-30T18:55:18.9987391Z   freethreaded: false
+2026-10-30T18:55:18.9988777Z ##[endgroup]
+2026-10-30T18:55:19.1393696Z ##[group]Installed versions
+2026-10-30T18:55:19.1517948Z (node:2339) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-30T18:55:19.1520611Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-30T18:55:19.1524944Z Successfully set up CPython (3.12.15)
+2026-10-30T18:55:19.1527539Z ##[endgroup]
+2026-10-30T18:55:19.1781037Z ##[group]Run python -m pip install --upgrade pip setuptools wheel
+2026-10-30T18:55:19.1782348Z [36;1mpython -m pip install --upgrade pip setuptools wheel[0m
+2026-10-30T18:55:19.1783451Z [36;1mpython -m pip install -e ".[test]"[0m
+2026-10-30T18:55:19.1854998Z shell: /usr/bin/bash -e {0}
+2026-10-30T18:55:19.1855928Z env:
+2026-10-30T18:55:19.1857187Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T18:55:19.1858499Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-30T18:55:19.1860493Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T18:55:19.1862250Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T18:55:19.1864029Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T18:55:19.1865804Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-30T18:55:19.1867594Z ##[endgroup]
+2026-10-30T18:55:19.8152579Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (26.2.2)
+2026-10-30T18:55:19.9607167Z Collecting setuptools
+2026-10-30T18:55:19.9836473Z   Downloading setuptools-84.2.1-py3-none-any.whl.metadata (6.6 kB)
+2026-10-30T18:55:20.0162365Z Collecting wheel
+2026-10-30T18:55:20.0200821Z   Downloading wheel-0.48.0-py3-none-any.whl.metadata (2.3 kB)
+2026-10-30T18:55:20.0364480Z Collecting packaging>=24.0 (from wheel)
+2026-10-30T18:55:20.0398431Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-10-30T18:55:20.0465645Z Downloading setuptools-84.2.1-py3-none-any.whl (876 kB)
+2026-10-30T18:55:20.0714879Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 876.3/876.3 kB 45.4 MB/s  0:00:00
+2026-10-30T18:55:20.0749223Z Downloading wheel-0.48.0-py3-none-any.whl (33 kB)
+2026-10-30T18:55:20.0803045Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+2026-10-30T18:55:20.1295226Z Installing collected packages: setuptools, packaging, wheel
+2026-10-30T18:55:20.7288578Z
+2026-10-30T18:55:20.7299189Z Successfully installed packaging-26.3 setuptools-84.2.1 wheel-0.48.0
+2026-10-30T18:55:21.1117570Z Obtaining file:///home/runner/work/quantum-classical-provisional/quantum-classical-provisional
+2026-10-30T18:55:21.1132903Z   Installing build dependencies: started
+2026-10-30T18:55:21.6420517Z   Installing build dependencies: finished with status 'done'
+2026-10-30T18:55:21.6427541Z   Checking if build backend supports build_editable: started
+2026-10-30T18:55:21.9535164Z   Checking if build backend supports build_editable: finished with status 'done'
+2026-10-30T18:55:21.9544568Z   Getting requirements to build editable: started
+2026-10-30T18:55:22.3014220Z   Getting requirements to build editable: finished with status 'done'
+2026-10-30T18:55:22.3024069Z   Preparing editable metadata (pyproject.toml): started
+2026-10-30T18:55:22.5112521Z   Preparing editable metadata (pyproject.toml): finished with status 'done'
+2026-10-30T18:55:22.7562033Z Collecting numpy<3,>=1.26 (from native-relational-qc==0.1.0)
+2026-10-30T18:55:22.7778980Z   Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+2026-10-30T18:55:22.8037611Z Collecting pytest>=8 (from native-relational-qc==0.1.0)
+2026-10-30T18:55:22.8078067Z   Downloading pytest-9.2.0-py3-none-any.whl.metadata (7.9 kB)
+2026-10-30T18:55:22.9283105Z Collecting scipy (from native-relational-qc==0.1.0)
+2026-10-30T18:55:22.9323077Z   Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+2026-10-30T18:55:22.9587680Z Collecting iniconfig>=2 (from pytest>=8->native-relational-qc==0.1.0)
+2026-10-30T18:55:22.9628881Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+2026-10-30T18:55:22.9668049Z Requirement already satisfied: packaging>=24 in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (from pytest>=8->native-relational-qc==0.1.0) (26.3)
+2026-10-30T18:55:22.9753354Z Collecting pluggy<2,>=1.6 (from pytest>=8->native-relational-qc==0.1.0)
+2026-10-30T18:55:22.9788633Z   Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+2026-10-30T18:55:22.9950899Z Collecting pygments>=2.15 (from pytest>=8->native-relational-qc==0.1.0)
+2026-10-30T18:55:22.9985967Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-10-30T18:55:23.0099737Z Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+2026-10-30T18:55:23.1380216Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 140.8 MB/s  0:00:00
+2026-10-30T18:55:23.1423714Z Downloading pytest-9.2.0-py3-none-any.whl (411 kB)
+2026-10-30T18:55:23.1494302Z Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+2026-10-30T18:55:23.1548749Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+2026-10-30T18:55:23.1605211Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-10-30T18:55:23.1682701Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 181.7 MB/s  0:00:00
+2026-10-30T18:55:23.1721015Z Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+2026-10-30T18:55:23.2849215Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 319.2 MB/s  0:00:00
+2026-10-30T18:55:23.3650372Z Building wheels for collected packages: native-relational-qc
+2026-10-30T18:55:23.3658790Z   Building editable for native-relational-qc (pyproject.toml): started
+2026-10-30T18:55:23.6417563Z   Building editable for native-relational-qc (pyproject.toml): finished with status 'done'
+2026-10-30T18:55:23.6425176Z   Created wheel for native-relational-qc: filename=native_relational_qc-0.1.0-0.editable-py3-none-any.whl size=6674 sha256=8918ca805bfae538a4a6962f8fb9e42d677a17e058cb35981bd4c798d590e59f
+2026-10-30T18:55:23.6427640Z   Stored in directory: /tmp/pip-ephem-wheel-cache-nojgjy2p/wheels/98/90/6a/28d6f9c8f2bfeb572fce44fb5466c455e5eaac866817f20a94
+2026-10-30T18:55:23.6445972Z Successfully built native-relational-qc
+2026-10-30T18:55:23.6899305Z Installing collected packages: pygments, pluggy, numpy, iniconfig, scipy, pytest, native-relational-qc
+2026-10-30T18:55:30.9148355Z
+2026-10-30T18:55:30.9165532Z Successfully installed iniconfig-2.3.1 native-relational-qc-0.1.0 numpy-2.5.4 pluggy-1.7.0 pygments-2.21.0 pytest-9.2.0 scipy-1.18.1
+2026-10-30T18:55:30.9924055Z ##[group]Run python -c "import importlib.util; assert importlib.util.find_spec('qiskit') is None"
+2026-10-30T18:55:30.9924972Z [36;1mpython -c "import importlib.util; assert importlib.util.find_spec('qiskit') is None"[0m
+2026-10-30T18:55:30.9957508Z shell: /usr/bin/bash -e {0}
+2026-10-30T18:55:30.9957776Z env:
+2026-10-30T18:55:30.9958050Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T18:55:30.9958507Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-30T18:55:30.9958955Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T18:55:30.9959348Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T18:55:30.9959738Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T18:55:30.9960125Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-30T18:55:30.9960458Z ##[endgroup]
+2026-10-30T18:55:31.0311478Z ##[group]Run python -m pip wheel --no-deps --no-build-isolation . -w dist
+2026-10-30T18:55:31.0312035Z [36;1mpython -m pip wheel --no-deps --no-build-isolation . -w dist[0m
+2026-10-30T18:55:31.0342756Z shell: /usr/bin/bash -e {0}
+2026-10-30T18:55:31.0343010Z env:
+2026-10-30T18:55:31.0343286Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T18:55:31.0343736Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-30T18:55:31.0344176Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T18:55:31.0344568Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T18:55:31.0344963Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T18:55:31.0345358Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-30T18:55:31.0345684Z ##[endgroup]
+2026-10-30T18:55:31.3583087Z Processing ./.
+2026-10-30T18:55:31.3596100Z   Preparing metadata (pyproject.toml): started
+2026-10-30T18:55:31.5774245Z   Preparing metadata (pyproject.toml): finished with status 'done'
+2026-10-30T18:55:31.5818107Z Building wheels for collected packages: native-relational-qc
+2026-10-30T18:55:31.5828798Z   Building wheel for native-relational-qc (pyproject.toml): started
+2026-10-30T18:55:32.3135979Z   Building wheel for native-relational-qc (pyproject.toml): finished with status 'done'
+2026-10-30T18:55:32.3173727Z   Created wheel for native-relational-qc: filename=native_relational_qc-0.1.0-py3-none-any.whl size=1929048 sha256=9e21f8696e0466b30217a63f70c27d7bb0c502b0d55793e92f229efa963cb4fd
+2026-10-30T18:55:32.3175863Z   Stored in directory: /tmp/pip-ephem-wheel-cache-jrr8od9y/wheels/98/90/6a/28d6f9c8f2bfeb572fce44fb5466c455e5eaac866817f20a94
+2026-10-30T18:55:32.3244257Z Successfully built native-relational-qc
+2026-10-30T18:55:32.3642749Z ##[group]Run nrqc check native_relational_qc/calculator_examples/bell.json > /dev/null
+2026-10-30T18:55:32.3643387Z [36;1mnrqc check native_relational_qc/calculator_examples/bell.json > /dev/null[0m
+2026-10-30T18:55:32.3643943Z [36;1mnrqc calculate native_relational_qc/calculator_examples/bell.json > /dev/null[0m
+2026-10-30T18:55:32.3644502Z [36;1mnrqc certify --out rebuilt-photonic-certification.json > /dev/null[0m
+2026-10-30T18:55:32.3674685Z shell: /usr/bin/bash -e {0}
+2026-10-30T18:55:32.3674949Z env:
+2026-10-30T18:55:32.3675224Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T18:55:32.3675684Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-30T18:55:32.3676123Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T18:55:32.3676782Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T18:55:32.3677190Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T18:55:32.3677617Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-30T18:55:32.3677940Z ##[endgroup]
+2026-10-30T18:55:37.7126217Z ##[group]Run python -m pytest -q
+2026-10-30T18:55:37.7126834Z [36;1mpython -m pytest -q[0m
+2026-10-30T18:55:37.7157435Z shell: /usr/bin/bash -e {0}
+2026-10-30T18:55:37.7157688Z env:
+2026-10-30T18:55:37.7158166Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T18:55:37.7158632Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-30T18:55:37.7159081Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T18:55:37.7159477Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T18:55:37.7159861Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T18:55:37.7160241Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-30T18:55:37.7160560Z ##[endgroup]
+2026-10-30T18:56:20.0658145Z s....................................................................... [  6%]
+2026-10-30T18:58:29.4221811Z ............................................................................................s................. [ 16%]
+2026-10-30T18:59:31.6223103Z .........ssss....s....s......................................sssss.....s [ 23%]
+2026-10-30T19:00:27.8371638Z ................ss.............s................................ [ 29%]
+2026-10-30T19:02:23.8732027Z ............................s...............s........s................s. [ 35%]
+2026-10-30T19:03:42.7860351Z .......ss.....s...s.........s....sssssssssssss.................................................................s...............s.. [ 47%]
+2026-10-30T19:05:41.2813602Z ................s....................................................... [ 54%]
+2026-10-30T19:06:05.5544611Z ........................................................................ [ 60%]
+2026-10-30T19:06:34.5057688Z ........................................................................ [ 67%]
+2026-10-30T19:07:22.6021222Z ........................................................................ [ 74%]
+2026-10-30T19:07:39.7895106Z ........................................................................ [ 80%]
+2026-10-30T19:07:57.9045300Z ........................................................................ [ 87%]
+2026-10-30T19:08:25.7023401Z ........................................................................ [ 93%]
+2026-10-30T19:08:38.1921830Z ...............sssssssss..........................................       [100%]
+2026-10-30T19:08:38.1922638Z 1039 passed, 51 skipped, 272 subtests passed in 780.15s (0:13:00)
+2026-10-30T19:08:38.3053655Z ##[group]Run python tools/regenerate_demo_ledger.py --out QUANTUM_NATIVE_BRIDGE_PRO_EVIDENCE/demo-bridge-ledger-current.jsonl
+2026-10-30T19:08:38.3054566Z [36;1mpython tools/regenerate_demo_ledger.py --out QUANTUM_NATIVE_BRIDGE_PRO_EVIDENCE/demo-bridge-ledger-current.jsonl[0m
+2026-10-30T19:08:38.3084570Z shell: /usr/bin/bash -e {0}
+2026-10-30T19:08:38.3084822Z env:
+2026-10-30T19:08:38.3085092Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T19:08:38.3085542Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-30T19:08:38.3085987Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T19:08:38.3086385Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T19:08:38.3087080Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T19:08:38.3087465Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-30T19:08:38.3087785Z ##[endgroup]
+2026-10-30T19:08:38.3683401Z regenerated QUANTUM_NATIVE_BRIDGE_PRO_EVIDENCE/demo-bridge-ledger-current.jsonl with 3 records; verify_chain ok
+2026-10-30T19:08:38.3685938Z {'valid': True, 'records': 3, 'recognized': 1, 'bounded_residue': 0, 'actionable_residue': 2, 'bridge_counts': {'RECOGNITION': 1, 'BOUNDED_RESIDUE': 0, 'ACTIONABLE_RESIDUE': 2}, 'expected_model_counts': {'RECOGNITION': 0, 'BOUNDED_RESIDUE': 0, 'ACTIONABLE_RESIDUE': 0, 'NONE': 3}, 'head_chain_hash': 'a3a01f7873d578a59d218ce055d1acff6b1a646c4e1076000f72a08cface28c6', 'version': '0.4.1-qbridge-pro'}
+2026-10-30T19:08:38.3792717Z ##[group]Run python -m quantum_native_bridge_pro.cli verify \
+2026-10-30T19:08:38.3793190Z [36;1mpython -m quantum_native_bridge_pro.cli verify \[0m
+2026-10-30T19:08:38.3793678Z [36;1m  --ledger QUANTUM_NATIVE_BRIDGE_PRO_EVIDENCE/demo-bridge-ledger-current.jsonl[0m
+2026-10-30T19:08:38.3823615Z shell: /usr/bin/bash -e {0}
+2026-10-30T19:08:38.3823874Z env:
+2026-10-30T19:08:38.3824151Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T19:08:38.3824599Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-30T19:08:38.3825024Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T19:08:38.3825403Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T19:08:38.3825787Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T19:08:38.3826174Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-30T19:08:38.3826726Z ##[endgroup]
+2026-10-30T19:08:38.4401456Z {
+2026-10-30T19:08:38.4401941Z   "actionable_residue": 2,
+2026-10-30T19:08:38.4402372Z   "bounded_residue": 0,
+2026-10-30T19:08:38.4402732Z   "bridge_counts": {
+2026-10-30T19:08:38.4403096Z     "ACTIONABLE_RESIDUE": 2,
+2026-10-30T19:08:38.4403476Z     "BOUNDED_RESIDUE": 0,
+2026-10-30T19:08:38.4403841Z     "RECOGNITION": 1
+2026-10-30T19:08:38.4404150Z   },
+2026-10-30T19:08:38.4404449Z   "expected_model_counts": {
+2026-10-30T19:08:38.4404834Z     "ACTIONABLE_RESIDUE": 0,
+2026-10-30T19:08:38.4405221Z     "BOUNDED_RESIDUE": 0,
+2026-10-30T19:08:38.4405558Z     "NONE": 3,
+2026-10-30T19:08:38.4405876Z     "RECOGNITION": 0
+2026-10-30T19:08:38.4406223Z   },
+2026-10-30T19:08:38.4407045Z   "head_chain_hash": "a3a01f7873d578a59d218ce055d1acff6b1a646c4e1076000f72a08cface28c6",
+2026-10-30T19:08:38.4407874Z   "recognized": 1,
+2026-10-30T19:08:38.4408225Z   "records": 3,
+2026-10-30T19:08:38.4408566Z   "valid": true,
+2026-10-30T19:08:38.4408928Z   "version": "0.4.1-qbridge-pro"
+2026-10-30T19:08:38.4409339Z }
+2026-10-30T19:08:38.4526917Z ##[group]Run python -m quantum_native_bridge_pro.cli certificate \
+2026-10-30T19:08:38.4527911Z [36;1mpython -m quantum_native_bridge_pro.cli certificate \[0m
+2026-10-30T19:08:38.4528870Z [36;1m  --ledger QUANTUM_NATIVE_BRIDGE_PRO_EVIDENCE/demo-bridge-ledger-current.jsonl \[0m
+2026-10-30T19:08:38.4529819Z [36;1m  --out rebuilt-quantum-bridge-certificate.json[0m
+2026-10-30T19:08:38.4574089Z shell: /usr/bin/bash -e {0}
+2026-10-30T19:08:38.4574529Z env:
+2026-10-30T19:08:38.4575000Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T19:08:38.4575829Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-30T19:08:38.4576936Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T19:08:38.4577655Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T19:08:38.4578307Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-30T19:08:38.4578930Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-30T19:08:38.4579565Z ##[endgroup]
+2026-10-30T19:08:38.5155063Z rebuilt-quantum-bridge-certificate.json
+2026-10-30T19:08:38.5335739Z Post job cleanup.
+2026-10-30T19:08:38.6687216Z (node:2768) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-30T19:08:38.6688742Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-30T19:08:38.6903476Z Post job cleanup.
+2026-10-30T19:08:38.7938869Z [command]/usr/bin/git version
+2026-10-30T19:08:38.7987314Z git version 2.56.0
+2026-10-30T19:08:38.8028804Z Temporarily overriding HOME='/home/runner/work/_temp/6434be86-e33f-4c28-ad54-3f2b9e32d2dc' before making global git config changes
+2026-10-30T19:08:38.8030262Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-30T19:08:38.8037701Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/quantum-classical-provisional/quantum-classical-provisional
+2026-10-30T19:08:38.8078457Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-30T19:08:38.8115747Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-30T19:08:38.8453228Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-30T19:08:38.8478214Z http.https://github.com/.extraheader
+2026-10-30T19:08:38.8489461Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-30T19:08:38.8530239Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-30T19:08:38.8856352Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-30T19:08:38.8892949Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-30T19:08:38.9344291Z Cleaning up orphan processes
+2026-10-30T19:08:38.9807341Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

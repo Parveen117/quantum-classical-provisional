@@ -2,6 +2,25 @@
 
 > **Research record:** [Dated snapshot, content hashes and archive links](RESEARCH_PROVENANCE.md) · [Canonical repository governance](GOVERNANCE.md). Cite the exact version used.
 
+The integrated **Native Relational Quantum Calculator** provides an installed
+`nrqc` command, a NumPy-only core, optional Qiskit interoperability, exact dyadic
+phases and model-ledger certification. Start with the single
+[backend capability table](native_relational_qc/README.md#backend-capabilities),
+[retained benchmark comparisons](native_relational_qc/BENCHMARKS.md) and
+[integration status](docs/CALCULATOR_INTEGRATION.md).
+
+```bash
+pip install .
+nrqc check native_relational_qc/calculator_examples/bell.json
+nrqc calculate native_relational_qc/calculator_examples/bell.json
+nrqc certify
+```
+
+[Photonic research route](phase_seam_foundation/README.md) ·
+[Self-learning and observation](native_relational_qc/SELF_LEARNING.md) ·
+[Historical development notes](docs/CALCULATOR_DEVELOPMENT_HISTORY.md).
+Current validation is recorded by CI and retained test logs; older numerical
+results remain scoped to their named audits.
 
 ## Purpose
 
@@ -399,3 +418,4 @@ Recognition framework to the IBM ancilla-extraction shots (exact ℚ):
 
 Pinned certificate SHA-256: see `EXPECTED_THEOREM_BINDING_HW.sha256`.
 Boundary: finite-theorem consequences on one hardware round; not RH/K₀/threshold/FT.
+

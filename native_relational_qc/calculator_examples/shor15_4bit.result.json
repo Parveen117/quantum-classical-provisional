@@ -1,0 +1,1588 @@
+{
+  "assessment": {
+    "exact_fourier_law_agrees": true,
+    "policies": {
+      "convergents_and_doubles": {
+        "exact_success_probability": {
+          "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+          "coefficients": [
+            "3/4",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "readings": [
+          {
+            "attempts": [],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "1/4",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 0,
+            "status": "no_information"
+          },
+          {
+            "attempts": [],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 1,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 8,
+                "denominator": 8,
+                "gcd_minus": 15,
+                "gcd_plus": 1,
+                "half_power": 1,
+                "multiplier": 1,
+                "period_verified": true
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 2,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 5,
+                "denominator": 5,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 10,
+                "denominator": 5,
+                "multiplier": 2,
+                "period_verified": false
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 3,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 4,
+                "denominator": 4,
+                "gcd_minus": 3,
+                "gcd_plus": 5,
+                "half_power": 4,
+                "multiplier": 1,
+                "period_verified": true
+              }
+            ],
+            "factors": [
+              3,
+              5
+            ],
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "1/4",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 4,
+            "status": "factored"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 3,
+                "denominator": 3,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 6,
+                "denominator": 3,
+                "multiplier": 2,
+                "period_verified": false
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 5,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 2,
+                "denominator": 2,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 4,
+                "denominator": 2,
+                "gcd_minus": 3,
+                "gcd_plus": 5,
+                "half_power": 4,
+                "multiplier": 2,
+                "period_verified": true
+              }
+            ],
+            "factors": [
+              3,
+              5
+            ],
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 6,
+            "status": "factored"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 2,
+                "denominator": 2,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 4,
+                "denominator": 2,
+                "gcd_minus": 3,
+                "gcd_plus": 5,
+                "half_power": 4,
+                "multiplier": 2,
+                "period_verified": true
+              }
+            ],
+            "factors": [
+              3,
+              5
+            ],
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 7,
+            "status": "factored"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 2,
+                "denominator": 2,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 4,
+                "denominator": 2,
+                "gcd_minus": 3,
+                "gcd_plus": 5,
+                "half_power": 4,
+                "multiplier": 2,
+                "period_verified": true
+              }
+            ],
+            "factors": [
+              3,
+              5
+            ],
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "1/4",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 8,
+            "status": "factored"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 1,
+                "denominator": 1,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 2,
+                "denominator": 1,
+                "multiplier": 2,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 4,
+                "denominator": 2,
+                "gcd_minus": 3,
+                "gcd_plus": 5,
+                "half_power": 4,
+                "multiplier": 2,
+                "period_verified": true
+              }
+            ],
+            "factors": [
+              3,
+              5
+            ],
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 9,
+            "status": "factored"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 1,
+                "denominator": 1,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 2,
+                "denominator": 1,
+                "multiplier": 2,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 4,
+                "denominator": 2,
+                "gcd_minus": 3,
+                "gcd_plus": 5,
+                "half_power": 4,
+                "multiplier": 2,
+                "period_verified": true
+              }
+            ],
+            "factors": [
+              3,
+              5
+            ],
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 10,
+            "status": "factored"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 1,
+                "denominator": 1,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 2,
+                "denominator": 1,
+                "multiplier": 2,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 3,
+                "denominator": 3,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 6,
+                "denominator": 3,
+                "multiplier": 2,
+                "period_verified": false
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 11,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 1,
+                "denominator": 1,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 2,
+                "denominator": 1,
+                "multiplier": 2,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 4,
+                "denominator": 4,
+                "gcd_minus": 3,
+                "gcd_plus": 5,
+                "half_power": 4,
+                "multiplier": 1,
+                "period_verified": true
+              }
+            ],
+            "factors": [
+              3,
+              5
+            ],
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "1/4",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 12,
+            "status": "factored"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 1,
+                "denominator": 1,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 2,
+                "denominator": 1,
+                "multiplier": 2,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 5,
+                "denominator": 5,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 10,
+                "denominator": 5,
+                "multiplier": 2,
+                "period_verified": false
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 13,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 1,
+                "denominator": 1,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 2,
+                "denominator": 1,
+                "multiplier": 2,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 8,
+                "denominator": 8,
+                "gcd_minus": 15,
+                "gcd_plus": 1,
+                "half_power": 1,
+                "multiplier": 1,
+                "period_verified": true
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 14,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 1,
+                "denominator": 1,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 2,
+                "denominator": 1,
+                "multiplier": 2,
+                "period_verified": false
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 15,
+            "status": "no_nontrivial_factor"
+          }
+        ]
+      },
+      "convergents_only": {
+        "exact_success_probability": {
+          "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+          "coefficients": [
+            "1/2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "readings": [
+          {
+            "attempts": [],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "1/4",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 0,
+            "status": "no_information"
+          },
+          {
+            "attempts": [],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 1,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 8,
+                "denominator": 8,
+                "gcd_minus": 15,
+                "gcd_plus": 1,
+                "half_power": 1,
+                "multiplier": 1,
+                "period_verified": true
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 2,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 5,
+                "denominator": 5,
+                "multiplier": 1,
+                "period_verified": false
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 3,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 4,
+                "denominator": 4,
+                "gcd_minus": 3,
+                "gcd_plus": 5,
+                "half_power": 4,
+                "multiplier": 1,
+                "period_verified": true
+              }
+            ],
+            "factors": [
+              3,
+              5
+            ],
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "1/4",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 4,
+            "status": "factored"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 3,
+                "denominator": 3,
+                "multiplier": 1,
+                "period_verified": false
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 5,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 2,
+                "denominator": 2,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 3,
+                "denominator": 3,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 8,
+                "denominator": 8,
+                "gcd_minus": 15,
+                "gcd_plus": 1,
+                "half_power": 1,
+                "multiplier": 1,
+                "period_verified": true
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 6,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 2,
+                "denominator": 2,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 7,
+                "denominator": 7,
+                "multiplier": 1,
+                "period_verified": false
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 7,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 2,
+                "denominator": 2,
+                "multiplier": 1,
+                "period_verified": false
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "1/4",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 8,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 1,
+                "denominator": 1,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 2,
+                "denominator": 2,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 7,
+                "denominator": 7,
+                "multiplier": 1,
+                "period_verified": false
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 9,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 1,
+                "denominator": 1,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 2,
+                "denominator": 2,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 3,
+                "denominator": 3,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 8,
+                "denominator": 8,
+                "gcd_minus": 15,
+                "gcd_plus": 1,
+                "half_power": 1,
+                "multiplier": 1,
+                "period_verified": true
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 10,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 1,
+                "denominator": 1,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 3,
+                "denominator": 3,
+                "multiplier": 1,
+                "period_verified": false
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 11,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 1,
+                "denominator": 1,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 4,
+                "denominator": 4,
+                "gcd_minus": 3,
+                "gcd_plus": 5,
+                "half_power": 4,
+                "multiplier": 1,
+                "period_verified": true
+              }
+            ],
+            "factors": [
+              3,
+              5
+            ],
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "1/4",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 12,
+            "status": "factored"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 1,
+                "denominator": 1,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 5,
+                "denominator": 5,
+                "multiplier": 1,
+                "period_verified": false
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 13,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 1,
+                "denominator": 1,
+                "multiplier": 1,
+                "period_verified": false
+              },
+              {
+                "candidate_period": 8,
+                "denominator": 8,
+                "gcd_minus": 15,
+                "gcd_plus": 1,
+                "half_power": 1,
+                "multiplier": 1,
+                "period_verified": true
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 14,
+            "status": "no_nontrivial_factor"
+          },
+          {
+            "attempts": [
+              {
+                "candidate_period": 1,
+                "denominator": 1,
+                "multiplier": 1,
+                "period_verified": false
+              }
+            ],
+            "factors": null,
+            "probability": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "reading": 15,
+            "status": "no_nontrivial_factor"
+          }
+        ]
+      }
+    },
+    "status": "verified",
+    "success_interpretation": "ideal single-readout probability for this fixed base and low-precision circuit; no hardware shots"
+  },
+  "calculation": {
+    "answers": [
+      {
+        "algebraically_exact": true,
+        "bitstring_qubits_left_to_right": [
+          3,
+          2,
+          1,
+          0
+        ],
+        "execution_seconds": 0.0049370029955753125,
+        "id": "phase",
+        "kind": "distribution",
+        "normalization": {
+          "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+          "coefficients": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        "probabilities": {
+          "0000": {
+            "decimal": "0.2500000000000",
+            "decimal_enclosure": {
+              "lower": "0.250000000000",
+              "maximum_absolute_display_error": "0",
+              "method": "nested integer-square-root bounds and outward rational rounding",
+              "upper": "0.250000000000"
+            },
+            "exact": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "1/4",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "expression": "rational coefficients in the declared zeta_16 basis"
+          },
+          "0001": {
+            "decimal": "0.0000000000000",
+            "decimal_enclosure": {
+              "lower": "0.000000000000",
+              "maximum_absolute_display_error": "0",
+              "method": "nested integer-square-root bounds and outward rational rounding",
+              "upper": "0.000000000000"
+            },
+            "exact": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "expression": "rational coefficients in the declared zeta_16 basis"
+          },
+          "0010": {
+            "decimal": "0.0000000000000",
+            "decimal_enclosure": {
+              "lower": "0.000000000000",
+              "maximum_absolute_display_error": "0",
+              "method": "nested integer-square-root bounds and outward rational rounding",
+              "upper": "0.000000000000"
+            },
+            "exact": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "expression": "rational coefficients in the declared zeta_16 basis"
+          },
+          "0011": {
+            "decimal": "0.0000000000000",
+            "decimal_enclosure": {
+              "lower": "0.000000000000",
+              "maximum_absolute_display_error": "0",
+              "method": "nested integer-square-root bounds and outward rational rounding",
+              "upper": "0.000000000000"
+            },
+            "exact": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "expression": "rational coefficients in the declared zeta_16 basis"
+          },
+          "0100": {
+            "decimal": "0.2500000000000",
+            "decimal_enclosure": {
+              "lower": "0.250000000000",
+              "maximum_absolute_display_error": "0",
+              "method": "nested integer-square-root bounds and outward rational rounding",
+              "upper": "0.250000000000"
+            },
+            "exact": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "1/4",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "expression": "rational coefficients in the declared zeta_16 basis"
+          },
+          "0101": {
+            "decimal": "0.0000000000000",
+            "decimal_enclosure": {
+              "lower": "0.000000000000",
+              "maximum_absolute_display_error": "0",
+              "method": "nested integer-square-root bounds and outward rational rounding",
+              "upper": "0.000000000000"
+            },
+            "exact": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "expression": "rational coefficients in the declared zeta_16 basis"
+          },
+          "0110": {
+            "decimal": "0.0000000000000",
+            "decimal_enclosure": {
+              "lower": "0.000000000000",
+              "maximum_absolute_display_error": "0",
+              "method": "nested integer-square-root bounds and outward rational rounding",
+              "upper": "0.000000000000"
+            },
+            "exact": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "expression": "rational coefficients in the declared zeta_16 basis"
+          },
+          "0111": {
+            "decimal": "0.0000000000000",
+            "decimal_enclosure": {
+              "lower": "0.000000000000",
+              "maximum_absolute_display_error": "0",
+              "method": "nested integer-square-root bounds and outward rational rounding",
+              "upper": "0.000000000000"
+            },
+            "exact": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "expression": "rational coefficients in the declared zeta_16 basis"
+          },
+          "1000": {
+            "decimal": "0.2500000000000",
+            "decimal_enclosure": {
+              "lower": "0.250000000000",
+              "maximum_absolute_display_error": "0",
+              "method": "nested integer-square-root bounds and outward rational rounding",
+              "upper": "0.250000000000"
+            },
+            "exact": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "1/4",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "expression": "rational coefficients in the declared zeta_16 basis"
+          },
+          "1001": {
+            "decimal": "0.0000000000000",
+            "decimal_enclosure": {
+              "lower": "0.000000000000",
+              "maximum_absolute_display_error": "0",
+              "method": "nested integer-square-root bounds and outward rational rounding",
+              "upper": "0.000000000000"
+            },
+            "exact": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "expression": "rational coefficients in the declared zeta_16 basis"
+          },
+          "1010": {
+            "decimal": "0.0000000000000",
+            "decimal_enclosure": {
+              "lower": "0.000000000000",
+              "maximum_absolute_display_error": "0",
+              "method": "nested integer-square-root bounds and outward rational rounding",
+              "upper": "0.000000000000"
+            },
+            "exact": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "expression": "rational coefficients in the declared zeta_16 basis"
+          },
+          "1011": {
+            "decimal": "0.0000000000000",
+            "decimal_enclosure": {
+              "lower": "0.000000000000",
+              "maximum_absolute_display_error": "0",
+              "method": "nested integer-square-root bounds and outward rational rounding",
+              "upper": "0.000000000000"
+            },
+            "exact": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "expression": "rational coefficients in the declared zeta_16 basis"
+          },
+          "1100": {
+            "decimal": "0.2500000000000",
+            "decimal_enclosure": {
+              "lower": "0.250000000000",
+              "maximum_absolute_display_error": "0",
+              "method": "nested integer-square-root bounds and outward rational rounding",
+              "upper": "0.250000000000"
+            },
+            "exact": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "1/4",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "expression": "rational coefficients in the declared zeta_16 basis"
+          },
+          "1101": {
+            "decimal": "0.0000000000000",
+            "decimal_enclosure": {
+              "lower": "0.000000000000",
+              "maximum_absolute_display_error": "0",
+              "method": "nested integer-square-root bounds and outward rational rounding",
+              "upper": "0.000000000000"
+            },
+            "exact": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "expression": "rational coefficients in the declared zeta_16 basis"
+          },
+          "1110": {
+            "decimal": "0.0000000000000",
+            "decimal_enclosure": {
+              "lower": "0.000000000000",
+              "maximum_absolute_display_error": "0",
+              "method": "nested integer-square-root bounds and outward rational rounding",
+              "upper": "0.000000000000"
+            },
+            "exact": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "expression": "rational coefficients in the declared zeta_16 basis"
+          },
+          "1111": {
+            "decimal": "0.0000000000000",
+            "decimal_enclosure": {
+              "lower": "0.000000000000",
+              "maximum_absolute_display_error": "0",
+              "method": "nested integer-square-root bounds and outward rational rounding",
+              "upper": "0.000000000000"
+            },
+            "exact": {
+              "basis": "1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)",
+              "coefficients": [
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0",
+                "0"
+              ]
+            },
+            "expression": "rational coefficients in the declared zeta_16 basis"
+          }
+        },
+        "status": "completed"
+      }
+    ],
+    "backend": "cyclotomic",
+    "circuit_sha256": "6afb3d2f18bf0c2be4fc5aef697d1008a62f1393f723744802b52c3b90fd514d",
+    "evidence_class": "LOCAL_IDEAL_CALCULATION",
+    "execution_seconds": 0.18465407400071854,
+    "gates": 174,
+    "hardware_job_id": null,
+    "input_state": "all_zero",
+    "limits_per_batch": {
+      "max_branches": 4096,
+      "max_coefficient_bits": 4096,
+      "max_work": 10000000
+    },
+    "n_qubits": 9,
+    "peak_worker_rss_bytes": 24616960,
+    "peak_worker_rss_source": "Linux /proc/self/status VmHWM, including imports/setup",
+    "preparation_seconds": 0.17971119299909333,
+    "request_sha256": "053c61a738effae0dc0040bddbdbc49166bf129657f255d2ae22ce9fbc850525",
+    "schema": "nrqc-calculator-result-v1",
+    "statistics": {
+      "backend": "cyclotomic",
+      "budget_scope": "whole batch including preparation and all readouts",
+      "dense_statevector_constructed": false,
+      "field_products": 2634,
+      "field_sums": 280,
+      "gate_visits": 3217,
+      "max_coefficient_bits": 5,
+      "peak_branches": 32,
+      "preparation_count": 1,
+      "readout_visits": 16,
+      "representation": "sparse computational-basis amplitudes in Q(zeta_16)",
+      "truncated_amplitudes": 0,
+      "work_definition": "one unit per gate, amplitude/readout visit, field product or field sum",
+      "work_used": 6147
+    },
+    "status": "completed",
+    "timeout_seconds": 20,
+    "wall_seconds": 0.29819493999821134
+  },
+  "program": {
+    "base": 2,
+    "controls_lsb_first": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "factors_or_order_supplied": false,
+    "gate_counts": {
+      "cp16dg": 1,
+      "cx": 70,
+      "h": 26,
+      "swap": 2,
+      "t": 39,
+      "tdg": 35,
+      "x": 1
+    },
+    "inverse_qft": true,
+    "modulus": 15,
+    "n_qubits": 9,
+    "oracle": "rotation15",
+    "oracle_lowered_gates": 86,
+    "oracle_scaling": "special N=15 controlled cyclic bit rotations on the full work register",
+    "precision_bits": 4,
+    "scope": "small exact order-finding demonstration; low precision has no general Shor success guarantee",
+    "scratch": [
+      8
+    ],
+    "scratch_postcondition": "all zero",
+    "scratch_precondition": "all zero",
+    "total_gates": 174,
+    "work_lsb_first": [
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "provenance": "Retained first cyclotomic repetition from phase_results.json; no separate timing run."
+}

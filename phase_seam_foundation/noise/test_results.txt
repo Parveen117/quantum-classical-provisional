@@ -1,0 +1,13 @@
+test_controls (test_phase_seam_cluster_noise.ControlAndGradeTests.test_controls) ... ok
+test_grade_fail_closed (test_phase_seam_cluster_noise.ControlAndGradeTests.test_grade_fail_closed) ... ok
+test_clean_run_equals_circuit_and_n3 (test_phase_seam_cluster_noise.LemmaTests.test_clean_run_equals_circuit_and_n3) ... ok
+test_merge_lemma_n1 (test_phase_seam_cluster_noise.LemmaTests.test_merge_lemma_n1) ... ok
+test_reduction_lemma_n2 (test_phase_seam_cluster_noise.LemmaTests.test_reduction_lemma_n2) ... ok
+test_source_map (test_phase_seam_cluster_noise.ResponseTests.test_source_map) ... ok
+test_theorem_n_bound (test_phase_seam_cluster_noise.ResponseTests.test_theorem_n_bound) ... ok
+test_xor_response_is_binary_parity (test_phase_seam_cluster_noise.ResponseTests.test_xor_response_is_binary_parity) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 85.863s
+
+OK

@@ -1,0 +1,221 @@
+{
+  "schema": "native-photonic-exchange-netlist-v1",
+  "author": "Monty",
+  "status": "DESIGN_ONLY",
+  "encoding": {
+    "pair_sum": 0,
+    "reference": 0,
+    "path": "u*L+m; target=a+u; reservoir=q-a-u (mod L)",
+    "fixed_spectator_modes": "two other native modes fixed at zero"
+  },
+  "modes": [
+    {
+      "path": 0,
+      "target": 0,
+      "reservoir": 0,
+      "pointer": 0
+    },
+    {
+      "path": 1,
+      "target": 0,
+      "reservoir": 0,
+      "pointer": 1
+    },
+    {
+      "path": 2,
+      "target": 0,
+      "reservoir": 0,
+      "pointer": 2
+    },
+    {
+      "path": 3,
+      "target": 0,
+      "reservoir": 0,
+      "pointer": 3
+    },
+    {
+      "path": 4,
+      "target": 1,
+      "reservoir": 3,
+      "pointer": 0
+    },
+    {
+      "path": 5,
+      "target": 1,
+      "reservoir": 3,
+      "pointer": 1
+    },
+    {
+      "path": 6,
+      "target": 1,
+      "reservoir": 3,
+      "pointer": 2
+    },
+    {
+      "path": 7,
+      "target": 1,
+      "reservoir": 3,
+      "pointer": 3
+    },
+    {
+      "path": 8,
+      "target": 2,
+      "reservoir": 2,
+      "pointer": 0
+    },
+    {
+      "path": 9,
+      "target": 2,
+      "reservoir": 2,
+      "pointer": 1
+    },
+    {
+      "path": 10,
+      "target": 2,
+      "reservoir": 2,
+      "pointer": 2
+    },
+    {
+      "path": 11,
+      "target": 2,
+      "reservoir": 2,
+      "pointer": 3
+    },
+    {
+      "path": 12,
+      "target": 3,
+      "reservoir": 1,
+      "pointer": 0
+    },
+    {
+      "path": 13,
+      "target": 3,
+      "reservoir": 1,
+      "pointer": 1
+    },
+    {
+      "path": 14,
+      "target": 3,
+      "reservoir": 1,
+      "pointer": 2
+    },
+    {
+      "path": 15,
+      "target": 3,
+      "reservoir": 1,
+      "pointer": 3
+    }
+  ],
+  "exchange_blocks": [
+    {
+      "id": "exchange_0",
+      "ports": [
+        1,
+        4
+      ],
+      "transfer": "H diag(1,exp(-i*theta)) H; calibrated Hadamard port convention",
+      "variable_phase_radians": "-theta",
+      "additional_port_phase_calibration_required": true
+    },
+    {
+      "id": "exchange_1",
+      "ports": [
+        2,
+        8
+      ],
+      "transfer": "H diag(1,exp(-i*theta)) H; calibrated Hadamard port convention",
+      "variable_phase_radians": "-theta",
+      "additional_port_phase_calibration_required": true
+    },
+    {
+      "id": "exchange_2",
+      "ports": [
+        3,
+        12
+      ],
+      "transfer": "H diag(1,exp(-i*theta)) H; calibrated Hadamard port convention",
+      "variable_phase_radians": "-theta",
+      "additional_port_phase_calibration_required": true
+    },
+    {
+      "id": "exchange_3",
+      "ports": [
+        6,
+        9
+      ],
+      "transfer": "H diag(1,exp(-i*theta)) H; calibrated Hadamard port convention",
+      "variable_phase_radians": "-theta",
+      "additional_port_phase_calibration_required": true
+    },
+    {
+      "id": "exchange_4",
+      "ports": [
+        7,
+        13
+      ],
+      "transfer": "H diag(1,exp(-i*theta)) H; calibrated Hadamard port convention",
+      "variable_phase_radians": "-theta",
+      "additional_port_phase_calibration_required": true
+    },
+    {
+      "id": "exchange_5",
+      "ports": [
+        11,
+        14
+      ],
+      "transfer": "H diag(1,exp(-i*theta)) H; calibrated Hadamard port convention",
+      "variable_phase_radians": "-theta",
+      "additional_port_phase_calibration_required": true
+    }
+  ],
+  "bypass_ports": [
+    0,
+    5,
+    10,
+    15
+  ],
+  "guard_ports": [
+    16
+  ],
+  "guard_contract": "outside encoded path space; no independent native closure label assigned",
+  "resources": {
+    "grid": 4,
+    "signal_photons_in_code": 1,
+    "independent_data_label_bits": 2,
+    "retained_pointer_label_bits": 2,
+    "core_optical_paths": 16,
+    "monitored_guard_paths": 1,
+    "total_layout_paths": 17,
+    "exchange_interferometers": 6,
+    "balanced_couplers_in_exchange_core": 12,
+    "variable_differential_phases": 6,
+    "fixed_bypass_paths": 4,
+    "independent_physical_qubits_claim": false,
+    "physical_device_built": false,
+    "excluded_from_core_count": [
+      "photon source and herald channel",
+      "input routing and coherent preparation",
+      "phase trims and stabilization",
+      "output analysis, detectors and time tagging",
+      "guard-injection test coupler",
+      "second pass or second bank for recovery tests"
+    ],
+    "scaling": "L**2 paths for this restricted pair plus one pointer; full fixed four-mode sector plus one pointer needs L**4"
+  },
+  "measurements": null,
+  "engineering_choice": {
+    "carrier": "single photon in Si3N4 waveguide paths",
+    "nominal_wavelength_nm": 1550,
+    "source": "external heralded SPDC photon-pair source",
+    "readout": "SNSPDs and time tagging",
+    "guard_test": "physically bypassed or removed in normal operation"
+  },
+  "physical_parameters": {
+    "measured_wavelength_nm": null,
+    "coupler_length_um": null,
+    "waveguide_cross_section_nm": null,
+    "heater_voltage_map": null,
+    "loss_and_crosstalk": null
+  },
+  "release_boundary": "logical optical netlist, not foundry layout or fabrication-ready GDS"
+}

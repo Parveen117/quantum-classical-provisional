@@ -1,0 +1,915 @@
+{
+  "schema": "native-photonic-observer-audit-v1",
+  "author": "Monty",
+  "status": "IDEAL_TARGET_AND_CONDITIONAL_UNCERTAINTY_CHECKS",
+  "python_version": "3.12.14",
+  "tests": {
+    "count": 26,
+    "passed": true,
+    "seconds": 58.951725027000066,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "integration": {
+    "status": "PASSED",
+    "source": {
+      "repository": "Parveen117/EMK-Tensor-Cell-Devices",
+      "commit": "a116985f667e258696334be8a6b07f85879eb1c4",
+      "git_blobs": {
+        "seam_antenna.py": "d91f704ae7a3ca9c66183eb4e81a4cd2e37e2062",
+        "robust_faithfulness.py": "d47765b99f4c5d89e0368c53435096218264b94e"
+      }
+    },
+    "numpy_version": "2.3.5",
+    "cross_check_count": 27,
+    "cross_checks": [
+      {
+        "theta_pi_over_32": 0,
+        "family": "basis",
+        "target": "exchange_angle",
+        "faithful": false,
+        "blind_dimension": 1
+      },
+      {
+        "theta_pi_over_32": 0,
+        "family": "basis",
+        "target": "relative_phases",
+        "faithful": false,
+        "blind_dimension": 4
+      },
+      {
+        "theta_pi_over_32": 0,
+        "family": "basis",
+        "target": "absolute_reference",
+        "faithful": false,
+        "blind_dimension": 1
+      },
+      {
+        "theta_pi_over_32": 0,
+        "family": "local",
+        "target": "exchange_angle",
+        "faithful": true,
+        "blind_dimension": 0
+      },
+      {
+        "theta_pi_over_32": 0,
+        "family": "local",
+        "target": "relative_phases",
+        "faithful": false,
+        "blind_dimension": 2
+      },
+      {
+        "theta_pi_over_32": 0,
+        "family": "local",
+        "target": "absolute_reference",
+        "faithful": false,
+        "blind_dimension": 1
+      },
+      {
+        "theta_pi_over_32": 0,
+        "family": "reference",
+        "target": "exchange_angle",
+        "faithful": true,
+        "blind_dimension": 0
+      },
+      {
+        "theta_pi_over_32": 0,
+        "family": "reference",
+        "target": "relative_phases",
+        "faithful": false,
+        "blind_dimension": 1
+      },
+      {
+        "theta_pi_over_32": 0,
+        "family": "reference",
+        "target": "absolute_reference",
+        "faithful": false,
+        "blind_dimension": 1
+      },
+      {
+        "theta_pi_over_32": 16,
+        "family": "basis",
+        "target": "exchange_angle",
+        "faithful": true,
+        "blind_dimension": 0
+      },
+      {
+        "theta_pi_over_32": 16,
+        "family": "basis",
+        "target": "relative_phases",
+        "faithful": false,
+        "blind_dimension": 3
+      },
+      {
+        "theta_pi_over_32": 16,
+        "family": "basis",
+        "target": "absolute_reference",
+        "faithful": false,
+        "blind_dimension": 1
+      },
+      {
+        "theta_pi_over_32": 16,
+        "family": "local",
+        "target": "exchange_angle",
+        "faithful": true,
+        "blind_dimension": 0
+      },
+      {
+        "theta_pi_over_32": 16,
+        "family": "local",
+        "target": "relative_phases",
+        "faithful": false,
+        "blind_dimension": 1
+      },
+      {
+        "theta_pi_over_32": 16,
+        "family": "local",
+        "target": "absolute_reference",
+        "faithful": false,
+        "blind_dimension": 1
+      },
+      {
+        "theta_pi_over_32": 16,
+        "family": "reference",
+        "target": "exchange_angle",
+        "faithful": true,
+        "blind_dimension": 0
+      },
+      {
+        "theta_pi_over_32": 16,
+        "family": "reference",
+        "target": "relative_phases",
+        "faithful": true,
+        "blind_dimension": 0
+      },
+      {
+        "theta_pi_over_32": 16,
+        "family": "reference",
+        "target": "absolute_reference",
+        "faithful": false,
+        "blind_dimension": 1
+      },
+      {
+        "theta_pi_over_32": 32,
+        "family": "basis",
+        "target": "exchange_angle",
+        "faithful": false,
+        "blind_dimension": 1
+      },
+      {
+        "theta_pi_over_32": 32,
+        "family": "basis",
+        "target": "relative_phases",
+        "faithful": false,
+        "blind_dimension": 4
+      },
+      {
+        "theta_pi_over_32": 32,
+        "family": "basis",
+        "target": "absolute_reference",
+        "faithful": false,
+        "blind_dimension": 1
+      },
+      {
+        "theta_pi_over_32": 32,
+        "family": "local",
+        "target": "exchange_angle",
+        "faithful": true,
+        "blind_dimension": 0
+      },
+      {
+        "theta_pi_over_32": 32,
+        "family": "local",
+        "target": "relative_phases",
+        "faithful": false,
+        "blind_dimension": 2
+      },
+      {
+        "theta_pi_over_32": 32,
+        "family": "local",
+        "target": "absolute_reference",
+        "faithful": false,
+        "blind_dimension": 1
+      },
+      {
+        "theta_pi_over_32": 32,
+        "family": "reference",
+        "target": "exchange_angle",
+        "faithful": true,
+        "blind_dimension": 0
+      },
+      {
+        "theta_pi_over_32": 32,
+        "family": "reference",
+        "target": "relative_phases",
+        "faithful": false,
+        "blind_dimension": 1
+      },
+      {
+        "theta_pi_over_32": 32,
+        "family": "reference",
+        "target": "absolute_reference",
+        "faithful": false,
+        "blind_dimension": 1
+      }
+    ],
+    "policy_fixture_count": 9,
+    "policy_fixtures": [
+      {
+        "name": "bounded_angle",
+        "evidence_class": "SYNTHETIC_POLICY_FIXTURE",
+        "expected_status": "MODEL_BUDGET_MET_NUMERICALLY",
+        "report": {
+          "schema": "native-photonic-uncertainty-v1",
+          "packet_sha256": "bce12ae68227de8535208bb4977f88b37e59a04bbd48746e1dcb943c08a92453",
+          "norm_model": "NORMALIZED_EUCLIDEAN_2_NORM",
+          "bounds": {
+            "sensor_noise_bound": 0.001,
+            "calibration_drift_operator_bound": 0.002,
+            "state_norm_bound": 0.1,
+            "target_error_budget": 0.01,
+            "nonlinear_remainder_bound": 0.0001
+          },
+          "bound_evidence": "CALLER_ASSUMPTIONS",
+          "status": "MODEL_BUDGET_MET_NUMERICALLY",
+          "model_budget_met": true,
+          "numeric_target_error_estimate": 0.0013000000000000002,
+          "numerical_gain_is_certified_upper_bound": false,
+          "calibration_accepted": false,
+          "hardware_submitted": false,
+          "engine_source": {
+            "repository": "Parveen117/EMK-Tensor-Cell-Devices",
+            "commit": "a116985f667e258696334be8a6b07f85879eb1c4",
+            "git_blobs": {
+              "seam_antenna.py": "d91f704ae7a3ca9c66183eb4e81a4cd2e37e2062",
+              "robust_faithfulness.py": "d47765b99f4c5d89e0368c53435096218264b94e"
+            }
+          },
+          "engine_report": {
+            "schema": "SEAM_ANTENNA_ROBUST_TARGET_FAITHFULNESS_V0_2",
+            "device_id": "P1O_TARGET_MINIMAL_STRATIFIED_SEAM_ANTENNA",
+            "norm_model": "EUCLIDEAN_2_NORM",
+            "theorem_scope": "FINITE_DIMENSIONAL_LINEAR",
+            "exact_target_faithful": true,
+            "numerical_sensor_rank": 1,
+            "sensor_singular_values": [
+              1.4142135623730947,
+              8.787158246077638e-18,
+              0.0,
+              0.0
+            ],
+            "svd_cutoff": 1.4142135623730947e-12,
+            "smallest_nonzero_sensor_singular_value": 1.4142135623730947,
+            "decoder_gain": 1.0,
+            "target_visibility_margin": 1.0,
+            "target_is_zero": false,
+            "decoder_reconstruction_residual": 0.0,
+            "numerical_decoder_consistent": true,
+            "gain_status": "TARGET_FAITHFUL_FINITE_GAIN",
+            "sensor_noise_bound": 0.0011,
+            "calibration_drift_operator_bound": 0.002,
+            "state_norm_bound": 0.1,
+            "target_error_budget": 0.01,
+            "high_gain_threshold": null,
+            "noise_target_error_upper": 0.0011,
+            "drift_target_error_upper": 0.0002,
+            "combined_target_error_upper": 0.0013000000000000002,
+            "robust_status": "TARGET_FAITHFUL_ROBUST",
+            "warnings": [],
+            "nonlinear_sensor_completeness_claim": false,
+            "stochastic_noise_model_claim": false,
+            "hardware_calibration_claim": false,
+            "production_safety_claim": false,
+            "certificate_hash": "ef21122582886fe4e7f666a3ceee4b4fe644a2853a38f93527c049d24961374e"
+          },
+          "numerical_checks": {
+            "exact_faithfulness_agrees": true,
+            "upstream_decoder_consistent": true,
+            "sensor_rank_agrees": true,
+            "zero_target_agrees": true,
+            "finite_nonnegative_gain": true,
+            "finite_nonnegative_error": true,
+            "target_relative_residual_consistent": true
+          },
+          "report_sha256": "2d5c389546a43200f15dd6f65613e90c8dd15ff89116a23c783ebcb7db33b967"
+        }
+      },
+      {
+        "name": "excess_noise",
+        "evidence_class": "SYNTHETIC_POLICY_FIXTURE",
+        "expected_status": "MODEL_ERROR_BUDGET_EXCEEDED",
+        "report": {
+          "schema": "native-photonic-uncertainty-v1",
+          "packet_sha256": "bce12ae68227de8535208bb4977f88b37e59a04bbd48746e1dcb943c08a92453",
+          "norm_model": "NORMALIZED_EUCLIDEAN_2_NORM",
+          "bounds": {
+            "sensor_noise_bound": 1.0,
+            "calibration_drift_operator_bound": 0.002,
+            "state_norm_bound": 0.1,
+            "target_error_budget": 0.01,
+            "nonlinear_remainder_bound": 0.0001
+          },
+          "bound_evidence": "CALLER_ASSUMPTIONS",
+          "status": "MODEL_ERROR_BUDGET_EXCEEDED",
+          "model_budget_met": false,
+          "numeric_target_error_estimate": 1.0003,
+          "numerical_gain_is_certified_upper_bound": false,
+          "calibration_accepted": false,
+          "hardware_submitted": false,
+          "engine_source": {
+            "repository": "Parveen117/EMK-Tensor-Cell-Devices",
+            "commit": "a116985f667e258696334be8a6b07f85879eb1c4",
+            "git_blobs": {
+              "seam_antenna.py": "d91f704ae7a3ca9c66183eb4e81a4cd2e37e2062",
+              "robust_faithfulness.py": "d47765b99f4c5d89e0368c53435096218264b94e"
+            }
+          },
+          "engine_report": {
+            "schema": "SEAM_ANTENNA_ROBUST_TARGET_FAITHFULNESS_V0_2",
+            "device_id": "P1O_TARGET_MINIMAL_STRATIFIED_SEAM_ANTENNA",
+            "norm_model": "EUCLIDEAN_2_NORM",
+            "theorem_scope": "FINITE_DIMENSIONAL_LINEAR",
+            "exact_target_faithful": true,
+            "numerical_sensor_rank": 1,
+            "sensor_singular_values": [
+              1.4142135623730947,
+              8.787158246077638e-18,
+              0.0,
+              0.0
+            ],
+            "svd_cutoff": 1.4142135623730947e-12,
+            "smallest_nonzero_sensor_singular_value": 1.4142135623730947,
+            "decoder_gain": 1.0,
+            "target_visibility_margin": 1.0,
+            "target_is_zero": false,
+            "decoder_reconstruction_residual": 0.0,
+            "numerical_decoder_consistent": true,
+            "gain_status": "TARGET_FAITHFUL_FINITE_GAIN",
+            "sensor_noise_bound": 1.0001,
+            "calibration_drift_operator_bound": 0.002,
+            "state_norm_bound": 0.1,
+            "target_error_budget": 0.01,
+            "high_gain_threshold": null,
+            "noise_target_error_upper": 1.0001,
+            "drift_target_error_upper": 0.0002,
+            "combined_target_error_upper": 1.0003,
+            "robust_status": "TARGET_ERROR_BUDGET_EXCEEDED",
+            "warnings": [],
+            "nonlinear_sensor_completeness_claim": false,
+            "stochastic_noise_model_claim": false,
+            "hardware_calibration_claim": false,
+            "production_safety_claim": false,
+            "certificate_hash": "abbf647a4fcae3b4d50e60cbfe14edd16a3f0e71e1a3491acc3743145c3e02fc"
+          },
+          "numerical_checks": {
+            "exact_faithfulness_agrees": true,
+            "upstream_decoder_consistent": true,
+            "sensor_rank_agrees": true,
+            "zero_target_agrees": true,
+            "finite_nonnegative_gain": true,
+            "finite_nonnegative_error": true,
+            "target_relative_residual_consistent": true
+          },
+          "report_sha256": "06b7f2718f55c41c7ae83856070e264ed365d2f4dec3b4a489e0d6d318aecd19"
+        }
+      },
+      {
+        "name": "excess_drift",
+        "evidence_class": "SYNTHETIC_POLICY_FIXTURE",
+        "expected_status": "MODEL_ERROR_BUDGET_EXCEEDED",
+        "report": {
+          "schema": "native-photonic-uncertainty-v1",
+          "packet_sha256": "bce12ae68227de8535208bb4977f88b37e59a04bbd48746e1dcb943c08a92453",
+          "norm_model": "NORMALIZED_EUCLIDEAN_2_NORM",
+          "bounds": {
+            "sensor_noise_bound": 0.001,
+            "calibration_drift_operator_bound": 1.0,
+            "state_norm_bound": 0.1,
+            "target_error_budget": 0.01,
+            "nonlinear_remainder_bound": 0.0001
+          },
+          "bound_evidence": "CALLER_ASSUMPTIONS",
+          "status": "MODEL_ERROR_BUDGET_EXCEEDED",
+          "model_budget_met": false,
+          "numeric_target_error_estimate": 0.10110000000000001,
+          "numerical_gain_is_certified_upper_bound": false,
+          "calibration_accepted": false,
+          "hardware_submitted": false,
+          "engine_source": {
+            "repository": "Parveen117/EMK-Tensor-Cell-Devices",
+            "commit": "a116985f667e258696334be8a6b07f85879eb1c4",
+            "git_blobs": {
+              "seam_antenna.py": "d91f704ae7a3ca9c66183eb4e81a4cd2e37e2062",
+              "robust_faithfulness.py": "d47765b99f4c5d89e0368c53435096218264b94e"
+            }
+          },
+          "engine_report": {
+            "schema": "SEAM_ANTENNA_ROBUST_TARGET_FAITHFULNESS_V0_2",
+            "device_id": "P1O_TARGET_MINIMAL_STRATIFIED_SEAM_ANTENNA",
+            "norm_model": "EUCLIDEAN_2_NORM",
+            "theorem_scope": "FINITE_DIMENSIONAL_LINEAR",
+            "exact_target_faithful": true,
+            "numerical_sensor_rank": 1,
+            "sensor_singular_values": [
+              1.4142135623730947,
+              8.787158246077638e-18,
+              0.0,
+              0.0
+            ],
+            "svd_cutoff": 1.4142135623730947e-12,
+            "smallest_nonzero_sensor_singular_value": 1.4142135623730947,
+            "decoder_gain": 1.0,
+            "target_visibility_margin": 1.0,
+            "target_is_zero": false,
+            "decoder_reconstruction_residual": 0.0,
+            "numerical_decoder_consistent": true,
+            "gain_status": "TARGET_FAITHFUL_FINITE_GAIN",
+            "sensor_noise_bound": 0.0011,
+            "calibration_drift_operator_bound": 1.0,
+            "state_norm_bound": 0.1,
+            "target_error_budget": 0.01,
+            "high_gain_threshold": null,
+            "noise_target_error_upper": 0.0011,
+            "drift_target_error_upper": 0.1,
+            "combined_target_error_upper": 0.10110000000000001,
+            "robust_status": "TARGET_ERROR_BUDGET_EXCEEDED",
+            "warnings": [],
+            "nonlinear_sensor_completeness_claim": false,
+            "stochastic_noise_model_claim": false,
+            "hardware_calibration_claim": false,
+            "production_safety_claim": false,
+            "certificate_hash": "b213a1fe99230e94f5ec775a60eb89e5a41c2751a004ae408bbf462c38797d5c"
+          },
+          "numerical_checks": {
+            "exact_faithfulness_agrees": true,
+            "upstream_decoder_consistent": true,
+            "sensor_rank_agrees": true,
+            "zero_target_agrees": true,
+            "finite_nonnegative_gain": true,
+            "finite_nonnegative_error": true,
+            "target_relative_residual_consistent": true
+          },
+          "report_sha256": "0644b3e552aa7bc314ba5a0bd1bfb156e687df289cedab93ee8d97c96066be45"
+        }
+      },
+      {
+        "name": "excess_remainder",
+        "evidence_class": "SYNTHETIC_POLICY_FIXTURE",
+        "expected_status": "MODEL_ERROR_BUDGET_EXCEEDED",
+        "report": {
+          "schema": "native-photonic-uncertainty-v1",
+          "packet_sha256": "bce12ae68227de8535208bb4977f88b37e59a04bbd48746e1dcb943c08a92453",
+          "norm_model": "NORMALIZED_EUCLIDEAN_2_NORM",
+          "bounds": {
+            "sensor_noise_bound": 0.001,
+            "calibration_drift_operator_bound": 0.002,
+            "state_norm_bound": 0.1,
+            "target_error_budget": 0.01,
+            "nonlinear_remainder_bound": 1.0
+          },
+          "bound_evidence": "CALLER_ASSUMPTIONS",
+          "status": "MODEL_ERROR_BUDGET_EXCEEDED",
+          "model_budget_met": false,
+          "numeric_target_error_estimate": 1.0011999999999999,
+          "numerical_gain_is_certified_upper_bound": false,
+          "calibration_accepted": false,
+          "hardware_submitted": false,
+          "engine_source": {
+            "repository": "Parveen117/EMK-Tensor-Cell-Devices",
+            "commit": "a116985f667e258696334be8a6b07f85879eb1c4",
+            "git_blobs": {
+              "seam_antenna.py": "d91f704ae7a3ca9c66183eb4e81a4cd2e37e2062",
+              "robust_faithfulness.py": "d47765b99f4c5d89e0368c53435096218264b94e"
+            }
+          },
+          "engine_report": {
+            "schema": "SEAM_ANTENNA_ROBUST_TARGET_FAITHFULNESS_V0_2",
+            "device_id": "P1O_TARGET_MINIMAL_STRATIFIED_SEAM_ANTENNA",
+            "norm_model": "EUCLIDEAN_2_NORM",
+            "theorem_scope": "FINITE_DIMENSIONAL_LINEAR",
+            "exact_target_faithful": true,
+            "numerical_sensor_rank": 1,
+            "sensor_singular_values": [
+              1.4142135623730947,
+              8.787158246077638e-18,
+              0.0,
+              0.0
+            ],
+            "svd_cutoff": 1.4142135623730947e-12,
+            "smallest_nonzero_sensor_singular_value": 1.4142135623730947,
+            "decoder_gain": 1.0,
+            "target_visibility_margin": 1.0,
+            "target_is_zero": false,
+            "decoder_reconstruction_residual": 0.0,
+            "numerical_decoder_consistent": true,
+            "gain_status": "TARGET_FAITHFUL_FINITE_GAIN",
+            "sensor_noise_bound": 1.001,
+            "calibration_drift_operator_bound": 0.002,
+            "state_norm_bound": 0.1,
+            "target_error_budget": 0.01,
+            "high_gain_threshold": null,
+            "noise_target_error_upper": 1.001,
+            "drift_target_error_upper": 0.0002,
+            "combined_target_error_upper": 1.0011999999999999,
+            "robust_status": "TARGET_ERROR_BUDGET_EXCEEDED",
+            "warnings": [],
+            "nonlinear_sensor_completeness_claim": false,
+            "stochastic_noise_model_claim": false,
+            "hardware_calibration_claim": false,
+            "production_safety_claim": false,
+            "certificate_hash": "c49a5852908044e92d268508132f79b299ed5273b55982f50239ba59f9baae89"
+          },
+          "numerical_checks": {
+            "exact_faithfulness_agrees": true,
+            "upstream_decoder_consistent": true,
+            "sensor_rank_agrees": true,
+            "zero_target_agrees": true,
+            "finite_nonnegative_gain": true,
+            "finite_nonnegative_error": true,
+            "target_relative_residual_consistent": true
+          },
+          "report_sha256": "48a9eff0ab67040924326977e6d8114f78e0ac35c6fe6d223c3a7e349a1a29ee"
+        }
+      },
+      {
+        "name": "tight_budget",
+        "evidence_class": "SYNTHETIC_POLICY_FIXTURE",
+        "expected_status": "MODEL_ERROR_BUDGET_EXCEEDED",
+        "report": {
+          "schema": "native-photonic-uncertainty-v1",
+          "packet_sha256": "bce12ae68227de8535208bb4977f88b37e59a04bbd48746e1dcb943c08a92453",
+          "norm_model": "NORMALIZED_EUCLIDEAN_2_NORM",
+          "bounds": {
+            "sensor_noise_bound": 0.001,
+            "calibration_drift_operator_bound": 0.002,
+            "state_norm_bound": 0.1,
+            "target_error_budget": 0.001,
+            "nonlinear_remainder_bound": 0.0001
+          },
+          "bound_evidence": "CALLER_ASSUMPTIONS",
+          "status": "MODEL_ERROR_BUDGET_EXCEEDED",
+          "model_budget_met": false,
+          "numeric_target_error_estimate": 0.0013000000000000002,
+          "numerical_gain_is_certified_upper_bound": false,
+          "calibration_accepted": false,
+          "hardware_submitted": false,
+          "engine_source": {
+            "repository": "Parveen117/EMK-Tensor-Cell-Devices",
+            "commit": "a116985f667e258696334be8a6b07f85879eb1c4",
+            "git_blobs": {
+              "seam_antenna.py": "d91f704ae7a3ca9c66183eb4e81a4cd2e37e2062",
+              "robust_faithfulness.py": "d47765b99f4c5d89e0368c53435096218264b94e"
+            }
+          },
+          "engine_report": {
+            "schema": "SEAM_ANTENNA_ROBUST_TARGET_FAITHFULNESS_V0_2",
+            "device_id": "P1O_TARGET_MINIMAL_STRATIFIED_SEAM_ANTENNA",
+            "norm_model": "EUCLIDEAN_2_NORM",
+            "theorem_scope": "FINITE_DIMENSIONAL_LINEAR",
+            "exact_target_faithful": true,
+            "numerical_sensor_rank": 1,
+            "sensor_singular_values": [
+              1.4142135623730947,
+              8.787158246077638e-18,
+              0.0,
+              0.0
+            ],
+            "svd_cutoff": 1.4142135623730947e-12,
+            "smallest_nonzero_sensor_singular_value": 1.4142135623730947,
+            "decoder_gain": 1.0,
+            "target_visibility_margin": 1.0,
+            "target_is_zero": false,
+            "decoder_reconstruction_residual": 0.0,
+            "numerical_decoder_consistent": true,
+            "gain_status": "TARGET_FAITHFUL_FINITE_GAIN",
+            "sensor_noise_bound": 0.0011,
+            "calibration_drift_operator_bound": 0.002,
+            "state_norm_bound": 0.1,
+            "target_error_budget": 0.001,
+            "high_gain_threshold": null,
+            "noise_target_error_upper": 0.0011,
+            "drift_target_error_upper": 0.0002,
+            "combined_target_error_upper": 0.0013000000000000002,
+            "robust_status": "TARGET_ERROR_BUDGET_EXCEEDED",
+            "warnings": [],
+            "nonlinear_sensor_completeness_claim": false,
+            "stochastic_noise_model_claim": false,
+            "hardware_calibration_claim": false,
+            "production_safety_claim": false,
+            "certificate_hash": "6c92a54e92631c9debac7ffb13e93e073a0a30aafc5b425d0a2d40262754167e"
+          },
+          "numerical_checks": {
+            "exact_faithfulness_agrees": true,
+            "upstream_decoder_consistent": true,
+            "sensor_rank_agrees": true,
+            "zero_target_agrees": true,
+            "finite_nonnegative_gain": true,
+            "finite_nonnegative_error": true,
+            "target_relative_residual_consistent": true
+          },
+          "report_sha256": "3a6be9056add122063d5f77b1e96f566bad9ad24a5def414cafc8a08e31acbdc"
+        }
+      },
+      {
+        "name": "weak_reference",
+        "evidence_class": "SYNTHETIC_POLICY_FIXTURE",
+        "expected_status": "NUMERICAL_DECODER_UNRESOLVED",
+        "report": {
+          "schema": "native-photonic-uncertainty-v1",
+          "packet_sha256": "1a30f37c3319587c416e677d5b90f5e4f4df9ead6853238220bd2787d08b39a5",
+          "norm_model": "NORMALIZED_EUCLIDEAN_2_NORM",
+          "bounds": {
+            "sensor_noise_bound": 0.001,
+            "calibration_drift_operator_bound": 0.002,
+            "state_norm_bound": 0.1,
+            "target_error_budget": 0.01,
+            "nonlinear_remainder_bound": 0.0001
+          },
+          "bound_evidence": "CALLER_ASSUMPTIONS",
+          "status": "NUMERICAL_DECODER_UNRESOLVED",
+          "model_budget_met": false,
+          "numeric_target_error_estimate": null,
+          "numerical_gain_is_certified_upper_bound": false,
+          "calibration_accepted": false,
+          "hardware_submitted": false,
+          "engine_source": {
+            "repository": "Parveen117/EMK-Tensor-Cell-Devices",
+            "commit": "a116985f667e258696334be8a6b07f85879eb1c4",
+            "git_blobs": {
+              "seam_antenna.py": "d91f704ae7a3ca9c66183eb4e81a4cd2e37e2062",
+              "robust_faithfulness.py": "d47765b99f4c5d89e0368c53435096218264b94e"
+            }
+          },
+          "engine_report": null,
+          "numerical_checks": {
+            "exact_faithfulness_agrees": true,
+            "upstream_decoder_consistent": false,
+            "sensor_rank_agrees": false,
+            "zero_target_agrees": true,
+            "finite_nonnegative_gain": true,
+            "finite_nonnegative_error": true,
+            "target_relative_residual_consistent": false
+          },
+          "report_sha256": "33d2e03aa49f58acd88a82152944ec97bbcb94a0b0bd877bb6417167cedc60c8"
+        }
+      },
+      {
+        "name": "reading_unit_change",
+        "evidence_class": "SYNTHETIC_POLICY_FIXTURE",
+        "expected_status": "MODEL_BUDGET_MET_NUMERICALLY",
+        "report": {
+          "schema": "native-photonic-uncertainty-v1",
+          "packet_sha256": "d235d7d5db8974faea2463c308972eca5ddaf52bffe1d87f73a975684623474a",
+          "norm_model": "NORMALIZED_EUCLIDEAN_2_NORM",
+          "bounds": {
+            "sensor_noise_bound": 0.0005,
+            "calibration_drift_operator_bound": 0.001,
+            "state_norm_bound": 0.1,
+            "target_error_budget": 0.01,
+            "nonlinear_remainder_bound": 5e-05
+          },
+          "bound_evidence": "CALLER_ASSUMPTIONS",
+          "status": "MODEL_BUDGET_MET_NUMERICALLY",
+          "model_budget_met": true,
+          "numeric_target_error_estimate": 0.0013000000000000002,
+          "numerical_gain_is_certified_upper_bound": false,
+          "calibration_accepted": false,
+          "hardware_submitted": false,
+          "engine_source": {
+            "repository": "Parveen117/EMK-Tensor-Cell-Devices",
+            "commit": "a116985f667e258696334be8a6b07f85879eb1c4",
+            "git_blobs": {
+              "seam_antenna.py": "d91f704ae7a3ca9c66183eb4e81a4cd2e37e2062",
+              "robust_faithfulness.py": "d47765b99f4c5d89e0368c53435096218264b94e"
+            }
+          },
+          "engine_report": {
+            "schema": "SEAM_ANTENNA_ROBUST_TARGET_FAITHFULNESS_V0_2",
+            "device_id": "P1O_TARGET_MINIMAL_STRATIFIED_SEAM_ANTENNA",
+            "norm_model": "EUCLIDEAN_2_NORM",
+            "theorem_scope": "FINITE_DIMENSIONAL_LINEAR",
+            "exact_target_faithful": true,
+            "numerical_sensor_rank": 1,
+            "sensor_singular_values": [
+              0.7071067811865474,
+              4.393579123038819e-18,
+              0.0,
+              0.0
+            ],
+            "svd_cutoff": 7.071067811865474e-13,
+            "smallest_nonzero_sensor_singular_value": 0.7071067811865474,
+            "decoder_gain": 2.0,
+            "target_visibility_margin": 0.5,
+            "target_is_zero": false,
+            "decoder_reconstruction_residual": 0.0,
+            "numerical_decoder_consistent": true,
+            "gain_status": "TARGET_FAITHFUL_FINITE_GAIN",
+            "sensor_noise_bound": 0.00055,
+            "calibration_drift_operator_bound": 0.001,
+            "state_norm_bound": 0.1,
+            "target_error_budget": 0.01,
+            "high_gain_threshold": null,
+            "noise_target_error_upper": 0.0011,
+            "drift_target_error_upper": 0.0002,
+            "combined_target_error_upper": 0.0013000000000000002,
+            "robust_status": "TARGET_FAITHFUL_ROBUST",
+            "warnings": [],
+            "nonlinear_sensor_completeness_claim": false,
+            "stochastic_noise_model_claim": false,
+            "hardware_calibration_claim": false,
+            "production_safety_claim": false,
+            "certificate_hash": "62f6ebfe09c912057758f85cdcab4a84477d43b4f2e642ac33db8e2c3bfc46f1"
+          },
+          "numerical_checks": {
+            "exact_faithfulness_agrees": true,
+            "upstream_decoder_consistent": true,
+            "sensor_rank_agrees": true,
+            "zero_target_agrees": true,
+            "finite_nonnegative_gain": true,
+            "finite_nonnegative_error": true,
+            "target_relative_residual_consistent": true
+          },
+          "report_sha256": "5f2c0ddbd44bae16eb6aa39447c0e1c4bdb6b6845ec3fd9940f416261085d25a"
+        }
+      },
+      {
+        "name": "state_unit_change",
+        "evidence_class": "SYNTHETIC_POLICY_FIXTURE",
+        "expected_status": "MODEL_BUDGET_MET_NUMERICALLY",
+        "report": {
+          "schema": "native-photonic-uncertainty-v1",
+          "packet_sha256": "ff6d8718afd61a4ece63759689a1fe5b4a75e9e66888a1d61ed1a85b2433dca6",
+          "norm_model": "NORMALIZED_EUCLIDEAN_2_NORM",
+          "bounds": {
+            "sensor_noise_bound": 0.001,
+            "calibration_drift_operator_bound": 0.004,
+            "state_norm_bound": 0.05,
+            "target_error_budget": 0.01,
+            "nonlinear_remainder_bound": 0.0001
+          },
+          "bound_evidence": "CALLER_ASSUMPTIONS",
+          "status": "MODEL_BUDGET_MET_NUMERICALLY",
+          "model_budget_met": true,
+          "numeric_target_error_estimate": 0.0013000000000000002,
+          "numerical_gain_is_certified_upper_bound": false,
+          "calibration_accepted": false,
+          "hardware_submitted": false,
+          "engine_source": {
+            "repository": "Parveen117/EMK-Tensor-Cell-Devices",
+            "commit": "a116985f667e258696334be8a6b07f85879eb1c4",
+            "git_blobs": {
+              "seam_antenna.py": "d91f704ae7a3ca9c66183eb4e81a4cd2e37e2062",
+              "robust_faithfulness.py": "d47765b99f4c5d89e0368c53435096218264b94e"
+            }
+          },
+          "engine_report": {
+            "schema": "SEAM_ANTENNA_ROBUST_TARGET_FAITHFULNESS_V0_2",
+            "device_id": "P1O_TARGET_MINIMAL_STRATIFIED_SEAM_ANTENNA",
+            "norm_model": "EUCLIDEAN_2_NORM",
+            "theorem_scope": "FINITE_DIMENSIONAL_LINEAR",
+            "exact_target_faithful": true,
+            "numerical_sensor_rank": 1,
+            "sensor_singular_values": [
+              2.8284271247461894,
+              1.7574316492155277e-17,
+              0.0,
+              0.0
+            ],
+            "svd_cutoff": 2.8284271247461895e-12,
+            "smallest_nonzero_sensor_singular_value": 2.8284271247461894,
+            "decoder_gain": 1.0,
+            "target_visibility_margin": 1.0,
+            "target_is_zero": false,
+            "decoder_reconstruction_residual": 0.0,
+            "numerical_decoder_consistent": true,
+            "gain_status": "TARGET_FAITHFUL_FINITE_GAIN",
+            "sensor_noise_bound": 0.0011,
+            "calibration_drift_operator_bound": 0.004,
+            "state_norm_bound": 0.05,
+            "target_error_budget": 0.01,
+            "high_gain_threshold": null,
+            "noise_target_error_upper": 0.0011,
+            "drift_target_error_upper": 0.0002,
+            "combined_target_error_upper": 0.0013000000000000002,
+            "robust_status": "TARGET_FAITHFUL_ROBUST",
+            "warnings": [],
+            "nonlinear_sensor_completeness_claim": false,
+            "stochastic_noise_model_claim": false,
+            "hardware_calibration_claim": false,
+            "production_safety_claim": false,
+            "certificate_hash": "11f7775d656c7760fce105d2b0a3cb9484e1a8498b3f38a59e591d44f7a6fe58"
+          },
+          "numerical_checks": {
+            "exact_faithfulness_agrees": true,
+            "upstream_decoder_consistent": true,
+            "sensor_rank_agrees": true,
+            "zero_target_agrees": true,
+            "finite_nonnegative_gain": true,
+            "finite_nonnegative_error": true,
+            "target_relative_residual_consistent": true
+          },
+          "report_sha256": "4d5412073d5c977f4fc827542a73eb6c1fade2088eedee51deb20dbd78057abe"
+        }
+      },
+      {
+        "name": "target_unit_change",
+        "evidence_class": "SYNTHETIC_POLICY_FIXTURE",
+        "expected_status": "MODEL_BUDGET_MET_NUMERICALLY",
+        "report": {
+          "schema": "native-photonic-uncertainty-v1",
+          "packet_sha256": "73fea3b6eee5046cdc1d03da043e5a7dc2e9da0dc777207e25ef810275f4f27b",
+          "norm_model": "NORMALIZED_EUCLIDEAN_2_NORM",
+          "bounds": {
+            "sensor_noise_bound": 0.001,
+            "calibration_drift_operator_bound": 0.002,
+            "state_norm_bound": 0.1,
+            "target_error_budget": 0.005,
+            "nonlinear_remainder_bound": 0.0001
+          },
+          "bound_evidence": "CALLER_ASSUMPTIONS",
+          "status": "MODEL_BUDGET_MET_NUMERICALLY",
+          "model_budget_met": true,
+          "numeric_target_error_estimate": 0.0006500000000000001,
+          "numerical_gain_is_certified_upper_bound": false,
+          "calibration_accepted": false,
+          "hardware_submitted": false,
+          "engine_source": {
+            "repository": "Parveen117/EMK-Tensor-Cell-Devices",
+            "commit": "a116985f667e258696334be8a6b07f85879eb1c4",
+            "git_blobs": {
+              "seam_antenna.py": "d91f704ae7a3ca9c66183eb4e81a4cd2e37e2062",
+              "robust_faithfulness.py": "d47765b99f4c5d89e0368c53435096218264b94e"
+            }
+          },
+          "engine_report": {
+            "schema": "SEAM_ANTENNA_ROBUST_TARGET_FAITHFULNESS_V0_2",
+            "device_id": "P1O_TARGET_MINIMAL_STRATIFIED_SEAM_ANTENNA",
+            "norm_model": "EUCLIDEAN_2_NORM",
+            "theorem_scope": "FINITE_DIMENSIONAL_LINEAR",
+            "exact_target_faithful": true,
+            "numerical_sensor_rank": 1,
+            "sensor_singular_values": [
+              1.4142135623730947,
+              8.787158246077638e-18,
+              0.0,
+              0.0
+            ],
+            "svd_cutoff": 1.4142135623730947e-12,
+            "smallest_nonzero_sensor_singular_value": 1.4142135623730947,
+            "decoder_gain": 0.5,
+            "target_visibility_margin": 2.0,
+            "target_is_zero": false,
+            "decoder_reconstruction_residual": 0.0,
+            "numerical_decoder_consistent": true,
+            "gain_status": "TARGET_FAITHFUL_FINITE_GAIN",
+            "sensor_noise_bound": 0.0011,
+            "calibration_drift_operator_bound": 0.002,
+            "state_norm_bound": 0.1,
+            "target_error_budget": 0.005,
+            "high_gain_threshold": null,
+            "noise_target_error_upper": 0.00055,
+            "drift_target_error_upper": 0.0001,
+            "combined_target_error_upper": 0.0006500000000000001,
+            "robust_status": "TARGET_FAITHFUL_ROBUST",
+            "warnings": [],
+            "nonlinear_sensor_completeness_claim": false,
+            "stochastic_noise_model_claim": false,
+            "hardware_calibration_claim": false,
+            "production_safety_claim": false,
+            "certificate_hash": "22b4ba953470877129b74b2e6372e003b174e62773d371d7fb792c34f3790d70"
+          },
+          "numerical_checks": {
+            "exact_faithfulness_agrees": true,
+            "upstream_decoder_consistent": true,
+            "sensor_rank_agrees": true,
+            "zero_target_agrees": true,
+            "finite_nonnegative_gain": true,
+            "finite_nonnegative_error": true,
+            "target_relative_residual_consistent": true
+          },
+          "report_sha256": "9b3c69a1b56b324705f20ab6d467b9e09e73f9177e987a7989a9d7964fe1f82a"
+        }
+      }
+    ],
+    "upstream_full_test_suite_run": false
+  },
+  "checked_sources_sha256": {
+    "phase_seam_foundation/photonic_observer.py": "64f6187d036f21b3e32486590a620b43ef709a81e08f586c470d3dbc7f4e4415",
+    "phase_seam_foundation/PHOTONIC_OBSERVER.md": "6174115be2f8770f343b10d27deb9b858afb3d6659a449f9bc885b336df8673d",
+    "benchmarks/photonic_observer_audit.py": "a2f4eef2b6ce2d0a7b95f5ed2aacbb863d4ba6cdd8a107218472e98174e162b5",
+    "tests/test_phase_seam_photonic_observer.py": "194773ad4be762cecd7b970947d7779324cda48f3a7f093331aea8348ecd30ec",
+    "phase_seam_foundation/photonic_response.py": "365409d0ef4fa63c1f315bb86c9113814ca6149e71fa86398c19ec965e50c347",
+    "tests/test_phase_seam_photonic_response.py": "283629ccc1e4af17867165bc2368d1416a6b246993acb1fab6e77c25e78c6d6b",
+    "tests/test_phase_seam_layout_controls.py": "a3c55e25820eeb7ef85fe16cd149d8e31bd19c7772645409fcbeb7966c459b9c",
+    "phase_seam_foundation/photonic_io.py": "6e7554b073e78cbd58ef26fcd2c2327f89f696bdb85d2d375f980914bb57d3bf",
+    "phase_seam_foundation/photonic_layout.py": "c6debe28447121ad7b4522acd91ca60e41cd58d0274905dc12908c5dfbf6d350",
+    "native_relational_qc/cyclotomic64.py": "8fc9c42627feee330b00f1b56559031cc442746e830081eae09f535115d74e52"
+  },
+  "request_template_sha256": "1cec96f3a8c3278985632f6c91fc6d1e11a482e97ef7722a637cee618c817341",
+  "measured_records": 0,
+  "calibration_accepted": false,
+  "hardware_submitted": false,
+  "boundary": "Exact local model visibility; floating-point conditional uncertainty estimates, not hardware qualification",
+  "prior_validation": "v0.11 complete foundation/CAD suites retained; no geometry changed or full CAD rerun"
+}

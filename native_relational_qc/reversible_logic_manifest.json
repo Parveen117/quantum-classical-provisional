@@ -1,0 +1,39 @@
+{
+  "baseline_commit": "f9685ae2ff7f69a7b5b3a9a42e2d1003ac1809fc",
+  "cli_search": "completed; exact success probability 1 and workspace-clean probability 1",
+  "date": "2026-10-23",
+  "independent_reference": {
+    "absolute_tolerance": 3e-14,
+    "library": "qiskit",
+    "method": "test_coherent_adder_against_independent_dense_statevector",
+    "n_qubits": 17,
+    "relative_tolerance": 0,
+    "version": "2.6.0"
+  },
+  "model_scope": "Exact ideal Boolean embedding and quantum arithmetic; calibrated hardware, noise, energy and generic deep-circuit compression remain unresolved.",
+  "native_tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": 160,
+    "skips": 0
+  },
+  "schema": "nrqc-reversible-logic-source-manifest-v1",
+  "sdk_import_blocked_smoke": "NAND threshold-to-oracle and coherent 11-qubit arithmetic search completed with Qiskit/Aer imports blocked",
+  "source_and_artifact_sha256": {
+    "README.md": "c0492c0ab8fd0e984643d46fadaf24de8aeac8240d7b6f341081d74a4c981d08",
+    "native_relational_qc/CALCULATOR.md": "7392fee4cda00ba0a841f7f14b4e514510b951482a371feb0b3d9f744cfb48b1",
+    "native_relational_qc/REVERSIBLE_LOGIC.md": "c0a868e1cd3fe997cfdc29f7d941a5bb9c127e878b7357f70c384ae73a3be072",
+    "native_relational_qc/calculator_examples/reversible_addition.json": "8b42e79ee5566eb26879ddca2fb61b38c9edbe32f14f6a44b5213e8f00df58d4",
+    "native_relational_qc/calculator_examples/reversible_addition.result.json": "cef0b40d060fc453cb4a048ad2903bf6b50e8102ce3bedae8a6d6bccdfd721b2",
+    "native_relational_qc/calculator_examples/reversible_kickback.json": "a84e7711342562b39de4eb419fa3f4ad63fca68220f2a643ba6c3eafc34b5480",
+    "native_relational_qc/calculator_examples/reversible_kickback.result.json": "13ef0a1a1f432232ff4c221ce8d6812b169358a00821c5ef481f6c7c07f7c098",
+    "native_relational_qc/calculator_examples/reversible_search.json": "2efc6b33e409fccd26674aa69e1bc09643382d953a03ff461d1015cc07c6aad1",
+    "native_relational_qc/calculator_examples/reversible_search.result.json": "6611eb7eedbdf335a46a8878d2815e2ce70367010507deea4907c73606cfd080",
+    "native_relational_qc/entropy_logic.py": "5d13b8663b92623939b7bbb106b8dbf9f1bead17ffb0661df7fe71d5db86ad9f",
+    "native_relational_qc/reversible_logic.py": "f566059dad85d01735e9384b9e7aa692f666f7b6909cf738696c47f5c4e12184",
+    "native_relational_qc/reversible_logic_demo.py": "dbb7e52dc90173eddc11539230816dbedbae58d59a8ffe2f9b2e3707e25cdaf8",
+    "native_relational_qc/reversible_logic_test_results.json": "ce31f4201c2303a96f91b8b940c2ed85f82f4a057bdef4bccc85a0f9948c93bf",
+    "native_relational_qc/reversible_logic_verification.json": "35f9653a428c0920616fc6c28f699e0706db3311a97d7d2c1b9b7e470909d6d1",
+    "tests/test_native_reversible_logic.py": "437944a7ffcb0fcbfd924a66aca8e491bf6fcc71cfa4d09c6c33452ece196a9f"
+  }
+}

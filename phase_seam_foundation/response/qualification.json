@@ -1,0 +1,139 @@
+{
+  "schema": "native-photonic-response-audit-v1",
+  "author": "Monty",
+  "status": "IDEAL_LOCAL_RESPONSE_CHECKS",
+  "evidence_class": "IDEAL_COMPONENT_ALGEBRA",
+  "tests": {
+    "count": 15,
+    "passed": true,
+    "seconds": 51.88484214200071,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "phase_order": [
+    "lower_arm",
+    "upper_arm",
+    "input_trim",
+    "output_trim",
+    "reference"
+  ],
+  "derivative_unit": "per radian",
+  "representative_ranks": [
+    {
+      "theta_pi_over_32": 0,
+      "ranks": {
+        "basis": 0,
+        "local": 2,
+        "reference": 3
+      }
+    },
+    {
+      "theta_pi_over_32": 8,
+      "ranks": {
+        "basis": 1,
+        "local": 3,
+        "reference": 4
+      }
+    },
+    {
+      "theta_pi_over_32": 16,
+      "ranks": {
+        "basis": 1,
+        "local": 3,
+        "reference": 4
+      }
+    },
+    {
+      "theta_pi_over_32": 32,
+      "ranks": {
+        "basis": 0,
+        "local": 2,
+        "reference": 3
+      }
+    }
+  ],
+  "angle_test_scope": "all 64 pi/32 samples, three measurement families",
+  "quadrature_witness_labels": [
+    "local:0->0",
+    "local:+->0",
+    "local:0->+",
+    "reference:0->0:analyzer_0"
+  ],
+  "quadrature_witness_jacobian": [
+    [
+      "1/2",
+      "-1/2",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "-1/2",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "-1/2",
+      "0"
+    ],
+    [
+      "3/8",
+      "-1/8",
+      "0",
+      "0",
+      "-1/4"
+    ]
+  ],
+  "common_unobservable_direction": [
+    1,
+    1,
+    0,
+    0,
+    1
+  ],
+  "reference_note": "reference phase is a fifth variable; rank four is relative, never absolute phase",
+  "layout_gds_sha256": "f6777bc1ecf2c6887363ca59e942b2129fbd3996c93132cb1a9291f3c6f9d3ab",
+  "layout_spec_sha256": "5bcd481cc6a62ecc8e2638a48b8c5af0f9f60840925a4b4865c31ce431ccd8c2",
+  "material_parameters_fitted": false,
+  "maxwell_solved": false,
+  "thermal_solved": false,
+  "measured_records": 0,
+  "hardware_submitted": false,
+  "prior_validation": "199 foundation and 9 CAD tests passed at v0.11; those full suites were not rerun here",
+  "assumptions": [
+    "ideal balanced lossless D couplers",
+    "calibrated coherent preparation/analyzers",
+    "local differentiability; exact rank does not establish noise conditioning",
+    "phase-only chain omits power-dependent loss and splitter changes"
+  ],
+  "open": [
+    "complex component transfer",
+    "joint electrothermal response and settling",
+    "uncertainty, loss, reference drift and full device qualification"
+  ],
+  "checked_sources_sha256": {
+    "phase_seam_foundation/photonic_response.py": "365409d0ef4fa63c1f315bb86c9113814ca6149e71fa86398c19ec965e50c347",
+    "benchmarks/photonic_response_audit.py": "dcc180bab9af3282922d2f022ced8b47eb4e54a6ca6a771d2313fbd2dd5ca51c",
+    "tests/test_phase_seam_photonic_response.py": "283629ccc1e4af17867165bc2368d1416a6b246993acb1fab6e77c25e78c6d6b",
+    "tests/test_phase_seam_layout_controls.py": "a3c55e25820eeb7ef85fe16cd149d8e31bd19c7772645409fcbeb7966c459b9c",
+    "phase_seam_foundation/photonic_io.py": "6e7554b073e78cbd58ef26fcd2c2327f89f696bdb85d2d375f980914bb57d3bf",
+    "phase_seam_foundation/photonic_layout.py": "c6debe28447121ad7b4522acd91ca60e41cd58d0274905dc12908c5dfbf6d350",
+    "phase_seam_foundation/model.py": "642984f5be7345683374719dc66193883d0688031e49ff9ebde12c5a36a939b8",
+    "phase_seam_foundation/photonic_exchange.py": "1414ba5fffd110d35f339941059cccd086fd1b7cc4a3df84c3794095c4d77997",
+    "phase_seam_foundation/photonic_process_binding.json": "28e718a5a2af0224e36443ae16f789f1ca1c4474b58a53063c1610dca2d25718",
+    "phase_seam_foundation/PHOTONIC_RESPONSE.md": "2bfdc3b161fb7d3ce2546181c4706fb600e85d3ac853b8a26326fb52f9adb7ae",
+    "phase_seam_foundation/sector_control.py": "fe528d000e7465e5ba359c6195172720624d5bebca92f15f1d03f9af6cf5694a",
+    "native_relational_qc/cyclotomic64.py": "8fc9c42627feee330b00f1b56559031cc442746e830081eae09f535115d74e52",
+    "native_relational_qc/cyclotomic32.py": "33e203a7280bbe8341e37cb357f1bb6bfcaba9e695ff5144050e3a087733ab76",
+    "native_relational_qc/cyclotomic.py": "36a9f93fb9b6362a6141f13f4aef677de9f19642f6ea01ebb761614acab4ea86",
+    "native_relational_qc/exact.py": "cc0b3be70660ed819b3ad153620ea4338fb6bf57102a4474d4355da2805afdf6",
+    "native_relational_qc/phase_backend.py": "b47a5cfe04449a5def450aa3170ff11697436705427da83050f4aee08345dd98"
+  },
+  "plan_sha256": "b4601ff7c9eef471084c623804d9264d4eee757254d418244ca5d67fd34ba57b"
+}

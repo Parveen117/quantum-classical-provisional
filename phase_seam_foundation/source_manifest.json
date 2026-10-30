@@ -1,0 +1,34 @@
+{
+  "schema": "phase-seam-source-review-v1",
+  "author": "Monty",
+  "source_type": "user-provided LaTeX manuscripts",
+  "originals_modified": false,
+  "originals_redistributed": false,
+  "status": "Reviewed sources; hash binding is not mathematical certification",
+  "files": [
+    {
+      "filename": "dabas_tensor_time.tex",
+      "sha256": "f1672c50c096d51e9a5229a05e6ebc8da915dffa27d1be820bd18adb0dac806b",
+      "bytes": 9746,
+      "role": "cut involution, seam, cost and unresolved time-tensor closure"
+    },
+    {
+      "filename": "dabas euler stablized identity rigor.tex",
+      "sha256": "5de3037805efad7adb6430609be80d337c56c209bbc2517525edb6df8ca57f5f",
+      "bytes": 8785,
+      "role": "finite phase closure; distinction between theorem and conjecture"
+    },
+    {
+      "filename": "1 expo dabas euler helix torus with cost(1).tex",
+      "sha256": "acae54f2d599056191619a7d0a923ac2b264458af4bea13655e156fde5ee587c",
+      "bytes": 12092,
+      "role": "geometric cost schedule and proposed cut/join dynamics"
+    },
+    {
+      "filename": "DABAS EULER ALL INFORMATION.tex",
+      "sha256": "b23fa1fb3e493cbc8f5558b66b885665a7408bc7b599f0e13e96148d811c6ea3",
+      "bytes": 19647,
+      "role": "four-mode phase/seam geometry and recoverability axiom"
+    }
+  ]
+}

@@ -1,0 +1,3954 @@
+{
+  "schema": "phase-seam-joint-v0.2",
+  "status": "conditional finite algebraic quantum completion; no physical device or new-physics claim",
+  "assumptions": [
+    "complexified EMK algebra",
+    "commuting algebras for separated sites",
+    "positive normalized preparation functional",
+    "projector probabilities",
+    "sandwich instruments and complete channels",
+    "chosen joint interaction"
+  ],
+  "inherited_v01": "positive phase-point ensembles and local response still obey CHSH <= 2",
+  "basis": "I,K,R,RK at site 0 then site 1, site 0 varies fastest",
+  "preparation": {
+    "reference_factors": [
+      {
+        "sites": 2,
+        "coefficients": [
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/4",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1/4",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1/4",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1/4",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ]
+      }
+    ],
+    "interaction": {
+      "sites": 2,
+      "coefficients": [
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "1/2",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "-1/2",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      ]
+    },
+    "final_factors": [
+      {
+        "sites": 2,
+        "coefficients": [
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "1/8",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "1/8",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "-1/8",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "-1/8",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "1/8",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "1/8",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "-1/8",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "-1/8",
+              "0",
+              "0"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "contexts": [
+    {
+      "alice_setting": 0,
+      "bob_setting": 0,
+      "probabilities": {
+        "-1,-1": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "1/8",
+            "0",
+            "0"
+          ]
+        },
+        "-1,1": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "-1/8",
+            "0",
+            "0"
+          ]
+        },
+        "1,-1": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "-1/8",
+            "0",
+            "0"
+          ]
+        },
+        "1,1": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "1/8",
+            "0",
+            "0"
+          ]
+        }
+      },
+      "correlation": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "0",
+          "1/2",
+          "0",
+          "0"
+        ]
+      },
+      "alice_marginals": [
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/2",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/2",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      ],
+      "bob_marginals": [
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/2",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/2",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "alice_setting": 0,
+      "bob_setting": 1,
+      "probabilities": {
+        "-1,-1": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "1/8",
+            "0",
+            "0"
+          ]
+        },
+        "-1,1": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "-1/8",
+            "0",
+            "0"
+          ]
+        },
+        "1,-1": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "-1/8",
+            "0",
+            "0"
+          ]
+        },
+        "1,1": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "1/8",
+            "0",
+            "0"
+          ]
+        }
+      },
+      "correlation": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "0",
+          "1/2",
+          "0",
+          "0"
+        ]
+      },
+      "alice_marginals": [
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/2",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/2",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      ],
+      "bob_marginals": [
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/2",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/2",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "alice_setting": 1,
+      "bob_setting": 0,
+      "probabilities": {
+        "-1,-1": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "1/8",
+            "0",
+            "0"
+          ]
+        },
+        "-1,1": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "-1/8",
+            "0",
+            "0"
+          ]
+        },
+        "1,-1": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "-1/8",
+            "0",
+            "0"
+          ]
+        },
+        "1,1": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "1/8",
+            "0",
+            "0"
+          ]
+        }
+      },
+      "correlation": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "0",
+          "1/2",
+          "0",
+          "0"
+        ]
+      },
+      "alice_marginals": [
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/2",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/2",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      ],
+      "bob_marginals": [
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/2",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/2",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "alice_setting": 1,
+      "bob_setting": 1,
+      "probabilities": {
+        "-1,-1": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "-1/8",
+            "0",
+            "0"
+          ]
+        },
+        "-1,1": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "1/8",
+            "0",
+            "0"
+          ]
+        },
+        "1,-1": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "1/8",
+            "0",
+            "0"
+          ]
+        },
+        "1,1": {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/4",
+            "-1/8",
+            "0",
+            "0"
+          ]
+        }
+      },
+      "correlation": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "0",
+          "-1/2",
+          "0",
+          "0"
+        ]
+      },
+      "alice_marginals": [
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/2",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/2",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      ],
+      "bob_marginals": [
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/2",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "1,sqrt(2),i,i*sqrt(2)",
+          "coefficients": [
+            "1/2",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "CHSH": {
+    "basis": "1,sqrt(2),i,i*sqrt(2)",
+    "coefficients": [
+      "0",
+      "2",
+      "0",
+      "0"
+    ]
+  },
+  "CHSH_symbolic": "2*sqrt(2)",
+  "general_upper_bound_proof": "2*sqrt(2)*I-S=(D0^*D0+D1^*D1)/sqrt(2)",
+  "saturation_norms": [
+    {
+      "basis": "1,sqrt(2),i,i*sqrt(2)",
+      "coefficients": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "basis": "1,sqrt(2),i,i*sqrt(2)",
+      "coefficients": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    }
+  ],
+  "gns": {
+    "verified": true,
+    "rank": 4,
+    "nullity": 12,
+    "certificate": {
+      "rank": 4,
+      "basis": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "coordinates": [
+        [
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        [
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        [
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        [
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ]
+      ],
+      "gram": [
+        [
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        [
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        [
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        [
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        [
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        [
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        [
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        [
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        [
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        [
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        [
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        [
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        [
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        [
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        [
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        [
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ]
+      ]
+    },
+    "scope": "finite GNS quotient over the exact field, then complex scalar extension"
+  },
+  "selective_measurement": {
+    "probability": {
+      "basis": "1,sqrt(2),i,i*sqrt(2)",
+      "coefficients": [
+        "1/2",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "repeat_probability": {
+      "basis": "1,sqrt(2),i,i*sqrt(2)",
+      "coefficients": [
+        "1",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "opposite_probability": {
+      "basis": "1,sqrt(2),i,i*sqrt(2)",
+      "coefficients": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "conditional_bob_K": {
+      "basis": "1,sqrt(2),i,i*sqrt(2)",
+      "coefficients": [
+        "-1",
+        "0",
+        "0",
+        "0"
+      ]
+    }
+  },
+  "noise_controls": [
+    {
+      "visibility": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "CHSH": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "0",
+          "1",
+          "0",
+          "0"
+        ]
+      }
+    },
+    {
+      "visibility": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "0",
+          "1/2",
+          "0",
+          "0"
+        ]
+      },
+      "CHSH": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "2",
+          "0",
+          "0",
+          "0"
+        ]
+      }
+    },
+    {
+      "visibility": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "3/4",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "CHSH": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "0",
+          "3/2",
+          "0",
+          "0"
+        ]
+      }
+    }
+  ],
+  "white_noise_boundary": "visibility=1/sqrt(2), CHSH=2; declared depolarizing model only",
+  "product_control_CHSH": {
+    "basis": "1,sqrt(2),i,i*sqrt(2)",
+    "coefficients": [
+      "0",
+      "1",
+      "0",
+      "0"
+    ]
+  },
+  "pr_negative_control": {
+    "CHSH": "4",
+    "positive_square_value": {
+      "basis": "1,sqrt(2),i,i*sqrt(2)",
+      "coefficients": [
+        "2",
+        "-2",
+        "0",
+        "0"
+      ]
+    },
+    "conclusion": "2-2*sqrt(2)<0; not an admitted positive state"
+  },
+  "hardware_target": "U(chi)=cos(chi)I-sin(chi)R_A L_B; chi=pi/4 for the chosen preparation",
+  "open": [
+    "derive probability/positivity assumptions from manuscript primitives",
+    "faithful map from the v0.1 four phase coordinates and memory to this operator state",
+    "material implementation and measured noise",
+    "time-tensor law and energy calibration",
+    "universal/scalable computing, physical qubit count or quantum speedup"
+  ],
+  "validation": {
+    "tests": 64,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "seconds": 7.680342114999803,
+    "scope": "new joint tests, v0.1 foundation tests, calculator smoke; not full native/Shor suite"
+  },
+  "checked_sources_sha256": {
+    "phase_seam_foundation/joint.py": "53548114a84dfb24022acee866c10b67f0bd71ec9b9b203c014cf76af8ccbb36",
+    "phase_seam_foundation/joint_qualification.py": "c539797d59432748a37d9a3cc12989b2f728f6698bb34e5a80a39d105b109d9c",
+    "phase_seam_foundation/model.py": "efae81124f5d2058b7e728691b5b1feceee74a3d194835a7f2a9d2809fff6de2",
+    "phase_seam_foundation/joint_source_manifest.json": "57712c9537dca035d69af15fe7732e3a9efd32a3c93c874624cd09078586c0c3",
+    "native_relational_qc/exact.py": "cc0b3be70660ed819b3ad153620ea4338fb6bf57102a4474d4355da2805afdf6",
+    "tests/test_phase_seam_joint.py": "e0ff847109cfa78a91b0b7766171830a1dc52e12c90a1e90c6a5bcb0235ae409",
+    "tests/test_phase_seam_foundation.py": "b2307143b9cbae80e7ffb63146be68cab105c15c5fdadf8a67048b4994f798c7",
+    "tests/test_native_calculator.py": "1730a1648fec31bcb7023c07e1a8913652ea51782ba554120323f75acaab1024",
+    "benchmarks/phase_seam_joint_audit.py": "b10729ddea0541b42666927890f10a96d575e83d8c4f315709cd9d55f8bab4e1"
+  }
+}

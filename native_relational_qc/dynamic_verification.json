@@ -1,0 +1,4154 @@
+{
+  "approximate_truncation": false,
+  "claim": "Exact selected results with measurement, reset, classical feedback and rational Pauli channels; no general quantum-computer replacement claim.",
+  "evidence_class": "LOCAL_EXACT_DYNAMIC_CHANNEL_AND_RECOVERY_COMPARISON",
+  "hardware_jobs": 0,
+  "negative_controls": {
+    "bitflip_no_recovery_fidelity": {
+      "basis": "1,sqrt(2),i,i*sqrt(2)",
+      "coefficients": [
+        "9/10",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "passed": true,
+    "shor_z0_no_recovery_fidelity": {
+      "basis": "1,sqrt(2),i,i*sqrt(2)",
+      "coefficients": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "teleport_no_feedback_bloch": [
+      {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      }
+    ]
+  },
+  "passed": true,
+  "protocol": {
+    "aer_readings": "saved expectation values of simulated states, not estimates from one measured output bit",
+    "aer_shots": "one local simulator trajectory per exported circuit; Shor syndromes are deterministic and independently checked exactly; corrected teleportation output readings are the same in every branch, checked separately by exact joint queries and forward density branches",
+    "initial_boundary": "quantum all-zero and classical all-zero; input preparations are part of each circuit",
+    "limits": "term/bit/work guards; conditional predicates and requested joint outcomes can expand exponentially; no polynomial guarantee",
+    "native": "complete Pauli times classical Walsh expansion; no trajectory/density/statevector construction; no truncation",
+    "noise": "synthetic independent rational X-flip probability 1/10 on each data qubit each round; ideal syndrome operations",
+    "random_crosschecks": "unit tests include 32 seeded 1..4-qubit dynamic programs against independent forward unnormalized density branches; joint outcomes, joint moments, overwrite, feedback and rational noise",
+    "round_formula": "pL=3*p^2-2*p^3; entanglement fidelity after r corrected rounds = (1+(1-2*pL)^r)/2",
+    "shor": "nine data qubits, one reused syndrome ancilla, one external reference; new ideal recovery circuit, not a replay of historical IBM jobs",
+    "timings": "descriptive native execution times only; no speed comparison to Aer or quantum hardware in this report"
+  },
+  "repeated_bitflip_recovery": [
+    {
+      "analytic_expected": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "243/250",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "243/250",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "classical_bits": 2,
+      "exact_match": true,
+      "instructions": 21,
+      "max_coefficient_bits": 7,
+      "maximum_density_reference_error": 2.220446049250313e-16,
+      "native_three_query_seconds": 0.0033298240014119074,
+      "peak_terms": 4,
+      "qubits": 5,
+      "rounds": 1
+    },
+    {
+      "analytic_expected": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "3596157/3906250",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "3596157/3906250",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "classical_bits": 2,
+      "exact_match": true,
+      "instructions": 49,
+      "max_coefficient_bits": 21,
+      "maximum_density_reference_error": 2.220446049250313e-16,
+      "native_three_query_seconds": 0.019547244999557734,
+      "peak_terms": 16,
+      "qubits": 5,
+      "rounds": 3
+    },
+    {
+      "analytic_expected": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "97193236802096801/119209289550781250",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "97193236802096801/119209289550781250",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "classical_bits": 2,
+      "exact_match": true,
+      "instructions": 119,
+      "max_coefficient_bits": 56,
+      "native_three_query_seconds": 0.06438599199464079,
+      "peak_terms": 16,
+      "qubits": 5,
+      "rounds": 8
+    },
+    {
+      "analytic_expected": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "14618067253145893469432089316942042450366386959069650261531157827201/25243548967072377773175314089049159349542605923488736152648925781250",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "14618067253145893469432089316942042450366386959069650261531157827201/25243548967072377773175314089049159349542605923488736152648925781250",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "classical_bits": 2,
+      "exact_match": true,
+      "instructions": 455,
+      "max_coefficient_bits": 223,
+      "native_three_query_seconds": 0.27094476299680537,
+      "peak_terms": 16,
+      "qubits": 5,
+      "rounds": 32
+    },
+    {
+      "analytic_expected": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "25395300071221959403878618850139175929071840684388360442595650483730040472119009487909620978077575940357202228008501340271096037377954675806949499888542618856992101870181399770887644799544282331522934645880220711527946212800176314481040179987315207633979099419182348801/50758836746312984465480491116610870936472376994021911632121206424789533957785989478648148581115685724593291821155017916932041426848872534055614127153523595568774329994713901337653176413364876136819056543615614221027655944274955060468990097888308810070157051086425781250",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "25395300071221959403878618850139175929071840684388360442595650483730040472119009487909620978077575940357202228008501340271096037377954675806949499888542618856992101870181399770887644799544282331522934645880220711527946212800176314481040179987315207633979099419182348801/50758836746312984465480491116610870936472376994021911632121206424789533957785989478648148581115685724593291821155017916932041426848872534055614127153523595568774329994713901337653176413364876136819056543615614221027655944274955060468990097888308810070157051086425781250",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "classical_bits": 2,
+      "exact_match": true,
+      "instructions": 1799,
+      "max_coefficient_bits": 892,
+      "native_three_query_seconds": 1.1681156529957661,
+      "peak_terms": 16,
+      "qubits": 5,
+      "rounds": 128
+    }
+  ],
+  "schema": "native-dynamic-exact-verification-v1",
+  "shor_single_pauli_recovery": [
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": null,
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.3134687279962236,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 81,
+          "invariant_instructions": 32,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7766
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 81,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 30675
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 81,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 693
+        }
+      },
+      "syndrome_bits_low_first": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": [
+        0,
+        "x"
+      ],
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.30666319300507894,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 82,
+          "invariant_instructions": 32,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7895
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 82,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 31188
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 82,
+          "invariant_instructions": 34,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 702
+        }
+      },
+      "syndrome_bits_low_first": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": [
+        0,
+        "y"
+      ],
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.2989108780020615,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 82,
+          "invariant_instructions": 32,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7895
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 82,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 31188
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 82,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 702
+        }
+      },
+      "syndrome_bits_low_first": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": [
+        0,
+        "z"
+      ],
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.30865664199518505,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 82,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7895
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 82,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 31188
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 82,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 702
+        }
+      },
+      "syndrome_bits_low_first": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": [
+        1,
+        "x"
+      ],
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.3213995709957089,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 82,
+          "invariant_instructions": 32,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7895
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 82,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 31188
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 82,
+          "invariant_instructions": 34,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 702
+        }
+      },
+      "syndrome_bits_low_first": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": [
+        1,
+        "y"
+      ],
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.30143631599639775,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 82,
+          "invariant_instructions": 32,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7895
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 82,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 31188
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 82,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 702
+        }
+      },
+      "syndrome_bits_low_first": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": [
+        1,
+        "z"
+      ],
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.30448330599756446,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 82,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7895
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 82,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 31188
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 82,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 702
+        }
+      },
+      "syndrome_bits_low_first": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": [
+        2,
+        "x"
+      ],
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.3112927429974661,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 82,
+          "invariant_instructions": 32,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7895
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 82,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 31188
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 82,
+          "invariant_instructions": 34,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 702
+        }
+      },
+      "syndrome_bits_low_first": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": [
+        2,
+        "y"
+      ],
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.34633513700100593,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 82,
+          "invariant_instructions": 32,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7895
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 82,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 31188
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 82,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 702
+        }
+      },
+      "syndrome_bits_low_first": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": [
+        2,
+        "z"
+      ],
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.3290659379999852,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 82,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7895
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 82,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 31188
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 82,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 702
+        }
+      },
+      "syndrome_bits_low_first": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": [
+        3,
+        "x"
+      ],
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.31818671300425194,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 82,
+          "invariant_instructions": 32,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7895
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 82,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 31188
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 82,
+          "invariant_instructions": 34,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 702
+        }
+      },
+      "syndrome_bits_low_first": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": [
+        3,
+        "y"
+      ],
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.3230677570027183,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 82,
+          "invariant_instructions": 32,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7895
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 82,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 31188
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 82,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 702
+        }
+      },
+      "syndrome_bits_low_first": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": [
+        3,
+        "z"
+      ],
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.3381585070019355,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 82,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7895
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 82,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 31188
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 82,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 702
+        }
+      },
+      "syndrome_bits_low_first": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": [
+        4,
+        "x"
+      ],
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.3119704600030673,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 82,
+          "invariant_instructions": 32,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7895
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 82,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 31188
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 82,
+          "invariant_instructions": 34,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 702
+        }
+      },
+      "syndrome_bits_low_first": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": [
+        4,
+        "y"
+      ],
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.3080462100042496,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 82,
+          "invariant_instructions": 32,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7895
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 82,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 31188
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 82,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 702
+        }
+      },
+      "syndrome_bits_low_first": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": [
+        4,
+        "z"
+      ],
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.31893329699960304,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 82,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7895
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 82,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 31188
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 82,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 702
+        }
+      },
+      "syndrome_bits_low_first": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": [
+        5,
+        "x"
+      ],
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.3465850560023682,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 82,
+          "invariant_instructions": 32,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7895
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 82,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 31188
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 82,
+          "invariant_instructions": 34,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 702
+        }
+      },
+      "syndrome_bits_low_first": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": [
+        5,
+        "y"
+      ],
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.313692579002236,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 82,
+          "invariant_instructions": 32,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7895
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 82,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 31188
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 82,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 702
+        }
+      },
+      "syndrome_bits_low_first": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": [
+        5,
+        "z"
+      ],
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.2908661969995592,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 82,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7895
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 82,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 31188
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 82,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 702
+        }
+      },
+      "syndrome_bits_low_first": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": [
+        6,
+        "x"
+      ],
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.3032477519955137,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 82,
+          "invariant_instructions": 32,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7895
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 82,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 31188
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 82,
+          "invariant_instructions": 34,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 702
+        }
+      },
+      "syndrome_bits_low_first": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": [
+        6,
+        "y"
+      ],
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.31818756199936615,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 82,
+          "invariant_instructions": 32,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7895
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 82,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 31188
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 82,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 702
+        }
+      },
+      "syndrome_bits_low_first": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": [
+        6,
+        "z"
+      ],
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.29985356199904345,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 82,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7895
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 82,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 31188
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 82,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 702
+        }
+      },
+      "syndrome_bits_low_first": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": [
+        7,
+        "x"
+      ],
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.2869924330007052,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 82,
+          "invariant_instructions": 32,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7895
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 82,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 31188
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 82,
+          "invariant_instructions": 34,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 702
+        }
+      },
+      "syndrome_bits_low_first": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": [
+        7,
+        "y"
+      ],
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.30634305799321737,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 82,
+          "invariant_instructions": 32,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7895
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 82,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 31188
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 82,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 702
+        }
+      },
+      "syndrome_bits_low_first": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": [
+        7,
+        "z"
+      ],
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.31843702000332996,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 82,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7895
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 82,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 31188
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 82,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 702
+        }
+      },
+      "syndrome_bits_low_first": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": [
+        8,
+        "x"
+      ],
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.3029224010024336,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 82,
+          "invariant_instructions": 32,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7895
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 82,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 31188
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 82,
+          "invariant_instructions": 34,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 702
+        }
+      },
+      "syndrome_bits_low_first": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": [
+        8,
+        "y"
+      ],
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.30247699399478734,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 82,
+          "invariant_instructions": 32,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7895
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 82,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 31188
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 82,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 702
+        }
+      },
+      "syndrome_bits_low_first": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "aer_stabilizer_reference": {
+        "X": 1.0,
+        "Y": -1.0,
+        "Z": 1.0
+      },
+      "aer_syndrome_matches": true,
+      "bell_entanglement_fidelity": {
+        "basis": "1,sqrt(2),i,i*sqrt(2)",
+        "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "error": [
+        8,
+        "z"
+      ],
+      "exact_deterministic_syndrome": true,
+      "exact_identity_reading": true,
+      "maximum_reference_error": 0.0,
+      "native_three_query_seconds": 0.2935292900001514,
+      "readings": {
+        "X": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 64,
+          "instructions_examined": 82,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 4,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 64,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 7895
+        },
+        "Y": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 256,
+          "instructions_examined": 82,
+          "invariant_instructions": 13,
+          "max_coefficient_bits": 5,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 256,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 31188
+        },
+        "Z": {
+          "conditioned_gates": 12,
+          "density_matrix_constructed": false,
+          "final_terms": 4,
+          "instructions_examined": 82,
+          "invariant_instructions": 33,
+          "max_coefficient_bits": 3,
+          "measurements": 8,
+          "pauli_channels": 0,
+          "peak_terms": 4,
+          "resets": 9,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 702
+        }
+      },
+      "syndrome_bits_low_first": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "source_sha256": {
+    "native_relational_qc/__init__.py": "2df0c6684869d87776756cc78918199a9a09fa86f8c9e6d41d675591698c9350",
+    "native_relational_qc/__main__.py": "c6203974637a24db3e87d63be17d4cad0a01ab23da898f4237b5f612f944a4f0",
+    "native_relational_qc/algebra.py": "3d23b2a3a345b0760bfce1cff9e4eea9635543ee566c9dd6f0078405f211e9ab",
+    "native_relational_qc/bridge.py": "6c863d69da9b477ad17948e6c935d3c058d426f0322e5df99eb4f8c09a61b4b3",
+    "native_relational_qc/circuit.py": "6215adf52443de8ee1db01f8e641c4c50124810a7674fd3258d826ff08b9e366",
+    "native_relational_qc/compact.py": "1acff6eaa8664b4ba33285c66c9f433ecd0148aa8383a18f79dbd2ccb66e898d",
+    "native_relational_qc/compact_benchmark.py": "38a618ea91bd436c740b75f67a908b63067f1b7332468ca4382cf7921872d5a6",
+    "native_relational_qc/compact_qiskit.py": "92f7bd85d6e753e9c898bcbd6f28e65b7fcc4cdd0a3ddedab4ab94df2fddcf05",
+    "native_relational_qc/dynamic.py": "88421139cba72f0d86f3644c5933e03dd44d8afa1fdc79b250b2e8bf5390acd9",
+    "native_relational_qc/dynamic_examples.py": "0d40d9b3dbf098623c7586f13cdb54d9c6f627e4af6f0c398e79f983129d259e",
+    "native_relational_qc/dynamic_qiskit.py": "be1ff2a0ff1187370dad1d42d5fa126f1f5b6ff1d46b976861ef917c2f930f58",
+    "native_relational_qc/dynamic_reference.py": "3ac7547482028029660081c4122bbce370d09a74b466432e4d4d48b529df89e1",
+    "native_relational_qc/dynamic_verify.py": "aa8b83844876d6627403443f0ea6e3d1504a9ad872b1f64ecc8bceab3f5eb5a2",
+    "native_relational_qc/exact.py": "cc0b3be70660ed819b3ad153620ea4338fb6bf57102a4474d4355da2805afdf6",
+    "native_relational_qc/examples.py": "2066bf7326cde2e064c9800de8fda87eb74314af99200593bc0fb39e3f8d47d5",
+    "native_relational_qc/observer.py": "5338e32fc5f28e8d1975aa2c62885419c7026bb5cbf88b133eda60a3bc8c4601",
+    "native_relational_qc/qiskit_adapter.py": "d3e877d52f7aeeebc9e9db996b1675c1feb2a99815450111365acaf61c51f2b8",
+    "native_relational_qc/state.py": "2ff1413d09f36f6449eb6ae7ca8c53de71ac86b9b0711e080849987ab031093e",
+    "native_relational_qc/verify.py": "f3c03e25b279701155646a52c7ef96c9eab5696da74294ce9bc2a035c3c3ecf3",
+    "tests/test_native_compact.py": "193e1a4a4005b047c0e6dfd5ded886df7f6fe349eac7364ab485e2e3b15faab6",
+    "tests/test_native_dynamic.py": "41f94d9520e98c80ed7f58fdacf0b60ba31455c63bbf5a313975f4d4ae6a0b27",
+    "tests/test_native_observer.py": "89914d95fa87f9526caa193b185ce20666279100a6cdc87a7930e4cd3f27a31c",
+    "tests/test_native_qiskit_adapter.py": "c6f2c4c584fb8b619839fc1ea881a8c1b15a5ecc43c077d5652e3acf9f33a430",
+    "tests/test_native_relational_qc.py": "4d70497ff3cc85284a4404bd8f25eddc8c9d54cf119ce52d626807df642dcaba"
+  },
+  "teleportation": [
+    {
+      "aer_density_reference": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1.0
+      },
+      "density_reference": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.9999999999999997
+      },
+      "exact_match": true,
+      "input": "zero",
+      "maximum_reference_error": 3.3306690738754696e-16,
+      "preparation": [],
+      "readings": {
+        "X": {
+          "conditioned_gates": 2,
+          "density_matrix_constructed": false,
+          "final_terms": 1,
+          "instructions_examined": 10,
+          "invariant_instructions": 4,
+          "max_coefficient_bits": 2,
+          "measurements": 2,
+          "pauli_channels": 0,
+          "peak_terms": 2,
+          "resets": 2,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 38
+        },
+        "Y": {
+          "conditioned_gates": 2,
+          "density_matrix_constructed": false,
+          "final_terms": 1,
+          "instructions_examined": 10,
+          "invariant_instructions": 2,
+          "max_coefficient_bits": 2,
+          "measurements": 2,
+          "pauli_channels": 0,
+          "peak_terms": 2,
+          "resets": 2,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 42
+        },
+        "Z": {
+          "conditioned_gates": 2,
+          "density_matrix_constructed": false,
+          "final_terms": 1,
+          "instructions_examined": 10,
+          "invariant_instructions": 6,
+          "max_coefficient_bits": 2,
+          "measurements": 2,
+          "pauli_channels": 0,
+          "peak_terms": 2,
+          "resets": 2,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 38
+        }
+      }
+    },
+    {
+      "aer_density_reference": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -1.0
+      },
+      "density_reference": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -0.9999999999999997
+      },
+      "exact_match": true,
+      "input": "one",
+      "maximum_reference_error": 3.3306690738754696e-16,
+      "preparation": [
+        "x"
+      ],
+      "readings": {
+        "X": {
+          "conditioned_gates": 2,
+          "density_matrix_constructed": false,
+          "final_terms": 1,
+          "instructions_examined": 11,
+          "invariant_instructions": 5,
+          "max_coefficient_bits": 2,
+          "measurements": 2,
+          "pauli_channels": 0,
+          "peak_terms": 2,
+          "resets": 2,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 41
+        },
+        "Y": {
+          "conditioned_gates": 2,
+          "density_matrix_constructed": false,
+          "final_terms": 1,
+          "instructions_examined": 11,
+          "invariant_instructions": 2,
+          "max_coefficient_bits": 2,
+          "measurements": 2,
+          "pauli_channels": 0,
+          "peak_terms": 2,
+          "resets": 2,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 45
+        },
+        "Z": {
+          "conditioned_gates": 2,
+          "density_matrix_constructed": false,
+          "final_terms": 1,
+          "instructions_examined": 11,
+          "invariant_instructions": 6,
+          "max_coefficient_bits": 2,
+          "measurements": 2,
+          "pauli_channels": 0,
+          "peak_terms": 2,
+          "resets": 2,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 41
+        }
+      }
+    },
+    {
+      "aer_density_reference": {
+        "X": 1.0,
+        "Y": -1.2246467991473532e-16,
+        "Z": -2.220446049250313e-16
+      },
+      "density_reference": {
+        "X": 0.9999999999999996,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "exact_match": true,
+      "input": "plus",
+      "maximum_reference_error": 4.440892098500626e-16,
+      "preparation": [
+        "h"
+      ],
+      "readings": {
+        "X": {
+          "conditioned_gates": 2,
+          "density_matrix_constructed": false,
+          "final_terms": 1,
+          "instructions_examined": 11,
+          "invariant_instructions": 4,
+          "max_coefficient_bits": 2,
+          "measurements": 2,
+          "pauli_channels": 0,
+          "peak_terms": 2,
+          "resets": 2,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 41
+        },
+        "Y": {
+          "conditioned_gates": 2,
+          "density_matrix_constructed": false,
+          "final_terms": 1,
+          "instructions_examined": 11,
+          "invariant_instructions": 2,
+          "max_coefficient_bits": 2,
+          "measurements": 2,
+          "pauli_channels": 0,
+          "peak_terms": 2,
+          "resets": 2,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 45
+        },
+        "Z": {
+          "conditioned_gates": 2,
+          "density_matrix_constructed": false,
+          "final_terms": 1,
+          "instructions_examined": 11,
+          "invariant_instructions": 6,
+          "max_coefficient_bits": 2,
+          "measurements": 2,
+          "pauli_channels": 0,
+          "peak_terms": 2,
+          "resets": 2,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 41
+        }
+      }
+    },
+    {
+      "aer_density_reference": {
+        "X": -1.0,
+        "Y": 1.2246467991473532e-16,
+        "Z": -6.661338147750939e-16
+      },
+      "density_reference": {
+        "X": -0.9999999999999996,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "exact_match": true,
+      "input": "minus",
+      "maximum_reference_error": 6.661338147750939e-16,
+      "preparation": [
+        "x",
+        "h"
+      ],
+      "readings": {
+        "X": {
+          "conditioned_gates": 2,
+          "density_matrix_constructed": false,
+          "final_terms": 1,
+          "instructions_examined": 12,
+          "invariant_instructions": 4,
+          "max_coefficient_bits": 2,
+          "measurements": 2,
+          "pauli_channels": 0,
+          "peak_terms": 2,
+          "resets": 2,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 44
+        },
+        "Y": {
+          "conditioned_gates": 2,
+          "density_matrix_constructed": false,
+          "final_terms": 1,
+          "instructions_examined": 12,
+          "invariant_instructions": 2,
+          "max_coefficient_bits": 2,
+          "measurements": 2,
+          "pauli_channels": 0,
+          "peak_terms": 2,
+          "resets": 2,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 48
+        },
+        "Z": {
+          "conditioned_gates": 2,
+          "density_matrix_constructed": false,
+          "final_terms": 1,
+          "instructions_examined": 12,
+          "invariant_instructions": 7,
+          "max_coefficient_bits": 2,
+          "measurements": 2,
+          "pauli_channels": 0,
+          "peak_terms": 2,
+          "resets": 2,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 44
+        }
+      }
+    },
+    {
+      "aer_density_reference": {
+        "X": 1.2246467991473532e-16,
+        "Y": 1.0,
+        "Z": -2.220446049250313e-16
+      },
+      "density_reference": {
+        "X": 0.0,
+        "Y": 0.9999999999999996,
+        "Z": 0.0
+      },
+      "exact_match": true,
+      "input": "plus_i",
+      "maximum_reference_error": 4.440892098500626e-16,
+      "preparation": [
+        "h",
+        "s"
+      ],
+      "readings": {
+        "X": {
+          "conditioned_gates": 2,
+          "density_matrix_constructed": false,
+          "final_terms": 1,
+          "instructions_examined": 12,
+          "invariant_instructions": 4,
+          "max_coefficient_bits": 2,
+          "measurements": 2,
+          "pauli_channels": 0,
+          "peak_terms": 2,
+          "resets": 2,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 44
+        },
+        "Y": {
+          "conditioned_gates": 2,
+          "density_matrix_constructed": false,
+          "final_terms": 1,
+          "instructions_examined": 12,
+          "invariant_instructions": 2,
+          "max_coefficient_bits": 2,
+          "measurements": 2,
+          "pauli_channels": 0,
+          "peak_terms": 2,
+          "resets": 2,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 48
+        },
+        "Z": {
+          "conditioned_gates": 2,
+          "density_matrix_constructed": false,
+          "final_terms": 1,
+          "instructions_examined": 12,
+          "invariant_instructions": 7,
+          "max_coefficient_bits": 2,
+          "measurements": 2,
+          "pauli_channels": 0,
+          "peak_terms": 2,
+          "resets": 2,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 44
+        }
+      }
+    },
+    {
+      "aer_density_reference": {
+        "X": -1.2246467991473532e-16,
+        "Y": -1.0,
+        "Z": -2.220446049250313e-16
+      },
+      "density_reference": {
+        "X": 0.0,
+        "Y": -0.9999999999999996,
+        "Z": 0.0
+      },
+      "exact_match": true,
+      "input": "minus_i",
+      "maximum_reference_error": 4.440892098500626e-16,
+      "preparation": [
+        "h",
+        "sdg"
+      ],
+      "readings": {
+        "X": {
+          "conditioned_gates": 2,
+          "density_matrix_constructed": false,
+          "final_terms": 1,
+          "instructions_examined": 12,
+          "invariant_instructions": 4,
+          "max_coefficient_bits": 2,
+          "measurements": 2,
+          "pauli_channels": 0,
+          "peak_terms": 2,
+          "resets": 2,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 44
+        },
+        "Y": {
+          "conditioned_gates": 2,
+          "density_matrix_constructed": false,
+          "final_terms": 1,
+          "instructions_examined": 12,
+          "invariant_instructions": 2,
+          "max_coefficient_bits": 2,
+          "measurements": 2,
+          "pauli_channels": 0,
+          "peak_terms": 2,
+          "resets": 2,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "-1",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 48
+        },
+        "Z": {
+          "conditioned_gates": 2,
+          "density_matrix_constructed": false,
+          "final_terms": 1,
+          "instructions_examined": 12,
+          "invariant_instructions": 7,
+          "max_coefficient_bits": 2,
+          "measurements": 2,
+          "pauli_channels": 0,
+          "peak_terms": 2,
+          "resets": 2,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 44
+        }
+      }
+    },
+    {
+      "aer_density_reference": {
+        "X": 0.7071067811865476,
+        "Y": 0.7071067811865474,
+        "Z": -1.1102230246251565e-16
+      },
+      "density_reference": {
+        "X": 0.7071067811865471,
+        "Y": 0.7071067811865471,
+        "Z": 1.1102230246251565e-16
+      },
+      "exact_match": true,
+      "input": "magic",
+      "maximum_reference_error": 4.440892098500626e-16,
+      "preparation": [
+        "h",
+        "t"
+      ],
+      "readings": {
+        "X": {
+          "conditioned_gates": 2,
+          "density_matrix_constructed": false,
+          "final_terms": 2,
+          "instructions_examined": 12,
+          "invariant_instructions": 4,
+          "max_coefficient_bits": 2,
+          "measurements": 2,
+          "pauli_channels": 0,
+          "peak_terms": 2,
+          "resets": 2,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "1/2",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 48
+        },
+        "Y": {
+          "conditioned_gates": 2,
+          "density_matrix_constructed": false,
+          "final_terms": 2,
+          "instructions_examined": 12,
+          "invariant_instructions": 2,
+          "max_coefficient_bits": 2,
+          "measurements": 2,
+          "pauli_channels": 0,
+          "peak_terms": 2,
+          "resets": 2,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "1/2",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 52
+        },
+        "Z": {
+          "conditioned_gates": 2,
+          "density_matrix_constructed": false,
+          "final_terms": 1,
+          "instructions_examined": 12,
+          "invariant_instructions": 7,
+          "max_coefficient_bits": 2,
+          "measurements": 2,
+          "pauli_channels": 0,
+          "peak_terms": 2,
+          "resets": 2,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 44
+        }
+      }
+    },
+    {
+      "aer_density_reference": {
+        "X": 1.3544899930148205e-16,
+        "Y": -0.7071067811865476,
+        "Z": 0.7071067811865475
+      },
+      "density_reference": {
+        "X": 1.5265566588595898e-16,
+        "Y": -0.707106781186547,
+        "Z": 0.707106781186547
+      },
+      "exact_match": true,
+      "input": "hth",
+      "maximum_reference_error": 5.551115123125783e-16,
+      "preparation": [
+        "h",
+        "t",
+        "h"
+      ],
+      "readings": {
+        "X": {
+          "conditioned_gates": 2,
+          "density_matrix_constructed": false,
+          "final_terms": 1,
+          "instructions_examined": 13,
+          "invariant_instructions": 5,
+          "max_coefficient_bits": 2,
+          "measurements": 2,
+          "pauli_channels": 0,
+          "peak_terms": 2,
+          "resets": 2,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "0",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 47
+        },
+        "Y": {
+          "conditioned_gates": 2,
+          "density_matrix_constructed": false,
+          "final_terms": 2,
+          "instructions_examined": 13,
+          "invariant_instructions": 2,
+          "max_coefficient_bits": 2,
+          "measurements": 2,
+          "pauli_channels": 0,
+          "peak_terms": 2,
+          "resets": 2,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "-1/2",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 55
+        },
+        "Z": {
+          "conditioned_gates": 2,
+          "density_matrix_constructed": false,
+          "final_terms": 2,
+          "instructions_examined": 13,
+          "invariant_instructions": 6,
+          "max_coefficient_bits": 2,
+          "measurements": 2,
+          "pauli_channels": 0,
+          "peak_terms": 2,
+          "resets": 2,
+          "statevector_constructed": false,
+          "trajectories_enumerated": 0,
+          "truncated_terms": 0,
+          "value": {
+            "basis": "1,sqrt(2),i,i*sqrt(2)",
+            "coefficients": [
+              "0",
+              "1/2",
+              "0",
+              "0"
+            ]
+          },
+          "work_units": 51
+        }
+      }
+    }
+  ],
+  "tests": {
+    "errors": 0,
+    "failure_details": [],
+    "failures": 0,
+    "run": 83,
+    "skipped": 0
+  },
+  "versions": {
+    "numpy": "2.5.4",
+    "python": "3.12.14",
+    "qiskit": "2.6.0",
+    "qiskit_aer": "0.17.2"
+  }
+}

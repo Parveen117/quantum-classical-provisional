@@ -1,0 +1,1487 @@
+{
+  "aer_options": {
+    "matrix_product_state_truncation_threshold": 0,
+    "max_parallel_threads": 1,
+    "method": "matrix_product_state"
+  },
+  "cases": [
+    {
+      "engines": {
+        "aer_mps": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 2.220446049250313e-16,
+          "median_seconds": 0.021520183996472042,
+          "samples": [
+            {
+              "answers": {
+                "marginal:00": 0.5000000000000001,
+                "marginal:01": 0.0,
+                "marginal:10": 0.0,
+                "marginal:11": 0.4999999999999999,
+                "p0": 0.5000000000000001,
+                "zlast": 2.220446049250313e-16
+              },
+              "execution_seconds": 0.016278187998977955,
+              "peak_rss_bytes": 107409408,
+              "status": "completed",
+              "wall_seconds": 1.3572663809973164
+            },
+            {
+              "answers": {
+                "marginal:00": 0.5000000000000001,
+                "marginal:01": 0.0,
+                "marginal:10": 0.0,
+                "marginal:11": 0.4999999999999999,
+                "p0": 0.5000000000000001,
+                "zlast": 2.220446049250313e-16
+              },
+              "execution_seconds": 0.08672724700591061,
+              "peak_rss_bytes": 106139648,
+              "status": "completed",
+              "wall_seconds": 0.931844706996344
+            },
+            {
+              "answers": {
+                "marginal:00": 0.5000000000000001,
+                "marginal:01": 0.0,
+                "marginal:10": 0.0,
+                "marginal:11": 0.4999999999999999,
+                "p0": 0.5000000000000001,
+                "zlast": 2.220446049250313e-16
+              },
+              "execution_seconds": 0.021520183996472042,
+              "peak_rss_bytes": 104726528,
+              "status": "completed",
+              "wall_seconds": 4.608380411998951
+            }
+          ]
+        },
+        "nrqc": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 0.0,
+          "median_seconds": 0.010663166998710949,
+          "samples": [
+            {
+              "answers": {
+                "marginal:00": 0.5,
+                "marginal:01": 0.0,
+                "marginal:10": 0.0,
+                "marginal:11": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.016364372997486498,
+              "peak_rss_bytes": 36978688,
+              "statistics": {},
+              "status": "completed",
+              "wall_seconds": 1.7210020389975398
+            },
+            {
+              "answers": {
+                "marginal:00": 0.5,
+                "marginal:01": 0.0,
+                "marginal:10": 0.0,
+                "marginal:11": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.010663166998710949,
+              "peak_rss_bytes": 35258368,
+              "statistics": {},
+              "status": "completed",
+              "wall_seconds": 2.6680818449967774
+            },
+            {
+              "answers": {
+                "marginal:00": 0.5,
+                "marginal:01": 0.0,
+                "marginal:10": 0.0,
+                "marginal:11": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.007029401000181679,
+              "peak_rss_bytes": 35340288,
+              "statistics": {},
+              "status": "completed",
+              "wall_seconds": 0.5526491119962884
+            }
+          ]
+        },
+        "stim": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 0.0,
+          "median_seconds": 0.0003057040012208745,
+          "samples": [
+            {
+              "answers": {
+                "marginal:00": 0.5,
+                "marginal:01": 0.0,
+                "marginal:10": 0.0,
+                "marginal:11": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "execution_seconds": 0.0002712639980018139,
+              "peak_rss_bytes": 41234432,
+              "status": "completed",
+              "unsupported_gates": [],
+              "wall_seconds": 0.2887566040008096
+            },
+            {
+              "answers": {
+                "marginal:00": 0.5,
+                "marginal:01": 0.0,
+                "marginal:10": 0.0,
+                "marginal:11": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "execution_seconds": 0.0003057040012208745,
+              "peak_rss_bytes": 41820160,
+              "status": "completed",
+              "unsupported_gates": [],
+              "wall_seconds": 1.1814222670000163
+            },
+            {
+              "answers": {
+                "marginal:00": 0.5,
+                "marginal:01": 0.0,
+                "marginal:10": 0.0,
+                "marginal:11": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "execution_seconds": 0.0009517299986327998,
+              "peak_rss_bytes": 40112128,
+              "status": "completed",
+              "unsupported_gates": [],
+              "wall_seconds": 1.3729269399991608
+            }
+          ]
+        }
+      },
+      "input": "benchmarks/comparisons/inputs/bell_2.json",
+      "sha256": "d9dce1c136d48ff04fa09aa891c54cdbe39412cc1d61ffa7873a470956722422"
+    },
+    {
+      "engines": {
+        "aer_mps": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 7.81032465273685e-12,
+          "median_seconds": 0.41747317000408657,
+          "samples": [
+            {
+              "answers": {
+                "marginal:0000": 0.06249999999977671,
+                "marginal:0001": 0.06250000000000698,
+                "marginal:0010": 0.0625000000006707,
+                "marginal:0011": 0.06249999999914653,
+                "marginal:0100": 0.062499999998856276,
+                "marginal:0101": 0.06250000000092505,
+                "marginal:0110": 0.06249999999993753,
+                "marginal:0111": 0.062499999999840634,
+                "marginal:1000": 0.062499999999992006,
+                "marginal:1001": 0.0625000000002223,
+                "marginal:1010": 0.06250000000088601,
+                "marginal:1011": 0.06249999999936178,
+                "marginal:1100": 0.06249999999907143,
+                "marginal:1101": 0.0625000000011403,
+                "marginal:1110": 0.06250000000015282,
+                "marginal:1111": 0.06250000000005591,
+                "p0": 0.5000000000000202,
+                "zlast": 7.81032465273685e-12
+              },
+              "execution_seconds": 0.41747317000408657,
+              "peak_rss_bytes": 116629504,
+              "status": "completed",
+              "wall_seconds": 1.1941810349962907
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.06249999999977671,
+                "marginal:0001": 0.06250000000000698,
+                "marginal:0010": 0.0625000000006707,
+                "marginal:0011": 0.06249999999914653,
+                "marginal:0100": 0.062499999998856276,
+                "marginal:0101": 0.06250000000092505,
+                "marginal:0110": 0.06249999999993753,
+                "marginal:0111": 0.062499999999840634,
+                "marginal:1000": 0.062499999999992006,
+                "marginal:1001": 0.0625000000002223,
+                "marginal:1010": 0.06250000000088601,
+                "marginal:1011": 0.06249999999936178,
+                "marginal:1100": 0.06249999999907143,
+                "marginal:1101": 0.0625000000011403,
+                "marginal:1110": 0.06250000000015282,
+                "marginal:1111": 0.06250000000005591,
+                "p0": 0.5000000000000202,
+                "zlast": 7.81032465273685e-12
+              },
+              "execution_seconds": 0.7410962700014352,
+              "peak_rss_bytes": 116850688,
+              "status": "completed",
+              "wall_seconds": 1.6662999630061677
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.06249999999977671,
+                "marginal:0001": 0.06250000000000698,
+                "marginal:0010": 0.0625000000006707,
+                "marginal:0011": 0.06249999999914653,
+                "marginal:0100": 0.062499999998856276,
+                "marginal:0101": 0.06250000000092505,
+                "marginal:0110": 0.06249999999993753,
+                "marginal:0111": 0.062499999999840634,
+                "marginal:1000": 0.062499999999992006,
+                "marginal:1001": 0.0625000000002223,
+                "marginal:1010": 0.06250000000088601,
+                "marginal:1011": 0.06249999999936178,
+                "marginal:1100": 0.06249999999907143,
+                "marginal:1101": 0.0625000000011403,
+                "marginal:1110": 0.06250000000015282,
+                "marginal:1111": 0.06250000000005591,
+                "p0": 0.5000000000000202,
+                "zlast": 7.81032465273685e-12
+              },
+              "execution_seconds": 0.36512923300324474,
+              "peak_rss_bytes": 116559872,
+              "status": "completed",
+              "wall_seconds": 1.1824966759959352
+            }
+          ]
+        },
+        "nrqc": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 0.0,
+          "median_seconds": 0.04709984199871542,
+          "samples": [
+            {
+              "answers": {
+                "marginal:0000": 0.0625,
+                "marginal:0001": 0.0625,
+                "marginal:0010": 0.0625,
+                "marginal:0011": 0.0625,
+                "marginal:0100": 0.0625,
+                "marginal:0101": 0.0625,
+                "marginal:0110": 0.0625,
+                "marginal:0111": 0.0625,
+                "marginal:1000": 0.0625,
+                "marginal:1001": 0.0625,
+                "marginal:1010": 0.0625,
+                "marginal:1011": 0.0625,
+                "marginal:1100": 0.0625,
+                "marginal:1101": 0.0625,
+                "marginal:1110": 0.0625,
+                "marginal:1111": 0.0625,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.042127543994865846,
+              "peak_rss_bytes": 35344384,
+              "statistics": {},
+              "status": "completed",
+              "wall_seconds": 0.30096831399714574
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.0625,
+                "marginal:0001": 0.0625,
+                "marginal:0010": 0.0625,
+                "marginal:0011": 0.0625,
+                "marginal:0100": 0.0625,
+                "marginal:0101": 0.0625,
+                "marginal:0110": 0.0625,
+                "marginal:0111": 0.0625,
+                "marginal:1000": 0.0625,
+                "marginal:1001": 0.0625,
+                "marginal:1010": 0.0625,
+                "marginal:1011": 0.0625,
+                "marginal:1100": 0.0625,
+                "marginal:1101": 0.0625,
+                "marginal:1110": 0.0625,
+                "marginal:1111": 0.0625,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.04709984199871542,
+              "peak_rss_bytes": 36782080,
+              "statistics": {},
+              "status": "completed",
+              "wall_seconds": 0.9370409039984224
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.0625,
+                "marginal:0001": 0.0625,
+                "marginal:0010": 0.0625,
+                "marginal:0011": 0.0625,
+                "marginal:0100": 0.0625,
+                "marginal:0101": 0.0625,
+                "marginal:0110": 0.0625,
+                "marginal:0111": 0.0625,
+                "marginal:1000": 0.0625,
+                "marginal:1001": 0.0625,
+                "marginal:1010": 0.0625,
+                "marginal:1011": 0.0625,
+                "marginal:1100": 0.0625,
+                "marginal:1101": 0.0625,
+                "marginal:1110": 0.0625,
+                "marginal:1111": 0.0625,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.06781954500183929,
+              "peak_rss_bytes": 35614720,
+              "statistics": {},
+              "status": "completed",
+              "wall_seconds": 0.309211542000412
+            }
+          ]
+        },
+        "stim": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 0.0,
+          "median_seconds": 0.002023730005021207,
+          "samples": [
+            {
+              "answers": {
+                "marginal:0000": 0.0625,
+                "marginal:0001": 0.0625,
+                "marginal:0010": 0.0625,
+                "marginal:0011": 0.0625,
+                "marginal:0100": 0.0625,
+                "marginal:0101": 0.0625,
+                "marginal:0110": 0.0625,
+                "marginal:0111": 0.0625,
+                "marginal:1000": 0.0625,
+                "marginal:1001": 0.0625,
+                "marginal:1010": 0.0625,
+                "marginal:1011": 0.0625,
+                "marginal:1100": 0.0625,
+                "marginal:1101": 0.0625,
+                "marginal:1110": 0.0625,
+                "marginal:1111": 0.0625,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "execution_seconds": 0.0011468230004538782,
+              "peak_rss_bytes": 41816064,
+              "status": "completed",
+              "unsupported_gates": [],
+              "wall_seconds": 0.21380650799983414
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.0625,
+                "marginal:0001": 0.0625,
+                "marginal:0010": 0.0625,
+                "marginal:0011": 0.0625,
+                "marginal:0100": 0.0625,
+                "marginal:0101": 0.0625,
+                "marginal:0110": 0.0625,
+                "marginal:0111": 0.0625,
+                "marginal:1000": 0.0625,
+                "marginal:1001": 0.0625,
+                "marginal:1010": 0.0625,
+                "marginal:1011": 0.0625,
+                "marginal:1100": 0.0625,
+                "marginal:1101": 0.0625,
+                "marginal:1110": 0.0625,
+                "marginal:1111": 0.0625,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "execution_seconds": 0.003785462999076117,
+              "peak_rss_bytes": 41279488,
+              "status": "completed",
+              "unsupported_gates": [],
+              "wall_seconds": 0.228435247001471
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.0625,
+                "marginal:0001": 0.0625,
+                "marginal:0010": 0.0625,
+                "marginal:0011": 0.0625,
+                "marginal:0100": 0.0625,
+                "marginal:0101": 0.0625,
+                "marginal:0110": 0.0625,
+                "marginal:0111": 0.0625,
+                "marginal:1000": 0.0625,
+                "marginal:1001": 0.0625,
+                "marginal:1010": 0.0625,
+                "marginal:1011": 0.0625,
+                "marginal:1100": 0.0625,
+                "marginal:1101": 0.0625,
+                "marginal:1110": 0.0625,
+                "marginal:1111": 0.0625,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "execution_seconds": 0.002023730005021207,
+              "peak_rss_bytes": 41304064,
+              "status": "completed",
+              "unsupported_gates": [],
+              "wall_seconds": 0.23281431900250027
+            }
+          ]
+        }
+      },
+      "input": "benchmarks/comparisons/inputs/clifford_24.json",
+      "sha256": "7aeeff95e05ef6f94306a6d2e852517dc02d44d6242d46946c773128b756214f"
+    },
+    {
+      "engines": {
+        "aer_mps": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 1.50211058869143e-11,
+          "median_seconds": 0.05107486499764491,
+          "samples": [
+            {
+              "answers": {
+                "marginal:0000": 0.08451181056445754,
+                "marginal:0001": 0.07482441712743539,
+                "marginal:0010": 0.0717370918046884,
+                "marginal:0011": 0.06223732204732418,
+                "marginal:0100": 0.07898277072438004,
+                "marginal:0101": 0.05758114550111664,
+                "marginal:0110": 0.06209269713037667,
+                "marginal:0111": 0.08127493259819947,
+                "marginal:1000": 0.04076808362411925,
+                "marginal:1001": 0.050830363271375315,
+                "marginal:1010": 0.053917688596062815,
+                "marginal:1011": 0.06186375692827155,
+                "marginal:1100": 0.04667200967424573,
+                "marginal:1101": 0.06651993347563444,
+                "marginal:1110": 0.06200838184664304,
+                "marginal:1111": 0.044177595085670526,
+                "p0": 0.573242187497978,
+                "zlast": 0.012429611403521106
+              },
+              "execution_seconds": 0.05107486499764491,
+              "peak_rss_bytes": 107892736,
+              "status": "completed",
+              "wall_seconds": 0.861775432000286
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.08451181056445754,
+                "marginal:0001": 0.07482441712743539,
+                "marginal:0010": 0.0717370918046884,
+                "marginal:0011": 0.06223732204732418,
+                "marginal:0100": 0.07898277072438004,
+                "marginal:0101": 0.05758114550111664,
+                "marginal:0110": 0.06209269713037667,
+                "marginal:0111": 0.08127493259819947,
+                "marginal:1000": 0.04076808362411925,
+                "marginal:1001": 0.050830363271375315,
+                "marginal:1010": 0.053917688596062815,
+                "marginal:1011": 0.06186375692827155,
+                "marginal:1100": 0.04667200967424573,
+                "marginal:1101": 0.06651993347563444,
+                "marginal:1110": 0.06200838184664304,
+                "marginal:1111": 0.044177595085670526,
+                "p0": 0.573242187497978,
+                "zlast": 0.012429611403521106
+              },
+              "execution_seconds": 0.09152561800146941,
+              "peak_rss_bytes": 107249664,
+              "status": "completed",
+              "wall_seconds": 1.157726982004533
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.08451181056445754,
+                "marginal:0001": 0.07482441712743539,
+                "marginal:0010": 0.0717370918046884,
+                "marginal:0011": 0.06223732204732418,
+                "marginal:0100": 0.07898277072438004,
+                "marginal:0101": 0.05758114550111664,
+                "marginal:0110": 0.06209269713037667,
+                "marginal:0111": 0.08127493259819947,
+                "marginal:1000": 0.04076808362411925,
+                "marginal:1001": 0.050830363271375315,
+                "marginal:1010": 0.053917688596062815,
+                "marginal:1011": 0.06186375692827155,
+                "marginal:1100": 0.04667200967424573,
+                "marginal:1101": 0.06651993347563444,
+                "marginal:1110": 0.06200838184664304,
+                "marginal:1111": 0.044177595085670526,
+                "p0": 0.573242187497978,
+                "zlast": 0.012429611403521106
+              },
+              "execution_seconds": 0.05101570999977412,
+              "peak_rss_bytes": 107560960,
+              "status": "completed",
+              "wall_seconds": 0.754174702000455
+            }
+          ]
+        },
+        "nrqc": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 0.0,
+          "median_seconds": 7.662028464001196,
+          "samples": [
+            {
+              "answers": {
+                "marginal:0000": 0.0845118105645,
+                "marginal:0001": 0.0748244171275,
+                "marginal:0010": 0.0717370918035,
+                "marginal:0011": 0.0622373220485,
+                "marginal:0100": 0.0789827707245,
+                "marginal:0101": 0.0575811455005,
+                "marginal:0110": 0.0620926971295,
+                "marginal:0111": 0.0812749325995,
+                "marginal:1000": 0.0407680836265,
+                "marginal:1001": 0.0508303632715,
+                "marginal:1010": 0.0539176885955,
+                "marginal:1011": 0.0618637569265,
+                "marginal:1100": 0.0466720096745,
+                "marginal:1101": 0.0665199334745,
+                "marginal:1110": 0.0620083818455,
+                "marginal:1111": 0.0441775950845,
+                "p0": 0.5732421875,
+                "zlast": 0.0124296113885
+              },
+              "error": null,
+              "execution_seconds": 4.199277202998928,
+              "peak_rss_bytes": 36671488,
+              "statistics": {
+                "backend": "cyclotomic_pow2",
+                "budget_scope": "whole batch including preparation and all readouts",
+                "dense_statevector_constructed": false,
+                "field_products": 97278,
+                "field_sums": 34320,
+                "gate_visits": 62563,
+                "max_coefficient_bits": 26,
+                "peak_branches": 1024,
+                "permutation_visits": 30720,
+                "preparation_count": 1,
+                "readout_visits": 3072,
+                "representation": "sparse computational-basis amplitudes in flat Q(zeta_8)",
+                "truncated_amplitudes": 0,
+                "work_definition": "one unit per gate, amplitude/readout visit, field product or field sum",
+                "work_used": 227953
+              },
+              "status": "completed",
+              "wall_seconds": 4.4119068430009065
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.0845118105645,
+                "marginal:0001": 0.0748244171275,
+                "marginal:0010": 0.0717370918035,
+                "marginal:0011": 0.0622373220485,
+                "marginal:0100": 0.0789827707245,
+                "marginal:0101": 0.0575811455005,
+                "marginal:0110": 0.0620926971295,
+                "marginal:0111": 0.0812749325995,
+                "marginal:1000": 0.0407680836265,
+                "marginal:1001": 0.0508303632715,
+                "marginal:1010": 0.0539176885955,
+                "marginal:1011": 0.0618637569265,
+                "marginal:1100": 0.0466720096745,
+                "marginal:1101": 0.0665199334745,
+                "marginal:1110": 0.0620083818455,
+                "marginal:1111": 0.0441775950845,
+                "p0": 0.5732421875,
+                "zlast": 0.0124296113885
+              },
+              "error": null,
+              "execution_seconds": 10.986035057998379,
+              "peak_rss_bytes": 38584320,
+              "statistics": {
+                "backend": "cyclotomic_pow2",
+                "budget_scope": "whole batch including preparation and all readouts",
+                "dense_statevector_constructed": false,
+                "field_products": 97278,
+                "field_sums": 34320,
+                "gate_visits": 62563,
+                "max_coefficient_bits": 26,
+                "peak_branches": 1024,
+                "permutation_visits": 30720,
+                "preparation_count": 1,
+                "readout_visits": 3072,
+                "representation": "sparse computational-basis amplitudes in flat Q(zeta_8)",
+                "truncated_amplitudes": 0,
+                "work_definition": "one unit per gate, amplitude/readout visit, field product or field sum",
+                "work_used": 227953
+              },
+              "status": "completed",
+              "wall_seconds": 12.233521683003346
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.0845118105645,
+                "marginal:0001": 0.0748244171275,
+                "marginal:0010": 0.0717370918035,
+                "marginal:0011": 0.0622373220485,
+                "marginal:0100": 0.0789827707245,
+                "marginal:0101": 0.0575811455005,
+                "marginal:0110": 0.0620926971295,
+                "marginal:0111": 0.0812749325995,
+                "marginal:1000": 0.0407680836265,
+                "marginal:1001": 0.0508303632715,
+                "marginal:1010": 0.0539176885955,
+                "marginal:1011": 0.0618637569265,
+                "marginal:1100": 0.0466720096745,
+                "marginal:1101": 0.0665199334745,
+                "marginal:1110": 0.0620083818455,
+                "marginal:1111": 0.0441775950845,
+                "p0": 0.5732421875,
+                "zlast": 0.0124296113885
+              },
+              "error": null,
+              "execution_seconds": 7.662028464001196,
+              "peak_rss_bytes": 38608896,
+              "statistics": {
+                "backend": "cyclotomic_pow2",
+                "budget_scope": "whole batch including preparation and all readouts",
+                "dense_statevector_constructed": false,
+                "field_products": 97278,
+                "field_sums": 34320,
+                "gate_visits": 62563,
+                "max_coefficient_bits": 26,
+                "peak_branches": 1024,
+                "permutation_visits": 30720,
+                "preparation_count": 1,
+                "readout_visits": 3072,
+                "representation": "sparse computational-basis amplitudes in flat Q(zeta_8)",
+                "truncated_amplitudes": 0,
+                "work_definition": "one unit per gate, amplitude/readout visit, field product or field sum",
+                "work_used": 227953
+              },
+              "status": "completed",
+              "wall_seconds": 8.83347646099719
+            }
+          ]
+        },
+        "stim": {
+          "median_seconds": null,
+          "samples": [
+            {
+              "answers": null,
+              "execution_seconds": 1.8678998458199203e-05,
+              "peak_rss_bytes": 41345024,
+              "status": "unsupported",
+              "unsupported_gates": [
+                "t"
+              ],
+              "wall_seconds": 0.3195559259984293
+            }
+          ]
+        }
+      },
+      "input": "benchmarks/comparisons/inputs/dense_clifford_t_10.json",
+      "sha256": "5e2a4e093059ea090aced5b60444afa88c7e1999f7e799c222d510a78b86803a"
+    },
+    {
+      "engines": {
+        "aer_mps": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 5.388495205593813e-11,
+          "median_seconds": 0.03759175899904221,
+          "samples": [
+            {
+              "answers": {
+                "marginal:0000": 0.4840193103115498,
+                "marginal:0001": 0.4840193103115492,
+                "marginal:0010": 0.012668983881740837,
+                "marginal:0011": 0.012668983881741385,
+                "marginal:0100": 0.0006111390463780502,
+                "marginal:0101": 0.0006111390463780499,
+                "marginal:0110": 0.0011862507555674621,
+                "marginal:0111": 0.0011862507555630865,
+                "marginal:1000": 0.0011842843906296554,
+                "marginal:1001": 0.0011842843906294846,
+                "marginal:1010": 0.0003245922751176089,
+                "marginal:1011": 0.0003245922750997876,
+                "marginal:1100": 2.1951986780891856e-06,
+                "marginal:1101": 2.195198678077304e-06,
+                "marginal:1110": 3.244140355835759e-06,
+                "marginal:1111": 3.2441403559978657e-06,
+                "p0": 0.9969713679920633,
+                "zlast": 5.388495205593813e-11
+              },
+              "execution_seconds": 0.045774054000503384,
+              "peak_rss_bytes": 109473792,
+              "status": "completed",
+              "wall_seconds": 1.0616433210016112
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.4840193103115498,
+                "marginal:0001": 0.4840193103115492,
+                "marginal:0010": 0.012668983881740837,
+                "marginal:0011": 0.012668983881741385,
+                "marginal:0100": 0.0006111390463780502,
+                "marginal:0101": 0.0006111390463780499,
+                "marginal:0110": 0.0011862507555674621,
+                "marginal:0111": 0.0011862507555630865,
+                "marginal:1000": 0.0011842843906296554,
+                "marginal:1001": 0.0011842843906294846,
+                "marginal:1010": 0.0003245922751176089,
+                "marginal:1011": 0.0003245922750997876,
+                "marginal:1100": 2.1951986780891856e-06,
+                "marginal:1101": 2.195198678077304e-06,
+                "marginal:1110": 3.244140355835759e-06,
+                "marginal:1111": 3.2441403559978657e-06,
+                "p0": 0.9969713679920633,
+                "zlast": 5.388495205593813e-11
+              },
+              "execution_seconds": 0.029150895003112964,
+              "peak_rss_bytes": 109563904,
+              "status": "completed",
+              "wall_seconds": 0.7258968909955001
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.4840193103115498,
+                "marginal:0001": 0.4840193103115492,
+                "marginal:0010": 0.012668983881740837,
+                "marginal:0011": 0.012668983881741385,
+                "marginal:0100": 0.0006111390463780502,
+                "marginal:0101": 0.0006111390463780499,
+                "marginal:0110": 0.0011862507555674621,
+                "marginal:0111": 0.0011862507555630865,
+                "marginal:1000": 0.0011842843906296554,
+                "marginal:1001": 0.0011842843906294846,
+                "marginal:1010": 0.0003245922751176089,
+                "marginal:1011": 0.0003245922750997876,
+                "marginal:1100": 2.1951986780891856e-06,
+                "marginal:1101": 2.195198678077304e-06,
+                "marginal:1110": 3.244140355835759e-06,
+                "marginal:1111": 3.2441403559978657e-06,
+                "p0": 0.9969713679920633,
+                "zlast": 5.388495205593813e-11
+              },
+              "execution_seconds": 0.03759175899904221,
+              "peak_rss_bytes": 108560384,
+              "status": "completed",
+              "wall_seconds": 0.9993680309999036
+            }
+          ]
+        },
+        "nrqc": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 0.0,
+          "median_seconds": 0.3004865890034125,
+          "samples": [
+            {
+              "answers": {
+                "marginal:0000": 0.4840193103085,
+                "marginal:0001": 0.4840193103085,
+                "marginal:0010": 0.0126689838855,
+                "marginal:0011": 0.0126689838855,
+                "marginal:0100": 0.0006111390465,
+                "marginal:0101": 0.0006111390465,
+                "marginal:0110": 0.0011862507555,
+                "marginal:0111": 0.0011862507555,
+                "marginal:1000": 0.0011842843895,
+                "marginal:1001": 0.0011842843895,
+                "marginal:1010": 0.0003245922755,
+                "marginal:1011": 0.0003245922755,
+                "marginal:1100": 2.1951985e-06,
+                "marginal:1101": 2.1951985e-06,
+                "marginal:1110": 3.2441405e-06,
+                "marginal:1111": 3.2441405e-06,
+                "p0": 0.9969713679925,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.3004865890034125,
+              "peak_rss_bytes": 36388864,
+              "statistics": {
+                "backend": "cyclotomic_pow2",
+                "budget_scope": "whole batch including preparation and all readouts",
+                "dense_statevector_constructed": false,
+                "field_products": 4778,
+                "field_sums": 1584,
+                "gate_visits": 5239,
+                "max_coefficient_bits": 13,
+                "peak_branches": 256,
+                "permutation_visits": 1776,
+                "preparation_count": 1,
+                "readout_visits": 384,
+                "representation": "sparse computational-basis amplitudes in flat Q(zeta_128)",
+                "truncated_amplitudes": 0,
+                "work_definition": "one unit per gate, amplitude/readout visit, field product or field sum",
+                "work_used": 13761
+              },
+              "status": "completed",
+              "wall_seconds": 0.49973187100113137
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.4840193103085,
+                "marginal:0001": 0.4840193103085,
+                "marginal:0010": 0.0126689838855,
+                "marginal:0011": 0.0126689838855,
+                "marginal:0100": 0.0006111390465,
+                "marginal:0101": 0.0006111390465,
+                "marginal:0110": 0.0011862507555,
+                "marginal:0111": 0.0011862507555,
+                "marginal:1000": 0.0011842843895,
+                "marginal:1001": 0.0011842843895,
+                "marginal:1010": 0.0003245922755,
+                "marginal:1011": 0.0003245922755,
+                "marginal:1100": 2.1951985e-06,
+                "marginal:1101": 2.1951985e-06,
+                "marginal:1110": 3.2441405e-06,
+                "marginal:1111": 3.2441405e-06,
+                "p0": 0.9969713679925,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.318622847997176,
+              "peak_rss_bytes": 37588992,
+              "statistics": {
+                "backend": "cyclotomic_pow2",
+                "budget_scope": "whole batch including preparation and all readouts",
+                "dense_statevector_constructed": false,
+                "field_products": 4778,
+                "field_sums": 1584,
+                "gate_visits": 5239,
+                "max_coefficient_bits": 13,
+                "peak_branches": 256,
+                "permutation_visits": 1776,
+                "preparation_count": 1,
+                "readout_visits": 384,
+                "representation": "sparse computational-basis amplitudes in flat Q(zeta_128)",
+                "truncated_amplitudes": 0,
+                "work_definition": "one unit per gate, amplitude/readout visit, field product or field sum",
+                "work_used": 13761
+              },
+              "status": "completed",
+              "wall_seconds": 0.6036547210023855
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.4840193103085,
+                "marginal:0001": 0.4840193103085,
+                "marginal:0010": 0.0126689838855,
+                "marginal:0011": 0.0126689838855,
+                "marginal:0100": 0.0006111390465,
+                "marginal:0101": 0.0006111390465,
+                "marginal:0110": 0.0011862507555,
+                "marginal:0111": 0.0011862507555,
+                "marginal:1000": 0.0011842843895,
+                "marginal:1001": 0.0011842843895,
+                "marginal:1010": 0.0003245922755,
+                "marginal:1011": 0.0003245922755,
+                "marginal:1100": 2.1951985e-06,
+                "marginal:1101": 2.1951985e-06,
+                "marginal:1110": 3.2441405e-06,
+                "marginal:1111": 3.2441405e-06,
+                "p0": 0.9969713679925,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.2782249970041448,
+              "peak_rss_bytes": 37310464,
+              "statistics": {
+                "backend": "cyclotomic_pow2",
+                "budget_scope": "whole batch including preparation and all readouts",
+                "dense_statevector_constructed": false,
+                "field_products": 4778,
+                "field_sums": 1584,
+                "gate_visits": 5239,
+                "max_coefficient_bits": 13,
+                "peak_branches": 256,
+                "permutation_visits": 1776,
+                "preparation_count": 1,
+                "readout_visits": 384,
+                "representation": "sparse computational-basis amplitudes in flat Q(zeta_128)",
+                "truncated_amplitudes": 0,
+                "work_definition": "one unit per gate, amplitude/readout visit, field product or field sum",
+                "work_used": 13761
+              },
+              "status": "completed",
+              "wall_seconds": 0.4933070780025446
+            }
+          ]
+        },
+        "stim": {
+          "median_seconds": null,
+          "samples": [
+            {
+              "answers": null,
+              "execution_seconds": 2.206700446549803e-05,
+              "peak_rss_bytes": 40095744,
+              "status": "unsupported",
+              "unsupported_gates": [
+                "cp64",
+                "p128"
+              ],
+              "wall_seconds": 0.23661847799667157
+            }
+          ]
+        }
+      },
+      "input": "benchmarks/comparisons/inputs/dyadic_phase_8.json",
+      "sha256": "afc85acaa2ac0916620f03fb42106a97453b039c5ecf33003a5aad70002cde65"
+    },
+    {
+      "engines": {
+        "aer_mps": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 2.220446049250313e-16,
+          "median_seconds": 0.17246710999461357,
+          "samples": [
+            {
+              "answers": {
+                "marginal:0000": 0.5000000000000001,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.4999999999999999,
+                "p0": 0.5000000000000001,
+                "zlast": 2.220446049250313e-16
+              },
+              "execution_seconds": 0.17246710999461357,
+              "peak_rss_bytes": 111751168,
+              "status": "completed",
+              "wall_seconds": 1.034246905001055
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.5000000000000001,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.4999999999999999,
+                "p0": 0.5000000000000001,
+                "zlast": 2.220446049250313e-16
+              },
+              "execution_seconds": 0.16963509600464022,
+              "peak_rss_bytes": 111308800,
+              "status": "completed",
+              "wall_seconds": 0.8989786750025814
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.5000000000000001,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.4999999999999999,
+                "p0": 0.5000000000000001,
+                "zlast": 2.220446049250313e-16
+              },
+              "execution_seconds": 0.17364634499972453,
+              "peak_rss_bytes": 111636480,
+              "status": "completed",
+              "wall_seconds": 1.090058196001337
+            }
+          ]
+        },
+        "nrqc": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 0.0,
+          "median_seconds": 0.02281053699698532,
+          "samples": [
+            {
+              "answers": {
+                "marginal:0000": 0.5,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.02281053699698532,
+              "peak_rss_bytes": 37244928,
+              "statistics": {},
+              "status": "completed",
+              "wall_seconds": 0.26927833200170426
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.5,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.0158103840003605,
+              "peak_rss_bytes": 37056512,
+              "statistics": {},
+              "status": "completed",
+              "wall_seconds": 0.2310888059946592
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.5,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.024239079000835773,
+              "peak_rss_bytes": 36179968,
+              "statistics": {},
+              "status": "completed",
+              "wall_seconds": 0.2825905159988906
+            }
+          ]
+        },
+        "stim": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 0.0,
+          "median_seconds": 0.0029821889984305017,
+          "samples": [
+            {
+              "answers": {
+                "marginal:0000": 0.5,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "execution_seconds": 0.002897865000704769,
+              "peak_rss_bytes": 41431040,
+              "status": "completed",
+              "unsupported_gates": [],
+              "wall_seconds": 0.22526286599895684
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.5,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "execution_seconds": 0.006722111997078173,
+              "peak_rss_bytes": 41545728,
+              "status": "completed",
+              "unsupported_gates": [],
+              "wall_seconds": 0.28322666099847993
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.5,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "execution_seconds": 0.0029821889984305017,
+              "peak_rss_bytes": 41357312,
+              "status": "completed",
+              "unsupported_gates": [],
+              "wall_seconds": 0.2247457920020679
+            }
+          ]
+        }
+      },
+      "input": "benchmarks/comparisons/inputs/ghz_256.json",
+      "sha256": "70f81413b11eb2a0369d46fa266d1fb2d2c23333de5e783d0aa4bb734ffa729a"
+    },
+    {
+      "engines": {
+        "aer_mps": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 2.220446049250313e-16,
+          "median_seconds": 0.042859641995164566,
+          "samples": [
+            {
+              "answers": {
+                "marginal:0000": 0.5000000000000001,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.4999999999999999,
+                "p0": 0.5000000000000001,
+                "zlast": 2.220446049250313e-16
+              },
+              "execution_seconds": 0.042859641995164566,
+              "peak_rss_bytes": 106045440,
+              "status": "completed",
+              "wall_seconds": 0.9943045100008021
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.5000000000000001,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.4999999999999999,
+                "p0": 0.5000000000000001,
+                "zlast": 2.220446049250313e-16
+              },
+              "execution_seconds": 0.0466889609961072,
+              "peak_rss_bytes": 106663936,
+              "status": "completed",
+              "wall_seconds": 0.7676987860031659
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.5000000000000001,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.4999999999999999,
+                "p0": 0.5000000000000001,
+                "zlast": 2.220446049250313e-16
+              },
+              "execution_seconds": 0.024046679995080922,
+              "peak_rss_bytes": 107622400,
+              "status": "completed",
+              "wall_seconds": 0.8756101979961386
+            }
+          ]
+        },
+        "nrqc": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 0.0,
+          "median_seconds": 0.009202352004649583,
+          "samples": [
+            {
+              "answers": {
+                "marginal:0000": 0.5,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.00807237299886765,
+              "peak_rss_bytes": 35479552,
+              "statistics": {},
+              "status": "completed",
+              "wall_seconds": 0.2945656220035744
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.5,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.009202352004649583,
+              "peak_rss_bytes": 35987456,
+              "statistics": {},
+              "status": "completed",
+              "wall_seconds": 0.21026946599886287
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.5,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "error": null,
+              "execution_seconds": 0.012697132005996536,
+              "peak_rss_bytes": 36990976,
+              "statistics": {},
+              "status": "completed",
+              "wall_seconds": 0.21482278400071664
+            }
+          ]
+        },
+        "stim": {
+          "matches_nrqc_enclosure_display_at_1e_9": true,
+          "max_absolute_difference": 0.0,
+          "median_seconds": 0.0010468390028108843,
+          "samples": [
+            {
+              "answers": {
+                "marginal:0000": 0.5,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "execution_seconds": 0.000728008002624847,
+              "peak_rss_bytes": 40116224,
+              "status": "completed",
+              "unsupported_gates": [],
+              "wall_seconds": 0.22194347500044387
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.5,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "execution_seconds": 0.001137448001827579,
+              "peak_rss_bytes": 40079360,
+              "status": "completed",
+              "unsupported_gates": [],
+              "wall_seconds": 0.26490091199957533
+            },
+            {
+              "answers": {
+                "marginal:0000": 0.5,
+                "marginal:0001": 0.0,
+                "marginal:0010": 0.0,
+                "marginal:0011": 0.0,
+                "marginal:0100": 0.0,
+                "marginal:0101": 0.0,
+                "marginal:0110": 0.0,
+                "marginal:0111": 0.0,
+                "marginal:1000": 0.0,
+                "marginal:1001": 0.0,
+                "marginal:1010": 0.0,
+                "marginal:1011": 0.0,
+                "marginal:1100": 0.0,
+                "marginal:1101": 0.0,
+                "marginal:1110": 0.0,
+                "marginal:1111": 0.5,
+                "p0": 0.5,
+                "zlast": 0.0
+              },
+              "execution_seconds": 0.0010468390028108843,
+              "peak_rss_bytes": 40505344,
+              "status": "completed",
+              "unsupported_gates": [],
+              "wall_seconds": 0.2315643120018649
+            }
+          ]
+        }
+      },
+      "input": "benchmarks/comparisons/inputs/ghz_64.json",
+      "sha256": "dbc9f4fe5f39095b317c8aab1d90f8997250e5d21bd90e797a0c869411b3e185"
+    }
+  ],
+  "environment": {
+    "cpu": "x86_64",
+    "cpu_count": 9,
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+    "python": "3.12.14",
+    "versions": {
+      "numpy": "2.5.4",
+      "qiskit": "2.6.1",
+      "qiskit-aer": "0.18.2",
+      "stim": "1.16.0"
+    }
+  },
+  "repeats": 3,
+  "schema": "nrqc-retained-comparison-v1",
+  "timing_scope": "fresh process; execution includes conversion, queries and output formatting, excludes imports; wall includes startup"
+}

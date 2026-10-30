@@ -1,0 +1,781 @@
+{
+  "schema": "native-photonic-temperature-sweep-audit-v1",
+  "author": "Monty",
+  "status": "EXACT_STATEMENTS_AND_UNRUN_PLAN",
+  "evidence_class": "IDEAL_COMPONENT_ALGEBRA",
+  "tests": {
+    "count": 29,
+    "passed": true,
+    "seconds": 57.65735498699996,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "common_mode_matrix_identity_all_65_angles": true,
+  "common_mode_probability_invariance_17_angles": true,
+  "dichotomy_rows": [
+    {
+      "theta_pi_over_32": 8,
+      "drift": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "in_kernel": false,
+      "first_order_visible": {
+        "basis": true,
+        "local": true,
+        "reference": true
+      },
+      "correction": [
+        -1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "theta_pi_over_32": 8,
+      "drift": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "in_kernel": false,
+      "first_order_visible": {
+        "basis": true,
+        "local": true,
+        "reference": true
+      },
+      "correction": [
+        0,
+        -1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "theta_pi_over_32": 8,
+      "drift": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "in_kernel": false,
+      "first_order_visible": {
+        "basis": false,
+        "local": true,
+        "reference": true
+      },
+      "correction": [
+        0,
+        0,
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "theta_pi_over_32": 8,
+      "drift": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "in_kernel": false,
+      "first_order_visible": {
+        "basis": false,
+        "local": true,
+        "reference": true
+      },
+      "correction": [
+        0,
+        0,
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "theta_pi_over_32": 8,
+      "drift": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "in_kernel": false,
+      "first_order_visible": {
+        "basis": false,
+        "local": false,
+        "reference": true
+      },
+      "correction": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "theta_pi_over_32": 8,
+      "drift": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "in_kernel": false,
+      "first_order_visible": {
+        "basis": false,
+        "local": false,
+        "reference": true
+      },
+      "correction": [
+        -1,
+        -1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "theta_pi_over_32": 8,
+      "drift": [
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "in_kernel": true,
+      "first_order_visible": {
+        "basis": false,
+        "local": false,
+        "reference": false
+      },
+      "correction": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "theta_pi_over_32": 16,
+      "drift": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "in_kernel": false,
+      "first_order_visible": {
+        "basis": true,
+        "local": true,
+        "reference": true
+      },
+      "correction": [
+        -1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "theta_pi_over_32": 16,
+      "drift": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "in_kernel": false,
+      "first_order_visible": {
+        "basis": true,
+        "local": true,
+        "reference": true
+      },
+      "correction": [
+        0,
+        -1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "theta_pi_over_32": 16,
+      "drift": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "in_kernel": false,
+      "first_order_visible": {
+        "basis": false,
+        "local": true,
+        "reference": true
+      },
+      "correction": [
+        0,
+        0,
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "theta_pi_over_32": 16,
+      "drift": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "in_kernel": false,
+      "first_order_visible": {
+        "basis": false,
+        "local": true,
+        "reference": true
+      },
+      "correction": [
+        0,
+        0,
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "theta_pi_over_32": 16,
+      "drift": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "in_kernel": false,
+      "first_order_visible": {
+        "basis": false,
+        "local": false,
+        "reference": true
+      },
+      "correction": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "theta_pi_over_32": 16,
+      "drift": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "in_kernel": false,
+      "first_order_visible": {
+        "basis": false,
+        "local": false,
+        "reference": true
+      },
+      "correction": [
+        -1,
+        -1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "theta_pi_over_32": 16,
+      "drift": [
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "in_kernel": true,
+      "first_order_visible": {
+        "basis": false,
+        "local": false,
+        "reference": false
+      },
+      "correction": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "theta_pi_over_32": 24,
+      "drift": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "in_kernel": false,
+      "first_order_visible": {
+        "basis": true,
+        "local": true,
+        "reference": true
+      },
+      "correction": [
+        -1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "theta_pi_over_32": 24,
+      "drift": [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "in_kernel": false,
+      "first_order_visible": {
+        "basis": true,
+        "local": true,
+        "reference": true
+      },
+      "correction": [
+        0,
+        -1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "theta_pi_over_32": 24,
+      "drift": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "in_kernel": false,
+      "first_order_visible": {
+        "basis": false,
+        "local": true,
+        "reference": true
+      },
+      "correction": [
+        0,
+        0,
+        -1,
+        0,
+        0
+      ]
+    },
+    {
+      "theta_pi_over_32": 24,
+      "drift": [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "in_kernel": false,
+      "first_order_visible": {
+        "basis": false,
+        "local": true,
+        "reference": true
+      },
+      "correction": [
+        0,
+        0,
+        0,
+        -1,
+        0
+      ]
+    },
+    {
+      "theta_pi_over_32": 24,
+      "drift": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "in_kernel": false,
+      "first_order_visible": {
+        "basis": false,
+        "local": false,
+        "reference": true
+      },
+      "correction": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "theta_pi_over_32": 24,
+      "drift": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "in_kernel": false,
+      "first_order_visible": {
+        "basis": false,
+        "local": false,
+        "reference": true
+      },
+      "correction": [
+        -1,
+        -1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "theta_pi_over_32": 24,
+      "drift": [
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "in_kernel": true,
+      "first_order_visible": {
+        "basis": false,
+        "local": false,
+        "reference": false
+      },
+      "correction": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "interior_kernel_or_reference_visible": true,
+  "hom_coincidence": [
+    {
+      "theta_pi_over_32": 0,
+      "indistinguishable": "1",
+      "distinguishable": "1"
+    },
+    {
+      "theta_pi_over_32": 8,
+      "indistinguishable": "1/2",
+      "distinguishable": "3/4"
+    },
+    {
+      "theta_pi_over_32": 16,
+      "indistinguishable": "0",
+      "distinguishable": "1/2"
+    },
+    {
+      "theta_pi_over_32": 24,
+      "indistinguishable": "1/2",
+      "distinguishable": "3/4"
+    },
+    {
+      "theta_pi_over_32": 32,
+      "indistinguishable": "1",
+      "distinguishable": "1"
+    }
+  ],
+  "declared_drift_table_1550nm": [
+    {
+      "path_length_difference_m": "1/100000",
+      "delta_T_K": "1",
+      "phi_over_pi": "49/155000",
+      "steps_pi_over_32": "196/19375",
+      "nearest_step": 0
+    },
+    {
+      "path_length_difference_m": "1/100000",
+      "delta_T_K": "5",
+      "phi_over_pi": "49/31000",
+      "steps_pi_over_32": "196/3875",
+      "nearest_step": 0
+    },
+    {
+      "path_length_difference_m": "1/100000",
+      "delta_T_K": "20",
+      "phi_over_pi": "49/7750",
+      "steps_pi_over_32": "784/3875",
+      "nearest_step": 0
+    },
+    {
+      "path_length_difference_m": "1/100000",
+      "delta_T_K": "50",
+      "phi_over_pi": "49/3100",
+      "steps_pi_over_32": "392/775",
+      "nearest_step": 1
+    },
+    {
+      "path_length_difference_m": "1/10000",
+      "delta_T_K": "1",
+      "phi_over_pi": "49/15500",
+      "steps_pi_over_32": "392/3875",
+      "nearest_step": 0
+    },
+    {
+      "path_length_difference_m": "1/10000",
+      "delta_T_K": "5",
+      "phi_over_pi": "49/3100",
+      "steps_pi_over_32": "392/775",
+      "nearest_step": 1
+    },
+    {
+      "path_length_difference_m": "1/10000",
+      "delta_T_K": "20",
+      "phi_over_pi": "49/775",
+      "steps_pi_over_32": "1568/775",
+      "nearest_step": 2
+    },
+    {
+      "path_length_difference_m": "1/10000",
+      "delta_T_K": "50",
+      "phi_over_pi": "49/310",
+      "steps_pi_over_32": "784/155",
+      "nearest_step": 5
+    },
+    {
+      "path_length_difference_m": "1/1000",
+      "delta_T_K": "1",
+      "phi_over_pi": "49/1550",
+      "steps_pi_over_32": "784/775",
+      "nearest_step": 1
+    },
+    {
+      "path_length_difference_m": "1/1000",
+      "delta_T_K": "5",
+      "phi_over_pi": "49/310",
+      "steps_pi_over_32": "784/155",
+      "nearest_step": 5
+    },
+    {
+      "path_length_difference_m": "1/1000",
+      "delta_T_K": "20",
+      "phi_over_pi": "98/155",
+      "steps_pi_over_32": "3136/155",
+      "nearest_step": 20
+    },
+    {
+      "path_length_difference_m": "1/1000",
+      "delta_T_K": "50",
+      "phi_over_pi": "49/31",
+      "steps_pi_over_32": "1568/31",
+      "nearest_step": 51
+    }
+  ],
+  "declared_drift_table_810nm": [
+    {
+      "path_length_difference_m": "1/100000",
+      "delta_T_K": "1",
+      "phi_over_pi": "49/81000",
+      "steps_pi_over_32": "196/10125",
+      "nearest_step": 0
+    },
+    {
+      "path_length_difference_m": "1/100000",
+      "delta_T_K": "5",
+      "phi_over_pi": "49/16200",
+      "steps_pi_over_32": "196/2025",
+      "nearest_step": 0
+    },
+    {
+      "path_length_difference_m": "1/100000",
+      "delta_T_K": "20",
+      "phi_over_pi": "49/4050",
+      "steps_pi_over_32": "784/2025",
+      "nearest_step": 0
+    },
+    {
+      "path_length_difference_m": "1/100000",
+      "delta_T_K": "50",
+      "phi_over_pi": "49/1620",
+      "steps_pi_over_32": "392/405",
+      "nearest_step": 1
+    },
+    {
+      "path_length_difference_m": "1/10000",
+      "delta_T_K": "1",
+      "phi_over_pi": "49/8100",
+      "steps_pi_over_32": "392/2025",
+      "nearest_step": 0
+    },
+    {
+      "path_length_difference_m": "1/10000",
+      "delta_T_K": "5",
+      "phi_over_pi": "49/1620",
+      "steps_pi_over_32": "392/405",
+      "nearest_step": 1
+    },
+    {
+      "path_length_difference_m": "1/10000",
+      "delta_T_K": "20",
+      "phi_over_pi": "49/405",
+      "steps_pi_over_32": "1568/405",
+      "nearest_step": 4
+    },
+    {
+      "path_length_difference_m": "1/10000",
+      "delta_T_K": "50",
+      "phi_over_pi": "49/162",
+      "steps_pi_over_32": "784/81",
+      "nearest_step": 10
+    },
+    {
+      "path_length_difference_m": "1/1000",
+      "delta_T_K": "1",
+      "phi_over_pi": "49/810",
+      "steps_pi_over_32": "784/405",
+      "nearest_step": 2
+    },
+    {
+      "path_length_difference_m": "1/1000",
+      "delta_T_K": "5",
+      "phi_over_pi": "49/162",
+      "steps_pi_over_32": "784/81",
+      "nearest_step": 10
+    },
+    {
+      "path_length_difference_m": "1/1000",
+      "delta_T_K": "20",
+      "phi_over_pi": "98/81",
+      "steps_pi_over_32": "3136/81",
+      "nearest_step": 39
+    },
+    {
+      "path_length_difference_m": "1/1000",
+      "delta_T_K": "50",
+      "phi_over_pi": "245/81",
+      "steps_pi_over_32": "7840/81",
+      "nearest_step": 97
+    }
+  ],
+  "declared_material_inputs": {
+    "dn_dT_per_K": "2.45e-5 (declared SiN value for the table; not measured on this core)"
+  },
+  "detector_options": [
+    {
+      "option": "snspd_1550",
+      "signal_band_nm": [
+        1500,
+        1600
+      ],
+      "detector_temperature_c_range": [
+        -272,
+        -269
+      ],
+      "thermal_class_if_recorded": "CRYOGENIC",
+      "design_change": "none; v0.9 selection"
+    },
+    {
+      "option": "ingaas_spad_1550",
+      "signal_band_nm": [
+        1500,
+        1600
+      ],
+      "detector_temperature_c_range": [
+        -70,
+        -30
+      ],
+      "thermal_class_if_recorded": "CRYOGEN_FREE",
+      "design_change": "detector only; same SiN core and SPDC source"
+    },
+    {
+      "option": "si_spad_810",
+      "signal_band_nm": [
+        700,
+        900
+      ],
+      "detector_temperature_c_range": [
+        15,
+        35
+      ],
+      "thermal_class_if_recorded": "ROOM_TEMPERATURE",
+      "design_change": "signal wavelength near 810 nm: new SPDC crystal/pump, re-targeted SiN cross-section and MMI, new calibration"
+    }
+  ],
+  "plan_sha256": {
+    "si_spad_810": "9465f795f3d6fdb16be644211db68dfac59f6b73fd15df7e08f4c4c1f95101ea",
+    "ingaas_spad_1550": "6f858a26a1d1b3736a10008e90dedcf65c596250225cfd4a0b1ad1798d103c83",
+    "snspd_1550": "9f6981f4588f96913a74d1b794ae6b81058e4dabb6907c684fbd1ee3e533abba"
+  },
+  "empty_record_verdict": {
+    "thermal": "UNDETERMINED",
+    "logic": "UNDETERMINED",
+    "claims_allowed": []
+  },
+  "measured_records": 0,
+  "hardware_submitted": false,
+  "thermal_solved": false,
+  "material_parameters_fitted": false,
+  "assumptions": [
+    "ideal lossless balanced couplers and calibrated coherent preparation/analyzers",
+    "phase-only drift; splitting ratio, loss, source spectrum and detector efficiency drift are outside the model",
+    "exact statements are at pi/32 samples; the common-mode theorem holds for every real shift by global phase"
+  ],
+  "open": [
+    "fabricated core, packaged bench and any recorded temperature log",
+    "two-photon source and HOM measurement at the exchange unit",
+    "room-temperature detector route and its re-targeted wavelength design"
+  ],
+  "checked_sources_sha256": {
+    "phase_seam_foundation/temperature_sweep.py": "1cf266cebfd235e76208291f6d6dbdcf95c44e56aa534ab3526e9e5f46d85615",
+    "benchmarks/temperature_sweep_audit.py": "ee993263ed8989267e447b5e29c5a4bf2f9c143cedccf4cdefcb12b7ce91d919",
+    "tests/test_phase_seam_temperature_sweep.py": "5e588d908976ec8e7bb8bbb86b4a831f134a3d1b59f143f5eebd31add8377fb9",
+    "phase_seam_foundation/photonic_response.py": "365409d0ef4fa63c1f315bb86c9113814ca6149e71fa86398c19ec965e50c347",
+    "phase_seam_foundation/photonic_io.py": "6e7554b073e78cbd58ef26fcd2c2327f89f696bdb85d2d375f980914bb57d3bf",
+    "phase_seam_foundation/photonic_layout.py": "c6debe28447121ad7b4522acd91ca60e41cd58d0274905dc12908c5dfbf6d350",
+    "phase_seam_foundation/model.py": "642984f5be7345683374719dc66193883d0688031e49ff9ebde12c5a36a939b8",
+    "native_relational_qc/cyclotomic64.py": "8fc9c42627feee330b00f1b56559031cc442746e830081eae09f535115d74e52",
+    "native_relational_qc/exact.py": "cc0b3be70660ed819b3ad153620ea4338fb6bf57102a4474d4355da2805afdf6",
+    "phase_seam_foundation/TEMPERATURE_SWEEP.md": "1b7ad04ff26a4a26e854946c5e2a1c0301f59a32c926eb20cc268ae6101adffb"
+  }
+}

@@ -1,0 +1,15 @@
+test_adaptive_generic_angles (test_phase_seam_cluster_build.AdaptationTests.test_adaptive_generic_angles) ... ok
+test_adaptive_xor_checkpoint_all_paths_exercised (test_phase_seam_cluster_build.AdaptationTests.test_adaptive_xor_checkpoint_all_paths_exercised) ... ok
+test_feedforward_layers (test_phase_seam_cluster_build.AdaptationTests.test_feedforward_layers) ... ok
+test_lemma_a_every_native_angle (test_phase_seam_cluster_build.AdaptationTests.test_lemma_a_every_native_angle) ... ok
+test_policies (test_phase_seam_cluster_build.CostTests.test_policies) ... ok
+test_fail_closed (test_phase_seam_cluster_build.GradeTests.test_fail_closed) ... ok
+test_plan (test_phase_seam_cluster_build.GradeTests.test_plan) ... ok
+test_online_ledger (test_phase_seam_cluster_build.LedgerTests.test_online_ledger) ... ok
+test_star_plan (test_phase_seam_cluster_build.TreeTests.test_star_plan) ... ok
+test_tree_from_seven_merges (test_phase_seam_cluster_build.TreeTests.test_tree_from_seven_merges) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 22.555s
+
+OK

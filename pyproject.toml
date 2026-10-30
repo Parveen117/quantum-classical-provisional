@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "native-relational-qc"
+version = "0.1.0"
+description = "Exact cyclotomic-field quantum-circuit calculator with certified decimal enclosures and fail-closed resource accounting"
+readme = "native_relational_qc/README.md"
+requires-python = ">=3.11"
+license = { text = "See repository LICENSE and notices" }
+authors = [{ name = "Monty" }]
+dependencies = ["numpy>=1.26,<3"]
+
+[project.optional-dependencies]
+qiskit = ["qiskit>=2.5,<3"]
+benchmark = ["qiskit>=2.5,<3", "qiskit-aer>=0.17,<1", "stim>=1.15,<2"]
+cad = ["gdstk", "klayout"]
+test = ["pytest>=8", "scipy"]
+
+[project.scripts]
+nrqc = "native_relational_qc.__main__:main"
+
+[project.urls]
+Repository = "https://github.com/Parveen117/quantum-classical-provisional"
+
+[tool.setuptools]
+packages = ["native_relational_qc", "phase_seam_foundation"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+native_relational_qc = ["*.md", "*.json", "*.txt", "*.sha256", "**/*.json", "**/*.txt", "**/*.sha256", "**/*.md"]
+phase_seam_foundation = ["*.md", "*.json", "*.txt", "**/*.md", "**/*.json", "**/*.txt", "**/*.gds", "**/LICENSE"]

@@ -1,0 +1,3753 @@
+{
+  "schema": "native-source-distillation-audit-v1",
+  "author": "Monty",
+  "status": "EXACT_CONDITIONAL_SOURCE_AND_SINGLE_ROUND_OPTICAL_CHANNEL_NO_DEVICE",
+  "generated_at": "2026-10-27T03:26:07.367415+00:00",
+  "checkout_base_commit": "90bc68dd73aaf6126b87a315346f301f069641d9",
+  "reviewed_collaborator_commit": "90bc68dd73aaf6126b87a315346f301f069641d9",
+  "corrected_collaborator_claims": [
+    "zero-coherence P1 partial trace",
+    "eta-independent first-order 4x",
+    "13-node product as physical witness bound",
+    "general g2/2 source-mixture inference"
+  ],
+  "reused_interfaces": [
+    "optical_refresh.fusion_merge_certificate",
+    "dual_rail Fock permanent engine",
+    "encoded_bell.basis_bridge_certificate"
+  ],
+  "tests_run": 124,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "test_suites": [
+    "source_distillation",
+    "cluster_faults",
+    "dual_rail",
+    "source_spec",
+    "optical_refresh",
+    "encoded_bell",
+    "cluster_build"
+  ],
+  "seconds": 202.723,
+  "source_sha256": {
+    "README.md": "f582b4c638be291d5a73f19ce7050cdba2659a8f396d431d5704c811166ef711",
+    "benchmarks/cluster_faults_audit.py": "240f9c0860a4115a5ef52b177ecf0db69d8b1903792314d3c21779898bc9dcb0",
+    "benchmarks/source_distillation_audit.py": "a7e2eb442d1b0d14ab71c0c60c38f4fa792a94f7cda1b03b39027b581acb3a48",
+    "native_relational_qc/__init__.py": "2df0c6684869d87776756cc78918199a9a09fa86f8c9e6d41d675591698c9350",
+    "native_relational_qc/algebra.py": "3d23b2a3a345b0760bfce1cff9e4eea9635543ee566c9dd6f0078405f211e9ab",
+    "native_relational_qc/calculator.py": "019dfa25703f3766aeed8a53259984927ae64f0b87670e594b0a606fc407c62b",
+    "native_relational_qc/circuit.py": "6215adf52443de8ee1db01f8e641c4c50124810a7674fd3258d826ff08b9e366",
+    "native_relational_qc/compact.py": "1acff6eaa8664b4ba33285c66c9f433ecd0148aa8383a18f79dbd2ccb66e898d",
+    "native_relational_qc/cyclotomic.py": "36a9f93fb9b6362a6141f13f4aef677de9f19642f6ea01ebb761614acab4ea86",
+    "native_relational_qc/cyclotomic32.py": "33e203a7280bbe8341e37cb357f1bb6bfcaba9e695ff5144050e3a087733ab76",
+    "native_relational_qc/cyclotomic64.py": "8fc9c42627feee330b00f1b56559031cc442746e830081eae09f535115d74e52",
+    "native_relational_qc/dynamic.py": "88421139cba72f0d86f3644c5933e03dd44d8afa1fdc79b250b2e8bf5390acd9",
+    "native_relational_qc/dynamic_examples.py": "0d40d9b3dbf098623c7586f13cdb54d9c6f627e4af6f0c398e79f983129d259e",
+    "native_relational_qc/exact.py": "cc0b3be70660ed819b3ad153620ea4338fb6bf57102a4474d4355da2805afdf6",
+    "native_relational_qc/modular_arithmetic.py": "dc59c9b09acf82cfee877d707901022f91fbe9a9284eb00cf6168e844b9368ce",
+    "native_relational_qc/observer.py": "eec5857176d20158e50c5d00a314483f9ce67a17a12fc7cc94416a754bd80833",
+    "native_relational_qc/phase_backend.py": "b47a5cfe04449a5def450aa3170ff11697436705427da83050f4aee08345dd98",
+    "native_relational_qc/state.py": "2ff1413d09f36f6449eb6ae7ca8c53de71ac86b9b0711e080849987ab031093e",
+    "phase_seam_foundation/CHAIN_MEMORY.md": "0663f768807fd257a178e5ee1163a70ba99cfeb7134e20d5f7cb4f974bf7b039",
+    "phase_seam_foundation/CLUSTER_BUILD.md": "ba2bbc7eeff4f9a99d14ed6c47aa58746ff5e989fa3e822a4fc914dce03e4e3e",
+    "phase_seam_foundation/CLUSTER_FAULTS.md": "79dd1f200e56d4d5d8b8d46ebb90f608f8cbdb2b3d703fd446a386814371beae",
+    "phase_seam_foundation/ENCODED_BELL.md": "4e7fc3302838010f9e76c95648555e2ca9615ce879a7084c4db3e9278e4ed47a",
+    "phase_seam_foundation/LEDGER_VIOLATIONS.md": "44ae5f461dfe537e58510d569c9dca8729cec148ba7f5b4220f37fc1b18d96db",
+    "phase_seam_foundation/OPTICAL_REFRESH.md": "19e7cbe1a54b2c090ff7c7c761db5782d038d75ff906ce2676446acae279feef",
+    "phase_seam_foundation/README.md": "b25ca4ddf52b2ab32c1549b9a94508ab100f73500ae983e309e79c40aa8d37fc",
+    "phase_seam_foundation/SOURCE_DISTILLATION.md": "60c07a939c027e481fdcf46ed519c352877000d8fe364edbc171c58b904d91a9",
+    "phase_seam_foundation/SOURCE_SPEC_810.md": "39af6860951b8d2cf4f20a6f474b967203a00bf024cff6663e7196d330a5ff71",
+    "phase_seam_foundation/__init__.py": "cf70be9ef06c41af5647c2363a63d24dd52dc7bb1445482f3780d2f62cedf1dc",
+    "phase_seam_foundation/chain_memory.py": "74dc2300dc8b16e4c9eefccf1e30c5372529c1bbf3f6a90680570fa0192e9af5",
+    "phase_seam_foundation/cluster_build.py": "2d0787a5ec0921c1280456abee08e567d92630b06eee944a49868922f332a02c",
+    "phase_seam_foundation/cluster_compile.py": "89ce8ae89170fcf99185b15632377b2c4d024ba94ec635c28e331cacc5b4b5e0",
+    "phase_seam_foundation/cluster_faults.py": "3a3703c28833e0365a9396a296d766eeec55b45f42f6e8fae32e4e4c8f2a87bc",
+    "phase_seam_foundation/controller.py": "ba74ab91b6ea9d1234256420225ba3ef5cc50a63ebf4ed0fa5d571af2169285d",
+    "phase_seam_foundation/dual_rail.py": "47062f1c68bad43033f8d22d99dfac759d0edc01a07b16a6cd1295cf5b3650d2",
+    "phase_seam_foundation/encoded_bell.py": "e26cdefb3ed92d7f2a00461e23accc7bbd82661b399bfd29940e087f0c2dfe0a",
+    "phase_seam_foundation/fusion_network.py": "5b3e4fb6e49c445c7796e1c474a981c2c35eb8ceb046332986ee75e10b2de10f",
+    "phase_seam_foundation/ledger_violations.py": "e30f01973c95f90cdeee6ff472b8ee33a031ce9061a1aad9d77a52d561e4b72a",
+    "phase_seam_foundation/loss_budget.py": "5313b33097fdd6a820c3b05b9a1ae95b5ea165695681ad8066715176dc22ff58",
+    "phase_seam_foundation/loss_ledger.py": "41f7f532b5ee01ab34f94e2a8e1e3ee8df24ded998c34c4570affbeb38224ac6",
+    "phase_seam_foundation/loss_refresh.py": "97126259eb95466263e212baf835e2772dd7d2dcca258e7e54cc7f0b72afe4f7",
+    "phase_seam_foundation/loss_tolerant_code.py": "c3ef9a10dd0a714f0c9e89d59ce6e17f8df9213de57089e36a7c9b098a293d6f",
+    "phase_seam_foundation/model.py": "642984f5be7345683374719dc66193883d0688031e49ff9ebde12c5a36a939b8",
+    "phase_seam_foundation/optical_refresh.py": "d1a50d94862c96bdf765fa865d5c9d6674b2d878ab746633644277f94506eb23",
+    "phase_seam_foundation/photonic_exchange.py": "1414ba5fffd110d35f339941059cccd086fd1b7cc4a3df84c3794095c4d77997",
+    "phase_seam_foundation/photonic_io.py": "6e7554b073e78cbd58ef26fcd2c2327f89f696bdb85d2d375f980914bb57d3bf",
+    "phase_seam_foundation/photonic_layout.py": "c6debe28447121ad7b4522acd91ca60e41cd58d0274905dc12908c5dfbf6d350",
+    "phase_seam_foundation/photonic_response.py": "365409d0ef4fa63c1f315bb86c9113814ca6149e71fa86398c19ec965e50c347",
+    "phase_seam_foundation/register.py": "d29fa6736256368b5a4885744b79a852146bc63d60fa98ec4a3ac18c26fa2b9d",
+    "phase_seam_foundation/sector_control.py": "fe528d000e7465e5ba359c6195172720624d5bebca92f15f1d03f9af6cf5694a",
+    "phase_seam_foundation/source_distillation.py": "d7f57cca7ecf309a4fbd50be04aece1dc9f5208ba65e177d84dbe69fbef29e82",
+    "phase_seam_foundation/source_spec.py": "31623c54b6f5afa708d445dc81d0c89d97985a2e3df7f450d440eed0e7e99c32",
+    "phase_seam_foundation/temperature_sweep.py": "1cf266cebfd235e76208291f6d6dbdcf95c44e56aa534ab3526e9e5f46d85615",
+    "phase_seam_foundation/tree_build.py": "e821489410a0fd4904f383bca2f3dea0e1d1387c4534d23f6eb59eab5da19ff7",
+    "tests/test_phase_seam_cluster_build.py": "8fd258400526f8439fd5de923b90f2440766a78f90e7ad413edb79d3ec6df36b",
+    "tests/test_phase_seam_cluster_faults.py": "43328127239aea7073b29ae89ff8fb93ace5728b249f18bd3916b11ecb882960",
+    "tests/test_phase_seam_dual_rail.py": "deaf2d921df47e03d3eca6d31c69d8b1564870d52bcb9024798483300b85176d",
+    "tests/test_phase_seam_encoded_bell.py": "ef363f8fa53af04737a2859217ef984ee49c7284f0c3f8f32ba0c5aad8fcec26",
+    "tests/test_phase_seam_optical_refresh.py": "08b9f5ca3a010e707191df48aefc18c071a37c758a73ba1514607918f5b8ddb5",
+    "tests/test_phase_seam_source_distillation.py": "bd47fc06086e25b57470796a4553d0b2f776c13ed1490ced6610f606c42e5c79",
+    "tests/test_phase_seam_source_spec.py": "5c57ab89a83bd2e22f2f84ae9366a6906e962a79dfd6c5847b8edadf885213d0"
+  },
+  "netlist_sha256": "33fd913a6f1c045b199d2fd12f44b07f8199d84d98dfac1ee0ecb2ccca218fd3",
+  "test_log_sha256": "92116c719510087538f3bb622bcd6cc225abb99b09ac46a82c894d8012196ce6",
+  "loss_environment_vectors": [
+    {
+      "environment": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "vector": [
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "environment": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "vector": [
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "environment": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "vector": [
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "environment": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "vector": [
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        },
+        {
+          "basis": "Q(zeta_64): (1,u) times [Q(zeta_32): (1,w) times [1,sqrt(2),i,i*sqrt(2),z,z*sqrt(2),i*z,i*z*sqrt(2); z=exp(i*pi/8)]; w=exp(i*pi/16), w^2=z]; u=exp(i*pi/32), u^2=w",
+          "coefficients": [
+            "2",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      ]
+    }
+  ],
+  "independent_dilation": {
+    "eta": {
+      "exact": "1/2",
+      "decimal": 0.5
+    },
+    "density": [
+      [
+        {
+          "exact": "5/48",
+          "decimal": 0.10416666666666667
+        },
+        {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        {
+          "exact": "1/12",
+          "decimal": 0.08333333333333333
+        }
+      ],
+      [
+        {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        {
+          "exact": "1/48",
+          "decimal": 0.020833333333333332
+        },
+        {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        {
+          "exact": "0",
+          "decimal": 0.0
+        }
+      ],
+      [
+        {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        {
+          "exact": "1/48",
+          "decimal": 0.020833333333333332
+        },
+        {
+          "exact": "0",
+          "decimal": 0.0
+        }
+      ],
+      [
+        {
+          "exact": "1/12",
+          "decimal": 0.08333333333333333
+        },
+        {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        {
+          "exact": "5/48",
+          "decimal": 0.10416666666666667
+        }
+      ]
+    ],
+    "probability": {
+      "exact": "1/4",
+      "decimal": 0.25
+    },
+    "matches_environment_channel": true,
+    "modes": 8,
+    "photons": 4
+  },
+  "source_channels": [
+    {
+      "eta": {
+        "exact": "243/4000",
+        "decimal": 0.06075
+      },
+      "event_probability": {
+        "exact": "833479528401/64000000000000",
+        "decimal": 0.013023117631265626
+      },
+      "unnormalised_density": [
+        [
+          {
+            "exact": "277826509467/51200000000000",
+            "decimal": 0.005426299013027344
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "277826509467/64000000000000",
+            "decimal": 0.004341039210421875
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "277826509467/256000000000000",
+            "decimal": 0.0010852598026054687
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "277826509467/256000000000000",
+            "decimal": 0.0010852598026054687
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "277826509467/64000000000000",
+            "decimal": 0.004341039210421875
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "277826509467/51200000000000",
+            "decimal": 0.005426299013027344
+          }
+        ]
+      ],
+      "conditional_density": [
+        [
+          {
+            "exact": "5/12",
+            "decimal": 0.4166666666666667
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "1/3",
+            "decimal": 0.3333333333333333
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "1/12",
+            "decimal": 0.08333333333333333
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "1/12",
+            "decimal": 0.08333333333333333
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "1/3",
+            "decimal": 0.3333333333333333
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "5/12",
+            "decimal": 0.4166666666666667
+          }
+        ]
+      ],
+      "conditional_bell_weights": [
+        {
+          "exact": "3/4",
+          "decimal": 0.75
+        },
+        {
+          "exact": "1/12",
+          "decimal": 0.08333333333333333
+        },
+        {
+          "exact": "1/12",
+          "decimal": 0.08333333333333333
+        },
+        {
+          "exact": "1/12",
+          "decimal": 0.08333333333333333
+        }
+      ],
+      "conditional_xx": {
+        "exact": "2/3",
+        "decimal": 0.6666666666666666
+      },
+      "conditional_yy": {
+        "exact": "-2/3",
+        "decimal": -0.6666666666666666
+      },
+      "conditional_zz": {
+        "exact": "2/3",
+        "decimal": 0.6666666666666666
+      },
+      "conditional_bell_fidelity": {
+        "exact": "3/4",
+        "decimal": 0.75
+      },
+      "postselection_is_source_certification": false
+    },
+    {
+      "eta": {
+        "exact": "1/2",
+        "decimal": 0.5
+      },
+      "event_probability": {
+        "exact": "1/4",
+        "decimal": 0.25
+      },
+      "unnormalised_density": [
+        [
+          {
+            "exact": "5/48",
+            "decimal": 0.10416666666666667
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "1/12",
+            "decimal": 0.08333333333333333
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "1/48",
+            "decimal": 0.020833333333333332
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "1/48",
+            "decimal": 0.020833333333333332
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "1/12",
+            "decimal": 0.08333333333333333
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "5/48",
+            "decimal": 0.10416666666666667
+          }
+        ]
+      ],
+      "conditional_density": [
+        [
+          {
+            "exact": "5/12",
+            "decimal": 0.4166666666666667
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "1/3",
+            "decimal": 0.3333333333333333
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "1/12",
+            "decimal": 0.08333333333333333
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "1/12",
+            "decimal": 0.08333333333333333
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "1/3",
+            "decimal": 0.3333333333333333
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "5/12",
+            "decimal": 0.4166666666666667
+          }
+        ]
+      ],
+      "conditional_bell_weights": [
+        {
+          "exact": "3/4",
+          "decimal": 0.75
+        },
+        {
+          "exact": "1/12",
+          "decimal": 0.08333333333333333
+        },
+        {
+          "exact": "1/12",
+          "decimal": 0.08333333333333333
+        },
+        {
+          "exact": "1/12",
+          "decimal": 0.08333333333333333
+        }
+      ],
+      "conditional_xx": {
+        "exact": "2/3",
+        "decimal": 0.6666666666666666
+      },
+      "conditional_yy": {
+        "exact": "-2/3",
+        "decimal": -0.6666666666666666
+      },
+      "conditional_zz": {
+        "exact": "2/3",
+        "decimal": 0.6666666666666666
+      },
+      "conditional_bell_fidelity": {
+        "exact": "3/4",
+        "decimal": 0.75
+      },
+      "postselection_is_source_certification": false
+    },
+    {
+      "eta": {
+        "exact": "9/10",
+        "decimal": 0.9
+      },
+      "event_probability": {
+        "exact": "81/2500",
+        "decimal": 0.0324
+      },
+      "unnormalised_density": [
+        [
+          {
+            "exact": "27/2000",
+            "decimal": 0.0135
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "27/2500",
+            "decimal": 0.0108
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "27/10000",
+            "decimal": 0.0027
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "27/10000",
+            "decimal": 0.0027
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "27/2500",
+            "decimal": 0.0108
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "27/2000",
+            "decimal": 0.0135
+          }
+        ]
+      ],
+      "conditional_density": [
+        [
+          {
+            "exact": "5/12",
+            "decimal": 0.4166666666666667
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "1/3",
+            "decimal": 0.3333333333333333
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "1/12",
+            "decimal": 0.08333333333333333
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "1/12",
+            "decimal": 0.08333333333333333
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "1/3",
+            "decimal": 0.3333333333333333
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "5/12",
+            "decimal": 0.4166666666666667
+          }
+        ]
+      ],
+      "conditional_bell_weights": [
+        {
+          "exact": "3/4",
+          "decimal": 0.75
+        },
+        {
+          "exact": "1/12",
+          "decimal": 0.08333333333333333
+        },
+        {
+          "exact": "1/12",
+          "decimal": 0.08333333333333333
+        },
+        {
+          "exact": "1/12",
+          "decimal": 0.08333333333333333
+        }
+      ],
+      "conditional_xx": {
+        "exact": "2/3",
+        "decimal": 0.6666666666666666
+      },
+      "conditional_yy": {
+        "exact": "-2/3",
+        "decimal": -0.6666666666666666
+      },
+      "conditional_zz": {
+        "exact": "2/3",
+        "decimal": 0.6666666666666666
+      },
+      "conditional_bell_fidelity": {
+        "exact": "3/4",
+        "decimal": 0.75
+      },
+      "postselection_is_source_certification": false
+    },
+    {
+      "eta": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "event_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "unnormalised_density": [
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ]
+      ],
+      "conditional_density": null,
+      "conditional_bell_weights": null,
+      "conditional_xx": null,
+      "conditional_yy": null,
+      "conditional_zz": null,
+      "conditional_bell_fidelity": null,
+      "postselection_is_source_certification": false
+    },
+    {
+      "eta": {
+        "exact": "1",
+        "decimal": 1.0
+      },
+      "event_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "unnormalised_density": [
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ]
+      ],
+      "conditional_density": null,
+      "conditional_bell_weights": null,
+      "conditional_xx": null,
+      "conditional_yy": null,
+      "conditional_zz": null,
+      "conditional_bell_fidelity": null,
+      "postselection_is_source_certification": false
+    }
+  ],
+  "fused_source_channel": {
+    "source_event_probability": {
+      "exact": "1/4",
+      "decimal": 0.25
+    },
+    "fusion_success": {
+      "exact": "1/2",
+      "decimal": 0.5
+    },
+    "joint_event_probability": {
+      "exact": "1/8",
+      "decimal": 0.125
+    },
+    "conditional_xxx": {
+      "exact": "2/3",
+      "decimal": 0.6666666666666666
+    },
+    "conditional_ghz_fidelity": {
+      "exact": "3/4",
+      "decimal": 0.75
+    },
+    "clicks": [
+      {
+        "click": 1,
+        "probability": {
+          "exact": "1/4",
+          "decimal": 0.25
+        },
+        "conditional_xxx": {
+          "exact": "2/3",
+          "decimal": 0.6666666666666666
+        },
+        "conditional_ghz_fidelity": {
+          "exact": "3/4",
+          "decimal": 0.75
+        }
+      },
+      {
+        "click": 2,
+        "probability": {
+          "exact": "1/4",
+          "decimal": 0.25
+        },
+        "conditional_xxx": {
+          "exact": "2/3",
+          "decimal": 0.6666666666666666
+        },
+        "conditional_ghz_fidelity": {
+          "exact": "3/4",
+          "decimal": 0.75
+        }
+      }
+    ]
+  },
+  "declared_source_sectors": [
+    {
+      "single_event": {
+        "exact": "2302911/640000000",
+        "decimal": 0.0035982984375
+      },
+      "double_event": {
+        "exact": "833479528401/2560000000000000",
+        "decimal": 0.00032557794078164065
+      },
+      "event_probability": {
+        "exact": "10045123528401/2560000000000000",
+        "decimal": 0.003923876378281641
+      },
+      "double_fraction": {
+        "exact": "1085773/13085773",
+        "decimal": 0.08297354692000236
+      },
+      "conditional_bell_weights": [
+        {
+          "exact": "51257319/52343092",
+          "decimal": 0.9792566132699995
+        },
+        {
+          "exact": "1085773/157029276",
+          "decimal": 0.00691446224333353
+        },
+        {
+          "exact": "1085773/157029276",
+          "decimal": 0.00691446224333353
+        },
+        {
+          "exact": "1085773/157029276",
+          "decimal": 0.00691446224333353
+        }
+      ],
+      "conditional_fidelity": {
+        "exact": "51257319/52343092",
+        "decimal": 0.9792566132699995
+      },
+      "conditional_xx": {
+        "exact": "38171546/39257319",
+        "decimal": 0.9723421510266659
+      },
+      "first_order_double_fraction": "4*(1-eta)^2*x + O(x^2)",
+      "source_ready": false
+    },
+    {
+      "single_event": {
+        "exact": "39/160",
+        "decimal": 0.24375
+      },
+      "double_event": {
+        "exact": "1/160",
+        "decimal": 0.00625
+      },
+      "event_probability": {
+        "exact": "1/4",
+        "decimal": 0.25
+      },
+      "double_fraction": {
+        "exact": "1/40",
+        "decimal": 0.025
+      },
+      "conditional_bell_weights": [
+        {
+          "exact": "159/160",
+          "decimal": 0.99375
+        },
+        {
+          "exact": "1/480",
+          "decimal": 0.0020833333333333333
+        },
+        {
+          "exact": "1/480",
+          "decimal": 0.0020833333333333333
+        },
+        {
+          "exact": "1/480",
+          "decimal": 0.0020833333333333333
+        }
+      ],
+      "conditional_fidelity": {
+        "exact": "159/160",
+        "decimal": 0.99375
+      },
+      "conditional_xx": {
+        "exact": "119/120",
+        "decimal": 0.9916666666666667
+      },
+      "first_order_double_fraction": "4*(1-eta)^2*x + O(x^2)",
+      "source_ready": false
+    },
+    {
+      "single_event": {
+        "exact": "3159/4000",
+        "decimal": 0.78975
+      },
+      "double_event": {
+        "exact": "81/100000",
+        "decimal": 0.00081
+      },
+      "event_probability": {
+        "exact": "4941/6250",
+        "decimal": 0.79056
+      },
+      "double_fraction": {
+        "exact": "1/976",
+        "decimal": 0.0010245901639344263
+      },
+      "conditional_bell_weights": [
+        {
+          "exact": "3903/3904",
+          "decimal": 0.9997438524590164
+        },
+        {
+          "exact": "1/11712",
+          "decimal": 8.538251366120219e-05
+        },
+        {
+          "exact": "1/11712",
+          "decimal": 8.538251366120219e-05
+        },
+        {
+          "exact": "1/11712",
+          "decimal": 8.538251366120219e-05
+        }
+      ],
+      "conditional_fidelity": {
+        "exact": "3903/3904",
+        "decimal": 0.9997438524590164
+      },
+      "conditional_xx": {
+        "exact": "2927/2928",
+        "decimal": 0.9996584699453552
+      },
+      "first_order_double_fraction": "4*(1-eta)^2*x + O(x^2)",
+      "source_ready": false
+    }
+  ],
+  "ideal_schedules": [
+    {
+      "bases": "",
+      "steps": [],
+      "output_weights": [
+        {
+          "exact": "3/4",
+          "decimal": 0.75
+        },
+        {
+          "exact": "1/12",
+          "decimal": 0.08333333333333333
+        },
+        {
+          "exact": "1/12",
+          "decimal": 0.08333333333333333
+        },
+        {
+          "exact": "1/12",
+          "decimal": 0.08333333333333333
+        }
+      ],
+      "fidelity": {
+        "exact": "3/4",
+        "decimal": 0.75
+      },
+      "expected_raw_pairs": {
+        "exact": "1",
+        "decimal": 1.0
+      },
+      "perfect_storage": true,
+      "noisy_rounds_composed": false
+    },
+    {
+      "bases": "Z",
+      "steps": [
+        {
+          "basis": "Z",
+          "success_probability": {
+            "exact": "13/36",
+            "decimal": 0.3611111111111111
+          },
+          "output_weights": [
+            {
+              "exact": "41/52",
+              "decimal": 0.7884615384615384
+            },
+            {
+              "exact": "9/52",
+              "decimal": 0.17307692307692307
+            },
+            {
+              "exact": "1/52",
+              "decimal": 0.019230769230769232
+            },
+            {
+              "exact": "1/52",
+              "decimal": 0.019230769230769232
+            }
+          ],
+          "fidelity": {
+            "exact": "41/52",
+            "decimal": 0.7884615384615384
+          },
+          "expected_raw_pairs": {
+            "exact": "72/13",
+            "decimal": 5.538461538461538
+          }
+        }
+      ],
+      "output_weights": [
+        {
+          "exact": "41/52",
+          "decimal": 0.7884615384615384
+        },
+        {
+          "exact": "9/52",
+          "decimal": 0.17307692307692307
+        },
+        {
+          "exact": "1/52",
+          "decimal": 0.019230769230769232
+        },
+        {
+          "exact": "1/52",
+          "decimal": 0.019230769230769232
+        }
+      ],
+      "fidelity": {
+        "exact": "41/52",
+        "decimal": 0.7884615384615384
+      },
+      "expected_raw_pairs": {
+        "exact": "72/13",
+        "decimal": 5.538461538461538
+      },
+      "perfect_storage": true,
+      "noisy_rounds_composed": false
+    },
+    {
+      "bases": "ZZ",
+      "steps": [
+        {
+          "basis": "Z",
+          "success_probability": {
+            "exact": "13/36",
+            "decimal": 0.3611111111111111
+          },
+          "output_weights": [
+            {
+              "exact": "41/52",
+              "decimal": 0.7884615384615384
+            },
+            {
+              "exact": "9/52",
+              "decimal": 0.17307692307692307
+            },
+            {
+              "exact": "1/52",
+              "decimal": 0.019230769230769232
+            },
+            {
+              "exact": "1/52",
+              "decimal": 0.019230769230769232
+            }
+          ],
+          "fidelity": {
+            "exact": "41/52",
+            "decimal": 0.7884615384615384
+          },
+          "expected_raw_pairs": {
+            "exact": "72/13",
+            "decimal": 5.538461538461538
+          }
+        },
+        {
+          "basis": "Z",
+          "success_probability": {
+            "exact": "313/676",
+            "decimal": 0.4630177514792899
+          },
+          "output_weights": [
+            {
+              "exact": "881/1252",
+              "decimal": 0.7036741214057508
+            },
+            {
+              "exact": "369/1252",
+              "decimal": 0.29472843450479236
+            },
+            {
+              "exact": "1/1252",
+              "decimal": 0.0007987220447284345
+            },
+            {
+              "exact": "1/1252",
+              "decimal": 0.0007987220447284345
+            }
+          ],
+          "fidelity": {
+            "exact": "881/1252",
+            "decimal": 0.7036741214057508
+          },
+          "expected_raw_pairs": {
+            "exact": "7488/313",
+            "decimal": 23.923322683706072
+          }
+        }
+      ],
+      "output_weights": [
+        {
+          "exact": "881/1252",
+          "decimal": 0.7036741214057508
+        },
+        {
+          "exact": "369/1252",
+          "decimal": 0.29472843450479236
+        },
+        {
+          "exact": "1/1252",
+          "decimal": 0.0007987220447284345
+        },
+        {
+          "exact": "1/1252",
+          "decimal": 0.0007987220447284345
+        }
+      ],
+      "fidelity": {
+        "exact": "881/1252",
+        "decimal": 0.7036741214057508
+      },
+      "expected_raw_pairs": {
+        "exact": "7488/313",
+        "decimal": 23.923322683706072
+      },
+      "perfect_storage": true,
+      "noisy_rounds_composed": false
+    },
+    {
+      "bases": "ZX",
+      "steps": [
+        {
+          "basis": "Z",
+          "success_probability": {
+            "exact": "13/36",
+            "decimal": 0.3611111111111111
+          },
+          "output_weights": [
+            {
+              "exact": "41/52",
+              "decimal": 0.7884615384615384
+            },
+            {
+              "exact": "9/52",
+              "decimal": 0.17307692307692307
+            },
+            {
+              "exact": "1/52",
+              "decimal": 0.019230769230769232
+            },
+            {
+              "exact": "1/52",
+              "decimal": 0.019230769230769232
+            }
+          ],
+          "fidelity": {
+            "exact": "41/52",
+            "decimal": 0.7884615384615384
+          },
+          "expected_raw_pairs": {
+            "exact": "72/13",
+            "decimal": 5.538461538461538
+          }
+        },
+        {
+          "basis": "X",
+          "success_probability": {
+            "exact": "233/676",
+            "decimal": 0.34467455621301774
+          },
+          "output_weights": [
+            {
+              "exact": "841/932",
+              "decimal": 0.9023605150214592
+            },
+            {
+              "exact": "41/932",
+              "decimal": 0.043991416309012876
+            },
+            {
+              "exact": "41/932",
+              "decimal": 0.043991416309012876
+            },
+            {
+              "exact": "9/932",
+              "decimal": 0.009656652360515022
+            }
+          ],
+          "fidelity": {
+            "exact": "841/932",
+            "decimal": 0.9023605150214592
+          },
+          "expected_raw_pairs": {
+            "exact": "7488/233",
+            "decimal": 32.137339055793994
+          }
+        }
+      ],
+      "output_weights": [
+        {
+          "exact": "841/932",
+          "decimal": 0.9023605150214592
+        },
+        {
+          "exact": "41/932",
+          "decimal": 0.043991416309012876
+        },
+        {
+          "exact": "41/932",
+          "decimal": 0.043991416309012876
+        },
+        {
+          "exact": "9/932",
+          "decimal": 0.009656652360515022
+        }
+      ],
+      "fidelity": {
+        "exact": "841/932",
+        "decimal": 0.9023605150214592
+      },
+      "expected_raw_pairs": {
+        "exact": "7488/233",
+        "decimal": 32.137339055793994
+      },
+      "perfect_storage": true,
+      "noisy_rounds_composed": false
+    },
+    {
+      "bases": "ZXZ",
+      "steps": [
+        {
+          "basis": "Z",
+          "success_probability": {
+            "exact": "13/36",
+            "decimal": 0.3611111111111111
+          },
+          "output_weights": [
+            {
+              "exact": "41/52",
+              "decimal": 0.7884615384615384
+            },
+            {
+              "exact": "9/52",
+              "decimal": 0.17307692307692307
+            },
+            {
+              "exact": "1/52",
+              "decimal": 0.019230769230769232
+            },
+            {
+              "exact": "1/52",
+              "decimal": 0.019230769230769232
+            }
+          ],
+          "fidelity": {
+            "exact": "41/52",
+            "decimal": 0.7884615384615384
+          },
+          "expected_raw_pairs": {
+            "exact": "72/13",
+            "decimal": 5.538461538461538
+          }
+        },
+        {
+          "basis": "X",
+          "success_probability": {
+            "exact": "233/676",
+            "decimal": 0.34467455621301774
+          },
+          "output_weights": [
+            {
+              "exact": "841/932",
+              "decimal": 0.9023605150214592
+            },
+            {
+              "exact": "41/932",
+              "decimal": 0.043991416309012876
+            },
+            {
+              "exact": "41/932",
+              "decimal": 0.043991416309012876
+            },
+            {
+              "exact": "9/932",
+              "decimal": 0.009656652360515022
+            }
+          ],
+          "fidelity": {
+            "exact": "841/932",
+            "decimal": 0.9023605150214592
+          },
+          "expected_raw_pairs": {
+            "exact": "7488/233",
+            "decimal": 32.137339055793994
+          }
+        },
+        {
+          "basis": "Z",
+          "success_probability": {
+            "exact": "97553/217156",
+            "decimal": 0.4492300466024425
+          },
+          "output_weights": [
+            {
+              "exact": "354481/390212",
+              "decimal": 0.9084318268018411
+            },
+            {
+              "exact": "34481/390212",
+              "decimal": 0.08836478632128177
+            },
+            {
+              "exact": "881/390212",
+              "decimal": 0.0022577470708230398
+            },
+            {
+              "exact": "369/390212",
+              "decimal": 0.0009456398060541449
+            }
+          ],
+          "fidelity": {
+            "exact": "354481/390212",
+            "decimal": 0.9084318268018411
+          },
+          "expected_raw_pairs": {
+            "exact": "13957632/97553",
+            "decimal": 143.07742457945938
+          }
+        }
+      ],
+      "output_weights": [
+        {
+          "exact": "354481/390212",
+          "decimal": 0.9084318268018411
+        },
+        {
+          "exact": "34481/390212",
+          "decimal": 0.08836478632128177
+        },
+        {
+          "exact": "881/390212",
+          "decimal": 0.0022577470708230398
+        },
+        {
+          "exact": "369/390212",
+          "decimal": 0.0009456398060541449
+        }
+      ],
+      "fidelity": {
+        "exact": "354481/390212",
+        "decimal": 0.9084318268018411
+      },
+      "expected_raw_pairs": {
+        "exact": "13957632/97553",
+        "decimal": 143.07742457945938
+      },
+      "perfect_storage": true,
+      "noisy_rounds_composed": false
+    },
+    {
+      "bases": "ZXZX",
+      "steps": [
+        {
+          "basis": "Z",
+          "success_probability": {
+            "exact": "13/36",
+            "decimal": 0.3611111111111111
+          },
+          "output_weights": [
+            {
+              "exact": "41/52",
+              "decimal": 0.7884615384615384
+            },
+            {
+              "exact": "9/52",
+              "decimal": 0.17307692307692307
+            },
+            {
+              "exact": "1/52",
+              "decimal": 0.019230769230769232
+            },
+            {
+              "exact": "1/52",
+              "decimal": 0.019230769230769232
+            }
+          ],
+          "fidelity": {
+            "exact": "41/52",
+            "decimal": 0.7884615384615384
+          },
+          "expected_raw_pairs": {
+            "exact": "72/13",
+            "decimal": 5.538461538461538
+          }
+        },
+        {
+          "basis": "X",
+          "success_probability": {
+            "exact": "233/676",
+            "decimal": 0.34467455621301774
+          },
+          "output_weights": [
+            {
+              "exact": "841/932",
+              "decimal": 0.9023605150214592
+            },
+            {
+              "exact": "41/932",
+              "decimal": 0.043991416309012876
+            },
+            {
+              "exact": "41/932",
+              "decimal": 0.043991416309012876
+            },
+            {
+              "exact": "9/932",
+              "decimal": 0.009656652360515022
+            }
+          ],
+          "fidelity": {
+            "exact": "841/932",
+            "decimal": 0.9023605150214592
+          },
+          "expected_raw_pairs": {
+            "exact": "7488/233",
+            "decimal": 32.137339055793994
+          }
+        },
+        {
+          "basis": "Z",
+          "success_probability": {
+            "exact": "97553/217156",
+            "decimal": 0.4492300466024425
+          },
+          "output_weights": [
+            {
+              "exact": "354481/390212",
+              "decimal": 0.9084318268018411
+            },
+            {
+              "exact": "34481/390212",
+              "decimal": 0.08836478632128177
+            },
+            {
+              "exact": "881/390212",
+              "decimal": 0.0022577470708230398
+            },
+            {
+              "exact": "369/390212",
+              "decimal": 0.0009456398060541449
+            }
+          ],
+          "fidelity": {
+            "exact": "354481/390212",
+            "decimal": 0.9084318268018411
+          },
+          "expected_raw_pairs": {
+            "exact": "13957632/97553",
+            "decimal": 143.07742457945938
+          }
+        },
+        {
+          "basis": "X",
+          "success_probability": {
+            "exact": "15937084193/38066351236",
+            "decimal": 0.4186659260877104
+          },
+          "output_weights": [
+            {
+              "exact": "62828777761/63748336772",
+              "decimal": 0.9855751685837881
+            },
+            {
+              "exact": "594537761/63748336772",
+              "decimal": 0.009326325847941764
+            },
+            {
+              "exact": "312297761/63748336772",
+              "decimal": 0.004898916219837278
+            },
+            {
+              "exact": "12723489/63748336772",
+              "decimal": 0.00019958934843282848
+            }
+          ],
+          "fidelity": {
+            "exact": "62828777761/63748336772",
+            "decimal": 0.9855751685837881
+          },
+          "expected_raw_pairs": {
+            "exact": "10892870995968/15937084193",
+            "decimal": 683.4920907773359
+          }
+        }
+      ],
+      "output_weights": [
+        {
+          "exact": "62828777761/63748336772",
+          "decimal": 0.9855751685837881
+        },
+        {
+          "exact": "594537761/63748336772",
+          "decimal": 0.009326325847941764
+        },
+        {
+          "exact": "312297761/63748336772",
+          "decimal": 0.004898916219837278
+        },
+        {
+          "exact": "12723489/63748336772",
+          "decimal": 0.00019958934843282848
+        }
+      ],
+      "fidelity": {
+        "exact": "62828777761/63748336772",
+        "decimal": 0.9855751685837881
+      },
+      "expected_raw_pairs": {
+        "exact": "10892870995968/15937084193",
+        "decimal": 683.4920907773359
+      },
+      "perfect_storage": true,
+      "noisy_rounds_composed": false
+    }
+  ],
+  "noisy_single_rounds": [
+    {
+      "basis": "Z",
+      "input_survival": {
+        "exact": "1",
+        "decimal": 1.0
+      },
+      "detector_efficiency": {
+        "exact": "1",
+        "decimal": 1.0
+      },
+      "dark_per_mode": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "herald_probability": {
+        "exact": "13/36",
+        "decimal": 0.3611111111111111
+      },
+      "valid_payload_probability": {
+        "exact": "13/36",
+        "decimal": 0.3611111111111111
+      },
+      "false_payload_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "valid_payload_fraction": {
+        "exact": "1",
+        "decimal": 1.0
+      },
+      "conditional_fidelity": {
+        "exact": "41/52",
+        "decimal": 0.7884615384615384
+      },
+      "valid_sector_fidelity": {
+        "exact": "41/52",
+        "decimal": 0.7884615384615384
+      },
+      "fidelity_weight": {
+        "exact": "41/144",
+        "decimal": 0.2847222222222222
+      },
+      "valid_payload_density": [
+        [
+          {
+            "exact": "25/144",
+            "decimal": 0.1736111111111111
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "1/9",
+            "decimal": 0.1111111111111111
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "1/144",
+            "decimal": 0.006944444444444444
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "1/144",
+            "decimal": 0.006944444444444444
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "1/9",
+            "decimal": 0.1111111111111111
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "25/144",
+            "decimal": 0.1736111111111111
+          }
+        ]
+      ],
+      "per_click_herald": {
+        "(0, 0)": {
+          "exact": "13/144",
+          "decimal": 0.09027777777777778
+        },
+        "(0, 1)": {
+          "exact": "13/144",
+          "decimal": 0.09027777777777778
+        },
+        "(1, 0)": {
+          "exact": "13/144",
+          "decimal": 0.09027777777777778
+        },
+        "(1, 1)": {
+          "exact": "13/144",
+          "decimal": 0.09027777777777778
+        }
+      },
+      "payload_validity_is_observed": false,
+      "noisy_rounds_composed": false
+    },
+    {
+      "basis": "Z",
+      "input_survival": {
+        "exact": "99/100",
+        "decimal": 0.99
+      },
+      "detector_efficiency": {
+        "exact": "99/100",
+        "decimal": 0.99
+      },
+      "dark_per_mode": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "herald_probability": {
+        "exact": "563929638961689/1600000000000000",
+        "decimal": 0.3524560243510556
+      },
+      "valid_payload_probability": {
+        "exact": "1359915771357/4000000000000",
+        "decimal": 0.33997894283925
+      },
+      "false_payload_probability": {
+        "exact": "19963330418889/1600000000000000",
+        "decimal": 0.012477081511805625
+      },
+      "valid_payload_fraction": {
+        "exact": "1306800/1354759",
+        "decimal": 0.9645996077531133
+      },
+      "conditional_fidelity": {
+        "exact": "13394700/17611867",
+        "decimal": 0.7605496907284163
+      },
+      "valid_sector_fidelity": {
+        "exact": "41/52",
+        "decimal": 0.7884615384615384
+      },
+      "fidelity_weight": {
+        "exact": "4288965125049/16000000000000",
+        "decimal": 0.2680603203155625
+      },
+      "valid_payload_density": [
+        [
+          {
+            "exact": "104608905489/640000000000",
+            "decimal": 0.1634514148265625
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "104608905489/1000000000000",
+            "decimal": 0.104608905489
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "104608905489/16000000000000",
+            "decimal": 0.0065380565930625
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "104608905489/16000000000000",
+            "decimal": 0.0065380565930625
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "104608905489/1000000000000",
+            "decimal": 0.104608905489
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "104608905489/640000000000",
+            "decimal": 0.1634514148265625
+          }
+        ]
+      ],
+      "per_click_herald": {
+        "(0, 0)": {
+          "exact": "563929638961689/6400000000000000",
+          "decimal": 0.0881140060877639
+        },
+        "(0, 1)": {
+          "exact": "563929638961689/6400000000000000",
+          "decimal": 0.0881140060877639
+        },
+        "(1, 0)": {
+          "exact": "563929638961689/6400000000000000",
+          "decimal": 0.0881140060877639
+        },
+        "(1, 1)": {
+          "exact": "563929638961689/6400000000000000",
+          "decimal": 0.0881140060877639
+        }
+      },
+      "payload_validity_is_observed": false,
+      "noisy_rounds_composed": false
+    },
+    {
+      "basis": "Z",
+      "input_survival": {
+        "exact": "9/10",
+        "decimal": 0.9
+      },
+      "detector_efficiency": {
+        "exact": "9/10",
+        "decimal": 0.9
+      },
+      "dark_per_mode": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "herald_probability": {
+        "exact": "4608009/16000000",
+        "decimal": 0.2880005625
+      },
+      "valid_payload_probability": {
+        "exact": "767637/4000000",
+        "decimal": 0.19190925
+      },
+      "false_payload_probability": {
+        "exact": "1537461/16000000",
+        "decimal": 0.0960913125
+      },
+      "valid_payload_fraction": {
+        "exact": "1404/2107",
+        "decimal": 0.6663502610346465
+      },
+      "conditional_fidelity": {
+        "exact": "1107/2107",
+        "decimal": 0.5253915519696251
+      },
+      "valid_sector_fidelity": {
+        "exact": "41/52",
+        "decimal": 0.7884615384615384
+      },
+      "fidelity_weight": {
+        "exact": "2421009/16000000",
+        "decimal": 0.1513130625
+      },
+      "valid_payload_density": [
+        [
+          {
+            "exact": "59049/640000",
+            "decimal": 0.0922640625
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "59049/1000000",
+            "decimal": 0.059049
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "59049/16000000",
+            "decimal": 0.0036905625
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "59049/16000000",
+            "decimal": 0.0036905625
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "59049/1000000",
+            "decimal": 0.059049
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "59049/640000",
+            "decimal": 0.0922640625
+          }
+        ]
+      ],
+      "per_click_herald": {
+        "(0, 0)": {
+          "exact": "4608009/64000000",
+          "decimal": 0.072000140625
+        },
+        "(0, 1)": {
+          "exact": "4608009/64000000",
+          "decimal": 0.072000140625
+        },
+        "(1, 0)": {
+          "exact": "4608009/64000000",
+          "decimal": 0.072000140625
+        },
+        "(1, 1)": {
+          "exact": "4608009/64000000",
+          "decimal": 0.072000140625
+        }
+      },
+      "payload_validity_is_observed": false,
+      "noisy_rounds_composed": false
+    },
+    {
+      "basis": "Z",
+      "input_survival": {
+        "exact": "99/100",
+        "decimal": 0.99
+      },
+      "detector_efficiency": {
+        "exact": "99/100",
+        "decimal": 0.99
+      },
+      "dark_per_mode": {
+        "exact": "1/1000000",
+        "decimal": 1e-06
+      },
+      "herald_probability": {
+        "exact": "140981966547610866374789535720682093689/400000000000000000000000000000000000000",
+        "decimal": 0.35245491636902715
+      },
+      "valid_payload_probability": {
+        "exact": "1359910463495455450627176725752368213/4000000000000000000000000000000000000",
+        "decimal": 0.3399776158738639
+      },
+      "false_payload_probability": {
+        "exact": "4990920198065321312071863145445272389/400000000000000000000000000000000000000",
+        "decimal": 0.012477300495163303
+      },
+      "valid_payload_fraction": {
+        "exact": "135991318332046217836821300/140982248511966908060093689",
+        "decimal": 0.9645988751591159
+      },
+      "conditional_fidelity": {
+        "exact": "107223919521696012262221225/140982248511966908060093689",
+        "decimal": 0.7605490808482501
+      },
+      "valid_sector_fidelity": {
+        "exact": "1312811992919449185947/1665029915299004809756",
+        "decimal": 0.7884615050196834
+      },
+      "fidelity_weight": {
+        "exact": "4288948202958567711588735862792488849/16000000000000000000000000000000000000",
+        "decimal": 0.2680592626849105
+      },
+      "valid_payload_density": [
+        [
+          {
+            "exact": "104608496403779062374270405613840041/640000000000000000000000000000000000",
+            "decimal": 0.1634507756309048
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "104608487054005697014498482652905489/1000000000000000000000000000000000000",
+            "decimal": 0.1046084870540057
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "104608516896434341897593311158735401/16000000000000000000000000000000000000",
+            "decimal": 0.006538032306027146
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "104608516896434341897593311158735401/16000000000000000000000000000000000000",
+            "decimal": 0.006538032306027146
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "104608487054005697014498482652905489/1000000000000000000000000000000000000",
+            "decimal": 0.1046084870540057
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "104608496403779062374270405613840041/640000000000000000000000000000000000",
+            "decimal": 0.1634507756309048
+          }
+        ]
+      ],
+      "per_click_herald": {
+        "(0, 0)": {
+          "exact": "140981966547610866374789535720682093689/1600000000000000000000000000000000000000",
+          "decimal": 0.08811372909225679
+        },
+        "(0, 1)": {
+          "exact": "140981966547610866374789535720682093689/1600000000000000000000000000000000000000",
+          "decimal": 0.08811372909225679
+        },
+        "(1, 0)": {
+          "exact": "140981966547610866374789535720682093689/1600000000000000000000000000000000000000",
+          "decimal": 0.08811372909225679
+        },
+        "(1, 1)": {
+          "exact": "140981966547610866374789535720682093689/1600000000000000000000000000000000000000",
+          "decimal": 0.08811372909225679
+        }
+      },
+      "payload_validity_is_observed": false,
+      "noisy_rounds_composed": false
+    }
+  ],
+  "perfect_pair_and_dark_controls": [
+    {
+      "basis": "Z",
+      "input_survival": {
+        "exact": "1",
+        "decimal": 1.0
+      },
+      "detector_efficiency": {
+        "exact": "1",
+        "decimal": 1.0
+      },
+      "dark_per_mode": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "herald_probability": {
+        "exact": "1/2",
+        "decimal": 0.5
+      },
+      "valid_payload_probability": {
+        "exact": "1/2",
+        "decimal": 0.5
+      },
+      "false_payload_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "valid_payload_fraction": {
+        "exact": "1",
+        "decimal": 1.0
+      },
+      "conditional_fidelity": {
+        "exact": "1",
+        "decimal": 1.0
+      },
+      "valid_sector_fidelity": {
+        "exact": "1",
+        "decimal": 1.0
+      },
+      "fidelity_weight": {
+        "exact": "1/2",
+        "decimal": 0.5
+      },
+      "valid_payload_density": [
+        [
+          {
+            "exact": "1/4",
+            "decimal": 0.25
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "1/4",
+            "decimal": 0.25
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "1/4",
+            "decimal": 0.25
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "1/4",
+            "decimal": 0.25
+          }
+        ]
+      ],
+      "per_click_herald": {
+        "(0, 0)": {
+          "exact": "1/8",
+          "decimal": 0.125
+        },
+        "(0, 1)": {
+          "exact": "1/8",
+          "decimal": 0.125
+        },
+        "(1, 0)": {
+          "exact": "1/8",
+          "decimal": 0.125
+        },
+        "(1, 1)": {
+          "exact": "1/8",
+          "decimal": 0.125
+        }
+      },
+      "payload_validity_is_observed": false,
+      "noisy_rounds_composed": false
+    },
+    {
+      "basis": "Z",
+      "input_survival": {
+        "exact": "1",
+        "decimal": 1.0
+      },
+      "detector_efficiency": {
+        "exact": "9/10",
+        "decimal": 0.9
+      },
+      "dark_per_mode": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "herald_probability": {
+        "exact": "4131/10000",
+        "decimal": 0.4131
+      },
+      "valid_payload_probability": {
+        "exact": "81/200",
+        "decimal": 0.405
+      },
+      "false_payload_probability": {
+        "exact": "81/10000",
+        "decimal": 0.0081
+      },
+      "valid_payload_fraction": {
+        "exact": "50/51",
+        "decimal": 0.9803921568627451
+      },
+      "conditional_fidelity": {
+        "exact": "50/51",
+        "decimal": 0.9803921568627451
+      },
+      "valid_sector_fidelity": {
+        "exact": "1",
+        "decimal": 1.0
+      },
+      "fidelity_weight": {
+        "exact": "81/200",
+        "decimal": 0.405
+      },
+      "valid_payload_density": [
+        [
+          {
+            "exact": "81/400",
+            "decimal": 0.2025
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "81/400",
+            "decimal": 0.2025
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "81/400",
+            "decimal": 0.2025
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "81/400",
+            "decimal": 0.2025
+          }
+        ]
+      ],
+      "per_click_herald": {
+        "(0, 0)": {
+          "exact": "4131/40000",
+          "decimal": 0.103275
+        },
+        "(0, 1)": {
+          "exact": "4131/40000",
+          "decimal": 0.103275
+        },
+        "(1, 0)": {
+          "exact": "4131/40000",
+          "decimal": 0.103275
+        },
+        "(1, 1)": {
+          "exact": "4131/40000",
+          "decimal": 0.103275
+        }
+      },
+      "payload_validity_is_observed": false,
+      "noisy_rounds_composed": false
+    },
+    {
+      "basis": "Z",
+      "input_survival": {
+        "exact": "9/10",
+        "decimal": 0.9
+      },
+      "detector_efficiency": {
+        "exact": "1",
+        "decimal": 1.0
+      },
+      "dark_per_mode": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "herald_probability": {
+        "exact": "4131/10000",
+        "decimal": 0.4131
+      },
+      "valid_payload_probability": {
+        "exact": "6561/20000",
+        "decimal": 0.32805
+      },
+      "false_payload_probability": {
+        "exact": "1701/20000",
+        "decimal": 0.08505
+      },
+      "valid_payload_fraction": {
+        "exact": "27/34",
+        "decimal": 0.7941176470588235
+      },
+      "conditional_fidelity": {
+        "exact": "27/34",
+        "decimal": 0.7941176470588235
+      },
+      "valid_sector_fidelity": {
+        "exact": "1",
+        "decimal": 1.0
+      },
+      "fidelity_weight": {
+        "exact": "6561/20000",
+        "decimal": 0.32805
+      },
+      "valid_payload_density": [
+        [
+          {
+            "exact": "6561/40000",
+            "decimal": 0.164025
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "6561/40000",
+            "decimal": 0.164025
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "6561/40000",
+            "decimal": 0.164025
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "6561/40000",
+            "decimal": 0.164025
+          }
+        ]
+      ],
+      "per_click_herald": {
+        "(0, 0)": {
+          "exact": "4131/40000",
+          "decimal": 0.103275
+        },
+        "(0, 1)": {
+          "exact": "4131/40000",
+          "decimal": 0.103275
+        },
+        "(1, 0)": {
+          "exact": "4131/40000",
+          "decimal": 0.103275
+        },
+        "(1, 1)": {
+          "exact": "4131/40000",
+          "decimal": 0.103275
+        }
+      },
+      "payload_validity_is_observed": false,
+      "noisy_rounds_composed": false
+    },
+    {
+      "basis": "Z",
+      "input_survival": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "detector_efficiency": {
+        "exact": "1",
+        "decimal": 1.0
+      },
+      "dark_per_mode": {
+        "exact": "1/1000",
+        "decimal": 0.001
+      },
+      "herald_probability": {
+        "exact": "998001/250000000000",
+        "decimal": 3.992004e-06
+      },
+      "valid_payload_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "false_payload_probability": {
+        "exact": "998001/250000000000",
+        "decimal": 3.992004e-06
+      },
+      "valid_payload_fraction": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "conditional_fidelity": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "valid_sector_fidelity": null,
+      "fidelity_weight": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "valid_payload_density": [
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ]
+      ],
+      "per_click_herald": {
+        "(0, 0)": {
+          "exact": "998001/1000000000000",
+          "decimal": 9.98001e-07
+        },
+        "(0, 1)": {
+          "exact": "998001/1000000000000",
+          "decimal": 9.98001e-07
+        },
+        "(1, 0)": {
+          "exact": "998001/1000000000000",
+          "decimal": 9.98001e-07
+        },
+        "(1, 1)": {
+          "exact": "998001/1000000000000",
+          "decimal": 9.98001e-07
+        }
+      },
+      "payload_validity_is_observed": false,
+      "noisy_rounds_composed": false
+    },
+    {
+      "basis": "Z",
+      "input_survival": {
+        "exact": "1",
+        "decimal": 1.0
+      },
+      "detector_efficiency": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "dark_per_mode": {
+        "exact": "1/100",
+        "decimal": 0.01
+      },
+      "herald_probability": {
+        "exact": "9801/25000000",
+        "decimal": 0.00039204
+      },
+      "valid_payload_probability": {
+        "exact": "9801/50000000",
+        "decimal": 0.00019602
+      },
+      "false_payload_probability": {
+        "exact": "9801/50000000",
+        "decimal": 0.00019602
+      },
+      "valid_payload_fraction": {
+        "exact": "1/2",
+        "decimal": 0.5
+      },
+      "conditional_fidelity": {
+        "exact": "1/4",
+        "decimal": 0.25
+      },
+      "valid_sector_fidelity": {
+        "exact": "1/2",
+        "decimal": 0.5
+      },
+      "fidelity_weight": {
+        "exact": "9801/100000000",
+        "decimal": 9.801e-05
+      },
+      "valid_payload_density": [
+        [
+          {
+            "exact": "9801/100000000",
+            "decimal": 9.801e-05
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "9801/100000000",
+            "decimal": 9.801e-05
+          }
+        ]
+      ],
+      "per_click_herald": {
+        "(0, 0)": {
+          "exact": "9801/100000000",
+          "decimal": 9.801e-05
+        },
+        "(0, 1)": {
+          "exact": "9801/100000000",
+          "decimal": 9.801e-05
+        },
+        "(1, 0)": {
+          "exact": "9801/100000000",
+          "decimal": 9.801e-05
+        },
+        "(1, 1)": {
+          "exact": "9801/100000000",
+          "decimal": 9.801e-05
+        }
+      },
+      "payload_validity_is_observed": false,
+      "noisy_rounds_composed": false
+    },
+    {
+      "basis": "Z",
+      "input_survival": {
+        "exact": "1",
+        "decimal": 1.0
+      },
+      "detector_efficiency": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "dark_per_mode": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "herald_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "valid_payload_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "false_payload_probability": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "valid_payload_fraction": null,
+      "conditional_fidelity": null,
+      "valid_sector_fidelity": null,
+      "fidelity_weight": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "valid_payload_density": [
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ],
+        [
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          },
+          {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        ]
+      ],
+      "per_click_herald": {
+        "(0, 0)": {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        "(0, 1)": {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        "(1, 0)": {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        "(1, 1)": {
+          "exact": "0",
+          "decimal": 0.0
+        }
+      },
+      "payload_validity_is_observed": false,
+      "noisy_rounds_composed": false
+    }
+  ],
+  "synthetic_record_grade": {
+    "input_is_lab_evidence": false,
+    "verdict": {
+      "grade": "NODE_FAULTS_RECORDED",
+      "reasons": [
+        "source-conditioning map and circuit-level accepted-output channel required; the v0.33 product is not a witness bound"
+      ],
+      "witness_qualified": false
+    }
+  },
+  "boundaries": [
+    "all numbers follow declared mathematical models; no fabricated or measured device",
+    "selected one-survivor source sector is not nondestructively certified reusable supply",
+    "purification starts with two independent supplied Bell-diagonal two-photon pairs",
+    "one/double-pair mixture weight is not identified from g2 without its source-conditioning model",
+    "one-round channel includes uniform independent loss, PNR inefficiency and Bernoulli dark counts",
+    "herald-conditioned fidelity includes invalid payloads; valid-sector selection is not observed",
+    "ideal multi-round costs require perfect storage, optics, detectors and recursive retry",
+    "no noisy multi-round composition, higher source-pair numbers or 12-photon factory noise propagation",
+    "legacy classifier product retained only as toy score; no physical witness qualification"
+  ]
+}

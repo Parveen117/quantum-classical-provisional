@@ -24,3 +24,7 @@ api_key.txt
 # OS files
 .DS_Store
 Thumbs.db
+# Packaging
+*.egg-info/
+build/
+dist/

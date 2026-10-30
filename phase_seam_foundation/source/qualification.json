@@ -1,0 +1,88 @@
+{
+  "schema": "native-source-spec-audit-v1",
+  "author": "Monty",
+  "status": "SPEC_DECLARED_NO_SOURCE_BUILT",
+  "tests_run": 11,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 0.002,
+  "g2_lossless_by_x": {
+    "1/100": "1/50",
+    "1/40": "1/20",
+    "1/20": "1/10",
+    "1/10": "1/5",
+    "1/4": "1/2"
+  },
+  "g2_half_herald_at_x_1_40": "748802/10233601",
+  "operating_table_half_herald": [
+    {
+      "x": "1/100",
+      "p_click": "1/199",
+      "g2_heralded": "11880002/399960001",
+      "p_multipair_given_click": "299/20000",
+      "single_photon_regime": true
+    },
+    {
+      "x": "1/40",
+      "p_click": "1/79",
+      "g2_heralded": "748802/10233601",
+      "p_multipair_given_click": "119/3200",
+      "single_photon_regime": true
+    },
+    {
+      "x": "1/20",
+      "p_click": "1/39",
+      "g2_heralded": "91202/638401",
+      "p_multipair_given_click": "59/800",
+      "single_photon_regime": true
+    },
+    {
+      "x": "1/10",
+      "p_click": "1/19",
+      "g2_heralded": "10802/39601",
+      "p_multipair_given_click": "29/200",
+      "single_photon_regime": true
+    },
+    {
+      "x": "1/4",
+      "p_click": "1/7",
+      "g2_heralded": "578/961",
+      "p_multipair_given_click": "11/32",
+      "single_photon_regime": false
+    }
+  ],
+  "klyshko_x_1_40": {
+    "signal": "2461/4819",
+    "true_signal": "1/2",
+    "idler": "2461/7991",
+    "true_idler": "3/10"
+  },
+  "purity_by_widths": {
+    "1:1": "1",
+    "2:3": "12/13",
+    "1:10": "20/101"
+  },
+  "all_herald_probability_p_1_79": {
+    "1": "1/79",
+    "2": "1/6241",
+    "4": "1/38950081",
+    "8": "1/1517108809906561"
+  },
+  "grade": {
+    "grade": "SPEC_DECLARED",
+    "reasons": [
+      "pairs block incomplete or not LAB_RECORDED"
+    ]
+  },
+  "negative_controls": {
+    "g2_at_half": "PAIRS_RECORDED",
+    "synthetic_pairs": "SPEC_DECLARED"
+  },
+  "boundaries": [
+    "pair rate, brightness, efficiencies and bandwidths are declared, not derived",
+    "HOM visibility is bounded above by purity; its value is measured, not predicted",
+    "N heralded sources succeed together with probability p^N: the fusion network note handles multiplexing",
+    "nothing here changes the temperature verdict, which grades recorded logs only"
+  ],
+  "spec_sha256": "e4912deb3686aaa4c56294f7289a7b5f3c44b9f517721ffab5ccf3ef2e99a368"
+}

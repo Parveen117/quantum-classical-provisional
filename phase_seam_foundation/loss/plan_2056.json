@@ -1,0 +1,64 @@
+{
+  "schema": "native-loss-budget-v1",
+  "author": "Monty",
+  "status": "BUDGET_DECLARED",
+  "sites": 2056,
+  "stages": [
+    {
+      "stage": "source fibre coupling",
+      "transmission": "1/2",
+      "loss_db_approx": 3.01
+    },
+    {
+      "stage": "bandpass filter 810 nm",
+      "transmission": "9/10",
+      "loss_db_approx": 0.458
+    },
+    {
+      "stage": "fibre to chip facet",
+      "transmission": "1/2",
+      "loss_db_approx": 3.01
+    },
+    {
+      "stage": "on-chip propagation and couplers",
+      "transmission": "9/10",
+      "loss_db_approx": 0.458
+    },
+    {
+      "stage": "chip to fibre facet",
+      "transmission": "1/2",
+      "loss_db_approx": 3.01
+    },
+    {
+      "stage": "si_spad_810 detection efficiency",
+      "transmission": "3/5",
+      "loss_db_approx": 2.218
+    }
+  ],
+  "eta_per_site": "243/4000",
+  "loss_db_approx": 12.165,
+  "all_sites_survive": "(243/4000)^2056",
+  "fusion": {
+    "detector_side_efficiency": "3/5",
+    "p_one_click": "21/50",
+    "p_genuine": "3/10",
+    "genuine_fraction": "5/7",
+    "false_herald_fraction": "2/7",
+    "lossless_success": "1/2"
+  },
+  "fusions_for_chain": 2054,
+  "all_heralds_genuine": "(5/7)^2054",
+  "exact_laws": [
+    "eta = product of stage transmissions",
+    "all N survive: eta^N",
+    "L1: P(one click) = eta_d(2-eta_d)/2, genuine eta_d/2, false fraction (1-eta_d)/(2-eta_d)",
+    "chain of F fusions all genuine: (1/(2-eta_d))^F",
+    "loss on surviving rails is a missing readout click, never a wrong outcome"
+  ],
+  "boundaries": [
+    "every transmission is declared; none measured",
+    "detector dark counts and afterpulsing not modelled",
+    "false heralds need photon-number resolution or lower loss to suppress; multiplexing note handles rates",
+    "nothing here changes the temperature verdict"
+  ]
+}
