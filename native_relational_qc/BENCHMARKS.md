@@ -8,7 +8,7 @@ uses floating point with truncation disabled. Stim handles Clifford inputs only.
 
 ## Results
 
-Historical integration measurements at `c1bb8e4`, retained without changing the
+Historical integration measurements retained in `c1bb8e4`, without changing the
 numbers after the subsequent arithmetic optimizations. Milliseconds, median
 of three fresh-process trials. Conversion, execution,
 query readout and formatting are included; imports/process startup are excluded
@@ -107,6 +107,8 @@ python benchmarks/verify_full_register_12.py \
 [trial 2](../benchmarks/comparisons/full_register_12_optimized_20261031_run2.json),
 [compressed input](../benchmarks/comparisons/full_register_12_20261031_input.json.gz),
 [compressed exact output](../benchmarks/comparisons/full_register_12_20261031_result.json.gz).
+The [validation summary](../benchmarks/comparisons/FULL_REGISTER_12_VALIDATION.md)
+links full-suite logs for all three CI variants and the local run.
 The [original timeout](../benchmarks/comparisons/full_register_12.json) is retained
 unchanged. The separately documented [record-conditioned path](RECORD_PHASE.md)
 is a different execution strategy; its timing is not used here.
