@@ -107,6 +107,14 @@ from retained measurement records to both signal and observer. It establishes
 finite circuit identities and output probabilities, with explicit controls
 against confusing a reference change with a physical interaction.
 
+The [record-controlled phase tracker](OBSERVER_TRACKING.md) makes that observer
+operational: `nrqc observer-track --records 0101` returns the next analyzer
+angle from a frozen six-probe policy. Its retained finite-model comparison
+reduces mean circular phase error by about 14.75% against the searched rotating
+schedule at the same readout budget, with per-case losses and noise/drift
+stress results retained. This is a modeled tracking gain, not hardware or
+general computational-speedup qualification.
+
 ## Ledger certification
 
 `nrqc certify cluster` retains the collaborator’s separate corrected-path

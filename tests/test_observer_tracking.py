@@ -77,6 +77,14 @@ class TrackingTests(unittest.TestCase):
                                          flip=Fraction(1, 2))['error'] for start in range(0, 32, 2)]
         self.assertEqual(sum(errors, flat_field()())*Fraction(1, 16), Fraction(1, 2))
 
+    def test_numerical_planning_objective_matches_exact_prior_risk(self):
+        model = tracking.Model(3)
+        errors = [tracking.exact_evaluate(self.policy, [start+t*velocity for t in range(4)], self.bank)['error']
+                  for start,velocity in model.hypotheses]
+        mean = sum(errors, flat_field()())*Fraction(1, len(errors))
+        self.assertAlmostEqual(float(tracking.display(mean)['decimal']),
+                               self.policy['planning']['numerical_expected_loss'], delta=2e-11)
+
     def test_records_are_causal_and_common_frame_shift_only_relabels_coordinates(self):
         for length in range(4):
             bits = '010'[:length]

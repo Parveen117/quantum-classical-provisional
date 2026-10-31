@@ -4,6 +4,10 @@ Author: Monty. Calculator experiment: 2026-10-31.
 Status: exact finite circuit tests and a proposed continuous extension;
 no calibrated material dynamics or computational advantage established.
 
+The next implemented stage is the [record-controlled phase tracker](OBSERVER_TRACKING.md):
+a frozen observer chooses later measurement axes from earlier bits and is
+compared against a searched rotating schedule with the same six-probe budget.
+
 The observer can be an evolving part of the machine. Its reference need not be
 an externally fixed axis. The operational state then includes **signal,
 reference, and retained interaction records**. A useful design question is how
