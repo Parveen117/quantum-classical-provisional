@@ -1,0 +1,259 @@
+{
+  "actions": "same four analyzer axes for every controller",
+  "adaptive_search": "full six-step Bellman tree, first axis 0 by prior symmetry",
+  "archive": "all likelihood requests/results, frozen trees, open-loop scores, per-trajectory scores, branch witnesses and hashes",
+  "branch_witnesses": "adaptive and searched_open_loop, source phase starts 2 and 3 with velocity +1; records 000000,111111,010101,101010",
+  "calibration": "32 one-probe exact calculator distributions",
+  "cases": {
+    "faster_drift": "16 odd initial steps x velocities -2,+2; outside planning model",
+    "model_grid": "16 even initial phase steps x velocities -1,0,1",
+    "randomized_readout": "shifted-phase cases with flip probability 1/2; expected error must be exactly 1/2",
+    "readout_flip_5pct": "shifted-phase cases with independent bit flips of probability 1/20; controller unchanged",
+    "reversing_drift": "16 odd initial steps x directions -1,+1; direction reverses after three probe intervals",
+    "shifted_phase": "16 odd initial phase steps x velocities -1,0,1; never used in planning"
+  },
+  "computational_speedup_claimed": false,
+  "hardware_validated": false,
+  "model": {
+    "axes": [
+      0,
+      4,
+      8,
+      12
+    ],
+    "guesses": [
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30
+    ],
+    "hypotheses": [
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        -1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        4,
+        -1
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        6,
+        -1
+      ],
+      [
+        6,
+        0
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        8,
+        -1
+      ],
+      [
+        8,
+        0
+      ],
+      [
+        8,
+        1
+      ],
+      [
+        10,
+        -1
+      ],
+      [
+        10,
+        0
+      ],
+      [
+        10,
+        1
+      ],
+      [
+        12,
+        -1
+      ],
+      [
+        12,
+        0
+      ],
+      [
+        12,
+        1
+      ],
+      [
+        14,
+        -1
+      ],
+      [
+        14,
+        0
+      ],
+      [
+        14,
+        1
+      ],
+      [
+        16,
+        -1
+      ],
+      [
+        16,
+        0
+      ],
+      [
+        16,
+        1
+      ],
+      [
+        18,
+        -1
+      ],
+      [
+        18,
+        0
+      ],
+      [
+        18,
+        1
+      ],
+      [
+        20,
+        -1
+      ],
+      [
+        20,
+        0
+      ],
+      [
+        20,
+        1
+      ],
+      [
+        22,
+        -1
+      ],
+      [
+        22,
+        0
+      ],
+      [
+        22,
+        1
+      ],
+      [
+        24,
+        -1
+      ],
+      [
+        24,
+        0
+      ],
+      [
+        24,
+        1
+      ],
+      [
+        26,
+        -1
+      ],
+      [
+        26,
+        0
+      ],
+      [
+        26,
+        1
+      ],
+      [
+        28,
+        -1
+      ],
+      [
+        28,
+        0
+      ],
+      [
+        28,
+        1
+      ],
+      [
+        30,
+        -1
+      ],
+      [
+        30,
+        0
+      ],
+      [
+        30,
+        1
+      ]
+    ],
+    "loss": "(1-cos(actual_phase-estimate))/2",
+    "phase_grid": 32,
+    "preparation": "one fresh equatorial probe per round",
+    "prior": "uniform",
+    "rounds": 6,
+    "signal": "phase(t)=initial+velocity*t modulo 32",
+    "target": "one-step-ahead source phase",
+    "target_time": 6
+  },
+  "numerical_ranking": "13 decimal places, first candidate wins ties; exact optimality not claimed",
+  "open_loop_search": "all 4^5 schedules after first axis 0, same terminal decoder",
+  "planning": "declared uniform phase/velocity prior only; no evaluation trajectories supplied",
+  "policies": [
+    "adaptive",
+    "searched_open_loop",
+    "fixed_x",
+    "rotating_xy",
+    "feedback_disabled"
+  ],
+  "primary_criterion": "at least 5 percent relative reduction in exact mean circular error versus searched_open_loop on model-grid and shifted-phase cases",
+  "probes_per_decision": 6,
+  "schema": "nrqc-moving-observer-tracking-protocol-v1",
+  "uncertainty": "exact finite-population expectation under declared preparations/noise; no physical confidence interval"
+}
