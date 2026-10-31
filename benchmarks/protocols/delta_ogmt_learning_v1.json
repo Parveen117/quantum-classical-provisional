@@ -1,0 +1,1720 @@
+{
+  "audit_version": 1,
+  "bootstrap_repeats": 2000,
+  "bootstrap_seed": 20261031,
+  "classical_clean_symbol_counter_accuracy": "1",
+  "count_thresholds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65
+  ],
+  "dataset": {
+    "reserve": [
+      {
+        "group": "AAAAABBABBBB",
+        "history": "AAAAABBABBBB",
+        "target": 0,
+        "transitions": 3
+      },
+      {
+        "group": "AAAAABBBBBAB",
+        "history": "AAAAABBBBBAB",
+        "target": 0,
+        "transitions": 3
+      },
+      {
+        "group": "AAAAABBABBBB",
+        "history": "AAAABAABBBBB",
+        "target": 0,
+        "transitions": 3
+      },
+      {
+        "group": "AAAABABABBBB",
+        "history": "AAAABABABBBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAAABABBBBAB",
+        "history": "AAAABABBBBAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAAABBAABBBB",
+        "history": "AAAABBAABBBB",
+        "target": 0,
+        "transitions": 3
+      },
+      {
+        "group": "AAAABBABABBB",
+        "history": "AAAABBABABBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAAABBBAABBB",
+        "history": "AAAABBBAABBB",
+        "target": 0,
+        "transitions": 3
+      },
+      {
+        "group": "AAAABBBABABB",
+        "history": "AAAABBBABABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAAABBBBAABB",
+        "history": "AAAABBBBAABB",
+        "target": 0,
+        "transitions": 3
+      },
+      {
+        "group": "AAAABBABABBB",
+        "history": "AAABABAABBBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAABABABABBB",
+        "history": "AAABABABABBB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAABABABBBAB",
+        "history": "AAABABABBBAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAABABBAABBB",
+        "history": "AAABABBAABBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAABABBBAABB",
+        "history": "AAABABBBAABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAAABBBAABBB",
+        "history": "AAABBAAABBBB",
+        "target": 0,
+        "transitions": 3
+      },
+      {
+        "group": "AAABABBAABBB",
+        "history": "AAABBAABABBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAABBAABBABB",
+        "history": "AAABBAABBABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAABBAABBBAB",
+        "history": "AAABBAABBBAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAABBABABABB",
+        "history": "AAABBABABABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAABBABBABAB",
+        "history": "AAABBABBABAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAABBABBBAAB",
+        "history": "AAABBABBBAAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAABBBAAABBB",
+        "history": "AAABBBAAABBB",
+        "target": 0,
+        "transitions": 3
+      },
+      {
+        "group": "AAABBBBAAABB",
+        "history": "AAABBBBAAABB",
+        "target": 0,
+        "transitions": 3
+      },
+      {
+        "group": "AAABBBBAABAB",
+        "history": "AAABBBBAABAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAABBBBBAAAB",
+        "history": "AAABBBBBAAAB",
+        "target": 0,
+        "transitions": 3
+      },
+      {
+        "group": "AABAAABBBABB",
+        "history": "AABAAABBBABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABAABABBABB",
+        "history": "AABAABABBABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAABBAABBABB",
+        "history": "AABAABBAABBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABAABBABABB",
+        "history": "AABAABBABABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABAABBBAABB",
+        "history": "AABAABBBAABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABAABBBABAB",
+        "history": "AABAABBBABAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAAABBBABABB",
+        "history": "AABABAAABBBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABAABBABABB",
+        "history": "AABABAABBABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAABBABABABB",
+        "history": "AABABABAABBB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABABABABABB",
+        "history": "AABABABABABB",
+        "target": 1,
+        "transitions": 9
+      },
+      {
+        "group": "AABABABBABAB",
+        "history": "AABABABBABAB",
+        "target": 1,
+        "transitions": 9
+      },
+      {
+        "group": "AABABBABABAB",
+        "history": "AABABBABABAB",
+        "target": 1,
+        "transitions": 9
+      },
+      {
+        "group": "AABABBBAABAB",
+        "history": "AABABBBAABAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAAABBBBAABB",
+        "history": "AABBAAAABBBB",
+        "target": 0,
+        "transitions": 3
+      },
+      {
+        "group": "AAABABBBAABB",
+        "history": "AABBAAABABBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABAABBBAABB",
+        "history": "AABBAAABBABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABBAABABBAB",
+        "history": "AABBAABABBAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABBAABBABAB",
+        "history": "AABBAABBABAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABBAABBBAAB",
+        "history": "AABBAABBBAAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABBABAABBAB",
+        "history": "AABBABAABBAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABBABABAABB",
+        "history": "AABBABABAABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABBABABBAAB",
+        "history": "AABBABABBAAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABBABBAAABB",
+        "history": "AABBABBAAABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABBABBABAAB",
+        "history": "AABBABBABAAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAABBBBAAABB",
+        "history": "AABBBAAAABBB",
+        "target": 0,
+        "transitions": 3
+      },
+      {
+        "group": "AABBBAAABBAB",
+        "history": "AABBBAAABBAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABBABBAAABB",
+        "history": "AABBBAABAABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABBBABAABAB",
+        "history": "AABBBABAABAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABBBABABAAB",
+        "history": "AABBBABABAAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABBBABBAAAB",
+        "history": "AABBBABBAAAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABBBBAAAABB",
+        "history": "AABBBBAAAABB",
+        "target": 0,
+        "transitions": 3
+      },
+      {
+        "group": "AABBBBAAABAB",
+        "history": "AABBBBAAABAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABBBBAABAAB",
+        "history": "AABBBBAABAAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABBBBABAAAB",
+        "history": "AABBBBABAAAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAAAABBBBBAB",
+        "history": "ABAAAAABBBBB",
+        "target": 0,
+        "transitions": 3
+      },
+      {
+        "group": "AAAABABBBBAB",
+        "history": "ABAAAABABBBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAABABABBBAB",
+        "history": "ABAAABABABBB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAABBAABBBAB",
+        "history": "ABAAABBAABBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "ABAAABBABBAB",
+        "history": "ABAAABBABBAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABAAABBBBAAB",
+        "history": "ABAAABBBBAAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "ABAAABBABBAB",
+        "history": "ABAABAABBBAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABBAABABBAB",
+        "history": "ABAABABBAABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABAABABBABAB",
+        "history": "ABAABABBABAB",
+        "target": 1,
+        "transitions": 9
+      },
+      {
+        "group": "ABAABBAABBAB",
+        "history": "ABAABBAABBAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABBABAABBAB",
+        "history": "ABAABBABAABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABAABBABABAB",
+        "history": "ABAABBABABAB",
+        "target": 1,
+        "transitions": 9
+      },
+      {
+        "group": "ABAABBABBAAB",
+        "history": "ABAABBABBAAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABBBAAABBAB",
+        "history": "ABAABBBAAABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "ABAABBBABAAB",
+        "history": "ABAABBBABAAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABAABBBBAAAB",
+        "history": "ABAABBBBAAAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABAABBBABAB",
+        "history": "ABABAAABBABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAABBABBABAB",
+        "history": "ABABAABAABBB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABABABBABAB",
+        "history": "ABABAABABABB",
+        "target": 1,
+        "transitions": 9
+      },
+      {
+        "group": "ABAABABBABAB",
+        "history": "ABABAABABBAB",
+        "target": 1,
+        "transitions": 9
+      },
+      {
+        "group": "AABBAABBABAB",
+        "history": "ABABAABBAABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABABAABBABAB",
+        "history": "ABABAABBABAB",
+        "target": 1,
+        "transitions": 9
+      },
+      {
+        "group": "ABABAABBBAAB",
+        "history": "ABABAABBBAAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABABBABABAB",
+        "history": "ABABABAABABB",
+        "target": 1,
+        "transitions": 9
+      },
+      {
+        "group": "ABAABBABABAB",
+        "history": "ABABABAABBAB",
+        "target": 1,
+        "transitions": 9
+      },
+      {
+        "group": "ABABABABABAB",
+        "history": "ABABABABABAB",
+        "target": 1,
+        "transitions": 11
+      },
+      {
+        "group": "ABABABABBAAB",
+        "history": "ABABABABBAAB",
+        "target": 1,
+        "transitions": 9
+      },
+      {
+        "group": "ABABABBBAAAB",
+        "history": "ABABABBBAAAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAABBBBAABAB",
+        "history": "ABABBAAAABBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABABBBAABAB",
+        "history": "ABABBAAABABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABBBABAABAB",
+        "history": "ABABBABAAABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABABBABABAAB",
+        "history": "ABABBABABAAB",
+        "target": 1,
+        "transitions": 9
+      },
+      {
+        "group": "AABBBBAAABAB",
+        "history": "ABABBBAAAABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "ABABBBAAABAB",
+        "history": "ABABBBAAABAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABABBBABAAAB",
+        "history": "ABABBBABAAAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABAAABBBBAAB",
+        "history": "ABBAAAABBBAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAABBABBBAAB",
+        "history": "ABBAAABAABBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABBAABBBAAB",
+        "history": "ABBAAABBAABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "ABABAABBBAAB",
+        "history": "ABBAAABBABAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABAABBABBAAB",
+        "history": "ABBAABAABBAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABBABABBAAB",
+        "history": "ABBAABABAABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABABABABBAAB",
+        "history": "ABBAABABABAB",
+        "target": 1,
+        "transitions": 9
+      },
+      {
+        "group": "ABBAABABBAAB",
+        "history": "ABBAABABBAAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABBAABBBAAAB",
+        "history": "ABBAABBBAAAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "ABAABBBABAAB",
+        "history": "ABBABAAABBAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABBABBABAAB",
+        "history": "ABBABAABAABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABBBABABAAB",
+        "history": "ABBABABAAABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABABBABABAAB",
+        "history": "ABBABABAABAB",
+        "target": 1,
+        "transitions": 9
+      },
+      {
+        "group": "ABBABABBAAAB",
+        "history": "ABBABABBAAAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABBBBAABAAB",
+        "history": "ABBABBAAAABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "ABBABBAABAAB",
+        "history": "ABBABBAABAAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABBABBBAAAAB",
+        "history": "ABBABBBAAAAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAABBBBBAAAB",
+        "history": "ABBBAAAAABBB",
+        "target": 0,
+        "transitions": 3
+      },
+      {
+        "group": "ABAABBBBAAAB",
+        "history": "ABBBAAAABBAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "ABABABBBAAAB",
+        "history": "ABBBAAABABAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABBAABBBAAAB",
+        "history": "ABBBAAABBAAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABBBABBAAAB",
+        "history": "ABBBAABAAABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "ABBABABBAAAB",
+        "history": "ABBBAABABAAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABBBBABAAAB",
+        "history": "ABBBABAAAABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "ABABBBABAAAB",
+        "history": "ABBBABAAABAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABBBABBAAAAB",
+        "history": "ABBBABBAAAAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "ABBABBBAAAAB",
+        "history": "ABBBBAAABAAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "ABBBABBAAAAB",
+        "history": "ABBBBAABAAAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "ABBBBABAAAAB",
+        "history": "ABBBBABAAAAB",
+        "target": 0,
+        "transitions": 5
+      }
+    ],
+    "test": [
+      {
+        "group": "AAAAABABBBBB",
+        "history": "AAAAABABBBBB",
+        "target": 0,
+        "transitions": 3
+      },
+      {
+        "group": "AAAAABBBABBB",
+        "history": "AAAAABBBABBB",
+        "target": 0,
+        "transitions": 3
+      },
+      {
+        "group": "AAAABABBBABB",
+        "history": "AAAABABBBABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAAABBABBABB",
+        "history": "AAAABBABBABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAAABBABBBAB",
+        "history": "AAAABBABBBAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAAAABBBABBB",
+        "history": "AAABAAABBBBB",
+        "target": 0,
+        "transitions": 3
+      },
+      {
+        "group": "AAABAABBABBB",
+        "history": "AAABAABBABBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAABAABBBABB",
+        "history": "AAABAABBBABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAABABABBABB",
+        "history": "AAABABABBABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAABABBABABB",
+        "history": "AAABABBABABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAABABBABBAB",
+        "history": "AAABABBABBAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAABABBBABAB",
+        "history": "AAABABBBABAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAABBABAABBB",
+        "history": "AAABBABAABBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAABBABABBAB",
+        "history": "AAABBABABBAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAABBABBAABB",
+        "history": "AAABBABBAABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAABBBAABBAB",
+        "history": "AAABBBAABBAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAABBBABABAB",
+        "history": "AAABBBABABAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAAABABBBABB",
+        "history": "AABAAABABBBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAABAABBBABB",
+        "history": "AABAAABBABBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAAABBABBABB",
+        "history": "AABAABAABBBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAABABABBABB",
+        "history": "AABAABABABBB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAABABBABABB",
+        "history": "AABABAABABBB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABABABABBAB",
+        "history": "AABABABABBAB",
+        "target": 1,
+        "transitions": 9
+      },
+      {
+        "group": "AABABABBAABB",
+        "history": "AABABABBAABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABABABBBAAB",
+        "history": "AABABABBBAAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABABBAABABB",
+        "history": "AABABBAABABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABABBBAAABB",
+        "history": "AABABBBAAABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABABBBBAAAB",
+        "history": "AABABBBBAAAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABBAAABBBAB",
+        "history": "AABBAAABBBAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAABBABBAABB",
+        "history": "AABBAABAABBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABABABBAABB",
+        "history": "AABBAABABABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABBABABABAB",
+        "history": "AABBABABABAB",
+        "target": 1,
+        "transitions": 9
+      },
+      {
+        "group": "AABBABBBAAAB",
+        "history": "AABBABBBAAAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABABBBAAABB",
+        "history": "AABBBAAABABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABBBABAAABB",
+        "history": "AABBBABAAABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABBBBBAAAAB",
+        "history": "AABBBBBAAAAB",
+        "target": 0,
+        "transitions": 3
+      },
+      {
+        "group": "AAAABBABBBAB",
+        "history": "ABAAABAABBBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "ABAAABABBBAB",
+        "history": "ABAAABABBBAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABBAAABBBAB",
+        "history": "ABAAABBBAABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAABABBABBAB",
+        "history": "ABAABAABABBB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAABBABABBAB",
+        "history": "ABAABABAABBB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABABABABBAB",
+        "history": "ABAABABABABB",
+        "target": 1,
+        "transitions": 9
+      },
+      {
+        "group": "ABAABABABBAB",
+        "history": "ABAABABABBAB",
+        "target": 1,
+        "transitions": 9
+      },
+      {
+        "group": "ABAABABBBAAB",
+        "history": "ABAABABBBAAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAABBBAABBAB",
+        "history": "ABAABBAAABBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAABABBBABAB",
+        "history": "ABABAAABABBB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAABBBABABAB",
+        "history": "ABABABAAABBB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABBABABABAB",
+        "history": "ABABABABAABB",
+        "target": 1,
+        "transitions": 9
+      },
+      {
+        "group": "ABABBABAABAB",
+        "history": "ABABBABAABAB",
+        "target": 1,
+        "transitions": 9
+      },
+      {
+        "group": "ABABBBAABAAB",
+        "history": "ABABBBAABAAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABABBBBAAAAB",
+        "history": "ABABBBBAAAAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABABABBBAAB",
+        "history": "ABBAAABABABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABAABABBBAAB",
+        "history": "ABBAAABABBAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABBAAABBBAAB",
+        "history": "ABBAAABBBAAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "ABBAABBABAAB",
+        "history": "ABBAABBABAAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABBAABBABAAB",
+        "history": "ABBABAABBAAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABBABABABAAB",
+        "history": "ABBABABABAAB",
+        "target": 1,
+        "transitions": 9
+      },
+      {
+        "group": "ABABBBAABAAB",
+        "history": "ABBABBAAABAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABABBBBAAAB",
+        "history": "ABBBAAAABABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABBABBBAAAB",
+        "history": "ABBBAAABAABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "ABBBABABAAAB",
+        "history": "ABBBABABAAAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABBBBBAAAAB",
+        "history": "ABBBBAAAAABB",
+        "target": 0,
+        "transitions": 3
+      },
+      {
+        "group": "ABABBBBAAAAB",
+        "history": "ABBBBAAAABAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "ABBBBBAAAAAB",
+        "history": "ABBBBBAAAAAB",
+        "target": 0,
+        "transitions": 3
+      }
+    ],
+    "train": [
+      {
+        "group": "AAAAAABBBBBB",
+        "history": "AAAAAABBBBBB",
+        "target": 0,
+        "transitions": 1
+      },
+      {
+        "group": "AAAAABBBBABB",
+        "history": "AAAAABBBBABB",
+        "target": 0,
+        "transitions": 3
+      },
+      {
+        "group": "AAAABABBABBB",
+        "history": "AAAABABBABBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAAABBBBABAB",
+        "history": "AAAABBBBABAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAAABABBABBB",
+        "history": "AAABAABABBBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAABAABBBBAB",
+        "history": "AAABAABBBBAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAABBBAABABB",
+        "history": "AAABBBAABABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAABBBBABAAB",
+        "history": "AAABBBBABAAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAAAABBBBABB",
+        "history": "AABAAAABBBBB",
+        "target": 0,
+        "transitions": 3
+      },
+      {
+        "group": "AABAAABBBBAB",
+        "history": "AABAAABBBBAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABAABABBBAB",
+        "history": "AABAABABBBAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABAABBABBAB",
+        "history": "AABAABBABBAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAABBBAABABB",
+        "history": "AABABBAAABBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABABBABAABB",
+        "history": "AABABBABAABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABABBABBAAB",
+        "history": "AABABBABBAAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABBAABBAABB",
+        "history": "AABBAABBAABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABABBABAABB",
+        "history": "AABBABAABABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAABAABBBBAB",
+        "history": "ABAAAABBABBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABAAABBBBAB",
+        "history": "ABAAAABBBABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABAABABBBAB",
+        "history": "ABAAABABBABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABAAABBBABAB",
+        "history": "ABAAABBBABAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABAABBABBAB",
+        "history": "ABAABAABBABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABAABBBAABAB",
+        "history": "ABAABBBAABAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAAABBBBABAB",
+        "history": "ABABAAAABBBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "ABAAABBBABAB",
+        "history": "ABABAAABBBAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABAABBBAABAB",
+        "history": "ABABBAAABBAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABABBAABBAAB",
+        "history": "ABABBAABBAAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABABBABBAAB",
+        "history": "ABBAABAABABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABABBAABBAAB",
+        "history": "ABBAABBAABAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAABBBBABAAB",
+        "history": "ABBABAAAABBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "ABBABBABAAAB",
+        "history": "ABBABBABAAAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABBABBABAAAB",
+        "history": "ABBBABAABAAB",
+        "target": 1,
+        "transitions": 7
+      }
+    ],
+    "validation": [
+      {
+        "group": "AAAABBBABBAB",
+        "history": "AAAABBBABBAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAAABBBBBAAB",
+        "history": "AAAABBBBBAAB",
+        "target": 0,
+        "transitions": 3
+      },
+      {
+        "group": "AAABABBBBAAB",
+        "history": "AAABABBBBAAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAABBBABAABB",
+        "history": "AAABBBABAABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAABBBABBAAB",
+        "history": "AAABBBABBAAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABAABBBBAAB",
+        "history": "AABAABBBBAAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABABAABBBAB",
+        "history": "AABABAABBBAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABABBAABBAB",
+        "history": "AABABBAABBAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABABBBABAAB",
+        "history": "AABABBBABAAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAABBBABAABB",
+        "history": "AABBABAAABBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABBABBAABAB",
+        "history": "AABBABBAABAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABBBAABABAB",
+        "history": "AABBBAABABAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABBBAABBAAB",
+        "history": "AABBBAABBAAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "ABAAAABBBBAB",
+        "history": "ABAAAABBBBAB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABABAABBBAB",
+        "history": "ABAAABBABABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAAABBBABBAB",
+        "history": "ABAABAAABBBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABABBAABBAB",
+        "history": "ABAABBAABABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AABBBAABABAB",
+        "history": "ABABABBAAABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABABABBAABAB",
+        "history": "ABABABBAABAB",
+        "target": 1,
+        "transitions": 9
+      },
+      {
+        "group": "ABABABBABAAB",
+        "history": "ABABABBABAAB",
+        "target": 1,
+        "transitions": 9
+      },
+      {
+        "group": "AABBABBAABAB",
+        "history": "ABABBAABAABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABABABBAABAB",
+        "history": "ABABBAABABAB",
+        "target": 1,
+        "transitions": 9
+      },
+      {
+        "group": "ABABBABBAAAB",
+        "history": "ABABBABBAAAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "AAAABBBBBAAB",
+        "history": "ABBAAAAABBBB",
+        "target": 0,
+        "transitions": 3
+      },
+      {
+        "group": "AAABABBBBAAB",
+        "history": "ABBAAAABABBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABAABBBBAAB",
+        "history": "ABBAAAABBABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AAABBBABBAAB",
+        "history": "ABBAABAAABBB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABBBAABBAAB",
+        "history": "ABBAABBAAABB",
+        "target": 0,
+        "transitions": 5
+      },
+      {
+        "group": "AABABBBABAAB",
+        "history": "ABBABAAABABB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABABABBABAAB",
+        "history": "ABBABAABABAB",
+        "target": 1,
+        "transitions": 9
+      },
+      {
+        "group": "ABABBABBAAAB",
+        "history": "ABBBAABAABAB",
+        "target": 1,
+        "transitions": 7
+      },
+      {
+        "group": "ABBBAABBAAAB",
+        "history": "ABBBAABBAAAB",
+        "target": 0,
+        "transitions": 5
+      }
+    ]
+  },
+  "dynamics_profiles": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      4,
+      4
+    ]
+  ],
+  "equal_input_counts": "six A and six B; endpoints A then B",
+  "exact_verification": "all train/validation/test probabilities for frozen models via calculator",
+  "extra_controls": [
+    "fixed original M3 dynamics/readout with train-only count threshold",
+    "remove CA from frozen M3 without any retuning",
+    "boundary-only, equal-input, commuting and disabled-projection checks"
+  ],
+  "grouping": "reverse-complement twins remain in the same split",
+  "history_length": 12,
+  "modes": [
+    "M1",
+    "M2",
+    "M3",
+    "E_CA"
+  ],
+  "observer_steps": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "orientations": [
+    1,
+    -1
+  ],
+  "physical_calibration": false,
+  "primary_success_rule": {
+    "M3_gain_over_both_M1_M2_min": "1/20",
+    "M3_test_expected_balanced_accuracy_min": "7/10",
+    "paired_group_bootstrap_lower_bound_positive": true
+  },
+  "projection_pairs": [
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      8,
+      2
+    ],
+    [
+      2,
+      8
+    ],
+    [
+      8,
+      8
+    ]
+  ],
+  "proposal_arithmetic": "native NumPy gate algebra; ranking rounded to 12 decimal places",
+  "schema": "delta-ogmt-learning-protocol-v1",
+  "seed": 20261031,
+  "selection": "validation score, then training score, then stable candidate order",
+  "shortlist": "best readout per dynamics profile; four profiles ranked on training",
+  "shots_per_decision": 64,
+  "task": "transition count >=7 versus <=5",
+  "training_configs_per_mode": 1152,
+  "uncertainty": "arithmetic enclosures plus separate exploratory grouped bootstrap; no physical confidence claim"
+}

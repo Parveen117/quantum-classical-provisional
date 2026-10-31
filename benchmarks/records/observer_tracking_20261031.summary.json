@@ -1,0 +1,690 @@
+{
+  "archive": "observer_tracking_20261031.tar.gz",
+  "archive_bytes": 150068,
+  "archive_sha256": "7219648b26e772db4c821eeece08bb66757d2c0be128db5afe569ceb1d2247ca",
+  "full_exact_records": "tracking_v1/summary.json and evaluations/ inside the retained archive",
+  "json_files": 108,
+  "per_trajectory_comparison_to_searched_schedule": {
+    "faster_drift": {
+      "better": 20,
+      "equal": 0,
+      "worse": 12
+    },
+    "model_grid": {
+      "better": 42,
+      "equal": 0,
+      "worse": 6
+    },
+    "randomized_readout": {
+      "better": 0,
+      "equal": 48,
+      "worse": 0
+    },
+    "readout_flip_5pct": {
+      "better": 44,
+      "equal": 0,
+      "worse": 4
+    },
+    "reversing_drift": {
+      "better": 22,
+      "equal": 0,
+      "worse": 10
+    },
+    "shifted_phase": {
+      "better": 42,
+      "equal": 0,
+      "worse": 6
+    }
+  },
+  "schema": "nrqc-observer-tracking-retained-index-v1",
+  "summary": {
+    "branch_witnesses_passed": 16,
+    "caveat": "These finite-family expected risks do not establish material performance, global algorithmic optimality or broad generalization.",
+    "comparisons": {
+      "faster_drift": {
+        "adaptive_is_better": true,
+        "five_percent_relative_improvement": true,
+        "open_loop_minus_adaptive_error": {
+          "decimal": "0.0190512474195",
+          "lower": "0.019051247419",
+          "upper": "0.019051247420"
+        }
+      },
+      "model_grid": {
+        "adaptive_is_better": true,
+        "five_percent_relative_improvement": true,
+        "open_loop_minus_adaptive_error": {
+          "decimal": "0.0167987815075",
+          "lower": "0.016798781507",
+          "upper": "0.016798781508"
+        }
+      },
+      "randomized_readout": {
+        "adaptive_is_better": false,
+        "five_percent_relative_improvement": false,
+        "open_loop_minus_adaptive_error": {
+          "decimal": "0.0000000000000",
+          "lower": "0.000000000000",
+          "upper": "0.000000000000"
+        }
+      },
+      "readout_flip_5pct": {
+        "adaptive_is_better": true,
+        "five_percent_relative_improvement": true,
+        "open_loop_minus_adaptive_error": {
+          "decimal": "0.0196983411025",
+          "lower": "0.019698341102",
+          "upper": "0.019698341103"
+        }
+      },
+      "reversing_drift": {
+        "adaptive_is_better": true,
+        "five_percent_relative_improvement": true,
+        "open_loop_minus_adaptive_error": {
+          "decimal": "0.0148563823215",
+          "lower": "0.014856382321",
+          "upper": "0.014856382322"
+        }
+      },
+      "shifted_phase": {
+        "adaptive_is_better": true,
+        "five_percent_relative_improvement": true,
+        "open_loop_minus_adaptive_error": {
+          "decimal": "0.0167987815075",
+          "lower": "0.016798781507",
+          "upper": "0.016798781508"
+        }
+      }
+    },
+    "computational_advantage_established": false,
+    "evidence_class": "DECLARED_IDEAL_PROBE_MODEL_WITH_STATED_READOUT_STRESS",
+    "exact_calculator_requests": 48,
+    "exact_trajectory_evaluations": 1280,
+    "frozen_policies_sha256": "be896e5e29b5e9703079b62e42034b4729373e7bdbf802a0bc6016476d14dfe9",
+    "hardware_job_id": null,
+    "hardware_validated": false,
+    "max_numeric_reference_error": 4.417577414983498e-13,
+    "no_heldout_trajectory_used_for_planning": true,
+    "numeric_reference_checks": 48,
+    "physical_cost_advantage_established": false,
+    "primary_improvement_passed": true,
+    "protocol_commit": "af8d8e068796b7dabe2bb3e61c35f36a07f26f1e",
+    "protocol_sha256": "c82dec6ed3fdbe042e2b4fb160acebee413175fa224055075a9b33d0f3e98775",
+    "python": "3.12.14",
+    "randomized_readout_controls": {
+      "adaptive": true,
+      "feedback_disabled": true,
+      "fixed_x": true,
+      "rotating_xy": true,
+      "searched_open_loop": true
+    },
+    "records_per_trajectory": 64,
+    "schema": "nrqc-observer-tracking-audit-v1",
+    "scores": {
+      "adaptive": {
+        "faster_drift": {
+          "axis_changes": {
+            "decimal": "4.1362946503465",
+            "lower": "4.136294650346",
+            "upper": "4.136294650347"
+          },
+          "cases": 32,
+          "error": {
+            "decimal": "0.2752806798905",
+            "lower": "0.275280679890",
+            "upper": "0.275280679891"
+          },
+          "within_45_degrees": {
+            "decimal": "0.3131598788305",
+            "lower": "0.313159878830",
+            "upper": "0.313159878831"
+          }
+        },
+        "model_grid": {
+          "axis_changes": {
+            "decimal": "4.1416916285985",
+            "lower": "4.141691628598",
+            "upper": "4.141691628599"
+          },
+          "cases": 48,
+          "error": {
+            "decimal": "0.0970699432055",
+            "lower": "0.097069943205",
+            "upper": "0.097069943206"
+          },
+          "within_45_degrees": {
+            "decimal": "0.8747859085305",
+            "lower": "0.874785908530",
+            "upper": "0.874785908531"
+          }
+        },
+        "randomized_readout": {
+          "axis_changes": {
+            "decimal": "4.0000000000000",
+            "lower": "4.000000000000",
+            "upper": "4.000000000000"
+          },
+          "cases": 48,
+          "error": {
+            "decimal": "0.5000000000000",
+            "lower": "0.500000000000",
+            "upper": "0.500000000000"
+          },
+          "within_45_degrees": {
+            "decimal": "0.2500000000000",
+            "lower": "0.250000000000",
+            "upper": "0.250000000000"
+          }
+        },
+        "readout_flip_5pct": {
+          "axis_changes": {
+            "decimal": "4.1169923865475",
+            "lower": "4.116992386547",
+            "upper": "4.116992386548"
+          },
+          "cases": 48,
+          "error": {
+            "decimal": "0.1227847895035",
+            "lower": "0.122784789503",
+            "upper": "0.122784789504"
+          },
+          "within_45_degrees": {
+            "decimal": "0.7193405251415",
+            "lower": "0.719340525141",
+            "upper": "0.719340525142"
+          }
+        },
+        "reversing_drift": {
+          "axis_changes": {
+            "decimal": "4.1096446048555",
+            "lower": "4.109644604855",
+            "upper": "4.109644604856"
+          },
+          "cases": 32,
+          "error": {
+            "decimal": "0.0919491062505",
+            "lower": "0.091949106250",
+            "upper": "0.091949106251"
+          },
+          "within_45_degrees": {
+            "decimal": "0.7859352526765",
+            "lower": "0.785935252676",
+            "upper": "0.785935252677"
+          }
+        },
+        "shifted_phase": {
+          "axis_changes": {
+            "decimal": "4.1416916285985",
+            "lower": "4.141691628598",
+            "upper": "4.141691628599"
+          },
+          "cases": 48,
+          "error": {
+            "decimal": "0.0970699432055",
+            "lower": "0.097069943205",
+            "upper": "0.097069943206"
+          },
+          "within_45_degrees": {
+            "decimal": "0.7718165905775",
+            "lower": "0.771816590577",
+            "upper": "0.771816590578"
+          }
+        }
+      },
+      "feedback_disabled": {
+        "faster_drift": {
+          "axis_changes": {
+            "decimal": "5.0000000000000",
+            "lower": "5.000000000000",
+            "upper": "5.000000000000"
+          },
+          "cases": 32,
+          "error": {
+            "decimal": "0.3408408152425",
+            "lower": "0.340840815242",
+            "upper": "0.340840815243"
+          },
+          "within_45_degrees": {
+            "decimal": "0.2760687424135",
+            "lower": "0.276068742413",
+            "upper": "0.276068742414"
+          }
+        },
+        "model_grid": {
+          "axis_changes": {
+            "decimal": "5.0000000000000",
+            "lower": "5.000000000000",
+            "upper": "5.000000000000"
+          },
+          "cases": 48,
+          "error": {
+            "decimal": "0.1310906569055",
+            "lower": "0.131090656905",
+            "upper": "0.131090656906"
+          },
+          "within_45_degrees": {
+            "decimal": "0.8131594396965",
+            "lower": "0.813159439696",
+            "upper": "0.813159439697"
+          }
+        },
+        "randomized_readout": {
+          "axis_changes": {
+            "decimal": "5.0000000000000",
+            "lower": "5.000000000000",
+            "upper": "5.000000000000"
+          },
+          "cases": 48,
+          "error": {
+            "decimal": "0.5000000000000",
+            "lower": "0.500000000000",
+            "upper": "0.500000000000"
+          },
+          "within_45_degrees": {
+            "decimal": "0.2500000000000",
+            "lower": "0.250000000000",
+            "upper": "0.250000000000"
+          }
+        },
+        "readout_flip_5pct": {
+          "axis_changes": {
+            "decimal": "5.0000000000000",
+            "lower": "5.000000000000",
+            "upper": "5.000000000000"
+          },
+          "cases": 48,
+          "error": {
+            "decimal": "0.1601861734475",
+            "lower": "0.160186173447",
+            "upper": "0.160186173448"
+          },
+          "within_45_degrees": {
+            "decimal": "0.6584705921435",
+            "lower": "0.658470592143",
+            "upper": "0.658470592144"
+          }
+        },
+        "reversing_drift": {
+          "axis_changes": {
+            "decimal": "5.0000000000000",
+            "lower": "5.000000000000",
+            "upper": "5.000000000000"
+          },
+          "cases": 32,
+          "error": {
+            "decimal": "0.1085259836295",
+            "lower": "0.108525983629",
+            "upper": "0.108525983630"
+          },
+          "within_45_degrees": {
+            "decimal": "0.7643312511735",
+            "lower": "0.764331251173",
+            "upper": "0.764331251174"
+          }
+        },
+        "shifted_phase": {
+          "axis_changes": {
+            "decimal": "5.0000000000000",
+            "lower": "5.000000000000",
+            "upper": "5.000000000000"
+          },
+          "cases": 48,
+          "error": {
+            "decimal": "0.1310906569055",
+            "lower": "0.131090656905",
+            "upper": "0.131090656906"
+          },
+          "within_45_degrees": {
+            "decimal": "0.7079521417365",
+            "lower": "0.707952141736",
+            "upper": "0.707952141737"
+          }
+        }
+      },
+      "fixed_x": {
+        "faster_drift": {
+          "axis_changes": {
+            "decimal": "0.0000000000000",
+            "lower": "0.000000000000",
+            "upper": "0.000000000000"
+          },
+          "cases": 32,
+          "error": {
+            "decimal": "0.3001687064935",
+            "lower": "0.300168706493",
+            "upper": "0.300168706494"
+          },
+          "within_45_degrees": {
+            "decimal": "0.4395542775445",
+            "lower": "0.439554277544",
+            "upper": "0.439554277545"
+          }
+        },
+        "model_grid": {
+          "axis_changes": {
+            "decimal": "0.0000000000000",
+            "lower": "0.000000000000",
+            "upper": "0.000000000000"
+          },
+          "cases": 48,
+          "error": {
+            "decimal": "0.2320475034895",
+            "lower": "0.232047503489",
+            "upper": "0.232047503490"
+          },
+          "within_45_degrees": {
+            "decimal": "0.5963170885635",
+            "lower": "0.596317088563",
+            "upper": "0.596317088564"
+          }
+        },
+        "randomized_readout": {
+          "axis_changes": {
+            "decimal": "0.0000000000000",
+            "lower": "0.000000000000",
+            "upper": "0.000000000000"
+          },
+          "cases": 48,
+          "error": {
+            "decimal": "0.5000000000000",
+            "lower": "0.500000000000",
+            "upper": "0.500000000000"
+          },
+          "within_45_degrees": {
+            "decimal": "0.2500000000000",
+            "lower": "0.250000000000",
+            "upper": "0.250000000000"
+          }
+        },
+        "readout_flip_5pct": {
+          "axis_changes": {
+            "decimal": "0.0000000000000",
+            "lower": "0.000000000000",
+            "upper": "0.000000000000"
+          },
+          "cases": 48,
+          "error": {
+            "decimal": "0.2444873518555",
+            "lower": "0.244487351855",
+            "upper": "0.244487351856"
+          },
+          "within_45_degrees": {
+            "decimal": "0.4771092039885",
+            "lower": "0.477109203988",
+            "upper": "0.477109203989"
+          }
+        },
+        "reversing_drift": {
+          "axis_changes": {
+            "decimal": "0.0000000000000",
+            "lower": "0.000000000000",
+            "upper": "0.000000000000"
+          },
+          "cases": 32,
+          "error": {
+            "decimal": "0.2348104464245",
+            "lower": "0.234810446424",
+            "upper": "0.234810446425"
+          },
+          "within_45_degrees": {
+            "decimal": "0.4855046488675",
+            "lower": "0.485504648867",
+            "upper": "0.485504648868"
+          }
+        },
+        "shifted_phase": {
+          "axis_changes": {
+            "decimal": "0.0000000000000",
+            "lower": "0.000000000000",
+            "upper": "0.000000000000"
+          },
+          "cases": 48,
+          "error": {
+            "decimal": "0.2320475034895",
+            "lower": "0.232047503489",
+            "upper": "0.232047503490"
+          },
+          "within_45_degrees": {
+            "decimal": "0.4867420745685",
+            "lower": "0.486742074568",
+            "upper": "0.486742074569"
+          }
+        }
+      },
+      "rotating_xy": {
+        "faster_drift": {
+          "axis_changes": {
+            "decimal": "5.0000000000000",
+            "lower": "5.000000000000",
+            "upper": "5.000000000000"
+          },
+          "cases": 32,
+          "error": {
+            "decimal": "0.3208417342895",
+            "lower": "0.320841734289",
+            "upper": "0.320841734290"
+          },
+          "within_45_degrees": {
+            "decimal": "0.2781086090045",
+            "lower": "0.278108609004",
+            "upper": "0.278108609005"
+          }
+        },
+        "model_grid": {
+          "axis_changes": {
+            "decimal": "5.0000000000000",
+            "lower": "5.000000000000",
+            "upper": "5.000000000000"
+          },
+          "cases": 48,
+          "error": {
+            "decimal": "0.1175591601645",
+            "lower": "0.117559160164",
+            "upper": "0.117559160165"
+          },
+          "within_45_degrees": {
+            "decimal": "0.8307041585635",
+            "lower": "0.830704158563",
+            "upper": "0.830704158564"
+          }
+        },
+        "randomized_readout": {
+          "axis_changes": {
+            "decimal": "5.0000000000000",
+            "lower": "5.000000000000",
+            "upper": "5.000000000000"
+          },
+          "cases": 48,
+          "error": {
+            "decimal": "0.5000000000000",
+            "lower": "0.500000000000",
+            "upper": "0.500000000000"
+          },
+          "within_45_degrees": {
+            "decimal": "0.2500000000000",
+            "lower": "0.250000000000",
+            "upper": "0.250000000000"
+          }
+        },
+        "readout_flip_5pct": {
+          "axis_changes": {
+            "decimal": "5.0000000000000",
+            "lower": "5.000000000000",
+            "upper": "5.000000000000"
+          },
+          "cases": 48,
+          "error": {
+            "decimal": "0.1443240978015",
+            "lower": "0.144324097801",
+            "upper": "0.144324097802"
+          },
+          "within_45_degrees": {
+            "decimal": "0.6761317781805",
+            "lower": "0.676131778180",
+            "upper": "0.676131778181"
+          }
+        },
+        "reversing_drift": {
+          "axis_changes": {
+            "decimal": "5.0000000000000",
+            "lower": "5.000000000000",
+            "upper": "5.000000000000"
+          },
+          "cases": 32,
+          "error": {
+            "decimal": "0.0977813860525",
+            "lower": "0.097781386052",
+            "upper": "0.097781386053"
+          },
+          "within_45_degrees": {
+            "decimal": "0.7762146529235",
+            "lower": "0.776214652923",
+            "upper": "0.776214652924"
+          }
+        },
+        "shifted_phase": {
+          "axis_changes": {
+            "decimal": "5.0000000000000",
+            "lower": "5.000000000000",
+            "upper": "5.000000000000"
+          },
+          "cases": 48,
+          "error": {
+            "decimal": "0.1175591601645",
+            "lower": "0.117559160164",
+            "upper": "0.117559160165"
+          },
+          "within_45_degrees": {
+            "decimal": "0.7240072923065",
+            "lower": "0.724007292306",
+            "upper": "0.724007292307"
+          }
+        }
+      },
+      "searched_open_loop": {
+        "faster_drift": {
+          "axis_changes": {
+            "decimal": "4.0000000000000",
+            "lower": "4.000000000000",
+            "upper": "4.000000000000"
+          },
+          "cases": 32,
+          "error": {
+            "decimal": "0.2943319273105",
+            "lower": "0.294331927310",
+            "upper": "0.294331927311"
+          },
+          "within_45_degrees": {
+            "decimal": "0.3187469436015",
+            "lower": "0.318746943601",
+            "upper": "0.318746943602"
+          }
+        },
+        "model_grid": {
+          "axis_changes": {
+            "decimal": "4.0000000000000",
+            "lower": "4.000000000000",
+            "upper": "4.000000000000"
+          },
+          "cases": 48,
+          "error": {
+            "decimal": "0.1138687247135",
+            "lower": "0.113868724713",
+            "upper": "0.113868724714"
+          },
+          "within_45_degrees": {
+            "decimal": "0.8378186042775",
+            "lower": "0.837818604277",
+            "upper": "0.837818604278"
+          }
+        },
+        "randomized_readout": {
+          "axis_changes": {
+            "decimal": "4.0000000000000",
+            "lower": "4.000000000000",
+            "upper": "4.000000000000"
+          },
+          "cases": 48,
+          "error": {
+            "decimal": "0.5000000000000",
+            "lower": "0.500000000000",
+            "upper": "0.500000000000"
+          },
+          "within_45_degrees": {
+            "decimal": "0.2500000000000",
+            "lower": "0.250000000000",
+            "upper": "0.250000000000"
+          }
+        },
+        "readout_flip_5pct": {
+          "axis_changes": {
+            "decimal": "4.0000000000000",
+            "lower": "4.000000000000",
+            "upper": "4.000000000000"
+          },
+          "cases": 48,
+          "error": {
+            "decimal": "0.1424831306065",
+            "lower": "0.142483130606",
+            "upper": "0.142483130607"
+          },
+          "within_45_degrees": {
+            "decimal": "0.6822873316795",
+            "lower": "0.682287331679",
+            "upper": "0.682287331680"
+          }
+        },
+        "reversing_drift": {
+          "axis_changes": {
+            "decimal": "4.0000000000000",
+            "lower": "4.000000000000",
+            "upper": "4.000000000000"
+          },
+          "cases": 32,
+          "error": {
+            "decimal": "0.1068054885715",
+            "lower": "0.106805488571",
+            "upper": "0.106805488572"
+          },
+          "within_45_degrees": {
+            "decimal": "0.7464531805205",
+            "lower": "0.746453180520",
+            "upper": "0.746453180521"
+          }
+        },
+        "shifted_phase": {
+          "axis_changes": {
+            "decimal": "4.0000000000000",
+            "lower": "4.000000000000",
+            "upper": "4.000000000000"
+          },
+          "cases": 48,
+          "error": {
+            "decimal": "0.1138687247135",
+            "lower": "0.113868724713",
+            "upper": "0.113868724714"
+          },
+          "within_45_degrees": {
+            "decimal": "0.7330199889115",
+            "lower": "0.733019988911",
+            "upper": "0.733019988912"
+          }
+        }
+      }
+    },
+    "source_sha256": {
+      "benchmarks/moving_observer_tracking_audit.py": "8c6f5e37dbf1d49e363179cd7b0ebcb6548e8f7be0c0faf4bd0ce3ba13bb77b9",
+      "benchmarks/protocols/moving_observer_tracking_v1.json": "dc2b802e2c8f0a9109e1a205f423fa36d31297ee5b3cb38d61eeecacf957d35e",
+      "native_relational_qc/__main__.py": "1bb94789b952cf2bc8853ca3d6a5353bf92c67950e6b3444eaba0b70be1555c5",
+      "native_relational_qc/calculator.py": "d5b405394b40e22235eac2808715b3337c449087930cad741562f28c577defac",
+      "native_relational_qc/certify.py": "9e7287e24f4983420ec20decf87e046394693bb9aff0197a8a6db2ea9d06270b",
+      "native_relational_qc/cyclotomic_pow2.py": "61fb228363e05691b7d673711c8168c677346a4a1095416a7a37a450a9fddcc8",
+      "native_relational_qc/observer_tracking.py": "9d7158095753796245df33cb8974840fc885daecb8f3ea0305b10aad29f6118e",
+      "native_relational_qc/phase_backend.py": "5f3f947bf25f1af1343ebbcee391e8e962b456e16b687e7edef1733c0f966bcf",
+      "native_relational_qc/phase_interop.py": "3a1957969aacd3cd790294fbe196391d963e4f301724f384b3159ed79b570624"
+    },
+    "status": "completed",
+    "verification_passed": true,
+    "wall_seconds": 20.732180660000267
+  }
+}

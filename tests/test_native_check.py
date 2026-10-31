@@ -78,12 +78,23 @@ class CheckTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             check(dict(schema='other'))
 
-    def test_shipped_examples_are_accepted_by_their_declared_backend(self):
+    def test_shipped_examples_are_validated_by_their_declared_schema(self):
+        from native_relational_qc.observer_tracking import validate_policy as validate_phase_policy
+        from native_relational_qc.observer_state import validate_policy as validate_state_policy
+        policy_schemas = {'nrqc-observer-tracking-policy-v1': validate_phase_policy,
+                          'nrqc-observer-state-policy-v1': validate_state_policy}
         for path in sorted(EXAMPLES.glob('*.json')):
             if path.name.endswith('.result.json'):
                 continue
             doc = json.loads(path.read_text())
             with self.subTest(example=path.name):
+                if doc.get('schema') in policy_schemas:
+                    policy_schemas[doc['schema']](doc)
+                    # A controller is validated as a bounded, fingerprinted
+                    # policy, and must still be rejected as a circuit request.
+                    with self.assertRaises(ValueError):
+                        check(doc)
+                    continue
                 report = check(doc)
                 self.assertEqual(report['requested_status'], 'accepted', report['requested_reason'])
                 self.assertEqual(report['requested_backend'], doc.get('backend', 'factored'))

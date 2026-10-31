@@ -1,0 +1,453 @@
+{
+  "archive": "moving_observer_20261031.tar.gz",
+  "archive_bytes": 19858,
+  "archive_sha256": "f127a3cfc7113f0cf533d493633ae9aa6a1ab66d0ed5aea98d172bb03242afd1",
+  "json_files": 97,
+  "schema": "moving_observer_20261031-index-v1",
+  "summary": {
+    "checks": {
+      "common_rotation_invariant": true,
+      "frame_covariance_moving": true,
+      "frame_covariance_static": true,
+      "matched_feedback_cancels_relatively": true,
+      "missing_connection_fails_when_frame_moves": true,
+      "missing_connection_invisible_for_static_frame": true,
+      "mixed_state_axis_independent": true,
+      "recording_has_backaction": true,
+      "relative_rotation_cosine_law": true,
+      "sequential_instrument_both": true,
+      "sequential_instrument_none": true,
+      "sequential_instrument_observer": true,
+      "sequential_instrument_source": true
+    },
+    "computational_advantage_established": false,
+    "evidence_class": "DECLARED_IDEAL_CIRCUIT_MODEL",
+    "exact_requests": 47,
+    "feedback_second_bit_one": {
+      "feedback_both": {
+        "decimal": "0.5000000000000",
+        "decimal_enclosure": {
+          "lower": "0.500000000000",
+          "maximum_absolute_display_error": "0",
+          "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+          "upper": "0.500000000000"
+        },
+        "exact": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "2",
+          "real_numerators": [
+            1
+          ]
+        },
+        "expression": "rational coefficients in the declared zeta_64 power basis"
+      },
+      "feedback_none": {
+        "decimal": "0.5000000000000",
+        "decimal_enclosure": {
+          "lower": "0.500000000000",
+          "maximum_absolute_display_error": "0",
+          "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+          "upper": "0.500000000000"
+        },
+        "exact": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "2",
+          "real_numerators": [
+            1
+          ]
+        },
+        "expression": "rational coefficients in the declared zeta_64 power basis"
+      },
+      "feedback_observer": {
+        "decimal": "0.7500000000000",
+        "decimal_enclosure": {
+          "lower": "0.750000000000",
+          "maximum_absolute_display_error": "0",
+          "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+          "upper": "0.750000000000"
+        },
+        "exact": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "4",
+          "real_numerators": [
+            3
+          ]
+        },
+        "expression": "rational coefficients in the declared zeta_64 power basis"
+      },
+      "feedback_source": {
+        "decimal": "0.2500000000000",
+        "decimal_enclosure": {
+          "lower": "0.250000000000",
+          "maximum_absolute_display_error": "0",
+          "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+          "upper": "0.250000000000"
+        },
+        "exact": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "4",
+          "real_numerators": [
+            1
+          ]
+        },
+        "expression": "rational coefficients in the declared zeta_64 power basis"
+      },
+      "record_disabled": {
+        "decimal": "1.0000000000000",
+        "decimal_enclosure": {
+          "lower": "1.000000000000",
+          "maximum_absolute_display_error": "0",
+          "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+          "upper": "1.000000000000"
+        },
+        "exact": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "1",
+          "real_numerators": [
+            1
+          ]
+        },
+        "expression": "rational coefficients in the declared zeta_64 power basis"
+      }
+    },
+    "hardware_validated": false,
+    "numeric_references": {
+      "common_rotation_00": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.2648549702353193e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "common_rotation_01": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.2670754162845697e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "common_rotation_02": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.2670754162845697e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "common_rotation_03": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.2670754162845697e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "common_rotation_04": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.2670754162845697e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "common_rotation_05": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.2670754162845697e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "common_rotation_06": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.2670754162845697e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "common_rotation_07": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.2648549702353193e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "common_rotation_08": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.2670754162845697e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "common_rotation_09": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.2670754162845697e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "common_rotation_10": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.2670754162845697e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "common_rotation_11": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.2648549702353193e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "common_rotation_12": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.2648549702353193e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "common_rotation_13": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.2670754162845697e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "common_rotation_14": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.2670754162845697e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "common_rotation_15": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.2648549702353193e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "feedback_both": {
+        "hardware_job_id": null,
+        "max_absolute_error": 3.885780586188048e-16,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "feedback_none": {
+        "hardware_job_id": null,
+        "max_absolute_error": 3.885780586188048e-16,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "feedback_observer": {
+        "hardware_job_id": null,
+        "max_absolute_error": 5.551115123125783e-16,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "feedback_source": {
+        "hardware_job_id": null,
+        "max_absolute_error": 5.551115123125783e-16,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "frame_moving_lab": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.9387603461827894e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "frame_moving_missing_connection": {
+        "hardware_job_id": null,
+        "max_absolute_error": 4.816147480823929e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "frame_moving_moving": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.9387603461827894e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "frame_static_lab": {
+        "hardware_job_id": null,
+        "max_absolute_error": 1.9961809982760315e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "frame_static_missing_connection": {
+        "hardware_job_id": null,
+        "max_absolute_error": 1.9961809982760315e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "frame_static_moving": {
+        "hardware_job_id": null,
+        "max_absolute_error": 1.9961809982760315e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "mixed_axis_0": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.220446049250313e-16,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "mixed_axis_1": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.220446049250313e-16,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "mixed_axis_3": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.220446049250313e-16,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "mixed_axis_7": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.220446049250313e-16,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "record_disabled": {
+        "hardware_job_id": null,
+        "max_absolute_error": 4.440892098500626e-16,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "relative_rotation_00": {
+        "hardware_job_id": null,
+        "max_absolute_error": 4.440892098500626e-16,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "relative_rotation_01": {
+        "hardware_job_id": null,
+        "max_absolute_error": 1.4339918141814678e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "relative_rotation_02": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.2648549702353193e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "relative_rotation_03": {
+        "hardware_job_id": null,
+        "max_absolute_error": 4.5075054799781356e-14,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "relative_rotation_04": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.220446049250313e-16,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "relative_rotation_05": {
+        "hardware_job_id": null,
+        "max_absolute_error": 4.5075054799781356e-14,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "relative_rotation_06": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.2670754162845697e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "relative_rotation_07": {
+        "hardware_job_id": null,
+        "max_absolute_error": 1.4336448694862725e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "relative_rotation_08": {
+        "hardware_job_id": null,
+        "max_absolute_error": 4.440892098500626e-16,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "relative_rotation_09": {
+        "hardware_job_id": null,
+        "max_absolute_error": 1.434130592059546e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "relative_rotation_10": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.2648549702353193e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "relative_rotation_11": {
+        "hardware_job_id": null,
+        "max_absolute_error": 4.5075054799781356e-14,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "relative_rotation_12": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.220446049250313e-16,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "relative_rotation_13": {
+        "hardware_job_id": null,
+        "max_absolute_error": 4.490852134608758e-14,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "relative_rotation_14": {
+        "hardware_job_id": null,
+        "max_absolute_error": 2.2670754162845697e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      },
+      "relative_rotation_15": {
+        "hardware_job_id": null,
+        "max_absolute_error": 1.4335754805472334e-13,
+        "passed": true,
+        "qiskit_version": "2.6.1"
+      }
+    },
+    "request_sha256": {
+      "common_rotation_00": "be16a3c51dba2514852d1e31950a75395525784b925dedfde7041cc99944b520",
+      "common_rotation_01": "0f365a3939695fce1cf2c3337d5cd1e083b1e480060587e6a2f0ae7dd707f6cc",
+      "common_rotation_02": "5a04b55b7301d3f2831bf8eb8e3e809c493fb3ae6896e0c203ad8251b5f39973",
+      "common_rotation_03": "f32b74cf147aa28b9178c34238cc34f13cab30ff960015f5569c8c146f465811",
+      "common_rotation_04": "df3067f158418e217961daa1d09d43dba148c26f58544e8182216180bb94c6ac",
+      "common_rotation_05": "b712a5636bca2f761bbff981a7728c02828973acc1c7fa480754af4d31cb20e4",
+      "common_rotation_06": "8522a50e46dcfa8aac7f7dc4a6e95c7825992bee260561a8c474aac0d7abaa01",
+      "common_rotation_07": "dcda4899a974c09dc4c60355d1e408d575fb78c3e06a5ff6b907f2a3c6b5eff5",
+      "common_rotation_08": "39c09722c40e9bc481e03c33b6a73c94d4bb35b4a631388209d73133d8b127c7",
+      "common_rotation_09": "5b8e7d90827184b460b66ee0e93ea4881bab0fd0989c0cfc9c743f25e00ee8de",
+      "common_rotation_10": "d7a9490566eb4ab43676eff454f06f3165bcfebe70e7805fa3c0c1b67c115c01",
+      "common_rotation_11": "64a193ab487b18bb3bd9a51570d8e0add599d5f5f45f4c3650ae28c2d7ab77ed",
+      "common_rotation_12": "7a9b27bf4c89aa4628f9f1ca95248613f6662bca4bd916df6adfe60273f462af",
+      "common_rotation_13": "44b52c4e2641dd6df472eb789cb561383aed81ccf9454f7d738da3eddf8aa62f",
+      "common_rotation_14": "2b8a7792ecd1cefa226e6cc5a79ab8708f06613cd4d32aaa06b8562f5d4d508a",
+      "common_rotation_15": "83c48a314f146a90a65e14f9a893459bf554a0ba1a7aba50ecdc9054b0cbcb99",
+      "feedback_both": "25306199f7d5b6a7df508b45a5dc078d810ef51103f6607b8c5f37f1a7647a63",
+      "feedback_none": "a735f5a7d4a64bc82254989efc3136ca871e9ce59d184b36fd0be15f39efc3a9",
+      "feedback_observer": "a25497d5145a5249206572e937df791bf8df1575786f845f28ab594b6d10c67c",
+      "feedback_source": "22bafffe153de43856aa517b40bd6d5602db10bf092fab52f7c6115a5ef82035",
+      "frame_moving_lab": "08d6ca213e84299f16414f5a30c64f558e6b659e0daa2ec19adebdb706ad452d",
+      "frame_moving_missing_connection": "b27e5fd46adc6ed5420886efb219d4352890670aef009763981d5632d153d817",
+      "frame_moving_moving": "05b44a18b455eef7b5bfb861192f32396783d90b6d44e2c99a5d49a7fd535fdc",
+      "frame_static_lab": "539779975417ac7edc36beab15eb26df7b219d0214cda7dfa0816584cbafd803",
+      "frame_static_missing_connection": "0f84efb9dcffd3b2b7d80f2cd91108e45292297af24bd1ded0e3f6554c9f3ecd",
+      "frame_static_moving": "0f84efb9dcffd3b2b7d80f2cd91108e45292297af24bd1ded0e3f6554c9f3ecd",
+      "mixed_axis_0": "a5864e5357eb30fc8d07a4dbe22a2e1ae02a813c7b79fa76b9e063da15f4a267",
+      "mixed_axis_1": "53502a0303757dc7784122e2c0a57a8b4f5077c41265049adf0ee353091fd754",
+      "mixed_axis_3": "1ac82a70ddcafcb89884d4097b8615d9df62b765923551dc10fc1621fef4b1ce",
+      "mixed_axis_7": "12ae15e2c6256cf318c9131370695de920b119c66e4183aaf9236a92c77f2ee3",
+      "record_disabled": "f06a151112905f965267acb55f201f574ce9c9fd7b83eded22b8340ce90c8851",
+      "relative_rotation_00": "12c555765a5e110e1ccfb046b6a5f1a00974c8ecc43d9b27ec8630c1e081067d",
+      "relative_rotation_01": "889aecf3f9106bddc57a9c08e12380ac3a8641b2fc6d9bbff2f2dba096a2fa2f",
+      "relative_rotation_02": "83c48a314f146a90a65e14f9a893459bf554a0ba1a7aba50ecdc9054b0cbcb99",
+      "relative_rotation_03": "f37ee102cc66d14a5d65e34a19eddff020d748089d8cb039d1d3c027520a2789",
+      "relative_rotation_04": "75baff270aa4893df9ada8fd758e5d6d9e01fd050e63eee8aaf7d300cd7df534",
+      "relative_rotation_05": "e440a098bb6a896185e800ed8091c5089391e512221f91e8d957fa050ad97c1f",
+      "relative_rotation_06": "fa899964605b5cbba5f9b37cc9773bc93737e0bee775c671022b43dba0e05efe",
+      "relative_rotation_07": "c0b249075f3879237ab6b5ee37c769f0fb37d50f5719ad67eb44c7a117a407fe",
+      "relative_rotation_08": "eb74ca5cee0e6570c9a8c3cc8519f01b6a57d7bd62cf268d1d40704afe80b6b0",
+      "relative_rotation_09": "41e39e81956685c33425054aba522e26969148a67d246a1c74cc7c64a8e3906d",
+      "relative_rotation_10": "ef5a7167f302cea022ab28f15b244a861af6c99e4f85197470d59829b46a803e",
+      "relative_rotation_11": "82f642c0abfc501d0ed1a3f8a83526d004b01f96b4722783ea9997b3ed69b769",
+      "relative_rotation_12": "c84e0484d4a9541a3947389a8c487d64e07f643ea454a9731874c718d3c75ed3",
+      "relative_rotation_13": "3062bb7338e1c97e1fc3938b8a67fabd7b848e1142558ab23dd474b615384fde",
+      "relative_rotation_14": "bc96cb9479aabcb59e2d497074c22046b1884b307e2fdd79aaeab866b10c6438",
+      "relative_rotation_15": "222f8d485c3d1d1970ac9549d7b795f448c0bd34bc100b8f4c4c49015db7822e"
+    },
+    "schema": "moving-observer-audit-v1",
+    "source_sha256": "d3db4cd4cd5f2b0b5d368fc9935134c9d6ae8e04b2357b5cee299279844b6798",
+    "status": "completed",
+    "universal_rotation_effect_established": false,
+    "verification_passed": true
+  }
+}
