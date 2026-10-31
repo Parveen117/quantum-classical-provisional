@@ -1,0 +1,1218 @@
+{
+  "fingerprint": "6f20b55dd1b479bbd5273d0f00beb844c88bc9a758e88b184be37aa370bafa5c",
+  "model": {
+    "axes": [
+      0,
+      4,
+      8,
+      12
+    ],
+    "grid": 32,
+    "guesses": [
+      {
+        "phase": 0,
+        "radius": "0"
+      },
+      {
+        "phase": 0,
+        "radius": "1/4"
+      },
+      {
+        "phase": 2,
+        "radius": "1/4"
+      },
+      {
+        "phase": 4,
+        "radius": "1/4"
+      },
+      {
+        "phase": 6,
+        "radius": "1/4"
+      },
+      {
+        "phase": 8,
+        "radius": "1/4"
+      },
+      {
+        "phase": 10,
+        "radius": "1/4"
+      },
+      {
+        "phase": 12,
+        "radius": "1/4"
+      },
+      {
+        "phase": 14,
+        "radius": "1/4"
+      },
+      {
+        "phase": 16,
+        "radius": "1/4"
+      },
+      {
+        "phase": 18,
+        "radius": "1/4"
+      },
+      {
+        "phase": 20,
+        "radius": "1/4"
+      },
+      {
+        "phase": 22,
+        "radius": "1/4"
+      },
+      {
+        "phase": 24,
+        "radius": "1/4"
+      },
+      {
+        "phase": 26,
+        "radius": "1/4"
+      },
+      {
+        "phase": 28,
+        "radius": "1/4"
+      },
+      {
+        "phase": 30,
+        "radius": "1/4"
+      },
+      {
+        "phase": 0,
+        "radius": "1/2"
+      },
+      {
+        "phase": 2,
+        "radius": "1/2"
+      },
+      {
+        "phase": 4,
+        "radius": "1/2"
+      },
+      {
+        "phase": 6,
+        "radius": "1/2"
+      },
+      {
+        "phase": 8,
+        "radius": "1/2"
+      },
+      {
+        "phase": 10,
+        "radius": "1/2"
+      },
+      {
+        "phase": 12,
+        "radius": "1/2"
+      },
+      {
+        "phase": 14,
+        "radius": "1/2"
+      },
+      {
+        "phase": 16,
+        "radius": "1/2"
+      },
+      {
+        "phase": 18,
+        "radius": "1/2"
+      },
+      {
+        "phase": 20,
+        "radius": "1/2"
+      },
+      {
+        "phase": 22,
+        "radius": "1/2"
+      },
+      {
+        "phase": 24,
+        "radius": "1/2"
+      },
+      {
+        "phase": 26,
+        "radius": "1/2"
+      },
+      {
+        "phase": 28,
+        "radius": "1/2"
+      },
+      {
+        "phase": 30,
+        "radius": "1/2"
+      },
+      {
+        "phase": 0,
+        "radius": "3/4"
+      },
+      {
+        "phase": 2,
+        "radius": "3/4"
+      },
+      {
+        "phase": 4,
+        "radius": "3/4"
+      },
+      {
+        "phase": 6,
+        "radius": "3/4"
+      },
+      {
+        "phase": 8,
+        "radius": "3/4"
+      },
+      {
+        "phase": 10,
+        "radius": "3/4"
+      },
+      {
+        "phase": 12,
+        "radius": "3/4"
+      },
+      {
+        "phase": 14,
+        "radius": "3/4"
+      },
+      {
+        "phase": 16,
+        "radius": "3/4"
+      },
+      {
+        "phase": 18,
+        "radius": "3/4"
+      },
+      {
+        "phase": 20,
+        "radius": "3/4"
+      },
+      {
+        "phase": 22,
+        "radius": "3/4"
+      },
+      {
+        "phase": 24,
+        "radius": "3/4"
+      },
+      {
+        "phase": 26,
+        "radius": "3/4"
+      },
+      {
+        "phase": 28,
+        "radius": "3/4"
+      },
+      {
+        "phase": 30,
+        "radius": "3/4"
+      },
+      {
+        "phase": 0,
+        "radius": "1"
+      },
+      {
+        "phase": 2,
+        "radius": "1"
+      },
+      {
+        "phase": 4,
+        "radius": "1"
+      },
+      {
+        "phase": 6,
+        "radius": "1"
+      },
+      {
+        "phase": 8,
+        "radius": "1"
+      },
+      {
+        "phase": 10,
+        "radius": "1"
+      },
+      {
+        "phase": 12,
+        "radius": "1"
+      },
+      {
+        "phase": 14,
+        "radius": "1"
+      },
+      {
+        "phase": 16,
+        "radius": "1"
+      },
+      {
+        "phase": 18,
+        "radius": "1"
+      },
+      {
+        "phase": 20,
+        "radius": "1"
+      },
+      {
+        "phase": 22,
+        "radius": "1"
+      },
+      {
+        "phase": 24,
+        "radius": "1"
+      },
+      {
+        "phase": 26,
+        "radius": "1"
+      },
+      {
+        "phase": 28,
+        "radius": "1"
+      },
+      {
+        "phase": 30,
+        "radius": "1"
+      }
+    ],
+    "hypotheses": [
+      [
+        0,
+        -1,
+        -8
+      ],
+      [
+        0,
+        -1,
+        8
+      ],
+      [
+        0,
+        0,
+        -8
+      ],
+      [
+        0,
+        0,
+        8
+      ],
+      [
+        0,
+        1,
+        -8
+      ],
+      [
+        0,
+        1,
+        8
+      ],
+      [
+        2,
+        -1,
+        -8
+      ],
+      [
+        2,
+        -1,
+        8
+      ],
+      [
+        2,
+        0,
+        -8
+      ],
+      [
+        2,
+        0,
+        8
+      ],
+      [
+        2,
+        1,
+        -8
+      ],
+      [
+        2,
+        1,
+        8
+      ],
+      [
+        4,
+        -1,
+        -8
+      ],
+      [
+        4,
+        -1,
+        8
+      ],
+      [
+        4,
+        0,
+        -8
+      ],
+      [
+        4,
+        0,
+        8
+      ],
+      [
+        4,
+        1,
+        -8
+      ],
+      [
+        4,
+        1,
+        8
+      ],
+      [
+        6,
+        -1,
+        -8
+      ],
+      [
+        6,
+        -1,
+        8
+      ],
+      [
+        6,
+        0,
+        -8
+      ],
+      [
+        6,
+        0,
+        8
+      ],
+      [
+        6,
+        1,
+        -8
+      ],
+      [
+        6,
+        1,
+        8
+      ],
+      [
+        8,
+        -1,
+        -8
+      ],
+      [
+        8,
+        -1,
+        8
+      ],
+      [
+        8,
+        0,
+        -8
+      ],
+      [
+        8,
+        0,
+        8
+      ],
+      [
+        8,
+        1,
+        -8
+      ],
+      [
+        8,
+        1,
+        8
+      ],
+      [
+        10,
+        -1,
+        -8
+      ],
+      [
+        10,
+        -1,
+        8
+      ],
+      [
+        10,
+        0,
+        -8
+      ],
+      [
+        10,
+        0,
+        8
+      ],
+      [
+        10,
+        1,
+        -8
+      ],
+      [
+        10,
+        1,
+        8
+      ],
+      [
+        12,
+        -1,
+        -8
+      ],
+      [
+        12,
+        -1,
+        8
+      ],
+      [
+        12,
+        0,
+        -8
+      ],
+      [
+        12,
+        0,
+        8
+      ],
+      [
+        12,
+        1,
+        -8
+      ],
+      [
+        12,
+        1,
+        8
+      ],
+      [
+        14,
+        -1,
+        -8
+      ],
+      [
+        14,
+        -1,
+        8
+      ],
+      [
+        14,
+        0,
+        -8
+      ],
+      [
+        14,
+        0,
+        8
+      ],
+      [
+        14,
+        1,
+        -8
+      ],
+      [
+        14,
+        1,
+        8
+      ],
+      [
+        16,
+        -1,
+        -8
+      ],
+      [
+        16,
+        -1,
+        8
+      ],
+      [
+        16,
+        0,
+        -8
+      ],
+      [
+        16,
+        0,
+        8
+      ],
+      [
+        16,
+        1,
+        -8
+      ],
+      [
+        16,
+        1,
+        8
+      ],
+      [
+        18,
+        -1,
+        -8
+      ],
+      [
+        18,
+        -1,
+        8
+      ],
+      [
+        18,
+        0,
+        -8
+      ],
+      [
+        18,
+        0,
+        8
+      ],
+      [
+        18,
+        1,
+        -8
+      ],
+      [
+        18,
+        1,
+        8
+      ],
+      [
+        20,
+        -1,
+        -8
+      ],
+      [
+        20,
+        -1,
+        8
+      ],
+      [
+        20,
+        0,
+        -8
+      ],
+      [
+        20,
+        0,
+        8
+      ],
+      [
+        20,
+        1,
+        -8
+      ],
+      [
+        20,
+        1,
+        8
+      ],
+      [
+        22,
+        -1,
+        -8
+      ],
+      [
+        22,
+        -1,
+        8
+      ],
+      [
+        22,
+        0,
+        -8
+      ],
+      [
+        22,
+        0,
+        8
+      ],
+      [
+        22,
+        1,
+        -8
+      ],
+      [
+        22,
+        1,
+        8
+      ],
+      [
+        24,
+        -1,
+        -8
+      ],
+      [
+        24,
+        -1,
+        8
+      ],
+      [
+        24,
+        0,
+        -8
+      ],
+      [
+        24,
+        0,
+        8
+      ],
+      [
+        24,
+        1,
+        -8
+      ],
+      [
+        24,
+        1,
+        8
+      ],
+      [
+        26,
+        -1,
+        -8
+      ],
+      [
+        26,
+        -1,
+        8
+      ],
+      [
+        26,
+        0,
+        -8
+      ],
+      [
+        26,
+        0,
+        8
+      ],
+      [
+        26,
+        1,
+        -8
+      ],
+      [
+        26,
+        1,
+        8
+      ],
+      [
+        28,
+        -1,
+        -8
+      ],
+      [
+        28,
+        -1,
+        8
+      ],
+      [
+        28,
+        0,
+        -8
+      ],
+      [
+        28,
+        0,
+        8
+      ],
+      [
+        28,
+        1,
+        -8
+      ],
+      [
+        28,
+        1,
+        8
+      ],
+      [
+        30,
+        -1,
+        -8
+      ],
+      [
+        30,
+        -1,
+        8
+      ],
+      [
+        30,
+        0,
+        -8
+      ],
+      [
+        30,
+        0,
+        8
+      ],
+      [
+        30,
+        1,
+        -8
+      ],
+      [
+        30,
+        1,
+        8
+      ]
+    ],
+    "kind": "driven",
+    "loss": "squared complex coherence prediction error divided by four",
+    "prior": "uniform",
+    "radius_meaning": "transverse Bloch contrast",
+    "retention": "3/4",
+    "rounds": 6,
+    "source": "rotation then mixture with a declared equatorial preparation",
+    "target_time": 6
+  },
+  "name": "coupled_adaptive",
+  "planning": {
+    "leaf_evaluations": 65536,
+    "numerical_expected_loss": 0.09524380021184964,
+    "planner": "finite-horizon Bayesian Bellman recursion",
+    "wall_seconds": 0.7081450219993712
+  },
+  "schema": "nrqc-observer-state-policy-v1",
+  "selection_inputs": "declared prior only; no evaluation trajectories",
+  "tree": {
+    "axis": 0,
+    "one": {
+      "axis": 8,
+      "one": {
+        "axis": 12,
+        "one": {
+          "axis": 0,
+          "one": {
+            "axis": 12,
+            "one": {
+              "axis": 0,
+              "one": {
+                "phase": 22,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 28,
+                "radius": "1/2"
+              }
+            },
+            "zero": {
+              "axis": 12,
+              "one": {
+                "phase": 22,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 16,
+                "radius": "1/2"
+              }
+            }
+          },
+          "zero": {
+            "axis": 0,
+            "one": {
+              "axis": 12,
+              "one": {
+                "phase": 26,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 18,
+                "radius": "1/4"
+              }
+            },
+            "zero": {
+              "axis": 4,
+              "one": {
+                "phase": 28,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 0,
+                "radius": "3/4"
+              }
+            }
+          }
+        },
+        "zero": {
+          "axis": 8,
+          "one": {
+            "axis": 12,
+            "one": {
+              "axis": 0,
+              "one": {
+                "phase": 22,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 26,
+                "radius": "1/2"
+              }
+            },
+            "zero": {
+              "axis": 8,
+              "one": {
+                "phase": 20,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 14,
+                "radius": "1/2"
+              }
+            }
+          },
+          "zero": {
+            "axis": 4,
+            "one": {
+              "axis": 8,
+              "one": {
+                "phase": 18,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 12,
+                "radius": "1/2"
+              }
+            },
+            "zero": {
+              "axis": 0,
+              "one": {
+                "phase": 10,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 6,
+                "radius": "1/2"
+              }
+            }
+          }
+        }
+      },
+      "zero": {
+        "axis": 4,
+        "one": {
+          "axis": 8,
+          "one": {
+            "axis": 12,
+            "one": {
+              "axis": 0,
+              "one": {
+                "phase": 22,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 26,
+                "radius": "1/2"
+              }
+            },
+            "zero": {
+              "axis": 8,
+              "one": {
+                "phase": 20,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 14,
+                "radius": "1/2"
+              }
+            }
+          },
+          "zero": {
+            "axis": 4,
+            "one": {
+              "axis": 8,
+              "one": {
+                "phase": 18,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 12,
+                "radius": "1/2"
+              }
+            },
+            "zero": {
+              "axis": 0,
+              "one": {
+                "phase": 10,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 6,
+                "radius": "1/2"
+              }
+            }
+          }
+        },
+        "zero": {
+          "axis": 0,
+          "one": {
+            "axis": 4,
+            "one": {
+              "axis": 4,
+              "one": {
+                "phase": 16,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 10,
+                "radius": "1/2"
+              }
+            },
+            "zero": {
+              "axis": 0,
+              "one": {
+                "phase": 10,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 4,
+                "radius": "1/2"
+              }
+            }
+          },
+          "zero": {
+            "axis": 0,
+            "one": {
+              "axis": 4,
+              "one": {
+                "phase": 14,
+                "radius": "1/4"
+              },
+              "zero": {
+                "phase": 6,
+                "radius": "1/2"
+              }
+            },
+            "zero": {
+              "axis": 12,
+              "one": {
+                "phase": 0,
+                "radius": "3/4"
+              },
+              "zero": {
+                "phase": 4,
+                "radius": "1/2"
+              }
+            }
+          }
+        }
+      }
+    },
+    "zero": {
+      "axis": 8,
+      "one": {
+        "axis": 4,
+        "one": {
+          "axis": 0,
+          "one": {
+            "axis": 0,
+            "one": {
+              "axis": 12,
+              "one": {
+                "phase": 20,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 16,
+                "radius": "3/4"
+              }
+            },
+            "zero": {
+              "axis": 4,
+              "one": {
+                "phase": 22,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 30,
+                "radius": "1/4"
+              }
+            }
+          },
+          "zero": {
+            "axis": 4,
+            "one": {
+              "axis": 0,
+              "one": {
+                "phase": 20,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 26,
+                "radius": "1/2"
+              }
+            },
+            "zero": {
+              "axis": 4,
+              "one": {
+                "phase": 26,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 0,
+                "radius": "1/2"
+              }
+            }
+          }
+        },
+        "zero": {
+          "axis": 8,
+          "one": {
+            "axis": 4,
+            "one": {
+              "axis": 0,
+              "one": {
+                "phase": 22,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 26,
+                "radius": "1/2"
+              }
+            },
+            "zero": {
+              "axis": 8,
+              "one": {
+                "phase": 28,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 2,
+                "radius": "1/2"
+              }
+            }
+          },
+          "zero": {
+            "axis": 12,
+            "one": {
+              "axis": 8,
+              "one": {
+                "phase": 30,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 4,
+                "radius": "1/2"
+              }
+            },
+            "zero": {
+              "axis": 0,
+              "one": {
+                "phase": 10,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 6,
+                "radius": "1/2"
+              }
+            }
+          }
+        }
+      },
+      "zero": {
+        "axis": 12,
+        "one": {
+          "axis": 8,
+          "one": {
+            "axis": 4,
+            "one": {
+              "axis": 0,
+              "one": {
+                "phase": 22,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 26,
+                "radius": "1/2"
+              }
+            },
+            "zero": {
+              "axis": 8,
+              "one": {
+                "phase": 28,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 2,
+                "radius": "1/2"
+              }
+            }
+          },
+          "zero": {
+            "axis": 12,
+            "one": {
+              "axis": 8,
+              "one": {
+                "phase": 30,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 4,
+                "radius": "1/2"
+              }
+            },
+            "zero": {
+              "axis": 0,
+              "one": {
+                "phase": 10,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 6,
+                "radius": "1/2"
+              }
+            }
+          }
+        },
+        "zero": {
+          "axis": 0,
+          "one": {
+            "axis": 0,
+            "one": {
+              "axis": 4,
+              "one": {
+                "phase": 16,
+                "radius": "3/4"
+              },
+              "zero": {
+                "phase": 12,
+                "radius": "1/2"
+              }
+            },
+            "zero": {
+              "axis": 12,
+              "one": {
+                "phase": 2,
+                "radius": "1/4"
+              },
+              "zero": {
+                "phase": 10,
+                "radius": "1/2"
+              }
+            }
+          },
+          "zero": {
+            "axis": 12,
+            "one": {
+              "axis": 12,
+              "one": {
+                "phase": 0,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 6,
+                "radius": "1/2"
+              }
+            },
+            "zero": {
+              "axis": 0,
+              "one": {
+                "phase": 12,
+                "radius": "1/2"
+              },
+              "zero": {
+                "phase": 6,
+                "radius": "1/2"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

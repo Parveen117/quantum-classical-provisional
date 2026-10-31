@@ -46,6 +46,8 @@ jobs:
           nrqc check native_relational_qc/calculator_examples/bell.json > /dev/null
           nrqc calculate native_relational_qc/calculator_examples/bell.json > /dev/null
           nrqc certify --out rebuilt-photonic-certification.json > /dev/null
+          nrqc observer-track --records 010101 > /dev/null
+          nrqc observer-state --records 010101 > /dev/null
 
       - name: Run unit tests
         run: python -m pytest -q

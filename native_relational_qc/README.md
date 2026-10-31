@@ -115,6 +115,15 @@ schedule at the same readout budget, with per-case losses and noise/drift
 stress results retained. This is a modeled tracking gain, not hardware or
 general computational-speedup qualification.
 
+The [joint contrast/phase tracker](OBSERVER_STATE.md) adds a declared source
+channel that changes radius as well as phase. The `nrqc observer-state` command
+returns both coordinates after six recorded bits. Its retained comparison reduces
+joint prediction error by 7.73% against the searched schedule; changing the
+old tracker's angles adds 1.06% beyond giving it the same joint decoder.
+Randomized-readout losses, radial-metric tradeoffs and extra analyzer changes
+remain visible. Exact affine transport and Coriolis identity checks keep
+coordinate motion distinct from the chosen qubit dynamics.
+
 ## Ledger certification
 
 `nrqc certify cluster` retains the collaborator’s separate corrected-path

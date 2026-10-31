@@ -7,6 +7,10 @@ no calibrated material dynamics or computational advantage established.
 The next implemented stage is the [record-controlled phase tracker](OBSERVER_TRACKING.md):
 a frozen observer chooses later measurement axes from earlier bits and is
 compared against a searched rotating schedule with the same six-probe budget.
+The [joint-state extension](OBSERVER_STATE.md) also changes transverse Bloch
+contrast through a declared source channel, checks affine frame transport
+and the Coriolis identity, and retains comparisons against the phase-only
+measurement tree with a joint decoder.
 
 The observer can be an evolving part of the machine. Its reference need not be
 an externally fixed axis. The operational state then includes **signal,
