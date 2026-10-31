@@ -86,6 +86,16 @@ silently substituted by P. Its half-angle must fit the same field cap, so RZ
 requires a denominator at most 2048 in units of 2π. Non-dyadic, arbitrary decimal,
 unbound and unsupported angles are rejected. See [phase transport](PHASE_INTEROP.md).
 
+## Delta OGMT order-recognition test
+
+The [retained Delta OGMT audit](DELTA_OGMT_ORDER_TEST.md) runs the proposed
+ABAB/AABB task through the exact calculator with single-memory, parallel-memory,
+double-triangle, edge-removal and reset controls. A separate 16-angle observer
+scan retains every comparison, including where the full topology loses.
+These are explicitly declared coherent circuit encodings, not calibrated
+transistor or thermal models. Raw inputs/results and independent local Qiskit
+checks are retained with hashes; no quantum hardware service is called.
+
 ## Ledger certification
 
 `nrqc certify cluster` retains the collaborator’s separate corrected-path
