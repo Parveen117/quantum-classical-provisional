@@ -96,6 +96,17 @@ These are explicitly declared coherent circuit encodings, not calibrated
 transistor or thermal models. Raw inputs/results and independent local Qiskit
 checks are retained with hashes; no quantum hardware service is called.
 
+The [frozen held-out tuning study](DELTA_OGMT_HELDOUT.md) extends the task to
+12-event sequences with equal search budgets and 64 readouts per decision.
+The full topology fails its declared advantage criterion; all comparisons,
+candidate scores and unseen-input results are retained.
+
+The [moving-observer experiment](MOVING_OBSERVER.md) separately tests common
+rotation, relative motion, the time-dependent frame connection and feedback
+from retained measurement records to both signal and observer. It establishes
+finite circuit identities and output probabilities, with explicit controls
+against confusing a reference change with a physical interaction.
+
 ## Ledger certification
 
 `nrqc certify cluster` retains the collaborator’s separate corrected-path
