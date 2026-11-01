@@ -18,10 +18,12 @@ pip install .
 nrqc check native_relational_qc/calculator_examples/bell.json
 nrqc calculate native_relational_qc/calculator_examples/bell.json
 nrqc certify
+nrqc observer-cycle --cycles 3
 ```
 
 [Photonic research route](phase_seam_foundation/README.md) ·
 [Self-learning and observation](native_relational_qc/SELF_LEARNING.md) ·
+[Repeated source cycles and history](native_relational_qc/OBSERVER_CYCLE.md) ·
 [Historical development notes](docs/CALCULATOR_DEVELOPMENT_HISTORY.md).
 Current validation is recorded by CI and retained test logs; older numerical
 results remain scoped to their named audits.

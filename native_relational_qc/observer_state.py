@@ -148,12 +148,26 @@ def validate_policy(policy):
     return model
 
 
-def source_mixtures(start, velocity, offset, *, retention=Q(3, 4), rounds=6):
-    """Exact convex preparations for rho' = l U rho U† + (1-l) rho_drive."""
-    if any(type(x) is not int for x in (start, velocity, offset, rounds)) or not 1 <= rounds <= 6:
-        raise ValueError("integer phase settings and 1..6 rounds required")
+def _source_parameters(start, velocity, offset, retention):
+    if any(type(x) is not int for x in (start, velocity, offset)):
+        raise ValueError("integer phase settings required")
     if type(retention) not in (int, Q) or not 0 <= retention <= 1 or Q(retention).denominator > 16:
         raise ValueError("retention must be exact in [0,1], denominator at most 16")
+    return velocity % GRID, (start + offset) % GRID, Q(retention)
+
+
+def source_affine(start, velocity, offset, *, retention=Q(3, 4)):
+    """The SAME source channel in coherence coordinates: z' = A*z + c."""
+    rotation, drive, retention = _source_parameters(start, velocity, offset, retention)
+    F = flat_field()
+    return retention * F.root(2 * rotation), (1 - retention) * F.root(2 * drive)
+
+
+def source_mixtures(start, velocity, offset, *, retention=Q(3, 4), rounds=6):
+    """Exact convex preparations for rho' = l U rho U† + (1-l) rho_drive."""
+    rotation, drive, retention = _source_parameters(start, velocity, offset, retention)
+    if type(rounds) is not int or not 1 <= rounds <= 6:
+        raise ValueError("1..6 integer rounds required")
     current, rows = {start%GRID: Q(1)}, []
     for t in range(rounds+1):
         if sum(current.values()) != 1 or any(v < 0 for v in current.values()):
@@ -161,9 +175,9 @@ def source_mixtures(start, velocity, offset, *, retention=Q(3, 4), rounds=6):
         rows.append(tuple(sorted(current.items())))
         updated = {}
         for angle, weight in current.items():
-            key = (angle+velocity)%GRID
+            key = (angle+rotation)%GRID
             updated[key] = updated.get(key, Q(0))+retention*weight
-        key = (start+offset)%GRID
+        key = drive
         updated[key] = updated.get(key, Q(0))+1-retention
         current = {k:v for k,v in updated.items() if v}
     return tuple(rows)

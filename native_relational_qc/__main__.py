@@ -24,12 +24,16 @@ def main(argv=None):
     if argv and argv[0] == 'observer-state':
         from .observer_state import main as state_main
         return state_main(argv[1:])
+    if argv and argv[0] == 'observer-cycle':
+        from .observer_cycle import main as cycle_main
+        return cycle_main(argv[1:])
     parser = argparse.ArgumentParser(prog='nrqc', description=__doc__, epilog=
         'Custom exact circuits: nrqc calculate INPUT.json --out RESULT.json; '
         'backend acceptance report: nrqc check INPUT.json (or nrqc check --table); '
         'photonic model arithmetic: nrqc certify; '
         'record-controlled next measurement: nrqc observer-track --records 0101; '
-        'joint contrast/phase prediction: nrqc observer-state --records 0101')
+        'joint contrast/phase prediction: nrqc observer-state --records 0101; '
+        'exact source return and retained history: nrqc observer-cycle')
     parser.add_argument("program", choices=["bell", "ghz", "bv", "grover", "order-memory"])
     parser.add_argument("--compare-qiskit", action="store_true")
     parser.add_argument("--out", type=Path)
