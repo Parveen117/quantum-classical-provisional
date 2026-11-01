@@ -1,0 +1,69 @@
+{
+  "archive": "delta_ogmt_order_20261031.zip",
+  "archive_files": 94,
+  "archive_sha256": "9088e56b6b0c8b7350a2cdd92017454376249f20c63d6deac69188be3f8371a7",
+  "date": "2026-10-31",
+  "evidence_class": "DECLARED_IDEAL_CIRCUIT_MODEL",
+  "hardware_job_id": null,
+  "local_qiskit_cross_checks": 34,
+  "maximum_numeric_midpoint_discrepancy": 4.988769813918381e-13,
+  "modes": {
+    "E_CA": {
+      "best_tested_angle_degrees": 157.5,
+      "best_tested_gap": "0.0075421687825",
+      "fixed_readout_gap": "0.0068863933035",
+      "model_optimal_single_shot_success_at_selected_angle": "0.5037710843915"
+    },
+    "M0": {
+      "best_tested_angle_degrees": 0.0,
+      "best_tested_gap": "0.0000000000000",
+      "fixed_readout_gap": "0.0000000000000",
+      "model_optimal_single_shot_success_at_selected_angle": "0.5000000000000"
+    },
+    "M1": {
+      "best_tested_angle_degrees": 67.5,
+      "best_tested_gap": "0.0096850568385",
+      "fixed_readout_gap": "0.0034124489555",
+      "model_optimal_single_shot_success_at_selected_angle": "0.5048425284195"
+    },
+    "M2": {
+      "best_tested_angle_degrees": 67.5,
+      "best_tested_gap": "0.0078390462015",
+      "fixed_readout_gap": "0.0016511031475",
+      "model_optimal_single_shot_success_at_selected_angle": "0.5039195231005"
+    },
+    "M3": {
+      "best_tested_angle_degrees": 67.5,
+      "best_tested_gap": "0.0068262200435",
+      "fixed_readout_gap": "0.0014333759355",
+      "model_optimal_single_shot_success_at_selected_angle": "0.5034131100215"
+    }
+  },
+  "negative_checks": {
+    "M0__nominal_zero_drain_gap": true,
+    "M3__commuting_updates_zero_core_and_memory_TV": true,
+    "M3__commuting_updates_zero_drain_gap": true,
+    "M3__equal_inputs_zero_core_and_memory_TV": true,
+    "M3__equal_inputs_zero_drain_gap": true,
+    "M3__projection_off_zero_drain_gap": true
+  },
+  "observer_direct_cases": 10,
+  "observer_direct_exact_checks": {
+    "E_CA__direct_selected__AABB": true,
+    "E_CA__direct_selected__ABAB": true,
+    "M0__direct_selected__AABB": true,
+    "M0__direct_selected__ABAB": true,
+    "M1__direct_selected__AABB": true,
+    "M1__direct_selected__ABAB": true,
+    "M2__direct_selected__AABB": true,
+    "M2__direct_selected__ABAB": true,
+    "M3__direct_selected__AABB": true,
+    "M3__direct_selected__ABAB": true
+  },
+  "observer_moment_cases": 10,
+  "observer_wall_seconds": 6.273128941000323,
+  "primary_cases": 24,
+  "primary_wall_seconds": 10.331663170999946,
+  "schema": "nrqc-delta-ogmt-retained-run-index-v1",
+  "scope": "Known-history readout diagnosis; not held-out accuracy, calibrated device validation, or computational advantage."
+}

@@ -1,0 +1,2336 @@
+{
+  "additional_reference_evaluations": 60,
+  "archive": {
+    "bytes": 921668,
+    "exact_data": "full cyclotomic coefficients in archived summary and per-case evaluations",
+    "json_files": 78,
+    "path": "benchmarks/records/observer_state_20261031.tar.gz",
+    "sha256": "948fb85758a8f8e4131f036dfdd81b8a56646c7b09fbd8a9514492f8912b9cb1"
+  },
+  "caveat": "Finite-family model expectations; coordinate coupling is not evidence of a new force or hardware speedup. Shifted phase grids share exact Fourier averages, not independent generalization evidence.",
+  "comparisons": {
+    "faster_drift": {
+      "better_than_old_axes": true,
+      "five_percent_improvement": true,
+      "open_loop_minus_adaptive": {
+        "decimal": "0.0055867873945",
+        "decimal_enclosure": {
+          "lower": "0.005586787394",
+          "maximum_absolute_display_error": "1/2000000000000",
+          "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+          "upper": "0.005586787395"
+        }
+      },
+      "per_case_vs_open_loop": {
+        "better": 40,
+        "tied": 0,
+        "worse": 24
+      },
+      "phase_axes_minus_adaptive": {
+        "decimal": "0.0003818792115",
+        "decimal_enclosure": {
+          "lower": "0.000381879211",
+          "maximum_absolute_display_error": "1/2000000000000",
+          "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+          "upper": "0.000381879212"
+        }
+      }
+    },
+    "model_grid": {
+      "better_than_old_axes": true,
+      "five_percent_improvement": true,
+      "open_loop_minus_adaptive": {
+        "decimal": "0.0079804650495",
+        "decimal_enclosure": {
+          "lower": "0.007980465049",
+          "maximum_absolute_display_error": "1/2000000000000",
+          "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+          "upper": "0.007980465050"
+        }
+      },
+      "per_case_vs_open_loop": {
+        "better": 86,
+        "tied": 0,
+        "worse": 10
+      },
+      "phase_axes_minus_adaptive": {
+        "decimal": "0.0010203565795",
+        "decimal_enclosure": {
+          "lower": "0.001020356579",
+          "maximum_absolute_display_error": "1/2000000000000",
+          "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+          "upper": "0.001020356580"
+        }
+      }
+    },
+    "randomized_readout": {
+      "better_than_old_axes": true,
+      "five_percent_improvement": false,
+      "open_loop_minus_adaptive": {
+        "decimal": "-0.0126953125000",
+        "decimal_enclosure": {
+          "lower": "-0.012695312500",
+          "maximum_absolute_display_error": "0",
+          "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+          "upper": "-0.012695312500"
+        }
+      },
+      "per_case_vs_open_loop": {
+        "better": 0,
+        "tied": 0,
+        "worse": 96
+      },
+      "phase_axes_minus_adaptive": {
+        "decimal": "0.0029296875000",
+        "decimal_enclosure": {
+          "lower": "0.002929687500",
+          "maximum_absolute_display_error": "0",
+          "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+          "upper": "0.002929687500"
+        }
+      }
+    },
+    "readout_flip_5pct": {
+      "better_than_old_axes": true,
+      "five_percent_improvement": true,
+      "open_loop_minus_adaptive": {
+        "decimal": "0.0060299056685",
+        "decimal_enclosure": {
+          "lower": "0.006029905668",
+          "maximum_absolute_display_error": "1/2000000000000",
+          "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+          "upper": "0.006029905669"
+        }
+      },
+      "per_case_vs_open_loop": {
+        "better": 76,
+        "tied": 0,
+        "worse": 20
+      },
+      "phase_axes_minus_adaptive": {
+        "decimal": "0.0012180741885",
+        "decimal_enclosure": {
+          "lower": "0.001218074188",
+          "maximum_absolute_display_error": "1/2000000000000",
+          "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+          "upper": "0.001218074189"
+        }
+      }
+    },
+    "retention_mismatch": {
+      "better_than_old_axes": true,
+      "five_percent_improvement": true,
+      "open_loop_minus_adaptive": {
+        "decimal": "0.0073113117245",
+        "decimal_enclosure": {
+          "lower": "0.007311311724",
+          "maximum_absolute_display_error": "1/2000000000000",
+          "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+          "upper": "0.007311311725"
+        }
+      },
+      "per_case_vs_open_loop": {
+        "better": 76,
+        "tied": 0,
+        "worse": 20
+      },
+      "phase_axes_minus_adaptive": {
+        "decimal": "0.0012282691525",
+        "decimal_enclosure": {
+          "lower": "0.001228269152",
+          "maximum_absolute_display_error": "1/2000000000000",
+          "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+          "upper": "0.001228269153"
+        }
+      }
+    },
+    "shifted_phase": {
+      "better_than_old_axes": true,
+      "five_percent_improvement": true,
+      "open_loop_minus_adaptive": {
+        "decimal": "0.0079804650495",
+        "decimal_enclosure": {
+          "lower": "0.007980465049",
+          "maximum_absolute_display_error": "1/2000000000000",
+          "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+          "upper": "0.007980465050"
+        }
+      },
+      "per_case_vs_open_loop": {
+        "better": 80,
+        "tied": 0,
+        "worse": 16
+      },
+      "phase_axes_minus_adaptive": {
+        "decimal": "0.0010203565795",
+        "decimal_enclosure": {
+          "lower": "0.001020356579",
+          "maximum_absolute_display_error": "1/2000000000000",
+          "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+          "upper": "0.001020356580"
+        }
+      }
+    }
+  },
+  "computational_advantage_established": false,
+  "evidence_class": "DECLARED_CPTP_FRESH_PROBE_SOURCE_WITH_STATED_READOUT_STRESS",
+  "exact_calculator_requests": 32,
+  "exact_trajectory_evaluations": 3264,
+  "frame_controls": {
+    "acceleration_identity": true,
+    "driven_source_frame_covariance": true,
+    "full_affine_transport": true,
+    "omitted_coriolis_fails": true,
+    "omitted_displacement_rotation_fails": true,
+    "reconstructed_lab_is_straight": true
+  },
+  "frozen_policies_sha256": "1d8d9c7609fa8ab9186ad434755812875d450dda8ad4a0089fe58e28b28d21a2",
+  "frozen_policy_fingerprints": {
+    "constant_radius_adaptive": "d95aa22dcf092c0df5475caa18f3a2506a9cf0fa1f3c3fbebf57dfd364c114b4",
+    "coupled_adaptive": "6f20b55dd1b479bbd5273d0f00beb844c88bc9a758e88b184be37aa370bafa5c",
+    "coupled_open_loop": "0056a24ae56f4f4168eddbee0742af28ab4bf03351ff2f069b073f6925165567",
+    "legacy_phase": "5c57377a3da2de07b3d036e347505b7aab9b110dac3e7d349a5dc7c6ad751bce",
+    "no_records": "61a57eb4c63af44131aa5870cac76659a043814217ee856203af79a9939d277c",
+    "phase_axes_joint_decoder": "01e7c1e48593e5c02f74f8f7d739d06a6f3b3584fdfb6c18a317af0c13db0a2d"
+  },
+  "hardware_job_id": null,
+  "hardware_validated": false,
+  "no_evaluation_trajectory_used_for_planning": true,
+  "numeric_references": {
+    "likelihood_00": {
+      "max_absolute_error": 4.440892098500626e-16,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_01": {
+      "max_absolute_error": 1.1523247633871136e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_02": {
+      "max_absolute_error": 1.4339918141814678e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_03": {
+      "max_absolute_error": 2.2792878695554464e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_04": {
+      "max_absolute_error": 2.2648549702353193e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_05": {
+      "max_absolute_error": 3.013422844588831e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_06": {
+      "max_absolute_error": 4.5075054799781356e-14,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_07": {
+      "max_absolute_error": 4.363176486776865e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_08": {
+      "max_absolute_error": 2.220446049250313e-16,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_09": {
+      "max_absolute_error": 4.363176486776865e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_10": {
+      "max_absolute_error": 4.5075054799781356e-14,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_11": {
+      "max_absolute_error": 3.0117575100518934e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_12": {
+      "max_absolute_error": 2.2670754162845697e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_13": {
+      "max_absolute_error": 2.277067423506196e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_14": {
+      "max_absolute_error": 1.4336448694862725e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_15": {
+      "max_absolute_error": 1.152151291039516e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_16": {
+      "max_absolute_error": 4.440892098500626e-16,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_17": {
+      "max_absolute_error": 1.1524288467956723e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_18": {
+      "max_absolute_error": 1.434130592059546e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_19": {
+      "max_absolute_error": 2.2792878695554464e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_20": {
+      "max_absolute_error": 2.2648549702353193e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_21": {
+      "max_absolute_error": 3.013422844588831e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_22": {
+      "max_absolute_error": 4.5075054799781356e-14,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_23": {
+      "max_absolute_error": 4.3598458177029897e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_24": {
+      "max_absolute_error": 2.220446049250313e-16,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_25": {
+      "max_absolute_error": 4.363176486776865e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_26": {
+      "max_absolute_error": 4.490852134608758e-14,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_27": {
+      "max_absolute_error": 3.011202398539581e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_28": {
+      "max_absolute_error": 2.2670754162845697e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_29": {
+      "max_absolute_error": 2.277067423506196e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_30": {
+      "max_absolute_error": 1.4335754805472334e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "likelihood_31": {
+      "max_absolute_error": 1.1520472076309574e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_0_constant_radius_adaptive": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.997621782555639e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_0_coupled_adaptive": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.961612446851421e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_0_coupled_open_loop": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.947118290108549e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_0_legacy_phase": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.945903712624822e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_0_no_records": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.802356429189913e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_0_phase_axes_joint_decoder": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.945903712624822e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_1_constant_radius_adaptive": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.941457399515459e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_1_coupled_adaptive": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.920890084303409e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_1_coupled_open_loop": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.898866685573711e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_1_legacy_phase": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.874937259424783e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_1_no_records": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.95450739896458e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_1_phase_axes_joint_decoder": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.874937259424783e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_2_constant_radius_adaptive": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.952253884749069e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_2_coupled_adaptive": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.904826544915863e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_2_coupled_open_loop": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.87141577076855e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_2_legacy_phase": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.933821363614643e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_2_no_records": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.998280435375424e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_2_phase_axes_joint_decoder": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.933821363614643e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_3_constant_radius_adaptive": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.794636909721817e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_3_coupled_adaptive": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.962835697952528e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_3_coupled_open_loop": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.883361510304995e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_3_legacy_phase": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.900246874939285e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_3_no_records": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.780690817177136e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_3_phase_axes_joint_decoder": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.872113996967631e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_4_constant_radius_adaptive": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.944038681600239e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_4_coupled_adaptive": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.965108185706057e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_4_coupled_open_loop": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.981015599980765e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_4_legacy_phase": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.836131495267182e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_4_no_records": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.981015599980765e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_4_phase_axes_joint_decoder": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.836131495267182e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_5_constant_radius_adaptive": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.933262999495813e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_5_coupled_adaptive": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.950970189376847e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_5_coupled_open_loop": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.929390229335695e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_5_legacy_phase": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.976722159377722e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_5_no_records": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.395138766821738e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_5_phase_axes_joint_decoder": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.976722159377722e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_6_constant_radius_adaptive": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.829038915705325e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_6_coupled_adaptive": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.97877130148372e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_6_coupled_open_loop": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.924715149567938e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_6_legacy_phase": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.973729761381662e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_6_no_records": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.992473448539592e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_6_phase_axes_joint_decoder": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.973729761381662e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_7_constant_radius_adaptive": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.881396393867365e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_7_coupled_adaptive": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.953461685969218e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_7_coupled_open_loop": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.764326953787812e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_7_legacy_phase": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.997203822618146e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_7_no_records": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.944031295472939e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_7_phase_axes_joint_decoder": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.997203822618146e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_8_constant_radius_adaptive": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 5.005440506522518e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_8_coupled_adaptive": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.978170653480163e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_8_coupled_open_loop": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.76445272123982e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_8_legacy_phase": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.971214412341496e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_8_no_records": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.915998164101154e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_8_phase_axes_joint_decoder": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.971214412341496e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_9_constant_radius_adaptive": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.776179451937423e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_9_coupled_adaptive": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.1044945220392037e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_9_coupled_open_loop": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.1044945220392037e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_9_legacy_phase": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.1033842990145786e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_9_no_records": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.32542890393961e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    },
+    "mixed_path_9_phase_axes_joint_decoder": {
+      "branches_checked": 64,
+      "density_matrices_valid": true,
+      "kraus_complete": true,
+      "max_absolute_error": 4.1044945220392037e-13,
+      "passed": true,
+      "qiskit_version": "2.6.1"
+    }
+  },
+  "planning": {
+    "constant_radius_adaptive": {
+      "leaf_evaluations": 65536,
+      "numerical_expected_loss": 0.07531503111861937,
+      "planner": "finite-horizon Bayesian Bellman recursion",
+      "wall_seconds": 0.7606237920008425
+    },
+    "coupled_adaptive": {
+      "leaf_evaluations": 65536,
+      "numerical_expected_loss": 0.09524380021184964,
+      "planner": "finite-horizon Bayesian Bellman recursion",
+      "wall_seconds": 0.7081450219993712
+    },
+    "coupled_open_loop": {
+      "leaf_evaluations": 65536,
+      "numerical_expected_loss": 0.1032242652611538,
+      "optimality": "numerical grid search; selected risk is replayed exactly",
+      "schedule": [
+        0,
+        0,
+        4,
+        12,
+        12,
+        4
+      ],
+      "schedules": 1024,
+      "wall_seconds": 0.1106799150002189
+    },
+    "legacy_phase": {
+      "calibration": "unchanged unit-radius decoder",
+      "source_policy": "e0df6edb1e269c78e70d3fe6fc343b6ce3bb8884387ed5a5c5bec56e3d5b9a67"
+    },
+    "no_records": {
+      "decoder": "prior mean zero; outcomes ignored"
+    },
+    "phase_axes_joint_decoder": {
+      "angle_search": false,
+      "axes_source": "e0df6edb1e269c78e70d3fe6fc343b6ce3bb8884387ed5a5c5bec56e3d5b9a67",
+      "numerical_expected_loss": 0.09626415679152456
+    }
+  },
+  "primary_improvement_passed": true,
+  "protocol_commit": "99c5dbb9c1af8a03687d18b3a0ac069bcdf4a75c",
+  "protocol_sha256": "b1f4c6a12879ceaf3ab2630c31e170d683e2dc6a700c1ffdd06ea5e35f7d89e9",
+  "python": "3.12.14",
+  "randomized_readout_controls": {
+    "constant_radius_adaptive": true,
+    "constant_radius_adaptive_uniform_records": true,
+    "coupled_adaptive": true,
+    "coupled_adaptive_uniform_records": true,
+    "coupled_open_loop": true,
+    "coupled_open_loop_uniform_records": true,
+    "legacy_phase": true,
+    "legacy_phase_uniform_records": true,
+    "no_records": true,
+    "no_records_uniform_records": true,
+    "phase_axes_joint_decoder": true,
+    "phase_axes_joint_decoder_uniform_records": true
+  },
+  "records_per_trajectory": 64,
+  "schema": "nrqc-observer-state-audit-v1",
+  "scores": {
+    "constant_radius_adaptive": {
+      "faster_drift": {
+        "axis_changes": {
+          "decimal": "3.1721615192395",
+          "decimal_enclosure": {
+            "lower": "3.172161519239",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "3.172161519240"
+          }
+        },
+        "cases": 64,
+        "error": {
+          "decimal": "0.0935836032575",
+          "decimal_enclosure": {
+            "lower": "0.093583603257",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.093583603258"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.1547841141045",
+          "decimal_enclosure": {
+            "lower": "0.154784114104",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.154784114105"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.4856648089105",
+          "decimal_enclosure": {
+            "lower": "0.485664808910",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.485664808911"
+          }
+        }
+      },
+      "model_grid": {
+        "axis_changes": {
+          "decimal": "3.2230352753475",
+          "decimal_enclosure": {
+            "lower": "3.223035275347",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "3.223035275348"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.1074566767665",
+          "decimal_enclosure": {
+            "lower": "0.107456676766",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.107456676767"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.2717978730615",
+          "decimal_enclosure": {
+            "lower": "0.271797873061",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.271797873062"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.6654780981885",
+          "decimal_enclosure": {
+            "lower": "0.665478098188",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.665478098189"
+          }
+        }
+      },
+      "randomized_readout": {
+        "axis_changes": {
+          "decimal": "2.8750000000000",
+          "decimal_enclosure": {
+            "lower": "2.875000000000",
+            "maximum_absolute_display_error": "0",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "2.875000000000"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.1976195245475",
+          "decimal_enclosure": {
+            "lower": "0.197619524547",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.197619524548"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.3318415382125",
+          "decimal_enclosure": {
+            "lower": "0.331841538212",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.331841538213"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.6654780981885",
+          "decimal_enclosure": {
+            "lower": "0.665478098188",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.665478098189"
+          }
+        }
+      },
+      "readout_flip_5pct": {
+        "axis_changes": {
+          "decimal": "3.1586936830815",
+          "decimal_enclosure": {
+            "lower": "3.158693683081",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "3.158693683082"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.1163864072065",
+          "decimal_enclosure": {
+            "lower": "0.116386407206",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.116386407207"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.2827028482575",
+          "decimal_enclosure": {
+            "lower": "0.282702848257",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.282702848258"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.6654780981885",
+          "decimal_enclosure": {
+            "lower": "0.665478098188",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.665478098189"
+          }
+        }
+      },
+      "retention_mismatch": {
+        "axis_changes": {
+          "decimal": "3.3120194804375",
+          "decimal_enclosure": {
+            "lower": "3.312019480437",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "3.312019480438"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.0768717662965",
+          "decimal_enclosure": {
+            "lower": "0.076871766296",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.076871766297"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.1629765175685",
+          "decimal_enclosure": {
+            "lower": "0.162976517568",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.162976517569"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.4841460172745",
+          "decimal_enclosure": {
+            "lower": "0.484146017274",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.484146017275"
+          }
+        }
+      },
+      "shifted_phase": {
+        "axis_changes": {
+          "decimal": "3.2230352753475",
+          "decimal_enclosure": {
+            "lower": "3.223035275347",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "3.223035275348"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.1074566767665",
+          "decimal_enclosure": {
+            "lower": "0.107456676766",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.107456676767"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.2717978730615",
+          "decimal_enclosure": {
+            "lower": "0.271797873061",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.271797873062"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.6654780981885",
+          "decimal_enclosure": {
+            "lower": "0.665478098188",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.665478098189"
+          }
+        }
+      }
+    },
+    "coupled_adaptive": {
+      "faster_drift": {
+        "axis_changes": {
+          "decimal": "4.6106653659985",
+          "decimal_enclosure": {
+            "lower": "4.610665365998",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "4.610665365999"
+          }
+        },
+        "cases": 64,
+        "error": {
+          "decimal": "0.0834102345125",
+          "decimal_enclosure": {
+            "lower": "0.083410234512",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.083410234513"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.0952505365825",
+          "decimal_enclosure": {
+            "lower": "0.095250536582",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.095250536583"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.4856648089105",
+          "decimal_enclosure": {
+            "lower": "0.485664808910",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.485664808911"
+          }
+        }
+      },
+      "model_grid": {
+        "axis_changes": {
+          "decimal": "4.6397947013785",
+          "decimal_enclosure": {
+            "lower": "4.639794701378",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "4.639794701379"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.0952438002115",
+          "decimal_enclosure": {
+            "lower": "0.095243800211",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.095243800212"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.1885487357535",
+          "decimal_enclosure": {
+            "lower": "0.188548735753",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.188548735754"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.6654780981885",
+          "decimal_enclosure": {
+            "lower": "0.665478098188",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.665478098189"
+          }
+        }
+      },
+      "randomized_readout": {
+        "axis_changes": {
+          "decimal": "4.6250000000000",
+          "decimal_enclosure": {
+            "lower": "4.625000000000",
+            "maximum_absolute_display_error": "0",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "4.625000000000"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.2308226495475",
+          "decimal_enclosure": {
+            "lower": "0.230822649547",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.230822649548"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.2043903246315",
+          "decimal_enclosure": {
+            "lower": "0.204390324631",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.204390324632"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.6654780981885",
+          "decimal_enclosure": {
+            "lower": "0.665478098188",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.665478098189"
+          }
+        }
+      },
+      "readout_flip_5pct": {
+        "axis_changes": {
+          "decimal": "4.6369350381665",
+          "decimal_enclosure": {
+            "lower": "4.636935038166",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "4.636935038167"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.1078698771505",
+          "decimal_enclosure": {
+            "lower": "0.107869877150",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.107869877151"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.1915814395845",
+          "decimal_enclosure": {
+            "lower": "0.191581439584",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.191581439585"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.6654780981885",
+          "decimal_enclosure": {
+            "lower": "0.665478098188",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.665478098189"
+          }
+        }
+      },
+      "retention_mismatch": {
+        "axis_changes": {
+          "decimal": "4.6576751863775",
+          "decimal_enclosure": {
+            "lower": "4.657675186377",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "4.657675186378"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.0737501637805",
+          "decimal_enclosure": {
+            "lower": "0.073750163780",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.073750163781"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.1199343147055",
+          "decimal_enclosure": {
+            "lower": "0.119934314705",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.119934314706"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.4841460172745",
+          "decimal_enclosure": {
+            "lower": "0.484146017274",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.484146017275"
+          }
+        }
+      },
+      "shifted_phase": {
+        "axis_changes": {
+          "decimal": "4.6397947013785",
+          "decimal_enclosure": {
+            "lower": "4.639794701378",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "4.639794701379"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.0952438002115",
+          "decimal_enclosure": {
+            "lower": "0.095243800211",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.095243800212"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.1885487357535",
+          "decimal_enclosure": {
+            "lower": "0.188548735753",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.188548735754"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.6654780981885",
+          "decimal_enclosure": {
+            "lower": "0.665478098188",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.665478098189"
+          }
+        }
+      }
+    },
+    "coupled_open_loop": {
+      "faster_drift": {
+        "axis_changes": {
+          "decimal": "3.0000000000000",
+          "decimal_enclosure": {
+            "lower": "3.000000000000",
+            "maximum_absolute_display_error": "0",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "3.000000000000"
+          }
+        },
+        "cases": 64,
+        "error": {
+          "decimal": "0.0889970219065",
+          "decimal_enclosure": {
+            "lower": "0.088997021906",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.088997021907"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.1222150449955",
+          "decimal_enclosure": {
+            "lower": "0.122215044995",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.122215044996"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.4856648089105",
+          "decimal_enclosure": {
+            "lower": "0.485664808910",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.485664808911"
+          }
+        }
+      },
+      "model_grid": {
+        "axis_changes": {
+          "decimal": "3.0000000000000",
+          "decimal_enclosure": {
+            "lower": "3.000000000000",
+            "maximum_absolute_display_error": "0",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "3.000000000000"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.1032242652615",
+          "decimal_enclosure": {
+            "lower": "0.103224265261",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.103224265262"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.2229033925975",
+          "decimal_enclosure": {
+            "lower": "0.222903392597",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.222903392598"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.6654780981885",
+          "decimal_enclosure": {
+            "lower": "0.665478098188",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.665478098189"
+          }
+        }
+      },
+      "randomized_readout": {
+        "axis_changes": {
+          "decimal": "3.0000000000000",
+          "decimal_enclosure": {
+            "lower": "3.000000000000",
+            "maximum_absolute_display_error": "0",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "3.000000000000"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.2181273370475",
+          "decimal_enclosure": {
+            "lower": "0.218127337047",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.218127337048"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.2526908346035",
+          "decimal_enclosure": {
+            "lower": "0.252690834603",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.252690834604"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.6654780981885",
+          "decimal_enclosure": {
+            "lower": "0.665478098188",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.665478098189"
+          }
+        }
+      },
+      "readout_flip_5pct": {
+        "axis_changes": {
+          "decimal": "3.0000000000000",
+          "decimal_enclosure": {
+            "lower": "3.000000000000",
+            "maximum_absolute_display_error": "0",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "3.000000000000"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.1138997828185",
+          "decimal_enclosure": {
+            "lower": "0.113899782818",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.113899782819"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.2282716490015",
+          "decimal_enclosure": {
+            "lower": "0.228271649001",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.228271649002"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.6654780981885",
+          "decimal_enclosure": {
+            "lower": "0.665478098188",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.665478098189"
+          }
+        }
+      },
+      "retention_mismatch": {
+        "axis_changes": {
+          "decimal": "3.0000000000000",
+          "decimal_enclosure": {
+            "lower": "3.000000000000",
+            "maximum_absolute_display_error": "0",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "3.000000000000"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.0810614755055",
+          "decimal_enclosure": {
+            "lower": "0.081061475505",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.081061475506"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.1380743840095",
+          "decimal_enclosure": {
+            "lower": "0.138074384009",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.138074384010"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.4841460172745",
+          "decimal_enclosure": {
+            "lower": "0.484146017274",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.484146017275"
+          }
+        }
+      },
+      "shifted_phase": {
+        "axis_changes": {
+          "decimal": "3.0000000000000",
+          "decimal_enclosure": {
+            "lower": "3.000000000000",
+            "maximum_absolute_display_error": "0",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "3.000000000000"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.1032242652615",
+          "decimal_enclosure": {
+            "lower": "0.103224265261",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.103224265262"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.2229033925975",
+          "decimal_enclosure": {
+            "lower": "0.222903392597",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.222903392598"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.6654780981885",
+          "decimal_enclosure": {
+            "lower": "0.665478098188",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.665478098189"
+          }
+        }
+      }
+    },
+    "legacy_phase": {
+      "faster_drift": {
+        "axis_changes": {
+          "decimal": "4.0587904594685",
+          "decimal_enclosure": {
+            "lower": "4.058790459468",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "4.058790459469"
+          }
+        },
+        "cases": 64,
+        "error": {
+          "decimal": "0.1907633722415",
+          "decimal_enclosure": {
+            "lower": "0.190763372241",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.190763372242"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.3208608354155",
+          "decimal_enclosure": {
+            "lower": "0.320860835415",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.320860835416"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.4856648089105",
+          "decimal_enclosure": {
+            "lower": "0.485664808910",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.485664808911"
+          }
+        }
+      },
+      "model_grid": {
+        "axis_changes": {
+          "decimal": "4.0764566147015",
+          "decimal_enclosure": {
+            "lower": "4.076456614701",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "4.076456614702"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.1603820440155",
+          "decimal_enclosure": {
+            "lower": "0.160382044015",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.160382044016"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.1418642413835",
+          "decimal_enclosure": {
+            "lower": "0.141864241383",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.141864241384"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.6654780981885",
+          "decimal_enclosure": {
+            "lower": "0.665478098188",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.665478098189"
+          }
+        }
+      },
+      "randomized_readout": {
+        "axis_changes": {
+          "decimal": "4.0000000000000",
+          "decimal_enclosure": {
+            "lower": "4.000000000000",
+            "maximum_absolute_display_error": "0",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "4.000000000000"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.4163695245475",
+          "decimal_enclosure": {
+            "lower": "0.416369524547",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.416369524548"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.1418642413835",
+          "decimal_enclosure": {
+            "lower": "0.141864241383",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.141864241384"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.6654780981885",
+          "decimal_enclosure": {
+            "lower": "0.665478098188",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.665478098189"
+          }
+        }
+      },
+      "readout_flip_5pct": {
+        "axis_changes": {
+          "decimal": "4.0620953930435",
+          "decimal_enclosure": {
+            "lower": "4.062095393043",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "4.062095393044"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.1855624442245",
+          "decimal_enclosure": {
+            "lower": "0.185562444224",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.185562444225"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.1418642413835",
+          "decimal_enclosure": {
+            "lower": "0.141864241383",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.141864241384"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.6654780981885",
+          "decimal_enclosure": {
+            "lower": "0.665478098188",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.665478098189"
+          }
+        }
+      },
+      "retention_mismatch": {
+        "axis_changes": {
+          "decimal": "4.0914458012295",
+          "decimal_enclosure": {
+            "lower": "4.091445801229",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "4.091445801230"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.1471420839395",
+          "decimal_enclosure": {
+            "lower": "0.147142083939",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.147142083940"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.3363912892755",
+          "decimal_enclosure": {
+            "lower": "0.336391289275",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.336391289276"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.4841460172745",
+          "decimal_enclosure": {
+            "lower": "0.484146017274",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.484146017275"
+          }
+        }
+      },
+      "shifted_phase": {
+        "axis_changes": {
+          "decimal": "4.0764566147015",
+          "decimal_enclosure": {
+            "lower": "4.076456614701",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "4.076456614702"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.1603820440155",
+          "decimal_enclosure": {
+            "lower": "0.160382044015",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.160382044016"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.1418642413835",
+          "decimal_enclosure": {
+            "lower": "0.141864241383",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.141864241384"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.6654780981885",
+          "decimal_enclosure": {
+            "lower": "0.665478098188",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.665478098189"
+          }
+        }
+      }
+    },
+    "no_records": {
+      "faster_drift": {
+        "axis_changes": {
+          "decimal": "0.0000000000000",
+          "decimal_enclosure": {
+            "lower": "0.000000000000",
+            "maximum_absolute_display_error": "0",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.000000000000"
+          }
+        },
+        "cases": 64,
+        "error": {
+          "decimal": "0.1214162022275",
+          "decimal_enclosure": {
+            "lower": "0.121416202227",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.121416202228"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.2921904532375",
+          "decimal_enclosure": {
+            "lower": "0.292190453237",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.292190453238"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.4856648089105",
+          "decimal_enclosure": {
+            "lower": "0.485664808910",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.485664808911"
+          }
+        }
+      },
+      "model_grid": {
+        "axis_changes": {
+          "decimal": "0.0000000000000",
+          "decimal_enclosure": {
+            "lower": "0.000000000000",
+            "maximum_absolute_display_error": "0",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.000000000000"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.1663695245475",
+          "decimal_enclosure": {
+            "lower": "0.166369524547",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.166369524548"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.4728204377595",
+          "decimal_enclosure": {
+            "lower": "0.472820437759",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.472820437760"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.6654780981885",
+          "decimal_enclosure": {
+            "lower": "0.665478098188",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.665478098189"
+          }
+        }
+      },
+      "randomized_readout": {
+        "axis_changes": {
+          "decimal": "0.0000000000000",
+          "decimal_enclosure": {
+            "lower": "0.000000000000",
+            "maximum_absolute_display_error": "0",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.000000000000"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.1663695245475",
+          "decimal_enclosure": {
+            "lower": "0.166369524547",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.166369524548"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.4728204377595",
+          "decimal_enclosure": {
+            "lower": "0.472820437759",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.472820437760"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.6654780981885",
+          "decimal_enclosure": {
+            "lower": "0.665478098188",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.665478098189"
+          }
+        }
+      },
+      "readout_flip_5pct": {
+        "axis_changes": {
+          "decimal": "0.0000000000000",
+          "decimal_enclosure": {
+            "lower": "0.000000000000",
+            "maximum_absolute_display_error": "0",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.000000000000"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.1663695245475",
+          "decimal_enclosure": {
+            "lower": "0.166369524547",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.166369524548"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.4728204377595",
+          "decimal_enclosure": {
+            "lower": "0.472820437759",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.472820437760"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.6654780981885",
+          "decimal_enclosure": {
+            "lower": "0.665478098188",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.665478098189"
+          }
+        }
+      },
+      "retention_mismatch": {
+        "axis_changes": {
+          "decimal": "0.0000000000000",
+          "decimal_enclosure": {
+            "lower": "0.000000000000",
+            "maximum_absolute_display_error": "0",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.000000000000"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.1210365043185",
+          "decimal_enclosure": {
+            "lower": "0.121036504318",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.121036504319"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.3046833238245",
+          "decimal_enclosure": {
+            "lower": "0.304683323824",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.304683323825"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.4841460172745",
+          "decimal_enclosure": {
+            "lower": "0.484146017274",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.484146017275"
+          }
+        }
+      },
+      "shifted_phase": {
+        "axis_changes": {
+          "decimal": "0.0000000000000",
+          "decimal_enclosure": {
+            "lower": "0.000000000000",
+            "maximum_absolute_display_error": "0",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.000000000000"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.1663695245475",
+          "decimal_enclosure": {
+            "lower": "0.166369524547",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.166369524548"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.4728204377595",
+          "decimal_enclosure": {
+            "lower": "0.472820437759",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.472820437760"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.6654780981885",
+          "decimal_enclosure": {
+            "lower": "0.665478098188",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.665478098189"
+          }
+        }
+      }
+    },
+    "phase_axes_joint_decoder": {
+      "faster_drift": {
+        "axis_changes": {
+          "decimal": "4.0587904594685",
+          "decimal_enclosure": {
+            "lower": "4.058790459468",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "4.058790459469"
+          }
+        },
+        "cases": 64,
+        "error": {
+          "decimal": "0.0837921137235",
+          "decimal_enclosure": {
+            "lower": "0.083792113723",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.083792113724"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.0927308316665",
+          "decimal_enclosure": {
+            "lower": "0.092730831666",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.092730831667"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.4856648089105",
+          "decimal_enclosure": {
+            "lower": "0.485664808910",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.485664808911"
+          }
+        }
+      },
+      "model_grid": {
+        "axis_changes": {
+          "decimal": "4.0764566147015",
+          "decimal_enclosure": {
+            "lower": "4.076456614701",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "4.076456614702"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.0962641567915",
+          "decimal_enclosure": {
+            "lower": "0.096264156791",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.096264156792"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.1833609003595",
+          "decimal_enclosure": {
+            "lower": "0.183360900359",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.183360900360"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.6654780981885",
+          "decimal_enclosure": {
+            "lower": "0.665478098188",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.665478098189"
+          }
+        }
+      },
+      "randomized_readout": {
+        "axis_changes": {
+          "decimal": "4.0000000000000",
+          "decimal_enclosure": {
+            "lower": "4.000000000000",
+            "maximum_absolute_display_error": "0",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "4.000000000000"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.2337523370475",
+          "decimal_enclosure": {
+            "lower": "0.233752337047",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.233752337048"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.1924552910805",
+          "decimal_enclosure": {
+            "lower": "0.192455291080",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.192455291081"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.6654780981885",
+          "decimal_enclosure": {
+            "lower": "0.665478098188",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.665478098189"
+          }
+        }
+      },
+      "readout_flip_5pct": {
+        "axis_changes": {
+          "decimal": "4.0620953930435",
+          "decimal_enclosure": {
+            "lower": "4.062095393043",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "4.062095393044"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.1090879513395",
+          "decimal_enclosure": {
+            "lower": "0.109087951339",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.109087951340"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.1852366259305",
+          "decimal_enclosure": {
+            "lower": "0.185236625930",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.185236625931"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.6654780981885",
+          "decimal_enclosure": {
+            "lower": "0.665478098188",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.665478098189"
+          }
+        }
+      },
+      "retention_mismatch": {
+        "axis_changes": {
+          "decimal": "4.0914458012295",
+          "decimal_enclosure": {
+            "lower": "4.091445801229",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "4.091445801230"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.0749784329335",
+          "decimal_enclosure": {
+            "lower": "0.074978432933",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.074978432934"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.1167734620345",
+          "decimal_enclosure": {
+            "lower": "0.116773462034",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.116773462035"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.4841460172745",
+          "decimal_enclosure": {
+            "lower": "0.484146017274",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.484146017275"
+          }
+        }
+      },
+      "shifted_phase": {
+        "axis_changes": {
+          "decimal": "4.0764566147015",
+          "decimal_enclosure": {
+            "lower": "4.076456614701",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "4.076456614702"
+          }
+        },
+        "cases": 96,
+        "error": {
+          "decimal": "0.0962641567915",
+          "decimal_enclosure": {
+            "lower": "0.096264156791",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.096264156792"
+          }
+        },
+        "squared_contrast_error": {
+          "decimal": "0.1833609003595",
+          "decimal_enclosure": {
+            "lower": "0.183360900359",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.183360900360"
+          }
+        },
+        "target_radius_squared": {
+          "decimal": "0.6654780981885",
+          "decimal_enclosure": {
+            "lower": "0.665478098188",
+            "maximum_absolute_display_error": "1/2000000000000",
+            "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+            "upper": "0.665478098189"
+          }
+        }
+      }
+    }
+  },
+  "source_preparation_cost_measured": false,
+  "source_sha256": {
+    "benchmarks/observer_state_audit.py": "a6eb4a0d3b897c52eaa56d9dd1af41d803371fe739a62b0d71626a1685abfa15",
+    "benchmarks/protocols/observer_state_v1.json": "ccc903d9c2923b38624cb8403d4482b5b3bff5ed44a420ba989b38c636364193",
+    "native_relational_qc/__main__.py": "d84d65027c9d14386c36ded40c37ad887d1132652cd89c9cf8e640ed6caab7af",
+    "native_relational_qc/calculator.py": "d5b405394b40e22235eac2808715b3337c449087930cad741562f28c577defac",
+    "native_relational_qc/calculator_examples/moving_observer_policy.json": "d4c7c5ee1c314acc8ebe02a2ac5998a7ebc1424b19d311bf6d3af6994df8c71b",
+    "native_relational_qc/certify.py": "9e7287e24f4983420ec20decf87e046394693bb9aff0197a8a6db2ea9d06270b",
+    "native_relational_qc/cyclotomic_pow2.py": "61fb228363e05691b7d673711c8168c677346a4a1095416a7a37a450a9fddcc8",
+    "native_relational_qc/observer_state.py": "bcc9cf12d300349ff3b559cf4c29051087c01290b3b95f18d6b8f38ae83ef41a",
+    "native_relational_qc/observer_tracking.py": "9d7158095753796245df33cb8974840fc885daecb8f3ea0305b10aad29f6118e",
+    "native_relational_qc/phase_interop.py": "3a1957969aacd3cd790294fbe196391d963e4f301724f384b3159ed79b570624"
+  },
+  "status": "completed",
+  "verification_passed": true,
+  "wall_seconds": 79.5202910349999
+}

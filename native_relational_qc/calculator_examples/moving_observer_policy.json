@@ -1,0 +1,621 @@
+{
+  "fingerprint": "e0df6edb1e269c78e70d3fe6fc343b6ce3bb8884387ed5a5c5bec56e3d5b9a67",
+  "model": {
+    "axes": [
+      0,
+      4,
+      8,
+      12
+    ],
+    "guesses": [
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30
+    ],
+    "hypotheses": [
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        -1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        4,
+        -1
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        6,
+        -1
+      ],
+      [
+        6,
+        0
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        8,
+        -1
+      ],
+      [
+        8,
+        0
+      ],
+      [
+        8,
+        1
+      ],
+      [
+        10,
+        -1
+      ],
+      [
+        10,
+        0
+      ],
+      [
+        10,
+        1
+      ],
+      [
+        12,
+        -1
+      ],
+      [
+        12,
+        0
+      ],
+      [
+        12,
+        1
+      ],
+      [
+        14,
+        -1
+      ],
+      [
+        14,
+        0
+      ],
+      [
+        14,
+        1
+      ],
+      [
+        16,
+        -1
+      ],
+      [
+        16,
+        0
+      ],
+      [
+        16,
+        1
+      ],
+      [
+        18,
+        -1
+      ],
+      [
+        18,
+        0
+      ],
+      [
+        18,
+        1
+      ],
+      [
+        20,
+        -1
+      ],
+      [
+        20,
+        0
+      ],
+      [
+        20,
+        1
+      ],
+      [
+        22,
+        -1
+      ],
+      [
+        22,
+        0
+      ],
+      [
+        22,
+        1
+      ],
+      [
+        24,
+        -1
+      ],
+      [
+        24,
+        0
+      ],
+      [
+        24,
+        1
+      ],
+      [
+        26,
+        -1
+      ],
+      [
+        26,
+        0
+      ],
+      [
+        26,
+        1
+      ],
+      [
+        28,
+        -1
+      ],
+      [
+        28,
+        0
+      ],
+      [
+        28,
+        1
+      ],
+      [
+        30,
+        -1
+      ],
+      [
+        30,
+        0
+      ],
+      [
+        30,
+        1
+      ]
+    ],
+    "loss": "(1-cos(actual_phase-estimate))/2",
+    "phase_grid": 32,
+    "preparation": "one fresh equatorial probe per round",
+    "prior": "uniform",
+    "rounds": 6,
+    "signal": "phase(t)=initial+velocity*t modulo 32",
+    "target": "one-step-ahead source phase",
+    "target_time": 6
+  },
+  "name": "adaptive",
+  "planning": {
+    "leaf_evaluations": 65536,
+    "numerical_expected_loss": 0.09706994320546847,
+    "planner": "finite-horizon Bayesian Bellman recursion",
+    "wall_seconds": 0.3924299009995593
+  },
+  "schema": "nrqc-observer-tracking-policy-v1",
+  "selection_inputs": "declared prior and likelihood model only; no evaluation trajectories",
+  "tree": {
+    "axis": 0,
+    "one": {
+      "axis": 8,
+      "one": {
+        "axis": 12,
+        "one": {
+          "axis": 0,
+          "one": {
+            "axis": 12,
+            "one": {
+              "axis": 0,
+              "one": {
+                "estimate": 22
+              },
+              "zero": {
+                "estimate": 26
+              }
+            },
+            "zero": {
+              "axis": 8,
+              "one": {
+                "estimate": 20
+              },
+              "zero": {
+                "estimate": 16
+              }
+            }
+          },
+          "zero": {
+            "axis": 0,
+            "one": {
+              "axis": 0,
+              "one": {
+                "estimate": 22
+              },
+              "zero": {
+                "estimate": 26
+              }
+            },
+            "zero": {
+              "axis": 4,
+              "one": {
+                "estimate": 26
+              },
+              "zero": {
+                "estimate": 30
+              }
+            }
+          }
+        },
+        "zero": {
+          "axis": 8,
+          "one": {
+            "axis": 12,
+            "one": {
+              "axis": 12,
+              "one": {
+                "estimate": 24
+              },
+              "zero": {
+                "estimate": 20
+              }
+            },
+            "zero": {
+              "axis": 12,
+              "one": {
+                "estimate": 20
+              },
+              "zero": {
+                "estimate": 16
+              }
+            }
+          },
+          "zero": {
+            "axis": 8,
+            "one": {
+              "axis": 8,
+              "one": {
+                "estimate": 18
+              },
+              "zero": {
+                "estimate": 14
+              }
+            },
+            "zero": {
+              "axis": 4,
+              "one": {
+                "estimate": 14
+              },
+              "zero": {
+                "estimate": 10
+              }
+            }
+          }
+        }
+      },
+      "zero": {
+        "axis": 4,
+        "one": {
+          "axis": 8,
+          "one": {
+            "axis": 8,
+            "one": {
+              "axis": 12,
+              "one": {
+                "estimate": 22
+              },
+              "zero": {
+                "estimate": 18
+              }
+            },
+            "zero": {
+              "axis": 8,
+              "one": {
+                "estimate": 18
+              },
+              "zero": {
+                "estimate": 14
+              }
+            }
+          },
+          "zero": {
+            "axis": 4,
+            "one": {
+              "axis": 4,
+              "one": {
+                "estimate": 16
+              },
+              "zero": {
+                "estimate": 12
+              }
+            },
+            "zero": {
+              "axis": 4,
+              "one": {
+                "estimate": 12
+              },
+              "zero": {
+                "estimate": 8
+              }
+            }
+          }
+        },
+        "zero": {
+          "axis": 0,
+          "one": {
+            "axis": 4,
+            "one": {
+              "axis": 8,
+              "one": {
+                "estimate": 16
+              },
+              "zero": {
+                "estimate": 12
+              }
+            },
+            "zero": {
+              "axis": 0,
+              "one": {
+                "estimate": 10
+              },
+              "zero": {
+                "estimate": 6
+              }
+            }
+          },
+          "zero": {
+            "axis": 0,
+            "one": {
+              "axis": 0,
+              "one": {
+                "estimate": 10
+              },
+              "zero": {
+                "estimate": 6
+              }
+            },
+            "zero": {
+              "axis": 12,
+              "one": {
+                "estimate": 2
+              },
+              "zero": {
+                "estimate": 6
+              }
+            }
+          }
+        }
+      }
+    },
+    "zero": {
+      "axis": 8,
+      "one": {
+        "axis": 4,
+        "one": {
+          "axis": 0,
+          "one": {
+            "axis": 0,
+            "one": {
+              "axis": 12,
+              "one": {
+                "estimate": 22
+              },
+              "zero": {
+                "estimate": 18
+              }
+            },
+            "zero": {
+              "axis": 0,
+              "one": {
+                "estimate": 22
+              },
+              "zero": {
+                "estimate": 26
+              }
+            }
+          },
+          "zero": {
+            "axis": 4,
+            "one": {
+              "axis": 0,
+              "one": {
+                "estimate": 22
+              },
+              "zero": {
+                "estimate": 26
+              }
+            },
+            "zero": {
+              "axis": 8,
+              "one": {
+                "estimate": 28
+              },
+              "zero": {
+                "estimate": 0
+              }
+            }
+          }
+        },
+        "zero": {
+          "axis": 8,
+          "one": {
+            "axis": 4,
+            "one": {
+              "axis": 4,
+              "one": {
+                "estimate": 24
+              },
+              "zero": {
+                "estimate": 28
+              }
+            },
+            "zero": {
+              "axis": 4,
+              "one": {
+                "estimate": 28
+              },
+              "zero": {
+                "estimate": 0
+              }
+            }
+          },
+          "zero": {
+            "axis": 8,
+            "one": {
+              "axis": 8,
+              "one": {
+                "estimate": 30
+              },
+              "zero": {
+                "estimate": 2
+              }
+            },
+            "zero": {
+              "axis": 12,
+              "one": {
+                "estimate": 2
+              },
+              "zero": {
+                "estimate": 6
+              }
+            }
+          }
+        }
+      },
+      "zero": {
+        "axis": 12,
+        "one": {
+          "axis": 8,
+          "one": {
+            "axis": 8,
+            "one": {
+              "axis": 4,
+              "one": {
+                "estimate": 26
+              },
+              "zero": {
+                "estimate": 30
+              }
+            },
+            "zero": {
+              "axis": 8,
+              "one": {
+                "estimate": 30
+              },
+              "zero": {
+                "estimate": 2
+              }
+            }
+          },
+          "zero": {
+            "axis": 12,
+            "one": {
+              "axis": 12,
+              "one": {
+                "estimate": 0
+              },
+              "zero": {
+                "estimate": 4
+              }
+            },
+            "zero": {
+              "axis": 12,
+              "one": {
+                "estimate": 4
+              },
+              "zero": {
+                "estimate": 8
+              }
+            }
+          }
+        },
+        "zero": {
+          "axis": 0,
+          "one": {
+            "axis": 0,
+            "one": {
+              "axis": 4,
+              "one": {
+                "estimate": 14
+              },
+              "zero": {
+                "estimate": 10
+              }
+            },
+            "zero": {
+              "axis": 0,
+              "one": {
+                "estimate": 10
+              },
+              "zero": {
+                "estimate": 6
+              }
+            }
+          },
+          "zero": {
+            "axis": 12,
+            "one": {
+              "axis": 8,
+              "one": {
+                "estimate": 0
+              },
+              "zero": {
+                "estimate": 4
+              }
+            },
+            "zero": {
+              "axis": 0,
+              "one": {
+                "estimate": 10
+              },
+              "zero": {
+                "estimate": 6
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

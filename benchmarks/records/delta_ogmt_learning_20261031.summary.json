@@ -1,0 +1,376 @@
+{
+  "archive": "delta_ogmt_learning_20261031.tar.gz",
+  "archive_bytes": 607546,
+  "archive_sha256": "bd309c56389d636eea0195425b972f43c6991bc133e2fb519d1adb8ba9bb765a",
+  "json_files": 1439,
+  "schema": "delta_ogmt_learning_20261031-index-v1",
+  "summary": {
+    "comparisons": {
+      "E_CA": {
+        "exact_expected_accuracy_difference": {
+          "kind": "exact propagated arithmetic bounds; not a sampling confidence interval",
+          "lower": "-0.064017278358",
+          "upper": "-0.064017278349"
+        },
+        "grouped_bootstrap": {
+          "lower": -0.13825915087874815,
+          "resamples": 2000,
+          "scope": "exploratory input-group resampling on this task family, not physical-device uncertainty",
+          "seed": 20261031,
+          "upper": 0.005099482725312544
+        }
+      },
+      "M1": {
+        "exact_expected_accuracy_difference": {
+          "kind": "exact propagated arithmetic bounds; not a sampling confidence interval",
+          "lower": "-0.050580227309",
+          "upper": "-0.050580227298"
+        },
+        "grouped_bootstrap": {
+          "lower": -0.1515524043070875,
+          "resamples": 2000,
+          "scope": "exploratory input-group resampling on this task family, not physical-device uncertainty",
+          "seed": 20261031,
+          "upper": 0.05157585793226879
+        }
+      },
+      "M2": {
+        "exact_expected_accuracy_difference": {
+          "kind": "exact propagated arithmetic bounds; not a sampling confidence interval",
+          "lower": "0.003024639456",
+          "upper": "0.003024639468"
+        },
+        "grouped_bootstrap": {
+          "lower": -0.0009724722678257669,
+          "resamples": 2000,
+          "scope": "exploratory input-group resampling on this task family, not physical-device uncertainty",
+          "seed": 20261031,
+          "upper": 0.007051811158177059
+        }
+      },
+      "M3_fixed_CA_cut": {
+        "exact_expected_accuracy_difference": {
+          "kind": "exact propagated arithmetic bounds; not a sampling confidence interval",
+          "lower": "0.035911806364",
+          "upper": "0.035911806374"
+        },
+        "grouped_bootstrap": {
+          "lower": -0.10416716725335211,
+          "resamples": 2000,
+          "scope": "exploratory input-group resampling on this task family, not physical-device uncertainty",
+          "seed": 20261031,
+          "upper": 0.18058965851417821
+        }
+      },
+      "M3_reference": {
+        "exact_expected_accuracy_difference": {
+          "kind": "exact propagated arithmetic bounds; not a sampling confidence interval",
+          "lower": "-0.028161149084",
+          "upper": "-0.028161149074"
+        },
+        "grouped_bootstrap": {
+          "lower": -0.10549069944872531,
+          "resamples": 2000,
+          "scope": "exploratory input-group resampling on this task family, not physical-device uncertainty",
+          "seed": 20261031,
+          "upper": 0.044528104747882886
+        }
+      }
+    },
+    "computational_advantage_established": false,
+    "evidence_class": "DECLARED_IDEAL_CIRCUIT_MODEL",
+    "exact_requests": 712,
+    "frozen_models_sha256": "800518eb172afe23b175d87bd17c89ed8cf2cec632a3c17a099c55c9982cca27",
+    "hardware_job_id": null,
+    "hardware_validated": false,
+    "ideal_classical_symbol_counter_accuracy": "1",
+    "max_numeric_reference_error": 5.160316618457728e-13,
+    "max_proposal_exact_error": 5.004330283497893e-13,
+    "models": {
+      "E_CA": {
+        "cutoff": 41,
+        "decision": "positive if K<cutoff",
+        "fingerprint": "1f65c3006c34b401721d3f93481009c89a91796540a6efa0abdc75dff00291d7",
+        "mode": "E_CA",
+        "orientation": -1,
+        "parameters": {
+          "memory_scale": 2,
+          "observer_step": 0,
+          "outer_scale": 4,
+          "readout_A": 2,
+          "readout_C": 8
+        },
+        "schema": "delta-ogmt-frozen-classifier-v1",
+        "shots": 64,
+        "training_sha256": "80a21478d913a45d1f155a101e60928f79a9d6698ba6b3e2ef21469902a8e9a9",
+        "validation_sha256": "ca52f74bdab63df813869094536b34924325f02cfcc485e98ec5783fc42f106e"
+      },
+      "M1": {
+        "cutoff": 37,
+        "decision": "positive if K<cutoff",
+        "fingerprint": "b38a59f26d95bdf3f122c1dd9e24f1de400077ef3447049be6c2e8e83a37fdb0",
+        "mode": "M1",
+        "orientation": -1,
+        "parameters": {
+          "memory_scale": 2,
+          "observer_step": 7,
+          "outer_scale": 2,
+          "readout_A": 8,
+          "readout_C": 2
+        },
+        "schema": "delta-ogmt-frozen-classifier-v1",
+        "shots": 64,
+        "training_sha256": "80a21478d913a45d1f155a101e60928f79a9d6698ba6b3e2ef21469902a8e9a9",
+        "validation_sha256": "ca52f74bdab63df813869094536b34924325f02cfcc485e98ec5783fc42f106e"
+      },
+      "M2": {
+        "cutoff": 35,
+        "decision": "positive if K>=cutoff",
+        "fingerprint": "1a6d2c13ef98aa2b9cb9429f267a7a39bf1beace800eedfd0a65e08bcb2a54b4",
+        "mode": "M2",
+        "orientation": 1,
+        "parameters": {
+          "memory_scale": 1,
+          "observer_step": 0,
+          "outer_scale": 1,
+          "readout_A": 8,
+          "readout_C": 8
+        },
+        "schema": "delta-ogmt-frozen-classifier-v1",
+        "shots": 64,
+        "training_sha256": "80a21478d913a45d1f155a101e60928f79a9d6698ba6b3e2ef21469902a8e9a9",
+        "validation_sha256": "ca52f74bdab63df813869094536b34924325f02cfcc485e98ec5783fc42f106e"
+      },
+      "M3": {
+        "cutoff": 34,
+        "decision": "positive if K>=cutoff",
+        "fingerprint": "eb1602228d78ac2fbda62574840be980b993eb1bdfe8ec7cb93e4c9f5459f870",
+        "mode": "M3",
+        "orientation": 1,
+        "parameters": {
+          "memory_scale": 1,
+          "observer_step": 0,
+          "outer_scale": 1,
+          "readout_A": 8,
+          "readout_C": 8
+        },
+        "schema": "delta-ogmt-frozen-classifier-v1",
+        "shots": 64,
+        "training_sha256": "80a21478d913a45d1f155a101e60928f79a9d6698ba6b3e2ef21469902a8e9a9",
+        "validation_sha256": "ca52f74bdab63df813869094536b34924325f02cfcc485e98ec5783fc42f106e"
+      },
+      "M3_fixed_CA_cut": {
+        "cutoff": 34,
+        "decision": "positive if K>=cutoff",
+        "fingerprint": "3e484842f1ee6c575bcf30a3dedbc27875ff1416bd8aa3d498e0c2086c113482",
+        "mode": "E_CA",
+        "orientation": 1,
+        "parameters": {
+          "memory_scale": 1,
+          "observer_step": 0,
+          "outer_scale": 1,
+          "readout_A": 8,
+          "readout_C": 8
+        },
+        "schema": "delta-ogmt-frozen-classifier-v1",
+        "shots": 64,
+        "training_sha256": "80a21478d913a45d1f155a101e60928f79a9d6698ba6b3e2ef21469902a8e9a9",
+        "validation_sha256": "ca52f74bdab63df813869094536b34924325f02cfcc485e98ec5783fc42f106e"
+      },
+      "M3_reference": {
+        "cutoff": 45,
+        "decision": "positive if K<cutoff",
+        "fingerprint": "5cc5f92b9826afd2d885ba73abf012d4ebef42efe912ced1f536d333ec806f6c",
+        "mode": "M3",
+        "orientation": -1,
+        "parameters": {
+          "memory_scale": 1,
+          "observer_step": 3,
+          "outer_scale": 1,
+          "readout_A": 4,
+          "readout_C": 2
+        },
+        "schema": "delta-ogmt-frozen-classifier-v1",
+        "shots": 64,
+        "training_sha256": "80a21478d913a45d1f155a101e60928f79a9d6698ba6b3e2ef21469902a8e9a9",
+        "validation_sha256": "ca52f74bdab63df813869094536b34924325f02cfcc485e98ec5783fc42f106e"
+      }
+    },
+    "negative_controls": {
+      "boundary_only": {
+        "opposite_label_probabilities_identical": true,
+        "representative_histories": [
+          "AAAAABABBBBB",
+          "AAABABABBABB"
+        ]
+      },
+      "commuting_updates": {
+        "opposite_label_probabilities_identical": true,
+        "representative_histories": [
+          "AAAAABABBBBB",
+          "AAABABABBABB"
+        ]
+      },
+      "equal_inputs": {
+        "opposite_label_probabilities_identical": true,
+        "representative_histories": [
+          "AAAAABABBBBB",
+          "AAABABABBABB"
+        ]
+      },
+      "projection_off": {
+        "opposite_label_probabilities_identical": true,
+        "representative_histories": [
+          "AAAAABABBBBB",
+          "AAABABABBABB"
+        ]
+      }
+    },
+    "numeric_reference_checks": 704,
+    "numpy": "2.5.4",
+    "primary_topology_advantage_passed": false,
+    "protocol_commit": "eb9db4dd605408274322b3d9b01477da60ff45cc",
+    "protocol_sha256": "06885f8546f326cc46c671b1db605f0887c23b6c6333ae73d09715833c119d07",
+    "python": "3.12.14",
+    "schema": "delta-ogmt-heldout-audit-v1",
+    "scope": "Expected performance with 64 independent ideal readouts per decision, on unseen strings from one declared family; not sampled accuracy or a calibrated physical device.",
+    "scores": {
+      "E_CA": {
+        "test": {
+          "kind": "exact propagated arithmetic bounds; not a sampling confidence interval",
+          "lower": "0.563634470775",
+          "upper": "0.563634470779"
+        },
+        "train": {
+          "kind": "exact propagated arithmetic bounds; not a sampling confidence interval",
+          "lower": "0.710860873067",
+          "upper": "0.710860873071"
+        },
+        "validation": {
+          "kind": "exact propagated arithmetic bounds; not a sampling confidence interval",
+          "lower": "0.648343035392",
+          "upper": "0.648343035396"
+        }
+      },
+      "M1": {
+        "test": {
+          "kind": "exact propagated arithmetic bounds; not a sampling confidence interval",
+          "lower": "0.550197419725",
+          "upper": "0.550197419730"
+        },
+        "train": {
+          "kind": "exact propagated arithmetic bounds; not a sampling confidence interval",
+          "lower": "0.648784650106",
+          "upper": "0.648784650111"
+        },
+        "validation": {
+          "kind": "exact propagated arithmetic bounds; not a sampling confidence interval",
+          "lower": "0.575512011821",
+          "upper": "0.575512011826"
+        }
+      },
+      "M2": {
+        "test": {
+          "kind": "exact propagated arithmetic bounds; not a sampling confidence interval",
+          "lower": "0.496592552958",
+          "upper": "0.496592552965"
+        },
+        "train": {
+          "kind": "exact propagated arithmetic bounds; not a sampling confidence interval",
+          "lower": "0.608417618306",
+          "upper": "0.608417618312"
+        },
+        "validation": {
+          "kind": "exact propagated arithmetic bounds; not a sampling confidence interval",
+          "lower": "0.605663394072",
+          "upper": "0.605663394079"
+        }
+      },
+      "M3": {
+        "test": {
+          "kind": "exact propagated arithmetic bounds; not a sampling confidence interval",
+          "lower": "0.499617192421",
+          "upper": "0.499617192427"
+        },
+        "train": {
+          "kind": "exact propagated arithmetic bounds; not a sampling confidence interval",
+          "lower": "0.615596718885",
+          "upper": "0.615596718892"
+        },
+        "validation": {
+          "kind": "exact propagated arithmetic bounds; not a sampling confidence interval",
+          "lower": "0.601220803584",
+          "upper": "0.601220803590"
+        }
+      },
+      "M3_fixed_CA_cut": {
+        "test": {
+          "kind": "exact propagated arithmetic bounds; not a sampling confidence interval",
+          "lower": "0.463705386052",
+          "upper": "0.463705386057"
+        }
+      },
+      "M3_reference": {
+        "test": {
+          "kind": "exact propagated arithmetic bounds; not a sampling confidence interval",
+          "lower": "0.527778341500",
+          "upper": "0.527778341505"
+        },
+        "train": {
+          "kind": "exact propagated arithmetic bounds; not a sampling confidence interval",
+          "lower": "0.508570328931",
+          "upper": "0.508570328935"
+        },
+        "validation": {
+          "kind": "exact propagated arithmetic bounds; not a sampling confidence interval",
+          "lower": "0.496655028671",
+          "upper": "0.496655028676"
+        }
+      }
+    },
+    "search_summary": {
+      "E_CA": {
+        "native_gate_applications": 108458,
+        "selected_training_score": 0.710860873068806,
+        "selected_validation_score": 0.6483430353941007
+      },
+      "M1": {
+        "native_gate_applications": 61996,
+        "selected_training_score": 0.6487846501087406,
+        "selected_validation_score": 0.575512011823449
+      },
+      "M2": {
+        "native_gate_applications": 101310,
+        "selected_training_score": 0.6084176183088839,
+        "selected_validation_score": 0.6056633940754385
+      },
+      "M3": {
+        "native_gate_applications": 112032,
+        "selected_training_score": 0.6155967188888793,
+        "selected_validation_score": 0.601220803586836
+      }
+    },
+    "shots_per_decision": 64,
+    "source_sha256": {
+      "benchmarks/delta_ogmt_learning_audit.py": "db65eeccfe21d8b2e43ca6c4ff72feb9ff294fb7e3d817e0224afce6686b34df",
+      "benchmarks/protocols/delta_ogmt_learning_v1.json": "bbd24ab18acdd7fdf8398f0d8413078b244901a5b57cc936a6ca0747ec534a7b",
+      "native_relational_qc/algebra.py": "3d23b2a3a345b0760bfce1cff9e4eea9635543ee566c9dd6f0078405f211e9ab",
+      "native_relational_qc/calculator.py": "d5b405394b40e22235eac2808715b3337c449087930cad741562f28c577defac",
+      "native_relational_qc/cyclotomic_pow2.py": "61fb228363e05691b7d673711c8168c677346a4a1095416a7a37a450a9fddcc8",
+      "native_relational_qc/delta_ogmt.py": "414a51a1fdd8912939c3b9b502655aa46a9af81263ee270252d4888dd7d36c74",
+      "native_relational_qc/delta_ogmt_learning.py": "804bf2e4ce07dde3417e88580bd305f370b63c2705f993809fcf530c90427d6d",
+      "native_relational_qc/phase_backend.py": "5f3f947bf25f1af1343ebbcee391e8e962b456e16b687e7edef1733c0f966bcf"
+    },
+    "split_counts": {
+      "reserve": 124,
+      "test": 64,
+      "train": 32,
+      "validation": 32
+    },
+    "status": "completed",
+    "test_histories_used_for_selection": false,
+    "verification_passed": true,
+    "wall_seconds": 150.42736966899975,
+    "workers": 4
+  }
+}

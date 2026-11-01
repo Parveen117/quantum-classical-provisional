@@ -86,6 +86,44 @@ silently substituted by P. Its half-angle must fit the same field cap, so RZ
 requires a denominator at most 2048 in units of 2π. Non-dyadic, arbitrary decimal,
 unbound and unsupported angles are rejected. See [phase transport](PHASE_INTEROP.md).
 
+## Delta OGMT order-recognition test
+
+The [retained Delta OGMT audit](DELTA_OGMT_ORDER_TEST.md) runs the proposed
+ABAB/AABB task through the exact calculator with single-memory, parallel-memory,
+double-triangle, edge-removal and reset controls. A separate 16-angle observer
+scan retains every comparison, including where the full topology loses.
+These are explicitly declared coherent circuit encodings, not calibrated
+transistor or thermal models. Raw inputs/results and independent local Qiskit
+checks are retained with hashes; no quantum hardware service is called.
+
+The [frozen held-out tuning study](DELTA_OGMT_HELDOUT.md) extends the task to
+12-event sequences with equal search budgets and 64 readouts per decision.
+The full topology fails its declared advantage criterion; all comparisons,
+candidate scores and unseen-input results are retained.
+
+The [moving-observer experiment](MOVING_OBSERVER.md) separately tests common
+rotation, relative motion, the time-dependent frame connection and feedback
+from retained measurement records to both signal and observer. It establishes
+finite circuit identities and output probabilities, with explicit controls
+against confusing a reference change with a physical interaction.
+
+The [record-controlled phase tracker](OBSERVER_TRACKING.md) makes that observer
+operational: `nrqc observer-track --records 0101` returns the next analyzer
+angle from a frozen six-probe policy. Its retained finite-model comparison
+reduces mean circular phase error by about 14.75% against the searched rotating
+schedule at the same readout budget, with per-case losses and noise/drift
+stress results retained. This is a modeled tracking gain, not hardware or
+general computational-speedup qualification.
+
+The [joint contrast/phase tracker](OBSERVER_STATE.md) adds a declared source
+channel that changes radius as well as phase. The `nrqc observer-state` command
+returns both coordinates after six recorded bits. Its retained comparison reduces
+joint prediction error by 7.73% against the searched schedule; changing the
+old tracker's angles adds 1.06% beyond giving it the same joint decoder.
+Randomized-readout losses, radial-metric tradeoffs and extra analyzer changes
+remain visible. Exact affine transport and Coriolis identity checks keep
+coordinate motion distinct from the chosen qubit dynamics.
+
 ## Ledger certification
 
 `nrqc certify cluster` retains the collaborator’s separate corrected-path

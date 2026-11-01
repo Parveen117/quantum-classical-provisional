@@ -28,3 +28,6 @@ Thumbs.db
 *.egg-info/
 build/
 dist/
+
+# Local Delta OGMT replay directories; retained runs live in benchmarks/records.
+/native_relational_qc/delta_ogmt_records/
