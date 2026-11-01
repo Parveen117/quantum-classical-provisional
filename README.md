@@ -26,6 +26,9 @@ nrqc certify
 Current validation is recorded by CI and retained test logs; older numerical
 results remain scoped to their named audits.
 
+[Repository maintenance](docs/REPOSITORY_MAINTENANCE.md) explains the canonical
+branch, CI environments and recovery of archived topic-branch names.
+
 ## Purpose
 
 This repository is the quantum-classical reference implementation of the broader EMK / Recognition Calculus programme.

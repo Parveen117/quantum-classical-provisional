@@ -1,0 +1,64 @@
+{
+  "schema": "public-repository-branch-archive-v1",
+  "date": "2026-11-01",
+  "repository": "Parveen117/quantum-classical-provisional",
+  "canonical_branch": "master",
+  "inventory_default_head": "5073fbee66c36a7ddaf74698d6bbec5e984fa1a9",
+  "purpose": "Recoverable inventory of short-lived branch references before owner-requested repository cleanup.",
+  "deletion_precondition": "Each recorded branch tip must be an ancestor of the final canonical master before its reference is removed.",
+  "branches": [
+    {
+      "name": "agent/qmet-hardware-depth-v1",
+      "sha": "0630f481606f5ca65d12b78b41bc91b36b7dc300"
+    },
+    {
+      "name": "agent/qmet-hybrid-evidence-bundle-v1",
+      "sha": "51b28d768150e3543fb00f8841c26024b4f76487"
+    },
+    {
+      "name": "calculator-integration-20261030",
+      "sha": "b39873276f9529945ef88835a2dac5191d6e88c7"
+    },
+    {
+      "name": "claude/rnke-qec-gate-v1",
+      "sha": "e3bb8f5213a4515ec718d3daa0cad34be63c2baf"
+    },
+    {
+      "name": "claude/thermo-decoherence-h1",
+      "sha": "92d2b61b6dd50443f151a665bdab40a634b7c99d"
+    },
+    {
+      "name": "codex/delta-ogmt-calculator-20261031",
+      "sha": "5a3654e581ae1ccfae5ce1f69c46da2b41e71900"
+    },
+    {
+      "name": "codex/full-register-12-performance-20261031",
+      "sha": "a53856ed6da9b6648acc162fd9c712f06d38e2b4"
+    },
+    {
+      "name": "codex/native-relational-qc-v1-20261018",
+      "sha": "fdd39048a6ddaa2dd78aa3197c274d7766f31a0e"
+    },
+    {
+      "name": "codex/native-self-learning-v1-20261024",
+      "sha": "cfa04da8f8cdeba8d5c80908d49859f1e9733c12"
+    },
+    {
+      "name": "codex/qec-error-control-lab-v1",
+      "sha": "d2290d12f3099dd98b18e989f52e6a7ff8f5406f"
+    },
+    {
+      "name": "jet-readings-learner-20261025",
+      "sha": "8903365eec627519b0da75fe37338408f5e83412"
+    },
+    {
+      "name": "native-relational-qc-pow2-field-20261024",
+      "sha": "2005048d387ec47898ef984adc997f1667fa9a39"
+    },
+    {
+      "name": "photonic-temperature-evidence-20261026",
+      "sha": "82db457097d270581b788084c8547acc3810da25"
+    }
+  ],
+  "recovery": "Create a branch with its recorded name and SHA. Historical citations can use the immutable commit without recreating a branch."
+}
