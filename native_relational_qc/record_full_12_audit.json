@@ -1,0 +1,148 @@
+{
+  "claim": "Theorem R1 at twelve bits: for each modulus the one-control-wire record distribution equals the full-register distribution in every one of the 4096 bins",
+  "environment": {
+    "machine": "x86_64",
+    "numpy": "2.5.4",
+    "platform": "Linux-6.18.44-fc-v242-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "full_results": {
+    "141": {
+      "path": "full_register_12_20261031_result.json.gz",
+      "sha256": "57ee5782eee30182dd497251863848e374d97e6a3e00a700eefa499fc69ef683"
+    },
+    "143": {
+      "path": "full_register_12_n143_20261106_result.json.gz",
+      "sha256": "81a2ca8852e9d7344311d777a7825340562a969d51f691afb006deb6dc76ff11"
+    },
+    "187": {
+      "path": "full_register_12_n187_20261106_result.json.gz",
+      "sha256": "da75af76cbf8e58eff2f0d8badb322c4715d99044dd0ceb174d1a0791ef43b45"
+    }
+  },
+  "process_peak_rss_kib": 235740,
+  "revision": "68c900d58347ed1f308e0901b631cc997645f16d",
+  "rows": [
+    {
+      "base": 2,
+      "bins": 4096,
+      "bins_equal": 4096,
+      "full": {
+        "exact_fourier_law_agrees": true,
+        "gates": 45132,
+        "peak_branches": 188412,
+        "request_sha256": "45b5de0c0688b570cf8059cf890129508df69d83d861bae655662d26fdad6be5",
+        "wall_seconds": 160.10168964900367,
+        "wires": 40
+      },
+      "modulus": 141,
+      "negative_controls": {
+        "altered_bin_detected": true,
+        "shifted_bins_matching": 0,
+        "shifted_relabelling_rejected": true
+      },
+      "precision_bits": 12,
+      "record": {
+        "exact_fourier_law_agrees": true,
+        "leaves": 4096,
+        "multiplier_gates": 121107,
+        "nodes": 4095,
+        "peak_support": 46,
+        "seconds": 73.254,
+        "wires": 29,
+        "work_used": 4844914
+      },
+      "record_equals_full_register": true,
+      "record_sums_to_one": true,
+      "success_probability": {
+        "convergents_and_doubles": "0.90534533265",
+        "convergents_only": "0.43696377625"
+      }
+    },
+    {
+      "base": 2,
+      "bins": 4096,
+      "bins_equal": 4096,
+      "full": {
+        "exact_fourier_law_agrees": true,
+        "gates": 47581,
+        "peak_branches": 245232,
+        "request_sha256": "d1d2ba6c74e6808abb05d2166f6a42d01bca611a40fbcbfd21439a6e6d22b9f4",
+        "wall_seconds": 97.089520295,
+        "wires": 40
+      },
+      "modulus": 143,
+      "negative_controls": {
+        "altered_bin_detected": true,
+        "shifted_bins_matching": 0,
+        "shifted_relabelling_rejected": true
+      },
+      "precision_bits": 12,
+      "record": {
+        "exact_fourier_law_agrees": true,
+        "leaves": 4096,
+        "multiplier_gates": 124302,
+        "nodes": 4095,
+        "peak_support": 60,
+        "seconds": 74.088,
+        "wires": 29,
+        "work_used": 4278484
+      },
+      "record_equals_full_register": true,
+      "record_sums_to_one": true,
+      "success_probability": {
+        "convergents_and_doubles": "0.36873637265",
+        "convergents_only": "0.23957496495"
+      }
+    },
+    {
+      "base": 2,
+      "bins": 4096,
+      "bins_equal": 4096,
+      "full": {
+        "exact_fourier_law_agrees": true,
+        "gates": 54546,
+        "peak_branches": 163648,
+        "request_sha256": "dfb1772c0cbdb1783dcc52e245a0ce4e99454efc4701e45acb72e953c07ce44f",
+        "wall_seconds": 58.392614520999985,
+        "wires": 40
+      },
+      "modulus": 187,
+      "negative_controls": {
+        "altered_bin_detected": true,
+        "shifted_bins_matching": 0,
+        "shifted_relabelling_rejected": true
+      },
+      "precision_bits": 12,
+      "record": {
+        "exact_fourier_law_agrees": true,
+        "leaves": 4096,
+        "multiplier_gates": 141375,
+        "nodes": 4095,
+        "peak_support": 40,
+        "seconds": 49.745,
+        "wires": 29,
+        "work_used": 2358910
+      },
+      "record_equals_full_register": true,
+      "record_sums_to_one": true,
+      "success_probability": {
+        "convergents_and_doubles": "0.56758992135",
+        "convergents_only": "0.37114456825"
+      }
+    }
+  ],
+  "schema": "nrqc-record-full-12-audit-v1",
+  "scope": "ideal local exact calculation of fixed bases, one run per row; success is single-record probability, not shots or hardware",
+  "source_sha256": {
+    "benchmarks/record_full_12_audit.py": "7831e797b88fb1ffad27f72041ec5bb1328946f4c075d0f188acdc01788972fa",
+    "native_relational_qc/calculator.py": "d5b405394b40e22235eac2808715b3337c449087930cad741562f28c577defac",
+    "native_relational_qc/cyclotomic_pow2.py": "61fb228363e05691b7d673711c8168c677346a4a1095416a7a37a450a9fddcc8",
+    "native_relational_qc/modular_arithmetic.py": "500c00134708c1e04b2f216c8a378802ac118a46f167278e3572ef9b217c69fa",
+    "native_relational_qc/modular_rewrite.py": "c87f09b733c501f675846eb330185a2c6331c31fa25dd6ba00565ffa4edcfb6c",
+    "native_relational_qc/phase_backend.py": "5f3f947bf25f1af1343ebbcee391e8e962b456e16b687e7edef1733c0f966bcf",
+    "native_relational_qc/record_phase.py": "43cf8c59954c34ef7cbcb74e89b3df6da0ffc5467cd3a493e473c78ebccbec70",
+    "native_relational_qc/shor.py": "086d9235f09eec36c7c7d7887ed0237472a88950d036b46f4e31371469bbe765"
+  },
+  "status": "witnessed"
+}

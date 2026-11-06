@@ -102,6 +102,14 @@ python benchmarks/verify_full_register_12.py \
   --out /tmp/full-register-12-qualification.json
 ```
 
+On 6 November the N=143 and N=187 twelve-bit full registers were run once
+each under the same deadline (97.1 s and 58.4 s worker wall, 245,232 and
+163,648 peak branches, every bin equal to the Fourier law) and compared bin
+by bin with the record-conditioned path; see
+[the twelve-bit witness](RECORD_PHASE.md#twelve-bits-witnessed-directly-6-november-2026)
+and [record_full_12_audit.json](record_full_12_audit.json). Single runs,
+not a qualification of repeatability.
+
 [Qualification and artifact hashes](../benchmarks/comparisons/full_register_12_qualification_20261031.json),
 [trial 1](../benchmarks/comparisons/full_register_12_optimized_20261031_run1.json),
 [trial 2](../benchmarks/comparisons/full_register_12_optimized_20261031_run2.json),
