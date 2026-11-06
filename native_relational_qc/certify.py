@@ -220,30 +220,58 @@ def path_byproducts(spec, path):
     return x_par, z_par
 
 
-def cluster_assignment(features, parameters, assignment):
-    """One static circuit (one sign assignment) and the exact facts of its eight paths."""
+def cluster_assignment(features, parameters, assignment, patterns=()):
+    """One static circuit (one sign assignment) and the exact facts of its eight paths.
+
+    `patterns` are Z error patterns (tuples of nodes) placed at allocation, as in
+    Theorem N of phase seam v0.36. Z commutes with every CZ and Z|s_a> = |(s+1)_a>,
+    so a Z on a measured node only flips that node's raw outcome (the x = 0, z = 1
+    case of `measurement_identity`), and a Z on an unmeasured (discarded) node
+    leaves the marginal over the measured wires unchanged. Every pattern is
+    therefore read from the same distribution; for each pattern the eight paths
+    must keep weight 2^-9 and agree on the conditional readout (Lemma N3), and
+    that single value is returned per pattern.
+    """
     spec = _spec(features, parameters)
     flips = dict(zip(spec['signed'], assignment))
     started = time.perf_counter()
     dist, report = distribution(spec['nodes'], cluster_operations(spec, flips), spec['measured'])
     readout_index = spec['measured'].index(spec['readout'])
     rows = []
+    patterns = [tuple(sorted(set(p))) for p in patterns]
+    responses = {p: [] for p in patterns}
     for path in paths_for_assignment(spec, assignment):
         x_par, z_par = path_byproducts(spec, path)
         assert all(x_par[n] == flips[n] for n in spec['signed'])
         raw = {n: s ^ z_par[n] for s, n in zip(path, spec['order'])}
-        label = lambda readout_bit: ''.join(str(raw[n]) if n != spec['readout'] else str(readout_bit)
-                                            for n in spec['measured'])
+        label = lambda readout_bit, flip=(): ''.join(
+            str(raw[n] ^ (n in flip)) if n != spec['readout'] else str(readout_bit) for n in spec['measured'])
         p0, p1 = dist[label(0)], dist[label(1)]
         p_path = p0 + p1
         # corrected readout 1 == raw readout 1 XOR z on the readout node
         p_one = p1 if not z_par[spec['readout']] else p0
         rows.append(dict(path=''.join(map(str, path)), path_probability=p_path,
                          readout_probability=None if not p_path else p_one * _as_rational(p_path) ** -1))
+        for pattern in patterns:
+            if any(not 0 <= v < spec['nodes'] for v in pattern):
+                raise ValueError('error pattern outside the cluster')
+            flip = frozenset(pattern)
+            q0, q1 = dist[label(0, flip)], dist[label(1, flip)]
+            q_path = q0 + q1
+            q_one = q1 if not (z_par[spec['readout']] ^ (spec['readout'] in flip)) else q0
+            responses[pattern].append((q_path, None if not q_path else q_one * _as_rational(q_path) ** -1))
+    weight = flat_field()(Fraction(1, 1 << len(spec['order'])))
+    response_rows = {}
+    for pattern, values in responses.items():
+        weights_exact = all(w == weight for w, _ in values)
+        same = all(v == values[0][1] for _, v in values)
+        response_rows[pattern] = dict(path_weights_exact=weights_exact, path_independent=same,
+                                      readout_probability=values[0][1] if same and weights_exact else None)
     answer = report['answers'][0]
     work = answer.get('statistics', {}).get('work_used') or answer.get('statistics', {}).get('work_totals', {}).get('work_used')
     return dict(assignment=''.join(map(str, assignment)), rows=rows, seconds=round(time.perf_counter() - started, 3),
-                distribution_sums_to_one=sum(dist.values(), flat_field()()) == flat_field()(1), calculator_work_used=work)
+                distribution_sums_to_one=sum(dist.values(), flat_field()()) == flat_field()(1), calculator_work_used=work,
+                responses=response_rows)
 
 
 def _as_rational(value):
@@ -257,11 +285,13 @@ def _as_rational(value):
 
 def _assignment_job(args):
     """Worker entry: field elements travel between processes as their exact dicts."""
-    features, parameters, assignment = args
-    block = cluster_assignment(features, parameters, assignment)
+    features, parameters, assignment, patterns = args
+    block = cluster_assignment(features, parameters, assignment, patterns)
     for row in block['rows']:
         row['path_probability'] = row['path_probability'].to_dict()
         row['readout_probability'] = None if row['readout_probability'] is None else row['readout_probability'].to_dict()
+    block['responses'] = {'.'.join(map(str, p)): dict(r, readout_probability=None if r['readout_probability'] is None else r['readout_probability'].to_dict())
+                          for p, r in block['responses'].items()}
     return block
 
 
@@ -269,10 +299,12 @@ def _revive(block):
     for row in block['rows']:
         row['path_probability'] = exact_value(row['path_probability'])
         row['readout_probability'] = None if row['readout_probability'] is None else exact_value(row['readout_probability'])
+    block['responses'] = {tuple(int(v) for v in key.split('.') if v): dict(r, readout_probability=None if r['readout_probability'] is None else exact_value(r['readout_probability']))
+                          for key, r in block['responses'].items()}
     return block
 
 
-def cluster_witness(features, parameters, assignments='all', *, workers=1):
+def cluster_witness(features, parameters, assignments='all', *, workers=1, patterns=()):
     """Re-derive the classifier cluster witness of phase seam v0.29 on the calculator.
 
     Every corrected path must have probability exactly 2^-9 and conditional
@@ -287,7 +319,7 @@ def cluster_witness(features, parameters, assignments='all', *, workers=1):
         assignment_list = [tuple((k >> i) & 1 for i in range(count)) for k in range(1 << count)]
     else:
         assignment_list = [tuple(a) for a in assignments]
-    jobs = [(list(features), list(parameters), a) for a in assignment_list]
+    jobs = [(list(features), list(parameters), a, [list(p) for p in patterns]) for a in assignment_list]
     started = time.perf_counter()
     if workers > 1 and len(jobs) > 1:
         with ProcessPoolExecutor(max_workers=workers) as pool:
@@ -311,7 +343,8 @@ def cluster_witness(features, parameters, assignments='all', *, workers=1):
                 seconds=round(time.perf_counter() - started, 3),
                 assignments=[dict(b, rows=[dict(r, path_probability=_text(r['path_probability']),
                                                  readout_probability=None if r['readout_probability'] is None else _text(r['readout_probability']))
-                                            for r in b['rows']]) for b in blocks])
+                                            for r in b['rows']], responses=len(b['responses'])) for b in blocks],
+                blocks=blocks)
 
 
 def control_without_corrections(features, parameters):
@@ -355,9 +388,11 @@ def certify_cluster(cases=None, assignments='all', *, workers=1, identity=True):
     cases = default_cases() if cases is None else cases
     if not cases:raise ValueError('at least one declared case is required')
     identity_record = measurement_identity() if identity else dict(holds=None, checks=0, skipped=True)
+    started = time.perf_counter()
     results = []
     for case in cases:
         witness = cluster_witness(case['features'], case['parameters'], assignments, workers=workers)
+        witness.pop('blocks')
         witness['label'] = case['label']
         witness['control_without_corrections'] = control_without_corrections(case['features'], case['parameters'])
         results.append(witness)
@@ -374,16 +409,192 @@ def certify_cluster(cases=None, assignments='all', *, workers=1, identity=True):
                                 'agreement of two circuit/readout constructions with shared exact arithmetic; no hardware observation',
                                 'CERTIFIED requires the identity check and all 64 sign assignments (512 paths) of every case; '
                                 'MISMATCH records any exact disagreement or a failed control'],
-                never_granted=list(cc.NEVER_GRANTED))
+                never_granted=list(cc.NEVER_GRANTED),
+                provenance=provenance(workers=workers, seconds=time.perf_counter() - started))
+
+
+# ------------------------------------------------------------------ Theorem N: the readout response (phase seam v0.36)
+
+SOURCE_FILES = ('native_relational_qc/calculator.py', 'native_relational_qc/cyclotomic_pow2.py', 'native_relational_qc/certify.py',
+                'native_relational_qc/ledger_certify.py', 'phase_seam_foundation/cluster_compile.py', 'phase_seam_foundation/cluster_build.py',
+                'phase_seam_foundation/cluster_noise.py', 'phase_seam_foundation/source_distillation.py', 'phase_seam_foundation/dual_rail.py')
+
+
+def provenance(*, workers=1, seconds=None):
+    """Where and on what the record was computed: interpreter, NumPy, platform, source hashes, revision."""
+    import hashlib
+    import platform
+    import subprocess
+    import numpy
+    root = Path(__file__).resolve().parents[1]
+    hashes = {f: hashlib.sha256((root / f).read_bytes()).hexdigest() for f in SOURCE_FILES if (root / f).exists()}
+    try:
+        revision = subprocess.run(['git', '-C', str(root), 'rev-parse', 'HEAD'], capture_output=True, text=True, timeout=10, check=True).stdout.strip()
+        dirty = bool(subprocess.run(['git', '-C', str(root), 'status', '--porcelain', '--', *SOURCE_FILES], capture_output=True, text=True, timeout=10, check=True).stdout.strip())
+    except (OSError, subprocess.SubprocessError):
+        revision, dirty = None, None
+    return dict(python=platform.python_version(), implementation=platform.python_implementation(), numpy=numpy.__version__,
+                platform=platform.platform(), machine=platform.machine(), workers=workers,
+                seconds=None if seconds is None else round(seconds, 3), utc=time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
+                source_sha256=hashes, revision=revision, sources_modified_after_revision=dirty)
+
+
+def noise_patterns():
+    """The Z error patterns Theorem N sums over, from the source map of phase seam v0.36.
+
+    Each Bell-pair star contributes three exact patterns (Phi-, Psi+, Psi-); the
+    3-star and the 5-star contribute every nonempty subset of their support, of
+    which the worst is taken. Patterns are tuples of nodes, sorted.
+    """
+    from phase_seam_foundation import cluster_noise as cn
+    smap = cn.source_map()
+    exact = {str(c): {k: tuple(sorted(m[k])) for k in ('phi_minus', 'psi_plus', 'psi_minus')} for c, m in smap['exact'].items()}
+    bounded = {str(c): dict(star_nodes=list(b['star_nodes']), support=list(b['support']), bell_pairs=b['bell_pairs'],
+                            patterns=[tuple(sorted(q)) for q in b['patterns']]) for c, b in smap['bounded'].items()}
+    patterns = sorted({q for m in exact.values() for q in m.values()} | {q for b in bounded.values() for q in b['patterns']})
+    return dict(exact=exact, bounded=bounded, patterns=patterns, bell_pairs=smap['bell_pairs'])
+
+
+def _abs_real(value):
+    return value if value.real_sign() >= 0 else -value
+
+
+def discarded_invisible(features, parameters):
+    """Through the calculator: Z on every discarded (unmeasured) node leaves the measured distribution unchanged.
+
+    One extra circuit per case; the relabelling used for the other patterns
+    assumes exactly this for unmeasured nodes, so it is checked rather than taken.
+    """
+    from phase_seam_foundation import cluster_compile as cc
+    spec = _spec(features, parameters)
+    clean = cluster_operations(spec, {})
+    noisy = [['h', [q]] for q in range(spec['nodes'])] + [['cz', [a, b]] for a, b in spec['edges']]
+    noisy += [['z', [v]] for v in cc.DISCARDED]
+    noisy += clean[len(noisy) - len(cc.DISCARDED):]
+    d0, _ = distribution(spec['nodes'], clean, spec['measured'])
+    d1, _ = distribution(spec['nodes'], noisy, spec['measured'])
+    return dict(discarded=list(cc.DISCARDED), holds=d0 == d1, outcomes=len(d0))
+
+
+def noise_witness(features, parameters, assignments='all', *, workers=1, x='1/40', eta='243/4000'):
+    """Re-derive the Theorem N response table of phase seam v0.36 on the calculator.
+
+    For every Z error pattern of the source map, on every corrected path, the
+    conditional readout must be path independent (Lemma N3) and equal to the
+    pattern engine's `noisy_run`; the first-order coefficient A of Theorem N,
+    |P_noisy - P_clean| <= A w + R, is then rebuilt from the calculator's
+    changes alone and compared with `first_order_error` at the declared point.
+    """
+    from phase_seam_foundation import cluster_noise as cn
+    F = flat_field()
+    nmap = noise_patterns()
+    witness = cluster_witness(features, parameters, assignments, workers=workers, patterns=nmap['patterns'])
+    blocks = witness.pop('blocks')
+    clean = embed_tower(cn.noisy_run(features, parameters)['readout_probability'])
+    rows, values, mismatches = {}, {}, []
+    for pattern in nmap['patterns']:
+        per = [b['responses'][pattern] for b in blocks]
+        independent = all(r['path_independent'] and r['path_weights_exact'] for r in per)
+        same = independent and all(r['readout_probability'] == per[0]['readout_probability'] for r in per)
+        value = per[0]['readout_probability'] if same else None
+        engine = embed_tower(cn.noisy_run(features, parameters, pattern)['readout_probability'])
+        agrees = value is not None and value == engine
+        if not agrees:
+            mismatches.append(list(pattern))
+        change = None if value is None else _abs_real(value - clean)
+        values[pattern] = change
+        rows['.'.join(map(str, pattern))] = dict(
+            pattern=list(pattern), path_independent=independent, same_on_every_assignment=same,
+            readout_probability=None if value is None else _text(value), pattern_engine=_text(engine), agrees=agrees,
+            change=None if change is None else _text(change))
+    complete = witness['assignments_checked'] == (1 << len(_spec(features, parameters)['signed'])) and not mismatches
+    exact_sum, bound_sum, detail = F(), F(), {}
+    for centre, m in nmap['exact'].items():
+        parts = [values[m[k]] for k in ('phi_minus', 'psi_plus', 'psi_minus')]
+        total = sum(parts, F()) if all(v is not None for v in parts) else None
+        detail[f'pair_{centre}'] = None if total is None else _text(total)
+        exact_sum = None if exact_sum is None or total is None else exact_sum + total
+    for centre, b in nmap['bounded'].items():
+        worst, worst_pattern = F(), None
+        for q in b['patterns']:
+            d = values[q]
+            if d is None:
+                worst = None
+                break
+            if (d - worst).real_sign() > 0:
+                worst, worst_pattern = d, q
+        detail[f'star_{centre}_worst'] = None if worst is None else _text(worst)
+        detail[f'star_{centre}_worst_pattern'] = None if worst_pattern is None else list(worst_pattern)
+        bound_sum = None if bound_sum is None or worst is None else bound_sum + worst * (3 * b['bell_pairs'])
+    coefficient = None if exact_sum is None or bound_sum is None else (exact_sum + bound_sum) * Fraction(1, nmap['bell_pairs'])
+    ledger = cn.first_order_error(features, parameters, x, eta)
+    w = ledger['double_fraction']
+    ledger_first = embed_tower(ledger['first_order'])
+    first = None if coefficient is None else coefficient * w
+    remainder = ledger['remainder']
+    agrees_with_theorem_n = first is not None and first == ledger_first
+    upper = None if first is None else first.real_bounds(40)[1] + remainder
+    return dict(features=list(features), parameters=list(parameters), label=None,
+                clean_readout=_text(clean), patterns_checked=len(nmap['patterns']), bell_pairs=nmap['bell_pairs'],
+                assignments_requested=witness['assignments_requested'], assignments_checked=witness['assignments_checked'],
+                paths_checked=witness['paths_checked'], cluster_witness_mismatching_paths=witness['mismatching_paths'],
+                every_path_weight_exact=witness['every_path_weight_exact'], every_distribution_normalised=witness['every_distribution_normalised'],
+                mismatching_patterns=mismatches, complete=complete,
+                discarded_invisible=discarded_invisible(features, parameters),
+                responses=rows, first_order=dict(
+                    x=str(Fraction(x)), eta=str(Fraction(eta)), double_fraction=str(w), pair_error_probability=str(w / 4),
+                    coefficient=None if coefficient is None else _text(coefficient), detail=detail,
+                    first_order_term=None if first is None else _text(first), theorem_n_first_order=_text(ledger_first),
+                    agrees_with_theorem_n=agrees_with_theorem_n, remainder=str(remainder),
+                    total_upper_bound=None if upper is None else str(upper),
+                    theorem_n_total_upper_bound=str(ledger['total_upper_bound']),
+                    below_declared_14_over_5_w=None if upper is None else bool(upper <= Fraction(14, 5) * w)),
+                negative_controls=dict(
+                    some_pattern_changes_the_readout=any(v is not None and v != F() for v in values.values()),
+                    single_node_patterns_do_not_all_agree_with_clean=any(values[q] is not None and values[q] != F() for q in nmap['patterns'] if len(q) == 1),
+                    discarded_z_invisible=None),
+                seconds=witness['seconds'])
+
+
+def certify_noise(cases=None, assignments='all', *, workers=1, identity=True, x='1/40', eta='243/4000'):
+    from phase_seam_foundation import cluster_compile as cc, cluster_noise as cn
+    cases = default_cases() if cases is None else cases
+    if not cases:raise ValueError('at least one declared case is required')
+    started = time.perf_counter()
+    identity_record = measurement_identity() if identity else dict(holds=None, checks=0, skipped=True)
+    results = []
+    for case in cases:
+        record = noise_witness(case['features'], case['parameters'], assignments, workers=workers, x=x, eta=eta)
+        record['label'] = case['label']
+        record['negative_controls']['discarded_z_invisible'] = record['discarded_invisible']['holds']
+        results.append(record)
+    complete = identity and all(r['complete'] for r in results)
+    mismatch = identity_record['holds'] is False or any(
+        r['mismatching_patterns'] or r['cluster_witness_mismatching_paths'] or not r['every_path_weight_exact']
+        or not r['every_distribution_normalised'] or not r['first_order']['agrees_with_theorem_n']
+        or not all(r['negative_controls'].values()) for r in results)
+    grade = 'MISMATCH' if mismatch else ('CERTIFIED' if complete else 'INCOMPLETE')
+    return dict(schema=CERTIFY_SCHEMA, backend=BACKEND, grade=grade,
+                claim='phase seam v0.36 Theorem N response: for every Z error pattern of the source map the corrected readout is path independent and equals the pattern engine, and the first-order coefficient rebuilt from the calculator equals the Theorem N term at the declared source point',
+                measurement_identity=identity_record, cases=results,
+                claim_boundary=['first-order term of an ideal Bell-diagonal source model; the remainder R is the two-or-more-error tail, taken from Theorem N unchanged',
+                                'exact on the six Bell-pair stars, worst Z pattern on the supports of the 3-star and the 5-star; no dark counts, distinguishability or correlated loss',
+                                'agreement of two circuit/readout constructions with shared exact arithmetic; no hardware observation',
+                                'CERTIFIED requires the identity check, all 64 sign assignments of every case and every pattern agreeing; '
+                                'MISMATCH records any exact disagreement or a failed control'],
+                never_granted=sorted(set(cc.NEVER_GRANTED) | set(cn.NEVER)),
+                provenance=provenance(workers=workers, seconds=time.perf_counter() - started))
 
 
 def main(argv=None):
     argv = sys.argv[1:] if argv is None else argv
-    if not argv or argv[0] != 'cluster':
+    if not argv or argv[0] not in ('cluster', 'noise'):
         from .ledger_certify import main as ledger_main
         return ledger_main(argv[1:] if argv and argv[0]=='ledger' else argv)
     parser = argparse.ArgumentParser(prog='nrqc certify', description=__doc__)
-    parser.add_argument('claim', choices=['cluster'])
+    parser.add_argument('claim', choices=['cluster', 'noise'])
+    parser.add_argument('--x', default='1/40', help='declared source squeezing point for the noise claim (rational)')
+    parser.add_argument('--eta', default='243/4000', help='declared detection efficiency for the noise claim (rational)')
     parser.add_argument('--assignments', default='all', help="'all' (64 per case) or an integer count of leading assignments")
     parser.add_argument('--cases', default='all', help="'all' or a comma-separated subset of generic,xor_00,xor_01,xor_10,xor_11")
     parser.add_argument('--workers', type=int, default=1)
@@ -400,7 +611,10 @@ def main(argv=None):
         if not wanted <= {c['label'] for c in cases}:parser.error('unknown cluster case')
         cases = [c for c in cases if c['label'] in wanted]
     if not 1 <= args.workers <= 8:parser.error('--workers must be 1..8')
-    result = certify_cluster(cases, assignments, workers=args.workers)
+    if args.claim == 'noise':
+        result = certify_noise(cases, assignments, workers=args.workers, x=args.x, eta=args.eta)
+    else:
+        result = certify_cluster(cases, assignments, workers=args.workers)
     rendered = json.dumps(result, sort_keys=True, indent=2, allow_nan=False) + '\n'
     if args.out:
         args.out.write_text(rendered, encoding='utf-8')

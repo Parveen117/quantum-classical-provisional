@@ -136,7 +136,9 @@ coordinate motion distinct from the chosen qubit dynamics.
 ## Ledger certification
 
 `nrqc certify cluster` retains the collaborator’s separate corrected-path
-cluster witness. See [cluster certificate](CERTIFY.md). `nrqc certify` (or
+cluster witness, and `nrqc certify noise` re-derives the Theorem N readout
+response table (the coefficient A = 5/2 behind the rounded 2.8w bound) on the
+same 64 circuits. See [cluster certificate](CERTIFY.md). `nrqc certify` (or
 `nrqc certify ledger`) runs the four model-number checks below.
 
 `nrqc certify` recomputes fusion success, environment-traced Bell weights, ideal

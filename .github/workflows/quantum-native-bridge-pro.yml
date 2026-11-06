@@ -49,6 +49,7 @@ jobs:
           nrqc check native_relational_qc/calculator_examples/bell.json > /dev/null
           nrqc calculate native_relational_qc/calculator_examples/bell.json > /dev/null
           nrqc certify --out rebuilt-photonic-certification.json > /dev/null
+          nrqc certify noise --cases xor_01 --assignments 1 > /dev/null || test $? -eq 1
           nrqc observer-track --records 010101 > /dev/null
           nrqc observer-state --records 010101 > /dev/null
           nrqc observer-cycle --cycles 3 > /dev/null
