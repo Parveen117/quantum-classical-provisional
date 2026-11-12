@@ -21,8 +21,12 @@ from .self_learning import FIELD, digest
 PLAN_SCHEMA = "nrqc-model-experiment-plan-v1"
 BINDING_SCHEMA = "nrqc-acquisition-binding-v1"
 RESULT_SCHEMA = "nrqc-acquisition-result-v1"
+CONTROLLER_SCHEMA = "nrqc-controller-counts-v1"
 REPORT_SCHEMA = "nrqc-model-observation-v1"
 ORIGINS = ("synthetic", "simulator", "physical_backend")
+RESULT_FIELDS = ("schema", "plan_fingerprint", "binding_fingerprint", "program_sha256",
+                 "job_id", "origin", "provider", "backend", "started_at", "completed_at",
+                 "shots", "counts", "source_sha256")
 
 
 def _text(value, name, maximum=160):
@@ -133,9 +137,7 @@ def verify_plan(plan):
 
 
 def _result(plan, document):
-    _object(document, ("schema", "plan_fingerprint", "binding_fingerprint", "program_sha256",
-                       "job_id", "origin", "provider", "backend", "started_at", "completed_at",
-                       "shots", "counts", "source_sha256"))
+    _object(document, RESULT_FIELDS)
     if document["schema"] != RESULT_SCHEMA:
         raise ValueError("unsupported acquisition-result schema")
     for key, expected in (("plan_fingerprint", plan["fingerprint"]),
@@ -222,13 +224,34 @@ def observe(plan, result):
                       scope="unconditional raw Z marginal; no readout mitigation or state tomography"))
 
 
-def verify_observation(document):
+def _controller_result(source_bytes):
+    if not isinstance(source_bytes, bytes) or len(source_bytes) > MAX_INPUT_BYTES:
+        raise ValueError("controller artifact requires at most 64 MiB of UTF-8 JSON bytes")
+    controller = loads(source_bytes.decode("utf-8"))
+    _object(controller, RESULT_FIELDS[:-1])
+    if controller["schema"] != CONTROLLER_SCHEMA:
+        raise ValueError("unsupported controller-counts schema; implicit vendor conversion is disabled")
+    return dict(controller, schema=RESULT_SCHEMA, source_sha256=hashlib.sha256(source_bytes).hexdigest())
+
+
+def import_observation(plan, source_bytes):
+    """Compute the artifact hash from actual bytes before validating raw counts."""
+    return observe(plan, _controller_result(source_bytes))
+
+
+def verify_observation(document, *, source_bytes=None):
     _unseal(document, REPORT_SCHEMA)
     replay = observe(document["plan"], document["acquisition"])
     if replay != document:
         raise ValueError("observation report differs from deterministic exact replay")
+    if source_bytes is not None:
+        acquired = _result(document["plan"], _controller_result(source_bytes))
+        if acquired != document["acquisition"]:
+            raise ValueError("controller artifact bytes do not match the recorded acquisition")
     return dict(status="verified", fingerprint=document["fingerprint"],
-                classification=document["classification"], evidence_class=document["evidence_class"])
+                classification=document["classification"], evidence_class=document["evidence_class"],
+                source_artifact_hash_verified=source_bytes is not None,
+                source_authentication="not_performed")
 
 
 def main(argv=None, *, command="experiment-plan"):
@@ -242,8 +265,10 @@ def main(argv=None, *, command="experiment-plan"):
         parser.add_argument("--tolerance", required=True, help="exact numerator/denominator in [0,1]")
         parser.add_argument("--measure-wires", nargs="+", type=int)
         parser.add_argument("--qasm-out", type=Path)
-    elif command == "observe-model":
+    elif command in ("observe-model", "import-model-counts"):
         parser.add_argument("result", type=Path)
+    else:
+        parser.add_argument("--source-artifact", type=Path)
     args = parser.parse_args(argv)
 
     def read(path):
@@ -262,8 +287,15 @@ def main(argv=None, *, command="experiment-plan"):
                 args.qasm_out.write_text(output["measured_openqasm"], encoding="utf-8")
         elif command == "observe-model":
             output = observe(document, read(args.result))
+        elif command == "import-model-counts":
+            with args.result.open("rb") as stream:
+                output = import_observation(document, stream.read(MAX_INPUT_BYTES + 1))
         else:
-            output = verify_observation(document)
+            source_bytes = None
+            if args.source_artifact:
+                with args.source_artifact.open("rb") as stream:
+                    source_bytes = stream.read(MAX_INPUT_BYTES + 1)
+            output = verify_observation(document, source_bytes=source_bytes)
         code = 0
     except (ValueError, TypeError, KeyError, OSError) as error:
         output, code = dict(status="invalid_request", error=str(error)), 2

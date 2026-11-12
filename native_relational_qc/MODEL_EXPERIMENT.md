@@ -45,6 +45,26 @@ an external artifact reference; this adapter does not fetch that artifact or
 verify the provider's signature. Declaring `physical_backend` retains the label
 `DECLARED_PHYSICAL_OBSERVATION` and does not promote it into authenticated data.
 
+For controller files, the preferred intake computes the source hash from the
+actual artifact bytes instead of accepting a supplied reference hash:
+
+```sh
+nrqc import-model-counts native_relational_qc/experiments/synthetic_plan.json \
+  native_relational_qc/experiments/synthetic_controller_counts.json --out imported-observation.json
+nrqc verify-observation imported-observation.json \
+  --source-artifact native_relational_qc/experiments/synthetic_controller_counts.json
+```
+
+The controller schema is `nrqc-controller-counts-v1`. Its fields are the same
+as the acquired result except `source_sha256`, which must be absent because the
+importer calculates it. No implicit vendor conversion, count rounding or endian
+guessing is performed. Keeping the original artifact allows the second command
+to verify both its exact bytes and its validated acquisition values. Even a
+whitespace-only artifact change produces a different digest. This establishes
+artifact integrity and binding; provider authenticity remains unverified.
+The [controller intake audit](../benchmarks/records/controller_intake_20261112.json)
+retains the synthetic observation and byte-change/duplicate-key controls.
+
 Measured physical wires are assigned in list order to `c[0]`, `c[1]`, and so on.
 The default measures only the final physical model readout. With
 `--measure-wires 2 0 1`, physical wire 1 is `c[2]`. Histogram strings have exactly

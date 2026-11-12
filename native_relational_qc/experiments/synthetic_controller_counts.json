@@ -1,0 +1,17 @@
+{
+  "backend": "synthetic-three-wire-line",
+  "binding_fingerprint": "2cd5e2745a305b903897dd6f5c5931fbc32203a8f96067ec845e26540db42237",
+  "completed_at": "2026-11-12T01:00:01Z",
+  "counts": {
+    "0": 5,
+    "1": 95
+  },
+  "job_id": "synthetic-acquisition-valid",
+  "origin": "synthetic",
+  "plan_fingerprint": "d02120282ddc5c408f55a3dca38fa638ee8a792a784b24e4753b640b0c1442af",
+  "program_sha256": "069e6954e4041f84fd4d9102d333d93553f04ddab1809f2aad678d095861afb5",
+  "provider": "nrqc-offline-qualification",
+  "schema": "nrqc-controller-counts-v1",
+  "shots": 100,
+  "started_at": "2026-11-12T01:00:00Z"
+}

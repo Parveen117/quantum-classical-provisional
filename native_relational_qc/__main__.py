@@ -27,7 +27,7 @@ def main(argv=None):
     if argv and argv[0] in ('predict', 'verify-prediction'):
         from .model_runtime import main as model_main
         return model_main(argv[1:], replay=argv[0] == 'verify-prediction')
-    if argv and argv[0] in ('experiment-plan', 'observe-model', 'verify-observation'):
+    if argv and argv[0] in ('experiment-plan', 'observe-model', 'import-model-counts', 'verify-observation'):
         from .model_experiment import main as experiment_main
         return experiment_main(argv[1:], command=argv[0])
     if argv and argv[0] in ('record-observation', 'verify-experiment-ledger'):
