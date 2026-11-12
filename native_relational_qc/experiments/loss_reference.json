@@ -1,0 +1,34 @@
+{
+  "kind": "scalar_survival",
+  "model_id": "synthetic input-independent loss model",
+  "parameters": {
+    "rejection_weights": {
+      "ambiguous_click": {
+        "denominator": 1,
+        "numerator": 0
+      },
+      "guard_or_code_violation": {
+        "denominator": 1,
+        "numerator": 0
+      },
+      "no_click": {
+        "denominator": 2,
+        "numerator": 1
+      },
+      "no_herald": {
+        "denominator": 2,
+        "numerator": 1
+      },
+      "unclassified": {
+        "denominator": 1,
+        "numerator": 0
+      }
+    },
+    "survival": {
+      "denominator": 2,
+      "numerator": 1
+    }
+  },
+  "schema": "nrqc-loss-reference-v1",
+  "source_sha256": "7be469844e87e3b51870bd87a82ba6a58e9f092c408a9d81ffc82fad4405b545"
+}

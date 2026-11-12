@@ -1,0 +1,28 @@
+{
+  "architecture": "four-qubit-five-ry-directed-cx-v1",
+  "entanglers": [
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      3
+    ]
+  ],
+  "execution": "EXACT_CLASSICAL_SIMULATION",
+  "feature_view": "first_layer",
+  "fingerprint": "e1d2389394de1274736c7b35eaade1cec59461090427c229d8613cdd2ba2b815",
+  "hardware_authorized": false,
+  "phase_steps": [
+    32,
+    0,
+    0,
+    32,
+    0
+  ],
+  "phase_unit": "pi/32",
+  "proof_status": "NOT_A_MATHEMATICAL_PROOF",
+  "schema": "native-learning-topology-model-v1",
+  "training_sha256": "92b0155d54dbbd4e08edd4ef6d5b91df1b1c0c4cf50f66256d8d77d025074cd2"
+}

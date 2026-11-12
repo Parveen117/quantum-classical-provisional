@@ -21,6 +21,10 @@ nrqc check native_relational_qc/calculator_examples/bell.json
 nrqc calculate native_relational_qc/calculator_examples/bell.json
 nrqc certify --out certification.json
 nrqc observer-cycle --cycles 3
+nrqc synthesize native_relational_qc/calculator_examples/bell_goal.json
+nrqc learn-structure --task curvature --out structure-fit.json
+nrqc predict native_relational_qc/learning/structure_model.json --features 5 17 --view first_layer --device native_relational_qc/calculator_examples/three_wire_line.json --out model-run.json
+nrqc verify-prediction model-run.json
 ```
 
 For development: `pip install -e '.[test]'` and `python -m pytest -q`.
@@ -29,6 +33,26 @@ and `.[cad]` for the optional layout checks. Current test results belong to
 CI/test logs, rather than a manually maintained test count.
 
 ## Backend capabilities
+
+[Goal-directed circuit construction](CIRCUIT_SYNTHESIS.md) uses a bounded
+Pāṇini-inspired rule application to build a 1–4-qubit state-preparation
+circuit from independent Pauli stabilizers. It respects the admitted gate
+alphabet and directed coupling map, reuses proof-traced gate reductions,
+and verifies the target through the existing exact calculator. The output
+includes an executable calculator request and the circuit derivation.
+
+[Phase and structure training](STRUCTURE_LEARNING.md) extends the existing
+four-qubit classifier to a declared family of CX words. It trains native phase
+parameters on the same training split, retains exact readout eligibility steps,
+and selects by training loss followed by declared gate costs. The reproducible
+comparison freezes selection before held-out evaluation and reports raw-phase,
+fused-phase and searched-topology inference costs separately.
+
+[Saved-model execution](MODEL_RUNTIME.md) maps a checkpoint to a declared
+directed device profile, routes its CX gates, and emits an exact OpenQASM
+program plus a runnable calculator request. Active-register basis checks,
+prediction replay and a source-pinned deployment audit cover the handoff.
+[Finalization](FINALIZATION.md) records the software and measured-device work.
 
 [Repeated source cycles](OBSERVER_CYCLE.md) applies RKF SP1 to the existing
 rotation-and-preparation channel. `nrqc observer-cycle` derives its affine
@@ -146,6 +170,22 @@ checks supplied rational targets and returns a failing exit code on mismatch.
 The 2.8w figure is rounded at one operating point: the exact first-order term
 is (5/2)w plus the retained higher-order remainder. These results do not grant
 laboratory qualification or promote conditional source sectors into supplied photons.
+
+## Acquisition of saved-model results
+
+Use `nrqc experiment-plan` to freeze a model's measured circuit, then
+`nrqc observe-model` and `nrqc verify-observation` to validate recorded raw counts
+and replay an exact marginal comparison. See [MODEL_EXPERIMENT.md](MODEL_EXPERIMENT.md)
+for acquisition bindings, bit order, calibration validity and synthetic examples.
+Freeze repeated acquisitions with `nrqc campaign-plan`, then use
+`nrqc campaign-report` and `nrqc verify-campaign-report` for complete accounting
+of successful, failed and missing runs. See [EXPERIMENT_CAMPAIGN.md](EXPERIMENT_CAMPAIGN.md).
+The [controller handoff](CONTROLLER_HANDOFF.md) specifies the remaining measured-device boundary.
+Use `nrqc loss-plan`, `nrqc import-loss-events` and `nrqc verify-loss-observation`
+for explicit retained herald/rejection events. [LOSS_ACQUISITION.md](LOSS_ACQUISITION.md)
+describes the conditional instrument reference and separate yield/readout gates.
+`nrqc loss-campaign-plan` and `nrqc loss-campaign-report` extend that accounting
+to [fixed repeated-loss campaigns](LOSS_CAMPAIGN.md), including failed and missing runs.
 
 ## Evidence and limits
 
