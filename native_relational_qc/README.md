@@ -22,6 +22,7 @@ nrqc calculate native_relational_qc/calculator_examples/bell.json
 nrqc certify --out certification.json
 nrqc observer-cycle --cycles 3
 nrqc synthesize native_relational_qc/calculator_examples/bell_goal.json
+nrqc learn-structure --task curvature --out structure-fit.json
 ```
 
 For development: `pip install -e '.[test]'` and `python -m pytest -q`.
@@ -37,6 +38,13 @@ circuit from independent Pauli stabilizers. It respects the admitted gate
 alphabet and directed coupling map, reuses proof-traced gate reductions,
 and verifies the target through the existing exact calculator. The output
 includes an executable calculator request and the circuit derivation.
+
+[Phase and structure training](STRUCTURE_LEARNING.md) extends the existing
+four-qubit classifier to a declared family of CX words. It trains native phase
+parameters on the same training split, retains exact readout eligibility steps,
+and selects by training loss followed by declared gate costs. The reproducible
+comparison freezes selection before held-out evaluation and reports raw-phase,
+fused-phase and searched-topology inference costs separately.
 
 [Repeated source cycles](OBSERVER_CYCLE.md) applies RKF SP1 to the existing
 rotation-and-preparation channel. `nrqc observer-cycle` derives its affine

@@ -21,6 +21,9 @@ def main(argv=None):
     if argv and argv[0] == 'synthesize':
         from .circuit_synthesis import main as synthesis_main
         return synthesis_main(argv[1:])
+    if argv and argv[0] == 'learn-structure':
+        from .structure_learning import main as structure_main
+        return structure_main(argv[1:])
     if argv and argv[0] == 'observer-track':
         from .observer_tracking import main as tracking_main
         return tracking_main(argv[1:])
@@ -34,6 +37,7 @@ def main(argv=None):
         'Custom exact circuits: nrqc calculate INPUT.json --out RESULT.json; '
         'backend acceptance report: nrqc check INPUT.json (or nrqc check --table); '
         'goal-directed exact circuit construction: nrqc synthesize GOAL.json; '
+        'train native phases and search topology: nrqc learn-structure --task curvature; '
         'photonic model arithmetic: nrqc certify; '
         'record-controlled next measurement: nrqc observer-track --records 0101; '
         'joint contrast/phase prediction: nrqc observer-state --records 0101; '

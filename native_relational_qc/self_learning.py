@@ -15,6 +15,8 @@ from .phase_backend import PowerPhaseCircuit, prepare
 
 FIELD=field_of_order(64)
 ARCHITECTURE="four-qubit-parity-five-ry-v1"
+TOPOLOGY_ARCHITECTURE="four-qubit-five-ry-directed-cx-v1"
+DEFAULT_ENTANGLERS=((0,2),(1,2),(2,3))
 VIEWS=("xor_bits","first_layer","point_only")
 
 
@@ -32,6 +34,20 @@ def _steps(values,n):
     if not isinstance(values,(tuple,list)) or len(values)!=n:
         raise ValueError(f"exactly {n} phase-step integers required")
     return tuple(_int(v,"phase step",0,63) for v in values)
+
+
+def _topology(entanglers):
+    if not isinstance(entanglers,(tuple,list)) or len(entanglers)>6:
+        raise ValueError("require at most six directed CX edges")
+    out=[]
+    for edge in entanglers:
+        if not isinstance(edge,(tuple,list)) or len(edge)!=2:
+            raise ValueError("each CX edge needs two wires")
+        pair=tuple(_int(q,"CX wire",0,3) for q in edge)
+        if pair[0]==pair[1] or pair in out:
+            raise ValueError("CX edges must be distinct and join different wires")
+        out.append(pair)
+    return tuple(out)
 
 
 @dataclass(frozen=True)
@@ -68,12 +84,21 @@ def _ry(circuit,q,steps):
     circuit.add("h",q).add("s",q)
 
 
-def circuit(features,parameters):
+def circuit(features,parameters,*,entanglers=DEFAULT_ENTANGLERS,compiler="raw"):
     features=_steps(features,2);parameters=_steps(parameters,5)
+    entanglers=_topology(entanglers)
+    if compiler not in ("raw","fused"):
+        raise ValueError("compiler must be raw or fused")
     c=PowerPhaseCircuit(4,64)
-    for q,step in enumerate(features):_ry(c,q,step)
-    for q,step in enumerate(parameters[:4]):_ry(c,q,step)
-    for a,b in ((0,2),(1,2),(2,3)):c.add("cx",a,b)
+    if compiler=="raw":
+        for q,step in enumerate(features):_ry(c,q,step)
+        for q,step in enumerate(parameters[:4]):_ry(c,q,step)
+    else:
+        # U(k)=S H P(k) H S*: U(a)U(b)=U((a+b) mod 64), including
+        # the phase retained by this compiler. Other-wire rotations commute.
+        for q,step in enumerate(parameters[:4]):
+            _ry(c,q,(step+(features[q] if q<2 else 0))%64)
+    for a,b in entanglers:c.add("cx",a,b)
     _ry(c,3,parameters[4])
     return c
 
@@ -84,12 +109,23 @@ class Evaluator:
     engine_work counts executor work, not all Python/optimizer overhead;
     wall time is separately measured by the audit. No label enters execution.
     """
-    def __init__(self,*,max_circuits=16000,max_work=100_000_000):
+    def __init__(self,*,max_circuits=16000,max_work=100_000_000,
+                 entanglers=DEFAULT_ENTANGLERS,compiler="raw"):
         self.max_circuits=_int(max_circuits,"circuit budget",1,100000)
         self.max_work=_int(max_work,"executor work budget",1,1_000_000_000)
+        self._entanglers=_topology(entanglers)
+        if compiler not in ("raw","fused"):
+            raise ValueError("compiler must be raw or fused")
+        self._compiler=compiler
         self.cache={}
         self.stats=dict(circuit_executions=0,cache_hits=0,engine_work=0,objective_evaluations=0,
                         peak_support=0,total_executed_gates=0,hardware_jobs=0)
+
+    @property
+    def entanglers(self):return self._entanglers
+
+    @property
+    def compiler(self):return self._compiler
 
     def probability(self,features,parameters):
         features=_steps(features,2);parameters=_steps(parameters,5);key=(features,parameters)
@@ -97,7 +133,7 @@ class Evaluator:
             self.stats["cache_hits"]+=1;return self.cache[key]
         if self.stats["circuit_executions"]>=self.max_circuits or self.stats["engine_work"]>=self.max_work:
             raise ResourceLimit("whole learning-run execution budget exhausted; no completed model returned")
-        c=circuit(features,parameters)
+        c=circuit(features,parameters,entanglers=self.entanglers,compiler=self.compiler)
         self.stats["circuit_executions"]+=1
         self.stats["total_executed_gates"]+=len(c.operations)
         remaining=min(100000,self.max_work-self.stats["engine_work"])
@@ -117,8 +153,9 @@ class Evaluator:
         return value
 
 
-def packet(parameters,*,training_digest,view):
+def packet(parameters,*,training_digest,view,entanglers=DEFAULT_ENTANGLERS):
     parameters=_steps(parameters,5)
+    entanglers=_topology(entanglers)
     if view not in VIEWS:raise ValueError("unknown feature view")
     if type(training_digest) is not str or len(training_digest)!=64 or any(c not in "0123456789abcdef" for c in training_digest):
         raise ValueError("training SHA-256 required")
@@ -126,13 +163,18 @@ def packet(parameters,*,training_digest,view):
              phase_steps=list(parameters),phase_unit="pi/32",feature_view=view,
              training_sha256=training_digest,execution="EXACT_CLASSICAL_SIMULATION",
              hardware_authorized=False,proof_status="NOT_A_MATHEMATICAL_PROOF")
+    if entanglers!=DEFAULT_ENTANGLERS:
+        out.update(schema="native-learning-topology-model-v1",architecture=TOPOLOGY_ARCHITECTURE,
+                   entanglers=[list(edge) for edge in entanglers])
     return dict(out,fingerprint=digest(out))
 
 
 def load_packet(record):
     if type(record) is not dict:raise ValueError("model record required")
     try:
-        expected=packet(record["phase_steps"],training_digest=record["training_sha256"],view=record["feature_view"])
+        edges=record["entanglers"] if record.get("schema")=="native-learning-topology-model-v1" else DEFAULT_ENTANGLERS
+        expected=packet(record["phase_steps"],training_digest=record["training_sha256"],
+                        view=record["feature_view"],entanglers=edges)
     except (KeyError,TypeError) as error:raise ValueError("incomplete model record") from error
     if record!=expected:raise ValueError("model metadata or fingerprint mismatch")
     return tuple(expected["phase_steps"])
@@ -185,18 +227,23 @@ def fit(examples,*,view,evaluator=None,seeds=(17,41,73),sweeps=3,initial_paramet
             if not changes:stop="no_strict_coordinate_improvement";break
         trace.append(dict(seed=seed,stop=stop,events=events,final_parameters=list(params),final_loss=value.to_dict()))
         if best is None or (value-best_loss).real_sign()<0:best,best_loss=params,value
-    return dict(schema="native-learning-fit-v1",model=packet(best,training_digest=training_hash,view=view),
+    return dict(schema="native-learning-fit-v1",model=packet(best,training_digest=training_hash,view=view,
+                                                           entanglers=evaluator.entanglers),
                 training_examples=len(examples),training_ids=[e.name for e in examples],
                 selected_by="minimum_training_brier_loss_only",loss=best_loss.display(10),
                 optimizer=dict(kind="classical_exact_coordinate_search",grid=list(grid),seeds=list(seeds),sweeps=sweeps),
-                trace=trace,resources=dict(evaluator.stats),global_optimum_certified=False)
+                trace=trace,resources=dict(evaluator.stats),global_optimum_certified=False,
+                circuit_configuration=dict(entanglers=[list(e) for e in evaluator.entanglers],
+                                           compiler=evaluator.compiler))
 
 
 def assess(model,examples,*,evaluator=None):
     parameters=load_packet(model);examples=_examples(examples)
     if any(e.view!=model["feature_view"] for e in examples):raise ValueError("evaluation feature view mismatch")
-    evaluator=evaluator if evaluator is not None else Evaluator()
+    topology=_topology(model.get("entanglers",DEFAULT_ENTANGLERS))
+    evaluator=evaluator if evaluator is not None else Evaluator(entanglers=topology)
     if type(evaluator) is not Evaluator:raise ValueError("bounded Evaluator required")
+    if evaluator.entanglers!=topology:raise ValueError("model and evaluator topology mismatch")
     rows=[];loss=FIELD();correct=0
     for e in examples:
         p=evaluator.probability(e.features,parameters)
