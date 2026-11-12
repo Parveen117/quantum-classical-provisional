@@ -1,0 +1,11 @@
+{
+  "schema": "nrqc-circuit-goal-v1",
+  "n_qubits": 2,
+  "stabilizers": [
+    {"paulis": {"0": "X", "1": "X"}, "eigenvalue": 1},
+    {"paulis": {"0": "Z", "1": "Z"}, "eigenvalue": 1}
+  ],
+  "allowed_gates": ["h", "x", "z", "cx"],
+  "coupling_map": [[0, 1]],
+  "limits": {"max_gates": 3, "max_candidates": 1000, "max_work": 100000}
+}

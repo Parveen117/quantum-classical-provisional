@@ -21,6 +21,7 @@ nrqc check native_relational_qc/calculator_examples/bell.json
 nrqc calculate native_relational_qc/calculator_examples/bell.json
 nrqc certify --out certification.json
 nrqc observer-cycle --cycles 3
+nrqc synthesize native_relational_qc/calculator_examples/bell_goal.json
 ```
 
 For development: `pip install -e '.[test]'` and `python -m pytest -q`.
@@ -29,6 +30,13 @@ and `.[cad]` for the optional layout checks. Current test results belong to
 CI/test logs, rather than a manually maintained test count.
 
 ## Backend capabilities
+
+[Goal-directed circuit construction](CIRCUIT_SYNTHESIS.md) uses a bounded
+Pāṇini-inspired rule application to build a 1–4-qubit state-preparation
+circuit from independent Pauli stabilizers. It respects the admitted gate
+alphabet and directed coupling map, reuses proof-traced gate reductions,
+and verifies the target through the existing exact calculator. The output
+includes an executable calculator request and the circuit derivation.
 
 [Repeated source cycles](OBSERVER_CYCLE.md) applies RKF SP1 to the existing
 rotation-and-preparation channel. `nrqc observer-cycle` derives its affine
