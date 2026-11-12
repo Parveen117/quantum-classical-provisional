@@ -27,6 +27,9 @@ def main(argv=None):
     if argv and argv[0] in ('predict', 'verify-prediction'):
         from .model_runtime import main as model_main
         return model_main(argv[1:], replay=argv[0] == 'verify-prediction')
+    if argv and argv[0] in ('experiment-plan', 'observe-model', 'verify-observation'):
+        from .model_experiment import main as experiment_main
+        return experiment_main(argv[1:], command=argv[0])
     if argv and argv[0] == 'observer-track':
         from .observer_tracking import main as tracking_main
         return tracking_main(argv[1:])
@@ -42,6 +45,7 @@ def main(argv=None):
         'goal-directed exact circuit construction: nrqc synthesize GOAL.json; '
         'train native phases and search topology: nrqc learn-structure --task curvature; '
         'use a saved model: nrqc predict MODEL.json --features A B --view first_layer; '
+        'bind and compare acquired counts: nrqc experiment-plan / observe-model / verify-observation; '
         'photonic model arithmetic: nrqc certify; '
         'record-controlled next measurement: nrqc observer-track --records 0101; '
         'joint contrast/phase prediction: nrqc observer-state --records 0101; '

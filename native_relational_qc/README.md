@@ -171,6 +171,13 @@ The 2.8w figure is rounded at one operating point: the exact first-order term
 is (5/2)w plus the retained higher-order remainder. These results do not grant
 laboratory qualification or promote conditional source sectors into supplied photons.
 
+## Acquisition of saved-model results
+
+Use `nrqc experiment-plan` to freeze a model's measured circuit, then
+`nrqc observe-model` and `nrqc verify-observation` to validate recorded raw counts
+and replay an exact marginal comparison. See [MODEL_EXPERIMENT.md](MODEL_EXPERIMENT.md)
+for acquisition bindings, bit order, calibration validity and synthetic examples.
+
 ## Evidence and limits
 
 - [Retained Aer MPS / Stim comparisons, including losses](BENCHMARKS.md)
