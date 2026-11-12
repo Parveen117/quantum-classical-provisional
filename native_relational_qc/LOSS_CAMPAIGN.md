@@ -68,3 +68,7 @@ No hardware submission, instrument tomography or measured fidelity is claimed.
 python3.12 -m unittest tests.test_loss_campaign tests.test_experiment_campaign -q
 python3.12 benchmarks/loss_campaign_audit.py --out benchmarks/records/loss_campaign_20261112.json
 ```
+
+The [runtime qualification](../benchmarks/records/loss_runtime_qualification_20261112.json)
+retains the full integrated Python 3.12 test result and the installed NumPy-core
+wheel workflow with exact source/code hashes.

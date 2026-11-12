@@ -107,6 +107,13 @@ case fails while its explicitly supplied joint reference qualifies. Source-byte
 and missing-attempt controls are rejected. Independent NumPy probabilities check
 the balanced ideal input used by the biased model.
 
+The [compatibility audit](../benchmarks/records/loss_compatibility_20261112.json)
+checks two finite lossless limits against the original unconditional interface:
+observed probabilities and exact marginal errors agree. It also replays a
+declared scalar-survival model with exact rational probability `1/3`. That is a
+probability-model check; it does not assert a native gate implementation or
+physical equivalence of the instruments.
+
 The original source distinctions are retained in the repository's
 [loss-accounting design](../LOSS_AWARE_ACQUISITION_DESIGN.md).
 [Repeated-loss campaigns](LOSS_CAMPAIGN.md) preserve each run's yield and error

@@ -23,43 +23,41 @@ qualification. Its capabilities are fixed by its schemas and resource bounds.
 | Actual device execution | Hardware integration | Bind the measured device's encoding, gates, channels, calibration and readout to a driver |
 | Experimental qualification | Measured evidence | Supply original controller files and calibration artifacts for the frozen campaign |
 
-## Recorded baseline qualification
+## Current runtime qualification
 
-The baseline qualification below pins runtime `f60c627`. The retained-event
-extension adds 19 loss-intake tests, 10 repeated-loss campaign tests and separate
-source-pinned finite audits. Its full integrated qualification is recorded as a
-subsequent release packet.
+The [loss runtime qualification record](../benchmarks/records/loss_runtime_qualification_20261112.json)
+pins runtime `dd4e241` and a full Python 3.12.14 repository run with **1,252
+passes, zero skips and zero failures**. Qiskit 2.6.2, Aer 0.18.2, gdstk 1.0.2
+and KLayout 0.30.13 are installed for this integrated run. All 29 new loss-intake
+and loss-campaign tests are included.
 
-The [acquisition qualification record](../benchmarks/records/acquisition_qualification_20261112.json)
-records a full Python 3.12.14 repository run with **1,166 passes, 57 skips and
-zero failures**. The previously skipped cases were then exercised in an isolated
-environment with Qiskit 2.6.2, Aer 0.18.2, gdstk 1.0.2 and KLayout 0.30.13. All
-57 have a passing targeted execution. This is one full NumPy-core run plus
-targeted optional checks. The record identifies each batch and its cases.
-
-The wheel is built and installed outside the checkout. Its smoke covers 20
-console commands: prediction, measured plans, source-bound import, exact replay,
-idempotent ledger recording and a qualified three-repetition campaign. Changed
-artifact bytes and incomplete raw counts are rejected. The installed code hashes
-match the qualified source files. No hardware submission occurs.
+The rebuilt wheel is also installed outside the checkout in a NumPy-core
+environment without Qiskit. Its 23-command smoke covers loss-plan creation,
+source-bound event import, exact artifact replay, idempotent ledger receipts and
+qualified repeated campaigns. It preserves undefined zero-accepted outcomes,
+blocks a low-yield repetition despite a favourable pooled yield, rejects a
+conflicting result and detects changed/missing raw source data. Installed runtime
+hashes match the qualified source files. No hardware submission occurs.
 
 The retained finite audits cover:
 
-- 64 synthetic sampled acquisitions from the frozen held-out inputs, three exact
-  tolerance controls and five rejected binding/result controls;
-- a synthetic healthy/residue ledger pair, a byte-identical retry and repaired
-  hash-chain negative controls;
-- three input contexts with three repetitions each, with missing, timeout and
-  biased-outlier controls that retain failed qualification;
-- actual source-byte binding and duplicate-key rejection for a synthetic
-  controller artifact;
-- all 60 ordered measurement maps containing the readout on the three/four-wire
-  targets, including a nonidentity final routing layout. These project two
-  synthetic full-register histograms.
+- seven synthetic loss acquisitions and explicit conditional references,
+  including biased heralding, zero acceptance and retained overlapping flags;
+- two input contexts with three loss repetitions each, with missing, timeout,
+  low-yield, conditional-outlier and zero-accepted controls;
+- two finite lossless comparisons with the original unconditional interface,
+  plus an exact declared scalar-survival probability of `1/3`;
+- the earlier 64 sampled acquisitions, three exact tolerance controls and five
+  rejected binding/result controls;
+- source-byte and ledger-integrity controls, original repeated-run campaigns,
+  and all 60 readout maps over two synthetic full-register histograms.
 
-The [earlier qualification record](../benchmarks/records/software_qualification_20261112.json)
-preserves the prior full run and its shipped-example schema correction. The new
-full run above is the qualification for the expanded acquisition runtime.
+The [prior acquisition qualification](../benchmarks/records/acquisition_qualification_20261112.json)
+and [earlier software qualification](../benchmarks/records/software_qualification_20261112.json)
+retain their own runtime/source pins and original test accounting. The current
+full integrated run above qualifies the expanded loss-aware software. Instrument
+models and physical provenance remain explicitly declared, with artifact
+integrity separate from provider authentication.
 
 ## Remaining completion packets
 
