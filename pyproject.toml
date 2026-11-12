@@ -25,7 +25,7 @@ nrqc = "native_relational_qc.__main__:main"
 Repository = "https://github.com/Parveen117/quantum-classical-provisional"
 
 [tool.setuptools]
-packages = ["native_relational_qc", "phase_seam_foundation"]
+packages = ["native_relational_qc", "phase_seam_foundation", "quantum_native_bridge_pro"]
 include-package-data = true
 
 [tool.setuptools.package-data]

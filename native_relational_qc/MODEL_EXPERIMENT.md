@@ -75,6 +75,36 @@ decision is the observation report's `classification`. Replay recomputes the
 prediction, plan, validation, marginal and decision instead of accepting a
 repaired checksum alone.
 
+## Recorded observations and retries
+
+```sh
+nrqc record-observation observation.json --ledger experiment.jsonl
+nrqc verify-experiment-ledger --ledger experiment.jsonl
+```
+
+The installed wheel includes the existing `quantum_native_bridge_pro` package.
+Each appended bridge entry retains the complete replayable observation and its
+exact classification in metadata. Repeating an identical report returns the
+existing receipt without another append. A provider/backend/job identity or
+frozen plan cannot acquire a different result. A genuinely new acquisition
+requires a new run plan and job identity. There is no automatic submission or
+retry on a physical backend.
+
+The adapter checks the existing hash chain before writing. Its exclusive lock
+coordinates callers of `record-observation`; direct legacy bridge writers must
+be kept separate. A busy lock is reported instead of stolen, including a stale
+lock after a crashed writer. Explicit verification reads one immutable file
+snapshot, checks the chain and recomputes every embedded NRQC observation and
+bridge metric. Repairing a hash chain alone cannot change those computations.
+Legacy records without NRQC observations are counted separately. Replay is
+bounded to 256 records and 64 MiB; start a new ledger for a larger campaign.
+
+The [ledger audit](../benchmarks/records/experiment_ledger_20261112.json)
+retains one synthetic healthy run and one deliberate residue, a byte-identical
+idempotent retry, a conflicting-result rejection and a repaired-chain negative
+control. Its [ledger](../benchmarks/records/experiment_ledger_20261112.jsonl)
+can be checked by `nrqc verify-experiment-ledger`.
+
 The [qualification record](../benchmarks/records/model_experiment_20261112.json)
 uses independently computed NumPy state probabilities to sample synthetic
 counts for the frozen model's 64 held-out inputs, plus exact threshold endpoints

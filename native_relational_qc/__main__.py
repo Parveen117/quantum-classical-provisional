@@ -30,6 +30,9 @@ def main(argv=None):
     if argv and argv[0] in ('experiment-plan', 'observe-model', 'verify-observation'):
         from .model_experiment import main as experiment_main
         return experiment_main(argv[1:], command=argv[0])
+    if argv and argv[0] in ('record-observation', 'verify-experiment-ledger'):
+        from .experiment_ledger import main as ledger_main
+        return ledger_main(argv[1:], replay=argv[0] == 'verify-experiment-ledger')
     if argv and argv[0] == 'observer-track':
         from .observer_tracking import main as tracking_main
         return tracking_main(argv[1:])
