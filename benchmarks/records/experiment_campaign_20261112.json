@@ -1,0 +1,4469 @@
+{
+  "campaign": {
+    "evidence_class": "OFFLINE_CAMPAIGN_PLAN",
+    "fingerprint": "b8c9e8d49e423e6fdb8b6198de0c4dda4c6a4d74c1cbc79db0c41d77e1de6682",
+    "hardware_submissions": 0,
+    "minimum_repetitions": 3,
+    "name": "three fixed inputs, three independent synthetic repetitions",
+    "planned_groups": {
+      "761a348a5d605fd3f38b7ba6fa5983377234b107dceeba880917a4bb69f36401": 3,
+      "89f280f41a8f9134d0033752efe45f06b72aed47e5c93f64d231adbf8a4384ee": 3,
+      "b0c2739c553fd9294a0623ebf763ac3dbfbee02ca7280a4291888a979b225ecb": 3
+    },
+    "plans": [
+      {
+        "acceptance_policy": "fixed absolute engineering tolerance; no significance claim",
+        "binding": {
+          "backend": "synthetic-three-wire-line",
+          "calibration": {
+            "calibration_id": "synthetic-fixture-20261112",
+            "captured_at": "2026-11-12T00:00:00Z",
+            "source_sha256": "a0fc5e1701db0ea226bf635729f03aa3f2d380ea65f952e9f77822ab18124b5f",
+            "valid_until": "2026-11-13T00:00:00Z"
+          },
+          "device_fingerprint": "7af1ae37bf6eb1d85b40ca4a60d930e3f2410dae11a069ff23d57e4d8fcb851d",
+          "origin": "synthetic",
+          "provider": "nrqc-offline-qualification",
+          "schema": "nrqc-acquisition-binding-v1"
+        },
+        "counts_bit_order": "c[width-1]...c[0], most significant bit on the left",
+        "evidence_class": "OFFLINE_EXPERIMENT_PLAN",
+        "fingerprint": "b215fc425abe1986cd75e8e32c436157507154bf6f40feba68fcfdc1a321729d",
+        "hardware_submissions": 0,
+        "measure_wires": [
+          1
+        ],
+        "measured_openqasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[3];\ncreg c[1];\nsdg q[0];\nh q[0];\nu1(2*pi/2) q[0];\nh q[0];\ns q[0];\nsdg q[2];\nh q[2];\nu1(2*pi/2) q[2];\nh q[2];\ns q[2];\nsdg q[1];\nh q[1];\nu1(2*pi/2) q[1];\nh q[1];\ns q[1];\ncx q[0],q[1];\ncx q[2],q[1];\nmeasure q[1] -> c[0];\n",
+        "prediction": {
+          "calculator_request": {
+            "backend": "cyclotomic_pow2",
+            "limits": {
+              "max_branches": 16,
+              "max_work": 998051
+            },
+            "n_qubits": 3,
+            "operations": [
+              [
+                "sdg",
+                [
+                  0
+                ]
+              ],
+              [
+                "h",
+                [
+                  0
+                ]
+              ],
+              [
+                "p2",
+                [
+                  0
+                ]
+              ],
+              [
+                "h",
+                [
+                  0
+                ]
+              ],
+              [
+                "s",
+                [
+                  0
+                ]
+              ],
+              [
+                "sdg",
+                [
+                  2
+                ]
+              ],
+              [
+                "h",
+                [
+                  2
+                ]
+              ],
+              [
+                "p2",
+                [
+                  2
+                ]
+              ],
+              [
+                "h",
+                [
+                  2
+                ]
+              ],
+              [
+                "s",
+                [
+                  2
+                ]
+              ],
+              [
+                "sdg",
+                [
+                  1
+                ]
+              ],
+              [
+                "h",
+                [
+                  1
+                ]
+              ],
+              [
+                "p2",
+                [
+                  1
+                ]
+              ],
+              [
+                "h",
+                [
+                  1
+                ]
+              ],
+              [
+                "s",
+                [
+                  1
+                ]
+              ],
+              [
+                "cx",
+                [
+                  0,
+                  1
+                ]
+              ],
+              [
+                "cx",
+                [
+                  2,
+                  1
+                ]
+              ]
+            ],
+            "queries": [
+              {
+                "id": "probability_one",
+                "kind": "probability",
+                "outcomes": {
+                  "1": 1
+                }
+              }
+            ],
+            "schema": "nrqc-calculator-v1"
+          },
+          "device": {
+            "coupling_map": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "max_gates": 1024,
+            "n_qubits": 3,
+            "name": "declared-software-three-wire-line",
+            "native_gates": [
+              "h",
+              "s",
+              "sdg",
+              "cx",
+              "p2",
+              "p4",
+              "p8",
+              "p16",
+              "p32",
+              "p64"
+            ],
+            "schema": "nrqc-device-profile-v1"
+          },
+          "evidence_class": "LOCAL_IDEAL_CALCULATION",
+          "feature_view": "first_layer",
+          "features": [
+            0,
+            32
+          ],
+          "fingerprint": "5140501a72ba63620298a525e589b7ed8d4aa96a2174c881c5e90c130decfd4a",
+          "hardware_jobs": 0,
+          "mapping": {
+            "final_layout": {
+              "0": 0,
+              "1": 2,
+              "3": 1
+            },
+            "initial_layout": {
+              "0": 0,
+              "1": 2,
+              "3": 1
+            },
+            "native_trace": [
+              {
+                "native_start": 0,
+                "native_stop": 1,
+                "source_index": 0
+              },
+              {
+                "native_start": 1,
+                "native_stop": 2,
+                "source_index": 1
+              },
+              {
+                "native_start": 2,
+                "native_stop": 3,
+                "source_index": 2
+              },
+              {
+                "native_start": 3,
+                "native_stop": 4,
+                "source_index": 3
+              },
+              {
+                "native_start": 4,
+                "native_stop": 5,
+                "source_index": 4
+              },
+              {
+                "native_start": 5,
+                "native_stop": 6,
+                "source_index": 5
+              },
+              {
+                "native_start": 6,
+                "native_stop": 7,
+                "source_index": 6
+              },
+              {
+                "native_start": 7,
+                "native_stop": 8,
+                "source_index": 7
+              },
+              {
+                "native_start": 8,
+                "native_stop": 9,
+                "source_index": 8
+              },
+              {
+                "native_start": 9,
+                "native_stop": 10,
+                "source_index": 9
+              },
+              {
+                "native_start": 10,
+                "native_stop": 11,
+                "source_index": 10
+              },
+              {
+                "native_start": 11,
+                "native_stop": 12,
+                "source_index": 11
+              },
+              {
+                "native_start": 12,
+                "native_stop": 13,
+                "source_index": 12
+              },
+              {
+                "native_start": 13,
+                "native_stop": 14,
+                "source_index": 13
+              },
+              {
+                "native_start": 14,
+                "native_stop": 15,
+                "source_index": 14
+              },
+              {
+                "native_start": 15,
+                "native_stop": 16,
+                "source_index": 15
+              },
+              {
+                "native_start": 16,
+                "native_stop": 17,
+                "source_index": 16
+              }
+            ],
+            "omitted_logical_wires_initial_zero": [
+              2
+            ],
+            "placement_optimality_certified": false,
+            "profile": {
+              "coupling_map": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  2,
+                  1
+                ]
+              ],
+              "max_gates": 1024,
+              "n_qubits": 3,
+              "name": "declared-software-three-wire-line",
+              "native_gates": [
+                "h",
+                "s",
+                "sdg",
+                "cx",
+                "p2",
+                "p4",
+                "p8",
+                "p16",
+                "p32",
+                "p64"
+              ],
+              "schema": "nrqc-device-profile-v1"
+            }
+          },
+          "model": {
+            "architecture": "four-qubit-five-ry-directed-cx-v1",
+            "entanglers": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "execution": "EXACT_CLASSICAL_SIMULATION",
+            "feature_view": "first_layer",
+            "fingerprint": "e1d2389394de1274736c7b35eaade1cec59461090427c229d8613cdd2ba2b815",
+            "hardware_authorized": false,
+            "phase_steps": [
+              32,
+              0,
+              0,
+              32,
+              0
+            ],
+            "phase_unit": "pi/32",
+            "proof_status": "NOT_A_MATHEMATICAL_PROOF",
+            "schema": "native-learning-topology-model-v1",
+            "training_sha256": "92b0155d54dbbd4e08edd4ef6d5b91df1b1c0c4cf50f66256d8d77d025074cd2"
+          },
+          "openqasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[3];\nsdg q[0];\nh q[0];\nu1(2*pi/2) q[0];\nh q[0];\ns q[0];\nsdg q[2];\nh q[2];\nu1(2*pi/2) q[2];\nh q[2];\ns q[2];\nsdg q[1];\nh q[1];\nu1(2*pi/2) q[1];\nh q[1];\ns q[1];\ncx q[0],q[1];\ncx q[2],q[1];\n",
+          "predicted": 1,
+          "probability_one": {
+            "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+            "denominator": "1",
+            "real_numerators": [
+              1
+            ]
+          },
+          "resources": {
+            "exact_work": 2026,
+            "max_work": 1000000,
+            "native_gates": 17,
+            "source_gates": 17
+          },
+          "schema": "nrqc-model-prediction-v1",
+          "verification": {
+            "basis_inputs_checked": 8,
+            "qasm_exact_active_unitary_roundtrip": true,
+            "scope": "full active-register unitary, omitted wires initialized to zero",
+            "status": "verified"
+          }
+        },
+        "program_sha256": "069e6954e4041f84fd4d9102d333d93553f04ddab1809f2aad678d095861afb5",
+        "readout_classical_bit": 0,
+        "run_id": "context-0-repeat-0",
+        "schema": "nrqc-model-experiment-plan-v1",
+        "shots": 512,
+        "statistic": "raw Z-readout marginal absolute probability error",
+        "tolerance": {
+          "denominator": 8,
+          "numerator": 1
+        }
+      },
+      {
+        "acceptance_policy": "fixed absolute engineering tolerance; no significance claim",
+        "binding": {
+          "backend": "synthetic-three-wire-line",
+          "calibration": {
+            "calibration_id": "synthetic-fixture-20261112",
+            "captured_at": "2026-11-12T00:00:00Z",
+            "source_sha256": "a0fc5e1701db0ea226bf635729f03aa3f2d380ea65f952e9f77822ab18124b5f",
+            "valid_until": "2026-11-13T00:00:00Z"
+          },
+          "device_fingerprint": "7af1ae37bf6eb1d85b40ca4a60d930e3f2410dae11a069ff23d57e4d8fcb851d",
+          "origin": "synthetic",
+          "provider": "nrqc-offline-qualification",
+          "schema": "nrqc-acquisition-binding-v1"
+        },
+        "counts_bit_order": "c[width-1]...c[0], most significant bit on the left",
+        "evidence_class": "OFFLINE_EXPERIMENT_PLAN",
+        "fingerprint": "d9c84033593d9a3601a8b405aa83a82ce67fa316c5c1c2240f92bb2b6439b2c7",
+        "hardware_submissions": 0,
+        "measure_wires": [
+          1
+        ],
+        "measured_openqasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[3];\ncreg c[1];\nsdg q[0];\nh q[0];\nu1(2*pi/2) q[0];\nh q[0];\ns q[0];\nsdg q[2];\nh q[2];\nu1(2*pi/2) q[2];\nh q[2];\ns q[2];\nsdg q[1];\nh q[1];\nu1(2*pi/2) q[1];\nh q[1];\ns q[1];\ncx q[0],q[1];\ncx q[2],q[1];\nmeasure q[1] -> c[0];\n",
+        "prediction": {
+          "calculator_request": {
+            "backend": "cyclotomic_pow2",
+            "limits": {
+              "max_branches": 16,
+              "max_work": 998051
+            },
+            "n_qubits": 3,
+            "operations": [
+              [
+                "sdg",
+                [
+                  0
+                ]
+              ],
+              [
+                "h",
+                [
+                  0
+                ]
+              ],
+              [
+                "p2",
+                [
+                  0
+                ]
+              ],
+              [
+                "h",
+                [
+                  0
+                ]
+              ],
+              [
+                "s",
+                [
+                  0
+                ]
+              ],
+              [
+                "sdg",
+                [
+                  2
+                ]
+              ],
+              [
+                "h",
+                [
+                  2
+                ]
+              ],
+              [
+                "p2",
+                [
+                  2
+                ]
+              ],
+              [
+                "h",
+                [
+                  2
+                ]
+              ],
+              [
+                "s",
+                [
+                  2
+                ]
+              ],
+              [
+                "sdg",
+                [
+                  1
+                ]
+              ],
+              [
+                "h",
+                [
+                  1
+                ]
+              ],
+              [
+                "p2",
+                [
+                  1
+                ]
+              ],
+              [
+                "h",
+                [
+                  1
+                ]
+              ],
+              [
+                "s",
+                [
+                  1
+                ]
+              ],
+              [
+                "cx",
+                [
+                  0,
+                  1
+                ]
+              ],
+              [
+                "cx",
+                [
+                  2,
+                  1
+                ]
+              ]
+            ],
+            "queries": [
+              {
+                "id": "probability_one",
+                "kind": "probability",
+                "outcomes": {
+                  "1": 1
+                }
+              }
+            ],
+            "schema": "nrqc-calculator-v1"
+          },
+          "device": {
+            "coupling_map": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "max_gates": 1024,
+            "n_qubits": 3,
+            "name": "declared-software-three-wire-line",
+            "native_gates": [
+              "h",
+              "s",
+              "sdg",
+              "cx",
+              "p2",
+              "p4",
+              "p8",
+              "p16",
+              "p32",
+              "p64"
+            ],
+            "schema": "nrqc-device-profile-v1"
+          },
+          "evidence_class": "LOCAL_IDEAL_CALCULATION",
+          "feature_view": "first_layer",
+          "features": [
+            0,
+            32
+          ],
+          "fingerprint": "5140501a72ba63620298a525e589b7ed8d4aa96a2174c881c5e90c130decfd4a",
+          "hardware_jobs": 0,
+          "mapping": {
+            "final_layout": {
+              "0": 0,
+              "1": 2,
+              "3": 1
+            },
+            "initial_layout": {
+              "0": 0,
+              "1": 2,
+              "3": 1
+            },
+            "native_trace": [
+              {
+                "native_start": 0,
+                "native_stop": 1,
+                "source_index": 0
+              },
+              {
+                "native_start": 1,
+                "native_stop": 2,
+                "source_index": 1
+              },
+              {
+                "native_start": 2,
+                "native_stop": 3,
+                "source_index": 2
+              },
+              {
+                "native_start": 3,
+                "native_stop": 4,
+                "source_index": 3
+              },
+              {
+                "native_start": 4,
+                "native_stop": 5,
+                "source_index": 4
+              },
+              {
+                "native_start": 5,
+                "native_stop": 6,
+                "source_index": 5
+              },
+              {
+                "native_start": 6,
+                "native_stop": 7,
+                "source_index": 6
+              },
+              {
+                "native_start": 7,
+                "native_stop": 8,
+                "source_index": 7
+              },
+              {
+                "native_start": 8,
+                "native_stop": 9,
+                "source_index": 8
+              },
+              {
+                "native_start": 9,
+                "native_stop": 10,
+                "source_index": 9
+              },
+              {
+                "native_start": 10,
+                "native_stop": 11,
+                "source_index": 10
+              },
+              {
+                "native_start": 11,
+                "native_stop": 12,
+                "source_index": 11
+              },
+              {
+                "native_start": 12,
+                "native_stop": 13,
+                "source_index": 12
+              },
+              {
+                "native_start": 13,
+                "native_stop": 14,
+                "source_index": 13
+              },
+              {
+                "native_start": 14,
+                "native_stop": 15,
+                "source_index": 14
+              },
+              {
+                "native_start": 15,
+                "native_stop": 16,
+                "source_index": 15
+              },
+              {
+                "native_start": 16,
+                "native_stop": 17,
+                "source_index": 16
+              }
+            ],
+            "omitted_logical_wires_initial_zero": [
+              2
+            ],
+            "placement_optimality_certified": false,
+            "profile": {
+              "coupling_map": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  2,
+                  1
+                ]
+              ],
+              "max_gates": 1024,
+              "n_qubits": 3,
+              "name": "declared-software-three-wire-line",
+              "native_gates": [
+                "h",
+                "s",
+                "sdg",
+                "cx",
+                "p2",
+                "p4",
+                "p8",
+                "p16",
+                "p32",
+                "p64"
+              ],
+              "schema": "nrqc-device-profile-v1"
+            }
+          },
+          "model": {
+            "architecture": "four-qubit-five-ry-directed-cx-v1",
+            "entanglers": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "execution": "EXACT_CLASSICAL_SIMULATION",
+            "feature_view": "first_layer",
+            "fingerprint": "e1d2389394de1274736c7b35eaade1cec59461090427c229d8613cdd2ba2b815",
+            "hardware_authorized": false,
+            "phase_steps": [
+              32,
+              0,
+              0,
+              32,
+              0
+            ],
+            "phase_unit": "pi/32",
+            "proof_status": "NOT_A_MATHEMATICAL_PROOF",
+            "schema": "native-learning-topology-model-v1",
+            "training_sha256": "92b0155d54dbbd4e08edd4ef6d5b91df1b1c0c4cf50f66256d8d77d025074cd2"
+          },
+          "openqasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[3];\nsdg q[0];\nh q[0];\nu1(2*pi/2) q[0];\nh q[0];\ns q[0];\nsdg q[2];\nh q[2];\nu1(2*pi/2) q[2];\nh q[2];\ns q[2];\nsdg q[1];\nh q[1];\nu1(2*pi/2) q[1];\nh q[1];\ns q[1];\ncx q[0],q[1];\ncx q[2],q[1];\n",
+          "predicted": 1,
+          "probability_one": {
+            "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+            "denominator": "1",
+            "real_numerators": [
+              1
+            ]
+          },
+          "resources": {
+            "exact_work": 2026,
+            "max_work": 1000000,
+            "native_gates": 17,
+            "source_gates": 17
+          },
+          "schema": "nrqc-model-prediction-v1",
+          "verification": {
+            "basis_inputs_checked": 8,
+            "qasm_exact_active_unitary_roundtrip": true,
+            "scope": "full active-register unitary, omitted wires initialized to zero",
+            "status": "verified"
+          }
+        },
+        "program_sha256": "069e6954e4041f84fd4d9102d333d93553f04ddab1809f2aad678d095861afb5",
+        "readout_classical_bit": 0,
+        "run_id": "context-0-repeat-1",
+        "schema": "nrqc-model-experiment-plan-v1",
+        "shots": 512,
+        "statistic": "raw Z-readout marginal absolute probability error",
+        "tolerance": {
+          "denominator": 8,
+          "numerator": 1
+        }
+      },
+      {
+        "acceptance_policy": "fixed absolute engineering tolerance; no significance claim",
+        "binding": {
+          "backend": "synthetic-three-wire-line",
+          "calibration": {
+            "calibration_id": "synthetic-fixture-20261112",
+            "captured_at": "2026-11-12T00:00:00Z",
+            "source_sha256": "a0fc5e1701db0ea226bf635729f03aa3f2d380ea65f952e9f77822ab18124b5f",
+            "valid_until": "2026-11-13T00:00:00Z"
+          },
+          "device_fingerprint": "7af1ae37bf6eb1d85b40ca4a60d930e3f2410dae11a069ff23d57e4d8fcb851d",
+          "origin": "synthetic",
+          "provider": "nrqc-offline-qualification",
+          "schema": "nrqc-acquisition-binding-v1"
+        },
+        "counts_bit_order": "c[width-1]...c[0], most significant bit on the left",
+        "evidence_class": "OFFLINE_EXPERIMENT_PLAN",
+        "fingerprint": "da5c15dff94426e9ec64f09cc7f6c24dfbb97651e8822c42b70e70a0ffb02c20",
+        "hardware_submissions": 0,
+        "measure_wires": [
+          1
+        ],
+        "measured_openqasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[3];\ncreg c[1];\nsdg q[0];\nh q[0];\nu1(2*pi/2) q[0];\nh q[0];\ns q[0];\nsdg q[2];\nh q[2];\nu1(2*pi/2) q[2];\nh q[2];\ns q[2];\nsdg q[1];\nh q[1];\nu1(2*pi/2) q[1];\nh q[1];\ns q[1];\ncx q[0],q[1];\ncx q[2],q[1];\nmeasure q[1] -> c[0];\n",
+        "prediction": {
+          "calculator_request": {
+            "backend": "cyclotomic_pow2",
+            "limits": {
+              "max_branches": 16,
+              "max_work": 998051
+            },
+            "n_qubits": 3,
+            "operations": [
+              [
+                "sdg",
+                [
+                  0
+                ]
+              ],
+              [
+                "h",
+                [
+                  0
+                ]
+              ],
+              [
+                "p2",
+                [
+                  0
+                ]
+              ],
+              [
+                "h",
+                [
+                  0
+                ]
+              ],
+              [
+                "s",
+                [
+                  0
+                ]
+              ],
+              [
+                "sdg",
+                [
+                  2
+                ]
+              ],
+              [
+                "h",
+                [
+                  2
+                ]
+              ],
+              [
+                "p2",
+                [
+                  2
+                ]
+              ],
+              [
+                "h",
+                [
+                  2
+                ]
+              ],
+              [
+                "s",
+                [
+                  2
+                ]
+              ],
+              [
+                "sdg",
+                [
+                  1
+                ]
+              ],
+              [
+                "h",
+                [
+                  1
+                ]
+              ],
+              [
+                "p2",
+                [
+                  1
+                ]
+              ],
+              [
+                "h",
+                [
+                  1
+                ]
+              ],
+              [
+                "s",
+                [
+                  1
+                ]
+              ],
+              [
+                "cx",
+                [
+                  0,
+                  1
+                ]
+              ],
+              [
+                "cx",
+                [
+                  2,
+                  1
+                ]
+              ]
+            ],
+            "queries": [
+              {
+                "id": "probability_one",
+                "kind": "probability",
+                "outcomes": {
+                  "1": 1
+                }
+              }
+            ],
+            "schema": "nrqc-calculator-v1"
+          },
+          "device": {
+            "coupling_map": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "max_gates": 1024,
+            "n_qubits": 3,
+            "name": "declared-software-three-wire-line",
+            "native_gates": [
+              "h",
+              "s",
+              "sdg",
+              "cx",
+              "p2",
+              "p4",
+              "p8",
+              "p16",
+              "p32",
+              "p64"
+            ],
+            "schema": "nrqc-device-profile-v1"
+          },
+          "evidence_class": "LOCAL_IDEAL_CALCULATION",
+          "feature_view": "first_layer",
+          "features": [
+            0,
+            32
+          ],
+          "fingerprint": "5140501a72ba63620298a525e589b7ed8d4aa96a2174c881c5e90c130decfd4a",
+          "hardware_jobs": 0,
+          "mapping": {
+            "final_layout": {
+              "0": 0,
+              "1": 2,
+              "3": 1
+            },
+            "initial_layout": {
+              "0": 0,
+              "1": 2,
+              "3": 1
+            },
+            "native_trace": [
+              {
+                "native_start": 0,
+                "native_stop": 1,
+                "source_index": 0
+              },
+              {
+                "native_start": 1,
+                "native_stop": 2,
+                "source_index": 1
+              },
+              {
+                "native_start": 2,
+                "native_stop": 3,
+                "source_index": 2
+              },
+              {
+                "native_start": 3,
+                "native_stop": 4,
+                "source_index": 3
+              },
+              {
+                "native_start": 4,
+                "native_stop": 5,
+                "source_index": 4
+              },
+              {
+                "native_start": 5,
+                "native_stop": 6,
+                "source_index": 5
+              },
+              {
+                "native_start": 6,
+                "native_stop": 7,
+                "source_index": 6
+              },
+              {
+                "native_start": 7,
+                "native_stop": 8,
+                "source_index": 7
+              },
+              {
+                "native_start": 8,
+                "native_stop": 9,
+                "source_index": 8
+              },
+              {
+                "native_start": 9,
+                "native_stop": 10,
+                "source_index": 9
+              },
+              {
+                "native_start": 10,
+                "native_stop": 11,
+                "source_index": 10
+              },
+              {
+                "native_start": 11,
+                "native_stop": 12,
+                "source_index": 11
+              },
+              {
+                "native_start": 12,
+                "native_stop": 13,
+                "source_index": 12
+              },
+              {
+                "native_start": 13,
+                "native_stop": 14,
+                "source_index": 13
+              },
+              {
+                "native_start": 14,
+                "native_stop": 15,
+                "source_index": 14
+              },
+              {
+                "native_start": 15,
+                "native_stop": 16,
+                "source_index": 15
+              },
+              {
+                "native_start": 16,
+                "native_stop": 17,
+                "source_index": 16
+              }
+            ],
+            "omitted_logical_wires_initial_zero": [
+              2
+            ],
+            "placement_optimality_certified": false,
+            "profile": {
+              "coupling_map": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  2,
+                  1
+                ]
+              ],
+              "max_gates": 1024,
+              "n_qubits": 3,
+              "name": "declared-software-three-wire-line",
+              "native_gates": [
+                "h",
+                "s",
+                "sdg",
+                "cx",
+                "p2",
+                "p4",
+                "p8",
+                "p16",
+                "p32",
+                "p64"
+              ],
+              "schema": "nrqc-device-profile-v1"
+            }
+          },
+          "model": {
+            "architecture": "four-qubit-five-ry-directed-cx-v1",
+            "entanglers": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "execution": "EXACT_CLASSICAL_SIMULATION",
+            "feature_view": "first_layer",
+            "fingerprint": "e1d2389394de1274736c7b35eaade1cec59461090427c229d8613cdd2ba2b815",
+            "hardware_authorized": false,
+            "phase_steps": [
+              32,
+              0,
+              0,
+              32,
+              0
+            ],
+            "phase_unit": "pi/32",
+            "proof_status": "NOT_A_MATHEMATICAL_PROOF",
+            "schema": "native-learning-topology-model-v1",
+            "training_sha256": "92b0155d54dbbd4e08edd4ef6d5b91df1b1c0c4cf50f66256d8d77d025074cd2"
+          },
+          "openqasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[3];\nsdg q[0];\nh q[0];\nu1(2*pi/2) q[0];\nh q[0];\ns q[0];\nsdg q[2];\nh q[2];\nu1(2*pi/2) q[2];\nh q[2];\ns q[2];\nsdg q[1];\nh q[1];\nu1(2*pi/2) q[1];\nh q[1];\ns q[1];\ncx q[0],q[1];\ncx q[2],q[1];\n",
+          "predicted": 1,
+          "probability_one": {
+            "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+            "denominator": "1",
+            "real_numerators": [
+              1
+            ]
+          },
+          "resources": {
+            "exact_work": 2026,
+            "max_work": 1000000,
+            "native_gates": 17,
+            "source_gates": 17
+          },
+          "schema": "nrqc-model-prediction-v1",
+          "verification": {
+            "basis_inputs_checked": 8,
+            "qasm_exact_active_unitary_roundtrip": true,
+            "scope": "full active-register unitary, omitted wires initialized to zero",
+            "status": "verified"
+          }
+        },
+        "program_sha256": "069e6954e4041f84fd4d9102d333d93553f04ddab1809f2aad678d095861afb5",
+        "readout_classical_bit": 0,
+        "run_id": "context-0-repeat-2",
+        "schema": "nrqc-model-experiment-plan-v1",
+        "shots": 512,
+        "statistic": "raw Z-readout marginal absolute probability error",
+        "tolerance": {
+          "denominator": 8,
+          "numerator": 1
+        }
+      },
+      {
+        "acceptance_policy": "fixed absolute engineering tolerance; no significance claim",
+        "binding": {
+          "backend": "synthetic-three-wire-line",
+          "calibration": {
+            "calibration_id": "synthetic-fixture-20261112",
+            "captured_at": "2026-11-12T00:00:00Z",
+            "source_sha256": "a0fc5e1701db0ea226bf635729f03aa3f2d380ea65f952e9f77822ab18124b5f",
+            "valid_until": "2026-11-13T00:00:00Z"
+          },
+          "device_fingerprint": "7af1ae37bf6eb1d85b40ca4a60d930e3f2410dae11a069ff23d57e4d8fcb851d",
+          "origin": "synthetic",
+          "provider": "nrqc-offline-qualification",
+          "schema": "nrqc-acquisition-binding-v1"
+        },
+        "counts_bit_order": "c[width-1]...c[0], most significant bit on the left",
+        "evidence_class": "OFFLINE_EXPERIMENT_PLAN",
+        "fingerprint": "8e18c38cbc68fdb68d2a0c364ad62b4e2c0e04215cfdbc45cba5a8d974c59152",
+        "hardware_submissions": 0,
+        "measure_wires": [
+          1
+        ],
+        "measured_openqasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[3];\ncreg c[1];\nsdg q[0];\nh q[0];\nu1(2*pi/2) q[0];\nh q[0];\ns q[0];\nsdg q[1];\nh q[1];\nu1(2*pi/2) q[1];\nh q[1];\ns q[1];\ncx q[0],q[1];\ncx q[2],q[1];\nmeasure q[1] -> c[0];\n",
+        "prediction": {
+          "calculator_request": {
+            "backend": "cyclotomic_pow2",
+            "limits": {
+              "max_branches": 16,
+              "max_work": 998627
+            },
+            "n_qubits": 3,
+            "operations": [
+              [
+                "sdg",
+                [
+                  0
+                ]
+              ],
+              [
+                "h",
+                [
+                  0
+                ]
+              ],
+              [
+                "p2",
+                [
+                  0
+                ]
+              ],
+              [
+                "h",
+                [
+                  0
+                ]
+              ],
+              [
+                "s",
+                [
+                  0
+                ]
+              ],
+              [
+                "sdg",
+                [
+                  1
+                ]
+              ],
+              [
+                "h",
+                [
+                  1
+                ]
+              ],
+              [
+                "p2",
+                [
+                  1
+                ]
+              ],
+              [
+                "h",
+                [
+                  1
+                ]
+              ],
+              [
+                "s",
+                [
+                  1
+                ]
+              ],
+              [
+                "cx",
+                [
+                  0,
+                  1
+                ]
+              ],
+              [
+                "cx",
+                [
+                  2,
+                  1
+                ]
+              ]
+            ],
+            "queries": [
+              {
+                "id": "probability_one",
+                "kind": "probability",
+                "outcomes": {
+                  "1": 1
+                }
+              }
+            ],
+            "schema": "nrqc-calculator-v1"
+          },
+          "device": {
+            "coupling_map": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "max_gates": 1024,
+            "n_qubits": 3,
+            "name": "declared-software-three-wire-line",
+            "native_gates": [
+              "h",
+              "s",
+              "sdg",
+              "cx",
+              "p2",
+              "p4",
+              "p8",
+              "p16",
+              "p32",
+              "p64"
+            ],
+            "schema": "nrqc-device-profile-v1"
+          },
+          "evidence_class": "LOCAL_IDEAL_CALCULATION",
+          "feature_view": "first_layer",
+          "features": [
+            0,
+            0
+          ],
+          "fingerprint": "027c58303fb219d3248dd3191fc6b3f0518defa93706b4fd4a1bab3e8747d9d2",
+          "hardware_jobs": 0,
+          "mapping": {
+            "final_layout": {
+              "0": 0,
+              "1": 2,
+              "3": 1
+            },
+            "initial_layout": {
+              "0": 0,
+              "1": 2,
+              "3": 1
+            },
+            "native_trace": [
+              {
+                "native_start": 0,
+                "native_stop": 1,
+                "source_index": 0
+              },
+              {
+                "native_start": 1,
+                "native_stop": 2,
+                "source_index": 1
+              },
+              {
+                "native_start": 2,
+                "native_stop": 3,
+                "source_index": 2
+              },
+              {
+                "native_start": 3,
+                "native_stop": 4,
+                "source_index": 3
+              },
+              {
+                "native_start": 4,
+                "native_stop": 5,
+                "source_index": 4
+              },
+              {
+                "native_start": 5,
+                "native_stop": 6,
+                "source_index": 5
+              },
+              {
+                "native_start": 6,
+                "native_stop": 7,
+                "source_index": 6
+              },
+              {
+                "native_start": 7,
+                "native_stop": 8,
+                "source_index": 7
+              },
+              {
+                "native_start": 8,
+                "native_stop": 9,
+                "source_index": 8
+              },
+              {
+                "native_start": 9,
+                "native_stop": 10,
+                "source_index": 9
+              },
+              {
+                "native_start": 10,
+                "native_stop": 11,
+                "source_index": 10
+              },
+              {
+                "native_start": 11,
+                "native_stop": 12,
+                "source_index": 11
+              }
+            ],
+            "omitted_logical_wires_initial_zero": [
+              2
+            ],
+            "placement_optimality_certified": false,
+            "profile": {
+              "coupling_map": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  2,
+                  1
+                ]
+              ],
+              "max_gates": 1024,
+              "n_qubits": 3,
+              "name": "declared-software-three-wire-line",
+              "native_gates": [
+                "h",
+                "s",
+                "sdg",
+                "cx",
+                "p2",
+                "p4",
+                "p8",
+                "p16",
+                "p32",
+                "p64"
+              ],
+              "schema": "nrqc-device-profile-v1"
+            }
+          },
+          "model": {
+            "architecture": "four-qubit-five-ry-directed-cx-v1",
+            "entanglers": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "execution": "EXACT_CLASSICAL_SIMULATION",
+            "feature_view": "first_layer",
+            "fingerprint": "e1d2389394de1274736c7b35eaade1cec59461090427c229d8613cdd2ba2b815",
+            "hardware_authorized": false,
+            "phase_steps": [
+              32,
+              0,
+              0,
+              32,
+              0
+            ],
+            "phase_unit": "pi/32",
+            "proof_status": "NOT_A_MATHEMATICAL_PROOF",
+            "schema": "native-learning-topology-model-v1",
+            "training_sha256": "92b0155d54dbbd4e08edd4ef6d5b91df1b1c0c4cf50f66256d8d77d025074cd2"
+          },
+          "openqasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[3];\nsdg q[0];\nh q[0];\nu1(2*pi/2) q[0];\nh q[0];\ns q[0];\nsdg q[1];\nh q[1];\nu1(2*pi/2) q[1];\nh q[1];\ns q[1];\ncx q[0],q[1];\ncx q[2],q[1];\n",
+          "predicted": 0,
+          "probability_one": {
+            "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+            "denominator": "1",
+            "real_numerators": []
+          },
+          "resources": {
+            "exact_work": 1426,
+            "max_work": 1000000,
+            "native_gates": 12,
+            "source_gates": 12
+          },
+          "schema": "nrqc-model-prediction-v1",
+          "verification": {
+            "basis_inputs_checked": 8,
+            "qasm_exact_active_unitary_roundtrip": true,
+            "scope": "full active-register unitary, omitted wires initialized to zero",
+            "status": "verified"
+          }
+        },
+        "program_sha256": "c7297471a59bfde577d57921a9d8e89e81dc1ed70a31082c3d56c95976dd9d14",
+        "readout_classical_bit": 0,
+        "run_id": "context-1-repeat-0",
+        "schema": "nrqc-model-experiment-plan-v1",
+        "shots": 512,
+        "statistic": "raw Z-readout marginal absolute probability error",
+        "tolerance": {
+          "denominator": 8,
+          "numerator": 1
+        }
+      },
+      {
+        "acceptance_policy": "fixed absolute engineering tolerance; no significance claim",
+        "binding": {
+          "backend": "synthetic-three-wire-line",
+          "calibration": {
+            "calibration_id": "synthetic-fixture-20261112",
+            "captured_at": "2026-11-12T00:00:00Z",
+            "source_sha256": "a0fc5e1701db0ea226bf635729f03aa3f2d380ea65f952e9f77822ab18124b5f",
+            "valid_until": "2026-11-13T00:00:00Z"
+          },
+          "device_fingerprint": "7af1ae37bf6eb1d85b40ca4a60d930e3f2410dae11a069ff23d57e4d8fcb851d",
+          "origin": "synthetic",
+          "provider": "nrqc-offline-qualification",
+          "schema": "nrqc-acquisition-binding-v1"
+        },
+        "counts_bit_order": "c[width-1]...c[0], most significant bit on the left",
+        "evidence_class": "OFFLINE_EXPERIMENT_PLAN",
+        "fingerprint": "8abd9af30b5172d5533881a1875e0dca482702e46f66d06e0518845567aff686",
+        "hardware_submissions": 0,
+        "measure_wires": [
+          1
+        ],
+        "measured_openqasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[3];\ncreg c[1];\nsdg q[0];\nh q[0];\nu1(2*pi/2) q[0];\nh q[0];\ns q[0];\nsdg q[1];\nh q[1];\nu1(2*pi/2) q[1];\nh q[1];\ns q[1];\ncx q[0],q[1];\ncx q[2],q[1];\nmeasure q[1] -> c[0];\n",
+        "prediction": {
+          "calculator_request": {
+            "backend": "cyclotomic_pow2",
+            "limits": {
+              "max_branches": 16,
+              "max_work": 998627
+            },
+            "n_qubits": 3,
+            "operations": [
+              [
+                "sdg",
+                [
+                  0
+                ]
+              ],
+              [
+                "h",
+                [
+                  0
+                ]
+              ],
+              [
+                "p2",
+                [
+                  0
+                ]
+              ],
+              [
+                "h",
+                [
+                  0
+                ]
+              ],
+              [
+                "s",
+                [
+                  0
+                ]
+              ],
+              [
+                "sdg",
+                [
+                  1
+                ]
+              ],
+              [
+                "h",
+                [
+                  1
+                ]
+              ],
+              [
+                "p2",
+                [
+                  1
+                ]
+              ],
+              [
+                "h",
+                [
+                  1
+                ]
+              ],
+              [
+                "s",
+                [
+                  1
+                ]
+              ],
+              [
+                "cx",
+                [
+                  0,
+                  1
+                ]
+              ],
+              [
+                "cx",
+                [
+                  2,
+                  1
+                ]
+              ]
+            ],
+            "queries": [
+              {
+                "id": "probability_one",
+                "kind": "probability",
+                "outcomes": {
+                  "1": 1
+                }
+              }
+            ],
+            "schema": "nrqc-calculator-v1"
+          },
+          "device": {
+            "coupling_map": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "max_gates": 1024,
+            "n_qubits": 3,
+            "name": "declared-software-three-wire-line",
+            "native_gates": [
+              "h",
+              "s",
+              "sdg",
+              "cx",
+              "p2",
+              "p4",
+              "p8",
+              "p16",
+              "p32",
+              "p64"
+            ],
+            "schema": "nrqc-device-profile-v1"
+          },
+          "evidence_class": "LOCAL_IDEAL_CALCULATION",
+          "feature_view": "first_layer",
+          "features": [
+            0,
+            0
+          ],
+          "fingerprint": "027c58303fb219d3248dd3191fc6b3f0518defa93706b4fd4a1bab3e8747d9d2",
+          "hardware_jobs": 0,
+          "mapping": {
+            "final_layout": {
+              "0": 0,
+              "1": 2,
+              "3": 1
+            },
+            "initial_layout": {
+              "0": 0,
+              "1": 2,
+              "3": 1
+            },
+            "native_trace": [
+              {
+                "native_start": 0,
+                "native_stop": 1,
+                "source_index": 0
+              },
+              {
+                "native_start": 1,
+                "native_stop": 2,
+                "source_index": 1
+              },
+              {
+                "native_start": 2,
+                "native_stop": 3,
+                "source_index": 2
+              },
+              {
+                "native_start": 3,
+                "native_stop": 4,
+                "source_index": 3
+              },
+              {
+                "native_start": 4,
+                "native_stop": 5,
+                "source_index": 4
+              },
+              {
+                "native_start": 5,
+                "native_stop": 6,
+                "source_index": 5
+              },
+              {
+                "native_start": 6,
+                "native_stop": 7,
+                "source_index": 6
+              },
+              {
+                "native_start": 7,
+                "native_stop": 8,
+                "source_index": 7
+              },
+              {
+                "native_start": 8,
+                "native_stop": 9,
+                "source_index": 8
+              },
+              {
+                "native_start": 9,
+                "native_stop": 10,
+                "source_index": 9
+              },
+              {
+                "native_start": 10,
+                "native_stop": 11,
+                "source_index": 10
+              },
+              {
+                "native_start": 11,
+                "native_stop": 12,
+                "source_index": 11
+              }
+            ],
+            "omitted_logical_wires_initial_zero": [
+              2
+            ],
+            "placement_optimality_certified": false,
+            "profile": {
+              "coupling_map": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  2,
+                  1
+                ]
+              ],
+              "max_gates": 1024,
+              "n_qubits": 3,
+              "name": "declared-software-three-wire-line",
+              "native_gates": [
+                "h",
+                "s",
+                "sdg",
+                "cx",
+                "p2",
+                "p4",
+                "p8",
+                "p16",
+                "p32",
+                "p64"
+              ],
+              "schema": "nrqc-device-profile-v1"
+            }
+          },
+          "model": {
+            "architecture": "four-qubit-five-ry-directed-cx-v1",
+            "entanglers": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "execution": "EXACT_CLASSICAL_SIMULATION",
+            "feature_view": "first_layer",
+            "fingerprint": "e1d2389394de1274736c7b35eaade1cec59461090427c229d8613cdd2ba2b815",
+            "hardware_authorized": false,
+            "phase_steps": [
+              32,
+              0,
+              0,
+              32,
+              0
+            ],
+            "phase_unit": "pi/32",
+            "proof_status": "NOT_A_MATHEMATICAL_PROOF",
+            "schema": "native-learning-topology-model-v1",
+            "training_sha256": "92b0155d54dbbd4e08edd4ef6d5b91df1b1c0c4cf50f66256d8d77d025074cd2"
+          },
+          "openqasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[3];\nsdg q[0];\nh q[0];\nu1(2*pi/2) q[0];\nh q[0];\ns q[0];\nsdg q[1];\nh q[1];\nu1(2*pi/2) q[1];\nh q[1];\ns q[1];\ncx q[0],q[1];\ncx q[2],q[1];\n",
+          "predicted": 0,
+          "probability_one": {
+            "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+            "denominator": "1",
+            "real_numerators": []
+          },
+          "resources": {
+            "exact_work": 1426,
+            "max_work": 1000000,
+            "native_gates": 12,
+            "source_gates": 12
+          },
+          "schema": "nrqc-model-prediction-v1",
+          "verification": {
+            "basis_inputs_checked": 8,
+            "qasm_exact_active_unitary_roundtrip": true,
+            "scope": "full active-register unitary, omitted wires initialized to zero",
+            "status": "verified"
+          }
+        },
+        "program_sha256": "c7297471a59bfde577d57921a9d8e89e81dc1ed70a31082c3d56c95976dd9d14",
+        "readout_classical_bit": 0,
+        "run_id": "context-1-repeat-1",
+        "schema": "nrqc-model-experiment-plan-v1",
+        "shots": 512,
+        "statistic": "raw Z-readout marginal absolute probability error",
+        "tolerance": {
+          "denominator": 8,
+          "numerator": 1
+        }
+      },
+      {
+        "acceptance_policy": "fixed absolute engineering tolerance; no significance claim",
+        "binding": {
+          "backend": "synthetic-three-wire-line",
+          "calibration": {
+            "calibration_id": "synthetic-fixture-20261112",
+            "captured_at": "2026-11-12T00:00:00Z",
+            "source_sha256": "a0fc5e1701db0ea226bf635729f03aa3f2d380ea65f952e9f77822ab18124b5f",
+            "valid_until": "2026-11-13T00:00:00Z"
+          },
+          "device_fingerprint": "7af1ae37bf6eb1d85b40ca4a60d930e3f2410dae11a069ff23d57e4d8fcb851d",
+          "origin": "synthetic",
+          "provider": "nrqc-offline-qualification",
+          "schema": "nrqc-acquisition-binding-v1"
+        },
+        "counts_bit_order": "c[width-1]...c[0], most significant bit on the left",
+        "evidence_class": "OFFLINE_EXPERIMENT_PLAN",
+        "fingerprint": "d42784473b4441e20ee0a725be2f17b2e3fcbfbb2e97be94f19fa1c124dc0d46",
+        "hardware_submissions": 0,
+        "measure_wires": [
+          1
+        ],
+        "measured_openqasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[3];\ncreg c[1];\nsdg q[0];\nh q[0];\nu1(2*pi/2) q[0];\nh q[0];\ns q[0];\nsdg q[1];\nh q[1];\nu1(2*pi/2) q[1];\nh q[1];\ns q[1];\ncx q[0],q[1];\ncx q[2],q[1];\nmeasure q[1] -> c[0];\n",
+        "prediction": {
+          "calculator_request": {
+            "backend": "cyclotomic_pow2",
+            "limits": {
+              "max_branches": 16,
+              "max_work": 998627
+            },
+            "n_qubits": 3,
+            "operations": [
+              [
+                "sdg",
+                [
+                  0
+                ]
+              ],
+              [
+                "h",
+                [
+                  0
+                ]
+              ],
+              [
+                "p2",
+                [
+                  0
+                ]
+              ],
+              [
+                "h",
+                [
+                  0
+                ]
+              ],
+              [
+                "s",
+                [
+                  0
+                ]
+              ],
+              [
+                "sdg",
+                [
+                  1
+                ]
+              ],
+              [
+                "h",
+                [
+                  1
+                ]
+              ],
+              [
+                "p2",
+                [
+                  1
+                ]
+              ],
+              [
+                "h",
+                [
+                  1
+                ]
+              ],
+              [
+                "s",
+                [
+                  1
+                ]
+              ],
+              [
+                "cx",
+                [
+                  0,
+                  1
+                ]
+              ],
+              [
+                "cx",
+                [
+                  2,
+                  1
+                ]
+              ]
+            ],
+            "queries": [
+              {
+                "id": "probability_one",
+                "kind": "probability",
+                "outcomes": {
+                  "1": 1
+                }
+              }
+            ],
+            "schema": "nrqc-calculator-v1"
+          },
+          "device": {
+            "coupling_map": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "max_gates": 1024,
+            "n_qubits": 3,
+            "name": "declared-software-three-wire-line",
+            "native_gates": [
+              "h",
+              "s",
+              "sdg",
+              "cx",
+              "p2",
+              "p4",
+              "p8",
+              "p16",
+              "p32",
+              "p64"
+            ],
+            "schema": "nrqc-device-profile-v1"
+          },
+          "evidence_class": "LOCAL_IDEAL_CALCULATION",
+          "feature_view": "first_layer",
+          "features": [
+            0,
+            0
+          ],
+          "fingerprint": "027c58303fb219d3248dd3191fc6b3f0518defa93706b4fd4a1bab3e8747d9d2",
+          "hardware_jobs": 0,
+          "mapping": {
+            "final_layout": {
+              "0": 0,
+              "1": 2,
+              "3": 1
+            },
+            "initial_layout": {
+              "0": 0,
+              "1": 2,
+              "3": 1
+            },
+            "native_trace": [
+              {
+                "native_start": 0,
+                "native_stop": 1,
+                "source_index": 0
+              },
+              {
+                "native_start": 1,
+                "native_stop": 2,
+                "source_index": 1
+              },
+              {
+                "native_start": 2,
+                "native_stop": 3,
+                "source_index": 2
+              },
+              {
+                "native_start": 3,
+                "native_stop": 4,
+                "source_index": 3
+              },
+              {
+                "native_start": 4,
+                "native_stop": 5,
+                "source_index": 4
+              },
+              {
+                "native_start": 5,
+                "native_stop": 6,
+                "source_index": 5
+              },
+              {
+                "native_start": 6,
+                "native_stop": 7,
+                "source_index": 6
+              },
+              {
+                "native_start": 7,
+                "native_stop": 8,
+                "source_index": 7
+              },
+              {
+                "native_start": 8,
+                "native_stop": 9,
+                "source_index": 8
+              },
+              {
+                "native_start": 9,
+                "native_stop": 10,
+                "source_index": 9
+              },
+              {
+                "native_start": 10,
+                "native_stop": 11,
+                "source_index": 10
+              },
+              {
+                "native_start": 11,
+                "native_stop": 12,
+                "source_index": 11
+              }
+            ],
+            "omitted_logical_wires_initial_zero": [
+              2
+            ],
+            "placement_optimality_certified": false,
+            "profile": {
+              "coupling_map": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  2,
+                  1
+                ]
+              ],
+              "max_gates": 1024,
+              "n_qubits": 3,
+              "name": "declared-software-three-wire-line",
+              "native_gates": [
+                "h",
+                "s",
+                "sdg",
+                "cx",
+                "p2",
+                "p4",
+                "p8",
+                "p16",
+                "p32",
+                "p64"
+              ],
+              "schema": "nrqc-device-profile-v1"
+            }
+          },
+          "model": {
+            "architecture": "four-qubit-five-ry-directed-cx-v1",
+            "entanglers": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "execution": "EXACT_CLASSICAL_SIMULATION",
+            "feature_view": "first_layer",
+            "fingerprint": "e1d2389394de1274736c7b35eaade1cec59461090427c229d8613cdd2ba2b815",
+            "hardware_authorized": false,
+            "phase_steps": [
+              32,
+              0,
+              0,
+              32,
+              0
+            ],
+            "phase_unit": "pi/32",
+            "proof_status": "NOT_A_MATHEMATICAL_PROOF",
+            "schema": "native-learning-topology-model-v1",
+            "training_sha256": "92b0155d54dbbd4e08edd4ef6d5b91df1b1c0c4cf50f66256d8d77d025074cd2"
+          },
+          "openqasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[3];\nsdg q[0];\nh q[0];\nu1(2*pi/2) q[0];\nh q[0];\ns q[0];\nsdg q[1];\nh q[1];\nu1(2*pi/2) q[1];\nh q[1];\ns q[1];\ncx q[0],q[1];\ncx q[2],q[1];\n",
+          "predicted": 0,
+          "probability_one": {
+            "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+            "denominator": "1",
+            "real_numerators": []
+          },
+          "resources": {
+            "exact_work": 1426,
+            "max_work": 1000000,
+            "native_gates": 12,
+            "source_gates": 12
+          },
+          "schema": "nrqc-model-prediction-v1",
+          "verification": {
+            "basis_inputs_checked": 8,
+            "qasm_exact_active_unitary_roundtrip": true,
+            "scope": "full active-register unitary, omitted wires initialized to zero",
+            "status": "verified"
+          }
+        },
+        "program_sha256": "c7297471a59bfde577d57921a9d8e89e81dc1ed70a31082c3d56c95976dd9d14",
+        "readout_classical_bit": 0,
+        "run_id": "context-1-repeat-2",
+        "schema": "nrqc-model-experiment-plan-v1",
+        "shots": 512,
+        "statistic": "raw Z-readout marginal absolute probability error",
+        "tolerance": {
+          "denominator": 8,
+          "numerator": 1
+        }
+      },
+      {
+        "acceptance_policy": "fixed absolute engineering tolerance; no significance claim",
+        "binding": {
+          "backend": "synthetic-three-wire-line",
+          "calibration": {
+            "calibration_id": "synthetic-fixture-20261112",
+            "captured_at": "2026-11-12T00:00:00Z",
+            "source_sha256": "a0fc5e1701db0ea226bf635729f03aa3f2d380ea65f952e9f77822ab18124b5f",
+            "valid_until": "2026-11-13T00:00:00Z"
+          },
+          "device_fingerprint": "7af1ae37bf6eb1d85b40ca4a60d930e3f2410dae11a069ff23d57e4d8fcb851d",
+          "origin": "synthetic",
+          "provider": "nrqc-offline-qualification",
+          "schema": "nrqc-acquisition-binding-v1"
+        },
+        "counts_bit_order": "c[width-1]...c[0], most significant bit on the left",
+        "evidence_class": "OFFLINE_EXPERIMENT_PLAN",
+        "fingerprint": "9d41d5a5050eaed1614c4e8e6e06db134f7893e23f8c8a37854eb15bcb072208",
+        "hardware_submissions": 0,
+        "measure_wires": [
+          1
+        ],
+        "measured_openqasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[3];\ncreg c[1];\nsdg q[0];\nh q[0];\nu1(2*pi/64) q[0];\nu1(2*pi/16) q[0];\nu1(2*pi/2) q[0];\nh q[0];\ns q[0];\nsdg q[2];\nh q[2];\nu1(2*pi/64) q[2];\nu1(2*pi/4) q[2];\nh q[2];\ns q[2];\nsdg q[1];\nh q[1];\nu1(2*pi/2) q[1];\nh q[1];\ns q[1];\ncx q[0],q[1];\ncx q[2],q[1];\nmeasure q[1] -> c[0];\n",
+        "prediction": {
+          "calculator_request": {
+            "backend": "cyclotomic_pow2",
+            "limits": {
+              "max_branches": 16,
+              "max_work": 995422
+            },
+            "n_qubits": 3,
+            "operations": [
+              [
+                "sdg",
+                [
+                  0
+                ]
+              ],
+              [
+                "h",
+                [
+                  0
+                ]
+              ],
+              [
+                "p64",
+                [
+                  0
+                ]
+              ],
+              [
+                "p16",
+                [
+                  0
+                ]
+              ],
+              [
+                "p2",
+                [
+                  0
+                ]
+              ],
+              [
+                "h",
+                [
+                  0
+                ]
+              ],
+              [
+                "s",
+                [
+                  0
+                ]
+              ],
+              [
+                "sdg",
+                [
+                  2
+                ]
+              ],
+              [
+                "h",
+                [
+                  2
+                ]
+              ],
+              [
+                "p64",
+                [
+                  2
+                ]
+              ],
+              [
+                "p4",
+                [
+                  2
+                ]
+              ],
+              [
+                "h",
+                [
+                  2
+                ]
+              ],
+              [
+                "s",
+                [
+                  2
+                ]
+              ],
+              [
+                "sdg",
+                [
+                  1
+                ]
+              ],
+              [
+                "h",
+                [
+                  1
+                ]
+              ],
+              [
+                "p2",
+                [
+                  1
+                ]
+              ],
+              [
+                "h",
+                [
+                  1
+                ]
+              ],
+              [
+                "s",
+                [
+                  1
+                ]
+              ],
+              [
+                "cx",
+                [
+                  0,
+                  1
+                ]
+              ],
+              [
+                "cx",
+                [
+                  2,
+                  1
+                ]
+              ]
+            ],
+            "queries": [
+              {
+                "id": "probability_one",
+                "kind": "probability",
+                "outcomes": {
+                  "1": 1
+                }
+              }
+            ],
+            "schema": "nrqc-calculator-v1"
+          },
+          "device": {
+            "coupling_map": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "max_gates": 1024,
+            "n_qubits": 3,
+            "name": "declared-software-three-wire-line",
+            "native_gates": [
+              "h",
+              "s",
+              "sdg",
+              "cx",
+              "p2",
+              "p4",
+              "p8",
+              "p16",
+              "p32",
+              "p64"
+            ],
+            "schema": "nrqc-device-profile-v1"
+          },
+          "evidence_class": "LOCAL_IDEAL_CALCULATION",
+          "feature_view": "first_layer",
+          "features": [
+            5,
+            17
+          ],
+          "fingerprint": "d5ac479c19e9225a914f9c754027070d800c55fd6b5c3018e5d7e74eb7ebc45b",
+          "hardware_jobs": 0,
+          "mapping": {
+            "final_layout": {
+              "0": 0,
+              "1": 2,
+              "3": 1
+            },
+            "initial_layout": {
+              "0": 0,
+              "1": 2,
+              "3": 1
+            },
+            "native_trace": [
+              {
+                "native_start": 0,
+                "native_stop": 1,
+                "source_index": 0
+              },
+              {
+                "native_start": 1,
+                "native_stop": 2,
+                "source_index": 1
+              },
+              {
+                "native_start": 2,
+                "native_stop": 3,
+                "source_index": 2
+              },
+              {
+                "native_start": 3,
+                "native_stop": 4,
+                "source_index": 3
+              },
+              {
+                "native_start": 4,
+                "native_stop": 5,
+                "source_index": 4
+              },
+              {
+                "native_start": 5,
+                "native_stop": 6,
+                "source_index": 5
+              },
+              {
+                "native_start": 6,
+                "native_stop": 7,
+                "source_index": 6
+              },
+              {
+                "native_start": 7,
+                "native_stop": 8,
+                "source_index": 7
+              },
+              {
+                "native_start": 8,
+                "native_stop": 9,
+                "source_index": 8
+              },
+              {
+                "native_start": 9,
+                "native_stop": 10,
+                "source_index": 9
+              },
+              {
+                "native_start": 10,
+                "native_stop": 11,
+                "source_index": 10
+              },
+              {
+                "native_start": 11,
+                "native_stop": 12,
+                "source_index": 11
+              },
+              {
+                "native_start": 12,
+                "native_stop": 13,
+                "source_index": 12
+              },
+              {
+                "native_start": 13,
+                "native_stop": 14,
+                "source_index": 13
+              },
+              {
+                "native_start": 14,
+                "native_stop": 15,
+                "source_index": 14
+              },
+              {
+                "native_start": 15,
+                "native_stop": 16,
+                "source_index": 15
+              },
+              {
+                "native_start": 16,
+                "native_stop": 17,
+                "source_index": 16
+              },
+              {
+                "native_start": 17,
+                "native_stop": 18,
+                "source_index": 17
+              },
+              {
+                "native_start": 18,
+                "native_stop": 19,
+                "source_index": 18
+              },
+              {
+                "native_start": 19,
+                "native_stop": 20,
+                "source_index": 19
+              }
+            ],
+            "omitted_logical_wires_initial_zero": [
+              2
+            ],
+            "placement_optimality_certified": false,
+            "profile": {
+              "coupling_map": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  2,
+                  1
+                ]
+              ],
+              "max_gates": 1024,
+              "n_qubits": 3,
+              "name": "declared-software-three-wire-line",
+              "native_gates": [
+                "h",
+                "s",
+                "sdg",
+                "cx",
+                "p2",
+                "p4",
+                "p8",
+                "p16",
+                "p32",
+                "p64"
+              ],
+              "schema": "nrqc-device-profile-v1"
+            }
+          },
+          "model": {
+            "architecture": "four-qubit-five-ry-directed-cx-v1",
+            "entanglers": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "execution": "EXACT_CLASSICAL_SIMULATION",
+            "feature_view": "first_layer",
+            "fingerprint": "e1d2389394de1274736c7b35eaade1cec59461090427c229d8613cdd2ba2b815",
+            "hardware_authorized": false,
+            "phase_steps": [
+              32,
+              0,
+              0,
+              32,
+              0
+            ],
+            "phase_unit": "pi/32",
+            "proof_status": "NOT_A_MATHEMATICAL_PROOF",
+            "schema": "native-learning-topology-model-v1",
+            "training_sha256": "92b0155d54dbbd4e08edd4ef6d5b91df1b1c0c4cf50f66256d8d77d025074cd2"
+          },
+          "openqasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[3];\nsdg q[0];\nh q[0];\nu1(2*pi/64) q[0];\nu1(2*pi/16) q[0];\nu1(2*pi/2) q[0];\nh q[0];\ns q[0];\nsdg q[2];\nh q[2];\nu1(2*pi/64) q[2];\nu1(2*pi/4) q[2];\nh q[2];\ns q[2];\nsdg q[1];\nh q[1];\nu1(2*pi/2) q[1];\nh q[1];\ns q[1];\ncx q[0],q[1];\ncx q[2],q[1];\n",
+          "predicted": 1,
+          "probability_one": {
+            "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+            "denominator": "8",
+            "real_numerators": [
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              -1
+            ]
+          },
+          "resources": {
+            "exact_work": 4764,
+            "max_work": 1000000,
+            "native_gates": 20,
+            "source_gates": 20
+          },
+          "schema": "nrqc-model-prediction-v1",
+          "verification": {
+            "basis_inputs_checked": 8,
+            "qasm_exact_active_unitary_roundtrip": true,
+            "scope": "full active-register unitary, omitted wires initialized to zero",
+            "status": "verified"
+          }
+        },
+        "program_sha256": "63b3dc0ca9efa39626d6d298e9042df0c5c34cfafa23e76fba674b2978356aa0",
+        "readout_classical_bit": 0,
+        "run_id": "context-2-repeat-0",
+        "schema": "nrqc-model-experiment-plan-v1",
+        "shots": 512,
+        "statistic": "raw Z-readout marginal absolute probability error",
+        "tolerance": {
+          "denominator": 8,
+          "numerator": 1
+        }
+      },
+      {
+        "acceptance_policy": "fixed absolute engineering tolerance; no significance claim",
+        "binding": {
+          "backend": "synthetic-three-wire-line",
+          "calibration": {
+            "calibration_id": "synthetic-fixture-20261112",
+            "captured_at": "2026-11-12T00:00:00Z",
+            "source_sha256": "a0fc5e1701db0ea226bf635729f03aa3f2d380ea65f952e9f77822ab18124b5f",
+            "valid_until": "2026-11-13T00:00:00Z"
+          },
+          "device_fingerprint": "7af1ae37bf6eb1d85b40ca4a60d930e3f2410dae11a069ff23d57e4d8fcb851d",
+          "origin": "synthetic",
+          "provider": "nrqc-offline-qualification",
+          "schema": "nrqc-acquisition-binding-v1"
+        },
+        "counts_bit_order": "c[width-1]...c[0], most significant bit on the left",
+        "evidence_class": "OFFLINE_EXPERIMENT_PLAN",
+        "fingerprint": "c954439c718be32c38291ff87ff7094abe432066d79042c4a069053d317eedc2",
+        "hardware_submissions": 0,
+        "measure_wires": [
+          1
+        ],
+        "measured_openqasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[3];\ncreg c[1];\nsdg q[0];\nh q[0];\nu1(2*pi/64) q[0];\nu1(2*pi/16) q[0];\nu1(2*pi/2) q[0];\nh q[0];\ns q[0];\nsdg q[2];\nh q[2];\nu1(2*pi/64) q[2];\nu1(2*pi/4) q[2];\nh q[2];\ns q[2];\nsdg q[1];\nh q[1];\nu1(2*pi/2) q[1];\nh q[1];\ns q[1];\ncx q[0],q[1];\ncx q[2],q[1];\nmeasure q[1] -> c[0];\n",
+        "prediction": {
+          "calculator_request": {
+            "backend": "cyclotomic_pow2",
+            "limits": {
+              "max_branches": 16,
+              "max_work": 995422
+            },
+            "n_qubits": 3,
+            "operations": [
+              [
+                "sdg",
+                [
+                  0
+                ]
+              ],
+              [
+                "h",
+                [
+                  0
+                ]
+              ],
+              [
+                "p64",
+                [
+                  0
+                ]
+              ],
+              [
+                "p16",
+                [
+                  0
+                ]
+              ],
+              [
+                "p2",
+                [
+                  0
+                ]
+              ],
+              [
+                "h",
+                [
+                  0
+                ]
+              ],
+              [
+                "s",
+                [
+                  0
+                ]
+              ],
+              [
+                "sdg",
+                [
+                  2
+                ]
+              ],
+              [
+                "h",
+                [
+                  2
+                ]
+              ],
+              [
+                "p64",
+                [
+                  2
+                ]
+              ],
+              [
+                "p4",
+                [
+                  2
+                ]
+              ],
+              [
+                "h",
+                [
+                  2
+                ]
+              ],
+              [
+                "s",
+                [
+                  2
+                ]
+              ],
+              [
+                "sdg",
+                [
+                  1
+                ]
+              ],
+              [
+                "h",
+                [
+                  1
+                ]
+              ],
+              [
+                "p2",
+                [
+                  1
+                ]
+              ],
+              [
+                "h",
+                [
+                  1
+                ]
+              ],
+              [
+                "s",
+                [
+                  1
+                ]
+              ],
+              [
+                "cx",
+                [
+                  0,
+                  1
+                ]
+              ],
+              [
+                "cx",
+                [
+                  2,
+                  1
+                ]
+              ]
+            ],
+            "queries": [
+              {
+                "id": "probability_one",
+                "kind": "probability",
+                "outcomes": {
+                  "1": 1
+                }
+              }
+            ],
+            "schema": "nrqc-calculator-v1"
+          },
+          "device": {
+            "coupling_map": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "max_gates": 1024,
+            "n_qubits": 3,
+            "name": "declared-software-three-wire-line",
+            "native_gates": [
+              "h",
+              "s",
+              "sdg",
+              "cx",
+              "p2",
+              "p4",
+              "p8",
+              "p16",
+              "p32",
+              "p64"
+            ],
+            "schema": "nrqc-device-profile-v1"
+          },
+          "evidence_class": "LOCAL_IDEAL_CALCULATION",
+          "feature_view": "first_layer",
+          "features": [
+            5,
+            17
+          ],
+          "fingerprint": "d5ac479c19e9225a914f9c754027070d800c55fd6b5c3018e5d7e74eb7ebc45b",
+          "hardware_jobs": 0,
+          "mapping": {
+            "final_layout": {
+              "0": 0,
+              "1": 2,
+              "3": 1
+            },
+            "initial_layout": {
+              "0": 0,
+              "1": 2,
+              "3": 1
+            },
+            "native_trace": [
+              {
+                "native_start": 0,
+                "native_stop": 1,
+                "source_index": 0
+              },
+              {
+                "native_start": 1,
+                "native_stop": 2,
+                "source_index": 1
+              },
+              {
+                "native_start": 2,
+                "native_stop": 3,
+                "source_index": 2
+              },
+              {
+                "native_start": 3,
+                "native_stop": 4,
+                "source_index": 3
+              },
+              {
+                "native_start": 4,
+                "native_stop": 5,
+                "source_index": 4
+              },
+              {
+                "native_start": 5,
+                "native_stop": 6,
+                "source_index": 5
+              },
+              {
+                "native_start": 6,
+                "native_stop": 7,
+                "source_index": 6
+              },
+              {
+                "native_start": 7,
+                "native_stop": 8,
+                "source_index": 7
+              },
+              {
+                "native_start": 8,
+                "native_stop": 9,
+                "source_index": 8
+              },
+              {
+                "native_start": 9,
+                "native_stop": 10,
+                "source_index": 9
+              },
+              {
+                "native_start": 10,
+                "native_stop": 11,
+                "source_index": 10
+              },
+              {
+                "native_start": 11,
+                "native_stop": 12,
+                "source_index": 11
+              },
+              {
+                "native_start": 12,
+                "native_stop": 13,
+                "source_index": 12
+              },
+              {
+                "native_start": 13,
+                "native_stop": 14,
+                "source_index": 13
+              },
+              {
+                "native_start": 14,
+                "native_stop": 15,
+                "source_index": 14
+              },
+              {
+                "native_start": 15,
+                "native_stop": 16,
+                "source_index": 15
+              },
+              {
+                "native_start": 16,
+                "native_stop": 17,
+                "source_index": 16
+              },
+              {
+                "native_start": 17,
+                "native_stop": 18,
+                "source_index": 17
+              },
+              {
+                "native_start": 18,
+                "native_stop": 19,
+                "source_index": 18
+              },
+              {
+                "native_start": 19,
+                "native_stop": 20,
+                "source_index": 19
+              }
+            ],
+            "omitted_logical_wires_initial_zero": [
+              2
+            ],
+            "placement_optimality_certified": false,
+            "profile": {
+              "coupling_map": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  2,
+                  1
+                ]
+              ],
+              "max_gates": 1024,
+              "n_qubits": 3,
+              "name": "declared-software-three-wire-line",
+              "native_gates": [
+                "h",
+                "s",
+                "sdg",
+                "cx",
+                "p2",
+                "p4",
+                "p8",
+                "p16",
+                "p32",
+                "p64"
+              ],
+              "schema": "nrqc-device-profile-v1"
+            }
+          },
+          "model": {
+            "architecture": "four-qubit-five-ry-directed-cx-v1",
+            "entanglers": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "execution": "EXACT_CLASSICAL_SIMULATION",
+            "feature_view": "first_layer",
+            "fingerprint": "e1d2389394de1274736c7b35eaade1cec59461090427c229d8613cdd2ba2b815",
+            "hardware_authorized": false,
+            "phase_steps": [
+              32,
+              0,
+              0,
+              32,
+              0
+            ],
+            "phase_unit": "pi/32",
+            "proof_status": "NOT_A_MATHEMATICAL_PROOF",
+            "schema": "native-learning-topology-model-v1",
+            "training_sha256": "92b0155d54dbbd4e08edd4ef6d5b91df1b1c0c4cf50f66256d8d77d025074cd2"
+          },
+          "openqasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[3];\nsdg q[0];\nh q[0];\nu1(2*pi/64) q[0];\nu1(2*pi/16) q[0];\nu1(2*pi/2) q[0];\nh q[0];\ns q[0];\nsdg q[2];\nh q[2];\nu1(2*pi/64) q[2];\nu1(2*pi/4) q[2];\nh q[2];\ns q[2];\nsdg q[1];\nh q[1];\nu1(2*pi/2) q[1];\nh q[1];\ns q[1];\ncx q[0],q[1];\ncx q[2],q[1];\n",
+          "predicted": 1,
+          "probability_one": {
+            "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+            "denominator": "8",
+            "real_numerators": [
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              -1
+            ]
+          },
+          "resources": {
+            "exact_work": 4764,
+            "max_work": 1000000,
+            "native_gates": 20,
+            "source_gates": 20
+          },
+          "schema": "nrqc-model-prediction-v1",
+          "verification": {
+            "basis_inputs_checked": 8,
+            "qasm_exact_active_unitary_roundtrip": true,
+            "scope": "full active-register unitary, omitted wires initialized to zero",
+            "status": "verified"
+          }
+        },
+        "program_sha256": "63b3dc0ca9efa39626d6d298e9042df0c5c34cfafa23e76fba674b2978356aa0",
+        "readout_classical_bit": 0,
+        "run_id": "context-2-repeat-1",
+        "schema": "nrqc-model-experiment-plan-v1",
+        "shots": 512,
+        "statistic": "raw Z-readout marginal absolute probability error",
+        "tolerance": {
+          "denominator": 8,
+          "numerator": 1
+        }
+      },
+      {
+        "acceptance_policy": "fixed absolute engineering tolerance; no significance claim",
+        "binding": {
+          "backend": "synthetic-three-wire-line",
+          "calibration": {
+            "calibration_id": "synthetic-fixture-20261112",
+            "captured_at": "2026-11-12T00:00:00Z",
+            "source_sha256": "a0fc5e1701db0ea226bf635729f03aa3f2d380ea65f952e9f77822ab18124b5f",
+            "valid_until": "2026-11-13T00:00:00Z"
+          },
+          "device_fingerprint": "7af1ae37bf6eb1d85b40ca4a60d930e3f2410dae11a069ff23d57e4d8fcb851d",
+          "origin": "synthetic",
+          "provider": "nrqc-offline-qualification",
+          "schema": "nrqc-acquisition-binding-v1"
+        },
+        "counts_bit_order": "c[width-1]...c[0], most significant bit on the left",
+        "evidence_class": "OFFLINE_EXPERIMENT_PLAN",
+        "fingerprint": "a79987d20a7797f32288c55b67fbd7cb5a8ec0a6adf32b6cb6ca58699b3ea7d0",
+        "hardware_submissions": 0,
+        "measure_wires": [
+          1
+        ],
+        "measured_openqasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[3];\ncreg c[1];\nsdg q[0];\nh q[0];\nu1(2*pi/64) q[0];\nu1(2*pi/16) q[0];\nu1(2*pi/2) q[0];\nh q[0];\ns q[0];\nsdg q[2];\nh q[2];\nu1(2*pi/64) q[2];\nu1(2*pi/4) q[2];\nh q[2];\ns q[2];\nsdg q[1];\nh q[1];\nu1(2*pi/2) q[1];\nh q[1];\ns q[1];\ncx q[0],q[1];\ncx q[2],q[1];\nmeasure q[1] -> c[0];\n",
+        "prediction": {
+          "calculator_request": {
+            "backend": "cyclotomic_pow2",
+            "limits": {
+              "max_branches": 16,
+              "max_work": 995422
+            },
+            "n_qubits": 3,
+            "operations": [
+              [
+                "sdg",
+                [
+                  0
+                ]
+              ],
+              [
+                "h",
+                [
+                  0
+                ]
+              ],
+              [
+                "p64",
+                [
+                  0
+                ]
+              ],
+              [
+                "p16",
+                [
+                  0
+                ]
+              ],
+              [
+                "p2",
+                [
+                  0
+                ]
+              ],
+              [
+                "h",
+                [
+                  0
+                ]
+              ],
+              [
+                "s",
+                [
+                  0
+                ]
+              ],
+              [
+                "sdg",
+                [
+                  2
+                ]
+              ],
+              [
+                "h",
+                [
+                  2
+                ]
+              ],
+              [
+                "p64",
+                [
+                  2
+                ]
+              ],
+              [
+                "p4",
+                [
+                  2
+                ]
+              ],
+              [
+                "h",
+                [
+                  2
+                ]
+              ],
+              [
+                "s",
+                [
+                  2
+                ]
+              ],
+              [
+                "sdg",
+                [
+                  1
+                ]
+              ],
+              [
+                "h",
+                [
+                  1
+                ]
+              ],
+              [
+                "p2",
+                [
+                  1
+                ]
+              ],
+              [
+                "h",
+                [
+                  1
+                ]
+              ],
+              [
+                "s",
+                [
+                  1
+                ]
+              ],
+              [
+                "cx",
+                [
+                  0,
+                  1
+                ]
+              ],
+              [
+                "cx",
+                [
+                  2,
+                  1
+                ]
+              ]
+            ],
+            "queries": [
+              {
+                "id": "probability_one",
+                "kind": "probability",
+                "outcomes": {
+                  "1": 1
+                }
+              }
+            ],
+            "schema": "nrqc-calculator-v1"
+          },
+          "device": {
+            "coupling_map": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "max_gates": 1024,
+            "n_qubits": 3,
+            "name": "declared-software-three-wire-line",
+            "native_gates": [
+              "h",
+              "s",
+              "sdg",
+              "cx",
+              "p2",
+              "p4",
+              "p8",
+              "p16",
+              "p32",
+              "p64"
+            ],
+            "schema": "nrqc-device-profile-v1"
+          },
+          "evidence_class": "LOCAL_IDEAL_CALCULATION",
+          "feature_view": "first_layer",
+          "features": [
+            5,
+            17
+          ],
+          "fingerprint": "d5ac479c19e9225a914f9c754027070d800c55fd6b5c3018e5d7e74eb7ebc45b",
+          "hardware_jobs": 0,
+          "mapping": {
+            "final_layout": {
+              "0": 0,
+              "1": 2,
+              "3": 1
+            },
+            "initial_layout": {
+              "0": 0,
+              "1": 2,
+              "3": 1
+            },
+            "native_trace": [
+              {
+                "native_start": 0,
+                "native_stop": 1,
+                "source_index": 0
+              },
+              {
+                "native_start": 1,
+                "native_stop": 2,
+                "source_index": 1
+              },
+              {
+                "native_start": 2,
+                "native_stop": 3,
+                "source_index": 2
+              },
+              {
+                "native_start": 3,
+                "native_stop": 4,
+                "source_index": 3
+              },
+              {
+                "native_start": 4,
+                "native_stop": 5,
+                "source_index": 4
+              },
+              {
+                "native_start": 5,
+                "native_stop": 6,
+                "source_index": 5
+              },
+              {
+                "native_start": 6,
+                "native_stop": 7,
+                "source_index": 6
+              },
+              {
+                "native_start": 7,
+                "native_stop": 8,
+                "source_index": 7
+              },
+              {
+                "native_start": 8,
+                "native_stop": 9,
+                "source_index": 8
+              },
+              {
+                "native_start": 9,
+                "native_stop": 10,
+                "source_index": 9
+              },
+              {
+                "native_start": 10,
+                "native_stop": 11,
+                "source_index": 10
+              },
+              {
+                "native_start": 11,
+                "native_stop": 12,
+                "source_index": 11
+              },
+              {
+                "native_start": 12,
+                "native_stop": 13,
+                "source_index": 12
+              },
+              {
+                "native_start": 13,
+                "native_stop": 14,
+                "source_index": 13
+              },
+              {
+                "native_start": 14,
+                "native_stop": 15,
+                "source_index": 14
+              },
+              {
+                "native_start": 15,
+                "native_stop": 16,
+                "source_index": 15
+              },
+              {
+                "native_start": 16,
+                "native_stop": 17,
+                "source_index": 16
+              },
+              {
+                "native_start": 17,
+                "native_stop": 18,
+                "source_index": 17
+              },
+              {
+                "native_start": 18,
+                "native_stop": 19,
+                "source_index": 18
+              },
+              {
+                "native_start": 19,
+                "native_stop": 20,
+                "source_index": 19
+              }
+            ],
+            "omitted_logical_wires_initial_zero": [
+              2
+            ],
+            "placement_optimality_certified": false,
+            "profile": {
+              "coupling_map": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  2,
+                  1
+                ]
+              ],
+              "max_gates": 1024,
+              "n_qubits": 3,
+              "name": "declared-software-three-wire-line",
+              "native_gates": [
+                "h",
+                "s",
+                "sdg",
+                "cx",
+                "p2",
+                "p4",
+                "p8",
+                "p16",
+                "p32",
+                "p64"
+              ],
+              "schema": "nrqc-device-profile-v1"
+            }
+          },
+          "model": {
+            "architecture": "four-qubit-five-ry-directed-cx-v1",
+            "entanglers": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "execution": "EXACT_CLASSICAL_SIMULATION",
+            "feature_view": "first_layer",
+            "fingerprint": "e1d2389394de1274736c7b35eaade1cec59461090427c229d8613cdd2ba2b815",
+            "hardware_authorized": false,
+            "phase_steps": [
+              32,
+              0,
+              0,
+              32,
+              0
+            ],
+            "phase_unit": "pi/32",
+            "proof_status": "NOT_A_MATHEMATICAL_PROOF",
+            "schema": "native-learning-topology-model-v1",
+            "training_sha256": "92b0155d54dbbd4e08edd4ef6d5b91df1b1c0c4cf50f66256d8d77d025074cd2"
+          },
+          "openqasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[3];\nsdg q[0];\nh q[0];\nu1(2*pi/64) q[0];\nu1(2*pi/16) q[0];\nu1(2*pi/2) q[0];\nh q[0];\ns q[0];\nsdg q[2];\nh q[2];\nu1(2*pi/64) q[2];\nu1(2*pi/4) q[2];\nh q[2];\ns q[2];\nsdg q[1];\nh q[1];\nu1(2*pi/2) q[1];\nh q[1];\ns q[1];\ncx q[0],q[1];\ncx q[2],q[1];\n",
+          "predicted": 1,
+          "probability_one": {
+            "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+            "denominator": "8",
+            "real_numerators": [
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              -1
+            ]
+          },
+          "resources": {
+            "exact_work": 4764,
+            "max_work": 1000000,
+            "native_gates": 20,
+            "source_gates": 20
+          },
+          "schema": "nrqc-model-prediction-v1",
+          "verification": {
+            "basis_inputs_checked": 8,
+            "qasm_exact_active_unitary_roundtrip": true,
+            "scope": "full active-register unitary, omitted wires initialized to zero",
+            "status": "verified"
+          }
+        },
+        "program_sha256": "63b3dc0ca9efa39626d6d298e9042df0c5c34cfafa23e76fba674b2978356aa0",
+        "readout_classical_bit": 0,
+        "run_id": "context-2-repeat-2",
+        "schema": "nrqc-model-experiment-plan-v1",
+        "shots": 512,
+        "statistic": "raw Z-readout marginal absolute probability error",
+        "tolerance": {
+          "denominator": 8,
+          "numerator": 1
+        }
+      }
+    ],
+    "qualification_policy": "all planned runs present, no failures, every exact error within its frozen tolerance",
+    "schema": "nrqc-experiment-campaign-v1"
+  },
+  "evidence_class": "SYNTHETIC_CAMPAIGN_QUALIFICATION",
+  "failed": {
+    "failed_runs": 1,
+    "fingerprint": "7d20609bb7a4e808302cf90752f967ebe03bb2f1762c75f90745c71fbd9ffcc8",
+    "groups": {
+      "761a348a5d605fd3f38b7ba6fa5983377234b107dceeba880917a4bb69f36401": {
+        "exact_classifications": {
+          "RECOGNITION": 2
+        },
+        "failed": 1,
+        "maximum_run_absolute_error": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "256",
+          "real_numerators": [
+            -3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            32,
+            0,
+            -32
+          ]
+        },
+        "mean_run_absolute_error": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "512",
+          "real_numerators": [
+            -11,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            64,
+            0,
+            -64
+          ]
+        },
+        "missing": 0,
+        "observed": 2,
+        "observed_probability_range": [
+          {
+            "denominator": 256,
+            "numerator": 131
+          },
+          {
+            "denominator": 32,
+            "numerator": 17
+          }
+        ],
+        "planned": 3,
+        "pooled_marginal_counts": {
+          "0": 490,
+          "1": 534
+        },
+        "pooled_probability_one": {
+          "denominator": 512,
+          "numerator": 267
+        },
+        "qualified": false
+      },
+      "89f280f41a8f9134d0033752efe45f06b72aed47e5c93f64d231adbf8a4384ee": {
+        "exact_classifications": {
+          "RECOGNITION": 3
+        },
+        "failed": 0,
+        "maximum_run_absolute_error": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "1",
+          "real_numerators": []
+        },
+        "mean_run_absolute_error": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "1",
+          "real_numerators": []
+        },
+        "missing": 0,
+        "observed": 3,
+        "observed_probability_range": [
+          {
+            "denominator": 1,
+            "numerator": 0
+          },
+          {
+            "denominator": 1,
+            "numerator": 0
+          }
+        ],
+        "planned": 3,
+        "pooled_marginal_counts": {
+          "0": 1536,
+          "1": 0
+        },
+        "pooled_probability_one": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "qualified": true
+      },
+      "b0c2739c553fd9294a0623ebf763ac3dbfbee02ca7280a4291888a979b225ecb": {
+        "exact_classifications": {
+          "RECOGNITION": 3
+        },
+        "failed": 0,
+        "maximum_run_absolute_error": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "1",
+          "real_numerators": []
+        },
+        "mean_run_absolute_error": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "1",
+          "real_numerators": []
+        },
+        "missing": 0,
+        "observed": 3,
+        "observed_probability_range": [
+          {
+            "denominator": 1,
+            "numerator": 1
+          },
+          {
+            "denominator": 1,
+            "numerator": 1
+          }
+        ],
+        "planned": 3,
+        "pooled_marginal_counts": {
+          "0": 0,
+          "1": 1536
+        },
+        "pooled_probability_one": {
+          "denominator": 1,
+          "numerator": 1
+        },
+        "qualified": true
+      }
+    },
+    "missing_plans": [],
+    "observed_runs": 8,
+    "planned_runs": 9,
+    "qualification_passed": false,
+    "run_results": [
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "dbc9c5a284e90741e69f2076df067afda1be4b51618c240d401deb4558a7ddbb",
+        "plan_fingerprint": "b215fc425abe1986cd75e8e32c436157507154bf6f40feba68fcfdc1a321729d",
+        "run_id": "context-0-repeat-0",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "c94221f7083eb098d7e27fbf527ce07b5d282eb46208d55caa353d45df6d50de",
+        "plan_fingerprint": "d9c84033593d9a3601a8b405aa83a82ce67fa316c5c1c2240f92bb2b6439b2c7",
+        "run_id": "context-0-repeat-1",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "fb200320b7ec545a394224529983037cfc1214921068d911b203c113fd49599c",
+        "plan_fingerprint": "da5c15dff94426e9ec64f09cc7f6c24dfbb97651e8822c42b70e70a0ffb02c20",
+        "run_id": "context-0-repeat-2",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "58e22cb7d159b7b0bbfb52561aeafb70fa947d2bed2b2e758d65cc6b9242a8e4",
+        "plan_fingerprint": "8e18c38cbc68fdb68d2a0c364ad62b4e2c0e04215cfdbc45cba5a8d974c59152",
+        "run_id": "context-1-repeat-0",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "750c3abfcf5d1d17664f1f6044925d7bf246e9a6eae98751e1313348d74581c6",
+        "plan_fingerprint": "8abd9af30b5172d5533881a1875e0dca482702e46f66d06e0518845567aff686",
+        "run_id": "context-1-repeat-1",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "c2ea9cc445e5b4d493fc7ca13151693fc81acae81a0090dcd45bc23628d62aee",
+        "plan_fingerprint": "d42784473b4441e20ee0a725be2f17b2e3fcbfbb2e97be94f19fa1c124dc0d46",
+        "run_id": "context-1-repeat-2",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "1892e5476072d67bff20dcc586fd049d630b83bbb3fc2b54045aa5316f925017",
+        "plan_fingerprint": "9d41d5a5050eaed1614c4e8e6e06db134f7893e23f8c8a37854eb15bcb072208",
+        "run_id": "context-2-repeat-0",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "345963959d81657c48dabfcfa03c83774c3a712764535731f794b9f08d1e45ce",
+        "plan_fingerprint": "c954439c718be32c38291ff87ff7094abe432066d79042c4a069053d317eedc2",
+        "run_id": "context-2-repeat-1",
+        "status": "observed"
+      },
+      {
+        "failure": {
+          "detail": "synthetic missing-acquisition control",
+          "job_id": "synthetic-timeout",
+          "kind": "timeout",
+          "plan_fingerprint": "a79987d20a7797f32288c55b67fbd7cb5a8ec0a6adf32b6cb6ca58699b3ea7d0",
+          "source_sha256": null
+        },
+        "plan_fingerprint": "a79987d20a7797f32288c55b67fbd7cb5a8ec0a6adf32b6cb6ca58699b3ea7d0",
+        "run_id": "context-2-repeat-2",
+        "status": "failed"
+      }
+    ],
+    "status": "complete"
+  },
+  "hardware_submissions": 0,
+  "healthy": {
+    "failed_runs": 0,
+    "fingerprint": "98b6d450aa34bc4d14002d0d74f47b347b4b7859d80d461c24ae2bc277917e75",
+    "groups": {
+      "761a348a5d605fd3f38b7ba6fa5983377234b107dceeba880917a4bb69f36401": {
+        "exact_classifications": {
+          "RECOGNITION": 3
+        },
+        "failed": 0,
+        "maximum_run_absolute_error": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "256",
+          "real_numerators": [
+            -3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            32,
+            0,
+            -32
+          ]
+        },
+        "mean_run_absolute_error": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "256",
+          "real_numerators": [
+            -7,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            32,
+            0,
+            -32
+          ]
+        },
+        "missing": 0,
+        "observed": 3,
+        "observed_probability_range": [
+          {
+            "denominator": 256,
+            "numerator": 131
+          },
+          {
+            "denominator": 128,
+            "numerator": 69
+          }
+        ],
+        "planned": 3,
+        "pooled_marginal_counts": {
+          "0": 726,
+          "1": 810
+        },
+        "pooled_probability_one": {
+          "denominator": 256,
+          "numerator": 135
+        },
+        "qualified": true
+      },
+      "89f280f41a8f9134d0033752efe45f06b72aed47e5c93f64d231adbf8a4384ee": {
+        "exact_classifications": {
+          "RECOGNITION": 3
+        },
+        "failed": 0,
+        "maximum_run_absolute_error": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "1",
+          "real_numerators": []
+        },
+        "mean_run_absolute_error": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "1",
+          "real_numerators": []
+        },
+        "missing": 0,
+        "observed": 3,
+        "observed_probability_range": [
+          {
+            "denominator": 1,
+            "numerator": 0
+          },
+          {
+            "denominator": 1,
+            "numerator": 0
+          }
+        ],
+        "planned": 3,
+        "pooled_marginal_counts": {
+          "0": 1536,
+          "1": 0
+        },
+        "pooled_probability_one": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "qualified": true
+      },
+      "b0c2739c553fd9294a0623ebf763ac3dbfbee02ca7280a4291888a979b225ecb": {
+        "exact_classifications": {
+          "RECOGNITION": 3
+        },
+        "failed": 0,
+        "maximum_run_absolute_error": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "1",
+          "real_numerators": []
+        },
+        "mean_run_absolute_error": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "1",
+          "real_numerators": []
+        },
+        "missing": 0,
+        "observed": 3,
+        "observed_probability_range": [
+          {
+            "denominator": 1,
+            "numerator": 1
+          },
+          {
+            "denominator": 1,
+            "numerator": 1
+          }
+        ],
+        "planned": 3,
+        "pooled_marginal_counts": {
+          "0": 0,
+          "1": 1536
+        },
+        "pooled_probability_one": {
+          "denominator": 1,
+          "numerator": 1
+        },
+        "qualified": true
+      }
+    },
+    "missing_plans": [],
+    "observed_runs": 9,
+    "planned_runs": 9,
+    "qualification_passed": true,
+    "run_results": [
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "dbc9c5a284e90741e69f2076df067afda1be4b51618c240d401deb4558a7ddbb",
+        "plan_fingerprint": "b215fc425abe1986cd75e8e32c436157507154bf6f40feba68fcfdc1a321729d",
+        "run_id": "context-0-repeat-0",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "c94221f7083eb098d7e27fbf527ce07b5d282eb46208d55caa353d45df6d50de",
+        "plan_fingerprint": "d9c84033593d9a3601a8b405aa83a82ce67fa316c5c1c2240f92bb2b6439b2c7",
+        "run_id": "context-0-repeat-1",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "fb200320b7ec545a394224529983037cfc1214921068d911b203c113fd49599c",
+        "plan_fingerprint": "da5c15dff94426e9ec64f09cc7f6c24dfbb97651e8822c42b70e70a0ffb02c20",
+        "run_id": "context-0-repeat-2",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "58e22cb7d159b7b0bbfb52561aeafb70fa947d2bed2b2e758d65cc6b9242a8e4",
+        "plan_fingerprint": "8e18c38cbc68fdb68d2a0c364ad62b4e2c0e04215cfdbc45cba5a8d974c59152",
+        "run_id": "context-1-repeat-0",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "750c3abfcf5d1d17664f1f6044925d7bf246e9a6eae98751e1313348d74581c6",
+        "plan_fingerprint": "8abd9af30b5172d5533881a1875e0dca482702e46f66d06e0518845567aff686",
+        "run_id": "context-1-repeat-1",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "c2ea9cc445e5b4d493fc7ca13151693fc81acae81a0090dcd45bc23628d62aee",
+        "plan_fingerprint": "d42784473b4441e20ee0a725be2f17b2e3fcbfbb2e97be94f19fa1c124dc0d46",
+        "run_id": "context-1-repeat-2",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "1892e5476072d67bff20dcc586fd049d630b83bbb3fc2b54045aa5316f925017",
+        "plan_fingerprint": "9d41d5a5050eaed1614c4e8e6e06db134f7893e23f8c8a37854eb15bcb072208",
+        "run_id": "context-2-repeat-0",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "345963959d81657c48dabfcfa03c83774c3a712764535731f794b9f08d1e45ce",
+        "plan_fingerprint": "c954439c718be32c38291ff87ff7094abe432066d79042c4a069053d317eedc2",
+        "run_id": "context-2-repeat-1",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "9dc230be31ff086ac716fd30b1a6d09f2453dec741d6ed4e3250561117c51c4d",
+        "plan_fingerprint": "a79987d20a7797f32288c55b67fbd7cb5a8ec0a6adf32b6cb6ca58699b3ea7d0",
+        "run_id": "context-2-repeat-2",
+        "status": "observed"
+      }
+    ],
+    "status": "complete"
+  },
+  "missing": {
+    "failed_runs": 0,
+    "fingerprint": "22a3a1edd4dcf74f4ffa091b3bfc0b690cc2fc68d42ee3a816816e9fdf853224",
+    "groups": {
+      "761a348a5d605fd3f38b7ba6fa5983377234b107dceeba880917a4bb69f36401": {
+        "exact_classifications": {
+          "RECOGNITION": 2
+        },
+        "failed": 0,
+        "maximum_run_absolute_error": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "256",
+          "real_numerators": [
+            -3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            32,
+            0,
+            -32
+          ]
+        },
+        "mean_run_absolute_error": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "512",
+          "real_numerators": [
+            -11,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            64,
+            0,
+            -64
+          ]
+        },
+        "missing": 1,
+        "observed": 2,
+        "observed_probability_range": [
+          {
+            "denominator": 256,
+            "numerator": 131
+          },
+          {
+            "denominator": 32,
+            "numerator": 17
+          }
+        ],
+        "planned": 3,
+        "pooled_marginal_counts": {
+          "0": 490,
+          "1": 534
+        },
+        "pooled_probability_one": {
+          "denominator": 512,
+          "numerator": 267
+        },
+        "qualified": false
+      },
+      "89f280f41a8f9134d0033752efe45f06b72aed47e5c93f64d231adbf8a4384ee": {
+        "exact_classifications": {
+          "RECOGNITION": 3
+        },
+        "failed": 0,
+        "maximum_run_absolute_error": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "1",
+          "real_numerators": []
+        },
+        "mean_run_absolute_error": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "1",
+          "real_numerators": []
+        },
+        "missing": 0,
+        "observed": 3,
+        "observed_probability_range": [
+          {
+            "denominator": 1,
+            "numerator": 0
+          },
+          {
+            "denominator": 1,
+            "numerator": 0
+          }
+        ],
+        "planned": 3,
+        "pooled_marginal_counts": {
+          "0": 1536,
+          "1": 0
+        },
+        "pooled_probability_one": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "qualified": true
+      },
+      "b0c2739c553fd9294a0623ebf763ac3dbfbee02ca7280a4291888a979b225ecb": {
+        "exact_classifications": {
+          "RECOGNITION": 3
+        },
+        "failed": 0,
+        "maximum_run_absolute_error": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "1",
+          "real_numerators": []
+        },
+        "mean_run_absolute_error": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "1",
+          "real_numerators": []
+        },
+        "missing": 0,
+        "observed": 3,
+        "observed_probability_range": [
+          {
+            "denominator": 1,
+            "numerator": 1
+          },
+          {
+            "denominator": 1,
+            "numerator": 1
+          }
+        ],
+        "planned": 3,
+        "pooled_marginal_counts": {
+          "0": 0,
+          "1": 1536
+        },
+        "pooled_probability_one": {
+          "denominator": 1,
+          "numerator": 1
+        },
+        "qualified": true
+      }
+    },
+    "missing_plans": [
+      "a79987d20a7797f32288c55b67fbd7cb5a8ec0a6adf32b6cb6ca58699b3ea7d0"
+    ],
+    "observed_runs": 8,
+    "planned_runs": 9,
+    "qualification_passed": false,
+    "run_results": [
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "dbc9c5a284e90741e69f2076df067afda1be4b51618c240d401deb4558a7ddbb",
+        "plan_fingerprint": "b215fc425abe1986cd75e8e32c436157507154bf6f40feba68fcfdc1a321729d",
+        "run_id": "context-0-repeat-0",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "c94221f7083eb098d7e27fbf527ce07b5d282eb46208d55caa353d45df6d50de",
+        "plan_fingerprint": "d9c84033593d9a3601a8b405aa83a82ce67fa316c5c1c2240f92bb2b6439b2c7",
+        "run_id": "context-0-repeat-1",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "fb200320b7ec545a394224529983037cfc1214921068d911b203c113fd49599c",
+        "plan_fingerprint": "da5c15dff94426e9ec64f09cc7f6c24dfbb97651e8822c42b70e70a0ffb02c20",
+        "run_id": "context-0-repeat-2",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "58e22cb7d159b7b0bbfb52561aeafb70fa947d2bed2b2e758d65cc6b9242a8e4",
+        "plan_fingerprint": "8e18c38cbc68fdb68d2a0c364ad62b4e2c0e04215cfdbc45cba5a8d974c59152",
+        "run_id": "context-1-repeat-0",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "750c3abfcf5d1d17664f1f6044925d7bf246e9a6eae98751e1313348d74581c6",
+        "plan_fingerprint": "8abd9af30b5172d5533881a1875e0dca482702e46f66d06e0518845567aff686",
+        "run_id": "context-1-repeat-1",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "c2ea9cc445e5b4d493fc7ca13151693fc81acae81a0090dcd45bc23628d62aee",
+        "plan_fingerprint": "d42784473b4441e20ee0a725be2f17b2e3fcbfbb2e97be94f19fa1c124dc0d46",
+        "run_id": "context-1-repeat-2",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "1892e5476072d67bff20dcc586fd049d630b83bbb3fc2b54045aa5316f925017",
+        "plan_fingerprint": "9d41d5a5050eaed1614c4e8e6e06db134f7893e23f8c8a37854eb15bcb072208",
+        "run_id": "context-2-repeat-0",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "345963959d81657c48dabfcfa03c83774c3a712764535731f794b9f08d1e45ce",
+        "plan_fingerprint": "c954439c718be32c38291ff87ff7094abe432066d79042c4a069053d317eedc2",
+        "run_id": "context-2-repeat-1",
+        "status": "observed"
+      },
+      {
+        "plan_fingerprint": "a79987d20a7797f32288c55b67fbd7cb5a8ec0a6adf32b6cb6ca58699b3ea7d0",
+        "run_id": "context-2-repeat-2",
+        "status": "missing"
+      }
+    ],
+    "status": "incomplete"
+  },
+  "observation_fingerprints": [
+    "dbc9c5a284e90741e69f2076df067afda1be4b51618c240d401deb4558a7ddbb",
+    "c94221f7083eb098d7e27fbf527ce07b5d282eb46208d55caa353d45df6d50de",
+    "fb200320b7ec545a394224529983037cfc1214921068d911b203c113fd49599c",
+    "58e22cb7d159b7b0bbfb52561aeafb70fa947d2bed2b2e758d65cc6b9242a8e4",
+    "750c3abfcf5d1d17664f1f6044925d7bf246e9a6eae98751e1313348d74581c6",
+    "c2ea9cc445e5b4d493fc7ca13151693fc81acae81a0090dcd45bc23628d62aee",
+    "1892e5476072d67bff20dcc586fd049d630b83bbb3fc2b54045aa5316f925017",
+    "345963959d81657c48dabfcfa03c83774c3a712764535731f794b9f08d1e45ce",
+    "9dc230be31ff086ac716fd30b1a6d09f2453dec741d6ed4e3250561117c51c4d"
+  ],
+  "outlier": {
+    "failed_runs": 0,
+    "fingerprint": "0c30fed919da7566c6b9aecd02710bb2c0d15947aaaf2ee1ef9b84c0065265ec",
+    "groups": {
+      "761a348a5d605fd3f38b7ba6fa5983377234b107dceeba880917a4bb69f36401": {
+        "exact_classifications": {
+          "RECOGNITION": 3
+        },
+        "failed": 0,
+        "maximum_run_absolute_error": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "256",
+          "real_numerators": [
+            -3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            32,
+            0,
+            -32
+          ]
+        },
+        "mean_run_absolute_error": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "256",
+          "real_numerators": [
+            -7,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            32,
+            0,
+            -32
+          ]
+        },
+        "missing": 0,
+        "observed": 3,
+        "observed_probability_range": [
+          {
+            "denominator": 256,
+            "numerator": 131
+          },
+          {
+            "denominator": 128,
+            "numerator": 69
+          }
+        ],
+        "planned": 3,
+        "pooled_marginal_counts": {
+          "0": 726,
+          "1": 810
+        },
+        "pooled_probability_one": {
+          "denominator": 256,
+          "numerator": 135
+        },
+        "qualified": true
+      },
+      "89f280f41a8f9134d0033752efe45f06b72aed47e5c93f64d231adbf8a4384ee": {
+        "exact_classifications": {
+          "RECOGNITION": 3
+        },
+        "failed": 0,
+        "maximum_run_absolute_error": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "1",
+          "real_numerators": []
+        },
+        "mean_run_absolute_error": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "1",
+          "real_numerators": []
+        },
+        "missing": 0,
+        "observed": 3,
+        "observed_probability_range": [
+          {
+            "denominator": 1,
+            "numerator": 0
+          },
+          {
+            "denominator": 1,
+            "numerator": 0
+          }
+        ],
+        "planned": 3,
+        "pooled_marginal_counts": {
+          "0": 1536,
+          "1": 0
+        },
+        "pooled_probability_one": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "qualified": true
+      },
+      "b0c2739c553fd9294a0623ebf763ac3dbfbee02ca7280a4291888a979b225ecb": {
+        "exact_classifications": {
+          "ACTIONABLE_RESIDUE": 1,
+          "RECOGNITION": 2
+        },
+        "failed": 0,
+        "maximum_run_absolute_error": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "16",
+          "real_numerators": [
+            5
+          ]
+        },
+        "mean_run_absolute_error": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "48",
+          "real_numerators": [
+            5
+          ]
+        },
+        "missing": 0,
+        "observed": 3,
+        "observed_probability_range": [
+          {
+            "denominator": 16,
+            "numerator": 11
+          },
+          {
+            "denominator": 1,
+            "numerator": 1
+          }
+        ],
+        "planned": 3,
+        "pooled_marginal_counts": {
+          "0": 160,
+          "1": 1376
+        },
+        "pooled_probability_one": {
+          "denominator": 48,
+          "numerator": 43
+        },
+        "qualified": false
+      }
+    },
+    "missing_plans": [],
+    "observed_runs": 9,
+    "planned_runs": 9,
+    "qualification_passed": false,
+    "run_results": [
+      {
+        "classification": "ACTIONABLE_RESIDUE",
+        "observation_fingerprint": "f8bf9be2fb4deee2d5aeaee3d64ccfc09fabe6ec11498d2dbf7ac5d6f1a76b9a",
+        "plan_fingerprint": "b215fc425abe1986cd75e8e32c436157507154bf6f40feba68fcfdc1a321729d",
+        "run_id": "context-0-repeat-0",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "c94221f7083eb098d7e27fbf527ce07b5d282eb46208d55caa353d45df6d50de",
+        "plan_fingerprint": "d9c84033593d9a3601a8b405aa83a82ce67fa316c5c1c2240f92bb2b6439b2c7",
+        "run_id": "context-0-repeat-1",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "fb200320b7ec545a394224529983037cfc1214921068d911b203c113fd49599c",
+        "plan_fingerprint": "da5c15dff94426e9ec64f09cc7f6c24dfbb97651e8822c42b70e70a0ffb02c20",
+        "run_id": "context-0-repeat-2",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "58e22cb7d159b7b0bbfb52561aeafb70fa947d2bed2b2e758d65cc6b9242a8e4",
+        "plan_fingerprint": "8e18c38cbc68fdb68d2a0c364ad62b4e2c0e04215cfdbc45cba5a8d974c59152",
+        "run_id": "context-1-repeat-0",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "750c3abfcf5d1d17664f1f6044925d7bf246e9a6eae98751e1313348d74581c6",
+        "plan_fingerprint": "8abd9af30b5172d5533881a1875e0dca482702e46f66d06e0518845567aff686",
+        "run_id": "context-1-repeat-1",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "c2ea9cc445e5b4d493fc7ca13151693fc81acae81a0090dcd45bc23628d62aee",
+        "plan_fingerprint": "d42784473b4441e20ee0a725be2f17b2e3fcbfbb2e97be94f19fa1c124dc0d46",
+        "run_id": "context-1-repeat-2",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "1892e5476072d67bff20dcc586fd049d630b83bbb3fc2b54045aa5316f925017",
+        "plan_fingerprint": "9d41d5a5050eaed1614c4e8e6e06db134f7893e23f8c8a37854eb15bcb072208",
+        "run_id": "context-2-repeat-0",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "345963959d81657c48dabfcfa03c83774c3a712764535731f794b9f08d1e45ce",
+        "plan_fingerprint": "c954439c718be32c38291ff87ff7094abe432066d79042c4a069053d317eedc2",
+        "run_id": "context-2-repeat-1",
+        "status": "observed"
+      },
+      {
+        "classification": "RECOGNITION",
+        "observation_fingerprint": "9dc230be31ff086ac716fd30b1a6d09f2453dec741d6ed4e3250561117c51c4d",
+        "plan_fingerprint": "a79987d20a7797f32288c55b67fbd7cb5a8ec0a6adf32b6cb6ca58699b3ea7d0",
+        "run_id": "context-2-repeat-2",
+        "status": "observed"
+      }
+    ],
+    "status": "complete"
+  },
+  "python": "3.12.14",
+  "sampling": {
+    "contexts": 3,
+    "repetitions": 3,
+    "seed": 20261113,
+    "shots_per_run": 512,
+    "source": "independent NumPy state probabilities"
+  },
+  "schema": "nrqc-experiment-campaign-audit-v1",
+  "source_sha256": {
+    "benchmarks/experiment_campaign_audit.py": "f67bf7844199c3da09ce3320499d44dab0b648a0cd47c3a7f89e5af1b9cf1cff",
+    "native_relational_qc/__main__.py": "d0594ac5e6faff50dafb7e8b6a4ab3f87805d0cd36b40ee0fb3d4740d0877ed4",
+    "native_relational_qc/experiment_campaign.py": "ba6e55a79ccc60a488c6de2dd2c5259b69e3b4f6d5fd3af81403237032528ddd",
+    "native_relational_qc/experiment_ledger.py": "c5bb3e2ddac063bd9a0f707efb631b626a26b6c571c10d58568073fd46a549d6",
+    "native_relational_qc/model_experiment.py": "a7240bfebc9dc79f268db477118373fe44c920afc4c3c7b6edc806e285f363e5",
+    "tests/test_experiment_campaign.py": "70f4f3ab43dd1d1168a014b8bc712008187521c8f4645b391cbed11a21acdffe"
+  },
+  "synthetic_counts": [
+    {
+      "0": 0,
+      "1": 512
+    },
+    {
+      "0": 0,
+      "1": 512
+    },
+    {
+      "0": 0,
+      "1": 512
+    },
+    {
+      "0": 512,
+      "1": 0
+    },
+    {
+      "0": 512,
+      "1": 0
+    },
+    {
+      "0": 512,
+      "1": 0
+    },
+    {
+      "0": 250,
+      "1": 262
+    },
+    {
+      "0": 240,
+      "1": 272
+    },
+    {
+      "0": 236,
+      "1": 276
+    }
+  ]
+}

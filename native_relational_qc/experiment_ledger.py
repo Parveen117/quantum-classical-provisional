@@ -121,11 +121,11 @@ def _verify_record(record, report):
         raise ValueError("ledger record differs from replayed observation metadata or metrics")
 
 
-def verify_experiment_ledger(ledger):
-    """Verify the hash chain and re-execute every embedded NRQC observation."""
+def _verified_snapshot(ledger):
     bridge, chain = _bridge(ledger)
     identities, plans, classifications, origins = set(), set(), {}, {}
     legacy = checked = 0
+    reports = []
     for record in bridge.read_records():
         report = record.metadata.get("nrqc_observation")
         if report is None:
@@ -144,11 +144,23 @@ def verify_experiment_ledger(ledger):
         cls, origin = report["classification"], report["evidence_class"]
         classifications[cls] = classifications.get(cls, 0) + 1
         origins[origin] = origins.get(origin, 0) + 1
+        reports.append(copy.deepcopy(report))
         checked += 1
-    return dict(schema="nrqc-experiment-ledger-verification-v1", status="verified",
-                chain=chain, observations_replayed=checked, legacy_records=legacy,
-                exact_classifications=classifications, declared_origins=origins,
-                source_authentication="not_performed", hardware_submissions=0)
+    verification = dict(schema="nrqc-experiment-ledger-verification-v1", status="verified",
+                        chain=chain, observations_replayed=checked, legacy_records=legacy,
+                        exact_classifications=classifications, declared_origins=origins,
+                        source_authentication="not_performed", hardware_submissions=0)
+    return verification, reports
+
+
+def verify_experiment_ledger(ledger):
+    """Verify the hash chain and re-execute every embedded NRQC observation."""
+    return _verified_snapshot(ledger)[0]
+
+
+def read_observations(ledger):
+    """Return replayed observations from the same immutable verified snapshot."""
+    return _verified_snapshot(ledger)[1]
 
 
 def main(argv=None, *, replay=False):

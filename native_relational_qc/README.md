@@ -177,6 +177,9 @@ Use `nrqc experiment-plan` to freeze a model's measured circuit, then
 `nrqc observe-model` and `nrqc verify-observation` to validate recorded raw counts
 and replay an exact marginal comparison. See [MODEL_EXPERIMENT.md](MODEL_EXPERIMENT.md)
 for acquisition bindings, bit order, calibration validity and synthetic examples.
+Freeze repeated acquisitions with `nrqc campaign-plan`, then use
+`nrqc campaign-report` and `nrqc verify-campaign-report` for complete accounting
+of successful, failed and missing runs. See [EXPERIMENT_CAMPAIGN.md](EXPERIMENT_CAMPAIGN.md).
 
 ## Evidence and limits
 
