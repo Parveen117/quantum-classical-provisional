@@ -1,0 +1,12 @@
+{
+  "hardware_submissions": 0,
+  "schema": "nrqc-loss-accounting-design-sources-v1",
+  "source_commit": "755ae7ca2b3f6752560935db2382dc621fe65f4f",
+  "source_sha256": {
+    "phase_seam_foundation/LOSS_BUDGET_810.md": "bc52cf440d354c1797c63b5604378184709fec6cd70bfb46f337b051415dd924",
+    "phase_seam_foundation/LOSS_LEDGER.md": "17550f8aa9663bf4fa54877a0106332b48908ee6c38edd0c7c6d8c586256cc1b",
+    "phase_seam_foundation/LOSS_REFRESH.md": "ce69fc10f656f0594ebe4e9722a81a305b865dbe1c1441a8b60bacd636b3439e",
+    "phase_seam_foundation/PHOTONIC_IO.md": "4250f99b14a5e0a9e5db52d6ccf1e634b9edd7c300afc4f00aefe6710a12309d"
+  },
+  "status": "WRITTEN_PROPOSAL_NOT_IMPLEMENTED"
+}
