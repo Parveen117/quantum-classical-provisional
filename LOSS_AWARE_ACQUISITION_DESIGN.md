@@ -1,8 +1,14 @@
 # Loss-aware acquisition extension: written contract
 
-Monty · 12 November 2026 · Proposed extension, not implemented in the current CLI.
+Monty · 12 November 2026 · Event intake and conditional-reference contract implemented.
 
-The current classifier intake accounts for unconditional binary shots. A photonic
+The current [loss acquisition interface](native_relational_qc/LOSS_ACQUISITION.md)
+implements frozen detector policies, retained raw events, explicit conditional
+references, exact yield/readout gates and replay in the existing ledger.
+Repeated-campaign integration is the next software packet. Measured instrument
+and detector-response evidence remain the physical integration stage.
+
+The original classifier intake accounts for unconditional binary shots. A photonic
 controller may instead return failed heralds, absent clicks and invalid code
 occupations. Its next adapter must retain those events before interpreting an
 accepted bit histogram.
@@ -72,9 +78,9 @@ must not conceal a failed yield requirement. Rejected and unclassified fractions
 remain in the campaign summary. No significance claim follows from these fixed
 engineering thresholds alone.
 
-## Next implementation packet
+## Extension contract
 
-Add a distinct versioned event/result schema, the policy-driven click decoder,
+Use a distinct versioned event/result schema, the policy-driven click decoder,
 a conditional-instrument reference binding and a campaign extension. Reuse the
 existing artifact hashing, calibrated context, readout maps, idempotent ledger
 and exact rational comparisons. Retain unsuccessful attempts and explicit retry

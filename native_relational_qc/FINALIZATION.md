@@ -17,6 +17,7 @@ qualification. Its capabilities are fixed by its schemas and resource bounds.
 | Raw controller artifact intake | Implemented offline | Source-byte SHA-256, strict integer counts, exact Z-marginal comparison and artifact replay |
 | Acquisition ledger | Implemented | Idempotent receipts, conflicting-job rejection, writer lock and embedded observation replay |
 | Repeated-run campaigns | Implemented | Frozen repetitions, per-run errors, missing/failed acquisitions and outlier-preserving qualification |
+| Retained loss/heralding intake | Implemented offline | Frozen detector policy, explicit conditional reference, exact attempt/yield/error accounting and ledger replay; repeated-loss campaign extension follows |
 | Repository integration and release | Qualified review candidate | Python 3.12 checks and installed-wheel workflow recorded; review/merge and release tagging remain |
 | Actual device execution | Hardware integration | Bind the measured device's encoding, gates, channels, calibration and readout to a driver |
 | Experimental qualification | Measured evidence | Supply original controller files and calibration artifacts for the frozen campaign |
@@ -64,9 +65,9 @@ full run above is the qualification for the expanded acquisition runtime.
 3. Import the actual controller files with their original bytes preserved.
    Qualify repeated operation, failures, errors and achieved throughput under a
    frozen campaign. Provider provenance remains distinct from artifact hashing.
-4. For a loss/heralding protocol, add an explicit instrument/event-accounting
-   contract before qualifying conditional readout data. The current raw binary
-   contract accounts for unconditional shots.
+4. Extend the retained loss-event contract into repeated campaigns and bind its
+   declared instrument probabilities to measured detector/encoding evidence.
+   The original raw binary contract keeps its unconditional-shot scope.
 
 The checked-in photonic calibration file remains an unmeasured template. It can
 be populated from the corresponding experimental route. Physical fidelity,

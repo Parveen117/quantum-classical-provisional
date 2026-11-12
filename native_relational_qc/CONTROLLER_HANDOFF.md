@@ -53,11 +53,12 @@ configuration lookup without interpolation. A lab snapshot for that route must
 replace those absent values with the applicable measurements.
 
 For a photonic route, loss, invalid detections and heralding require explicit
-accounting. The current acquisition schema admits an unconditional binary
-histogram. It rejects a histogram whose counts fall short of the planned shots.
-A protocol with discarded events needs a separately frozen loss/heralding
-contract before its conditional probabilities can be qualified. No-click events
-cannot be relabelled as a computational zero without a declared instrument model.
+accounting. The original binary-count schema rejects a histogram whose counts
+fall short of the planned shots. The distinct
+[loss-event contract](LOSS_ACQUISITION.md) retains those attempts under a frozen
+detector policy and declared conditional instrument reference. Its lab driver
+must supply the detector response and encoding evidence. No-click events cannot
+be relabelled as a computational zero without a declared instrument model.
 
 ## Completion evidence
 

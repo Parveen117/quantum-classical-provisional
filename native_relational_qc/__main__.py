@@ -36,6 +36,9 @@ def main(argv=None):
     if argv and argv[0] in ('campaign-plan', 'campaign-report', 'verify-campaign-report'):
         from .experiment_campaign import main as campaign_main
         return campaign_main(argv[1:], command=argv[0])
+    if argv and argv[0] in ('loss-plan', 'import-loss-events', 'verify-loss-observation'):
+        from .loss_acquisition import main as loss_main
+        return loss_main(argv[1:], command=argv[0])
     if argv and argv[0] == 'observer-track':
         from .observer_tracking import main as tracking_main
         return tracking_main(argv[1:])

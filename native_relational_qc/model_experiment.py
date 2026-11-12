@@ -136,11 +136,9 @@ def verify_plan(plan):
     return dict(status="verified", fingerprint=plan["fingerprint"])
 
 
-def _result(plan, document):
-    _object(document, RESULT_FIELDS)
-    if document["schema"] != RESULT_SCHEMA:
-        raise ValueError("unsupported acquisition-result schema")
-    for key, expected in (("plan_fingerprint", plan["fingerprint"]),
+def _acquisition_context(plan, document, *, plan_fingerprint=None, shots_key="shots"):
+    """Shared identity, program, unconditional attempt and calibration binding."""
+    for key, expected in (("plan_fingerprint", plan_fingerprint or plan["fingerprint"]),
                           ("binding_fingerprint", digest(plan["binding"])),
                           ("program_sha256", plan["program_sha256"])):
         if document[key] != expected:
@@ -154,9 +152,17 @@ def _result(plan, document):
     calibration = plan["binding"]["calibration"]
     if not _time(calibration["captured_at"]) <= start <= end < _time(calibration["valid_until"]):
         raise ValueError("acquisition is outside the frozen calibration validity window")
-    shots = _integer(document["shots"], "result shots", 1, 1_000_000_000)
+    shots = _integer(document[shots_key], "result shots", 1, 1_000_000_000)
     if shots != plan["shots"]:
         raise ValueError("result shot count differs from the planned unconditional shots")
+    return shots
+
+
+def _result(plan, document):
+    _object(document, RESULT_FIELDS)
+    if document["schema"] != RESULT_SCHEMA:
+        raise ValueError("unsupported acquisition-result schema")
+    shots = _acquisition_context(plan, document)
     counts = document["counts"]
     width = len(plan["measure_wires"])
     if not isinstance(counts, dict) or not 1 <= len(counts) <= 1 << width:

@@ -14,6 +14,13 @@ from .compact import ResourceLimit
 from .model_experiment import verify_observation
 
 
+def _verify_observation(report):
+    if isinstance(report, dict) and report.get("schema") == "nrqc-loss-observation-v1":
+        from .loss_acquisition import verify_loss_observation
+        return verify_loss_observation(report)
+    return verify_observation(report)
+
+
 def _identity(report):
     acquired = report["acquisition"]
     return [acquired[k] for k in ("provider", "backend", "job_id")]
@@ -80,7 +87,7 @@ def _exclusive(path):
 
 def record_observation(report, ledger):
     """Append once per frozen plan and provider/backend/job acquisition identity."""
-    verify_observation(report)
+    _verify_observation(report)
     identity = _identity(report)
     with _exclusive(ledger) as path:
         if not path.exists():
@@ -133,7 +140,7 @@ def _verified_snapshot(ledger):
                 raise ValueError("NRQC ledger metadata is missing its replayable observation")
             legacy += 1
             continue
-        verify_observation(report)
+        _verify_observation(report)
         _verify_record(record, report)
         identity = tuple(_identity(report))
         plan = report["plan"]["fingerprint"]
