@@ -23,6 +23,8 @@ nrqc certify --out certification.json
 nrqc observer-cycle --cycles 3
 nrqc synthesize native_relational_qc/calculator_examples/bell_goal.json
 nrqc learn-structure --task curvature --out structure-fit.json
+nrqc predict native_relational_qc/learning/structure_model.json --features 5 17 --view first_layer --device native_relational_qc/calculator_examples/three_wire_line.json --out model-run.json
+nrqc verify-prediction model-run.json
 ```
 
 For development: `pip install -e '.[test]'` and `python -m pytest -q`.
@@ -45,6 +47,12 @@ parameters on the same training split, retains exact readout eligibility steps,
 and selects by training loss followed by declared gate costs. The reproducible
 comparison freezes selection before held-out evaluation and reports raw-phase,
 fused-phase and searched-topology inference costs separately.
+
+[Saved-model execution](MODEL_RUNTIME.md) maps a checkpoint to a declared
+directed device profile, routes its CX gates, and emits an exact OpenQASM
+program plus a runnable calculator request. Active-register basis checks,
+prediction replay and a source-pinned deployment audit cover the handoff.
+[Finalization](FINALIZATION.md) records the software and measured-device work.
 
 [Repeated source cycles](OBSERVER_CYCLE.md) applies RKF SP1 to the existing
 rotation-and-preparation channel. `nrqc observer-cycle` derives its affine
