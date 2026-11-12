@@ -2,52 +2,78 @@
 
 Monty · 12 November 2026
 
-The current release scope combines bounded state preparation, the four-qubit
-native-phase classifier and offline device-target compilation. Its scope is
-fixed by the supported input schemas and resource limits. Further algorithm
-families can be developed as additional capabilities.
+The current review candidate combines bounded state preparation, the four-qubit
+native-phase classifier, offline device-target compilation and recorded-acquisition
+qualification. Its capabilities are fixed by its schemas and resource bounds.
 
 | Work item | Current state | Completion evidence or remaining action |
 | --- | --- | --- |
 | Goal-to-circuit construction | Implemented | Bell signs and three/four-wire GHZ goals, exact acceptance and rewrite replay |
 | Phase and structure training | Implemented | Five declared topologies, frozen model selection, exact held-out comparison |
-| Saved-model inference | Implemented | Original and topology checkpoints, matching feature views, exact prediction |
+| Saved-model inference | Implemented | Original/topology checkpoints, matching feature views, exact prediction |
 | Device-target compiler | Implemented for the model family | Directed placement/routing, native gate caps, three/four-wire targets |
-| Export and replay | Implemented | Exact OpenQASM round-trip and active-register basis checks |
-| Qualification of these paths | Recorded | Source-pinned synthesis, learning and runtime audit records |
-| Repository integration and release | Qualified review candidate | Python 3.12 checks and installed-wheel commands are recorded. Review/merge and release tagging remain |
-| Actual device execution | Hardware work | Bind a measured device's gate set, wiring, phase controls and readout to a device adapter |
-| Experimental qualification | Hardware work | Record device runs, compare declared observables with the exported reference and use the existing evidence bridge |
+| Export and replay | Implemented | Exact QASM round-trip and full active-register basis checks |
+| Frozen acquisition plans | Implemented | Measured QASM, shots, raw-count convention, rational tolerance and calibration binding |
+| Raw controller artifact intake | Implemented offline | Source-byte SHA-256, strict integer counts, exact Z-marginal comparison and artifact replay |
+| Acquisition ledger | Implemented | Idempotent receipts, conflicting-job rejection, writer lock and embedded observation replay |
+| Repeated-run campaigns | Implemented | Frozen repetitions, per-run errors, missing/failed acquisitions and outlier-preserving qualification |
+| Repository integration and release | Qualified review candidate | Python 3.12 checks and installed-wheel workflow recorded; review/merge and release tagging remain |
+| Actual device execution | Hardware integration | Bind the measured device's encoding, gates, channels, calibration and readout to a driver |
+| Experimental qualification | Measured evidence | Supply original controller files and calibration artifacts for the frozen campaign |
 
-The software's offline work can be reviewed and released within these stated
-capabilities. The measured-hardware milestone needs the actual controller,
-calibration and results from the experimental route.
+## Qualification of the current runtime
 
-The [software qualification record](../benchmarks/records/software_qualification_20261112.json)
-accounts for 1,183 collected repository tests. The full run had 1,125 passes,
-57 skips and one failure in the shipped-example schema check. The fix adds
-the new goal/device descriptors to their respective validators, while retaining
-their rejection as calculator requests. All 11 schema tests then passed, and
-the formerly failed test passed in its own last-failed rerun. Current accounting
-is 1,126 passing cases and 57 skipped cases, from the full run plus that
-targeted correction. A separate focused run had 55 passes and one optional
-Qiskit skip. The NumPy-core wheel was built, installed outside the checkout,
-and exercised through both installed model commands on Python 3.12.14.
+The [acquisition qualification record](../benchmarks/records/acquisition_qualification_20261112.json)
+records a full Python 3.12.14 repository run with **1,166 passes, 57 skips and
+zero failures**. The previously skipped cases were then exercised in an isolated
+environment with Qiskit 2.6.2, Aer 0.18.2, gdstk 1.0.2 and KLayout 0.30.13. All
+57 have a passing targeted execution. This is one full NumPy-core run plus
+targeted optional checks. The record identifies each batch and its cases.
 
-The next development packets have concrete outputs.
+The wheel is built and installed outside the checkout. Its smoke covers 20
+console commands: prediction, measured plans, source-bound import, exact replay,
+idempotent ledger recording and a qualified three-repetition campaign. Changed
+artifact bytes and incomplete raw counts are rejected. The installed code hashes
+match the qualified source files. No hardware submission occurs.
 
-1. Connect the lab controller to the exported circuit and physical readout map.
-   Record the supported native operations, success/heralding conditions and
-   measured calibration ranges for that specific device.
-2. Feed actual counts into the existing expected-model/evidence bridge with the
-   prediction record's model, input, program and device bindings preserved.
-   Keep measured data and ideal reference data identifiable in the record.
-3. Qualify repeated operation and its failure/retry behaviour on that device.
-   Report the achieved workload, readout agreement, errors and throughput.
-4. Publish the software release and experimental evidence under their respective
-   demonstrated capabilities, with reproducible commands and source pins.
+The retained finite audits cover:
 
-Pāṇini source compilation continues in Recognition-Kernel-Framework. The current
-calculator uses the documented Pāṇini-inspired context and transformation
-mechanisms. Importing additional Sanskrit grammar machinery is a separate
-integration packet with its own demonstrated use.
+- 64 synthetic sampled acquisitions from the frozen held-out inputs, three exact
+  tolerance controls and five rejected binding/result controls;
+- a synthetic healthy/residue ledger pair, a byte-identical retry and repaired
+  hash-chain negative controls;
+- three input contexts with three repetitions each, with missing, timeout and
+  biased-outlier controls that retain failed qualification;
+- actual source-byte binding and duplicate-key rejection for a synthetic
+  controller artifact;
+- all 60 ordered measurement maps containing the readout on the three/four-wire
+  targets, including a nonidentity final routing layout. These project two
+  synthetic full-register histograms.
+
+The [earlier qualification record](../benchmarks/records/software_qualification_20261112.json)
+preserves the prior full run and its shipped-example schema correction. The new
+full run above is the qualification for the expanded acquisition runtime.
+
+## Remaining completion packets
+
+1. Review, merge and tag the bounded software release under its demonstrated
+   capabilities.
+2. Implement the actual device driver and encoding described in the
+   [controller handoff](CONTROLLER_HANDOFF.md). Supply its supported native
+   operations, channel/wire map, calibrated phase response and validity context.
+3. Import the actual controller files with their original bytes preserved.
+   Qualify repeated operation, failures, errors and achieved throughput under a
+   frozen campaign. Provider provenance remains distinct from artifact hashing.
+4. For a loss/heralding protocol, add an explicit instrument/event-accounting
+   contract before qualifying conditional readout data. The current raw binary
+   contract accounts for unconditional shots.
+
+The checked-in photonic calibration file remains an unmeasured template. It can
+be populated from the corresponding experimental route. Physical fidelity,
+room-temperature performance and computational advantage require their measured
+evidence; the current records qualify the offline software workflow.
+
+Pāṇini source compilation continues in Recognition-Kernel-Framework. Importing
+additional Sanskrit grammar machinery remains a separate integration packet
+with its own demonstrated use. The bounded software capabilities above can be
+reviewed and released within their stated scope.

@@ -180,6 +180,7 @@ for acquisition bindings, bit order, calibration validity and synthetic examples
 Freeze repeated acquisitions with `nrqc campaign-plan`, then use
 `nrqc campaign-report` and `nrqc verify-campaign-report` for complete accounting
 of successful, failed and missing runs. See [EXPERIMENT_CAMPAIGN.md](EXPERIMENT_CAMPAIGN.md).
+The [controller handoff](CONTROLLER_HANDOFF.md) specifies the remaining measured-device boundary.
 
 ## Evidence and limits
 

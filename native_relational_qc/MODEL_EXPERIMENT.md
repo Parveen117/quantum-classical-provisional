@@ -125,6 +125,20 @@ idempotent retry, a conflicting-result rejection and a repaired-chain negative
 control. Its [ledger](../benchmarks/records/experiment_ledger_20261112.jsonl)
 can be checked by `nrqc verify-experiment-ledger`.
 
+## Measurement-map qualification
+
+The [readout-map audit](../benchmarks/records/measurement_map_20261112.json)
+checks every ordered measured-wire subset containing the final model readout:
+11 maps on a three-wire target and 49 maps on a four-wire target. The latter
+uses arbitrary non-Clifford parameters and a routed topology whose final layout
+differs from its initial layout. All 60 maps preserve the independently sampled
+readout count and exact error through report replay. Maps within each group
+project the same full-register synthetic histogram: there are two source
+histograms, rather than 60 independent acquisitions.
+
+The [controller handoff](CONTROLLER_HANDOFF.md) lists the remaining encoding,
+native operation, calibration and physical-instrument work for a lab driver.
+
 The [qualification record](../benchmarks/records/model_experiment_20261112.json)
 uses independently computed NumPy state probabilities to sample synthetic
 counts for the frozen model's 64 held-out inputs, plus exact threshold endpoints
