@@ -108,6 +108,7 @@ and missing-attempt controls are rejected. Independent NumPy probabilities check
 the balanced ideal input used by the biased model.
 
 The original source distinctions are retained in the repository's
-[loss-accounting design](../LOSS_AWARE_ACQUISITION_DESIGN.md). A repeated-campaign
-extension and measured detector/encoding/controller evidence complete the next
-integration stages.
+[loss-accounting design](../LOSS_AWARE_ACQUISITION_DESIGN.md).
+[Repeated-loss campaigns](LOSS_CAMPAIGN.md) preserve each run's yield and error
+gates. Measured detector/encoding/controller evidence completes the physical
+integration stage.

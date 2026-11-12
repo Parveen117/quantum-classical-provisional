@@ -184,6 +184,8 @@ The [controller handoff](CONTROLLER_HANDOFF.md) specifies the remaining measured
 Use `nrqc loss-plan`, `nrqc import-loss-events` and `nrqc verify-loss-observation`
 for explicit retained herald/rejection events. [LOSS_ACQUISITION.md](LOSS_ACQUISITION.md)
 describes the conditional instrument reference and separate yield/readout gates.
+`nrqc loss-campaign-plan` and `nrqc loss-campaign-report` extend that accounting
+to [fixed repeated-loss campaigns](LOSS_CAMPAIGN.md), including failed and missing runs.
 
 ## Evidence and limits
 

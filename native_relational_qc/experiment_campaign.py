@@ -76,15 +76,13 @@ def _failures(failures, planned):
     return result
 
 
-def campaign_report(campaign, observations, *, failures=None):
-    """Keep failures/outliers visible; pool only within identical fixed contexts."""
-    verify_campaign(campaign)
-    planned = {plan["fingerprint"]: plan for plan in campaign["plans"]}
+def _match_acquisitions(planned, observations, failures, *, verify, binding_of):
+    """Shared run-slot and acquisition-identity rules for both event protocols."""
     if not isinstance(observations, list) or len(observations) > len(planned):
         raise ValueError("observations require a bounded campaign list")
     seen, jobs = {}, set()
     for report in observations:
-        verify_observation(report)
+        verify(report)
         fingerprint = report["plan"]["fingerprint"]
         if fingerprint not in planned or fingerprint in seen:
             raise ValueError("observation refers to an unknown or duplicate campaign plan")
@@ -101,11 +99,20 @@ def campaign_report(campaign, observations, *, failures=None):
         raise ValueError("a planned acquisition cannot have both an observation and a failure")
     for fingerprint, failure in failed.items():
         if failure["job_id"] is not None:
-            binding = planned[fingerprint]["binding"]
+            binding = binding_of(planned[fingerprint])
             job = binding["provider"], binding["backend"], failure["job_id"]
             if job in jobs:
                 raise ValueError("campaign reuses a successful or failed acquisition identity")
             jobs.add(job)
+    return seen, failed
+
+
+def campaign_report(campaign, observations, *, failures=None):
+    """Keep failures/outliers visible; pool only within identical fixed contexts."""
+    verify_campaign(campaign)
+    planned = {plan["fingerprint"]: plan for plan in campaign["plans"]}
+    seen, failed = _match_acquisitions(planned, observations, failures,
+                                      verify=verify_observation, binding_of=lambda plan: plan["binding"])
     groups, run_results, missing, origins = {}, [], [], {}
     for fingerprint, plan in planned.items():
         group = _group(plan)

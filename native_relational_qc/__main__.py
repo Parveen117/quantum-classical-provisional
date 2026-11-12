@@ -39,6 +39,9 @@ def main(argv=None):
     if argv and argv[0] in ('loss-plan', 'import-loss-events', 'verify-loss-observation'):
         from .loss_acquisition import main as loss_main
         return loss_main(argv[1:], command=argv[0])
+    if argv and argv[0] in ('loss-campaign-plan', 'loss-campaign-report', 'verify-loss-campaign-report'):
+        from .loss_campaign import main as loss_campaign_main
+        return loss_campaign_main(argv[1:], command=argv[0])
     if argv and argv[0] == 'observer-track':
         from .observer_tracking import main as tracking_main
         return tracking_main(argv[1:])

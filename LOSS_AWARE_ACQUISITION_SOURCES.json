@@ -1,4 +1,5 @@
 {
+  "campaign_implementation": "native_relational_qc/loss_campaign.py",
   "hardware_submissions": 0,
   "implementation": "native_relational_qc/loss_acquisition.py",
   "implementation_scope": "offline declared-instrument and retained-event validation; no measured physical instrument",
@@ -10,5 +11,5 @@
     "phase_seam_foundation/LOSS_REFRESH.md": "ce69fc10f656f0594ebe4e9722a81a305b865dbe1c1441a8b60bacd636b3439e",
     "phase_seam_foundation/PHOTONIC_IO.md": "4250f99b14a5e0a9e5db52d6ccf1e634b9edd7c300afc4f00aefe6710a12309d"
   },
-  "status": "EVENT_INTAKE_IMPLEMENTED_CAMPAIGN_PENDING"
+  "status": "EVENT_INTAKE_AND_REPEATED_CAMPAIGNS_IMPLEMENTED"
 }

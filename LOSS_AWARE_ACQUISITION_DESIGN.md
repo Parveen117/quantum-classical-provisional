@@ -5,8 +5,9 @@ Monty · 12 November 2026 · Event intake and conditional-reference contract imp
 The current [loss acquisition interface](native_relational_qc/LOSS_ACQUISITION.md)
 implements frozen detector policies, retained raw events, explicit conditional
 references, exact yield/readout gates and replay in the existing ledger.
-Repeated-campaign integration is the next software packet. Measured instrument
-and detector-response evidence remain the physical integration stage.
+[Repeated campaigns](native_relational_qc/LOSS_CAMPAIGN.md) preserve all planned
+run slots and per-run qualification gates. Measured instrument and detector-response
+evidence remain the physical integration stage.
 
 The original classifier intake accounts for unconditional binary shots. A photonic
 controller may instead return failed heralds, absent clicks and invalid code
