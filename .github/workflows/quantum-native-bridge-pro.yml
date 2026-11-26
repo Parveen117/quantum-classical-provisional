@@ -22,7 +22,7 @@ jobs:
           - python-version: '3.12'
             extras: 'test'
           - python-version: '3.12'
-            extras: 'test,qiskit,benchmark'
+            extras: 'test,ibm,benchmark'
     steps:
       - name: Checkout
         uses: actions/checkout@v4

@@ -1,4 +1,4 @@
-"""Local ideal calculations; never connects to a quantum service."""
+"""Native relational calculator and explicit IBM hardware experiments."""
 import argparse
 import json
 import sys
@@ -9,6 +9,9 @@ from .examples import bell, bernstein_vazirani, ghz, grover_11, order_memory
 
 def main(argv=None):
     argv = sys.argv[1:] if argv is None else argv
+    if argv and argv[0] == 'grover-cloud':
+        from .grover_cloud import main as grover_main
+        return grover_main(argv[1:])
     if argv and argv[0] == 'calculate':
         from .calculator import main as calculator_main
         return calculator_main(argv[1:])
@@ -28,6 +31,7 @@ def main(argv=None):
         from .observer_cycle import main as cycle_main
         return cycle_main(argv[1:])
     parser = argparse.ArgumentParser(prog='nrqc', description=__doc__, epilog=
+        'Four-target search: nrqc grover-cloud --help; '
         'Custom exact circuits: nrqc calculate INPUT.json --out RESULT.json; '
         'backend acceptance report: nrqc check INPUT.json (or nrqc check --table); '
         'photonic model arithmetic: nrqc certify; '

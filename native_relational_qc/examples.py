@@ -37,12 +37,24 @@ def bernstein_vazirani(secret="1011"):
     return out.measure_all()
 
 
-def grover_11():
-    """One Grover iteration finds marked item 11 among four items."""
-    out = Circuit(2).add("h", 0).add("h", 1).add("cz", 0, 1)
+def grover_search(marked):
+    """One Grover iteration on four items; labels are printed q1 q0."""
+    if marked not in ("00", "01", "10", "11"):
+        raise ValueError("expected a two-bit marked item")
+    out = Circuit(2).add("h", 0).add("h", 1)
+    zero_bits = [q for q, bit in enumerate(reversed(marked)) if bit == "0"]
+    for q in zero_bits:
+        out.add("x", q)
+    out.add("cz", 0, 1)
+    for q in zero_bits:
+        out.add("x", q)
     out.add("h", 0).add("h", 1).add("x", 0).add("x", 1)
     out.add("cz", 0, 1).add("x", 0).add("x", 1).add("h", 0).add("h", 1)
     return out.measure_all()
+
+
+def grover_11():
+    return grover_search("11")
 
 
 def order_memory(erase=False):
