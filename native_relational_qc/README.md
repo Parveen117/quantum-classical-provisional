@@ -35,6 +35,13 @@ the existing native circuit evaluator. Each oracle flips the phase of one basis
 state. One diffusion step concentrates the ideal output on that state. Bitstrings
 are printed as q1 q0. The oracle encodes the answer, as in a query benchmark.
 
+For a decoding problem, use `nrqc grover-cloud ideal --parity`. The input is a
+pair of checks `(x1 XOR x0, x0)`. The oracle computes the first check reversibly
+with CX, compares the pair with the observed syndrome, and uncomputes before
+diffusion. For example, syndrome `01` selects error mask `11`. The classical
+inverse is used only to score measured outcomes. This is a small reversible
+parity problem with an elementary classical solution.
+
 Install `pip install '.[ibm]'` and configure an IBM Quantum Runtime account in
 the execution environment for a physical run. Select an accessible QPU in your
 instance. The submission below consumes 256 shots for each of four circuits
@@ -42,7 +49,7 @@ instance. The submission below consumes 256 shots for each of four circuits
 
 ```bash
 nrqc grover-cloud ideal
-nrqc grover-cloud submit --backend YOUR_QPU --shots 256
+nrqc grover-cloud submit --parity --backend YOUR_QPU --shots 256
 nrqc grover-cloud collect YOUR_JOB_ID
 ```
 
