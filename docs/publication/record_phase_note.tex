@@ -1,0 +1,69 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,geometry,microtype}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\geometry{a4paper, left=0.93in, right=0.93in, top=0.78in, bottom=0.85in}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\newcommand{\repo}{https://github.com/Parveen117/quantum-classical-provisional}
+\newcommand{\rev}{67478206858dac407198bcd58cc3c3c5663dfd6a}
+\newcommand{\datalink}[2]{\href{\repo/blob/\rev/#1}{#2}}
+\title{\textbf{An exact twelve-bit comparison of recycled-control\\ and full-register phase estimation}}
+\author{Software reproduction note accompanying NRQC v1.2.0}
+\date{28 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+The semiclassical inverse Fourier transform allows a sequence of measurements on one control qubit to reproduce the phase readout of a multi-qubit control register. We document a software check of that equivalence in modular order finding at base 2 and moduli 141, 143 and 187. The release contains two circuit constructions and a Fourier-sum reference. In all three cases, the recycled-control calculation and the retained full-register result agree exactly in every one of the 4,096 possible readouts. Each distribution also matches the reference formula. We give the evidence files, negative controls and replay command.
+\end{abstract}
+
+\section*{What is compared}
+Fix \(Q=2^{12}\) and \(f(x)=2^x\bmod N\). The full circuit computes controlled modular powers on a work register, applies an inverse Fourier transform to twelve control wires and reads those wires as the integer \(y\). The semiclassical construction measures a single control after each modular power and conditions the next phase correction on earlier outcomes~\cite{gn}. The simulator follows both outcomes of each measurement. It maintains unnormalised branch states so that leaf norms give unconditional probabilities for complete records.
+
+For an ideal measurement, grouping inputs by the common work label \(v\) gives
+\[
+ p(y)=\frac{1}{Q^2}\sum_v
+          \left|\sum_{\substack{0\leq x<Q\\ f(x)=v}}
+                 e^{-2\pi ixy/Q}\right|^2,\qquad 0\leq y<Q.
+\]
+The implementation compares coefficients in the power basis of \(\mathbb Q(\zeta_{4096})\). Equality is decided before decimal formatting. In the recycled-control code the first bit read has weight \(2^0\). This convention matters when matching the integer label to the full-register readout.
+
+\begin{center}
+\begin{tabular}{r r r r r}
+\toprule
+\(N\) & Equal bins & Wires, record/full & Record peak & Full peak\\
+\midrule
+141 & 4,096/4,096 & 29/40 & 46 & 188,412\\
+143 & 4,096/4,096 & 29/40 & 60 & 245,232\\
+187 & 4,096/4,096 & 29/40 & 40 & 163,648\\
+\bottomrule
+\end{tabular}
+\end{center}
+The wire counts include arithmetic workspace. The record peak counts live work labels in a single branch state. The full peak counts branches in the full simulation. Process memory and cumulative work across the record tree are different quantities.
+
+\newpage
+\section*{What the evidence checks}
+For each modulus the replay builds the arithmetic circuits, reads the retained full-register output, recalculates the complete recycled-control distribution and evaluates the reference sum. It requires exact normalisation. A cyclic shift of the output labels by one produced zero matching bins in each test. A deliberate change to one output probability was also detected in all three tests. The independent formula checks the end distribution. Some arithmetic and exact-field routines are shared by the software paths.
+
+The cases establish agreement for these three inputs at this precision. More generally, the semiclassical Fourier construction is due to Griffiths and Niu~\cite{gn}. The contribution documented here is a versioned implementation and an exact comparison that can be replayed. Runtime and memory for other moduli depend on the orbit structure, precision, representation and available resources. The evidence comes from ideal classical simulation.
+
+\section*{How to reproduce the comparison}
+Start in a checkout of the \href{\repo/tree/\rev}{v1.2.0 source tree} with Python 3.11 or later and its NumPy dependency installed. The \datalink{native_relational_qc/record_full_12_audit.json}{retained audit} names the SHA-256 digests of the three compressed inputs and eight implementation files. The \datalink{benchmarks/record_full_12_audit.py}{replay script} reads the compressed files directly. The command below writes a fresh report in the current directory.
+
+{\small
+\begin{verbatim}
+d=benchmarks/comparisons
+python benchmarks/record_full_12_audit.py --full \
+  141=$d/full_register_12_20261031_result.json.gz \
+  143=$d/full_register_12_n143_20261106_result.json.gz \
+  187=$d/full_register_12_n187_20261106_result.json.gz \
+  --out record_replay.json
+\end{verbatim}
+}
+Check \texttt{status = witnessed} and \texttt{bins\_equal = 4096} in each row. This command reuses the archived full-register runs. The \datalink{native_relational_qc/RECORD_PHASE.md}{implementation notes} describe the two circuit constructions and distinguish the earlier branch-limited audit from the later full-register comparison.
+
+\begin{thebibliography}{9}
+\bibitem{gn} R.~B. Griffiths and C.-S. Niu, Semiclassical Fourier Transform for Quantum Computation, \emph{Physical Review Letters} \textbf{76}, 3228--3231 (1996). \href{https://doi.org/10.1103/PhysRevLett.76.3228}{doi:10.1103/PhysRevLett.76.3228}.
+\bibitem{software} \emph{Quantum-Classical Recognition Validation}, version 1.2.0. \href{https://doi.org/10.5281/zenodo.24624377}{doi:10.5281/zenodo.24624377}. Software authorship and contributor credits are recorded in the \datalink{CITATION.cff}{release metadata}.
+\end{thebibliography}
+\end{document}
