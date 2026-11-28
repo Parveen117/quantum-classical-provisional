@@ -53,8 +53,6 @@ class NoiseCertifyTests(unittest.TestCase):
         self.assertEqual(report['provenance']['source_sha256'].keys() & {'native_relational_qc/certify.py'}, {'native_relational_qc/certify.py'})
 
     def test_committed_noise_certificate_is_complete_and_certified(self):
-        if not RECORD.exists():
-            self.skipTest('no committed noise certificate')
         from phase_seam_foundation import cluster_noise as cn
         record = json.loads(RECORD.read_text())
         self.assertEqual(record['grade'], 'CERTIFIED')

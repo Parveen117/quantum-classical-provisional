@@ -1,4 +1,5 @@
 """Theorem R1 at twelve bits: the committed record-versus-full-register audit and its script."""
+import hashlib
 import json
 import unittest
 from pathlib import Path
@@ -24,12 +25,15 @@ class RecordFull12Tests(unittest.TestCase):
             module.full_distribution(bad, 141, 2)
 
     def test_committed_twelve_bit_witness(self):
-        if not RECORD.exists():
-            self.skipTest('no committed twelve-bit audit')
         record = json.loads(RECORD.read_text())
         self.assertEqual(record['status'], 'witnessed')
         self.assertEqual(record['environment']['python'].split('.')[:2], ['3', '12'])
         self.assertEqual({r['modulus'] for r in record['rows']}, {141, 143, 187})
+        self.assertEqual(set(record['full_results']), {'141', '143', '187'})
+        for modulus, artifact in record['full_results'].items():
+            with self.subTest(modulus=modulus):
+                path = ROOT / 'benchmarks' / 'comparisons' / artifact['path']
+                self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), artifact['sha256'])
         for row in record['rows']:
             self.assertEqual(row['bins'], 4096)
             self.assertEqual(row['bins_equal'], 4096)
@@ -45,8 +49,6 @@ class RecordFull12Tests(unittest.TestCase):
     def test_retained_full_register_summaries_agree_with_the_fourier_law(self):
         Z = field_of_order(4096)
         for modulus, path in FULL.items():
-            if not path.exists():
-                self.skipTest('no retained full-register summary')
             summary = json.loads(path.read_text())
             self.assertEqual(summary['status'], 'completed')
             self.assertLess(summary['wall_seconds'], 300)
