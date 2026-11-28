@@ -51,6 +51,19 @@ jobs:
           nrqc grover-cloud ideal --parity > /dev/null
           nrqc panini-sandhi search ī > /dev/null
           nrqc certify --out rebuilt-photonic-certification.json > /dev/null
+          status=0
+          nrqc certify noise --cases xor_01 --assignments 1 > noise-smoke.json || status=$?
+          test "$status" -eq 1
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          report = json.loads(Path("noise-smoke.json").read_text())
+          case, = report["cases"]
+          assert report["grade"] == "INCOMPLETE"
+          assert case["label"] == "xor_01" and case["assignments_checked"] == 1
+          assert case["first_order"]["coefficient"] == "5/2"
+          PY
           nrqc observer-track --records 010101 > /dev/null
           nrqc observer-state --records 010101 > /dev/null
           nrqc observer-cycle --cycles 3 > /dev/null

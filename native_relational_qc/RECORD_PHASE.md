@@ -132,9 +132,9 @@ the 65,536-branch cap. Results are in
 | 141 | 10 | 29 / 38 | 28.5 | 43.8 | 46 / 47,036 | exact | 67.6593021% | 23.8002623% |
 | 143 | 10 | 29 / 38 | 29.7 | 40.5 | 60 / 61,424 | exact | 24.9773482% | 12.8593492% |
 | 187 | 10 | 29 / 38 | 18.7 | 24.9 | 40 / 40,768 | exact | 43.0547653% | 24.5117931% |
-| 141 | 12 | 29 / 40 | 448.9 | over cap | 46 / 188,416 | law only | 90.5345333% | 43.6963776% |
-| 143 | 12 | 29 / 40 | 542.3 | over cap | 60 / 245,760 | law only | 36.8736373% | 23.9574965% |
-| 187 | 12 | 29 / 40 | 377.1 | over cap | 40 / 163,840 | law only | 56.7589921% | 37.1144568% |
+| 141 | 12 | 29 / 40 | 448.9 | over cap | 46 / 188,416 | law only (then); exact, see below | 90.5345333% | 43.6963776% |
+| 143 | 12 | 29 / 40 | 542.3 | over cap | 60 / 245,760 | law only (then); exact, see below | 36.8736373% | 23.9574965% |
+| 187 | 12 | 29 / 40 | 377.1 | over cap | 40 / 163,840 | law only (then); exact, see below | 56.7589921% | 37.1144568% |
 
 Every record probability in every row equals the independent Fourier law
 exactly, and in the six rows where the full register was run the two
@@ -144,6 +144,36 @@ to 245,760 branches the full register would need; peak process RSS for the
 whole audit was 191 MiB. The time of the twelve-bit rows is almost entirely
 the leaf readout: 4096 records times the orbit size, one exact 2048-slot
 product each.
+
+## Twelve bits witnessed directly (6 November 2026)
+
+With the flat backend's branch cap raised to 1,048,576 (31 October), the
+three twelve-bit full registers fit, so Theorem R1 is now witnessed at
+twelve bits rather than inferred from the Fourier law alone. Run
+`PYTHONPATH=. python benchmarks/record_full_12_audit.py --full 141=... 143=... 187=...`;
+the committed result is [record_full_12_audit.json](record_full_12_audit.json),
+status `witnessed`, Python 3.12.3, NumPy 2.5.4, one run per row, with
+source hashes, the revision and the SHA-256 of every retained full-register
+result it read. N = 141 reuses the retained 31 October full result; N = 143
+and N = 187 were run once each on 6 November under the same 300-second
+worker deadline and are retained in `benchmarks/comparisons/`
+(`full_register_12_n143_20261106*`, `full_register_12_n187_20261106*`).
+
+| N | bits | record s (now) | full s | support record / full | bins equal | record = full |
+| ---: | ---: | ---: | ---: | --- | ---: | --- |
+| 141 | 12 | 73.3 | 160.1 (31 Oct) | 46 / 188,412 | 4096 / 4096 | exact |
+| 143 | 12 | 74.1 | 97.1 | 60 / 245,232 | 4096 / 4096 | exact |
+| 187 | 12 | 49.7 | 58.4 | 40 / 163,648 | 4096 / 4096 | exact |
+
+Every record bin equals the corresponding full-register bin as an element
+of Q(zeta_4096), both distributions equal the Fourier law, and the record
+distribution sums to one. Negative controls in the same run: a cyclic
+relabelling of the record bins matches the full register in 0 of 4096 bins,
+and a single altered full-register bin is detected. The record rows are
+now 6 to 7 times faster than in the table above because the flat engine
+was optimised on 31 October; the full register is faster than the record
+for these three instances, so the record path's saving remains memory and
+wires (29 instead of 40, at most 60 amplitudes), not time.
 
 ## Limits
 

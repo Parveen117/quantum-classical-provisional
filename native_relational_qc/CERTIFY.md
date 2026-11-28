@@ -93,12 +93,58 @@ nrqc certify cluster --workers 4 --out native_relational_qc/certify_records/clus
 nrqc certify cluster --cases generic --assignments 2      # a short partial run, graded INCOMPLETE
 ```
 
-One assignment (13 qubits, 8192 amplitudes, 1024-outcome distribution) takes
-about 27 s on one core in the flat engine; a full certificate is 320
+One assignment (13 qubits, 8192 amplitudes, 1024-outcome distribution) took
+about 27 s on one core in the flat engine at 28e8650 and about 7.5 s on Python 3.12 at the current engine; a full certificate is 320
 assignments. The committed record is
 [certify_records/cluster_certificate.json](certify_records/cluster_certificate.json);
 `tests/test_native_certify.py` re-runs the identity, one assignment and the
 control, and checks the committed record's grade and completeness.
+
+## Theorem N response (`nrqc certify noise`)
+
+Phase seam v0.36 bounds the classifier's readout error from the corrected
+source sector by |P_noisy - P_clean| <= A w + R, with w the double-origin
+event fraction, R the exact two-or-more-error tail, and A built from the exact
+response of the corrected readout to one Z error pattern per Bell pair (the
+Phi-, Psi+ and Psi- patterns of each of the six Bell-pair stars) plus the
+worst Z pattern on the supports of the 3-star and the 5-star: 99 distinct
+patterns on the 13 nodes. At the declared point x = 1/40, eta = 243/4000 on
+the XOR checkpoint A = 5/2, which is the number behind the rounded 2.8w
+figure of the ledger (coefficient 2.7981 at that point only).
+
+`nrqc certify noise` re-derives that table on the calculator with no new
+circuit per pattern. A Z error placed at allocation commutes with every CZ,
+and Z|s_a> = |(s+1)_a>, so on a measured node it only flips that node's raw
+outcome (the x = 0, z = 1 case of `measurement_identity`), while on an
+unmeasured node it leaves the measured marginal unchanged (checked through
+the calculator by one extra circuit per case with Z on the three discarded
+nodes, `discarded_invisible`). Every pattern is therefore read from the same
+64 distributions as the cluster witness: for each pattern and each of the
+512 corrected paths the path weight must stay 2^-9 and the conditional
+readout must be the same on every path (Lemma N3), that single value must
+equal the pattern engine's `noisy_run`, and the coefficient A rebuilt from
+the calculator's changes alone must reproduce `first_order_error`'s
+first-order term exactly at the declared point. Negative controls: some
+pattern changes the readout, some single-node pattern changes it, and the
+discarded-node circuit changes nothing.
+
+Grades are as for the cluster claim; `WITNESS_QUALIFIED` joins the names
+never granted. The certificate is about the first-order term of an ideal
+Bell-diagonal source model; R is taken from Theorem N unchanged, and dark
+counts, distinguishability and correlated loss are outside it.
+
+```bash
+nrqc certify noise --workers 4 --out native_relational_qc/certify_records/noise_certificate.json
+nrqc certify noise --cases xor_01 --assignments 1      # a short partial run, graded INCOMPLETE
+```
+
+The committed record is
+[certify_records/noise_certificate.json](certify_records/noise_certificate.json),
+computed on Python 3.12 with the interpreter, NumPy, platform, source hashes
+and revision recorded under `provenance` (the cluster record of 28e8650
+predates that field). `tests/test_native_certify_noise.py` re-runs one
+assignment against the pattern engine, one XOR case end to end, and checks
+the committed record's grade, completeness and recomputed first-order term.
 
 ## What this does and does not add
 

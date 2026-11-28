@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "native-relational-qc"
-version = "0.1.0"
+version = "1.2.0"
 description = "Exact cyclotomic-field quantum-circuit calculator with certified decimal enclosures and fail-closed resource accounting"
 readme = "native_relational_qc/README.md"
 requires-python = ">=3.11"

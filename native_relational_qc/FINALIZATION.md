@@ -2,7 +2,7 @@
 
 Monty · 12 November 2026
 
-The current review candidate combines bounded state preparation, the four-qubit
+The v1.2.0 package combines bounded state preparation, the four-qubit
 native-phase classifier, offline device-target compilation and recorded-acquisition
 qualification. Its capabilities are fixed by its schemas and resource bounds.
 
@@ -19,7 +19,7 @@ qualification. Its capabilities are fixed by its schemas and resource bounds.
 | Repeated-run campaigns | Implemented | Frozen repetitions, per-run errors, missing/failed acquisitions and outlier-preserving qualification |
 | Retained loss/heralding intake | Implemented offline | Frozen detector policy, explicit conditional reference, exact attempt/yield/error accounting and ledger replay |
 | Repeated loss-event campaigns | Implemented offline | Per-run yield/readout gates, undefined conditional outcomes, explicit failed/missing jobs and comparable-context pooling |
-| Repository integration and release | Qualified review candidate | Python 3.12 checks and installed-wheel workflow recorded; review/merge and release tagging remain |
+| Repository integration and release | Version 1.2.0 | The [master CI history](https://github.com/Parveen117/quantum-classical-provisional/actions?query=branch%3Amaster) identifies the tested revisions. The [release list](https://github.com/Parveen117/quantum-classical-provisional/releases) identifies published versions. |
 | Actual device execution | Hardware integration | Bind the measured device's encoding, gates, channels, calibration and readout to a driver |
 | Experimental qualification | Measured evidence | Supply original controller files and calibration artifacts for the frozen campaign |
 
@@ -61,15 +61,13 @@ integrity separate from provider authentication.
 
 ## Remaining completion packets
 
-1. Review, merge and tag the bounded software release under its demonstrated
-   capabilities.
-2. Implement the actual device driver and encoding described in the
+1. Implement the actual device driver and encoding described in the
    [controller handoff](CONTROLLER_HANDOFF.md). Supply its supported native
    operations, channel/wire map, calibrated phase response and validity context.
-3. Import the actual controller files with their original bytes preserved.
+2. Import the actual controller files with their original bytes preserved.
    Qualify repeated operation, failures, errors and achieved throughput under a
    frozen campaign. Provider provenance remains distinct from artifact hashing.
-4. Bind retained loss-event campaigns and their declared instrument probabilities
+3. Bind retained loss-event campaigns and their declared instrument probabilities
    to measured detector/encoding evidence. The original raw binary contract
    keeps its unconditional-shot scope.
 
