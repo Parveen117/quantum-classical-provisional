@@ -2,7 +2,10 @@
 import argparse
 from contextlib import contextmanager
 import copy
+from functools import lru_cache, reduce
 import json
+import math
+import operator
 import os
 from pathlib import Path
 
@@ -26,12 +29,14 @@ def _identity(report):
     return [acquired[k] for k in ("provider", "backend", "job_id")]
 
 
-def _payload(report):
+def _payload(report, *, stable_gaps=True):
     payload = copy.deepcopy(report["bridge_payload"])
     payload["metadata"].update(nrqc_observation=copy.deepcopy(report),
                                nrqc_observation_fingerprint=report["fingerprint"],
                                nrqc_acquisition_identity=_identity(report),
                                nrqc_exact_classification=report["classification"])
+    if stable_gaps:
+        payload["metadata"]["nrqc_gap_summation"] = "fsum-v1"
     return payload
 
 
@@ -115,13 +120,60 @@ def record_observation(report, ledger):
                     ledger_head=record.chain_hash, appended=True)
 
 
+def _legacy_gap_sum(metrics):
+    """Replay historical set-order addition only when its saved result is attainable."""
+    saved = iter((metrics.get("fallback_distribution_gap"), metrics.get("distribution_gap")))
+
+    def historical_total(values):
+        terms = tuple(value for value in values if value)
+        canonical = math.fsum(terms)
+        gap = next(saved)
+        # A verified model/loss report has at most seven observed labels and four
+        # fallback labels. Zero terms do not affect a sum of nonnegative floats.
+        if type(gap) is not float or not math.isfinite(gap) or len(terms) > 11:
+            return canonical
+        target = 2 * gap
+        if target == canonical:
+            return canonical
+
+        @lru_cache(maxsize=None)
+        def totals(mask):
+            if not mask:
+                return {0.0}
+            possible = set()
+            for i, last_term in enumerate(terms):
+                bit = 1 << i
+                if mask & bit:
+                    possible.update(subtotal + last_term for subtotal in totals(mask ^ bit))
+            return possible
+
+        try:
+            return target if target in totals((1 << len(terms)) - 1) else canonical
+        finally:
+            totals.cache_clear()
+
+    return historical_total
+
+
+def _left_sum(values):
+    """Sequential binary64 addition used for the four weights on older Python."""
+    return reduce(operator.add, values, 0.0)
+
+
 def _verify_record(record, report):
-    payload = _payload(report)
+    stable_gaps = "nrqc_gap_summation" in record.metadata
+    payload = _payload(report, stable_gaps=stable_gaps)
     for key in ("root", "template", "phase"):
         if getattr(record, key + "_hash") != digest_payload(payload[key]):
             raise ValueError("ledger record differs from its observation's " + key + " binding")
-    recognition = measurement_metrics(record.root_hash, record.template_hash, record.phase_hash,
-                                      payload["observed"], expected_model=payload["expected_model"])
+    inputs = record.root_hash, record.template_hash, record.phase_hash, payload["observed"]
+    recognition = measurement_metrics(*inputs, expected_model=payload["expected_model"])
+    if not stable_gaps and recognition != record.recognition and isinstance(record.recognition, dict):
+        for weights in (math.fsum, _left_sum):
+            recognition = measurement_metrics(*inputs, expected_model=payload["expected_model"],
+                                              sum_terms=_legacy_gap_sum(record.recognition), sum_weights=weights)
+            if recognition == record.recognition:
+                break
     if (record.hash_alg != HASH_ALG or record.backend != payload["backend"] or
             record.shots != payload["shots"] or record.metadata != payload["metadata"] or
             record.recognition != recognition or record.observed_hash != recognition["observed_hash"]):

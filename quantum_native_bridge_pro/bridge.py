@@ -100,12 +100,13 @@ def normalize_counts(counts: Mapping[str, int | float]) -> Dict[str, float]:
     return {str(k): float(v) / total for k, v in sorted(counts.items())}
 
 
-def l1_distribution_gap(expected: Mapping[str, float], observed: Mapping[str, float]) -> float:
-    keys = set(expected) | set(observed)
-    return sum(abs(float(expected.get(k, 0.0)) - float(observed.get(k, 0.0))) for k in keys) / 2.0
+def l1_distribution_gap(expected: Mapping[str, float], observed: Mapping[str, float], *, sum_terms=math.fsum) -> float:
+    keys = sorted(set(expected) | set(observed))
+    return sum_terms(abs(float(expected.get(k, 0.0)) - float(observed.get(k, 0.0))) for k in keys) / 2.0
 
 
-def deterministic_expected_distribution(root_hash: str, template_hash: str, phase_hash: str) -> Dict[str, float]:
+def deterministic_expected_distribution(root_hash: str, template_hash: str, phase_hash: str,
+                                        *, sum_weights=math.fsum) -> Dict[str, float]:
     """Generate a deterministic fallback distribution from hashes.
 
     This is only a fallback bridge signal. Production workflows should attach a
@@ -114,7 +115,7 @@ def deterministic_expected_distribution(root_hash: str, template_hash: str, phas
     seed = int(sha256_hex(root_hash + template_hash + phase_hash)[:16], 16)
     rng = random.Random(seed)
     raw = [0.05 + rng.random() for _ in range(4)]
-    total = sum(raw)
+    total = sum_weights(raw)
     states = ["00", "01", "10", "11"]
     return {state: raw[i] / total for i, state in enumerate(states)}
 
@@ -156,22 +157,26 @@ def measurement_metrics(
     observed: Mapping[str, int | float] | str | None,
     phase_angles: Optional[Iterable[float]] = None,
     expected_model: ExpectedModel | Mapping[str, Any] | str | Path | None = None,
+    *,
+    sum_terms=math.fsum,
+    sum_weights=math.fsum,
 ) -> Dict[str, Any]:
     root = bit_vector(root_hash)
     template = bit_vector(template_hash)
     phase = bit_vector(phase_hash)
     lawful = [r ^ t ^ p for r, t, p in zip(root, template, phase)]
 
-    expected_dist = deterministic_expected_distribution(root_hash, template_hash, phase_hash)
+    expected_dist = deterministic_expected_distribution(root_hash, template_hash, phase_hash,
+                                                        sum_weights=sum_weights)
     expected_model_obj = _expected_model_from_any(expected_model)
     expected_model_result: Optional[Dict[str, Any]] = None
 
     if isinstance(observed, Mapping):
         observed_dist = normalize_counts(observed)
-        fallback_gap = l1_distribution_gap(expected_dist, observed_dist)
+        fallback_gap = l1_distribution_gap(expected_dist, observed_dist, sum_terms=sum_terms)
         observed_hash = digest_payload(observed_dist)
         if expected_model_obj is not None:
-            expected_model_result = evaluate_expected_model(expected_model_obj, observed)
+            expected_model_result = evaluate_expected_model(expected_model_obj, observed, sum_terms=sum_terms)
             gap = float(expected_model_result["distribution_gap"])
         else:
             gap = fallback_gap

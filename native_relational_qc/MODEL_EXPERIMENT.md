@@ -119,6 +119,13 @@ bridge metric. Repairing a hash chain alone cannot change those computations.
 Legacy records without NRQC observations are counted separately. Replay is
 bounded to 256 records and 64 MiB; start a new ledger for a larger campaign.
 
+New NRQC records mark their floating histogram gap with `nrqc_gap_summation=fsum-v1`.
+The writer and reader sum the same ordered bins with `math.fsum`. For an older
+untagged observation, replay can also check whether its recorded gap occurs under
+a historical order of binary floating-point addition. The chain, source bindings,
+remaining metrics and exact classification must still verify. Reading a ledger
+preserves its bytes.
+
 The [ledger audit](../benchmarks/records/experiment_ledger_20261112.json)
 retains one synthetic healthy run and one deliberate residue, a byte-identical
 idempotent retry, a conflicting-result rejection and a repaired-chain negative

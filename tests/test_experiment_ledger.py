@@ -1,14 +1,20 @@
 import json
 from concurrent.futures import ThreadPoolExecutor
+from functools import reduce
+from itertools import permutations
+import math
+import operator
+import os
 from pathlib import Path
 import subprocess
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from quantum_native_bridge_pro import QuantumNativeBridge, VerificationError
-from quantum_native_bridge_pro.bridge import canonical_json, sha256_hex
-from native_relational_qc.experiment_ledger import record_observation, verify_experiment_ledger
+from quantum_native_bridge_pro.bridge import canonical_json, measurement_metrics, sha256_hex
+from native_relational_qc.experiment_ledger import _legacy_gap_sum, _payload, record_observation, verify_experiment_ledger
 from native_relational_qc.model_experiment import observe
 from tests.test_model_experiment import fixture_plan, fixture_prediction, fixture_result, reseal
 
@@ -155,11 +161,43 @@ class ExperimentLedgerTests(unittest.TestCase):
         report.write_text(json.dumps(self.report))
         command = [sys.executable, "-m", "native_relational_qc"]
         output = subprocess.run(command + ["record-observation", str(report), "--ledger", str(self.ledger)],
-                                check=True, capture_output=True, text=True)
+                                check=True, capture_output=True, text=True, env={**os.environ, "PYTHONHASHSEED": "4"})
         self.assertTrue(json.loads(output.stdout)["appended"])
         output = subprocess.run(command + ["verify-experiment-ledger", "--ledger", str(self.ledger)],
-                                check=True, capture_output=True, text=True)
+                                check=True, capture_output=True, text=True, env={**os.environ, "PYTHONHASHSEED": "6"})
         self.assertEqual(json.loads(output.stdout)["observations_replayed"], 1)
+
+    def test_untagged_sequential_float_record_replays_without_rewriting(self):
+        def historical_total(values):
+            terms = tuple(values)
+            canonical = math.fsum(terms)
+            for order in permutations(terms):
+                total = reduce(operator.add, order, 0.0)
+                if total != canonical:
+                    return total
+            return canonical
+
+        def historical_metrics(*args):
+            return measurement_metrics(*args, sum_terms=historical_total,
+                                       sum_weights=lambda weights: reduce(operator.add, weights, 0.0))
+
+        payload = _payload(self.report, stable_gaps=False)
+        with patch("quantum_native_bridge_pro.bridge.measurement_metrics", historical_metrics):
+            old = QuantumNativeBridge(self.ledger).append(**payload)
+        stable = measurement_metrics(old.root_hash, old.template_hash, old.phase_hash,
+                                     payload["observed"], expected_model=payload["expected_model"])
+        self.assertNotEqual(old.recognition["fallback_distribution_gap"], stable["fallback_distribution_gap"])
+        original = self.ledger.read_bytes()
+        self.assertEqual(verify_experiment_ledger(self.ledger)["observations_replayed"], 1)
+        self.assertFalse(record_observation(self.report, self.ledger)["appended"])
+        self.assertEqual(self.ledger.read_bytes(), original)
+
+    def test_old_rounding_accepts_only_attainable_sums(self):
+        terms = (1.0, 2**-53, 2**-53)
+        for gap in (0.5, math.fsum(terms) / 2):
+            self.assertEqual(_legacy_gap_sum({"fallback_distribution_gap": gap})(terms), 2 * gap)
+        impossible = math.nextafter(0.5, 0.0)
+        self.assertNotEqual(_legacy_gap_sum({"fallback_distribution_gap": impossible})(terms), 2 * impossible)
 
 
 if __name__ == "__main__":

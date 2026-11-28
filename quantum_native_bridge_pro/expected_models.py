@@ -9,6 +9,7 @@ Jupyter, CI, and patent evidence packages without vendor lock-in.
 from __future__ import annotations
 
 import json
+import math
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
 from typing import Any, Dict, Mapping, Optional
@@ -43,11 +44,11 @@ def normalize_distribution(distribution: Mapping[str, int | float]) -> Dict[str,
     return {str(k): float(v) / total for k, v in sorted(distribution.items())}
 
 
-def l1_gap(expected: Mapping[str, float], observed: Mapping[str, int | float]) -> float:
+def l1_gap(expected: Mapping[str, float], observed: Mapping[str, int | float], *, sum_terms=math.fsum) -> float:
     exp = normalize_distribution(expected)
     obs = normalize_distribution(observed)
-    keys = set(exp) | set(obs)
-    return sum(abs(exp.get(k, 0.0) - obs.get(k, 0.0)) for k in keys) / 2.0
+    keys = sorted(set(exp) | set(obs))
+    return sum_terms(abs(exp.get(k, 0.0) - obs.get(k, 0.0)) for k in keys) / 2.0
 
 
 def classify_gap(gap: float, tolerance: float) -> str:
@@ -118,8 +119,8 @@ def model_from_template(template: Mapping[str, Any]) -> ExpectedModel:
     )
 
 
-def evaluate_expected_model(model: ExpectedModel, observed: Mapping[str, int | float]) -> Dict[str, Any]:
-    gap = l1_gap(model.distribution, observed)
+def evaluate_expected_model(model: ExpectedModel, observed: Mapping[str, int | float], *, sum_terms=math.fsum) -> Dict[str, Any]:
+    gap = l1_gap(model.distribution, observed, sum_terms=sum_terms)
     cls = classify_gap(gap, model.tolerance)
     return {
         "model_id": model.model_id,
