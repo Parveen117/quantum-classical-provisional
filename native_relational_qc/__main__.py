@@ -21,6 +21,9 @@ def main(argv=None):
     if argv and argv[0] == 'synthesize':
         from .circuit_synthesis import main as synthesis_main
         return synthesis_main(argv[1:])
+    if argv and argv[0] == 'panini-sandhi':
+        from .panini_sandhi import main as sandhi_main
+        return sandhi_main(argv[1:])
     if argv and argv[0] == 'learn-structure':
         from .structure_learning import main as structure_main
         return structure_main(argv[1:])
@@ -55,6 +58,7 @@ def main(argv=None):
         'Custom exact circuits: nrqc calculate INPUT.json --out RESULT.json; '
         'backend acceptance report: nrqc check INPUT.json (or nrqc check --table); '
         'goal-directed exact circuit construction: nrqc synthesize GOAL.json; '
+        'Run nrqc panini-sandhi --help for vowel junctions and reverse search. '
         'train native phases and search topology: nrqc learn-structure --task curvature; '
         'use a saved model: nrqc predict MODEL.json --features A B --view first_layer; '
         'bind and compare acquired counts: nrqc experiment-plan / observe-model / verify-observation; '

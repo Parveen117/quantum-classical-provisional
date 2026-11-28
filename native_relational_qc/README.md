@@ -32,6 +32,59 @@ Use `.[test,qiskit]` for adapter tests, `.[benchmark]` for Aer MPS and Stim,
 and `.[cad]` for the optional layout checks. Current test results belong to
 CI/test logs, rather than a manually maintained test count.
 
+## Pāṇini vowel junctions on a quantum circuit
+
+Which pair of vowels could have produced the written sound **ī**? On the declared
+unaccented, continuous-speech domain, **i + i**, **i + ī**, **ī + i** and **ī + ī**
+all produce ī. The calculator can join a supplied pair or search the 16 original
+pairs for a given surface. The commands accept IAST and Devanāgarī.
+
+~~~bash
+nrqc panini-sandhi join ī i
+nrqc panini-sandhi search ई
+nrqc panini-sandhi search yu --qasm sandhi.qasm
+~~~
+
+| Left vowel | Right i | Right ī | Right u | Right ū |
+|---|---|---|---|---|
+| i | ī | ī | yu | yū |
+| ī | ī | ī | yu | yū |
+| u | vi | vī | ū | ū |
+| ū | vi | vī | ū | ū |
+
+This is a circuit implementation of a restricted part of two grammatical rules.
+With vowels of the same family, 6.1.101 supplies the single long vowel.
+With different families, 6.1.77 changes the left vowel to its corresponding
+glide and retains the right vowel. The framework's T80 supplies the long-vowel
+extension of the earlier T58 examples. Accent, word-specific exceptions and
+other vowel families are outside this input alphabet. [Pinned rule text](https://github.com/Parveen117/Recognition-Kernel-Framework/blob/7f185fadde6901097883baab507f7cbb273774ce/research/panini_grammar/SUTRAPATHA.tsv) · [T80 rule construction](https://github.com/Parveen117/Recognition-Kernel-Framework/blob/7f185fadde6901097883baab507f7cbb273774ce/theorum/80_paninian_instruction_format_theorem.md) · [University of Hyderabad sandhi tables](https://sanskrit.uohyd.ac.in/IOE-2024/Sandhi.pdf)
+
+The existing Boolean compiler builds a **seven-qubit reversible join** using
+three CX and two CCX gates. The four input bits retain the original left and
+right vowels. The three output bits receive the surface code by XOR, so the
+circuit is reversible even when several pairs print identically. In high-to-low
+order, the input bits are left family, left length, right family, right length
+(family i = 0, u = 1). On a zero output, the codes for ī, ū, vi, vī, yu and yū
+are respectively 000, 010, 100, 101, 110 and 111. Applying the inverse restores
+any previous output and preserves relative quantum phases. [Reversible compiler](REVERSIBLE_LOGIC.md)
+
+Reverse search starts with equal amplitudes for the 16 source pairs. It computes
+the surface, flips the sign on the requested surface, reverses the join and
+applies one Grover diffusion step to the source register. All three temporary
+surface bits return to zero. For four matching pairs the usual one-step
+probability $\sin^2(3\arcsin\sqrt{4/16})$ is 1. For two matches it is
+$25/32$. The report lists every input pair and its exact probability.
+
+| Requested surface | Matching inputs | Uniform starting probability | After one iteration |
+|---|---:|---:|---:|
+| ī or ū | 4 each | 1/4 | 1 |
+| vi, vī, yu or yū | 2 each | 1/8 | 25/32 |
+
+These are local ideal-circuit probabilities. A measured source pair is one
+possible origin of a supplied surface. The four-by-four table also solves the
+classical task directly. OpenQASM export writes the actual unmeasured gates,
+with q0 as the least significant input bit.
+
 ## Backend capabilities
 
 [Goal-directed circuit construction](CIRCUIT_SYNTHESIS.md) uses a bounded
