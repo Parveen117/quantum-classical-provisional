@@ -1,0 +1,44 @@
+{
+  "correction": {
+    "change": "Validate the shipped goal and device descriptors with their own schemas",
+    "failed_test_recheck_passed": 1,
+    "schema_test_file_passed": 11,
+    "unchanged_tests_repeated": false
+  },
+  "current_test_accounting": {
+    "method": "full repository run plus targeted correction recheck",
+    "passed": 1126,
+    "skipped": 57,
+    "total": 1183
+  },
+  "full_repository_run": {
+    "failed": 1,
+    "failed_test": "tests/test_native_check.py::CheckTests::test_shipped_examples_are_validated_by_their_declared_schema",
+    "passed": 1125,
+    "seconds": 496.09,
+    "skipped": 57
+  },
+  "hardware_jobs": 0,
+  "packaging": {
+    "basis_inputs_checked": 8,
+    "checkpoint_fingerprint": "e1d2389394de1274736c7b35eaade1cec59461090427c229d8613cdd2ba2b815",
+    "exact_replay": "verified",
+    "installed_console_prediction": true,
+    "physical_wires": 3,
+    "python": "3.12.14",
+    "wheel_sha256": "c9a23063ac9ab5a09b63185a01b741b21b19583a5e0f42853dbc82e183359272"
+  },
+  "python": "3.12.14",
+  "schema": "nrqc-software-qualification-v1",
+  "source_sha256": {
+    "native_relational_qc/__main__.py": "47a2226b3a6d139e93eec298134b718d2eb87319b8f46db6a03ad9d92035f595",
+    "native_relational_qc/model_runtime.py": "eebd0ce5ae4a0857c2ecf5cbfa11b54f264dd51f91ce97cb638d8cc8d07b1a81",
+    "tests/test_model_runtime.py": "3c958a72bf8becebb99798bf23e5e54f587b9a1c8ed24483f9340609e3262c37",
+    "tests/test_native_check.py": "27b6e371e5839b979ec420293c96a1bb14cdbea6a570995d040c3e8c0515b622"
+  },
+  "targeted_workflow_run": {
+    "passed": 55,
+    "skipped": 1,
+    "tests_run": 56
+  }
+}

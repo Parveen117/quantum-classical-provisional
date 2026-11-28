@@ -1,0 +1,13 @@
+{
+  "backend": "synthetic-three-wire-line",
+  "calibration": {
+    "calibration_id": "synthetic-fixture-20261112",
+    "captured_at": "2026-11-12T00:00:00Z",
+    "source_sha256": "a0fc5e1701db0ea226bf635729f03aa3f2d380ea65f952e9f77822ab18124b5f",
+    "valid_until": "2026-11-13T00:00:00Z"
+  },
+  "device_fingerprint": "7af1ae37bf6eb1d85b40ca4a60d930e3f2410dae11a069ff23d57e4d8fcb851d",
+  "origin": "synthetic",
+  "provider": "nrqc-offline-qualification",
+  "schema": "nrqc-acquisition-binding-v1"
+}

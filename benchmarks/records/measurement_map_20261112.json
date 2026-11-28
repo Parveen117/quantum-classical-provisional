@@ -1,0 +1,1771 @@
+{
+  "cases": [
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 237,
+        "1": 275
+      },
+      "histogram": 0,
+      "marginal_counts": {
+        "0": 237,
+        "1": 275
+      },
+      "measured_wires": [
+        1
+      ],
+      "observation_fingerprint": "95d1de197f1077811e2d603075b1833cc4fe66dc0f0c67c10bbfeb8aa1a45e3d",
+      "plan_fingerprint": "9a304a25d865ad90c86d890356510f7de60c98644b6478d7806a69bf2af79f6a",
+      "readout_classical_bit": 0
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "00": 23,
+        "01": 214,
+        "10": 11,
+        "11": 264
+      },
+      "histogram": 0,
+      "marginal_counts": {
+        "0": 237,
+        "1": 275
+      },
+      "measured_wires": [
+        0,
+        1
+      ],
+      "observation_fingerprint": "4c12e9f541e42e2bd68faf9fc72d45956781cec41ed0837f92b49f4297a3599e",
+      "plan_fingerprint": "c6671c692bc19b6273c44cdeb2158ae9f0107b0b5f91a71a6a5d48d3d05fcb62",
+      "readout_classical_bit": 1
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "00": 23,
+        "01": 11,
+        "10": 214,
+        "11": 264
+      },
+      "histogram": 0,
+      "marginal_counts": {
+        "0": 237,
+        "1": 275
+      },
+      "measured_wires": [
+        1,
+        0
+      ],
+      "observation_fingerprint": "9ce8fa3a69c52aca906cc9a024a976326ac2df28d2a174541653f45abb84e357",
+      "plan_fingerprint": "41c25785ffd7f7abe8cff4f4f2828d4cdab7f441413a239908d713bffd99bcbd",
+      "readout_classical_bit": 0
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "00": 214,
+        "01": 11,
+        "10": 23,
+        "11": 264
+      },
+      "histogram": 0,
+      "marginal_counts": {
+        "0": 237,
+        "1": 275
+      },
+      "measured_wires": [
+        1,
+        2
+      ],
+      "observation_fingerprint": "96f87242a8c2c75fb04fd7d4d6bcc45adbba2701ac4cffa602c86a1c56d00bdf",
+      "plan_fingerprint": "bfd96b4bcbcb29f6cb161a17f06615e2d4afc7b08c4f07c386a2087c80289952",
+      "readout_classical_bit": 0
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "00": 214,
+        "01": 23,
+        "10": 11,
+        "11": 264
+      },
+      "histogram": 0,
+      "marginal_counts": {
+        "0": 237,
+        "1": 275
+      },
+      "measured_wires": [
+        2,
+        1
+      ],
+      "observation_fingerprint": "4b6c15f7740f79034a544904e2e072437b20236cf2e3cfe2cc7a6133aa8ef2b3",
+      "plan_fingerprint": "9ed599606a4fe6266474f17eb1a89b43dbbbbd6f9552a0c473d16625a473f88b",
+      "readout_classical_bit": 1
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "001": 214,
+        "010": 11,
+        "100": 23,
+        "111": 264
+      },
+      "histogram": 0,
+      "marginal_counts": {
+        "0": 237,
+        "1": 275
+      },
+      "measured_wires": [
+        0,
+        1,
+        2
+      ],
+      "observation_fingerprint": "53d50717b947a964d02cfa3952e1d07864cac3c656cee4fedca4a9e15a12b163",
+      "plan_fingerprint": "7ff25110ec4c2f0b1f9f0878bad08bb2a3f92b13a02a826e361091f0addbd5cf",
+      "readout_classical_bit": 1
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "001": 214,
+        "010": 23,
+        "100": 11,
+        "111": 264
+      },
+      "histogram": 0,
+      "marginal_counts": {
+        "0": 237,
+        "1": 275
+      },
+      "measured_wires": [
+        0,
+        2,
+        1
+      ],
+      "observation_fingerprint": "b3de15b0508313173d785e6899f590019275665aeae1508792a2a429324a778f",
+      "plan_fingerprint": "11a484d3a6d3d5f89a27d96e1dfb93613492c434a8342740cf76467f7a1296cd",
+      "readout_classical_bit": 2
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "001": 11,
+        "010": 214,
+        "100": 23,
+        "111": 264
+      },
+      "histogram": 0,
+      "marginal_counts": {
+        "0": 237,
+        "1": 275
+      },
+      "measured_wires": [
+        1,
+        0,
+        2
+      ],
+      "observation_fingerprint": "bb49773816acd58e7b7ebb742cb03e34633fb78597a58e8eeff91fb656460803",
+      "plan_fingerprint": "f12a77370ae0431d15bac0203466ec7c5192e0d7e04929041034ea930b38225f",
+      "readout_classical_bit": 0
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "001": 11,
+        "010": 23,
+        "100": 214,
+        "111": 264
+      },
+      "histogram": 0,
+      "marginal_counts": {
+        "0": 237,
+        "1": 275
+      },
+      "measured_wires": [
+        1,
+        2,
+        0
+      ],
+      "observation_fingerprint": "11e0cada4f4efa88473a322dcdf165943ebf6854e33b4443a2f801752e1f5619",
+      "plan_fingerprint": "e0ee96f0fc92c8fd5c83995ed07ed0c63080429249f02f26190ee7836b4691e0",
+      "readout_classical_bit": 0
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "001": 23,
+        "010": 214,
+        "100": 11,
+        "111": 264
+      },
+      "histogram": 0,
+      "marginal_counts": {
+        "0": 237,
+        "1": 275
+      },
+      "measured_wires": [
+        2,
+        0,
+        1
+      ],
+      "observation_fingerprint": "0ad5b43e9eddb676efc090858ccdfdd6b4ae6c6ece68829405f9bcd1899b1b44",
+      "plan_fingerprint": "55362a15770b6bf4f7c8db778775268addcd51c58b4421a6373d9164c5645eea",
+      "readout_classical_bit": 2
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "001": 23,
+        "010": 11,
+        "100": 214,
+        "111": 264
+      },
+      "histogram": 0,
+      "marginal_counts": {
+        "0": 237,
+        "1": 275
+      },
+      "measured_wires": [
+        2,
+        1,
+        0
+      ],
+      "observation_fingerprint": "c4fe29691fc0d11c8e17b908584fd09a505ab60421b3641f98f018542d424dbe",
+      "plan_fingerprint": "c78cda93dfa16faf68fa7d282e25ba2c533b17631ba911e36df0b2c050de1d78",
+      "readout_classical_bit": 1
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 435,
+        "1": 77
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        3
+      ],
+      "observation_fingerprint": "5d905612f901f8d1140bc2cd414c14cff7a128ecc7f411507fe7cd305d6e857f",
+      "plan_fingerprint": "30896a3876fc28b3416c0e79dc60062b0c2723ffd5b0119617993bcdaf2738d9",
+      "readout_classical_bit": 0
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "00": 404,
+        "01": 31,
+        "10": 72,
+        "11": 5
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        0,
+        3
+      ],
+      "observation_fingerprint": "68e6ab5824b19a0b1f97f026606ca477076437157d37738549262e467a79cf20",
+      "plan_fingerprint": "675a41166e7a16e9de503735aab9524e121ecc75320c043329152f9136e17e06",
+      "readout_classical_bit": 1
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "00": 381,
+        "01": 54,
+        "10": 65,
+        "11": 12
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        1,
+        3
+      ],
+      "observation_fingerprint": "731fc0367a60c3990ba4a9dbe2ec277bccb7d02cbc0a4b2337dd6b4b0cbfdd5b",
+      "plan_fingerprint": "91ba8f0df258bd56db78abb0bc013505b224ebc815909aa2466b471df531c274",
+      "readout_classical_bit": 1
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "00": 120,
+        "01": 315,
+        "10": 18,
+        "11": 59
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        2,
+        3
+      ],
+      "observation_fingerprint": "291b9acd12ab060d4bad53642b16c291c7355d5696541795962cdd703a080cd9",
+      "plan_fingerprint": "0b61dbfc3ba5bed678d1613116e26c2e823eaa7ed3c776da1ba427e58f0c1386",
+      "readout_classical_bit": 1
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "00": 404,
+        "01": 72,
+        "10": 31,
+        "11": 5
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        3,
+        0
+      ],
+      "observation_fingerprint": "d29b1e6d155b7733e97975617b7f9c05c3e21ec4922eec7d9d56fd927fce4d53",
+      "plan_fingerprint": "a20cb4c62e2c11240f427ccb66708af7fa40e4e29d56e68631adc657c842a6e7",
+      "readout_classical_bit": 0
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "00": 381,
+        "01": 65,
+        "10": 54,
+        "11": 12
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        3,
+        1
+      ],
+      "observation_fingerprint": "3141a1e2e1f99489982686bb9fffda9462519e1cf5b0fe708af3765b98e46cff",
+      "plan_fingerprint": "5a29045c2f49a4bb4d4825f77e80cb4bb62a405650f5d200aeb4e417d8ac07ee",
+      "readout_classical_bit": 0
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "00": 120,
+        "01": 18,
+        "10": 315,
+        "11": 59
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        3,
+        2
+      ],
+      "observation_fingerprint": "7b9ebc0fc29205b166c73e3ef8f5c16c87d69b8fc5f44fa9d72e3a8d0f18d0b8",
+      "plan_fingerprint": "d2a26faf6a7265c864e48f529801c22852c38e5528b8ee78fe64911b909d503f",
+      "readout_classical_bit": 0
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "000": 354,
+        "001": 27,
+        "010": 50,
+        "011": 4,
+        "100": 62,
+        "101": 3,
+        "110": 10,
+        "111": 2
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        0,
+        1,
+        3
+      ],
+      "observation_fingerprint": "12d49ffdd56d74b6251660687a828b56250c400e65c8c05b119722f9c8c64b67",
+      "plan_fingerprint": "5bd16c5b428bfcf570f359783cc6e3af72537193c2217a0d3617551bacdb36f7",
+      "readout_classical_bit": 2
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "000": 96,
+        "001": 24,
+        "010": 308,
+        "011": 7,
+        "100": 16,
+        "101": 2,
+        "110": 56,
+        "111": 3
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        0,
+        2,
+        3
+      ],
+      "observation_fingerprint": "e04b3d03a5c22593d509791423c42e70744f34fefd06350c4370c06541ea3b19",
+      "plan_fingerprint": "67094d52407969d995eb3ca700241da1c843539ca5f6b5480434400c58656e76",
+      "readout_classical_bit": 2
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "000": 354,
+        "001": 27,
+        "010": 62,
+        "011": 3,
+        "100": 50,
+        "101": 4,
+        "110": 10,
+        "111": 2
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        0,
+        3,
+        1
+      ],
+      "observation_fingerprint": "94f3e3f7d17b9212ad4faca587641ea23ea187cca5752a877da4960b2cf1bab3",
+      "plan_fingerprint": "8f936f632511e051534705c05c93871e6817db963474cde6d83d020d0758795a",
+      "readout_classical_bit": 1
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "000": 96,
+        "001": 24,
+        "010": 16,
+        "011": 2,
+        "100": 308,
+        "101": 7,
+        "110": 56,
+        "111": 3
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        0,
+        3,
+        2
+      ],
+      "observation_fingerprint": "1ff0aa140e18e52d4654f2502681d5b62be7d54fab1654ee0804fcdbd04fef4b",
+      "plan_fingerprint": "a2598645cd6c9abb0f499048d01a08b175c19b4b580191610dc339c2520704c9",
+      "readout_classical_bit": 1
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "000": 354,
+        "001": 50,
+        "010": 27,
+        "011": 4,
+        "100": 62,
+        "101": 10,
+        "110": 3,
+        "111": 2
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        1,
+        0,
+        3
+      ],
+      "observation_fingerprint": "7d0d408c3aa8101d2c8abc20381f005795c3ecc694200db7a70c2f1ed0f96453",
+      "plan_fingerprint": "3a0cbb81168d08f7c4fadf7d9f03494b2cc07bcfb962358d5d71f438fef63655",
+      "readout_classical_bit": 2
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "000": 86,
+        "001": 34,
+        "010": 295,
+        "011": 20,
+        "100": 8,
+        "101": 10,
+        "110": 57,
+        "111": 2
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        1,
+        2,
+        3
+      ],
+      "observation_fingerprint": "937860235fcfe6276786acc3e54c5d00e2588ec11e5f1d7d739b907eed615c7e",
+      "plan_fingerprint": "5b0c4253771571d6012ef96c3c003f0be5d82a4765b2ed54e2957c334ee774fe",
+      "readout_classical_bit": 2
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "000": 354,
+        "001": 50,
+        "010": 62,
+        "011": 10,
+        "100": 27,
+        "101": 4,
+        "110": 3,
+        "111": 2
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        1,
+        3,
+        0
+      ],
+      "observation_fingerprint": "fc6068dc4c7d22a950d2e9ab1c85d1e42880dec5b4c806147f2b880c86f24354",
+      "plan_fingerprint": "612b5cd0fdea99e52ea72a0a8de6923dd1526c6e7c261cfe7883c56546a29f3b",
+      "readout_classical_bit": 1
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "000": 86,
+        "001": 34,
+        "010": 8,
+        "011": 10,
+        "100": 295,
+        "101": 20,
+        "110": 57,
+        "111": 2
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        1,
+        3,
+        2
+      ],
+      "observation_fingerprint": "d7a4afe2194361cbeb9da75efa1229d4a3af284ad753d2169152e5f3b27073f0",
+      "plan_fingerprint": "06ecfd4e99bfa77da036edc9a97c099f1b794681adc28a6c5b07472f3b0acf60",
+      "readout_classical_bit": 1
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "000": 96,
+        "001": 308,
+        "010": 24,
+        "011": 7,
+        "100": 16,
+        "101": 56,
+        "110": 2,
+        "111": 3
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        2,
+        0,
+        3
+      ],
+      "observation_fingerprint": "1faa3f97fffa9d105622379fc4cd98b8b512d30f17b60dac69afceb1b132140c",
+      "plan_fingerprint": "6fbcd01a3f375a3e48985046d5e9d0cfef6813b4210875f096b0007a95874bb3",
+      "readout_classical_bit": 2
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "000": 86,
+        "001": 295,
+        "010": 34,
+        "011": 20,
+        "100": 8,
+        "101": 57,
+        "110": 10,
+        "111": 2
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        2,
+        1,
+        3
+      ],
+      "observation_fingerprint": "fcca73591627622b3e476566eb47b85d0804f0d7b09bce860ac1f9cc043a5c02",
+      "plan_fingerprint": "37a3bd0997f0bf79774f5160fd6147cbc8e3661d01054310bf3be21120b66285",
+      "readout_classical_bit": 2
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "000": 96,
+        "001": 308,
+        "010": 16,
+        "011": 56,
+        "100": 24,
+        "101": 7,
+        "110": 2,
+        "111": 3
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        2,
+        3,
+        0
+      ],
+      "observation_fingerprint": "42996d19cb33352c39ff1c2c5e720effae4dbfa771d30dea0145d307ac891488",
+      "plan_fingerprint": "305e3c5a0b09c81066f8bea72d98c52e547b2601ff05e53ad20543859880429a",
+      "readout_classical_bit": 1
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "000": 86,
+        "001": 295,
+        "010": 8,
+        "011": 57,
+        "100": 34,
+        "101": 20,
+        "110": 10,
+        "111": 2
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        2,
+        3,
+        1
+      ],
+      "observation_fingerprint": "c2ae04198a03f12c2d4c10387bb2afa2bacc6075a5713417f943abc5c2da950d",
+      "plan_fingerprint": "7da2ea79d952f5e431230b4482b330f50e1e2f6b520b8c4c11579c7ed58982c9",
+      "readout_classical_bit": 1
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "000": 354,
+        "001": 62,
+        "010": 27,
+        "011": 3,
+        "100": 50,
+        "101": 10,
+        "110": 4,
+        "111": 2
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        3,
+        0,
+        1
+      ],
+      "observation_fingerprint": "13256b9539320f6c112f2349b6ca786dbf9cf3fcce1c127e12b8b6a8b80c4bd2",
+      "plan_fingerprint": "b063c923bd2743fdcc4c399056259991515e71ff9c25215d4ed5276f2d59faff",
+      "readout_classical_bit": 0
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "000": 96,
+        "001": 16,
+        "010": 24,
+        "011": 2,
+        "100": 308,
+        "101": 56,
+        "110": 7,
+        "111": 3
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        3,
+        0,
+        2
+      ],
+      "observation_fingerprint": "5ef985265d8b184eb80f9ca7f14b78123758368e36a2594dd161cf83c60e174f",
+      "plan_fingerprint": "6410f6798ce5d3b57d74136da5fcf43ba89fe24b6fac08b4f9790987031d7ca4",
+      "readout_classical_bit": 0
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "000": 354,
+        "001": 62,
+        "010": 50,
+        "011": 10,
+        "100": 27,
+        "101": 3,
+        "110": 4,
+        "111": 2
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        3,
+        1,
+        0
+      ],
+      "observation_fingerprint": "ad6643f82f67d461052652f77ee2b0a60a26a547679f3ea4322007bae8f02b7f",
+      "plan_fingerprint": "73b92e3b3c29abd76c07c989a63aa17315bc5d505e04ece086a993f78925df25",
+      "readout_classical_bit": 0
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "000": 86,
+        "001": 8,
+        "010": 34,
+        "011": 10,
+        "100": 295,
+        "101": 57,
+        "110": 20,
+        "111": 2
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        3,
+        1,
+        2
+      ],
+      "observation_fingerprint": "9ddd3f8a81228b6d1d710a929f0f81cb16779e51c6b73502833755f120aeb37d",
+      "plan_fingerprint": "876aa3b45ce25d2230c797341664c38ad69e0dea06d3dca7eb06f525569c0409",
+      "readout_classical_bit": 0
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "000": 96,
+        "001": 16,
+        "010": 308,
+        "011": 56,
+        "100": 24,
+        "101": 2,
+        "110": 7,
+        "111": 3
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        3,
+        2,
+        0
+      ],
+      "observation_fingerprint": "4817f6e3b2a30d4024f24c744148e2f96ae14c98be814b99b14c09f9a8d5444a",
+      "plan_fingerprint": "7fa4a13eab5714d5c9c828ebf5be3d822a31b91945faf11172ce8cc1c2caf423",
+      "readout_classical_bit": 0
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "000": 86,
+        "001": 8,
+        "010": 295,
+        "011": 57,
+        "100": 34,
+        "101": 10,
+        "110": 20,
+        "111": 2
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        3,
+        2,
+        1
+      ],
+      "observation_fingerprint": "bdb70733baa7b976e794e07ae34dbc7e4543000170aa46571db92deb36cc1c61",
+      "plan_fingerprint": "9a731000c1a3389761f902f39686144a337ff51f6e07dfb05925131c02e825f5",
+      "readout_classical_bit": 0
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "0000": 63,
+        "0001": 23,
+        "0010": 33,
+        "0011": 1,
+        "0100": 291,
+        "0101": 4,
+        "0110": 17,
+        "0111": 3,
+        "1000": 7,
+        "1001": 1,
+        "1010": 9,
+        "1011": 1,
+        "1100": 55,
+        "1101": 2,
+        "1110": 1,
+        "1111": 1
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "observation_fingerprint": "711804e2df5cf2bb130a8431ab565bb073f1836eb214b8d21a62d4976e2fe9d2",
+      "plan_fingerprint": "5e9d5f897ab6874303ad0263afba604d9bdeffa94fd876db3a80eaa9d9d7c5c5",
+      "readout_classical_bit": 3
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "0000": 63,
+        "0001": 23,
+        "0010": 33,
+        "0011": 1,
+        "0100": 7,
+        "0101": 1,
+        "0110": 9,
+        "0111": 1,
+        "1000": 291,
+        "1001": 4,
+        "1010": 17,
+        "1011": 3,
+        "1100": 55,
+        "1101": 2,
+        "1110": 1,
+        "1111": 1
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "observation_fingerprint": "c092d558cc061cfef1cf4107ce143cecd1354b42247f59579cae93d4a3325aff",
+      "plan_fingerprint": "9ca3349b07b0f486cd855a1e8e3c2348bb80d3ee7d7fc18022b3245749e3b099",
+      "readout_classical_bit": 2
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "0000": 63,
+        "0001": 23,
+        "0010": 291,
+        "0011": 4,
+        "0100": 33,
+        "0101": 1,
+        "0110": 17,
+        "0111": 3,
+        "1000": 7,
+        "1001": 1,
+        "1010": 55,
+        "1011": 2,
+        "1100": 9,
+        "1101": 1,
+        "1110": 1,
+        "1111": 1
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "observation_fingerprint": "22e22fd792ce400d3e22f9c7f0f16e5a0b543b94e46ceb384f5bb8b0af5fd813",
+      "plan_fingerprint": "a3b130d8ef033ec0c8616f66629b1547ba8b2be0ebcf6ba0da38ec04be57e659",
+      "readout_classical_bit": 3
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "0000": 63,
+        "0001": 23,
+        "0010": 291,
+        "0011": 4,
+        "0100": 7,
+        "0101": 1,
+        "0110": 55,
+        "0111": 2,
+        "1000": 33,
+        "1001": 1,
+        "1010": 17,
+        "1011": 3,
+        "1100": 9,
+        "1101": 1,
+        "1110": 1,
+        "1111": 1
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "observation_fingerprint": "3615426925ceb5cb0591e44505bb7d3d04bad1fb7795dd233c38b02cf164d425",
+      "plan_fingerprint": "9afa08a1483cd985a4c78e391fdf50c7b44627f17611c2705580a9716932581c",
+      "readout_classical_bit": 2
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "0000": 63,
+        "0001": 23,
+        "0010": 7,
+        "0011": 1,
+        "0100": 33,
+        "0101": 1,
+        "0110": 9,
+        "0111": 1,
+        "1000": 291,
+        "1001": 4,
+        "1010": 55,
+        "1011": 2,
+        "1100": 17,
+        "1101": 3,
+        "1110": 1,
+        "1111": 1
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "observation_fingerprint": "0268517306cf7efdf37477102f20d92bf8fa654725e7b2484d7d98d4bc7e462f",
+      "plan_fingerprint": "00f79fde9b03e48ab318cc1e6925e7e07842ec4f2d457d635c44fcc40ed04923",
+      "readout_classical_bit": 1
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "0000": 63,
+        "0001": 23,
+        "0010": 7,
+        "0011": 1,
+        "0100": 291,
+        "0101": 4,
+        "0110": 55,
+        "0111": 2,
+        "1000": 33,
+        "1001": 1,
+        "1010": 9,
+        "1011": 1,
+        "1100": 17,
+        "1101": 3,
+        "1110": 1,
+        "1111": 1
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "observation_fingerprint": "517c8bcadb12c496e35b2a8ed4b32b231f051e7fdf80e87bf95977805879bcc1",
+      "plan_fingerprint": "63a49bea76481270b3d803c38fda59080c87efbc0de03873b3d7a90e86df2793",
+      "readout_classical_bit": 1
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "0000": 63,
+        "0001": 33,
+        "0010": 23,
+        "0011": 1,
+        "0100": 291,
+        "0101": 17,
+        "0110": 4,
+        "0111": 3,
+        "1000": 7,
+        "1001": 9,
+        "1010": 1,
+        "1011": 1,
+        "1100": 55,
+        "1101": 1,
+        "1110": 2,
+        "1111": 1
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "observation_fingerprint": "883147c0a285d93190fbdbd14fb687a8130805455b8b6da3aedb2b11ba512970",
+      "plan_fingerprint": "ffa798dfb5d815b7f033560961c9e2b2dbfd7c9c9cb0394adf69ebb3521dbf74",
+      "readout_classical_bit": 3
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "0000": 63,
+        "0001": 33,
+        "0010": 23,
+        "0011": 1,
+        "0100": 7,
+        "0101": 9,
+        "0110": 1,
+        "0111": 1,
+        "1000": 291,
+        "1001": 17,
+        "1010": 4,
+        "1011": 3,
+        "1100": 55,
+        "1101": 1,
+        "1110": 2,
+        "1111": 1
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "observation_fingerprint": "4a2b91b500df2878e2ab8fdd322d4dbea4698d3672e43160b42e870176a769b8",
+      "plan_fingerprint": "348429024e8fd7547b7ad0354951c328bc848b2c46c13d02a245d41c8ca4d53a",
+      "readout_classical_bit": 2
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "0000": 63,
+        "0001": 33,
+        "0010": 291,
+        "0011": 17,
+        "0100": 23,
+        "0101": 1,
+        "0110": 4,
+        "0111": 3,
+        "1000": 7,
+        "1001": 9,
+        "1010": 55,
+        "1011": 1,
+        "1100": 1,
+        "1101": 1,
+        "1110": 2,
+        "1111": 1
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        1,
+        2,
+        0,
+        3
+      ],
+      "observation_fingerprint": "7f30a74d1e70234489c31ee53fb9053c53a7a18b4ee78c52ddd43ff2153f81fa",
+      "plan_fingerprint": "98a25f7422fd8b49958e5e258f68fca451c7936a673f937ab3cbb230ea11cb6c",
+      "readout_classical_bit": 3
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "0000": 63,
+        "0001": 33,
+        "0010": 291,
+        "0011": 17,
+        "0100": 7,
+        "0101": 9,
+        "0110": 55,
+        "0111": 1,
+        "1000": 23,
+        "1001": 1,
+        "1010": 4,
+        "1011": 3,
+        "1100": 1,
+        "1101": 1,
+        "1110": 2,
+        "1111": 1
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "observation_fingerprint": "5acac72f01482026b9b3524835e10c2a6962f5ba4424700aca4d8b8de178a72e",
+      "plan_fingerprint": "3dc3f7f6045fcc524f6b946a22481c620fdc32adb36aeb2941b24e708a177229",
+      "readout_classical_bit": 2
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "0000": 63,
+        "0001": 33,
+        "0010": 7,
+        "0011": 9,
+        "0100": 23,
+        "0101": 1,
+        "0110": 1,
+        "0111": 1,
+        "1000": 291,
+        "1001": 17,
+        "1010": 55,
+        "1011": 1,
+        "1100": 4,
+        "1101": 3,
+        "1110": 2,
+        "1111": 1
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        1,
+        3,
+        0,
+        2
+      ],
+      "observation_fingerprint": "870b560a2d55bd1cc8c07c0b32905117ebdcfea2b13b9d1c06540f193dfa1bc8",
+      "plan_fingerprint": "4ef47dc531ee3435481e51075680292d687a98c28077d54a18b96cbfdd3f024d",
+      "readout_classical_bit": 1
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "0000": 63,
+        "0001": 33,
+        "0010": 7,
+        "0011": 9,
+        "0100": 291,
+        "0101": 17,
+        "0110": 55,
+        "0111": 1,
+        "1000": 23,
+        "1001": 1,
+        "1010": 1,
+        "1011": 1,
+        "1100": 4,
+        "1101": 3,
+        "1110": 2,
+        "1111": 1
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        1,
+        3,
+        2,
+        0
+      ],
+      "observation_fingerprint": "87b6d5a0592aa110821adb2938043cfd507859d31f693377385e3ad7dde0a8ff",
+      "plan_fingerprint": "2eecc15feda975dacdd7d0bffbe600df70cb0e5091fe4c171114a90db804ac7a",
+      "readout_classical_bit": 1
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "0000": 63,
+        "0001": 291,
+        "0010": 23,
+        "0011": 4,
+        "0100": 33,
+        "0101": 17,
+        "0110": 1,
+        "0111": 3,
+        "1000": 7,
+        "1001": 55,
+        "1010": 1,
+        "1011": 2,
+        "1100": 9,
+        "1101": 1,
+        "1110": 1,
+        "1111": 1
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        2,
+        0,
+        1,
+        3
+      ],
+      "observation_fingerprint": "cb0f589747ab3e30b6279ee9d31f0127a2f251fbb0474c16ccb3e269a278f8eb",
+      "plan_fingerprint": "8f07f7c382094d71d51dcd8aac2711678d82477d2bcd09ec131d6d17ae0a8113",
+      "readout_classical_bit": 3
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "0000": 63,
+        "0001": 291,
+        "0010": 23,
+        "0011": 4,
+        "0100": 7,
+        "0101": 55,
+        "0110": 1,
+        "0111": 2,
+        "1000": 33,
+        "1001": 17,
+        "1010": 1,
+        "1011": 3,
+        "1100": 9,
+        "1101": 1,
+        "1110": 1,
+        "1111": 1
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "observation_fingerprint": "6d97823c7ed54e294f0914177950049f1709a7fa854c0f22062da47cfab1a7ca",
+      "plan_fingerprint": "391351a76cd3a462d0d32d9329dcab082961ff305404f739b9382d581d25626f",
+      "readout_classical_bit": 2
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "0000": 63,
+        "0001": 291,
+        "0010": 33,
+        "0011": 17,
+        "0100": 23,
+        "0101": 4,
+        "0110": 1,
+        "0111": 3,
+        "1000": 7,
+        "1001": 55,
+        "1010": 9,
+        "1011": 1,
+        "1100": 1,
+        "1101": 2,
+        "1110": 1,
+        "1111": 1
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "observation_fingerprint": "86fb2d476b023f4e9bd7bbba406802c5f7f21ffc3467189ff455ec79eea9e012",
+      "plan_fingerprint": "c7be638ace9d8ffa649380c4ca34710009339097be239367bff7babe78610ac9",
+      "readout_classical_bit": 3
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "0000": 63,
+        "0001": 291,
+        "0010": 33,
+        "0011": 17,
+        "0100": 7,
+        "0101": 55,
+        "0110": 9,
+        "0111": 1,
+        "1000": 23,
+        "1001": 4,
+        "1010": 1,
+        "1011": 3,
+        "1100": 1,
+        "1101": 2,
+        "1110": 1,
+        "1111": 1
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "observation_fingerprint": "750dc8be2c1300806934f03ea8ef137223581b2d47e84dd77358f072af74fbda",
+      "plan_fingerprint": "8e0ab376146b3e80151760714ea58422453085a5c17aff6047f29f3f0078b492",
+      "readout_classical_bit": 2
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "0000": 63,
+        "0001": 291,
+        "0010": 7,
+        "0011": 55,
+        "0100": 23,
+        "0101": 4,
+        "0110": 1,
+        "0111": 2,
+        "1000": 33,
+        "1001": 17,
+        "1010": 9,
+        "1011": 1,
+        "1100": 1,
+        "1101": 3,
+        "1110": 1,
+        "1111": 1
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "observation_fingerprint": "9b664024bdd5c33275770f6a36357dacc2a8df0031e8cf3f93d88c5adaa08b85",
+      "plan_fingerprint": "4b42948b74fc1fa2f3a1c9153e5dc4a79b2f7055896cbb1ba6b0f33959f8168c",
+      "readout_classical_bit": 1
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "0000": 63,
+        "0001": 291,
+        "0010": 7,
+        "0011": 55,
+        "0100": 33,
+        "0101": 17,
+        "0110": 9,
+        "0111": 1,
+        "1000": 23,
+        "1001": 4,
+        "1010": 1,
+        "1011": 2,
+        "1100": 1,
+        "1101": 3,
+        "1110": 1,
+        "1111": 1
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "observation_fingerprint": "6e91e338a1f1e3aedc58eb7e56d304efc9056ba9732cee3623d4461007b8e9a2",
+      "plan_fingerprint": "a0f4fe8f74956efaa086054562fa9520adc140c235395011668c419c943b9431",
+      "readout_classical_bit": 1
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "0000": 63,
+        "0001": 7,
+        "0010": 23,
+        "0011": 1,
+        "0100": 33,
+        "0101": 9,
+        "0110": 1,
+        "0111": 1,
+        "1000": 291,
+        "1001": 55,
+        "1010": 4,
+        "1011": 2,
+        "1100": 17,
+        "1101": 1,
+        "1110": 3,
+        "1111": 1
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "observation_fingerprint": "9370a8302537fbdd8469ed37fdb128c26d4bdf433b321f63ee6e29791726dac5",
+      "plan_fingerprint": "4cfb0099099cfdc7c0d1d642f919d09de2828b50a3d992e3e5cbc74b61ed557e",
+      "readout_classical_bit": 0
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "0000": 63,
+        "0001": 7,
+        "0010": 23,
+        "0011": 1,
+        "0100": 291,
+        "0101": 55,
+        "0110": 4,
+        "0111": 2,
+        "1000": 33,
+        "1001": 9,
+        "1010": 1,
+        "1011": 1,
+        "1100": 17,
+        "1101": 1,
+        "1110": 3,
+        "1111": 1
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        3,
+        0,
+        2,
+        1
+      ],
+      "observation_fingerprint": "2dda163d30d4c60cf3270a46fa32ad612e4ca4455eea9e9026e9b04f9f4dbf4b",
+      "plan_fingerprint": "f22807a9e59ebb1639797419b1125471530f09cbfd46b988fc3ca3b8c44e075c",
+      "readout_classical_bit": 0
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "0000": 63,
+        "0001": 7,
+        "0010": 33,
+        "0011": 9,
+        "0100": 23,
+        "0101": 1,
+        "0110": 1,
+        "0111": 1,
+        "1000": 291,
+        "1001": 55,
+        "1010": 17,
+        "1011": 1,
+        "1100": 4,
+        "1101": 2,
+        "1110": 3,
+        "1111": 1
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        3,
+        1,
+        0,
+        2
+      ],
+      "observation_fingerprint": "574cd139d7924bdf97d520bcda8b0306160f6e08de933856295416f3ace42f5b",
+      "plan_fingerprint": "9471e88fc5386a6f051abc70c2c28e3b7e25bdf320f67b94e6112eb647b4290c",
+      "readout_classical_bit": 0
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "0000": 63,
+        "0001": 7,
+        "0010": 33,
+        "0011": 9,
+        "0100": 291,
+        "0101": 55,
+        "0110": 17,
+        "0111": 1,
+        "1000": 23,
+        "1001": 1,
+        "1010": 1,
+        "1011": 1,
+        "1100": 4,
+        "1101": 2,
+        "1110": 3,
+        "1111": 1
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "observation_fingerprint": "04483ff7592eb240cea89121d3014377225b7a029e3912f3888a0788fa4264ee",
+      "plan_fingerprint": "065df44c8e24be87e2c06e8bc4d3ca1a69fd9ad257cde163e680851ad30d3403",
+      "readout_classical_bit": 0
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "0000": 63,
+        "0001": 7,
+        "0010": 291,
+        "0011": 55,
+        "0100": 23,
+        "0101": 1,
+        "0110": 4,
+        "0111": 2,
+        "1000": 33,
+        "1001": 9,
+        "1010": 17,
+        "1011": 1,
+        "1100": 1,
+        "1101": 1,
+        "1110": 3,
+        "1111": 1
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        3,
+        2,
+        0,
+        1
+      ],
+      "observation_fingerprint": "54ff1fb9e20ef09ac71b5876f2415c92f1edf133c7d75c69233a79695846d3c4",
+      "plan_fingerprint": "620047b504d5b9577943d2b91158c360859267ab66b0204c089eb7f286af95b8",
+      "readout_classical_bit": 0
+    },
+    {
+      "classification": "RECOGNITION",
+      "counts": {
+        "0000": 63,
+        "0001": 7,
+        "0010": 291,
+        "0011": 55,
+        "0100": 33,
+        "0101": 9,
+        "0110": 17,
+        "0111": 1,
+        "1000": 23,
+        "1001": 1,
+        "1010": 4,
+        "1011": 2,
+        "1100": 1,
+        "1101": 1,
+        "1110": 3,
+        "1111": 1
+      },
+      "histogram": 1,
+      "marginal_counts": {
+        "0": 435,
+        "1": 77
+      },
+      "measured_wires": [
+        3,
+        2,
+        1,
+        0
+      ],
+      "observation_fingerprint": "95691239033000492266543708b53b6efa1a157ad4b34aaf8302fa7859f44ad7",
+      "plan_fingerprint": "25eab627d24ad6befea47a95fe796e01fe84233264933436034ac0970087d771",
+      "readout_classical_bit": 0
+    }
+  ],
+  "evidence_class": "SYNTHETIC_MEASUREMENT_MAP_QUALIFICATION",
+  "exact_replay_per_map": true,
+  "hardware_submissions": 0,
+  "measurement_maps": 60,
+  "python": "3.12.14",
+  "sampling": {
+    "reuse": "all maps within a group project the same synthetic full-register histogram",
+    "seed": 20261114,
+    "shots_per_source_histogram": 512
+  },
+  "schema": "nrqc-measurement-map-audit-v1",
+  "source_histograms": [
+    {
+      "expected_count_one": 275,
+      "final_layout": {
+        "0": 0,
+        "1": 2,
+        "3": 1
+      },
+      "full_counts": [
+        0,
+        214,
+        11,
+        0,
+        23,
+        0,
+        0,
+        264
+      ],
+      "initial_layout": {
+        "0": 0,
+        "1": 2,
+        "3": 1
+      },
+      "numpy_normalization_error": 2.220446049250313e-16,
+      "physical_wires": 3,
+      "prediction_fingerprint": "d5ac479c19e9225a914f9c754027070d800c55fd6b5c3018e5d7e74eb7ebc45b"
+    },
+    {
+      "expected_count_one": 77,
+      "final_layout": {
+        "0": 1,
+        "1": 0,
+        "2": 2,
+        "3": 3
+      },
+      "full_counts": [
+        63,
+        23,
+        33,
+        1,
+        291,
+        4,
+        17,
+        3,
+        7,
+        1,
+        9,
+        1,
+        55,
+        2,
+        1,
+        1
+      ],
+      "initial_layout": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3
+      },
+      "numpy_normalization_error": 2.220446049250313e-16,
+      "physical_wires": 4,
+      "prediction_fingerprint": "c3d57c4517c86cbd9ce82ec80a8193cdec876d41cabf6cf76a96a6117778c5a7"
+    }
+  ],
+  "source_sha256": {
+    "benchmarks/measurement_map_audit.py": "8aa7ef3ae3bc17a8e7ef8957b003ec25cfbc336a44814bbd04a248215d54c597",
+    "native_relational_qc/circuit.py": "6215adf52443de8ee1db01f8e641c4c50124810a7674fd3258d826ff08b9e366",
+    "native_relational_qc/model_experiment.py": "a8dfa64165b949a9da086be511f7035fe0fcace67f2fda9ed1e3fe0b6225092f",
+    "native_relational_qc/model_runtime.py": "eebd0ce5ae4a0857c2ecf5cbfa11b54f264dd51f91ce97cb638d8cc8d07b1a81"
+  }
+}

@@ -1,0 +1,355 @@
+{
+  "audit_records": [
+    {
+      "path": "benchmarks/records/model_experiment_20261112.json",
+      "sha256": "718a0d0c5a130b3c73afd99b29234ee8e55ebc418869813ddd0d4f81b2a947c5",
+      "source_commit": "b31a690f11b5d6ac85a8b2e970a87c3530eec1a6",
+      "source_pins_verified": 7
+    },
+    {
+      "path": "benchmarks/records/experiment_ledger_20261112.json",
+      "sha256": "5fca990fb90ef1af010e09733ca07df434d5685738c2e97c07bf2a9affc0af4e",
+      "source_commit": "ff8fa4c89ee4c00b6bd23d3843a5c99513e83b32",
+      "source_pins_verified": 8
+    },
+    {
+      "path": "benchmarks/records/experiment_campaign_20261112.json",
+      "sha256": "81fbb3f5b3c23649312520575752a5b6899478b4e9dcd36b307c471fb4df0637",
+      "source_commit": "025d49c9f70f11a1f75de7514264ae918deed465",
+      "source_pins_verified": 6
+    },
+    {
+      "path": "benchmarks/records/controller_intake_20261112.json",
+      "sha256": "02b4aa9cc5a6d6035544f225afe367b86297b8dd85b4fc93c2a2796b388d3da3",
+      "source_commit": "f60c627ede0cba3d868200d28088d9ac316a89bb",
+      "source_pins_verified": 5
+    },
+    {
+      "path": "benchmarks/records/measurement_map_20261112.json",
+      "sha256": "4c2c7ef3848d7107da964b8f119777671eeea33b85d13df2ca3702dee936eb6c",
+      "source_commit": null,
+      "source_pins_verified": 4
+    }
+  ],
+  "core_suite": {
+    "collected": 1223,
+    "command": "python3.12 -m pytest -q",
+    "failed": 0,
+    "optional_sdks_installed": false,
+    "passed": 1166,
+    "seconds": 628.91,
+    "skipped": 57
+  },
+  "evidence_class": "LOCAL_SOFTWARE_AND_SYNTHETIC_ACQUISITION_QUALIFICATION",
+  "feature_commits": [
+    "b31a690f11b5d6ac85a8b2e970a87c3530eec1a6",
+    "ff8fa4c89ee4c00b6bd23d3843a5c99513e83b32",
+    "025d49c9f70f11a1f75de7514264ae918deed465",
+    "f60c627ede0cba3d868200d28088d9ac316a89bb"
+  ],
+  "hardware_submissions": 0,
+  "installed_wheel": {
+    "campaign_qualified": true,
+    "changed_source_rejected": true,
+    "commands": [
+      {
+        "command": "predict",
+        "returncode": 0
+      },
+      {
+        "command": "experiment-plan",
+        "returncode": 0
+      },
+      {
+        "command": "experiment-plan",
+        "returncode": 0
+      },
+      {
+        "command": "experiment-plan",
+        "returncode": 0
+      },
+      {
+        "command": "campaign-plan",
+        "returncode": 0
+      },
+      {
+        "command": "import-model-counts",
+        "returncode": 0
+      },
+      {
+        "command": "verify-observation",
+        "returncode": 0
+      },
+      {
+        "command": "record-observation",
+        "returncode": 0
+      },
+      {
+        "command": "import-model-counts",
+        "returncode": 0
+      },
+      {
+        "command": "verify-observation",
+        "returncode": 0
+      },
+      {
+        "command": "record-observation",
+        "returncode": 0
+      },
+      {
+        "command": "import-model-counts",
+        "returncode": 0
+      },
+      {
+        "command": "verify-observation",
+        "returncode": 0
+      },
+      {
+        "command": "record-observation",
+        "returncode": 0
+      },
+      {
+        "command": "record-observation",
+        "returncode": 0
+      },
+      {
+        "command": "verify-experiment-ledger",
+        "returncode": 0
+      },
+      {
+        "command": "campaign-report",
+        "returncode": 0
+      },
+      {
+        "command": "verify-campaign-report",
+        "returncode": 0
+      },
+      {
+        "command": "verify-observation",
+        "returncode": 2
+      },
+      {
+        "command": "import-model-counts",
+        "returncode": 2
+      }
+    ],
+    "evidence_class": "INSTALLED_SOFTWARE_SYNTHETIC_QUALIFICATION",
+    "hardware_submissions": 0,
+    "idempotent_retry_byte_identical": true,
+    "imported_from_installed_package": true,
+    "incomplete_raw_counts_rejected": true,
+    "installed_source_sha256": {
+      "__main__.py": "141e3216d052358583035c0aceae0f12af14ad76819feb49ccb15d8af1146052",
+      "experiment_campaign.py": "ba6e55a79ccc60a488c6de2dd2c5259b69e3b4f6d5fd3af81403237032528ddd",
+      "experiment_ledger.py": "c5bb3e2ddac063bd9a0f707efb631b626a26b6c571c10d58568073fd46a549d6",
+      "model_experiment.py": "a8dfa64165b949a9da086be511f7035fe0fcace67f2fda9ed1e3fe0b6225092f",
+      "model_runtime.py": "eebd0ce5ae4a0857c2ecf5cbfa11b54f264dd51f91ce97cb638d8cc8d07b1a81"
+    },
+    "observations": 3,
+    "python": "3.12.14",
+    "schema": "nrqc-installed-acquisition-smoke-v1",
+    "wheel_sha256": "aff0b2b3152f6927bb63295dc62d76be49ed1bad81838af1752297623e391e89"
+  },
+  "optional_checks": {
+    "additional_core_legacy_recheck": "tests/test_legacy_ledger_drift.py::test_legacy_ledger_does_not_verify_under_current_schema",
+    "additional_qiskit_cases": [
+      "tests/test_native_emk_tensor.py::EMKTensorTests::test_independent_qiskit_covariance_and_positive_metric",
+      "qec_error_control_lab/coherence_lab/test_adaptive_dd.py::T::test_circuits_shape"
+    ],
+    "aer_cad_batch": {
+      "case_ids": [
+        "tests/test_native_dynamic.py::DynamicReferenceTests::test_rational_noise_export_against_aer_density",
+        "tests/test_photonic_layout_geometry.py::GeometryTests::test_broken_input_is_detected",
+        "tests/test_photonic_layout_geometry.py::GeometryTests::test_displaced_heater_is_detected",
+        "tests/test_photonic_layout_geometry.py::GeometryTests::test_gds_generation_is_deterministic_and_uses_verified_macros",
+        "tests/test_photonic_layout_geometry.py::GeometryTests::test_guard_short_is_detected",
+        "tests/test_photonic_layout_geometry.py::GeometryTests::test_independent_reader_checks_geometry_and_connected_components",
+        "tests/test_photonic_layout_geometry.py::GeometryTests::test_pad_bridge_is_detected",
+        "tests/test_photonic_layout_geometry.py::GeometryTests::test_thin_disconnected_feature_is_detected",
+        "tests/test_photonic_layout_geometry.py::GeometryTests::test_unexpected_layer_rejected",
+        "tests/test_photonic_layout_geometry.py::GeometryTests::test_vendor_tamper_is_rejected"
+      ],
+      "passed": 10,
+      "skipped": 0
+    },
+    "previously_skipped_passing_case_ids": [
+      "qec_error_control_lab/coherence_lab/test_adaptive_dd.py::T::test_circuits_shape",
+      "tests/test_delta_ogmt.py::DeltaOGMTTests::test_independent_numeric_evolution_and_true_resets",
+      "tests/test_delta_ogmt_learning.py::LearningTests::test_independent_statevector_checks_tuned_gate_encoding",
+      "tests/test_moving_observer.py::MovingObserverTests::test_qiskit_uses_same_record_order_and_frame_convention",
+      "tests/test_native_clifford_frame.py::CliffordFrameTests::test_entire_frame_state_and_marginals_against_independent_qiskit",
+      "tests/test_native_compact.py::CompactQiskitTests::test_controlled_nonclifford_and_native_operations",
+      "tests/test_native_compact.py::CompactQiskitTests::test_import_does_not_guess_float_or_name",
+      "tests/test_native_compact.py::CompactQiskitTests::test_named_gate_export_and_independent_reference",
+      "tests/test_native_compact.py::CompactQiskitTests::test_seeded_nonclifford_circuits",
+      "tests/test_native_cyclotomic.py::CyclotomicTests::test_four_bit_shor_full_states_against_direct_fourier_formula",
+      "tests/test_native_cyclotomic.py::CyclotomicTests::test_random_complete_states_against_qiskit_without_phase_alignment",
+      "tests/test_native_dynamic.py::DynamicReferenceTests::test_noise_recovery_against_forward_density_reference",
+      "tests/test_native_dynamic.py::DynamicReferenceTests::test_qiskit_import_rejects_unsupported_control_flow",
+      "tests/test_native_dynamic.py::DynamicReferenceTests::test_qiskit_roundtrip_nested_conditions_and_reordered_wires",
+      "tests/test_native_dynamic.py::DynamicReferenceTests::test_rational_noise_export_against_aer_density",
+      "tests/test_native_dynamic.py::DynamicReferenceTests::test_seeded_dynamic_circuits_against_forward_density_branches",
+      "tests/test_native_emk_tensor.py::EMKTensorTests::test_independent_qiskit_covariance_and_positive_metric",
+      "tests/test_native_factored.py::FactoredReferenceTests::test_adjacent_swap",
+      "tests/test_native_factored.py::FactoredReferenceTests::test_control_orientation_and_complex_readouts",
+      "tests/test_native_integration.py::ExactInteropTests::test_qiskit_phase_and_rz_roundtrip",
+      "tests/test_native_jya_frame.py::JyaFrameTests::test_full_complex_state_against_qiskit_without_phase_alignment",
+      "tests/test_native_large_register.py::LargeRegisterTests::test_independent_qiskit_statevector_random_circuits",
+      "tests/test_native_linear_observer.py::LinearObserverTests::test_independent_operator_closure_and_arbitrary_mixed_state_replay",
+      "tests/test_native_modular_shor.py::ModularShorTests::test_phase32_and_permutations_against_independent_full_complex_states",
+      "tests/test_native_observer.py::ObserverReferenceTests::test_seeded_nonclifford_pauli_queries",
+      "tests/test_native_observer.py::ObserverReferenceTests::test_toffoli_and_swap_queries",
+      "tests/test_native_observer32.py::Observer32Tests::test_future_bank_independent_matrix_closure_and_chronological_replay",
+      "tests/test_native_observer32.py::Observer32Tests::test_small_graph_and_y_responses_against_qiskit",
+      "tests/test_native_phase64_rewrite.py::Phase64RewriteTests::test_random_complex_states_and_rewrites_without_phase_alignment",
+      "tests/test_native_qiskit_adapter.py::QiskitAdapterTests::test_analytic_program_roundtrips",
+      "tests/test_native_qiskit_adapter.py::QiskitAdapterTests::test_bound_parameters_are_accepted",
+      "tests/test_native_qiskit_adapter.py::QiskitAdapterTests::test_compiler_needs_explicit_target",
+      "tests/test_native_qiskit_adapter.py::QiskitAdapterTests::test_custom_unitary_and_permuted_qargs",
+      "tests/test_native_qiskit_adapter.py::QiskitAdapterTests::test_explicit_global_phase_gate",
+      "tests/test_native_qiskit_adapter.py::QiskitAdapterTests::test_fails_closed_on_dynamic_nonunitary_and_unbound",
+      "tests/test_native_qiskit_adapter.py::QiskitAdapterTests::test_independent_standard_gate_semantics",
+      "tests/test_native_qiskit_adapter.py::QiskitAdapterTests::test_labels_cannot_override_matrix_semantics",
+      "tests/test_native_qiskit_adapter.py::QiskitAdapterTests::test_native_r_bridge_and_controlled_phase",
+      "tests/test_native_qiskit_adapter.py::QiskitAdapterTests::test_offline_hardware_target_compilation",
+      "tests/test_native_qiskit_adapter.py::QiskitAdapterTests::test_partial_measurement_register_order",
+      "tests/test_native_qiskit_adapter.py::QiskitAdapterTests::test_phase_erasure_negative_control",
+      "tests/test_native_qiskit_adapter.py::QiskitAdapterTests::test_seeded_mixed_circuits",
+      "tests/test_native_reversible_logic.py::ReversibleAdderTests::test_coherent_adder_against_independent_dense_statevector",
+      "tests/test_native_shor.py::ShorTests::test_full_shor_complex_states_against_function_fourier_formula",
+      "tests/test_native_streaming.py::StreamingTests::test_independent_dense_statevector",
+      "tests/test_observer_cycle.py::ObserverCycleTests::test_independent_kraus_evolution_matches_exact_source_and_fixed_point",
+      "tests/test_observer_state.py::ObserverStateTests::test_independent_kraus_reference_checks_joint_losses_and_all_paths",
+      "tests/test_observer_tracking.py::TrackingTests::test_independent_reference_checks_branch_bit_order",
+      "tests/test_photonic_layout_geometry.py::GeometryTests::test_broken_input_is_detected",
+      "tests/test_photonic_layout_geometry.py::GeometryTests::test_displaced_heater_is_detected",
+      "tests/test_photonic_layout_geometry.py::GeometryTests::test_gds_generation_is_deterministic_and_uses_verified_macros",
+      "tests/test_photonic_layout_geometry.py::GeometryTests::test_guard_short_is_detected",
+      "tests/test_photonic_layout_geometry.py::GeometryTests::test_independent_reader_checks_geometry_and_connected_components",
+      "tests/test_photonic_layout_geometry.py::GeometryTests::test_pad_bridge_is_detected",
+      "tests/test_photonic_layout_geometry.py::GeometryTests::test_thin_disconnected_feature_is_detected",
+      "tests/test_photonic_layout_geometry.py::GeometryTests::test_unexpected_layer_rejected",
+      "tests/test_photonic_layout_geometry.py::GeometryTests::test_vendor_tamper_is_rejected"
+    ],
+    "previously_skipped_unique_cases_with_passing_execution": 57,
+    "qiskit_batch": {
+      "passed": 45,
+      "passed_case_ids": [
+        "tests/test_delta_ogmt.py::DeltaOGMTTests::test_independent_numeric_evolution_and_true_resets",
+        "tests/test_delta_ogmt_learning.py::LearningTests::test_independent_statevector_checks_tuned_gate_encoding",
+        "tests/test_moving_observer.py::MovingObserverTests::test_qiskit_uses_same_record_order_and_frame_convention",
+        "tests/test_native_clifford_frame.py::CliffordFrameTests::test_entire_frame_state_and_marginals_against_independent_qiskit",
+        "tests/test_native_compact.py::CompactQiskitTests::test_controlled_nonclifford_and_native_operations",
+        "tests/test_native_compact.py::CompactQiskitTests::test_import_does_not_guess_float_or_name",
+        "tests/test_native_compact.py::CompactQiskitTests::test_named_gate_export_and_independent_reference",
+        "tests/test_native_compact.py::CompactQiskitTests::test_seeded_nonclifford_circuits",
+        "tests/test_native_cyclotomic.py::CyclotomicTests::test_four_bit_shor_full_states_against_direct_fourier_formula",
+        "tests/test_native_cyclotomic.py::CyclotomicTests::test_random_complete_states_against_qiskit_without_phase_alignment",
+        "tests/test_native_dynamic.py::DynamicReferenceTests::test_noise_recovery_against_forward_density_reference",
+        "tests/test_native_dynamic.py::DynamicReferenceTests::test_qiskit_import_rejects_unsupported_control_flow",
+        "tests/test_native_dynamic.py::DynamicReferenceTests::test_qiskit_roundtrip_nested_conditions_and_reordered_wires",
+        "tests/test_native_dynamic.py::DynamicReferenceTests::test_seeded_dynamic_circuits_against_forward_density_branches",
+        "tests/test_native_factored.py::FactoredReferenceTests::test_adjacent_swap",
+        "tests/test_native_factored.py::FactoredReferenceTests::test_control_orientation_and_complex_readouts",
+        "tests/test_native_integration.py::ExactInteropTests::test_qiskit_phase_and_rz_roundtrip",
+        "tests/test_native_jya_frame.py::JyaFrameTests::test_full_complex_state_against_qiskit_without_phase_alignment",
+        "tests/test_native_large_register.py::LargeRegisterTests::test_independent_qiskit_statevector_random_circuits",
+        "tests/test_native_linear_observer.py::LinearObserverTests::test_independent_operator_closure_and_arbitrary_mixed_state_replay",
+        "tests/test_native_modular_shor.py::ModularShorTests::test_phase32_and_permutations_against_independent_full_complex_states",
+        "tests/test_native_observer.py::ObserverReferenceTests::test_seeded_nonclifford_pauli_queries",
+        "tests/test_native_observer.py::ObserverReferenceTests::test_toffoli_and_swap_queries",
+        "tests/test_native_observer32.py::Observer32Tests::test_future_bank_independent_matrix_closure_and_chronological_replay",
+        "tests/test_native_observer32.py::Observer32Tests::test_small_graph_and_y_responses_against_qiskit",
+        "tests/test_native_phase64_rewrite.py::Phase64RewriteTests::test_random_complex_states_and_rewrites_without_phase_alignment",
+        "tests/test_native_qiskit_adapter.py::QiskitAdapterTests::test_analytic_program_roundtrips",
+        "tests/test_native_qiskit_adapter.py::QiskitAdapterTests::test_bound_parameters_are_accepted",
+        "tests/test_native_qiskit_adapter.py::QiskitAdapterTests::test_compiler_needs_explicit_target",
+        "tests/test_native_qiskit_adapter.py::QiskitAdapterTests::test_custom_unitary_and_permuted_qargs",
+        "tests/test_native_qiskit_adapter.py::QiskitAdapterTests::test_explicit_global_phase_gate",
+        "tests/test_native_qiskit_adapter.py::QiskitAdapterTests::test_fails_closed_on_dynamic_nonunitary_and_unbound",
+        "tests/test_native_qiskit_adapter.py::QiskitAdapterTests::test_independent_standard_gate_semantics",
+        "tests/test_native_qiskit_adapter.py::QiskitAdapterTests::test_labels_cannot_override_matrix_semantics",
+        "tests/test_native_qiskit_adapter.py::QiskitAdapterTests::test_native_r_bridge_and_controlled_phase",
+        "tests/test_native_qiskit_adapter.py::QiskitAdapterTests::test_offline_hardware_target_compilation",
+        "tests/test_native_qiskit_adapter.py::QiskitAdapterTests::test_partial_measurement_register_order",
+        "tests/test_native_qiskit_adapter.py::QiskitAdapterTests::test_phase_erasure_negative_control",
+        "tests/test_native_qiskit_adapter.py::QiskitAdapterTests::test_seeded_mixed_circuits",
+        "tests/test_native_reversible_logic.py::ReversibleAdderTests::test_coherent_adder_against_independent_dense_statevector",
+        "tests/test_native_shor.py::ShorTests::test_full_shor_complex_states_against_function_fourier_formula",
+        "tests/test_native_streaming.py::StreamingTests::test_independent_dense_statevector",
+        "tests/test_observer_cycle.py::ObserverCycleTests::test_independent_kraus_evolution_matches_exact_source_and_fixed_point",
+        "tests/test_observer_state.py::ObserverStateTests::test_independent_kraus_reference_checks_joint_losses_and_all_paths",
+        "tests/test_observer_tracking.py::TrackingTests::test_independent_reference_checks_branch_bit_order"
+      ],
+      "selected": 46,
+      "skipped_for_aer": 1
+    },
+    "scope": "targeted optional checks after one full core run; no full all-extras run asserted",
+    "versions": {
+      "gdstk": "1.0.2",
+      "klayout": "0.30.13",
+      "qiskit": "2.6.2",
+      "qiskit_aer": "0.18.2"
+    }
+  },
+  "photonic_calibration_status": "UNMEASURED_TEMPLATE",
+  "physical_source_sha256": {
+    "phase_seam_foundation/CONTROLLER.md": "cdc5e847a35262b685aa776ec59958138116aec8c27f3a89a5a432f2562f834a",
+    "phase_seam_foundation/photonic_calibration_template.json": "31e0b642e29db7de6ec168902655a62645d3f8576f1fe22440c8e5c356a1a686"
+  },
+  "python": "3.12.14",
+  "remaining": [
+    "review/merge/versioned release",
+    "actual controller and encoding with measured calibration",
+    "raw measured acquisitions under a frozen campaign",
+    "explicit loss/heralding contract for conditional protocols"
+  ],
+  "runtime_code_commit": "f60c627ede0cba3d868200d28088d9ac316a89bb",
+  "schema": "nrqc-acquisition-release-qualification-v1",
+  "source_authentication": "not_performed",
+  "source_sha256": {
+    "benchmarks/installed_acquisition_smoke.py": "d313141cf092b19d99fb44ea097fbf06631fce51c29060a4f8743136dd9b46d8",
+    "benchmarks/measurement_map_audit.py": "8aa7ef3ae3bc17a8e7ef8957b003ec25cfbc336a44814bbd04a248215d54c597",
+    "native_relational_qc/__main__.py": "141e3216d052358583035c0aceae0f12af14ad76819feb49ccb15d8af1146052",
+    "native_relational_qc/experiment_campaign.py": "ba6e55a79ccc60a488c6de2dd2c5259b69e3b4f6d5fd3af81403237032528ddd",
+    "native_relational_qc/experiment_ledger.py": "c5bb3e2ddac063bd9a0f707efb631b626a26b6c571c10d58568073fd46a549d6",
+    "native_relational_qc/model_experiment.py": "a8dfa64165b949a9da086be511f7035fe0fcace67f2fda9ed1e3fe0b6225092f",
+    "native_relational_qc/model_runtime.py": "eebd0ce5ae4a0857c2ecf5cbfa11b54f264dd51f91ce97cb638d8cc8d07b1a81",
+    "pyproject.toml": "4eac01bff4408b36c11059801370365b4e2bde7f758106bf587d3b3649a1c2a5",
+    "tests/test_controller_intake.py": "df454e7e9f6044c6cf5ed902e6ef37d2590744e4c0f94e5f387d353b518e9f21",
+    "tests/test_experiment_campaign.py": "70f4f3ab43dd1d1168a014b8bc712008187521c8f4645b391cbed11a21acdffe",
+    "tests/test_experiment_ledger.py": "38f43d783285fff49f3a903f73d8bf269852d8f1c5a489c028c5ef8862fbadd9",
+    "tests/test_model_experiment.py": "4c18355e20ba67a39c0cb400db4708bc8e17141b6f696e71a62a6250d2c2fd61"
+  },
+  "test_logs": {
+    "aer_cad": {
+      "path": "benchmarks/records/acquisition_remaining_optional_pytest_312_20261112.txt",
+      "sha256": "ad1776d88460a97d4ea601a3ca272f1a8c5f5522f806c4bc5242b33d541eb0bf",
+      "summary": "10 passed in 2.08s"
+    },
+    "core": {
+      "path": "benchmarks/records/acquisition_full_pytest_312_20261112.txt",
+      "sha256": "76bc273808488485f08f0a51b482ac7b8e733fd769d0adc06661834523d39959",
+      "summary": "1166 passed, 57 skipped in 628.91s (0:10:28)"
+    },
+    "qec_reference": {
+      "path": "benchmarks/records/acquisition_qec_reference_recheck_20261112.txt",
+      "sha256": "791acbb2840ecff621592488f8e65512e312896e3865560d4000495c22ef5d13",
+      "summary": "1 passed in 0.42s"
+    },
+    "qiskit": {
+      "path": "benchmarks/records/acquisition_qiskit_pytest_312_20261112.txt",
+      "sha256": "4b12d8feae877d28eef2480fb95641d0d135c4bad7f32f8bbe0bec48b1686f60",
+      "summary": "45 passed, 1 skipped in 23.55s"
+    },
+    "runtime_recheck": {
+      "path": "benchmarks/records/acquisition_runtime_skip_recheck_20261112.txt",
+      "sha256": "e6330811cefb5de143db2a5663d16558b0831eabd3480f02ae5c54f2252c25aa",
+      "summary": "2 passed in 0.69s"
+    }
+  },
+  "work_window": {
+    "deadline_utc": "2026-11-12T06:45:36Z",
+    "start_utc": "2026-11-12T05:45:36Z"
+  }
+}

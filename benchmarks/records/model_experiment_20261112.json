@@ -1,0 +1,3144 @@
+{
+  "boundary_controls": [
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "10",
+        "real_numerators": [
+          1
+        ]
+      },
+      "classification": "RECOGNITION",
+      "count_one": 90
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "5",
+        "real_numerators": [
+          1
+        ]
+      },
+      "classification": "BOUNDED_RESIDUE",
+      "count_one": 80
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "100",
+        "real_numerators": [
+          21
+        ]
+      },
+      "classification": "ACTIONABLE_RESIDUE",
+      "count_one": 79
+    }
+  ],
+  "cases": [
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "128",
+        "real_numerators": [
+          33,
+          0,
+          0,
+          0,
+          -16
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 252,
+        "1": 260
+      },
+      "example": "curvature_u-1_v-1",
+      "features": [
+        14,
+        14
+      ],
+      "plan_fingerprint": "f0f702d851f4021c15d1b8a9b6afa0b6828ec99e1f2f3650ba18aac3e4771256",
+      "report_fingerprint": "f0a5a4d16ee1d769618bf2d7c14360991ec2284278aa87fa1eb332351a6ad46b"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "256",
+        "real_numerators": [
+          -55,
+          0,
+          0,
+          0,
+          32
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 238,
+        "1": 274
+      },
+      "example": "curvature_u-1_v1",
+      "features": [
+        14,
+        18
+      ],
+      "plan_fingerprint": "caccbe1c7290061e7e4e8e31b73c0c1a75e66207c3cc3b1cb7ab24d12cb45186",
+      "report_fingerprint": "2ec949f2336cc7bf058430bea98b45bc9bd8ff1fb66abe142c84cf6209399a27"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          31,
+          0,
+          0,
+          0,
+          -64,
+          0,
+          0,
+          0,
+          64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 287,
+        "1": 225
+      },
+      "example": "curvature_u-1_v-3",
+      "features": [
+        14,
+        10
+      ],
+      "plan_fingerprint": "2c1c749df80b078f1c69fe9ca5fe6ec6ce729587bc67459fa19d7636938865e0",
+      "report_fingerprint": "65d7d7d123fbaf7e609e499fb5c3094e8087af1167b5c4d9ef187bbf70c6ecf9"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          31,
+          0,
+          0,
+          0,
+          -64,
+          0,
+          0,
+          0,
+          64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 225,
+        "1": 287
+      },
+      "example": "curvature_u-1_v3",
+      "features": [
+        14,
+        22
+      ],
+      "plan_fingerprint": "725f8207c9c0bd0424a34df7762d0a748fb98a857986b6b26ceaab5858a3f8ce",
+      "report_fingerprint": "f7d4c833c65197434837acd78efec3ab503e288076e453db68ea9697cc8fa880"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "128",
+        "real_numerators": [
+          11,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -16,
+          0,
+          0,
+          0,
+          16
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 300,
+        "1": 212
+      },
+      "example": "curvature_u-1_v-5",
+      "features": [
+        14,
+        6
+      ],
+      "plan_fingerprint": "0c2081c8d5a79e176c6b3916af0f200a9028a9a15122f77ba0e563119f080e24",
+      "report_fingerprint": "9e728d0ec1a4bbf0d66fd2b7ea8f513795e1ed0a3ccab556a0fe3a268e346f6c"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          47,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -64,
+          0,
+          0,
+          0,
+          64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 209,
+        "1": 303
+      },
+      "example": "curvature_u-1_v5",
+      "features": [
+        14,
+        26
+      ],
+      "plan_fingerprint": "1e34f1a836ce1dc226a1567ba80dd32d12064f6f526e856d415224d7a914990c",
+      "report_fingerprint": "423872fccbcc3a75aaa2656fb00ceaecfc608a0a0f90d5919abf07478fc3b328"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "64",
+        "real_numerators": [
+          7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -8
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 312,
+        "1": 200
+      },
+      "example": "curvature_u-1_v-7",
+      "features": [
+        14,
+        2
+      ],
+      "plan_fingerprint": "48d8347791ac0b392e186d07d1055d6654e6dd4e611238fe8c248f468bdcf6f3",
+      "report_fingerprint": "9c30c5c2edbc7f29c031037d298a1ee6801200d1eb020871be50aa94b311c527"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "16",
+        "real_numerators": [
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 224,
+        "1": 288
+      },
+      "example": "curvature_u-1_v7",
+      "features": [
+        14,
+        30
+      ],
+      "plan_fingerprint": "fdd3e84ce699b8e17312edcd723fb998339344b189ef1ff8b161a1e510a06788",
+      "report_fingerprint": "60796bba7d826d1ecbbf3b1a07bf12531322ceaa7062f7faf971d50b73f400e9"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          121,
+          0,
+          0,
+          0,
+          -64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 249,
+        "1": 263
+      },
+      "example": "curvature_u1_v-1",
+      "features": [
+        18,
+        14
+      ],
+      "plan_fingerprint": "60e9b6aebeed3b8926400bfd86e9819cd87ab8df4da186ed7f5b7aad0be4a644",
+      "report_fingerprint": "f630302ac2638a5e551fb24622f08ec9edabfcdd675f3f51aac8f0be7a6a25ac"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          121,
+          0,
+          0,
+          0,
+          -64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 263,
+        "1": 249
+      },
+      "example": "curvature_u1_v1",
+      "features": [
+        18,
+        18
+      ],
+      "plan_fingerprint": "17eb8a40e6d230b4f8d60d724edf77b3ffb9746bd46c70216bfb00fd08e93171",
+      "report_fingerprint": "2b30e8348b5b28347eb52a985695b8a8d5bd29d9afc60cc55577b70bb037df5d"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          29,
+          0,
+          0,
+          0,
+          -64,
+          0,
+          0,
+          0,
+          64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 227,
+        "1": 285
+      },
+      "example": "curvature_u1_v-3",
+      "features": [
+        18,
+        10
+      ],
+      "plan_fingerprint": "a482f0695ceac2a57e2a5c9312497e6e0a02d719817270afedae2f0885f3f158",
+      "report_fingerprint": "449e03581a890f77172d54588daa104114ddd8f786b375ddded5b3ae8bc89492"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "256",
+        "real_numerators": [
+          -13,
+          0,
+          0,
+          0,
+          32,
+          0,
+          0,
+          0,
+          -32
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 282,
+        "1": 230
+      },
+      "example": "curvature_u1_v3",
+      "features": [
+        18,
+        22
+      ],
+      "plan_fingerprint": "c18b01a29d533f5603284c90e7534f3e7ebef9a7e4347fb39501feefe23b6bbb",
+      "report_fingerprint": "ce79e4f68eb8eaa4e88a2aec716d4632bf831b6dddda35524cb369a013ba03f6"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          -41,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          64,
+          0,
+          0,
+          0,
+          -64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 215,
+        "1": 297
+      },
+      "example": "curvature_u1_v-5",
+      "features": [
+        18,
+        6
+      ],
+      "plan_fingerprint": "f6b417c648559d4d6932582829532214a420091654e8745ca44600d8b23ee6ea",
+      "report_fingerprint": "6c676d0b3795f9ad8759456736eece4b582488b89177b080e4761175032a2b7b"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          49,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -64,
+          0,
+          0,
+          0,
+          64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 305,
+        "1": 207
+      },
+      "example": "curvature_u1_v5",
+      "features": [
+        18,
+        26
+      ],
+      "plan_fingerprint": "632bd8bef38196de9e846695b91bd89cc38fb7a2d00edd3935c691efb1b8feac",
+      "report_fingerprint": "f9ec1b7225e526b3770a86cb4450565ddc803c126f657d9a1d7214d027146ff0"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "256",
+        "real_numerators": [
+          -23,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          32
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 210,
+        "1": 302
+      },
+      "example": "curvature_u1_v-7",
+      "features": [
+        18,
+        2
+      ],
+      "plan_fingerprint": "60ffd28023a925d6829f521c69e4085709f4b8644910e0e6946943963cc92753",
+      "report_fingerprint": "aede765837968286d308237412e790a87346176fb31e89e8b27042b4ce7feee2"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          -47,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 303,
+        "1": 209
+      },
+      "example": "curvature_u1_v7",
+      "features": [
+        18,
+        30
+      ],
+      "plan_fingerprint": "371bd6ece4d02589aa9e7ddf02a62fc12c43c15c0387f21341592b086a1f2506",
+      "report_fingerprint": "81b03c09a9eaa052a4d185f95c3badf8143af76db1121276c9b845b7dedf01cd"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          39,
+          0,
+          0,
+          0,
+          -64,
+          0,
+          0,
+          0,
+          64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 295,
+        "1": 217
+      },
+      "example": "curvature_u-3_v-1",
+      "features": [
+        10,
+        14
+      ],
+      "plan_fingerprint": "d32ce10da1a71406233642747eeddb8f4192dbdac2ec92e9377abf0ca09e24c9",
+      "report_fingerprint": "c6c513a0d64b0df8c5bfe2c21ebc62202a2a92dba5d84bbcb1e3ba2b95a5c775"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          -21,
+          0,
+          0,
+          0,
+          64,
+          0,
+          0,
+          0,
+          -64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 235,
+        "1": 277
+      },
+      "example": "curvature_u-3_v1",
+      "features": [
+        10,
+        18
+      ],
+      "plan_fingerprint": "843da095210ccb54cef693ebf857144713a96717686c0810865ff2e7b240d55a",
+      "report_fingerprint": "4422dc1e7c71c8f3e8fa526da7424ca69beb23761b4710dc6b7c86a033dd08ab"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          -43,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 341,
+        "1": 171
+      },
+      "example": "curvature_u-3_v-3",
+      "features": [
+        10,
+        10
+      ],
+      "plan_fingerprint": "639d5ecf8949e37e0ca7c3ef12c10cee44a2856dd4bb6795a32919b17c67152c",
+      "report_fingerprint": "ed7745248cd4d321a5efbe9e1c56fd8b0970897ceee9d152f68f203ddd60ab9e"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "64",
+        "real_numerators": [
+          -5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 168,
+        "1": 344
+      },
+      "example": "curvature_u-3_v3",
+      "features": [
+        10,
+        22
+      ],
+      "plan_fingerprint": "d42d816b4afb3e579c0d8345ef369756b02c9b34a44fc0da0b85b57fb855ea38",
+      "report_fingerprint": "e74901789a49e11a33158ac47d72f62afe0fcb46fe7f65b4c8f8f87cb2eb6ca4"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          137,
+          0,
+          0,
+          0,
+          -64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 393,
+        "1": 119
+      },
+      "example": "curvature_u-3_v-5",
+      "features": [
+        10,
+        6
+      ],
+      "plan_fingerprint": "ca22a4f7696cf0e539eb7325bff5ee0a7e4e3633bc5520608d425867af38658a",
+      "report_fingerprint": "7274006b72132238092734d55a3729fbbf136e3f233165f99c7b4a227d782b6b"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          125,
+          0,
+          0,
+          0,
+          -64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 131,
+        "1": 381
+      },
+      "example": "curvature_u-3_v5",
+      "features": [
+        10,
+        26
+      ],
+      "plan_fingerprint": "b392bfd20cd17225d9b6b0b447fd7f198c5655a28ce09aa17209b265ad1edfc6",
+      "report_fingerprint": "cc367a1ede5117bce7205d59909c0e1491fdf7f7daff69b9cb891595001ffcb9"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          141,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -64,
+          0,
+          0,
+          0,
+          -64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 397,
+        "1": 115
+      },
+      "example": "curvature_u-3_v-7",
+      "features": [
+        10,
+        2
+      ],
+      "plan_fingerprint": "569c810237314e9f149175be31b94b42b2694a6809f52a9fe7cd4788ee116bcc",
+      "report_fingerprint": "1e5c969795f3138ceb6a3a878c7b2321808b0184a12b46ac3d95eca8e5cca861"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "128",
+        "real_numerators": [
+          35,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -16,
+          0,
+          0,
+          0,
+          -16
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 116,
+        "1": 396
+      },
+      "example": "curvature_u-3_v7",
+      "features": [
+        10,
+        30
+      ],
+      "plan_fingerprint": "d8d319a0a1f0377e6c5b009ba17381e0af9ccab47f4c8898276dfe5e9bd4e0ce",
+      "report_fingerprint": "cb25f478c43281c43c68507e9a182c6bc7ec201d1b1b705b5ec2c43cf1c93f89"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "256",
+        "real_numerators": [
+          15,
+          0,
+          0,
+          0,
+          -32,
+          0,
+          0,
+          0,
+          32
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 226,
+        "1": 286
+      },
+      "example": "curvature_u3_v-1",
+      "features": [
+        22,
+        14
+      ],
+      "plan_fingerprint": "39a70f6e719614f3a34dc5ce155d1667b10855b6ccfd58431311d8c479841351",
+      "report_fingerprint": "ccbf40a62915ab8249f77a5c07ad64da0f2dbe5a363cf1a4ac3e3b8c1276034c"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          -7,
+          0,
+          0,
+          0,
+          64,
+          0,
+          0,
+          0,
+          -64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 263,
+        "1": 249
+      },
+      "example": "curvature_u3_v1",
+      "features": [
+        22,
+        18
+      ],
+      "plan_fingerprint": "1f5100658f9c86ff0bd7f00b3a1c3c7b9ae4d5738e9e83587308d90aaee57b06",
+      "report_fingerprint": "61e468464d6bbd7e978c724bd4264346a36f62ac1836d92402aec7e4d4bddbc7"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          -39,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 167,
+        "1": 345
+      },
+      "example": "curvature_u3_v-3",
+      "features": [
+        22,
+        10
+      ],
+      "plan_fingerprint": "b41a8dc5c0fccf3c873f1678fb90574c590bf267e1cd44b81f8b7ef6057a1298",
+      "report_fingerprint": "b5be14926bcbee22b06f9befb1dbe4d5bd296f0a61f5a98efc6f3b881c0fc2ee"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          51,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 333,
+        "1": 179
+      },
+      "example": "curvature_u3_v3",
+      "features": [
+        22,
+        22
+      ],
+      "plan_fingerprint": "2421c9280e7af7d48175c46cf134a552c490b7c3852ca08cbdb90dbec667080b",
+      "report_fingerprint": "1fc133d3cb749589195fb4bc8d4156969d23c3ca0a34164875e7c9eb72fe826d"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "32",
+        "real_numerators": [
+          -7,
+          0,
+          0,
+          0,
+          4
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 144,
+        "1": 368
+      },
+      "example": "curvature_u3_v-5",
+      "features": [
+        22,
+        6
+      ],
+      "plan_fingerprint": "72e17bf6814b04328fffa8d1a19d91e863e9557f28b75531306c3786033eeb0d",
+      "report_fingerprint": "c6c8ae9dcfd8b557e3a088eee71251efc7f124b7e42a115e7de3ccef75d58f39"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          -115,
+          0,
+          0,
+          0,
+          64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 371,
+        "1": 141
+      },
+      "example": "curvature_u3_v5",
+      "features": [
+        22,
+        26
+      ],
+      "plan_fingerprint": "93f05e6730bcb3b51ced436bd46c3e4242c4d0d883dc5fb0a6425ab845493a10",
+      "report_fingerprint": "e51f75615879829fd4902e7677a8bc0bd847ed6af461df49e9914d04945bb909"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "256",
+        "real_numerators": [
+          73,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -32,
+          0,
+          0,
+          0,
+          -32
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 110,
+        "1": 402
+      },
+      "example": "curvature_u3_v-7",
+      "features": [
+        22,
+        2
+      ],
+      "plan_fingerprint": "fc66990c0bc0e0969ea1131b90e2a6758ef5018b970de27837d1a9e82ccefb2e",
+      "report_fingerprint": "8a470a7203aa1ab46345975c386647af728ae2351c33f2b523420d916a2845d5"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "64",
+        "real_numerators": [
+          19,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -8,
+          0,
+          0,
+          0,
+          -8
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 408,
+        "1": 104
+      },
+      "example": "curvature_u3_v7",
+      "features": [
+        22,
+        30
+      ],
+      "plan_fingerprint": "793c61346d340848bb47e104d66785a735e87aedde68575273cfbcd2beb2ff40",
+      "report_fingerprint": "ed1144edf81228f72cc581bdc2a522878bf5a7d26a4fa7ca0c0548e7023cda69"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "64",
+        "real_numerators": [
+          -5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8,
+          0,
+          0,
+          0,
+          -8
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 296,
+        "1": 216
+      },
+      "example": "curvature_u-5_v-1",
+      "features": [
+        6,
+        14
+      ],
+      "plan_fingerprint": "4c9b1f8cfd7ad8a2ff26be5482d9c3a46dc5b2e8bc0b58fee82d52b36baeda00",
+      "report_fingerprint": "6e89ec0101e55abfc24a256e12666a12650606ff48303e6ee66b42dcc9c70d71"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "256",
+        "real_numerators": [
+          21,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -32,
+          0,
+          0,
+          0,
+          32
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 214,
+        "1": 298
+      },
+      "example": "curvature_u-5_v1",
+      "features": [
+        6,
+        18
+      ],
+      "plan_fingerprint": "8d1c9388d2b00e8b42cacaca811263b7e6d48bc89628ec4608ec79685e8e065c",
+      "report_fingerprint": "081b94fdb3a7ea1aaaaa6c5172c8e2438623b2ffac3a621fedb4e175719940cc"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          -115,
+          0,
+          0,
+          0,
+          64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 371,
+        "1": 141
+      },
+      "example": "curvature_u-5_v-3",
+      "features": [
+        6,
+        10
+      ],
+      "plan_fingerprint": "db8c1c1d91b9ea55d1b7609222d136f4f9fa018f4aebc8ab5e28d0af183b8f3c",
+      "report_fingerprint": "0cf54e705e02d70a06bfbbdec385b19fccfe1aa022b9dfd4290102f5feaf6ceb"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "256",
+        "real_numerators": [
+          63,
+          0,
+          0,
+          0,
+          -32
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 130,
+        "1": 382
+      },
+      "example": "curvature_u-5_v3",
+      "features": [
+        6,
+        22
+      ],
+      "plan_fingerprint": "9ca16539e6fd433fe0d7a8e2fcdbfb0f44ae07110205cad273cc8bbee0b1826c",
+      "report_fingerprint": "fc4e8ca9d7171b1e54af3d3a2d9d31981dbb47db2be9a99e2958d8724d24fbda"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          -47,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 431,
+        "1": 81
+      },
+      "example": "curvature_u-5_v-5",
+      "features": [
+        6,
+        6
+      ],
+      "plan_fingerprint": "da0fa6a030441031f1c96ef6e35e57f020e75ff8c3853b71c7b31ada6c76201d",
+      "report_fingerprint": "9eca8027cc8465e0fd210c71258d01a8c0387fc78dde5ab73652f510516e5cf8"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "32",
+        "real_numerators": [
+          -3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 80,
+        "1": 432
+      },
+      "example": "curvature_u-5_v5",
+      "features": [
+        6,
+        26
+      ],
+      "plan_fingerprint": "23d2de23c1a6ca7fc449bf7d3d3bbfbc5ca265293445605568b61c3f7974e2f1",
+      "report_fingerprint": "3866848fe94ba1c4c7848c171666dbc243927657df92aceb48c819400239180d"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "256",
+        "real_numerators": [
+          -101,
+          0,
+          0,
+          0,
+          32,
+          0,
+          0,
+          0,
+          32
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 458,
+        "1": 54
+      },
+      "example": "curvature_u-5_v-7",
+      "features": [
+        6,
+        2
+      ],
+      "plan_fingerprint": "10ad826b700d409e93f8105b96b7266102b59bff966636da093bb5638dea9f8c",
+      "report_fingerprint": "0d3249e6cf3995f52bf88e02221c809cd7fc1c4e37da798a3d176c262905e163"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "256",
+        "real_numerators": [
+          -101,
+          0,
+          0,
+          0,
+          32,
+          0,
+          0,
+          0,
+          32
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 54,
+        "1": 458
+      },
+      "example": "curvature_u-5_v7",
+      "features": [
+        6,
+        30
+      ],
+      "plan_fingerprint": "f1c3172749b7920e0cadeca76ff412063aee14dcf9f35110152e171025eb4988",
+      "report_fingerprint": "be5f927486a20e97115b0738f234369ef828c810e67d94da7e185e48c0f4614b"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "64",
+        "real_numerators": [
+          -5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8,
+          0,
+          0,
+          0,
+          -8
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 216,
+        "1": 296
+      },
+      "example": "curvature_u5_v-1",
+      "features": [
+        26,
+        14
+      ],
+      "plan_fingerprint": "4b6c82698b2388bfdd97e178198a9a2cd7f4859f72b627bf4591c39314b34281",
+      "report_fingerprint": "5006bd51c284a36e8b248344b5b9a26abbc5e15a22e2b1a471504e29606f89f9"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          43,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -64,
+          0,
+          0,
+          0,
+          64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 299,
+        "1": 213
+      },
+      "example": "curvature_u5_v1",
+      "features": [
+        26,
+        18
+      ],
+      "plan_fingerprint": "0a4ce7bdd94c88aba384d3f84b9b715f99e8db2be3da65eceb0e7a75c73e49e5",
+      "report_fingerprint": "701fafd2b2378d48b7c448d87fc7686ae0420d85fe3d69ea8c59416aa6f61579"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "256",
+        "real_numerators": [
+          63,
+          0,
+          0,
+          0,
+          -32
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 130,
+        "1": 382
+      },
+      "example": "curvature_u5_v-3",
+      "features": [
+        26,
+        10
+      ],
+      "plan_fingerprint": "891998ee0047cfcda769dcdc152c77dcf91cd0c3aac95bfb79a4dbdd8b16ca09",
+      "report_fingerprint": "252411310782b11f0500f5f81abc8941345f2d71b2a3373c7e8ffabaa7557925"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "256",
+        "real_numerators": [
+          -53,
+          0,
+          0,
+          0,
+          32
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 362,
+        "1": 150
+      },
+      "example": "curvature_u5_v3",
+      "features": [
+        26,
+        22
+      ],
+      "plan_fingerprint": "fc9cc6a0777ae50ecb2509db3be41027ce66c0fbfad6a523d0b7acf2b8545cb1",
+      "report_fingerprint": "06eff8f0bca2e561581a40298418b511633c003839a8f05c26a8a8413f4c512f"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          63,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 65,
+        "1": 447
+      },
+      "example": "curvature_u5_v-5",
+      "features": [
+        26,
+        6
+      ],
+      "plan_fingerprint": "0ebb8515c5e96fdebfd5f3f13eed788a33f7ffe35a14d4579cca53ef3975ed83",
+      "report_fingerprint": "3237f247393d41c3add6d3533bab07a645269f5cc5a503fb1a6e8ac43f9ff578"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "32",
+        "real_numerators": [
+          -3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 432,
+        "1": 80
+      },
+      "example": "curvature_u5_v5",
+      "features": [
+        26,
+        26
+      ],
+      "plan_fingerprint": "0687f1758188b811c247e32256ab597da86fdf654ead22617fede48407766c15",
+      "report_fingerprint": "e5e8ccfddf8fed226c49ec78dd41af73d4b58dfc3736e4b717c86152fcc72899"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          217,
+          0,
+          0,
+          0,
+          -64,
+          0,
+          0,
+          0,
+          -64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 39,
+        "1": 473
+      },
+      "example": "curvature_u5_v-7",
+      "features": [
+        26,
+        2
+      ],
+      "plan_fingerprint": "434d48148959e4be7e0a48500924c185eb9f5ca2a1d6d624f098997825266352",
+      "report_fingerprint": "d4eeb6d9f2633a1d97a4d266c835eb6ff1e647b632394115f3926d31763a3b98"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "256",
+        "real_numerators": [
+          107,
+          0,
+          0,
+          0,
+          -32,
+          0,
+          0,
+          0,
+          -32
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 470,
+        "1": 42
+      },
+      "example": "curvature_u5_v7",
+      "features": [
+        26,
+        30
+      ],
+      "plan_fingerprint": "7ffb38b997899ab348533c564c1b6d176cec476de992a8a22f83e77f00496590",
+      "report_fingerprint": "f5bc30a49b357ad78836ac22d5e99bf4f5bc21fb30cde4a26430e1594f28ccd5"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          55,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 311,
+        "1": 201
+      },
+      "example": "curvature_u-7_v-1",
+      "features": [
+        2,
+        14
+      ],
+      "plan_fingerprint": "9e1bf15255c51bc8b4f3558dd76c5a6d073ad0344c36db6983ae528206d73693",
+      "report_fingerprint": "445b88f9fd57b4d0b3b7332c14f78c59d762e2d8d4ea776d84bc19623664ba49"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          51,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 205,
+        "1": 307
+      },
+      "example": "curvature_u-7_v1",
+      "features": [
+        2,
+        18
+      ],
+      "plan_fingerprint": "df5bbc22f1e7cb96f3a9eedfd7bbe52048d9cc2dad6e92f391c9f1ce19d437c1",
+      "report_fingerprint": "c1869c479557ddedd1896080a954dd5cd081c8d741cf2972d30f07e08a06d9d7"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          153,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -64,
+          0,
+          0,
+          0,
+          -64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 409,
+        "1": 103
+      },
+      "example": "curvature_u-7_v-3",
+      "features": [
+        2,
+        10
+      ],
+      "plan_fingerprint": "bdda303bc587e489b487a05830f0e536710d7176b09b97e78ec0222390b214ce",
+      "report_fingerprint": "d7c3bb62f7b823eb91d2c9b697014eb57f9d62d64be3944ce044ca6df16806a3"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          -125,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          64,
+          0,
+          0,
+          0,
+          64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 131,
+        "1": 381
+      },
+      "example": "curvature_u-7_v3",
+      "features": [
+        2,
+        22
+      ],
+      "plan_fingerprint": "407d3f2e0cb2fc5f03fbc8b7b9d40a0c50a33d9a0c82d94de8a758c3b78bf40d",
+      "report_fingerprint": "f209302d1b25c165e64bed6fb2003d9b2458e5dd1a8ecb57c19048d02e1cf215"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          -205,
+          0,
+          0,
+          0,
+          64,
+          0,
+          0,
+          0,
+          64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 461,
+        "1": 51
+      },
+      "example": "curvature_u-7_v-5",
+      "features": [
+        2,
+        6
+      ],
+      "plan_fingerprint": "384ac097565e71979bf32e5285777286a104ab3c43e6bbb3e6c09932a0c48604",
+      "report_fingerprint": "f9c53c82721f9b908a6cf26fc92cf30d6023f0df6deb657fc0ad9648f2f92331"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          211,
+          0,
+          0,
+          0,
+          -64,
+          0,
+          0,
+          0,
+          -64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 45,
+        "1": 467
+      },
+      "example": "curvature_u-7_v5",
+      "features": [
+        2,
+        26
+      ],
+      "plan_fingerprint": "85ad2797c30ce18cd9d562e7af26ca7cce2e2ae6ccb7df6c73939acc4fd887b7",
+      "report_fingerprint": "0168ce35b3d6e99e656139887cac5c367e31b92867c2b342bfd29519340b9309"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          -117,
+          0,
+          0,
+          0,
+          64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 501,
+        "1": 11
+      },
+      "example": "curvature_u-7_v-7",
+      "features": [
+        2,
+        2
+      ],
+      "plan_fingerprint": "3eeb43f168a62169e3e54c3849050dc479a6b1c557b1d0b36905a9ecf59e2c84",
+      "report_fingerprint": "586456c08c2492b5990e8d1ce574ca3e524ce6f745930261f518f927659867cd"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "256",
+        "real_numerators": [
+          -59,
+          0,
+          0,
+          0,
+          32
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 10,
+        "1": 502
+      },
+      "example": "curvature_u-7_v7",
+      "features": [
+        2,
+        30
+      ],
+      "plan_fingerprint": "2e1d113ac0389e9359bc80c1a830a94fdb0ef4ba6748ed8cae0289d3d56bc2ba",
+      "report_fingerprint": "0ff0b8c47c614620fd7ab8368e3a12a656a4af0d282942c0c0741b18d8c83b0f"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          73,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 183,
+        "1": 329
+      },
+      "example": "curvature_u7_v-1",
+      "features": [
+        30,
+        14
+      ],
+      "plan_fingerprint": "8ba99e35c5da40ded0e744fcf13eaac541148319d826f7f44efcd8b8b7f4a3ce",
+      "report_fingerprint": "2b7177004d56c47ce18aefdc4def7a8e7524db9b120fec9b065fe51c5b3f9237"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          53,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 309,
+        "1": 203
+      },
+      "example": "curvature_u7_v1",
+      "features": [
+        30,
+        18
+      ],
+      "plan_fingerprint": "804bf982e454542e099e48053dc907214d04a02a9580022d93d520908f3a75b0",
+      "report_fingerprint": "a58ff83003d6dee81ba3ae335f4d08346a94dfe9c773291df410fd3b174dd7b1"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "128",
+        "real_numerators": [
+          37,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -16,
+          0,
+          0,
+          0,
+          -16
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 108,
+        "1": 404
+      },
+      "example": "curvature_u7_v-3",
+      "features": [
+        30,
+        10
+      ],
+      "plan_fingerprint": "6e802531b9905a829eed88af602a315a7649d2bb6a9300c37b78b4a2e0ca5c03",
+      "report_fingerprint": "2c75adf43cb00bba7cf92dca1661c007ac8bba6a745141fc1a758f8f8842a62b"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "256",
+        "real_numerators": [
+          79,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -32,
+          0,
+          0,
+          0,
+          -32
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 414,
+        "1": 98
+      },
+      "example": "curvature_u7_v3",
+      "features": [
+        30,
+        22
+      ],
+      "plan_fingerprint": "bbb60c876b35f138e0bfc22681f380ad64a7329368eb455b56553fc52b81ee41",
+      "report_fingerprint": "deb570de2ddfadc2e8a3bca3fc1d831d2f3074eb9308b8d502b0d0b860b20ac3"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "64",
+        "real_numerators": [
+          -25,
+          0,
+          0,
+          0,
+          8,
+          0,
+          0,
+          0,
+          8
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 56,
+        "1": 456
+      },
+      "example": "curvature_u7_v-5",
+      "features": [
+        30,
+        6
+      ],
+      "plan_fingerprint": "7cd420cc39156530def1855324b5604c4d29954a30a3e6d12adc1da15875a9cb",
+      "report_fingerprint": "eacdfbf1a0de57cb3ae501bbc721784ef019df906bd1dac11e2eb2d43b488d6a"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "64",
+        "real_numerators": [
+          -25,
+          0,
+          0,
+          0,
+          8,
+          0,
+          0,
+          0,
+          8
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 456,
+        "1": 56
+      },
+      "example": "curvature_u7_v5",
+      "features": [
+        30,
+        26
+      ],
+      "plan_fingerprint": "7170dc9f6f67d2c577e5a427bc096de7d4a665f2cf1415295344015964468ce9",
+      "report_fingerprint": "2336e64e7f06b57bc749b0bcd12caede32c7e47445ce7045cb710eae246f64ff"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "256",
+        "real_numerators": [
+          61,
+          0,
+          0,
+          0,
+          -32
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 6,
+        "1": 506
+      },
+      "example": "curvature_u7_v-7",
+      "features": [
+        30,
+        2
+      ],
+      "plan_fingerprint": "89d12e3e77e174ca57ae971273b42069d7045484871c666fbfdbc3b695e114d3",
+      "report_fingerprint": "0c56e2e07994431349f7ff86d0019c6fd61ef5d6830efe5efbce41d15e9f7702"
+    },
+    {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "512",
+        "real_numerators": [
+          -111,
+          0,
+          0,
+          0,
+          64
+        ]
+      },
+      "classification": "RECOGNITION",
+      "counts": {
+        "0": 495,
+        "1": 17
+      },
+      "example": "curvature_u7_v7",
+      "features": [
+        30,
+        30
+      ],
+      "plan_fingerprint": "19ef4726fd2cd4e0aa8e6a4f92a705750a5cdb095e0c34f4c3babf227a2a68dd",
+      "report_fingerprint": "aaee2aa5fc45e6819a43957b5ef83ea4e3bd577a6f28ddbbe17bee28ee0af27e"
+    }
+  ],
+  "classifications": {
+    "RECOGNITION": 64
+  },
+  "evidence_class": "SYNTHETIC_ACQUISITION_QUALIFICATION",
+  "exact_replay_cases": 64,
+  "hardware_submissions": 0,
+  "model_fingerprint": "e1d2389394de1274736c7b35eaade1cec59461090427c229d8613cdd2ba2b815",
+  "python": "3.12.14",
+  "rejected_controls": [
+    {
+      "changed_field": "program_sha256",
+      "reason": "acquisition program_sha256 mismatch"
+    },
+    {
+      "changed_field": "shots",
+      "reason": "result shot count differs from the planned unconditional shots"
+    },
+    {
+      "changed_field": "origin",
+      "reason": "acquisition origin differs from the frozen binding"
+    },
+    {
+      "changed_field": "completed_at",
+      "reason": "acquisition is outside the frozen calibration validity window"
+    },
+    {
+      "changed_field": "counts",
+      "reason": "raw counts must sum to unconditional shots without postselection"
+    }
+  ],
+  "representative_reports": {
+    "deliberate_residue": {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "100",
+        "real_numerators": [
+          21
+        ]
+      },
+      "absolute_error_display": {
+        "decimal": "0.21000000000000000",
+        "decimal_enclosure": {
+          "lower": "0.2100000000000000",
+          "maximum_absolute_display_error": "0",
+          "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+          "upper": "0.2100000000000000"
+        },
+        "exact": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "100",
+          "real_numerators": [
+            21
+          ]
+        },
+        "expression": "rational coefficients in the declared zeta_64 power basis"
+      },
+      "acquisition": {
+        "backend": "synthetic-three-wire-line",
+        "binding_fingerprint": "2cd5e2745a305b903897dd6f5c5931fbc32203a8f96067ec845e26540db42237",
+        "completed_at": "2026-11-12T01:00:01Z",
+        "counts": {
+          "0": 21,
+          "1": 79
+        },
+        "job_id": "synthetic-acquisition-79",
+        "origin": "synthetic",
+        "plan_fingerprint": "d02120282ddc5c408f55a3dca38fa638ee8a792a784b24e4753b640b0c1442af",
+        "program_sha256": "069e6954e4041f84fd4d9102d333d93553f04ddab1809f2aad678d095861afb5",
+        "provider": "nrqc-offline-qualification",
+        "schema": "nrqc-acquisition-result-v1",
+        "shots": 100,
+        "source_sha256": "49fa70066919d9c8489262d3f3efb4e08b5b2d980246ac26add192fef4323b7c",
+        "started_at": "2026-11-12T01:00:00Z"
+      },
+      "bridge_payload": {
+        "backend": "synthetic-three-wire-line",
+        "expected_model": {
+          "distribution": {
+            "0": 0.0,
+            "1": 1.0
+          },
+          "metadata": {
+            "floating_bridge_view": true,
+            "probability_one_exact": {
+              "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+              "denominator": "1",
+              "real_numerators": [
+                1
+              ]
+            },
+            "scope": "raw Z-readout marginal absolute probability error"
+          },
+          "model_id": "5140501a72ba63620298a525e589b7ed8d4aa96a2174c881c5e90c130decfd4a",
+          "model_type": "nrqc_saved_model_Z_marginal_v1",
+          "tolerance": 0.1
+        },
+        "metadata": {
+          "evidence_origin": "synthetic",
+          "exact_classification_in": "nrqc-model-observation-v1",
+          "hardware_submissions": 0,
+          "plan_fingerprint": "d02120282ddc5c408f55a3dca38fa638ee8a792a784b24e4753b640b0c1442af",
+          "source_authentication": "not_performed",
+          "source_sha256": "49fa70066919d9c8489262d3f3efb4e08b5b2d980246ac26add192fef4323b7c"
+        },
+        "observed": {
+          "0": 21,
+          "1": 79
+        },
+        "phase": {
+          "binding": {
+            "backend": "synthetic-three-wire-line",
+            "calibration": {
+              "calibration_id": "synthetic-fixture-20261112",
+              "captured_at": "2026-11-12T00:00:00Z",
+              "source_sha256": "a0fc5e1701db0ea226bf635729f03aa3f2d380ea65f952e9f77822ab18124b5f",
+              "valid_until": "2026-11-13T00:00:00Z"
+            },
+            "device_fingerprint": "7af1ae37bf6eb1d85b40ca4a60d930e3f2410dae11a069ff23d57e4d8fcb851d",
+            "origin": "synthetic",
+            "provider": "nrqc-offline-qualification",
+            "schema": "nrqc-acquisition-binding-v1"
+          },
+          "completed_at": "2026-11-12T01:00:01Z",
+          "job_id": "synthetic-acquisition-79",
+          "started_at": "2026-11-12T01:00:00Z"
+        },
+        "root": {
+          "feature_view": "first_layer",
+          "features": [
+            0,
+            32
+          ],
+          "model_fingerprint": "e1d2389394de1274736c7b35eaade1cec59461090427c229d8613cdd2ba2b815",
+          "prediction_fingerprint": "5140501a72ba63620298a525e589b7ed8d4aa96a2174c881c5e90c130decfd4a"
+        },
+        "shots": 100,
+        "template": {
+          "measure_wires": [
+            1
+          ],
+          "plan_fingerprint": "d02120282ddc5c408f55a3dca38fa638ee8a792a784b24e4753b640b0c1442af",
+          "program_sha256": "069e6954e4041f84fd4d9102d333d93553f04ddab1809f2aad678d095861afb5",
+          "readout_classical_bit": 0
+        }
+      },
+      "classification": "ACTIONABLE_RESIDUE",
+      "evidence_class": "SYNTHETIC_OBSERVATION",
+      "exact_tolerance_decision": true,
+      "expected_probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "1",
+        "real_numerators": [
+          1
+        ]
+      },
+      "fingerprint": "b058559526a9b71820f82dd044a1c6b98562f02b2c12ef57026592cfe6de797f",
+      "hardware_submissions": 0,
+      "marginal_counts": {
+        "0": 21,
+        "1": 79
+      },
+      "observed_probability_one": {
+        "denominator": 100,
+        "numerator": 79
+      },
+      "plan": {
+        "acceptance_policy": "fixed absolute engineering tolerance; no significance claim",
+        "binding": {
+          "backend": "synthetic-three-wire-line",
+          "calibration": {
+            "calibration_id": "synthetic-fixture-20261112",
+            "captured_at": "2026-11-12T00:00:00Z",
+            "source_sha256": "a0fc5e1701db0ea226bf635729f03aa3f2d380ea65f952e9f77822ab18124b5f",
+            "valid_until": "2026-11-13T00:00:00Z"
+          },
+          "device_fingerprint": "7af1ae37bf6eb1d85b40ca4a60d930e3f2410dae11a069ff23d57e4d8fcb851d",
+          "origin": "synthetic",
+          "provider": "nrqc-offline-qualification",
+          "schema": "nrqc-acquisition-binding-v1"
+        },
+        "counts_bit_order": "c[width-1]...c[0], most significant bit on the left",
+        "evidence_class": "OFFLINE_EXPERIMENT_PLAN",
+        "fingerprint": "d02120282ddc5c408f55a3dca38fa638ee8a792a784b24e4753b640b0c1442af",
+        "hardware_submissions": 0,
+        "measure_wires": [
+          1
+        ],
+        "measured_openqasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[3];\ncreg c[1];\nsdg q[0];\nh q[0];\nu1(2*pi/2) q[0];\nh q[0];\ns q[0];\nsdg q[2];\nh q[2];\nu1(2*pi/2) q[2];\nh q[2];\ns q[2];\nsdg q[1];\nh q[1];\nu1(2*pi/2) q[1];\nh q[1];\ns q[1];\ncx q[0],q[1];\ncx q[2],q[1];\nmeasure q[1] -> c[0];\n",
+        "prediction": {
+          "calculator_request": {
+            "backend": "cyclotomic_pow2",
+            "limits": {
+              "max_branches": 16,
+              "max_work": 998051
+            },
+            "n_qubits": 3,
+            "operations": [
+              [
+                "sdg",
+                [
+                  0
+                ]
+              ],
+              [
+                "h",
+                [
+                  0
+                ]
+              ],
+              [
+                "p2",
+                [
+                  0
+                ]
+              ],
+              [
+                "h",
+                [
+                  0
+                ]
+              ],
+              [
+                "s",
+                [
+                  0
+                ]
+              ],
+              [
+                "sdg",
+                [
+                  2
+                ]
+              ],
+              [
+                "h",
+                [
+                  2
+                ]
+              ],
+              [
+                "p2",
+                [
+                  2
+                ]
+              ],
+              [
+                "h",
+                [
+                  2
+                ]
+              ],
+              [
+                "s",
+                [
+                  2
+                ]
+              ],
+              [
+                "sdg",
+                [
+                  1
+                ]
+              ],
+              [
+                "h",
+                [
+                  1
+                ]
+              ],
+              [
+                "p2",
+                [
+                  1
+                ]
+              ],
+              [
+                "h",
+                [
+                  1
+                ]
+              ],
+              [
+                "s",
+                [
+                  1
+                ]
+              ],
+              [
+                "cx",
+                [
+                  0,
+                  1
+                ]
+              ],
+              [
+                "cx",
+                [
+                  2,
+                  1
+                ]
+              ]
+            ],
+            "queries": [
+              {
+                "id": "probability_one",
+                "kind": "probability",
+                "outcomes": {
+                  "1": 1
+                }
+              }
+            ],
+            "schema": "nrqc-calculator-v1"
+          },
+          "device": {
+            "coupling_map": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "max_gates": 1024,
+            "n_qubits": 3,
+            "name": "declared-software-three-wire-line",
+            "native_gates": [
+              "h",
+              "s",
+              "sdg",
+              "cx",
+              "p2",
+              "p4",
+              "p8",
+              "p16",
+              "p32",
+              "p64"
+            ],
+            "schema": "nrqc-device-profile-v1"
+          },
+          "evidence_class": "LOCAL_IDEAL_CALCULATION",
+          "feature_view": "first_layer",
+          "features": [
+            0,
+            32
+          ],
+          "fingerprint": "5140501a72ba63620298a525e589b7ed8d4aa96a2174c881c5e90c130decfd4a",
+          "hardware_jobs": 0,
+          "mapping": {
+            "final_layout": {
+              "0": 0,
+              "1": 2,
+              "3": 1
+            },
+            "initial_layout": {
+              "0": 0,
+              "1": 2,
+              "3": 1
+            },
+            "native_trace": [
+              {
+                "native_start": 0,
+                "native_stop": 1,
+                "source_index": 0
+              },
+              {
+                "native_start": 1,
+                "native_stop": 2,
+                "source_index": 1
+              },
+              {
+                "native_start": 2,
+                "native_stop": 3,
+                "source_index": 2
+              },
+              {
+                "native_start": 3,
+                "native_stop": 4,
+                "source_index": 3
+              },
+              {
+                "native_start": 4,
+                "native_stop": 5,
+                "source_index": 4
+              },
+              {
+                "native_start": 5,
+                "native_stop": 6,
+                "source_index": 5
+              },
+              {
+                "native_start": 6,
+                "native_stop": 7,
+                "source_index": 6
+              },
+              {
+                "native_start": 7,
+                "native_stop": 8,
+                "source_index": 7
+              },
+              {
+                "native_start": 8,
+                "native_stop": 9,
+                "source_index": 8
+              },
+              {
+                "native_start": 9,
+                "native_stop": 10,
+                "source_index": 9
+              },
+              {
+                "native_start": 10,
+                "native_stop": 11,
+                "source_index": 10
+              },
+              {
+                "native_start": 11,
+                "native_stop": 12,
+                "source_index": 11
+              },
+              {
+                "native_start": 12,
+                "native_stop": 13,
+                "source_index": 12
+              },
+              {
+                "native_start": 13,
+                "native_stop": 14,
+                "source_index": 13
+              },
+              {
+                "native_start": 14,
+                "native_stop": 15,
+                "source_index": 14
+              },
+              {
+                "native_start": 15,
+                "native_stop": 16,
+                "source_index": 15
+              },
+              {
+                "native_start": 16,
+                "native_stop": 17,
+                "source_index": 16
+              }
+            ],
+            "omitted_logical_wires_initial_zero": [
+              2
+            ],
+            "placement_optimality_certified": false,
+            "profile": {
+              "coupling_map": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  2,
+                  1
+                ]
+              ],
+              "max_gates": 1024,
+              "n_qubits": 3,
+              "name": "declared-software-three-wire-line",
+              "native_gates": [
+                "h",
+                "s",
+                "sdg",
+                "cx",
+                "p2",
+                "p4",
+                "p8",
+                "p16",
+                "p32",
+                "p64"
+              ],
+              "schema": "nrqc-device-profile-v1"
+            }
+          },
+          "model": {
+            "architecture": "four-qubit-five-ry-directed-cx-v1",
+            "entanglers": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "execution": "EXACT_CLASSICAL_SIMULATION",
+            "feature_view": "first_layer",
+            "fingerprint": "e1d2389394de1274736c7b35eaade1cec59461090427c229d8613cdd2ba2b815",
+            "hardware_authorized": false,
+            "phase_steps": [
+              32,
+              0,
+              0,
+              32,
+              0
+            ],
+            "phase_unit": "pi/32",
+            "proof_status": "NOT_A_MATHEMATICAL_PROOF",
+            "schema": "native-learning-topology-model-v1",
+            "training_sha256": "92b0155d54dbbd4e08edd4ef6d5b91df1b1c0c4cf50f66256d8d77d025074cd2"
+          },
+          "openqasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[3];\nsdg q[0];\nh q[0];\nu1(2*pi/2) q[0];\nh q[0];\ns q[0];\nsdg q[2];\nh q[2];\nu1(2*pi/2) q[2];\nh q[2];\ns q[2];\nsdg q[1];\nh q[1];\nu1(2*pi/2) q[1];\nh q[1];\ns q[1];\ncx q[0],q[1];\ncx q[2],q[1];\n",
+          "predicted": 1,
+          "probability_one": {
+            "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+            "denominator": "1",
+            "real_numerators": [
+              1
+            ]
+          },
+          "resources": {
+            "exact_work": 2026,
+            "max_work": 1000000,
+            "native_gates": 17,
+            "source_gates": 17
+          },
+          "schema": "nrqc-model-prediction-v1",
+          "verification": {
+            "basis_inputs_checked": 8,
+            "qasm_exact_active_unitary_roundtrip": true,
+            "scope": "full active-register unitary, omitted wires initialized to zero",
+            "status": "verified"
+          }
+        },
+        "program_sha256": "069e6954e4041f84fd4d9102d333d93553f04ddab1809f2aad678d095861afb5",
+        "readout_classical_bit": 0,
+        "run_id": "boundary-control",
+        "schema": "nrqc-model-experiment-plan-v1",
+        "shots": 100,
+        "statistic": "raw Z-readout marginal absolute probability error",
+        "tolerance": {
+          "denominator": 10,
+          "numerator": 1
+        }
+      },
+      "schema": "nrqc-model-observation-v1",
+      "scope": "unconditional raw Z marginal; no readout mitigation or state tomography",
+      "source_authentication": "not_performed"
+    },
+    "sampled": {
+      "absolute_error": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "128",
+        "real_numerators": [
+          33,
+          0,
+          0,
+          0,
+          -16
+        ]
+      },
+      "absolute_error_display": {
+        "decimal": "0.02684261687217835",
+        "decimal_enclosure": {
+          "lower": "0.0268426168721783",
+          "maximum_absolute_display_error": "1/20000000000000000",
+          "method": "Machin pi enclosure, alternating Taylor cosine bounds and outward rational rounding",
+          "upper": "0.0268426168721784"
+        },
+        "exact": {
+          "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+          "denominator": "128",
+          "real_numerators": [
+            33,
+            0,
+            0,
+            0,
+            -16
+          ]
+        },
+        "expression": "rational coefficients in the declared zeta_64 power basis"
+      },
+      "acquisition": {
+        "backend": "synthetic-three-wire-line",
+        "binding_fingerprint": "2cd5e2745a305b903897dd6f5c5931fbc32203a8f96067ec845e26540db42237",
+        "completed_at": "2026-11-12T01:00:01Z",
+        "counts": {
+          "0": 252,
+          "1": 260
+        },
+        "job_id": "synthetic-acquisition-0",
+        "origin": "synthetic",
+        "plan_fingerprint": "f0f702d851f4021c15d1b8a9b6afa0b6828ec99e1f2f3650ba18aac3e4771256",
+        "program_sha256": "5f2b3456c79bf056bba383e26b0df2d62167fdf02a6a817993bf3797d31b94b1",
+        "provider": "nrqc-offline-qualification",
+        "schema": "nrqc-acquisition-result-v1",
+        "shots": 512,
+        "source_sha256": "9d0ef2072c7f1c0f6fe52da59c71e5fb149bf56816dc2c9a182bac0ed1ef2963",
+        "started_at": "2026-11-12T01:00:00Z"
+      },
+      "bridge_payload": {
+        "backend": "synthetic-three-wire-line",
+        "expected_model": {
+          "distribution": {
+            "0": 0.5190301168721783,
+            "1": 0.4809698831278217
+          },
+          "metadata": {
+            "floating_bridge_view": true,
+            "probability_one_exact": {
+              "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+              "denominator": "8",
+              "real_numerators": [
+                2,
+                0,
+                0,
+                0,
+                1
+              ]
+            },
+            "scope": "raw Z-readout marginal absolute probability error"
+          },
+          "model_id": "dc531dae15289d2aa417007e23f0b08edf6c6fb81f5c9874dbecbe2082ac7c49",
+          "model_type": "nrqc_saved_model_Z_marginal_v1",
+          "tolerance": 0.125
+        },
+        "metadata": {
+          "evidence_origin": "synthetic",
+          "exact_classification_in": "nrqc-model-observation-v1",
+          "hardware_submissions": 0,
+          "plan_fingerprint": "f0f702d851f4021c15d1b8a9b6afa0b6828ec99e1f2f3650ba18aac3e4771256",
+          "source_authentication": "not_performed",
+          "source_sha256": "9d0ef2072c7f1c0f6fe52da59c71e5fb149bf56816dc2c9a182bac0ed1ef2963"
+        },
+        "observed": {
+          "0": 252,
+          "1": 260
+        },
+        "phase": {
+          "binding": {
+            "backend": "synthetic-three-wire-line",
+            "calibration": {
+              "calibration_id": "synthetic-fixture-20261112",
+              "captured_at": "2026-11-12T00:00:00Z",
+              "source_sha256": "a0fc5e1701db0ea226bf635729f03aa3f2d380ea65f952e9f77822ab18124b5f",
+              "valid_until": "2026-11-13T00:00:00Z"
+            },
+            "device_fingerprint": "7af1ae37bf6eb1d85b40ca4a60d930e3f2410dae11a069ff23d57e4d8fcb851d",
+            "origin": "synthetic",
+            "provider": "nrqc-offline-qualification",
+            "schema": "nrqc-acquisition-binding-v1"
+          },
+          "completed_at": "2026-11-12T01:00:01Z",
+          "job_id": "synthetic-acquisition-0",
+          "started_at": "2026-11-12T01:00:00Z"
+        },
+        "root": {
+          "feature_view": "first_layer",
+          "features": [
+            14,
+            14
+          ],
+          "model_fingerprint": "e1d2389394de1274736c7b35eaade1cec59461090427c229d8613cdd2ba2b815",
+          "prediction_fingerprint": "dc531dae15289d2aa417007e23f0b08edf6c6fb81f5c9874dbecbe2082ac7c49"
+        },
+        "shots": 512,
+        "template": {
+          "measure_wires": [
+            1
+          ],
+          "plan_fingerprint": "f0f702d851f4021c15d1b8a9b6afa0b6828ec99e1f2f3650ba18aac3e4771256",
+          "program_sha256": "5f2b3456c79bf056bba383e26b0df2d62167fdf02a6a817993bf3797d31b94b1",
+          "readout_classical_bit": 0
+        }
+      },
+      "classification": "RECOGNITION",
+      "evidence_class": "SYNTHETIC_OBSERVATION",
+      "exact_tolerance_decision": true,
+      "expected_probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "fingerprint": "f0a5a4d16ee1d769618bf2d7c14360991ec2284278aa87fa1eb332351a6ad46b",
+      "hardware_submissions": 0,
+      "marginal_counts": {
+        "0": 252,
+        "1": 260
+      },
+      "observed_probability_one": {
+        "denominator": 128,
+        "numerator": 65
+      },
+      "plan": {
+        "acceptance_policy": "fixed absolute engineering tolerance; no significance claim",
+        "binding": {
+          "backend": "synthetic-three-wire-line",
+          "calibration": {
+            "calibration_id": "synthetic-fixture-20261112",
+            "captured_at": "2026-11-12T00:00:00Z",
+            "source_sha256": "a0fc5e1701db0ea226bf635729f03aa3f2d380ea65f952e9f77822ab18124b5f",
+            "valid_until": "2026-11-13T00:00:00Z"
+          },
+          "device_fingerprint": "7af1ae37bf6eb1d85b40ca4a60d930e3f2410dae11a069ff23d57e4d8fcb851d",
+          "origin": "synthetic",
+          "provider": "nrqc-offline-qualification",
+          "schema": "nrqc-acquisition-binding-v1"
+        },
+        "counts_bit_order": "c[width-1]...c[0], most significant bit on the left",
+        "evidence_class": "OFFLINE_EXPERIMENT_PLAN",
+        "fingerprint": "f0f702d851f4021c15d1b8a9b6afa0b6828ec99e1f2f3650ba18aac3e4771256",
+        "hardware_submissions": 0,
+        "measure_wires": [
+          1
+        ],
+        "measured_openqasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[3];\ncreg c[1];\nsdg q[0];\nh q[0];\nu1(2*pi/32) q[0];\nu1(2*pi/16) q[0];\nu1(2*pi/8) q[0];\nu1(2*pi/2) q[0];\nh q[0];\ns q[0];\nsdg q[2];\nh q[2];\nu1(2*pi/32) q[2];\nu1(2*pi/16) q[2];\nu1(2*pi/8) q[2];\nh q[2];\ns q[2];\nsdg q[1];\nh q[1];\nu1(2*pi/2) q[1];\nh q[1];\ns q[1];\ncx q[0],q[1];\ncx q[2],q[1];\nmeasure q[1] -> c[0];\n",
+        "prediction": {
+          "calculator_request": {
+            "backend": "cyclotomic_pow2",
+            "limits": {
+              "max_branches": 16,
+              "max_work": 995147
+            },
+            "n_qubits": 3,
+            "operations": [
+              [
+                "sdg",
+                [
+                  0
+                ]
+              ],
+              [
+                "h",
+                [
+                  0
+                ]
+              ],
+              [
+                "p32",
+                [
+                  0
+                ]
+              ],
+              [
+                "p16",
+                [
+                  0
+                ]
+              ],
+              [
+                "p8",
+                [
+                  0
+                ]
+              ],
+              [
+                "p2",
+                [
+                  0
+                ]
+              ],
+              [
+                "h",
+                [
+                  0
+                ]
+              ],
+              [
+                "s",
+                [
+                  0
+                ]
+              ],
+              [
+                "sdg",
+                [
+                  2
+                ]
+              ],
+              [
+                "h",
+                [
+                  2
+                ]
+              ],
+              [
+                "p32",
+                [
+                  2
+                ]
+              ],
+              [
+                "p16",
+                [
+                  2
+                ]
+              ],
+              [
+                "p8",
+                [
+                  2
+                ]
+              ],
+              [
+                "h",
+                [
+                  2
+                ]
+              ],
+              [
+                "s",
+                [
+                  2
+                ]
+              ],
+              [
+                "sdg",
+                [
+                  1
+                ]
+              ],
+              [
+                "h",
+                [
+                  1
+                ]
+              ],
+              [
+                "p2",
+                [
+                  1
+                ]
+              ],
+              [
+                "h",
+                [
+                  1
+                ]
+              ],
+              [
+                "s",
+                [
+                  1
+                ]
+              ],
+              [
+                "cx",
+                [
+                  0,
+                  1
+                ]
+              ],
+              [
+                "cx",
+                [
+                  2,
+                  1
+                ]
+              ]
+            ],
+            "queries": [
+              {
+                "id": "probability_one",
+                "kind": "probability",
+                "outcomes": {
+                  "1": 1
+                }
+              }
+            ],
+            "schema": "nrqc-calculator-v1"
+          },
+          "device": {
+            "coupling_map": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "max_gates": 1024,
+            "n_qubits": 3,
+            "name": "declared-software-three-wire-line",
+            "native_gates": [
+              "h",
+              "s",
+              "sdg",
+              "cx",
+              "p2",
+              "p4",
+              "p8",
+              "p16",
+              "p32",
+              "p64"
+            ],
+            "schema": "nrqc-device-profile-v1"
+          },
+          "evidence_class": "LOCAL_IDEAL_CALCULATION",
+          "feature_view": "first_layer",
+          "features": [
+            14,
+            14
+          ],
+          "fingerprint": "dc531dae15289d2aa417007e23f0b08edf6c6fb81f5c9874dbecbe2082ac7c49",
+          "hardware_jobs": 0,
+          "mapping": {
+            "final_layout": {
+              "0": 0,
+              "1": 2,
+              "3": 1
+            },
+            "initial_layout": {
+              "0": 0,
+              "1": 2,
+              "3": 1
+            },
+            "native_trace": [
+              {
+                "native_start": 0,
+                "native_stop": 1,
+                "source_index": 0
+              },
+              {
+                "native_start": 1,
+                "native_stop": 2,
+                "source_index": 1
+              },
+              {
+                "native_start": 2,
+                "native_stop": 3,
+                "source_index": 2
+              },
+              {
+                "native_start": 3,
+                "native_stop": 4,
+                "source_index": 3
+              },
+              {
+                "native_start": 4,
+                "native_stop": 5,
+                "source_index": 4
+              },
+              {
+                "native_start": 5,
+                "native_stop": 6,
+                "source_index": 5
+              },
+              {
+                "native_start": 6,
+                "native_stop": 7,
+                "source_index": 6
+              },
+              {
+                "native_start": 7,
+                "native_stop": 8,
+                "source_index": 7
+              },
+              {
+                "native_start": 8,
+                "native_stop": 9,
+                "source_index": 8
+              },
+              {
+                "native_start": 9,
+                "native_stop": 10,
+                "source_index": 9
+              },
+              {
+                "native_start": 10,
+                "native_stop": 11,
+                "source_index": 10
+              },
+              {
+                "native_start": 11,
+                "native_stop": 12,
+                "source_index": 11
+              },
+              {
+                "native_start": 12,
+                "native_stop": 13,
+                "source_index": 12
+              },
+              {
+                "native_start": 13,
+                "native_stop": 14,
+                "source_index": 13
+              },
+              {
+                "native_start": 14,
+                "native_stop": 15,
+                "source_index": 14
+              },
+              {
+                "native_start": 15,
+                "native_stop": 16,
+                "source_index": 15
+              },
+              {
+                "native_start": 16,
+                "native_stop": 17,
+                "source_index": 16
+              },
+              {
+                "native_start": 17,
+                "native_stop": 18,
+                "source_index": 17
+              },
+              {
+                "native_start": 18,
+                "native_stop": 19,
+                "source_index": 18
+              },
+              {
+                "native_start": 19,
+                "native_stop": 20,
+                "source_index": 19
+              },
+              {
+                "native_start": 20,
+                "native_stop": 21,
+                "source_index": 20
+              },
+              {
+                "native_start": 21,
+                "native_stop": 22,
+                "source_index": 21
+              }
+            ],
+            "omitted_logical_wires_initial_zero": [
+              2
+            ],
+            "placement_optimality_certified": false,
+            "profile": {
+              "coupling_map": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  2,
+                  1
+                ]
+              ],
+              "max_gates": 1024,
+              "n_qubits": 3,
+              "name": "declared-software-three-wire-line",
+              "native_gates": [
+                "h",
+                "s",
+                "sdg",
+                "cx",
+                "p2",
+                "p4",
+                "p8",
+                "p16",
+                "p32",
+                "p64"
+              ],
+              "schema": "nrqc-device-profile-v1"
+            }
+          },
+          "model": {
+            "architecture": "four-qubit-five-ry-directed-cx-v1",
+            "entanglers": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            "execution": "EXACT_CLASSICAL_SIMULATION",
+            "feature_view": "first_layer",
+            "fingerprint": "e1d2389394de1274736c7b35eaade1cec59461090427c229d8613cdd2ba2b815",
+            "hardware_authorized": false,
+            "phase_steps": [
+              32,
+              0,
+              0,
+              32,
+              0
+            ],
+            "phase_unit": "pi/32",
+            "proof_status": "NOT_A_MATHEMATICAL_PROOF",
+            "schema": "native-learning-topology-model-v1",
+            "training_sha256": "92b0155d54dbbd4e08edd4ef6d5b91df1b1c0c4cf50f66256d8d77d025074cd2"
+          },
+          "openqasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[3];\nsdg q[0];\nh q[0];\nu1(2*pi/32) q[0];\nu1(2*pi/16) q[0];\nu1(2*pi/8) q[0];\nu1(2*pi/2) q[0];\nh q[0];\ns q[0];\nsdg q[2];\nh q[2];\nu1(2*pi/32) q[2];\nu1(2*pi/16) q[2];\nu1(2*pi/8) q[2];\nh q[2];\ns q[2];\nsdg q[1];\nh q[1];\nu1(2*pi/2) q[1];\nh q[1];\ns q[1];\ncx q[0],q[1];\ncx q[2],q[1];\n",
+          "predicted": 0,
+          "probability_one": {
+            "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+            "denominator": "8",
+            "real_numerators": [
+              2,
+              0,
+              0,
+              0,
+              1
+            ]
+          },
+          "resources": {
+            "exact_work": 5050,
+            "max_work": 1000000,
+            "native_gates": 22,
+            "source_gates": 22
+          },
+          "schema": "nrqc-model-prediction-v1",
+          "verification": {
+            "basis_inputs_checked": 8,
+            "qasm_exact_active_unitary_roundtrip": true,
+            "scope": "full active-register unitary, omitted wires initialized to zero",
+            "status": "verified"
+          }
+        },
+        "program_sha256": "5f2b3456c79bf056bba383e26b0df2d62167fdf02a6a817993bf3797d31b94b1",
+        "readout_classical_bit": 0,
+        "run_id": "curvature_u-1_v-1",
+        "schema": "nrqc-model-experiment-plan-v1",
+        "shots": 512,
+        "statistic": "raw Z-readout marginal absolute probability error",
+        "tolerance": {
+          "denominator": 8,
+          "numerator": 1
+        }
+      },
+      "schema": "nrqc-model-observation-v1",
+      "scope": "unconditional raw Z marginal; no readout mitigation or state tomography",
+      "source_authentication": "not_performed"
+    }
+  },
+  "sampling": {
+    "method": "NumPy Generator.binomial",
+    "seed": 20261112,
+    "shots_per_case": 512,
+    "source": "independent NumPy state probabilities"
+  },
+  "schema": "nrqc-model-experiment-audit-v1",
+  "source_sha256": {
+    "benchmarks/model_experiment_audit.py": "0c763942182fb87bc473865d19bb0368e877398e3c765d31cd3bec2ed1b1bae0",
+    "benchmarks/model_runtime_audit.py": "40f482611ff0d1fd92e621b733036cc400d1e281437f122952d6fc3ede4b9127",
+    "native_relational_qc/__main__.py": "0096b6121b77ce8f1ea64ff977d5c4e53a9f47a28a48e21b31c58240b5bcfad6",
+    "native_relational_qc/learning/structure_model.json": "0dbf6c972d0f1a5b1e576a5b584930eafe55b41e08cc78d393e165dfbe864462",
+    "native_relational_qc/model_experiment.py": "a7240bfebc9dc79f268db477118373fe44c920afc4c3c7b6edc806e285f363e5",
+    "native_relational_qc/model_runtime.py": "eebd0ce5ae4a0857c2ecf5cbfa11b54f264dd51f91ce97cb638d8cc8d07b1a81",
+    "tests/test_model_experiment.py": "4c18355e20ba67a39c0cb400db4708bc8e17141b6f696e71a62a6250d2c2fd61"
+  }
+}

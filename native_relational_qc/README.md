@@ -21,6 +21,10 @@ nrqc check native_relational_qc/calculator_examples/bell.json
 nrqc calculate native_relational_qc/calculator_examples/bell.json
 nrqc certify --out certification.json
 nrqc observer-cycle --cycles 3
+nrqc synthesize native_relational_qc/calculator_examples/bell_goal.json
+nrqc learn-structure --task curvature --out structure-fit.json
+nrqc predict native_relational_qc/learning/structure_model.json --features 5 17 --view first_layer --device native_relational_qc/calculator_examples/three_wire_line.json --out model-run.json
+nrqc verify-prediction model-run.json
 ```
 
 For development: `pip install -e '.[test]'` and `python -m pytest -q`.
@@ -28,7 +32,80 @@ Use `.[test,qiskit]` for adapter tests, `.[benchmark]` for Aer MPS and Stim,
 and `.[cad]` for the optional layout checks. Current test results belong to
 CI/test logs, rather than a manually maintained test count.
 
+## Pāṇini vowel junctions on a quantum circuit
+
+Which pair of vowels could have produced the written sound **ī**? On the declared
+unaccented, continuous-speech domain, **i + i**, **i + ī**, **ī + i** and **ī + ī**
+all produce ī. The calculator can join a supplied pair or search the 16 original
+pairs for a given surface. The commands accept IAST and Devanāgarī.
+
+~~~bash
+nrqc panini-sandhi join ī i
+nrqc panini-sandhi search ई
+nrqc panini-sandhi search yu --qasm sandhi.qasm
+~~~
+
+| Left vowel | Right i | Right ī | Right u | Right ū |
+|---|---|---|---|---|
+| i | ī | ī | yu | yū |
+| ī | ī | ī | yu | yū |
+| u | vi | vī | ū | ū |
+| ū | vi | vī | ū | ū |
+
+This is a circuit implementation of a restricted part of two grammatical rules.
+With vowels of the same family, 6.1.101 supplies the single long vowel.
+With different families, 6.1.77 changes the left vowel to its corresponding
+glide and retains the right vowel. The framework's T80 supplies the long-vowel
+extension of the earlier T58 examples. Accent, word-specific exceptions and
+other vowel families are outside this input alphabet. [Pinned rule text](https://github.com/Parveen117/Recognition-Kernel-Framework/blob/7f185fadde6901097883baab507f7cbb273774ce/research/panini_grammar/SUTRAPATHA.tsv) · [T80 rule construction](https://github.com/Parveen117/Recognition-Kernel-Framework/blob/7f185fadde6901097883baab507f7cbb273774ce/theorum/80_paninian_instruction_format_theorem.md) · [University of Hyderabad sandhi tables](https://sanskrit.uohyd.ac.in/IOE-2024/Sandhi.pdf)
+
+The existing Boolean compiler builds a **seven-qubit reversible join** using
+three CX and two CCX gates. The four input bits retain the original left and
+right vowels. The three output bits receive the surface code by XOR, so the
+circuit is reversible even when several pairs print identically. In high-to-low
+order, the input bits are left family, left length, right family, right length
+(family i = 0, u = 1). On a zero output, the codes for ī, ū, vi, vī, yu and yū
+are respectively 000, 010, 100, 101, 110 and 111. Applying the inverse restores
+any previous output and preserves relative quantum phases. [Reversible compiler](REVERSIBLE_LOGIC.md)
+
+Reverse search starts with equal amplitudes for the 16 source pairs. It computes
+the surface, flips the sign on the requested surface, reverses the join and
+applies one Grover diffusion step to the source register. All three temporary
+surface bits return to zero. For four matching pairs the usual one-step
+probability $\sin^2(3\arcsin\sqrt{4/16})$ is 1. For two matches it is
+$25/32$. The report lists every input pair and its exact probability.
+
+| Requested surface | Matching inputs | Uniform starting probability | After one iteration |
+|---|---:|---:|---:|
+| ī or ū | 4 each | 1/4 | 1 |
+| vi, vī, yu or yū | 2 each | 1/8 | 25/32 |
+
+These are local ideal-circuit probabilities. A measured source pair is one
+possible origin of a supplied surface. The four-by-four table also solves the
+classical task directly. OpenQASM export writes the actual unmeasured gates,
+with q0 as the least significant input bit.
+
 ## Backend capabilities
+
+[Goal-directed circuit construction](CIRCUIT_SYNTHESIS.md) uses a bounded
+Pāṇini-inspired rule application to build a 1–4-qubit state-preparation
+circuit from independent Pauli stabilizers. It respects the admitted gate
+alphabet and directed coupling map, reuses proof-traced gate reductions,
+and verifies the target through the existing exact calculator. The output
+includes an executable calculator request and the circuit derivation.
+
+[Phase and structure training](STRUCTURE_LEARNING.md) extends the existing
+four-qubit classifier to a declared family of CX words. It trains native phase
+parameters on the same training split, retains exact readout eligibility steps,
+and selects by training loss followed by declared gate costs. The reproducible
+comparison freezes selection before held-out evaluation and reports raw-phase,
+fused-phase and searched-topology inference costs separately.
+
+[Saved-model execution](MODEL_RUNTIME.md) maps a checkpoint to a declared
+directed device profile, routes its CX gates, and emits an exact OpenQASM
+program plus a runnable calculator request. Active-register basis checks,
+prediction replay and a source-pinned deployment audit cover the handoff.
+[Finalization](FINALIZATION.md) records the software and measured-device work.
 
 [Repeated source cycles](OBSERVER_CYCLE.md) applies RKF SP1 to the existing
 rotation-and-preparation channel. `nrqc observer-cycle` derives its affine
@@ -146,6 +223,22 @@ checks supplied rational targets and returns a failing exit code on mismatch.
 The 2.8w figure is rounded at one operating point: the exact first-order term
 is (5/2)w plus the retained higher-order remainder. These results do not grant
 laboratory qualification or promote conditional source sectors into supplied photons.
+
+## Acquisition of saved-model results
+
+Use `nrqc experiment-plan` to freeze a model's measured circuit, then
+`nrqc observe-model` and `nrqc verify-observation` to validate recorded raw counts
+and replay an exact marginal comparison. See [MODEL_EXPERIMENT.md](MODEL_EXPERIMENT.md)
+for acquisition bindings, bit order, calibration validity and synthetic examples.
+Freeze repeated acquisitions with `nrqc campaign-plan`, then use
+`nrqc campaign-report` and `nrqc verify-campaign-report` for complete accounting
+of successful, failed and missing runs. See [EXPERIMENT_CAMPAIGN.md](EXPERIMENT_CAMPAIGN.md).
+The [controller handoff](CONTROLLER_HANDOFF.md) specifies the remaining measured-device boundary.
+Use `nrqc loss-plan`, `nrqc import-loss-events` and `nrqc verify-loss-observation`
+for explicit retained herald/rejection events. [LOSS_ACQUISITION.md](LOSS_ACQUISITION.md)
+describes the conditional instrument reference and separate yield/readout gates.
+`nrqc loss-campaign-plan` and `nrqc loss-campaign-report` extend that accounting
+to [fixed repeated-loss campaigns](LOSS_CAMPAIGN.md), including failed and missing runs.
 
 ## Evidence and limits
 

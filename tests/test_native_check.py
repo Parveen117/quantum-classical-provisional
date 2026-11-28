@@ -81,17 +81,21 @@ class CheckTests(unittest.TestCase):
     def test_shipped_examples_are_validated_by_their_declared_schema(self):
         from native_relational_qc.observer_tracking import validate_policy as validate_phase_policy
         from native_relational_qc.observer_state import validate_policy as validate_state_policy
-        policy_schemas = {'nrqc-observer-tracking-policy-v1': validate_phase_policy,
-                          'nrqc-observer-state-policy-v1': validate_state_policy}
+        from native_relational_qc.circuit_synthesis import _goal as validate_circuit_goal
+        from native_relational_qc.model_runtime import device_profile
+        descriptor_schemas = {'nrqc-observer-tracking-policy-v1': validate_phase_policy,
+                              'nrqc-observer-state-policy-v1': validate_state_policy,
+                              'nrqc-circuit-goal-v1': validate_circuit_goal,
+                              'nrqc-device-profile-v1': device_profile}
         for path in sorted(EXAMPLES.glob('*.json')):
             if path.name.endswith('.result.json'):
                 continue
             doc = json.loads(path.read_text())
             with self.subTest(example=path.name):
-                if doc.get('schema') in policy_schemas:
-                    policy_schemas[doc['schema']](doc)
-                    # A controller is validated as a bounded, fingerprinted
-                    # policy, and must still be rejected as a circuit request.
+                if doc.get('schema') in descriptor_schemas:
+                    descriptor_schemas[doc['schema']](doc)
+                    # Each descriptor uses its own schema validator and must
+                    # still be rejected as an executable circuit request.
                     with self.assertRaises(ValueError):
                         check(doc)
                     continue

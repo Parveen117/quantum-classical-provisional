@@ -1,0 +1,232 @@
+{
+  "audit_records": [
+    {
+      "path": "benchmarks/records/loss_acquisition_20261112.json",
+      "sha256": "ca8cbb9520e7a4fbaf31098c62e1d11f9e94daab6ceb980b6bb33fd7c684d087",
+      "source_commit": "5837faca715d8d10a99bcf8031bf630eddd0c757",
+      "verified_source_pins": 6
+    },
+    {
+      "path": "benchmarks/records/loss_campaign_20261112.json",
+      "sha256": "bb8de8d9cade37b4241aa3511c6f91e36bcfdc695d18de8ec0975f20ebf1f03f",
+      "source_commit": "dd4e241952548072ff4b7187543e8ba65e9b9594",
+      "verified_source_pins": 7
+    },
+    {
+      "path": "benchmarks/records/loss_compatibility_20261112.json",
+      "sha256": "6389b52a73fdf767ce828b414cfd2cac8a67ef72deb663d812d021a82ed0e040",
+      "source_commit": null,
+      "verified_source_pins": 3
+    }
+  ],
+  "environment": {
+    "gdstk": "1.0.2",
+    "klayout": "0.30.13",
+    "numpy": "2.3.5",
+    "python": "3.12.14",
+    "qiskit": "2.6.2",
+    "qiskit_aer": "0.18.2"
+  },
+  "evidence_class": "LOCAL_SOFTWARE_AND_SYNTHETIC_LOSS_QUALIFICATION",
+  "feature_commits": [
+    "5837faca715d8d10a99bcf8031bf630eddd0c757",
+    "dd4e241952548072ff4b7187543e8ba65e9b9594"
+  ],
+  "finite_coverage": {
+    "loss_acquisition_cases": 7,
+    "loss_campaign_contexts": 2,
+    "loss_campaign_negative_controls": 5,
+    "loss_campaign_planned_runs": 6,
+    "lossless_compatibility_cases": 2,
+    "rational_survival_model": "1/3",
+    "source_artifact_negative_controls": 2
+  },
+  "full_suite": {
+    "collected": 1252,
+    "command": "python3.12 -m pytest -q",
+    "failed": 0,
+    "log_path": "benchmarks/records/loss_full_optional_pytest_312_20261112.txt",
+    "log_sha256": "1c2e21e0b16cf60e6c05948ef2c9f8e6ac1e8aad3b1d92d2bfcd3e362f81582b",
+    "passed": 1252,
+    "python": "3.12.14",
+    "scope": "full repository run with Qiskit, Aer and CAD extras installed",
+    "seconds": 1641.44,
+    "skipped": 0
+  },
+  "hardware_submissions": 0,
+  "installed_numpy_core": {
+    "changed_source_rejected": true,
+    "commands": [
+      {
+        "command": "loss-plan",
+        "returncode": 0
+      },
+      {
+        "command": "loss-campaign-plan",
+        "returncode": 0
+      },
+      {
+        "command": "import-loss-events",
+        "returncode": 0
+      },
+      {
+        "command": "verify-loss-observation",
+        "returncode": 0
+      },
+      {
+        "command": "record-observation",
+        "returncode": 0
+      },
+      {
+        "command": "import-loss-events",
+        "returncode": 0
+      },
+      {
+        "command": "verify-loss-observation",
+        "returncode": 0
+      },
+      {
+        "command": "record-observation",
+        "returncode": 0
+      },
+      {
+        "command": "import-loss-events",
+        "returncode": 0
+      },
+      {
+        "command": "verify-loss-observation",
+        "returncode": 0
+      },
+      {
+        "command": "record-observation",
+        "returncode": 0
+      },
+      {
+        "command": "record-observation",
+        "returncode": 0
+      },
+      {
+        "command": "verify-experiment-ledger",
+        "returncode": 0
+      },
+      {
+        "command": "loss-campaign-report",
+        "returncode": 0
+      },
+      {
+        "command": "verify-loss-campaign-report",
+        "returncode": 0
+      },
+      {
+        "command": "import-loss-events",
+        "returncode": 0
+      },
+      {
+        "command": "loss-campaign-report",
+        "returncode": 3
+      },
+      {
+        "command": "record-observation",
+        "returncode": 2
+      },
+      {
+        "command": "import-loss-events",
+        "returncode": 0
+      },
+      {
+        "command": "verify-loss-observation",
+        "returncode": 0
+      },
+      {
+        "command": "loss-campaign-report",
+        "returncode": 3
+      },
+      {
+        "command": "verify-loss-observation",
+        "returncode": 2
+      },
+      {
+        "command": "import-loss-events",
+        "returncode": 2
+      }
+    ],
+    "conflicting_result_rejected": true,
+    "evidence_class": "INSTALLED_SOFTWARE_SYNTHETIC_LOSS_QUALIFICATION",
+    "hardware_submissions": 0,
+    "idempotent_retry_byte_identical": true,
+    "imported_from_installed_package": true,
+    "installed_source_sha256": {
+      "__main__.py": "708d7d05c52421c1b2810217008d504c8df609f0a191b6f82b13180b27408200",
+      "experiment_campaign.py": "c25b8f99e1baba98ca1556e0473f07b00cf8b7c8305c263d5b04c99fb3235706",
+      "experiment_ledger.py": "a373699ad19c81775bac0444f3426dff6d7689121002cab245048104282f246c",
+      "loss_acquisition.py": "6a35ece68d4c5db4907aad8fdf9ff264feafc034985469ff94824868bc6fe7ba",
+      "loss_campaign.py": "c4e03d3d9cec5286289e525013829cf648ce541f1c10bfd4be5d2e2097426d5d",
+      "model_experiment.py": "55497167c7185a5fcdbeedf2895cdcd52a03ebc08a137edf6ca706ef1c3bac52"
+    },
+    "ledger_observations": 3,
+    "low_yield_blocked": true,
+    "missing_attempt_rejected": true,
+    "python": "3.12.14",
+    "qiskit_available": false,
+    "qualified_campaign": true,
+    "schema": "nrqc-installed-loss-smoke-v1",
+    "wheel_sha256": "779e47631bc1083975f6903e36a254c64ea2b1a1372d76bdab83c4038392b017",
+    "zero_conditional_preserved": true
+  },
+  "new_loss_case_count": 29,
+  "new_loss_test_cases": [
+    "tests/test_loss_acquisition.py::LossAcquisitionTests::test_cli_builds_imports_replays_and_records_loss_events",
+    "tests/test_loss_acquisition.py::LossAcquisitionTests::test_declared_biased_heralding_uses_its_own_reference",
+    "tests/test_loss_acquisition.py::LossAcquisitionTests::test_detector_roles_cannot_overlap_or_reorder",
+    "tests/test_loss_acquisition.py::LossAcquisitionTests::test_every_attempt_and_rejection_is_retained",
+    "tests/test_loss_acquisition.py::LossAcquisitionTests::test_guard_multiclick_and_unmonitored_output_are_rejected",
+    "tests/test_loss_acquisition.py::LossAcquisitionTests::test_implicit_lost_photon_fields_and_duplicate_json_keys_are_rejected",
+    "tests/test_loss_acquisition.py::LossAcquisitionTests::test_invalid_instrument_probabilities_and_zero_reference_acceptance_are_rejected",
+    "tests/test_loss_acquisition.py::LossAcquisitionTests::test_loss_reports_use_the_existing_idempotent_ledger",
+    "tests/test_loss_acquisition.py::LossAcquisitionTests::test_nonclifford_reference_and_residuals_remain_exact",
+    "tests/test_loss_acquisition.py::LossAcquisitionTests::test_original_artifact_bytes_and_integer_types_are_rechecked",
+    "tests/test_loss_acquisition.py::LossAcquisitionTests::test_overlapping_flags_have_one_bucket_and_retained_predicates",
+    "tests/test_loss_acquisition.py::LossAcquisitionTests::test_perfect_conditional_result_does_not_hide_low_yield",
+    "tests/test_loss_acquisition.py::LossAcquisitionTests::test_physical_wire_order_is_preserved_in_multibit_accepted_counts",
+    "tests/test_loss_acquisition.py::LossAcquisitionTests::test_plan_and_report_semantics_are_rechecked_after_checksum_repair",
+    "tests/test_loss_acquisition.py::LossAcquisitionTests::test_plan_binds_instrument_policy_and_replays",
+    "tests/test_loss_acquisition.py::LossAcquisitionTests::test_raw_histogram_requires_strict_conserved_integer_counts",
+    "tests/test_loss_acquisition.py::LossAcquisitionTests::test_reference_budget_normalization_and_zero_acceptance_are_enforced",
+    "tests/test_loss_acquisition.py::LossAcquisitionTests::test_wrong_identity_policy_window_and_calibration_are_rejected",
+    "tests/test_loss_acquisition.py::LossAcquisitionTests::test_zero_accepted_events_keep_the_conditional_result_undefined",
+    "tests/test_loss_campaign.py::LossCampaignTests::test_cli_uses_a_verified_loss_ledger_and_requires_qualification",
+    "tests/test_loss_campaign.py::LossCampaignTests::test_complete_healthy_campaign_preserves_counts_and_replays",
+    "tests/test_loss_campaign.py::LossCampaignTests::test_conditional_outlier_cannot_be_hidden_by_an_accepted_average",
+    "tests/test_loss_campaign.py::LossCampaignTests::test_duplicate_unknown_and_reused_jobs_are_rejected",
+    "tests/test_loss_campaign.py::LossCampaignTests::test_failed_job_and_successful_job_cannot_reuse_identity",
+    "tests/test_loss_campaign.py::LossCampaignTests::test_low_yield_run_cannot_hide_behind_a_good_pooled_yield",
+    "tests/test_loss_campaign.py::LossCampaignTests::test_missing_and_failed_acquisitions_preserve_planned_workload",
+    "tests/test_loss_campaign.py::LossCampaignTests::test_repaired_summary_hash_does_not_hide_a_missing_run",
+    "tests/test_loss_campaign.py::LossCampaignTests::test_repetitions_and_instrument_context_are_fixed_before_data",
+    "tests/test_loss_campaign.py::LossCampaignTests::test_zero_accepted_run_has_no_invented_error_in_the_mean"
+  ],
+  "physical_source_manifest_sha256": "73cc946f12670aae5667d9e3d05a5a72e49c0d4808614447acaaa8cb98f27233",
+  "physical_source_pins_verified": 4,
+  "remaining": [
+    "review/merge and versioned release",
+    "measured controller/encoding and calibrated detector response",
+    "original measured artifacts with independently established instrument reference"
+  ],
+  "runtime_code_commit": "dd4e241952548072ff4b7187543e8ba65e9b9594",
+  "schema": "nrqc-loss-runtime-qualification-v1",
+  "source_authentication": "not_performed",
+  "source_sha256": {
+    "benchmarks/installed_loss_smoke.py": "826aef05d4ae7d6b988ea4218c5ba38be364c1a8fe27f85b2de8d32f1423f931",
+    "benchmarks/loss_compatibility_audit.py": "ded95ce95649734a362f3fb59fb699bb5a134b3b7a55bb0aa16e06d43618a899",
+    "native_relational_qc/__main__.py": "708d7d05c52421c1b2810217008d504c8df609f0a191b6f82b13180b27408200",
+    "native_relational_qc/experiment_campaign.py": "c25b8f99e1baba98ca1556e0473f07b00cf8b7c8305c263d5b04c99fb3235706",
+    "native_relational_qc/experiment_ledger.py": "a373699ad19c81775bac0444f3426dff6d7689121002cab245048104282f246c",
+    "native_relational_qc/loss_acquisition.py": "6a35ece68d4c5db4907aad8fdf9ff264feafc034985469ff94824868bc6fe7ba",
+    "native_relational_qc/loss_campaign.py": "c4e03d3d9cec5286289e525013829cf648ce541f1c10bfd4be5d2e2097426d5d",
+    "native_relational_qc/model_experiment.py": "55497167c7185a5fcdbeedf2895cdcd52a03ebc08a137edf6ca706ef1c3bac52",
+    "native_relational_qc/model_runtime.py": "eebd0ce5ae4a0857c2ecf5cbfa11b54f264dd51f91ce97cb638d8cc8d07b1a81",
+    "pyproject.toml": "4eac01bff4408b36c11059801370365b4e2bde7f758106bf587d3b3649a1c2a5",
+    "tests/test_loss_acquisition.py": "1772c8febcf0734202db6cb0ea4b86c4346f2d8786dea540b61f7f2f67d8c9d8",
+    "tests/test_loss_campaign.py": "afcea39dfbff8ffb019ab173d033ca63ad1f3cbdace61d37d3e8a2ded22faa3a"
+  }
+}

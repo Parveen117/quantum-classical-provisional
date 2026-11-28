@@ -1,0 +1,8 @@
+{
+  "schema": "nrqc-device-profile-v1",
+  "name": "declared-software-three-wire-line",
+  "n_qubits": 3,
+  "coupling_map": [[0, 1], [1, 0], [1, 2], [2, 1]],
+  "native_gates": ["h", "s", "sdg", "cx", "p2", "p4", "p8", "p16", "p32", "p64"],
+  "max_gates": 1024
+}
