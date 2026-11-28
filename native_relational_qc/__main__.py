@@ -21,6 +21,33 @@ def main(argv=None):
     if argv and argv[0] == 'check':
         from .check import main as check_main
         return check_main(argv[1:])
+    if argv and argv[0] == 'synthesize':
+        from .circuit_synthesis import main as synthesis_main
+        return synthesis_main(argv[1:])
+    if argv and argv[0] == 'panini-sandhi':
+        from .panini_sandhi import main as sandhi_main
+        return sandhi_main(argv[1:])
+    if argv and argv[0] == 'learn-structure':
+        from .structure_learning import main as structure_main
+        return structure_main(argv[1:])
+    if argv and argv[0] in ('predict', 'verify-prediction'):
+        from .model_runtime import main as model_main
+        return model_main(argv[1:], replay=argv[0] == 'verify-prediction')
+    if argv and argv[0] in ('experiment-plan', 'observe-model', 'import-model-counts', 'verify-observation'):
+        from .model_experiment import main as experiment_main
+        return experiment_main(argv[1:], command=argv[0])
+    if argv and argv[0] in ('record-observation', 'verify-experiment-ledger'):
+        from .experiment_ledger import main as ledger_main
+        return ledger_main(argv[1:], replay=argv[0] == 'verify-experiment-ledger')
+    if argv and argv[0] in ('campaign-plan', 'campaign-report', 'verify-campaign-report'):
+        from .experiment_campaign import main as campaign_main
+        return campaign_main(argv[1:], command=argv[0])
+    if argv and argv[0] in ('loss-plan', 'import-loss-events', 'verify-loss-observation'):
+        from .loss_acquisition import main as loss_main
+        return loss_main(argv[1:], command=argv[0])
+    if argv and argv[0] in ('loss-campaign-plan', 'loss-campaign-report', 'verify-loss-campaign-report'):
+        from .loss_campaign import main as loss_campaign_main
+        return loss_campaign_main(argv[1:], command=argv[0])
     if argv and argv[0] == 'observer-track':
         from .observer_tracking import main as tracking_main
         return tracking_main(argv[1:])
@@ -34,6 +61,11 @@ def main(argv=None):
         'Four-target search: nrqc grover-cloud --help; '
         'Custom exact circuits: nrqc calculate INPUT.json --out RESULT.json; '
         'backend acceptance report: nrqc check INPUT.json (or nrqc check --table); '
+        'goal-directed exact circuit construction: nrqc synthesize GOAL.json; '
+        'Run nrqc panini-sandhi --help for vowel junctions and reverse search. '
+        'train native phases and search topology: nrqc learn-structure --task curvature; '
+        'use a saved model: nrqc predict MODEL.json --features A B --view first_layer; '
+        'bind and compare acquired counts: nrqc experiment-plan / observe-model / verify-observation; '
         'photonic model arithmetic: nrqc certify; '
         'record-controlled next measurement: nrqc observer-track --records 0101; '
         'joint contrast/phase prediction: nrqc observer-state --records 0101; '

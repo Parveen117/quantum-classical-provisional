@@ -1,0 +1,86 @@
+{
+  "evidence_class": "SYNTHETIC_ACQUISITION_LEDGER",
+  "first_write": {
+    "appended": true,
+    "chain_hash": "dbf75e0ff7f1069d296f87d8917a8c0280ccfea3baa88a4d0c04ca4bb18960e2",
+    "ledger_head": "dbf75e0ff7f1069d296f87d8917a8c0280ccfea3baa88a4d0c04ca4bb18960e2",
+    "observation_fingerprint": "63f090eae96c3e0d7812a24f011cf7a8cdd24f78914c6ed7eb9645efa5811f4a",
+    "sequence": 1,
+    "status": "recorded"
+  },
+  "hardware_submissions": 0,
+  "idempotent_retry": {
+    "appended": false,
+    "chain_hash": "dbf75e0ff7f1069d296f87d8917a8c0280ccfea3baa88a4d0c04ca4bb18960e2",
+    "ledger_head": "dbf75e0ff7f1069d296f87d8917a8c0280ccfea3baa88a4d0c04ca4bb18960e2",
+    "observation_fingerprint": "63f090eae96c3e0d7812a24f011cf7a8cdd24f78914c6ed7eb9645efa5811f4a",
+    "sequence": 1,
+    "status": "already_recorded"
+  },
+  "ledger_sha256": "ec6c2c824bffafabef0be4008e3cd565006fd162e597f09bcf4b11a3593c9c71",
+  "python": "3.12.14",
+  "rejected_controls": [
+    {
+      "control": "same-plan-different-result",
+      "reason": "acquisition identity or frozen plan already has a different result"
+    },
+    {
+      "control": "changed-metrics-with-repaired-chain",
+      "reason": "ledger record differs from replayed observation metadata or metrics"
+    }
+  ],
+  "schema": "nrqc-experiment-ledger-audit-v1",
+  "second_write": {
+    "appended": true,
+    "chain_hash": "ddddf4801585cf4b403165b6500830f5a2fd0b324ea7ff642b300ec3edb59ed8",
+    "ledger_head": "ddddf4801585cf4b403165b6500830f5a2fd0b324ea7ff642b300ec3edb59ed8",
+    "observation_fingerprint": "df2517d22a0ff8df764477cd47bf05b4135b2453852cf36391741edc566cb1c0",
+    "sequence": 2,
+    "status": "recorded"
+  },
+  "source_sha256": {
+    "benchmarks/experiment_ledger_audit.py": "c91e2ebfa19bfe4201beb1b03301c60a8b657a51f225ffd6616b9ed8281d0523",
+    "native_relational_qc/__main__.py": "37d9b5c0774a9a929818011e22c49285fbc091e4f03c209d73160d0023eebbdb",
+    "native_relational_qc/experiment_ledger.py": "9f0ac7b682cb68fdaf2d093893eed65cfb21d38d6a59887353d2216bc8fb5825",
+    "native_relational_qc/model_experiment.py": "a7240bfebc9dc79f268db477118373fe44c920afc4c3c7b6edc806e285f363e5",
+    "pyproject.toml": "4eac01bff4408b36c11059801370365b4e2bde7f758106bf587d3b3649a1c2a5",
+    "quantum_native_bridge_pro/bridge.py": "d06b41e2ef1e07f33f2ec729cc005927dbdc0a7defc137d50d55d648e6a1dd5b",
+    "quantum_native_bridge_pro/expected_models.py": "d2cd54d7185718f8ef02ece0ad872762a0826be29c1871cf33ec849447b70eac",
+    "tests/test_experiment_ledger.py": "38f43d783285fff49f3a903f73d8bf269852d8f1c5a489c028c5ef8862fbadd9"
+  },
+  "verification": {
+    "chain": {
+      "actionable_residue": 1,
+      "bounded_residue": 0,
+      "bridge_counts": {
+        "ACTIONABLE_RESIDUE": 2,
+        "BOUNDED_RESIDUE": 0,
+        "RECOGNITION": 0
+      },
+      "expected_model_counts": {
+        "ACTIONABLE_RESIDUE": 1,
+        "BOUNDED_RESIDUE": 0,
+        "NONE": 0,
+        "RECOGNITION": 1
+      },
+      "head_chain_hash": "ddddf4801585cf4b403165b6500830f5a2fd0b324ea7ff642b300ec3edb59ed8",
+      "recognized": 1,
+      "records": 2,
+      "valid": true,
+      "version": "0.4.1-qbridge-pro"
+    },
+    "declared_origins": {
+      "SYNTHETIC_OBSERVATION": 2
+    },
+    "exact_classifications": {
+      "ACTIONABLE_RESIDUE": 1,
+      "RECOGNITION": 1
+    },
+    "hardware_submissions": 0,
+    "legacy_records": 0,
+    "observations_replayed": 2,
+    "schema": "nrqc-experiment-ledger-verification-v1",
+    "source_authentication": "not_performed",
+    "status": "verified"
+  }
+}

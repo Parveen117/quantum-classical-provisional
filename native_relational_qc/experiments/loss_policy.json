@@ -1,0 +1,36 @@
+{
+  "channels": [
+    "herald",
+    "d1_zero",
+    "d1_one",
+    "guard",
+    "extra"
+  ],
+  "controller_program_sha256": "4f11352f7fbc0b6db0f500dc8a664dffedb9f574db0fe0d38fe61bc49bfe5389",
+  "encoding": "dual_rail_one_click_per_measured_wire",
+  "guard_channels": [
+    "guard"
+  ],
+  "herald_counts": {
+    "herald": 1
+  },
+  "readout_pairs": [
+    {
+      "one": "d1_one",
+      "physical_wire": 1,
+      "zero": "d1_zero"
+    }
+  ],
+  "rejection_priority": [
+    "unclassified",
+    "no_herald",
+    "guard_or_code_violation",
+    "no_click",
+    "ambiguous_click"
+  ],
+  "schema": "nrqc-click-policy-v1",
+  "window_ns": {
+    "start": 0,
+    "stop": 100
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "conditional_tolerance": {
+    "denominator": 10,
+    "numerator": 1
+  },
+  "joint_tolerance": {
+    "denominator": 20,
+    "numerator": 1
+  },
+  "maximum_unclassified": {
+    "denominator": 1,
+    "numerator": 0
+  },
+  "minimum_accepted": 100,
+  "minimum_yield": {
+    "denominator": 5,
+    "numerator": 2
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "attempts": 1000,
+  "backend": "synthetic-three-wire-line",
+  "binding_fingerprint": "2cd5e2745a305b903897dd6f5c5931fbc32203a8f96067ec845e26540db42237",
+  "completed_at": "2026-11-12T01:00:01Z",
+  "controller_program_sha256": "4f11352f7fbc0b6db0f500dc8a664dffedb9f574db0fe0d38fe61bc49bfe5389",
+  "events": [
+    {
+      "clicks": [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "count": 500,
+      "flags": []
+    },
+    {
+      "clicks": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "count": 250,
+      "flags": []
+    },
+    {
+      "clicks": [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "count": 250,
+      "flags": []
+    }
+  ],
+  "job_id": "loss-campaign-job-2",
+  "origin": "synthetic",
+  "plan_fingerprint": "6f18b9b0a8da9ef17faa871e90b28897da7460c0adc3a8a2d8723979c0480578",
+  "policy_fingerprint": "108db9679d6a48d263a56c3918fa64d34657714d3ea7355d653c6c79f738233d",
+  "program_sha256": "069e6954e4041f84fd4d9102d333d93553f04ddab1809f2aad678d095861afb5",
+  "provider": "nrqc-offline-qualification",
+  "schema": "nrqc-controller-events-v1",
+  "started_at": "2026-11-12T01:00:00Z",
+  "window_ns": {
+    "start": 0,
+    "stop": 100
+  }
+}

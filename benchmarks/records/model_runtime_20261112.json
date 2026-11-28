@@ -1,0 +1,5181 @@
+{
+  "cases": [
+    {
+      "example_id": "curvature_u-1_v-1",
+      "features": [
+        14,
+        14
+      ],
+      "fingerprint": "dc531dae15289d2aa417007e23f0b08edf6c6fb81f5c9874dbecbe2082ac7c49",
+      "native_gates": 22,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-1_v1",
+      "features": [
+        14,
+        18
+      ],
+      "fingerprint": "68476142f772e87b682523aa1ee2505597cfe93f82e70a402ccdbb3cc3738d5b",
+      "native_gates": 21,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          6,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-1_v-3",
+      "features": [
+        14,
+        10
+      ],
+      "fingerprint": "4f3d192aed3d4fb4d0bf36499557c8852fd5c039db23714307b5c0b868481cae",
+      "native_gates": 21,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-1_v3",
+      "features": [
+        14,
+        22
+      ],
+      "fingerprint": "10e9fb547ccbae2b606ab6f77a220a01aeabe8253ca2cdab92be7a6c585f2a3d",
+      "native_gates": 22,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-1_v-5",
+      "features": [
+        14,
+        6
+      ],
+      "fingerprint": "5afb0a75f35d0febb4565602beb5d6d1677a8ac14103a55e3ae18844ec2335d1",
+      "native_gates": 21,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-1_v5",
+      "features": [
+        14,
+        26
+      ],
+      "fingerprint": "264eee6c6890b45ace3cb98ec51d92a506b6e33bfa454b5397fb3b512f0ea4b9",
+      "native_gates": 22,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-1_v-7",
+      "features": [
+        14,
+        2
+      ],
+      "fingerprint": "354407039b3ff984bc50b89f787bb6a7063e5eaf98042ff982e53cd368613e2c",
+      "native_gates": 20,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-1_v7",
+      "features": [
+        14,
+        30
+      ],
+      "fingerprint": "7ee873bbb89db61eb3303485f344868ef43d5c86ee8a52a087c5291789548985",
+      "native_gates": 23,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u1_v-1",
+      "features": [
+        18,
+        14
+      ],
+      "fingerprint": "25b872db545ca0cbdf38ec5a2af9afcee0aba1c5b0f99fe193d4ef1962e8460c",
+      "native_gates": 21,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          6,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u1_v1",
+      "features": [
+        18,
+        18
+      ],
+      "fingerprint": "45fe2abffbc10d779d4dcad050846eb872eae6450082d1fa077c5eb014997e28",
+      "native_gates": 20,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u1_v-3",
+      "features": [
+        18,
+        10
+      ],
+      "fingerprint": "afd94b0144c8c5a8d14a824f9bf064bc92595cae41e01fca6ea7e3a76de6fcaf",
+      "native_gates": 20,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u1_v3",
+      "features": [
+        18,
+        22
+      ],
+      "fingerprint": "d47f0f56611ccb11d54190efa508b6118e98d59a158322069c427f5d1a32c950",
+      "native_gates": 21,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u1_v-5",
+      "features": [
+        18,
+        6
+      ],
+      "fingerprint": "b11376ef55d8098d3f2813c1945865b123f4e412366ea65c9683fd90f724a3fa",
+      "native_gates": 20,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u1_v5",
+      "features": [
+        18,
+        26
+      ],
+      "fingerprint": "74147970c5bebf48c4f573cd0b8af2e1f933499bd24a0f3a5df1002e7e689a20",
+      "native_gates": 21,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u1_v-7",
+      "features": [
+        18,
+        2
+      ],
+      "fingerprint": "3836ad531125dd4bed617a3626fb4661d3a936b1b6e98f0b6d263ee065aa3738",
+      "native_gates": 19,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u1_v7",
+      "features": [
+        18,
+        30
+      ],
+      "fingerprint": "41a47542f1b96d5b869aeaebd8a736e1ea36f6b57fb2117bc895cdaea310d3c0",
+      "native_gates": 22,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-3_v-1",
+      "features": [
+        10,
+        14
+      ],
+      "fingerprint": "1ad44990ef9f9950f06c956ebdedfa5789a318be85e3fda2651fa8773f4f89ad",
+      "native_gates": 21,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-3_v1",
+      "features": [
+        10,
+        18
+      ],
+      "fingerprint": "4ba5aa29fa4ecfd00e53de55e0de2fb007d61ac60a8dcb76a58bfa24c504dbb5",
+      "native_gates": 20,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-3_v-3",
+      "features": [
+        10,
+        10
+      ],
+      "fingerprint": "d7119abff3db2d7459ca73469175e81381da5716c5a9ca3ebfea6d50f3a42f86",
+      "native_gates": 20,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-3_v3",
+      "features": [
+        10,
+        22
+      ],
+      "fingerprint": "04728363ee45b91a5bece78cde28c80d5d9a4177b2b8991f9cf3acb6d3be7134",
+      "native_gates": 21,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-3_v-5",
+      "features": [
+        10,
+        6
+      ],
+      "fingerprint": "2146bef9d4e13eb71f4360fc7f493579f1340b4ba5bb72aa6c4626a9a63c02b0",
+      "native_gates": 20,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-3_v5",
+      "features": [
+        10,
+        26
+      ],
+      "fingerprint": "5bda14c2918bb2507e147cebe4a2dd42d7b2aec06912a1ac0ef7431da35dca2c",
+      "native_gates": 21,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-3_v-7",
+      "features": [
+        10,
+        2
+      ],
+      "fingerprint": "7fcf91b7c2e16a3e5c24b9c209aca13862d58a67f0c7273221489ae0deb0edb8",
+      "native_gates": 19,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-3_v7",
+      "features": [
+        10,
+        30
+      ],
+      "fingerprint": "2f91a6ac7a4e7a411a4756f7cf0ccde16a927b652ab44e8560ade9d6679a6137",
+      "native_gates": 22,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u3_v-1",
+      "features": [
+        22,
+        14
+      ],
+      "fingerprint": "0bf6506acdf92659fe4eebed49733a96c6077cc6f5af846686d2e084ac1756bf",
+      "native_gates": 22,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u3_v1",
+      "features": [
+        22,
+        18
+      ],
+      "fingerprint": "05b41dcda1b2e53c1218796b5586fbd7416fa135ecae224745050698eb540a4c",
+      "native_gates": 21,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u3_v-3",
+      "features": [
+        22,
+        10
+      ],
+      "fingerprint": "25ae5ea2ff45f9e29a083c052d44053b07c24e4c7a6e63fa1dd75fbd21cc39f0",
+      "native_gates": 21,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u3_v3",
+      "features": [
+        22,
+        22
+      ],
+      "fingerprint": "00d8c55addf230ef01d40da18b6916067ae166ef42b521815cb03be525dfcc73",
+      "native_gates": 22,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u3_v-5",
+      "features": [
+        22,
+        6
+      ],
+      "fingerprint": "5e2e7e18299993bd0fcac9064bf5fd91cf1478f62defff239f64a5d1ff529dbe",
+      "native_gates": 21,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u3_v5",
+      "features": [
+        22,
+        26
+      ],
+      "fingerprint": "33045ba82c64836809edc51f502edf481f56cd45d9a953b30204835d1f6994b4",
+      "native_gates": 22,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u3_v-7",
+      "features": [
+        22,
+        2
+      ],
+      "fingerprint": "7ea9eb3f9c12553d8f4e3b974f6d99e5fb8e38200b3ba7cc7035a63dd9fb748e",
+      "native_gates": 20,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u3_v7",
+      "features": [
+        22,
+        30
+      ],
+      "fingerprint": "cc89a96cd2d7a2388ff5a196a8ad18fdca29270614dca7bb9b2de929d8cec784",
+      "native_gates": 23,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-5_v-1",
+      "features": [
+        6,
+        14
+      ],
+      "fingerprint": "c801e0a52a24a1f03621543eed06191e18edd610b8171222ad9ab2ce194e4d91",
+      "native_gates": 21,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-5_v1",
+      "features": [
+        6,
+        18
+      ],
+      "fingerprint": "0d55898b446326e3e9b28d5ece9d18e27be9e3b0a94ae6af20d345fb30ebf478",
+      "native_gates": 20,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-5_v-3",
+      "features": [
+        6,
+        10
+      ],
+      "fingerprint": "121ad23d48add23ee742ad529d7f39786075ee8e76d816c1508e9f8108440991",
+      "native_gates": 20,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-5_v3",
+      "features": [
+        6,
+        22
+      ],
+      "fingerprint": "44c148c34b342bac7e715c777a11b205c4caacf74ee5e3896f3f0937cd2d6490",
+      "native_gates": 21,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-5_v-5",
+      "features": [
+        6,
+        6
+      ],
+      "fingerprint": "5ff9f7d90cbe4cad73b5b6065c2603f6fb74a8a17b4a3db6a70fe6c3708536cf",
+      "native_gates": 20,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-5_v5",
+      "features": [
+        6,
+        26
+      ],
+      "fingerprint": "0ac4f84d99abf0ed122d80fd78bad105faeca0f2cc756d1337dc5187c79439b8",
+      "native_gates": 21,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-5_v-7",
+      "features": [
+        6,
+        2
+      ],
+      "fingerprint": "a5c916bb6180ad185d4d0aee0040d442998d1471fb158515e88b3aa5b0b36228",
+      "native_gates": 19,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-5_v7",
+      "features": [
+        6,
+        30
+      ],
+      "fingerprint": "96cb69569c78f47f0560aa745c4ee56bd67c77b0de9adfe60cb54ea0a1c5979b",
+      "native_gates": 22,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u5_v-1",
+      "features": [
+        26,
+        14
+      ],
+      "fingerprint": "d123024b1763245c33351f79c6016097629c056ff391d8869a5cfd661e4fb2d3",
+      "native_gates": 22,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u5_v1",
+      "features": [
+        26,
+        18
+      ],
+      "fingerprint": "2fb95161b3e75a7d1e1d2c31096425dcec32ecb794a55fa1a9a625f82bf9424f",
+      "native_gates": 21,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u5_v-3",
+      "features": [
+        26,
+        10
+      ],
+      "fingerprint": "0edc97c1b5b37f2b22044f27df56df1b6daacf25d541ccfe56d717b2344a5ef4",
+      "native_gates": 21,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u5_v3",
+      "features": [
+        26,
+        22
+      ],
+      "fingerprint": "87897c1dc1849307d5767229b71a5cfc985c774c1c691d991169e9becc9ccc6b",
+      "native_gates": 22,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u5_v-5",
+      "features": [
+        26,
+        6
+      ],
+      "fingerprint": "dfcf643d215fbd0146023a3dddcd9ac6428b9203e0c3123d00e88cfe9d40debe",
+      "native_gates": 21,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u5_v5",
+      "features": [
+        26,
+        26
+      ],
+      "fingerprint": "6ba67f8a1f264d7fb96ab61174a9c3267b5c24780b83c5af651bb210ffdaf912",
+      "native_gates": 22,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u5_v-7",
+      "features": [
+        26,
+        2
+      ],
+      "fingerprint": "4b005f42da4690821bdb6bd08be24ef2cc140bd32f69325f999ddef1458746de",
+      "native_gates": 20,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u5_v7",
+      "features": [
+        26,
+        30
+      ],
+      "fingerprint": "2a7057a032ab0abafb1f22404b1eb34b00a23b105eb422c0ce4228ebd9569694",
+      "native_gates": 23,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-7_v-1",
+      "features": [
+        2,
+        14
+      ],
+      "fingerprint": "6f3ad0d35af23528219087776828e88c7364d4eb687529789bb198d8ee7a77e2",
+      "native_gates": 20,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-7_v1",
+      "features": [
+        2,
+        18
+      ],
+      "fingerprint": "0c1cfe058828742c51c376c4c5956a24912012753358aa6a5eb90ead7de98ec6",
+      "native_gates": 19,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-7_v-3",
+      "features": [
+        2,
+        10
+      ],
+      "fingerprint": "8c783fd202368b2473132edb16c2f55c0559d87a5f75de9b49b5e68dce23b887",
+      "native_gates": 19,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-7_v3",
+      "features": [
+        2,
+        22
+      ],
+      "fingerprint": "f4ec415468f233a203fe9848626b23d5932cbd59f77776c9d3532bfbb74144e8",
+      "native_gates": 20,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-7_v-5",
+      "features": [
+        2,
+        6
+      ],
+      "fingerprint": "99f3e0f959cfef132a9b27d45c374c1441b4cb456e5b6b879c2eac7dbdeac19c",
+      "native_gates": 19,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-7_v5",
+      "features": [
+        2,
+        26
+      ],
+      "fingerprint": "331a5639e5357ed6f791220a93b6873df94625e170e0027c7d2d0da214a58239",
+      "native_gates": 20,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-7_v-7",
+      "features": [
+        2,
+        2
+      ],
+      "fingerprint": "88c3d417e26198beaddf8387b260f1d1fcda598f2d2fe01da396002a465f1b0e",
+      "native_gates": 18,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          2,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u-7_v7",
+      "features": [
+        2,
+        30
+      ],
+      "fingerprint": "1b2ccbdc0edfc5efc9d43842e5a950aa5f18a3169cc999e15d02add738068e5d",
+      "native_gates": 21,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          6,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u7_v-1",
+      "features": [
+        30,
+        14
+      ],
+      "fingerprint": "12d5dece41b80ff5ab7ca38b4356d084b9cacc70cabe5f8abdbd48c4d691d1fe",
+      "native_gates": 23,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u7_v1",
+      "features": [
+        30,
+        18
+      ],
+      "fingerprint": "4da69016ef68c85bcbcd435fd393a9f33aefcbab959c3655a793cf8e5f060eb0",
+      "native_gates": 22,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u7_v-3",
+      "features": [
+        30,
+        10
+      ],
+      "fingerprint": "aadec596fb7f0dc8187295497b86113e40dabac53eccfac56dd26f379760885a",
+      "native_gates": 22,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u7_v3",
+      "features": [
+        30,
+        22
+      ],
+      "fingerprint": "93e168d8c6bdfbdfa704afc4f90b108033fad187b4b0f64bc48c6cdfc2b41b9c",
+      "native_gates": 23,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u7_v-5",
+      "features": [
+        30,
+        6
+      ],
+      "fingerprint": "d0e357a708e54686924def9d82659a9c6621b65635a7547891e52f4db85bff25",
+      "native_gates": 22,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u7_v5",
+      "features": [
+        30,
+        26
+      ],
+      "fingerprint": "1905fb509a1e993d18c9fdd753e47d0470dde450f1abc118afb1b6704f7af6d8",
+      "native_gates": 23,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          4,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u7_v-7",
+      "features": [
+        30,
+        2
+      ],
+      "fingerprint": "bfadfce6a7bf009e47dc3d9413f3fc8840724f76105eb23ee66b2c4aac44f1f1",
+      "native_gates": 21,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          6,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "curvature_u7_v7",
+      "features": [
+        30,
+        30
+      ],
+      "fingerprint": "d696b072af90d43a29f7912739193324ab677c17747f1de6279f91caf2b9e96d",
+      "native_gates": 24,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          2,
+          0,
+          0,
+          0,
+          -1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_selected"
+    },
+    {
+      "example_id": "xor_00",
+      "features": [
+        0,
+        0
+      ],
+      "fingerprint": "03c81d1fd3f9029d25e48efcaa74bbf6a4cbe7cdf55a5f57ad00d43de3c2efc2",
+      "native_gates": 13,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "1",
+        "real_numerators": []
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "xor_legacy"
+    },
+    {
+      "example_id": "xor_01",
+      "features": [
+        0,
+        32
+      ],
+      "fingerprint": "1d271ef9b765be95814cfe20d8a3933c6e38ec8df3bea029d53b911a46dc14f9",
+      "native_gates": 18,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "1",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "xor_legacy"
+    },
+    {
+      "example_id": "xor_10",
+      "features": [
+        32,
+        0
+      ],
+      "fingerprint": "9632c91211b6cbe3580712f8e1d89ca96c74b64cd843ce5aca26015b988e0d57",
+      "native_gates": 8,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "1",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "xor_legacy"
+    },
+    {
+      "example_id": "xor_11",
+      "features": [
+        32,
+        32
+      ],
+      "fingerprint": "e9afe32000a21c2fc8105800496235a6d834d621dfbd362c8cb7b6fbd630b9da",
+      "native_gates": 13,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "1",
+        "real_numerators": []
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "xor_legacy"
+    },
+    {
+      "example_id": "curvature_u-1_v-1",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-1_v1",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-1_v-3",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-1_v3",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-1_v-5",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-1_v5",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-1_v-7",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-1_v7",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u1_v-1",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u1_v1",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u1_v-3",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u1_v3",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u1_v-5",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u1_v5",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u1_v-7",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u1_v7",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-3_v-1",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-3_v1",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-3_v-3",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-3_v3",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-3_v-5",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-3_v5",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-3_v-7",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-3_v7",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u3_v-1",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u3_v1",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u3_v-3",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u3_v3",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u3_v-5",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u3_v5",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u3_v-7",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u3_v7",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-5_v-1",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-5_v1",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-5_v-3",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-5_v3",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-5_v-5",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-5_v5",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-5_v-7",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-5_v7",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u5_v-1",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u5_v1",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u5_v-3",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u5_v3",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u5_v-5",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u5_v5",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u5_v-7",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u5_v7",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-7_v-1",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-7_v1",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-7_v-3",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-7_v3",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-7_v-5",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-7_v5",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-7_v-7",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-7_v7",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u7_v-1",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u7_v1",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u7_v-3",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u7_v3",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u7_v-5",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u7_v5",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u7_v-7",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 1,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u7_v7",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "native_gates": 34,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": true,
+      "target": 0,
+      "task": "point_only_legacy"
+    },
+    {
+      "example_id": "curvature_u-4_v-4",
+      "features": [
+        8,
+        8
+      ],
+      "fingerprint": "7977aeb5e26060fb8de9e287f5698e69c91399d25d96378f3f1ca41d18b70b7c",
+      "native_gates": 33,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "4",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_routed_legacy"
+    },
+    {
+      "example_id": "curvature_u-4_v4",
+      "features": [
+        8,
+        24
+      ],
+      "fingerprint": "0e11fb52e428215afd6d118f9f4a30e4d6a2a1c5ccfca006db0ac581360e3cf6",
+      "native_gates": 34,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "4",
+        "real_numerators": [
+          3
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_routed_legacy"
+    },
+    {
+      "example_id": "curvature_u4_v-4",
+      "features": [
+        24,
+        8
+      ],
+      "fingerprint": "73abd2f494efd28fff3bfe08fddc8458cb0ad4f1c0a03b46eff2074d8f4ea146",
+      "native_gates": 34,
+      "predicted": 1,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "4",
+        "real_numerators": [
+          3
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 1,
+      "task": "curvature_routed_legacy"
+    },
+    {
+      "example_id": "curvature_u4_v4",
+      "features": [
+        24,
+        24
+      ],
+      "fingerprint": "4a5b257d74b79959c31a122322a91c2ccf5288b786837f32f70b2ca4f26b9c6e",
+      "native_gates": 35,
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "4",
+        "real_numerators": [
+          1
+        ]
+      },
+      "reused_identical_program": false,
+      "target": 0,
+      "task": "curvature_routed_legacy"
+    }
+  ],
+  "checked_basis_inputs": 656,
+  "evidence_class": "LOCAL_IDEAL_CALCULATION",
+  "exact_replay_per_program": true,
+  "hardware_jobs": 0,
+  "maximum_numpy_probability_error": 3.3306690738754696e-16,
+  "python": "3.12.14",
+  "representative_records": {
+    "curvature_routed_legacy": {
+      "calculator_request": {
+        "backend": "cyclotomic_pow2",
+        "limits": {
+          "max_branches": 16,
+          "max_work": 984588
+        },
+        "n_qubits": 4,
+        "operations": [
+          [
+            "sdg",
+            [
+              0
+            ]
+          ],
+          [
+            "h",
+            [
+              0
+            ]
+          ],
+          [
+            "p8",
+            [
+              0
+            ]
+          ],
+          [
+            "p2",
+            [
+              0
+            ]
+          ],
+          [
+            "h",
+            [
+              0
+            ]
+          ],
+          [
+            "s",
+            [
+              0
+            ]
+          ],
+          [
+            "sdg",
+            [
+              1
+            ]
+          ],
+          [
+            "h",
+            [
+              1
+            ]
+          ],
+          [
+            "p8",
+            [
+              1
+            ]
+          ],
+          [
+            "h",
+            [
+              1
+            ]
+          ],
+          [
+            "s",
+            [
+              1
+            ]
+          ],
+          [
+            "sdg",
+            [
+              3
+            ]
+          ],
+          [
+            "h",
+            [
+              3
+            ]
+          ],
+          [
+            "p2",
+            [
+              3
+            ]
+          ],
+          [
+            "h",
+            [
+              3
+            ]
+          ],
+          [
+            "s",
+            [
+              3
+            ]
+          ],
+          [
+            "cx",
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            "h",
+            [
+              1
+            ]
+          ],
+          [
+            "h",
+            [
+              0
+            ]
+          ],
+          [
+            "cx",
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            "h",
+            [
+              1
+            ]
+          ],
+          [
+            "h",
+            [
+              0
+            ]
+          ],
+          [
+            "cx",
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            "cx",
+            [
+              1,
+              2
+            ]
+          ],
+          [
+            "cx",
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            "h",
+            [
+              1
+            ]
+          ],
+          [
+            "h",
+            [
+              0
+            ]
+          ],
+          [
+            "cx",
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            "h",
+            [
+              1
+            ]
+          ],
+          [
+            "h",
+            [
+              0
+            ]
+          ],
+          [
+            "cx",
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            "cx",
+            [
+              1,
+              2
+            ]
+          ],
+          [
+            "cx",
+            [
+              2,
+              3
+            ]
+          ]
+        ],
+        "queries": [
+          {
+            "id": "probability_one",
+            "kind": "probability",
+            "outcomes": {
+              "3": 1
+            }
+          }
+        ],
+        "schema": "nrqc-calculator-v1"
+      },
+      "device": {
+        "coupling_map": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "max_gates": 1024,
+        "n_qubits": 4,
+        "name": "declared-software-four-wire-directed-line",
+        "native_gates": [
+          "h",
+          "s",
+          "sdg",
+          "cx",
+          "p2",
+          "p4",
+          "p8",
+          "p16",
+          "p32",
+          "p64"
+        ],
+        "schema": "nrqc-device-profile-v1"
+      },
+      "evidence_class": "LOCAL_IDEAL_CALCULATION",
+      "feature_view": "first_layer",
+      "features": [
+        8,
+        8
+      ],
+      "fingerprint": "7977aeb5e26060fb8de9e287f5698e69c91399d25d96378f3f1ca41d18b70b7c",
+      "hardware_jobs": 0,
+      "mapping": {
+        "final_layout": {
+          "0": 0,
+          "1": 1,
+          "2": 2,
+          "3": 3
+        },
+        "initial_layout": {
+          "0": 0,
+          "1": 1,
+          "2": 2,
+          "3": 3
+        },
+        "native_trace": [
+          {
+            "native_start": 0,
+            "native_stop": 1,
+            "source_index": 0
+          },
+          {
+            "native_start": 1,
+            "native_stop": 2,
+            "source_index": 1
+          },
+          {
+            "native_start": 2,
+            "native_stop": 3,
+            "source_index": 2
+          },
+          {
+            "native_start": 3,
+            "native_stop": 4,
+            "source_index": 3
+          },
+          {
+            "native_start": 4,
+            "native_stop": 5,
+            "source_index": 4
+          },
+          {
+            "native_start": 5,
+            "native_stop": 6,
+            "source_index": 5
+          },
+          {
+            "native_start": 6,
+            "native_stop": 7,
+            "source_index": 6
+          },
+          {
+            "native_start": 7,
+            "native_stop": 8,
+            "source_index": 7
+          },
+          {
+            "native_start": 8,
+            "native_stop": 9,
+            "source_index": 8
+          },
+          {
+            "native_start": 9,
+            "native_stop": 10,
+            "source_index": 9
+          },
+          {
+            "native_start": 10,
+            "native_stop": 11,
+            "source_index": 10
+          },
+          {
+            "native_start": 11,
+            "native_stop": 12,
+            "source_index": 11
+          },
+          {
+            "native_start": 12,
+            "native_stop": 13,
+            "source_index": 12
+          },
+          {
+            "native_start": 13,
+            "native_stop": 14,
+            "source_index": 13
+          },
+          {
+            "native_start": 14,
+            "native_stop": 15,
+            "source_index": 14
+          },
+          {
+            "native_start": 15,
+            "native_stop": 16,
+            "source_index": 15
+          },
+          {
+            "native_start": 16,
+            "native_stop": 24,
+            "source_index": 16
+          },
+          {
+            "native_start": 24,
+            "native_stop": 32,
+            "source_index": 17
+          },
+          {
+            "native_start": 32,
+            "native_stop": 33,
+            "source_index": 18
+          }
+        ],
+        "omitted_logical_wires_initial_zero": [],
+        "placement_optimality_certified": false,
+        "profile": {
+          "coupling_map": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "max_gates": 1024,
+          "n_qubits": 4,
+          "name": "declared-software-four-wire-directed-line",
+          "native_gates": [
+            "h",
+            "s",
+            "sdg",
+            "cx",
+            "p2",
+            "p4",
+            "p8",
+            "p16",
+            "p32",
+            "p64"
+          ],
+          "schema": "nrqc-device-profile-v1"
+        }
+      },
+      "model": {
+        "architecture": "four-qubit-parity-five-ry-v1",
+        "execution": "EXACT_CLASSICAL_SIMULATION",
+        "feature_view": "first_layer",
+        "fingerprint": "e9335f96e2a81f026f350ba983734e5e5251904c05000878169e47ce12f3e394",
+        "hardware_authorized": false,
+        "phase_steps": [
+          32,
+          0,
+          0,
+          32,
+          0
+        ],
+        "phase_unit": "pi/32",
+        "proof_status": "NOT_A_MATHEMATICAL_PROOF",
+        "schema": "native-learning-model-v1",
+        "training_sha256": "92b0155d54dbbd4e08edd4ef6d5b91df1b1c0c4cf50f66256d8d77d025074cd2"
+      },
+      "openqasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[4];\nsdg q[0];\nh q[0];\nu1(2*pi/8) q[0];\nu1(2*pi/2) q[0];\nh q[0];\ns q[0];\nsdg q[1];\nh q[1];\nu1(2*pi/8) q[1];\nh q[1];\ns q[1];\nsdg q[3];\nh q[3];\nu1(2*pi/2) q[3];\nh q[3];\ns q[3];\ncx q[0],q[1];\nh q[1];\nh q[0];\ncx q[0],q[1];\nh q[1];\nh q[0];\ncx q[0],q[1];\ncx q[1],q[2];\ncx q[0],q[1];\nh q[1];\nh q[0];\ncx q[0],q[1];\nh q[1];\nh q[0];\ncx q[0],q[1];\ncx q[1],q[2];\ncx q[2],q[3];\n",
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "4",
+        "real_numerators": [
+          1
+        ]
+      },
+      "resources": {
+        "exact_work": 15801,
+        "max_work": 1000000,
+        "native_gates": 33,
+        "source_gates": 19
+      },
+      "schema": "nrqc-model-prediction-v1",
+      "verification": {
+        "basis_inputs_checked": 16,
+        "qasm_exact_active_unitary_roundtrip": true,
+        "scope": "full active-register unitary, omitted wires initialized to zero",
+        "status": "verified"
+      }
+    },
+    "curvature_selected": {
+      "calculator_request": {
+        "backend": "cyclotomic_pow2",
+        "limits": {
+          "max_branches": 16,
+          "max_work": 995147
+        },
+        "n_qubits": 3,
+        "operations": [
+          [
+            "sdg",
+            [
+              0
+            ]
+          ],
+          [
+            "h",
+            [
+              0
+            ]
+          ],
+          [
+            "p32",
+            [
+              0
+            ]
+          ],
+          [
+            "p16",
+            [
+              0
+            ]
+          ],
+          [
+            "p8",
+            [
+              0
+            ]
+          ],
+          [
+            "p2",
+            [
+              0
+            ]
+          ],
+          [
+            "h",
+            [
+              0
+            ]
+          ],
+          [
+            "s",
+            [
+              0
+            ]
+          ],
+          [
+            "sdg",
+            [
+              2
+            ]
+          ],
+          [
+            "h",
+            [
+              2
+            ]
+          ],
+          [
+            "p32",
+            [
+              2
+            ]
+          ],
+          [
+            "p16",
+            [
+              2
+            ]
+          ],
+          [
+            "p8",
+            [
+              2
+            ]
+          ],
+          [
+            "h",
+            [
+              2
+            ]
+          ],
+          [
+            "s",
+            [
+              2
+            ]
+          ],
+          [
+            "sdg",
+            [
+              1
+            ]
+          ],
+          [
+            "h",
+            [
+              1
+            ]
+          ],
+          [
+            "p2",
+            [
+              1
+            ]
+          ],
+          [
+            "h",
+            [
+              1
+            ]
+          ],
+          [
+            "s",
+            [
+              1
+            ]
+          ],
+          [
+            "cx",
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            "cx",
+            [
+              2,
+              1
+            ]
+          ]
+        ],
+        "queries": [
+          {
+            "id": "probability_one",
+            "kind": "probability",
+            "outcomes": {
+              "1": 1
+            }
+          }
+        ],
+        "schema": "nrqc-calculator-v1"
+      },
+      "device": {
+        "coupling_map": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "max_gates": 1024,
+        "n_qubits": 3,
+        "name": "declared-software-three-wire-line",
+        "native_gates": [
+          "h",
+          "s",
+          "sdg",
+          "cx",
+          "p2",
+          "p4",
+          "p8",
+          "p16",
+          "p32",
+          "p64"
+        ],
+        "schema": "nrqc-device-profile-v1"
+      },
+      "evidence_class": "LOCAL_IDEAL_CALCULATION",
+      "feature_view": "first_layer",
+      "features": [
+        14,
+        14
+      ],
+      "fingerprint": "dc531dae15289d2aa417007e23f0b08edf6c6fb81f5c9874dbecbe2082ac7c49",
+      "hardware_jobs": 0,
+      "mapping": {
+        "final_layout": {
+          "0": 0,
+          "1": 2,
+          "3": 1
+        },
+        "initial_layout": {
+          "0": 0,
+          "1": 2,
+          "3": 1
+        },
+        "native_trace": [
+          {
+            "native_start": 0,
+            "native_stop": 1,
+            "source_index": 0
+          },
+          {
+            "native_start": 1,
+            "native_stop": 2,
+            "source_index": 1
+          },
+          {
+            "native_start": 2,
+            "native_stop": 3,
+            "source_index": 2
+          },
+          {
+            "native_start": 3,
+            "native_stop": 4,
+            "source_index": 3
+          },
+          {
+            "native_start": 4,
+            "native_stop": 5,
+            "source_index": 4
+          },
+          {
+            "native_start": 5,
+            "native_stop": 6,
+            "source_index": 5
+          },
+          {
+            "native_start": 6,
+            "native_stop": 7,
+            "source_index": 6
+          },
+          {
+            "native_start": 7,
+            "native_stop": 8,
+            "source_index": 7
+          },
+          {
+            "native_start": 8,
+            "native_stop": 9,
+            "source_index": 8
+          },
+          {
+            "native_start": 9,
+            "native_stop": 10,
+            "source_index": 9
+          },
+          {
+            "native_start": 10,
+            "native_stop": 11,
+            "source_index": 10
+          },
+          {
+            "native_start": 11,
+            "native_stop": 12,
+            "source_index": 11
+          },
+          {
+            "native_start": 12,
+            "native_stop": 13,
+            "source_index": 12
+          },
+          {
+            "native_start": 13,
+            "native_stop": 14,
+            "source_index": 13
+          },
+          {
+            "native_start": 14,
+            "native_stop": 15,
+            "source_index": 14
+          },
+          {
+            "native_start": 15,
+            "native_stop": 16,
+            "source_index": 15
+          },
+          {
+            "native_start": 16,
+            "native_stop": 17,
+            "source_index": 16
+          },
+          {
+            "native_start": 17,
+            "native_stop": 18,
+            "source_index": 17
+          },
+          {
+            "native_start": 18,
+            "native_stop": 19,
+            "source_index": 18
+          },
+          {
+            "native_start": 19,
+            "native_stop": 20,
+            "source_index": 19
+          },
+          {
+            "native_start": 20,
+            "native_stop": 21,
+            "source_index": 20
+          },
+          {
+            "native_start": 21,
+            "native_stop": 22,
+            "source_index": 21
+          }
+        ],
+        "omitted_logical_wires_initial_zero": [
+          2
+        ],
+        "placement_optimality_certified": false,
+        "profile": {
+          "coupling_map": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "max_gates": 1024,
+          "n_qubits": 3,
+          "name": "declared-software-three-wire-line",
+          "native_gates": [
+            "h",
+            "s",
+            "sdg",
+            "cx",
+            "p2",
+            "p4",
+            "p8",
+            "p16",
+            "p32",
+            "p64"
+          ],
+          "schema": "nrqc-device-profile-v1"
+        }
+      },
+      "model": {
+        "architecture": "four-qubit-five-ry-directed-cx-v1",
+        "entanglers": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "execution": "EXACT_CLASSICAL_SIMULATION",
+        "feature_view": "first_layer",
+        "fingerprint": "e1d2389394de1274736c7b35eaade1cec59461090427c229d8613cdd2ba2b815",
+        "hardware_authorized": false,
+        "phase_steps": [
+          32,
+          0,
+          0,
+          32,
+          0
+        ],
+        "phase_unit": "pi/32",
+        "proof_status": "NOT_A_MATHEMATICAL_PROOF",
+        "schema": "native-learning-topology-model-v1",
+        "training_sha256": "92b0155d54dbbd4e08edd4ef6d5b91df1b1c0c4cf50f66256d8d77d025074cd2"
+      },
+      "openqasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[3];\nsdg q[0];\nh q[0];\nu1(2*pi/32) q[0];\nu1(2*pi/16) q[0];\nu1(2*pi/8) q[0];\nu1(2*pi/2) q[0];\nh q[0];\ns q[0];\nsdg q[2];\nh q[2];\nu1(2*pi/32) q[2];\nu1(2*pi/16) q[2];\nu1(2*pi/8) q[2];\nh q[2];\ns q[2];\nsdg q[1];\nh q[1];\nu1(2*pi/2) q[1];\nh q[1];\ns q[1];\ncx q[0],q[1];\ncx q[2],q[1];\n",
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "8",
+        "real_numerators": [
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "resources": {
+        "exact_work": 5050,
+        "max_work": 1000000,
+        "native_gates": 22,
+        "source_gates": 22
+      },
+      "schema": "nrqc-model-prediction-v1",
+      "verification": {
+        "basis_inputs_checked": 8,
+        "qasm_exact_active_unitary_roundtrip": true,
+        "scope": "full active-register unitary, omitted wires initialized to zero",
+        "status": "verified"
+      }
+    },
+    "point_only_legacy": {
+      "calculator_request": {
+        "backend": "cyclotomic_pow2",
+        "limits": {
+          "max_branches": 16,
+          "max_work": 972001
+        },
+        "n_qubits": 4,
+        "operations": [
+          [
+            "sdg",
+            [
+              0
+            ]
+          ],
+          [
+            "h",
+            [
+              0
+            ]
+          ],
+          [
+            "p16",
+            [
+              0
+            ]
+          ],
+          [
+            "p8",
+            [
+              0
+            ]
+          ],
+          [
+            "p4",
+            [
+              0
+            ]
+          ],
+          [
+            "p2",
+            [
+              0
+            ]
+          ],
+          [
+            "h",
+            [
+              0
+            ]
+          ],
+          [
+            "s",
+            [
+              0
+            ]
+          ],
+          [
+            "sdg",
+            [
+              1
+            ]
+          ],
+          [
+            "h",
+            [
+              1
+            ]
+          ],
+          [
+            "p32",
+            [
+              1
+            ]
+          ],
+          [
+            "p16",
+            [
+              1
+            ]
+          ],
+          [
+            "p2",
+            [
+              1
+            ]
+          ],
+          [
+            "h",
+            [
+              1
+            ]
+          ],
+          [
+            "s",
+            [
+              1
+            ]
+          ],
+          [
+            "sdg",
+            [
+              2
+            ]
+          ],
+          [
+            "h",
+            [
+              2
+            ]
+          ],
+          [
+            "p8",
+            [
+              2
+            ]
+          ],
+          [
+            "p2",
+            [
+              2
+            ]
+          ],
+          [
+            "h",
+            [
+              2
+            ]
+          ],
+          [
+            "s",
+            [
+              2
+            ]
+          ],
+          [
+            "sdg",
+            [
+              3
+            ]
+          ],
+          [
+            "h",
+            [
+              3
+            ]
+          ],
+          [
+            "p2",
+            [
+              3
+            ]
+          ],
+          [
+            "h",
+            [
+              3
+            ]
+          ],
+          [
+            "s",
+            [
+              3
+            ]
+          ],
+          [
+            "cx",
+            [
+              0,
+              2
+            ]
+          ],
+          [
+            "cx",
+            [
+              1,
+              2
+            ]
+          ],
+          [
+            "cx",
+            [
+              2,
+              3
+            ]
+          ],
+          [
+            "sdg",
+            [
+              3
+            ]
+          ],
+          [
+            "h",
+            [
+              3
+            ]
+          ],
+          [
+            "p4",
+            [
+              3
+            ]
+          ],
+          [
+            "h",
+            [
+              3
+            ]
+          ],
+          [
+            "s",
+            [
+              3
+            ]
+          ]
+        ],
+        "queries": [
+          {
+            "id": "probability_one",
+            "kind": "probability",
+            "outcomes": {
+              "3": 1
+            }
+          }
+        ],
+        "schema": "nrqc-calculator-v1"
+      },
+      "device": {
+        "coupling_map": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "max_gates": 1024,
+        "n_qubits": 4,
+        "name": "software-four-wire-all-to-all",
+        "native_gates": [
+          "h",
+          "s",
+          "sdg",
+          "cx",
+          "p2",
+          "p4",
+          "p8",
+          "p16",
+          "p32",
+          "p64"
+        ],
+        "schema": "nrqc-device-profile-v1"
+      },
+      "evidence_class": "LOCAL_IDEAL_CALCULATION",
+      "feature_view": "point_only",
+      "features": [
+        12,
+        6
+      ],
+      "fingerprint": "eb93ff84ccb954b8adf50c354d88f15bb9ccb33c8f354791a4d084d46f63b778",
+      "hardware_jobs": 0,
+      "mapping": {
+        "final_layout": {
+          "0": 0,
+          "1": 1,
+          "2": 2,
+          "3": 3
+        },
+        "initial_layout": {
+          "0": 0,
+          "1": 1,
+          "2": 2,
+          "3": 3
+        },
+        "native_trace": [
+          {
+            "native_start": 0,
+            "native_stop": 1,
+            "source_index": 0
+          },
+          {
+            "native_start": 1,
+            "native_stop": 2,
+            "source_index": 1
+          },
+          {
+            "native_start": 2,
+            "native_stop": 3,
+            "source_index": 2
+          },
+          {
+            "native_start": 3,
+            "native_stop": 4,
+            "source_index": 3
+          },
+          {
+            "native_start": 4,
+            "native_stop": 5,
+            "source_index": 4
+          },
+          {
+            "native_start": 5,
+            "native_stop": 6,
+            "source_index": 5
+          },
+          {
+            "native_start": 6,
+            "native_stop": 7,
+            "source_index": 6
+          },
+          {
+            "native_start": 7,
+            "native_stop": 8,
+            "source_index": 7
+          },
+          {
+            "native_start": 8,
+            "native_stop": 9,
+            "source_index": 8
+          },
+          {
+            "native_start": 9,
+            "native_stop": 10,
+            "source_index": 9
+          },
+          {
+            "native_start": 10,
+            "native_stop": 11,
+            "source_index": 10
+          },
+          {
+            "native_start": 11,
+            "native_stop": 12,
+            "source_index": 11
+          },
+          {
+            "native_start": 12,
+            "native_stop": 13,
+            "source_index": 12
+          },
+          {
+            "native_start": 13,
+            "native_stop": 14,
+            "source_index": 13
+          },
+          {
+            "native_start": 14,
+            "native_stop": 15,
+            "source_index": 14
+          },
+          {
+            "native_start": 15,
+            "native_stop": 16,
+            "source_index": 15
+          },
+          {
+            "native_start": 16,
+            "native_stop": 17,
+            "source_index": 16
+          },
+          {
+            "native_start": 17,
+            "native_stop": 18,
+            "source_index": 17
+          },
+          {
+            "native_start": 18,
+            "native_stop": 19,
+            "source_index": 18
+          },
+          {
+            "native_start": 19,
+            "native_stop": 20,
+            "source_index": 19
+          },
+          {
+            "native_start": 20,
+            "native_stop": 21,
+            "source_index": 20
+          },
+          {
+            "native_start": 21,
+            "native_stop": 22,
+            "source_index": 21
+          },
+          {
+            "native_start": 22,
+            "native_stop": 23,
+            "source_index": 22
+          },
+          {
+            "native_start": 23,
+            "native_stop": 24,
+            "source_index": 23
+          },
+          {
+            "native_start": 24,
+            "native_stop": 25,
+            "source_index": 24
+          },
+          {
+            "native_start": 25,
+            "native_stop": 26,
+            "source_index": 25
+          },
+          {
+            "native_start": 26,
+            "native_stop": 27,
+            "source_index": 26
+          },
+          {
+            "native_start": 27,
+            "native_stop": 28,
+            "source_index": 27
+          },
+          {
+            "native_start": 28,
+            "native_stop": 29,
+            "source_index": 28
+          },
+          {
+            "native_start": 29,
+            "native_stop": 30,
+            "source_index": 29
+          },
+          {
+            "native_start": 30,
+            "native_stop": 31,
+            "source_index": 30
+          },
+          {
+            "native_start": 31,
+            "native_stop": 32,
+            "source_index": 31
+          },
+          {
+            "native_start": 32,
+            "native_stop": 33,
+            "source_index": 32
+          },
+          {
+            "native_start": 33,
+            "native_stop": 34,
+            "source_index": 33
+          }
+        ],
+        "omitted_logical_wires_initial_zero": [],
+        "placement_optimality_certified": false,
+        "profile": {
+          "coupling_map": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              3,
+              2
+            ]
+          ],
+          "max_gates": 1024,
+          "n_qubits": 4,
+          "name": "software-four-wire-all-to-all",
+          "native_gates": [
+            "h",
+            "s",
+            "sdg",
+            "cx",
+            "p2",
+            "p4",
+            "p8",
+            "p16",
+            "p32",
+            "p64"
+          ],
+          "schema": "nrqc-device-profile-v1"
+        }
+      },
+      "model": {
+        "architecture": "four-qubit-parity-five-ry-v1",
+        "execution": "EXACT_CLASSICAL_SIMULATION",
+        "feature_view": "point_only",
+        "fingerprint": "c0f0529479741cf8010156401345655a1f629874f71e91d4b1ae1470fa9b29ad",
+        "hardware_authorized": false,
+        "phase_steps": [
+          48,
+          32,
+          40,
+          32,
+          16
+        ],
+        "phase_unit": "pi/32",
+        "proof_status": "NOT_A_MATHEMATICAL_PROOF",
+        "schema": "native-learning-model-v1",
+        "training_sha256": "ef82415e094134f648fe8f9040bf29599c072172f4c5ae373e71a4eb3b26fd4d"
+      },
+      "openqasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[4];\nsdg q[0];\nh q[0];\nu1(2*pi/16) q[0];\nu1(2*pi/8) q[0];\nu1(2*pi/4) q[0];\nu1(2*pi/2) q[0];\nh q[0];\ns q[0];\nsdg q[1];\nh q[1];\nu1(2*pi/32) q[1];\nu1(2*pi/16) q[1];\nu1(2*pi/2) q[1];\nh q[1];\ns q[1];\nsdg q[2];\nh q[2];\nu1(2*pi/8) q[2];\nu1(2*pi/2) q[2];\nh q[2];\ns q[2];\nsdg q[3];\nh q[3];\nu1(2*pi/2) q[3];\nh q[3];\ns q[3];\ncx q[0],q[2];\ncx q[1],q[2];\ncx q[2],q[3];\nsdg q[3];\nh q[3];\nu1(2*pi/4) q[3];\nh q[3];\ns q[3];\n",
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "2",
+        "real_numerators": [
+          1
+        ]
+      },
+      "resources": {
+        "exact_work": 28590,
+        "max_work": 1000000,
+        "native_gates": 34,
+        "source_gates": 34
+      },
+      "schema": "nrqc-model-prediction-v1",
+      "verification": {
+        "basis_inputs_checked": 16,
+        "qasm_exact_active_unitary_roundtrip": true,
+        "scope": "full active-register unitary, omitted wires initialized to zero",
+        "status": "verified"
+      }
+    },
+    "xor_legacy": {
+      "calculator_request": {
+        "backend": "cyclotomic_pow2",
+        "limits": {
+          "max_branches": 16,
+          "max_work": 997161
+        },
+        "n_qubits": 4,
+        "operations": [
+          [
+            "sdg",
+            [
+              0
+            ]
+          ],
+          [
+            "h",
+            [
+              0
+            ]
+          ],
+          [
+            "p2",
+            [
+              0
+            ]
+          ],
+          [
+            "h",
+            [
+              0
+            ]
+          ],
+          [
+            "s",
+            [
+              0
+            ]
+          ],
+          [
+            "sdg",
+            [
+              3
+            ]
+          ],
+          [
+            "h",
+            [
+              3
+            ]
+          ],
+          [
+            "p2",
+            [
+              3
+            ]
+          ],
+          [
+            "h",
+            [
+              3
+            ]
+          ],
+          [
+            "s",
+            [
+              3
+            ]
+          ],
+          [
+            "cx",
+            [
+              0,
+              2
+            ]
+          ],
+          [
+            "cx",
+            [
+              1,
+              2
+            ]
+          ],
+          [
+            "cx",
+            [
+              2,
+              3
+            ]
+          ]
+        ],
+        "queries": [
+          {
+            "id": "probability_one",
+            "kind": "probability",
+            "outcomes": {
+              "3": 1
+            }
+          }
+        ],
+        "schema": "nrqc-calculator-v1"
+      },
+      "device": {
+        "coupling_map": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "max_gates": 1024,
+        "n_qubits": 4,
+        "name": "software-four-wire-all-to-all",
+        "native_gates": [
+          "h",
+          "s",
+          "sdg",
+          "cx",
+          "p2",
+          "p4",
+          "p8",
+          "p16",
+          "p32",
+          "p64"
+        ],
+        "schema": "nrqc-device-profile-v1"
+      },
+      "evidence_class": "LOCAL_IDEAL_CALCULATION",
+      "feature_view": "xor_bits",
+      "features": [
+        0,
+        0
+      ],
+      "fingerprint": "03c81d1fd3f9029d25e48efcaa74bbf6a4cbe7cdf55a5f57ad00d43de3c2efc2",
+      "hardware_jobs": 0,
+      "mapping": {
+        "final_layout": {
+          "0": 0,
+          "1": 1,
+          "2": 2,
+          "3": 3
+        },
+        "initial_layout": {
+          "0": 0,
+          "1": 1,
+          "2": 2,
+          "3": 3
+        },
+        "native_trace": [
+          {
+            "native_start": 0,
+            "native_stop": 1,
+            "source_index": 0
+          },
+          {
+            "native_start": 1,
+            "native_stop": 2,
+            "source_index": 1
+          },
+          {
+            "native_start": 2,
+            "native_stop": 3,
+            "source_index": 2
+          },
+          {
+            "native_start": 3,
+            "native_stop": 4,
+            "source_index": 3
+          },
+          {
+            "native_start": 4,
+            "native_stop": 5,
+            "source_index": 4
+          },
+          {
+            "native_start": 5,
+            "native_stop": 6,
+            "source_index": 5
+          },
+          {
+            "native_start": 6,
+            "native_stop": 7,
+            "source_index": 6
+          },
+          {
+            "native_start": 7,
+            "native_stop": 8,
+            "source_index": 7
+          },
+          {
+            "native_start": 8,
+            "native_stop": 9,
+            "source_index": 8
+          },
+          {
+            "native_start": 9,
+            "native_stop": 10,
+            "source_index": 9
+          },
+          {
+            "native_start": 10,
+            "native_stop": 11,
+            "source_index": 10
+          },
+          {
+            "native_start": 11,
+            "native_stop": 12,
+            "source_index": 11
+          },
+          {
+            "native_start": 12,
+            "native_stop": 13,
+            "source_index": 12
+          }
+        ],
+        "omitted_logical_wires_initial_zero": [],
+        "placement_optimality_certified": false,
+        "profile": {
+          "coupling_map": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              3,
+              2
+            ]
+          ],
+          "max_gates": 1024,
+          "n_qubits": 4,
+          "name": "software-four-wire-all-to-all",
+          "native_gates": [
+            "h",
+            "s",
+            "sdg",
+            "cx",
+            "p2",
+            "p4",
+            "p8",
+            "p16",
+            "p32",
+            "p64"
+          ],
+          "schema": "nrqc-device-profile-v1"
+        }
+      },
+      "model": {
+        "architecture": "four-qubit-parity-five-ry-v1",
+        "execution": "EXACT_CLASSICAL_SIMULATION",
+        "feature_view": "xor_bits",
+        "fingerprint": "5dd9b305a387170b6246633d21352f0c4dee4087b3b6c46ae4d09c65d95f6f03",
+        "hardware_authorized": false,
+        "phase_steps": [
+          32,
+          0,
+          0,
+          32,
+          0
+        ],
+        "phase_unit": "pi/32",
+        "proof_status": "NOT_A_MATHEMATICAL_PROOF",
+        "schema": "native-learning-model-v1",
+        "training_sha256": "6ea3e50c424479e5434464f95c06e5d1ea21ef88a6e47ee980efae75815d2f5c"
+      },
+      "openqasm": "OPENQASM 2.0;\ninclude \"qelib1.inc\";\nqreg q[4];\nsdg q[0];\nh q[0];\nu1(2*pi/2) q[0];\nh q[0];\ns q[0];\nsdg q[3];\nh q[3];\nu1(2*pi/2) q[3];\nh q[3];\ns q[3];\ncx q[0],q[2];\ncx q[1],q[2];\ncx q[2],q[3];\n",
+      "predicted": 0,
+      "probability_one": {
+        "basis": "Q(zeta_64) power basis zeta^0..zeta^31; zeta=exp(2*pi*i/64), zeta^32=-1",
+        "denominator": "1",
+        "real_numerators": []
+      },
+      "resources": {
+        "exact_work": 2894,
+        "max_work": 1000000,
+        "native_gates": 13,
+        "source_gates": 13
+      },
+      "schema": "nrqc-model-prediction-v1",
+      "verification": {
+        "basis_inputs_checked": 16,
+        "qasm_exact_active_unitary_roundtrip": true,
+        "scope": "full active-register unitary, omitted wires initialized to zero",
+        "status": "verified"
+      }
+    }
+  },
+  "schema": "nrqc-model-runtime-audit-v1",
+  "source_sha256": {
+    "benchmarks/model_runtime_audit.py": "40f482611ff0d1fd92e621b733036cc400d1e281437f122952d6fc3ede4b9127",
+    "native_relational_qc/calculator_examples/three_wire_line.json": "0ef3420acbb7bdb0f0b3dcfb96862e2f5103a8113890793f33756ac20e8e6e12",
+    "native_relational_qc/learning/structure_model.json": "0dbf6c972d0f1a5b1e576a5b584930eafe55b41e08cc78d393e165dfbe864462",
+    "native_relational_qc/model_runtime.py": "eebd0ce5ae4a0857c2ecf5cbfa11b54f264dd51f91ce97cb638d8cc8d07b1a81",
+    "native_relational_qc/openqasm.py": "93fc35bf0aeec9bffb4b9ae5f729ccdddc7f411b47034d34ec415cc386ab6a76",
+    "native_relational_qc/self_learning.py": "90c15f00bac5eaef3bd0bf965540687ea2fd3851079f1078805f2ef300a97875"
+  },
+  "summaries": {
+    "curvature_routed_legacy": {
+      "correct": 4,
+      "examples": 4,
+      "native_gates": 136,
+      "physical_wires": 4
+    },
+    "curvature_selected": {
+      "correct": 64,
+      "examples": 64,
+      "native_gates": 1344,
+      "physical_wires": 3
+    },
+    "point_only_legacy": {
+      "correct": 32,
+      "examples": 64,
+      "native_gates": 2176,
+      "physical_wires": 4
+    },
+    "xor_legacy": {
+      "correct": 4,
+      "examples": 4,
+      "native_gates": 52,
+      "physical_wires": 4
+    }
+  },
+  "unique_programs": 73
+}
