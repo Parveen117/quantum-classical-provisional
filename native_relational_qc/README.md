@@ -32,6 +32,38 @@ Use `.[test,qiskit]` for adapter tests, `.[benchmark]` for Aer MPS and Stim,
 and `.[cad]` for the optional layout checks. Current test results belong to
 CI/test logs, rather than a manually maintained test count.
 
+## Four-item search on IBM Quantum
+
+Run `nrqc grover-cloud ideal` to evaluate the four possible marked items with
+the existing native circuit evaluator. Each oracle flips the phase of one basis
+state. One diffusion step concentrates the ideal output on that state. Bitstrings
+are printed as q1 q0. The oracle encodes the answer, as in a query benchmark.
+
+For a decoding problem, use `nrqc grover-cloud ideal --parity`. The input is a
+pair of checks `(x1 XOR x0, x0)`. The oracle computes the first check reversibly
+with CX, compares the pair with the observed syndrome, and uncomputes before
+diffusion. For example, syndrome `01` selects error mask `11`. The classical
+inverse is used only to score measured outcomes. This is a small reversible
+parity problem with an elementary classical solution.
+
+Install `pip install '.[ibm]'` and configure an IBM Quantum Runtime account in
+the execution environment for a physical run. Select an accessible QPU in your
+instance. The submission below consumes 256 shots for each of four circuits
+(1,024 total). Account plan and available QPU time apply.
+
+```bash
+nrqc grover-cloud ideal
+nrqc grover-cloud submit --parity --backend YOUR_QPU --shots 256
+nrqc grover-cloud collect YOUR_JOB_ID
+```
+
+Submission compiles the existing native circuits to the selected target and
+returns the job ID immediately. Collection can be retried using that ID. It
+checks the returned circuit metadata, label order and shot totals, then reports
+raw counts, observed marked-item frequencies and whether the target was the
+unique mode in each case. A uniform two-bit guess succeeds with probability 1/4.
+This experiment measures end-to-end search and readout on small known oracles.
+
 ## Pāṇini vowel junctions on a quantum circuit
 
 Which pair of vowels could have produced the written sound **ī**? On the declared

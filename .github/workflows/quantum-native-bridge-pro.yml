@@ -22,7 +22,7 @@ jobs:
           - python-version: '3.12'
             extras: 'test'
           - python-version: '3.12'
-            extras: 'test,qiskit,benchmark'
+            extras: 'test,ibm,benchmark'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -48,6 +48,8 @@ jobs:
         run: |
           nrqc check native_relational_qc/calculator_examples/bell.json > /dev/null
           nrqc calculate native_relational_qc/calculator_examples/bell.json > /dev/null
+          nrqc grover-cloud ideal --parity > /dev/null
+          nrqc panini-sandhi search ī > /dev/null
           nrqc certify --out rebuilt-photonic-certification.json > /dev/null
           nrqc observer-track --records 010101 > /dev/null
           nrqc observer-state --records 010101 > /dev/null

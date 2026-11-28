@@ -13,6 +13,7 @@ authors = [{ name = "Monty" }]
 dependencies = ["numpy>=1.26,<3"]
 
 [project.optional-dependencies]
+ibm = ["qiskit>=2.5,<3", "qiskit-ibm-runtime>=0.47,<1"]
 qiskit = ["qiskit>=2.5,<3"]
 benchmark = ["qiskit>=2.5,<3", "qiskit-aer>=0.17,<1", "stim>=1.15,<2"]
 cad = ["gdstk", "klayout"]

@@ -10,7 +10,7 @@ check ancestry and the actual diff before reopening or duplicating a stage.
 
 The [calculator CI](../.github/workflows/quantum-native-bridge-pro.yml) checks
 three environments: Python 3.11 with the core test dependencies, Python 3.12
-with the core test dependencies, and Python 3.12 with Qiskit and benchmark
+with the core test dependencies, and Python 3.12 with IBM Runtime, Qiskit and benchmark
 extras. The core jobs explicitly verify that Qiskit is absent. All three jobs
 must pass for the revision being integrated; an old failed run is superseded
 only by a passing run for the relevant revised code.
@@ -30,7 +30,7 @@ python -m pip install -e '.[test]'
 python -m pytest -q
 ```
 
-Use `'.[test,qiskit,benchmark]'` to include the optional reference backends.
+Use `'.[test,ibm,benchmark]'` to include IBM Runtime and the optional reference backends.
 Missing optional dependencies must be reported as skipped checks. Repository
 maintenance does not require an IBM account or submitting hardware jobs.
 Preserve archived scientific results and expected hashes; new runs belong in
