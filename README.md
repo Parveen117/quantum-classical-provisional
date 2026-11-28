@@ -13,6 +13,8 @@ phases and model-ledger certification. Start with the single
 [retained benchmark comparisons](native_relational_qc/BENCHMARKS.md) and
 [integration status](docs/CALCULATOR_INTEGRATION.md).
 
+[Run the v1.2.0 examples in Google Colab](https://colab.research.google.com/github/Parveen117/quantum-classical-provisional/blob/master/examples/nrqc_quickstart.ipynb) to explore phase estimation, vowel sandhi and parity decoding. The [two-page reproduction note](docs/publication/record_phase_note.pdf) explains the twelve-bit evidence. The [hardware replication plan](docs/publication/parity_replication_plan.md) specifies how to score a future parity-decoding run.
+
 ```bash
 pip install .
 nrqc check native_relational_qc/calculator_examples/bell.json
